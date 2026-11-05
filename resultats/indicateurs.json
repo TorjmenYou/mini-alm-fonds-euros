@@ -1,0 +1,209 @@
+{
+ "V1": {
+  "central": {
+   "vm_actif_initial": 1078.20388213788,
+   "be": 966.7321260832284,
+   "be_prestations": 908.2049696890078,
+   "be_frais": 58.52715639422055,
+   "be_garanti": 666.2386131745886,
+   "fdb": 241.9663565144192,
+   "valeur_assureur": 111.47175605465168,
+   "fuite": 0.0,
+   "va_apports": 0.0,
+   "pm_residuelle_pct": 0.09990732558936986,
+   "pm_annee_10": 688.4551509172958,
+   "ppb_annee_10": 0.0
+  },
+  "hausse_taux_200pb": {
+   "vm_actif_initial": 995.3593705944863,
+   "be": 932.0514220305374,
+   "be_prestations": 905.3364598762838,
+   "be_frais": 26.714962154253605,
+   "be_garanti": 743.2988442126851,
+   "fdb": 162.03761566359867,
+   "valeur_assureur": 63.30794856394891,
+   "fuite": -1.1368683772161603e-13,
+   "va_apports": 0.0,
+   "pm_residuelle_pct": 0.09773624114809906,
+   "pm_annee_10": 260.06450162513704,
+   "ppb_annee_10": 0.0
+  },
+  "baisse_taux_100pb": {
+   "vm_actif_initial": 1124.4658747929143,
+   "be": 981.0309377086991,
+   "be_prestations": 921.1710421018943,
+   "be_frais": 59.859895606804805,
+   "be_garanti": 750.3604446404369,
+   "fdb": 170.8105974614574,
+   "valeur_assureur": 143.43493708421522,
+   "fuite": 0.0,
+   "va_apports": 0.0,
+   "pm_residuelle_pct": 0.05786786484493214,
+   "pm_annee_10": 628.4177180680007,
+   "ppb_annee_10": 29.40779800881432
+  },
+  "krach_actions_25pc": {
+   "vm_actif_initial": 1048.22888213788,
+   "be": 953.7098117505756,
+   "be_prestations": 895.9117746826886,
+   "be_frais": 57.79803706788698,
+   "be_garanti": 666.2386131745886,
+   "fdb": 229.67316150809995,
+   "valeur_assureur": 94.5190703873044,
+   "fuite": 0.0,
+   "va_apports": 0.0,
+   "pm_residuelle_pct": 0.09760529700545086,
+   "pm_annee_10": 679.1809753915427,
+   "ppb_annee_10": 0.0
+  }
+ },
+ "V4": {
+  "central": {
+   "va_sorties": 970.3701961679839,
+   "va_cout_tmg": 0.5292058310120554
+  },
+  "hausse_taux_200pb": {
+   "va_sorties": 932.6457212743219,
+   "va_cout_tmg": 0.39783257428122426
+  },
+  "baisse_taux_100pb": {
+   "va_sorties": 991.4892953380063,
+   "va_cout_tmg": 7.86487432781893
+  },
+  "krach_actions_25pc": {
+   "va_sorties": 958.4980279407331,
+   "va_cout_tmg": 1.4400400443792436
+  }
+ },
+ "V2": {
+  "vm_actif_initial": 1078.20388213788,
+  "n_scenarios": 1000.0,
+  "be": 987.3534181352593,
+  "ic_be": 6.2283763124851665,
+  "be_prestations": 945.0644473721151,
+  "ic_be_prestations": 5.713665199001451,
+  "be_frais": 42.288970763144036,
+  "ic_be_frais": 0.5772995599546165,
+  "be_garanti": 766.4604626919263,
+  "ic_be_garanti": 6.261421967059381,
+  "fdb": 178.6039846801889,
+  "ic_fdb": 2.020975413965707,
+  "fuite": 1.3184057868872514,
+  "ic_fuite": 2.836241166008765,
+  "va_apports": 2.651846295631079,
+  "ic_va_apports": 3.545877231299286,
+  "valeur_assureur": 90.85046400262081,
+  "part_scenarios_avec_apport": 0.012,
+  "part_scenarios_fp_negatifs": 0.012,
+  "be_equivalent_certain": 966.7321260832284,
+  "be_stochastique": 987.3534181352593,
+  "tvog": 20.621292052030867,
+  "ic_tvog": 6.2283763124851665,
+  "decomposition_tvog": {
+   "Plancher de taux servi (TMG)": 3.103627491885902,
+   "Rachats dynamiques": 29.905717924915447,
+   "Lissage par la PPB": -4.951204038699188,
+   "Sans aucun des trois mécanismes": -7.436849326071297,
+   "TVOG du modèle complet": 20.621292052030867
+  }
+ },
+ "V3": {
+  "pertes_nettes": {
+   "taux_hausse": 12.94575455166148,
+   "taux_baisse": -0.01122276637511277,
+   "actions": 26.41928984801359,
+   "rachats_hausse": 10.091369463359456,
+   "rachats_baisse": -25.215715920420166,
+   "rachat_massif": 13.98484404967894
+  },
+  "ic_pertes_nettes": {
+   "taux_hausse": 2.938450228914747,
+   "taux_baisse": 3.7680068123986556,
+   "actions": 0.6307775230921296,
+   "rachats_hausse": 1.4367846075189221,
+   "rachats_baisse": 2.27062391287058,
+   "rachat_massif": 2.1827394740178354
+  },
+  "pertes_brutes": {
+   "taux_hausse": 20.580112738015487,
+   "taux_baisse": 10.008807290602334,
+   "actions": 66.71209046890348,
+   "rachats_hausse": 41.36878954573504,
+   "rachats_baisse": -88.45787726481848,
+   "rachat_massif": 71.04370527049333
+  },
+  "ic_pertes_brutes": {
+   "taux_hausse": 2.969628990880109,
+   "taux_baisse": 3.556656572107869,
+   "actions": 0.9179964357465875,
+   "rachats_hausse": 1.6379267534453885,
+   "rachats_baisse": 2.579349548915483,
+   "rachat_massif": 2.540650769357824
+  },
+  "fdb": {
+   "base": 178.6039846801889,
+   "taux_hausse": 170.96962649383488,
+   "taux_baisse": 168.58395462321144,
+   "actions": 138.311184059299,
+   "rachats_hausse": 147.3265645978133,
+   "rachats_baisse": 241.8461460245872,
+   "rachat_massif": 121.5451234593745
+  },
+  "sens_retenus": {
+   "taux": "taux_hausse",
+   "rachat": "rachat_massif"
+  },
+  "scr_net": {
+   "taux": 12.94575455166148,
+   "actions": 26.41928984801359,
+   "marche": 29.42059545599337,
+   "rachat": 13.98484404967894,
+   "bscr": 35.59309651785636
+  },
+  "scr_brut": {
+   "taux": 20.580112738015487,
+   "actions": 66.71209046890348,
+   "marche": 69.8143542191761,
+   "rachat": 71.04370527049333,
+   "bscr": 111.3606183352077
+  },
+  "ajustement_tp": -75.76752181735134,
+  "scr": 35.59309651785637,
+  "bilans": {
+   "regles_2026": {
+    "libelle": "Règles en vigueur en 2026 : marge de risque au coût du capital de 6 % (règlement délégué (UE) 2015/35, art. 37 et 39)",
+    "actif": 1078.20388213788,
+    "be": 987.3534181352593,
+    "dont_fdb": 178.6039846801889,
+    "marge_risque": 8.507419693234622,
+    "fonds_propres": 82.34304430938619,
+    "scr": 35.59309651785637,
+    "fonds_propres_sur_scr": 2.3134554833709475
+   },
+   "sensibilite_mr_2027": {
+    "libelle": "Sensibilité : seuls les paramètres de marge de risque du règlement délégué (UE) 2026/269 (coût du capital de 4,75 %, facteur max(0,96^t ; 50 %)) ; chocs, courbe et SCR inchangés (règles de 2026)",
+    "actif": 1078.20388213788,
+    "be": 987.3534181352593,
+    "dont_fdb": 178.6039846801889,
+    "marge_risque": 5.127697847944796,
+    "fonds_propres": 85.72276615467601,
+    "scr": 35.59309651785637,
+    "fonds_propres_sur_scr": 2.4084099036359636
+   }
+  },
+  "controles": {
+   "fdb_negatives": [],
+   "ajustement_plafonne_par_fdb": false,
+   "marge_avant_plafond_fdb": 102.83646286283755,
+   "part_scenarios_avec_apport": {
+    "base": 0.012,
+    "taux_hausse": 0.003,
+    "taux_baisse": 0.036,
+    "actions": 0.029,
+    "rachats_hausse": 0.009,
+    "rachats_baisse": 0.012,
+    "rachat_massif": 0.007
+   }
+  }
+ }
+}

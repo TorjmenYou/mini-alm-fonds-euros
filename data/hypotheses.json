@@ -1,0 +1,151 @@
+{
+  "horizon_annees": 60,
+  "economie": {
+    "taux_sans_risque": 0.03,
+    "rendement_dividende_actions": 0.02
+  },
+  "bilan_initial": {
+    "pm": 1000.0,
+    "ppb": 40.0,
+    "fonds_propres": 50.0
+  },
+  "passif": {
+    "tmg": 0.0,
+    "chargements_encours": 0.007,
+    "frais_gestion_encours": 0.004,
+    "taux_deces": 0.01,
+    "taux_rachat_structurel": 0.05,
+    "taux_servi_initial": 0.025
+  },
+  "rachats_dynamiques": {
+    "alpha": -0.04,
+    "beta": -0.01,
+    "gamma": 0.01,
+    "delta": 0.03,
+    "rc_max": 0.3,
+    "rc_min": -0.05
+  },
+  "actif": {
+    "allocation_cible": {
+      "obligations": 0.85,
+      "actions": 0.1,
+      "monetaire": 0.05
+    },
+    "coupon_obligations_initiales": 0.025,
+    "echelle_maturites_ans": 10,
+    "maturite_reinvestissement_ans": 10,
+    "pvl_initiale_actions": 0.1
+  },
+  "strategie": {
+    "ecart_taux_cible": -0.005,
+    "participation_minimale": 0.85,
+    "reprise_ppb_max_par_an": 0.25,
+    "duree_max_ppb_ans": 8,
+    "abandon_marge_assureur": true,
+    "plafond_ppb_pct_pm": 0.06,
+    "appliquer_plancher_tmg": true
+  },
+  "gse": {
+    "nb_scenarios": 1000,
+    "graine": 2026,
+    "hw_a": 0.05,
+    "hw_sigma": 0.01,
+    "vol_actions": 0.18
+  },
+  "solvabilite2": {
+    "choc_actions": -0.39,
+    "choc_rachats_hausse": 0.5,
+    "choc_rachats_baisse": -0.5,
+    "rachat_massif": 0.4,
+    "correlation_marche_vie": 0.25,
+    "correlation_taux_actions_baisse": 0.5,
+    "choc_taux": {
+      "methode": "Règlement délégué (UE) 2015/35, articles 166 et 167, version applicable jusqu'au 29/01/2027",
+      "maturites": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        90
+      ],
+      "s_hausse": [
+        0.7,
+        0.7,
+        0.64,
+        0.59,
+        0.55,
+        0.52,
+        0.49,
+        0.47,
+        0.44,
+        0.42,
+        0.39,
+        0.37,
+        0.35,
+        0.34,
+        0.33,
+        0.31,
+        0.3,
+        0.29,
+        0.27,
+        0.26,
+        0.2
+      ],
+      "s_baisse": [
+        0.75,
+        0.65,
+        0.56,
+        0.5,
+        0.46,
+        0.42,
+        0.39,
+        0.36,
+        0.33,
+        0.31,
+        0.3,
+        0.29,
+        0.28,
+        0.28,
+        0.27,
+        0.28,
+        0.28,
+        0.28,
+        0.29,
+        0.29,
+        0.2
+      ],
+      "hausse_minimale": 0.01
+    },
+    "marge_de_risque": {
+      "regles_2026": {
+        "libelle": "Règles en vigueur en 2026 : marge de risque au coût du capital de 6 % (règlement délégué (UE) 2015/35, art. 37 et 39)",
+        "cout_du_capital": 0.06,
+        "lambda": null,
+        "plancher_lambda": null
+      },
+      "sensibilite_mr_2027": {
+        "libelle": "Sensibilité : seuls les paramètres de marge de risque du règlement délégué (UE) 2026/269 (coût du capital de 4,75 %, facteur max(0,96^t ; 50 %)) ; chocs, courbe et SCR inchangés (règles de 2026)",
+        "cout_du_capital": 0.0475,
+        "lambda": 0.96,
+        "plancher_lambda": 0.5
+      }
+    },
+    "regime_marge_de_risque": "regles_2026"
+  }
+}

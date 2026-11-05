@@ -1,0 +1,7 @@
+id,produit,age,anciennete,nb_contrats,pm,tmg
+1,Épargne individuelle,35,2,4000,150.0,0.0
+2,Épargne individuelle,45,6,3500,200.0,0.0
+3,Épargne individuelle,55,9,3000,220.0,0.0
+4,Épargne individuelle,68,15,2000,180.0,0.01
+5,Épargne individuelle,75,25,1000,100.0,0.025
+6,Retraite collective,50,10,500,150.0,0.0

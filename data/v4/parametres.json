@@ -1,0 +1,8 @@
+{
+  "chargements_encours": 0.007,
+  "frais_encours": 0.0035,
+  "frais_par_contrat_euros": 30.0,
+  "inflation_frais": 0.02,
+  "unite_montants_euros": 1000000.0,
+  "horizon_annees": 60
+}
