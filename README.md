@@ -2,6 +2,7 @@
 
 [![Tests](https://github.com/TorjmenYou/mini-alm-fonds-euros/actions/workflows/tests.yml/badge.svg)](https://github.com/TorjmenYou/mini-alm-fonds-euros/actions/workflows/tests.yml)
 ![Python 3.13](https://img.shields.io/badge/python-3.13-blue)
+[![Licence MIT](https://img.shields.io/badge/licence-MIT-green)](LICENSE)
 
 Un modèle actif-passif (ALM) simplifié d'un fonds euros d'assurance vie, écrit en Python. Il couvre la chaîne complète :
 - projection du fonds ;
@@ -37,7 +38,7 @@ Ces trois réponses dépendent de l'interaction entre l'actif (obligations, acti
   - Déflateurs exacts au pas annuel, tirages antithétiques, tests de martingale et de fuite.
 - **Solvabilité II, version simplifiée.**
   - Chocs de taux par maturité, choc actions, chocs de rachat.
-  - Pertes brutes et nettes, capacité d'absorption des pertes des provisions techniques, marge de risque.
+  - Pertes nettes par projection stochastique sous choc ; pertes brutes reconstruites à partir de la variation des FDB ; capacité d'absorption des pertes des provisions techniques ; marge de risque.
 - **Analyse.** Décomposition de la TVOG par mécanisme (valeurs de Shapley) et étude de convergence Monte-Carlo.
 
 **Python et qualité logicielle**
@@ -116,7 +117,9 @@ Chaque année, le modèle enchaîne six étapes :
 
 ### V3 : bilan Solvabilité II simplifié
 
-**Principe.** Chaque choc relance la projection stochastique complète sur les mêmes tirages.
+**Principe.**
+- Chaque choc relance la projection stochastique complète sur les mêmes tirages : c'est le calcul net, où la stratégie de taux servi et de PPB s'adapte au choc.
+- **La perte brute n'est pas projetée séparément.** Elle est reconstruite à partir de la perte nette et de la variation des FDB, sans projection brute indépendante.
 
 **Chocs.**
 - Taux : chocs relatifs par maturité (règlement délégué (UE) 2015/35, art. 166 et 167).
@@ -124,8 +127,8 @@ Chaque année, le modèle enchaîne six étapes :
 - Rachats : ×1,5 ; ×0,5 ; rachat massif de 40 %.
 
 **Pertes.**
-- Perte nette : la stratégie de taux servi et de PPB s'adapte au choc.
-- Perte brute : la valeur des FDB est maintenue (art. 83(1)(c)).
+- Perte nette = fonds propres économiques de base - fonds propres économiques après choc.
+- Perte brute = perte nette + (FDB de base - FDB après choc). C'est la perte à valeur des FDB inchangée (art. 83(1)(c)), obtenue par la méthode de l'orientation 2 des orientations EIOPA sur la capacité d'absorption des pertes. Les prestations garanties sous choc reprennent les sorties du calcul net.
 - Le scénario de taux et le scénario de rachat sont retenus sur la perte nette (art. 165(2) et 142(7)).
 
 **Agrégation.**
@@ -143,7 +146,7 @@ Chaque année, le modèle enchaîne six étapes :
 
 **Résultat.**
 - BSCR brut : 111,4 ; nBSCR : 35,6 ; ajustement : -75,8.
-- Le plafond des FDB (178,6) n'est pas atteint : le SCR simplifié est égal au nBSCR.
+- Le plafond des FDB (178,6) n'est pas atteint : le SCR simplifié est égal au nBSCR. Le calcul brut ne sert donc qu'à vérifier ce plafond.
 
 ### V4 : le passif « à la Prophet »
 
@@ -166,7 +169,7 @@ Chaque année, le modèle enchaîne six étapes :
   - Pas de courbe EIOPA, et le régime révisé applicable au 30/01/2027 n'est pas implémenté.
 - **Participation aux bénéfices.** Approchée par sa part financière ; le compte de participation réglementaire n'est pas reproduit.
 - **GSE.** Un facteur de taux, volatilités constantes non calibrées sur des prix d'options, corrélation taux / actions nulle.
-- **Perte brute.** Déduite de la perte nette par la variation des FDB, sans calcul brut direct.
+- **Perte brute.** Reconstruite à partir de la perte nette et de la variation des FDB, sans projection brute indépendante.
 - **Modèle.**
   - Un seul model point en V1 à V3, courbe initiale plate, frais proportionnels à l'encours.
   - La V4 ne modélise que le passif.
@@ -219,7 +222,7 @@ Ce dépôt publie la version consolidée du modèle (novembre 2026). Le dévelop
 
 ## Licence
 
-À choisir.
+Distribué sous licence MIT : voir [LICENSE](LICENSE).
 
 ## Auteur
 
