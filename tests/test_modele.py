@@ -30,7 +30,7 @@ def test_actif_initial(h):
 
 # Étape 2 : une année de passif, taux servi 2 %, décès 1 %, rachats 5 %.
 # Risques concurrents : les rachats portent sur les survivants,
-# soit 1 020 x 0,99 x 0,05 = 50,49 (51,0 quand les rachats portaient sur toute la PM revalorisée).
+# soit 1 020 x 0,99 x 0,05 = 50,49, et non 1 020 x 0,05 = 51,0 : le rachat ne s'applique pas aux contrats sortis par décès.
 def test_passif_un_an():
     r = projeter_passif_un_an(1000.0, 0.02, 0.01, 0.05)
     assert r["interets"] == pytest.approx(20.0)

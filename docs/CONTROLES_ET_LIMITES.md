@@ -1,39 +1,11 @@
-# Améliorations, contrôles et limites
+# Contrôles, limites et corrections du modèle
 
-Ce document s'adresse à un lecteur extérieur. Il résume trois choses :
-- ce qui a été corrigé pendant le développement du modèle ;
-- comment ses résultats sont contrôlés ;
-- ce que le modèle ne fait pas.
+Ce document s'adresse à un lecteur extérieur. Il présente trois choses :
+- comment les résultats du modèle sont contrôlés ;
+- ce que le modèle ne fait pas ;
+- les corrections intégrées au modèle et leur effet sur les résultats.
 
 Les équations et les conventions sont décrites dans [METHODOLOGIE.md](METHODOLOGIE.md).
-
-## Corrections apportées pendant le développement
-
-Une phase de vérification du modèle a mis au jour des anomalies, qui ont été corrigées. Pour chacune, un test reproduit le problème et vérifie la correction.
-
-| Domaine | Problème constaté | Correction | Contrôle |
-| --- | --- | --- | --- |
-| Décès et rachats | Rachats calculés sur toute la PM revalorisée : PM négative possible aux grands âges (V4) | Risques concurrents, les rachats portant sur les survivants : PM fin = PM revalorisée × (1 - q) × (1 - ρ) | Conservation des flux et non-négativité sur une grille de q et ρ, âges de 95 à 125 ans |
-| Liquidité | Trésorerie négative sans signal quand l'actif était épuisé (emprunt implicite) | Apport explicite de l'assureur, enregistré en fonds propres et compté dans le test de fuite | Scénarios extrêmes : taux +700 pb et -500 pb, actions -90 %, rachat de 100 % |
-| Extinction du portefeuille | PPB non versée, ou versée un an trop tard, quand tous les contrats sortent | PPB versée aux derniers assurés à la date de leurs dernières prestations ; un rachat partiel ne la fait pas sortir | Montants et dates attendus, calculés à la main |
-| FDB | BE garanti calculé avec d'autres sorties que le BE | Projection garantie avec les mêmes décès et rachats ; FDB = BE des prestations - BE garanti | Identités du BE ; FDB nulles sans participation |
-| Rendement des actions | Pour une perte de plus de 98 % sur un an, le dividende créait de la valeur | Dividende plafonné à la valeur totale de fin d'année ; un rendement inférieur à -100 % est refusé | Conservation de la valeur sur une grille de rendements ; valeur perdue exacte dans un krach |
-| Chocs de taux | Choc parallèle de ±100 pb | Chocs relatifs par maturité (règlement délégué (UE) 2015/35, art. 166 et 167) | Valeurs des chocs par maturité, plancher, taux négatifs |
-| SCR | SCR net seulement | SCR brut et net, ajustement de l'article 206 plafonné par les FDB, scénario retenu sur le net (art. 165(2) et 142(7)) | Agrégation et ajustement vérifiés sur des valeurs calculées à la main ; cas analytique sans FDB (brut = net) |
-| Marge de risque | Coût du capital de la révision (4,75 %) appliqué avant sa date d'application | Coût du capital de 6 % (règles en vigueur en 2026) ; paramètres de 2027 présentés comme une sensibilité | Formule de l'article 37 testée |
-| TVOG | Contributions mesurées en retirant un mécanisme à la fois | Plan factoriel complet (8 combinaisons) et valeurs de Shapley | La somme des contributions redonne la TVOG |
-
-**Effet sur les principaux résultats** (1 000 scénarios) :
-
-| Indicateur | Première version | Version actuelle |
-| --- | ---: | ---: |
-| BE équivalent certain | 967,0 | 966,7 |
-| BE stochastique | 987,6 | 987,4 ± 6,2 |
-| TVOG | 20,6 | 20,6 ± 6,2 |
-| Marge de risque | 6,6 (coût du capital de 4,75 %) | 8,5 (6 %) |
-| Fonds propres / SCR simplifié | 237 % (BSCR net seul) | 231 % |
-
-Les FDB ont aussi changé de définition (275,3 → 178,6) : les deux valeurs ne sont pas comparables.
 
 ## Contrôles en place
 
@@ -70,3 +42,31 @@ Ces contrôles vérifient la cohérence interne du modèle. **Ils ne remplacent 
 | V4 | Passif seul, sans couplage avec l'actif. Table de mortalité fictive (Gompertz-Makeham). |
 
 Le rapport fonds propres / SCR simplifié **n'est pas un ratio de solvabilité réglementaire**. Il sert à comparer des versions du modèle ou des stratégies entre elles.
+
+## Corrections intégrées au modèle
+
+Les vérifications du modèle ont mis au jour les anomalies ci-dessous, qui ont été corrigées. Pour chacune, un test reproduit le cas concerné et vérifie la correction.
+
+| Domaine | Problème constaté | Correction | Contrôle |
+| --- | --- | --- | --- |
+| Décès et rachats | Rachats calculés sur toute la PM revalorisée : PM négative possible aux grands âges (V4) | Risques concurrents, les rachats portant sur les survivants : PM fin = PM revalorisée × (1 - q) × (1 - ρ) | Conservation des flux et non-négativité sur une grille de q et ρ, âges de 95 à 125 ans |
+| Liquidité | Trésorerie négative sans signal quand l'actif était épuisé (emprunt implicite) | Apport explicite de l'assureur, enregistré en fonds propres et compté dans le test de fuite | Scénarios extrêmes : taux +700 pb et -500 pb, actions -90 %, rachat de 100 % |
+| Extinction du portefeuille | PPB non versée, ou versée un an trop tard, quand tous les contrats sortent | PPB versée aux derniers assurés à la date de leurs dernières prestations ; un rachat partiel ne la fait pas sortir | Montants et dates attendus, calculés à la main |
+| FDB | BE garanti calculé avec d'autres sorties que le BE | Projection garantie avec les mêmes décès et rachats ; FDB = BE des prestations - BE garanti | Identités du BE ; FDB nulles sans participation |
+| Rendement des actions | Pour une perte de plus de 98 % sur un an, le dividende créait de la valeur | Dividende plafonné à la valeur totale de fin d'année ; un rendement inférieur à -100 % est refusé | Conservation de la valeur sur une grille de rendements ; valeur perdue exacte dans un krach |
+| Chocs de taux | Choc parallèle de ±100 pb | Chocs relatifs par maturité (règlement délégué (UE) 2015/35, art. 166 et 167) | Valeurs des chocs par maturité, plancher, taux négatifs |
+| SCR | SCR net seulement | SCR brut et net, ajustement de l'article 206 plafonné par les FDB, scénario retenu sur le net (art. 165(2) et 142(7)) | Agrégation et ajustement vérifiés sur des valeurs calculées à la main ; cas analytique sans FDB (brut = net) |
+| Marge de risque | Coût du capital de la révision (4,75 %) appliqué avant sa date d'application | Coût du capital de 6 % (règles en vigueur en 2026) ; paramètres de 2027 présentés comme une sensibilité | Formule de l'article 37 testée |
+| TVOG | Contributions mesurées en retirant un mécanisme à la fois | Plan factoriel complet (8 combinaisons) et valeurs de Shapley | La somme des contributions redonne la TVOG |
+
+**Effet sur les principaux résultats** (1 000 scénarios) :
+
+| Indicateur | Avant corrections | Après corrections |
+| --- | ---: | ---: |
+| BE équivalent certain | 967,0 | 966,7 |
+| BE stochastique | 987,6 | 987,4 ± 6,2 |
+| TVOG | 20,6 | 20,6 ± 6,2 |
+| Marge de risque | 6,6 (coût du capital de 4,75 %) | 8,5 (6 %) |
+| Fonds propres / SCR simplifié | 237 % (BSCR net seul) | 231 % |
+
+Les FDB ont aussi changé de définition (275,3 → 178,6) : les deux valeurs ne sont pas comparables.

@@ -1,6 +1,6 @@
 # Méthodologie du mini-modèle ALM fonds euros
 
-Ce document décrit les équations réellement implémentées, version par version, avec leurs hypothèses, leurs paramètres, leurs simplifications et les tests qui les valident. Les résultats chiffrés sont dans le [README](../README.md) et dans `resultats/indicateurs.json`. Les principales corrections apportées au modèle, ses contrôles et ses limites sont résumés dans [AMELIORATIONS_ET_LIMITES.md](AMELIORATIONS_ET_LIMITES.md).
+Ce document décrit les équations réellement implémentées, version par version, avec leurs hypothèses, leurs paramètres, leurs simplifications et les tests qui les valident. Les résultats chiffrés sont dans le [README](../README.md) et dans `resultats/indicateurs.json`. Les principales corrections apportées au modèle, ses contrôles et ses limites sont résumés dans [CONTROLES_ET_LIMITES.md](CONTROLES_ET_LIMITES.md).
 
 Conventions communes :
 - pas de temps annuel ; un flux « de l'année t » court de la date t-1 à la date t et il est payé en fin d'année ;

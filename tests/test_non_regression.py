@@ -2,7 +2,7 @@
 
 Si une modification change volontairement un résultat, relancer
 `python scripts/resultats_reference.py`, puis justifier l'écart dans
-docs/AMELIORATIONS_ET_LIMITES.md. Un écart non expliqué est une régression.
+docs/CONTROLES_ET_LIMITES.md. Un écart non expliqué est une régression.
 """
 
 import json

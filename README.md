@@ -175,7 +175,7 @@ Chaque année, le modèle enchaîne six étapes :
   - La V4 ne modélise que le passif.
 - **Validation.** Les contrôles vérifient la cohérence interne du modèle ; aucune validation indépendante n'a été réalisée.
 
-Le détail des corrections apportées pendant le développement, des contrôles et des limites est dans [docs/AMELIORATIONS_ET_LIMITES.md](docs/AMELIORATIONS_ET_LIMITES.md).
+Le détail des limites, des contrôles et des corrections intégrées au modèle est dans [docs/CONTROLES_ET_LIMITES.md](docs/CONTROLES_ET_LIMITES.md).
 
 ## Démarrage rapide
 
@@ -203,7 +203,7 @@ Les résultats sont reproductibles à graine fixée (`gse.graine` dans `data/hyp
 | `scripts/` | Recalcul des résultats publiés, étude de convergence |
 | `resultats/` | Indicateurs de référence et convergence |
 | `notebooks/` | Un notebook par version, avec analyses et graphiques |
-| `docs/` | [Méthodologie](docs/METHODOLOGIE.md) ; [améliorations, contrôles et limites](docs/AMELIORATIONS_ET_LIMITES.md) |
+| `docs/` | [Méthodologie](docs/METHODOLOGIE.md) ; [contrôles, limites et corrections](docs/CONTROLES_ET_LIMITES.md) |
 
 ## Glossaire
 
@@ -216,9 +216,9 @@ Les résultats sont reproductibles à graine fixée (`gse.graine` dans `data/hyp
 | FDB | Prestations discrétionnaires futures : part du BE qui correspond à la participation future |
 | SCR | Capital de solvabilité requis ; nBSCR : SCR de base net de la capacité d'absorption des provisions techniques |
 
-## Historique
+## Version
 
-Ce dépôt publie la version consolidée du modèle (novembre 2026). Le développement a commencé en septembre 2026. Les corrections apportées pendant la phase de vérification sont résumées dans [docs/AMELIORATIONS_ET_LIMITES.md](docs/AMELIORATIONS_ET_LIMITES.md). L'historique de travail détaillé est conservé dans un dépôt privé.
+Version consolidée de novembre 2026.
 
 ## Licence
 

@@ -38,7 +38,7 @@ def test_rachats_extremes(h, choc_rachats, rachat_massif):
     verifier_invariants(df)
     if rachat_massif == 1.0:
         # Rachat total : la PM et la PPB restante sortent toutes deux en t = 0
-        # (une version antérieure du modèle ne versait la PPB qu'en t = 1)
+        # (convention : la PPB restante est versée à la même date que les rachats)
         assert df.loc[0, "prestations"] == pytest.approx(h["bilan_initial"]["pm"] + h["bilan_initial"]["ppb"])
         assert df.loc[1:, "pm"].abs().max() < 1e-9
 
