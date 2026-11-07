@@ -65,6 +65,87 @@ class CourbeZeroCoupon(Courbe):
         return (1 + self.taux[-1]) ** (-k)
 
 
+class SpreadCredit:
+    """Structure par terme du spread d'un émetteur risqué (V5), en composition continue.
+
+    s(k) est le spread zéro-coupon de maturité k observé en t = 0, au-dessus de la courbe de
+    référence (interpolation linéaire entre les points donnés, extrapolation plate). On travaille
+    sur le spread cumulé H(u) = s(u) x u : le prix risqué d'un flux de date u vaut
+    P_ref(0, u) x exp(-H(u)), et la courbe risquée vue en t vaut P_ref(t, t+k) x exp(-[H(t+k) - H(t)]).
+    En risque neutre, H est l'intensité de perte cumulée (défaut x perte en cas de défaut, convention
+    de recouvrement en valeur de marché) : c'est elle qui rend le prix de marché cohérent avec les flux.
+    """
+
+    def __init__(self, spread):
+        if isinstance(spread, dict):
+            points = sorted((float(k), float(v)) for k, v in spread.items())
+        else:
+            points = [(1.0, float(spread))]
+        self.points = points
+        self.ajustements = []  # fonctions u -> correction additive de H(u)
+        self._cache = {}
+
+    def copie(self):
+        c = SpreadCredit.__new__(SpreadCredit)
+        c.points, c.ajustements, c._cache = list(self.points), list(self.ajustements), dict(self._cache)
+        return c
+
+    def s(self, u):
+        pts = self.points
+        if u <= pts[0][0]:
+            return pts[0][1]
+        if u >= pts[-1][0]:
+            return pts[-1][1]
+        for (a, sa), (b, sb) in zip(pts, pts[1:]):
+            if a <= u <= b:
+                return sa + (u - a) / (b - a) * (sb - sa)
+
+    def H(self, u):
+        if u not in self._cache:
+            self._cache[u] = self.s(u) * u + sum(f(u) for f in self.ajustements)
+        return self._cache[u]
+
+    def choquer(self, choc, date=0):
+        """Déplacement parallèle du spread de choc à partir de la date donnée (élargissement si choc > 0)."""
+        self.ajustements.append(lambda u, c=float(choc), d=date: c * max(u - d, 0.0))
+        self._cache = {}
+
+    def rebaser(self, courbe_marche, courbe_base):
+        """Même prix risqué, exprimé au-dessus d'une autre courbe de référence (par exemple avec VA) :
+        H'(u) = H(u) + ln P_base(0, u) - ln P_marché(0, u)."""
+        self.ajustements.append(lambda u: (math.log(courbe_base.zc(u)) - math.log(courbe_marche.zc(u))) if u > 0 else 0.0)
+        self._cache = {}
+        return self
+
+    def taux_perte(self, t):
+        """Perte attendue en risque neutre de l'année t (de t - 1 à t), en fraction du nominal survivant."""
+        return 1 - math.exp(-(self.H(t) - self.H(t - 1)))
+
+
+class CourbeAvecSpread(Courbe):
+    """Courbe d'un émetteur risqué vue en t : P(t, t+k) x exp(-[H(t+k) - H(t)]) (V5).
+
+    spread : SpreadCredit, ou un nombre (spread constant)."""
+
+    def __init__(self, base, spread, t=0):
+        self.base, self.t = base, int(t)
+        self.credit = spread if isinstance(spread, SpreadCredit) else SpreadCredit(spread)
+
+    def zc(self, k):
+        return self.base.zc(k) * math.exp(-(self.credit.H(self.t + k) - self.credit.H(self.t)))
+
+
+class CourbeForward(Courbe):
+    """Courbe vue en t dans un monde déterministe cohérent avec la courbe initiale (V5) :
+    P(t, t+k) = P(0, t+k) / P(0, t)."""
+
+    def __init__(self, base, t):
+        self.base, self.t = base, int(t)
+
+    def zc(self, k):
+        return self.base.zc(self.t + k) / self.base.zc(self.t)
+
+
 @lru_cache(maxsize=None)
 def variance_integrale(a, sigma, duree):
     """V(t, t + duree) : variance de l'intégrale du facteur x entre t et t + duree (Hull-White)."""

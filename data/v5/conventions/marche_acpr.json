@@ -1,0 +1,17 @@
+{
+ "objet": "Observations de place utilisées pour la plausibilité des conventions V5 (statut : observé, sauf mention)",
+ "observations": [
+  {"theme": "Rachats, supports en euros", "valeur": "4,4 % en 2025 (4,8 % en 2024), rachats rapportés aux provisions de N-1 ; écart interquartile entre organismes réduit de 78 pb", "source": "ACPR, Analyses et synthèses n° 179, L'assurance-vie en 2025, graphiques 7 et 8", "statut": "observé ; quartiles du graphique 8 non lisibles dans le PDF"},
+  {"theme": "Rachats rapportés aux cotisations", "valeur": "39,9 % au premier semestre 2026, plus bas depuis quinze ans (moyenne de long terme 58,6 %)", "source": "ACPR n° 185, chiffres repris par Tripalio (presse.tripalio.fr)", "statut": "observé (source secondaire) ; PDF du n° 185 non consulté"},
+  {"theme": "Taux servi moyen 2025, contrats individuels", "valeur": "2,63 % ; premier quartile 2,3 %, troisième quartile 2,9 % (organismes représentant 50 % des encours)", "source": "ACPR, Analyses et synthèses n° 180, p. 7", "statut": "observé"},
+  {"theme": "Taux servi par type d'organisme", "valeur": "bancassureurs 2,70 %, assureurs traditionnels 2,48 %", "source": "ACPR n° 180, p. 9-10", "statut": "observé"},
+  {"theme": "Rendement de l'actif (TRA)", "valeur": "2,8 % en 2025 (2,5 % en 2024) ; la moitié des organismes entre 2,4 % et 3,3 %", "source": "ACPR n° 180, p. 13-14", "statut": "observé"},
+  {"theme": "PPB", "valeur": "4,0 % des provisions fin 2025 ; bancassureurs 4,2 %, assureurs traditionnels 3,6 %", "source": "ACPR n° 180, p. 14", "statut": "observé"},
+  {"theme": "Taux technique moyen", "valeur": "0,32 % (bancassureurs 0,25 %, traditionnels 0,39 %)", "source": "ACPR n° 180, p. 17", "statut": "observé"},
+  {"theme": "Chargements sur encours", "valeur": "0,63 % ; premier quartile environ 0,5 %, troisième quartile environ 0,8 %", "source": "ACPR n° 180, p. 18", "statut": "observé"},
+  {"theme": "Livret A", "valeur": "1,7 % depuis le 01/08/2026 (1,5 % au 01/02/2026)", "source": "ACPR n° 179, p. 2 ; jechange.fr", "statut": "observé"},
+  {"theme": "Solvabilité au 30/06/2026", "valeur": "250 % pour l'ensemble, 239 % pour les organismes vie et mixtes, 219 % pour les bancassureurs", "source": "ACPR n° 185, chiffres repris par Tripalio", "statut": "observé (source secondaire)"},
+  {"theme": "Sensibilité aux taux", "valeur": "la hausse des taux longs réduit davantage la valeur actuelle des engagements que celle des actifs", "source": "ACPR n° 181, p. 4 et 22", "statut": "observé (qualitatif)"},
+  {"theme": "Moins-values latentes 2026", "valeur": "« près de -11 % » sur la dette souveraine française pour les bancassureurs, attribution à l'ACPR non certaine", "source": "Tripalio, article sur le premier semestre 2026", "statut": "non retenu : attribution incertaine"}
+ ]
+}

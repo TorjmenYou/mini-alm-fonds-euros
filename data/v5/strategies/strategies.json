@@ -1,0 +1,100 @@
+{
+  "objet": "Stratégies ALM comparées en V5 (comparaison exploratoire). Toutes partent du même bilan initial (allocation initiale du profil) et des mêmes scénarios ; une stratégie ne modifie que les règles de gestion appliquées à partir de l'ouverture. Paramètres fictifs, choisis pour représenter chaque famille de stratégie, sans optimisation.",
+  "strategies": {
+    "passive": {
+      "libelle": "Gestion passive (règles des V1 à V4)",
+      "description": "Allocation constante, réinvestissement à la maturité du profil, taux servi visé égal à la référence moins 0,5 point, renoncement à la marge si besoin.",
+      "modifications": {}
+    },
+    "reinvestissement_progressif": {
+      "libelle": "Réinvestissement progressif sur une échelle de maturités",
+      "description": "Les achats d'obligations sont répartis à parts égales sur 3, 5, 7, 10 et 15 ans au lieu d'une seule maturité.",
+      "modifications": {
+        "actif.echelle_reinvestissement": {
+          "3": 0.2,
+          "5": 0.2,
+          "7": 0.2,
+          "10": 0.2,
+          "15": 0.2
+        }
+      }
+    },
+    "repositionnement": {
+      "libelle": "Repositionnement obligataire",
+      "description": "Vente à l'ouverture de 25 % de la VNC obligataire, en commençant par les plus petits coupons, et rachat aux taux du marché ; la moins-value réalisée passe par la réserve de capitalisation puis par le résultat.",
+      "modifications": {
+        "strategie_alm.repositionnement": {
+          "part": 0.25
+        }
+      }
+    },
+    "taux_servi_competitif": {
+      "libelle": "Politique de taux servi compétitive",
+      "description": "Taux servi visé égal à la référence (au lieu de la référence moins 0,5 point) ; reprise de PPB jusqu'à 50 % du stock par an.",
+      "modifications": {
+        "strategie.ecart_taux_cible": 0.0,
+        "strategie.reprise_ppb_max_par_an": 0.5
+      }
+    },
+    "taux_servi_marge": {
+      "libelle": "Politique de taux servi de marge",
+      "description": "Taux servi visé égal à la référence moins 1 point ; pas de renoncement à la marge de l'assureur.",
+      "modifications": {
+        "strategie.ecart_taux_cible": -0.01,
+        "strategie.abandon_marge_assureur": false
+      }
+    },
+    "liquidite_defensive": {
+      "libelle": "Gestion défensive de la liquidité",
+      "description": "Monétaire porté à 12 % de l'actif (aux dépens des actions), réinvestissement obligataire à 5 ans.",
+      "modifications": {
+        "actif.monetaire_cible": 0.12,
+        "actif.maturite_reinvestissement_ans": 5
+      }
+    },
+    "taux_servi_competitif_preservant": {
+      "libelle": "Politique de taux servi compétitive préservant la PPB",
+      "description": "Taux servi visé égal à la référence, reprise de PPB limitée à 25 % par an de la part du stock qui dépasse un plancher égal à la moitié du ratio PPB / PM d'ouverture ; les reprises obligatoires (dotations de plus de 8 ans) restent appliquées.",
+      "modifications": {
+        "strategie.ecart_taux_cible": 0.0,
+        "strategie.reprise_ppb_max_par_an": 0.25,
+        "strategie_alm.plancher_ppb_part_initiale": 0.5
+      }
+    },
+    "distribution_retention": {
+      "libelle": "Gestion passive avec rétention de capital",
+      "description": "Règles de la gestion passive ; seule la moitié de l'excédent annuel de fonds propres comptables sur la cible est distribuée, l'autre moitié est conservée.",
+      "modifications": {
+        "strategie_alm.part_distribuee": 0.5
+      }
+    }
+  },
+  "capital": {
+    "cibles_couverture_scr": [
+      1.0,
+      1.5
+    ],
+    "_regle": "Apport initial en trésorerie, investi ensuite selon l'allocation cible ; existant inchangé. Besoin d'apport pour une cible tau : interpolation linéaire des fonds propres et du SCR simplifiés entre deux apports calculés, puis vérification au point obtenu.",
+    "base_recapitalisee": "Base de capital commune : pour chaque cible (100 % et 150 % du SCR simplifié), chaque stratégie reçoit l'apport qui porte son propre indicateur à la cible ; sa valeur nette déduit cet apport. La première comparaison (version précédente de V5_STRATEGIES.md, 500 scénarios prudentiels) appliquait à toutes les stratégies l'apport de la gestion passive."
+  },
+  "rentabilite_reelle": {
+    "rendement_exige": {
+      "valeur": 0.08,
+      "statut": "fictif : repère de rendement exigé par l'actionnaire, jamais combiné aux flux risque neutre"
+    }
+  },
+  "fiscalite": {
+    "_regle": "Impôt de 25 % et contribution sociale (CGI, art. 219 et 235 ter ZC) sur le résultat annuel de l'assureur, déficits reportés (art. 209) ; calculé après projection, sans rétroaction sur les placements (approximation) ; le résidu final n'est pas imposé."
+  },
+  "lecture": {
+    "_regle": "Seuils de lecture des écarts à la gestion passive. Un écart est « statistiquement significatif » si son intervalle de confiance apparié à 95 % exclut zéro ; il est « économiquement important » s'il est significatif et si sa moyenne dépasse le seuil ci-dessous ; il est « robuste » sur une grille d'hypothèses si la borne de son intervalle dépasse le seuil, avec le même signe, dans toutes les configurations. Seuils conventionnels, fictifs, choisis avant de lire les résultats ; ils ne sont pas réglés pour obtenir un classement.",
+    "valeur_nette_pct_scr": 0.02,
+    "rendement_fonds_propres_pt": 0.0025,
+    "ecart_taux_servi_pb": 5,
+    "taux_rachat_pt": 0.0025,
+    "probabilite_apport_pt": 0.005,
+    "moins_values_realisees_pct_scr": 0.05,
+    "apport_pct_scr": 0.02,
+    "indicateur_scr_pt": 0.05
+  }
+}

@@ -1,0 +1,870 @@
+{
+ "objet": "Vue prudentielle simplifiée (base avec VA), unités fictives, 1 unité = 10 M EUR",
+ "n_scenarios": 1000,
+ "resultats": {
+  "A|sans_risque_demi|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 899.777394083408,
+   "be": 901.2821536876796,
+   "ic_be": 4.253211926558821,
+   "fdb": 68.13714707777794,
+   "marge_de_risque": 17.972628693441308,
+   "fonds_propres_avant_impots_differes": -19.47738829771292,
+   "impots_differes_passif_si_positif": -17.94253552788436,
+   "fonds_propres_apres_impots_differes": -1.5348527698285608,
+   "pertes_nettes": {
+    "taux_hausse": 16.053205902888635,
+    "taux_baisse": -0.5569268392197273,
+    "actions": 29.635826303982412,
+    "spread": 40.16119960109336,
+    "rachats_hausse": 23.31260327150494,
+    "rachats_baisse": -45.390228227899456,
+    "rachat_massif": 36.957428295429395
+   },
+   "pertes_brutes": {
+    "taux_hausse": 30.559060665499885,
+    "taux_baisse": -2.4893841549301214,
+    "actions": 56.570447634406186,
+    "spread": 63.492252543490466,
+    "rachats_hausse": 46.15031091281728,
+    "rachats_baisse": -115.16548788605348,
+    "rachat_massif": 77.62546823209594
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 16.053205902888635,
+    "actions": 29.635826303982412,
+    "spread": 40.16119960109336,
+    "marche": 67.3366547816683,
+    "rachat": 36.957428295429395,
+    "bscr": 84.52438333860339
+   },
+   "scr_brut": {
+    "taux": 30.559060665499885,
+    "actions": 56.570447634406186,
+    "spread": 63.492252543490466,
+    "marche": 116.41741961113121,
+    "rachat": 77.62546823209594,
+    "bscr": 155.2327518953702
+   },
+   "ajustement_tp": -68.13714707777794,
+   "scr": 87.09560481759226,
+   "choc_spread": {
+    "elargissement": 0.007899110929186416,
+    "perte_formule_standard": 45.148812340679086,
+    "duration_modifiee": 7.749847913383796,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": -0.2236322755724032,
+   "ratio_apres_impots_differes": -0.01762262025785415,
+   "part_scenarios_avec_apport": {
+    "base": 0.484,
+    "taux_hausse": 0.647,
+    "taux_baisse": 0.442,
+    "actions": 0.737,
+    "spread": 0.792,
+    "rachats_hausse": 0.699,
+    "rachats_baisse": 0.166,
+    "rachat_massif": 0.906
+   },
+   "fonds_excedentaires_borne_haute": 18.54375
+  },
+  "A|sans_risque|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 899.777394083408,
+   "be": 913.4194979510719,
+   "ic_be": 6.960102189881002,
+   "fdb": 57.6684586115049,
+   "marge_de_risque": 13.809632731917143,
+   "fonds_propres_avant_impots_differes": -27.451736599581018,
+   "impots_differes_passif_si_positif": -20.001910976841796,
+   "fonds_propres_apres_impots_differes": -7.4498256227392226,
+   "pertes_nettes": {
+    "taux_hausse": 33.74554563576544,
+    "taux_baisse": -6.968095704715438,
+    "actions": 27.466989324373912,
+    "spread": 38.49083298955725,
+    "rachats_hausse": 20.647931196466857,
+    "rachats_baisse": -40.76506187232246,
+    "rachat_massif": 31.259986509596047
+   },
+   "pertes_brutes": {
+    "taux_hausse": 55.80778319346246,
+    "taux_baisse": -5.27909595062205,
+    "actions": 48.66435760042412,
+    "spread": 56.020276213709444,
+    "rachats_hausse": 36.54645472903619,
+    "rachats_baisse": -95.68908772965051,
+    "rachat_massif": 64.75582999958318
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 33.74554563576544,
+    "actions": 27.466989324373912,
+    "spread": 38.49083298955725,
+    "marche": 70.4314029765589,
+    "rachat": 31.259986509596047,
+    "bscr": 83.89643398426499
+   },
+   "scr_brut": {
+    "taux": 55.80778319346246,
+    "actions": 48.66435760042412,
+    "spread": 56.020276213709444,
+    "marche": 112.73990351467621,
+    "rachat": 64.75582999958318,
+    "bscr": 143.36626652220636
+   },
+   "ajustement_tp": -57.6684586115049,
+   "scr": 85.69780791070146,
+   "choc_spread": {
+    "elargissement": 0.007899110929186416,
+    "perte_formule_standard": 45.148812340679086,
+    "duration_modifiee": 7.749847913383796,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": -0.3203318412553351,
+   "ratio_apres_impots_differes": -0.08693134403743519,
+   "part_scenarios_avec_apport": {
+    "base": 0.584,
+    "taux_hausse": 0.859,
+    "taux_baisse": 0.456,
+    "actions": 0.774,
+    "spread": 0.818,
+    "rachats_hausse": 0.736,
+    "rachats_baisse": 0.229,
+    "rachat_massif": 0.922
+   },
+   "fonds_excedentaires_borne_haute": 18.54375
+  },
+  "A|sans_risque|lisse_integral": {
+   "base": "avec_va",
+   "credit": "lisse_integral",
+   "n_scenarios": 1000,
+   "actif": 899.777394083408,
+   "be": 906.9806314593095,
+   "ic_be": 6.884475475753344,
+   "fdb": 43.354685176012055,
+   "marge_de_risque": 14.618219300047391,
+   "fonds_propres_avant_impots_differes": -21.821456675948887,
+   "impots_differes_passif_si_positif": -18.5478911865638,
+   "fonds_propres_apres_impots_differes": -3.2735654893850885,
+   "pertes_nettes": {
+    "taux_hausse": 37.82857706831351,
+    "taux_baisse": -11.767639383381265,
+    "actions": 29.45413249116143,
+    "spread": 38.57303308957057,
+    "rachats_hausse": 23.60715786067533,
+    "rachats_baisse": -51.591450124602034,
+    "rachat_massif": 35.12744999855636
+   },
+   "pertes_brutes": {
+    "taux_hausse": 51.195143224976796,
+    "taux_baisse": -4.774358564940684,
+    "actions": 46.26315954070578,
+    "spread": 56.43185771163871,
+    "rachats_hausse": 32.61822285019008,
+    "rachats_baisse": -88.52961835786789,
+    "rachat_massif": 59.81208053509013
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 37.82857706831351,
+    "actions": 29.45413249116143,
+    "spread": 38.57303308957057,
+    "marche": 74.09877790057391,
+    "rachat": 35.12744999855636,
+    "bscr": 89.58804154343328
+   },
+   "scr_brut": {
+    "taux": 51.195143224976796,
+    "actions": 46.26315954070578,
+    "spread": 56.43185771163871,
+    "marche": 108.91212623045813,
+    "rachat": 59.81208053509013,
+    "bscr": 136.73502349671566
+   },
+   "ajustement_tp": -43.354685176012055,
+   "scr": 93.3803383207036,
+   "choc_spread": {
+    "elargissement": 0.007899110929186416,
+    "perte_formule_standard": 45.148812340679086,
+    "duration_modifiee": 7.749847913383796,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": -0.23368363264015712,
+   "ratio_apres_impots_differes": -0.03505626075311935,
+   "part_scenarios_avec_apport": {
+    "base": 0.525,
+    "taux_hausse": 0.839,
+    "taux_baisse": 0.365,
+    "actions": 0.756,
+    "spread": 0.822,
+    "rachats_hausse": 0.718,
+    "rachats_baisse": 0.081,
+    "rachat_massif": 0.914
+   },
+   "fonds_excedentaires_borne_haute": 18.54375
+  },
+  "A|taux_servi_marche|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 899.777394083408,
+   "be": 894.0014785851024,
+   "ic_be": 5.605102043759311,
+   "fdb": 74.91937330816494,
+   "marge_de_risque": 20.39536661461885,
+   "fonds_propres_avant_impots_differes": -14.619451116313243,
+   "impots_differes_passif_si_positif": -16.687973250787895,
+   "fonds_propres_apres_impots_differes": 2.0685221344746516,
+   "pertes_nettes": {
+    "taux_hausse": 12.655677604730045,
+    "taux_baisse": 0.18499658033124433,
+    "actions": 29.05171546768736,
+    "spread": 40.06928641983268,
+    "rachats_hausse": 24.585316642529392,
+    "rachats_baisse": -43.600534257781305,
+    "rachat_massif": 39.59714187762722
+   },
+   "pertes_brutes": {
+    "taux_hausse": 23.979972055066,
+    "taux_baisse": -7.386518165027084,
+    "actions": 58.85137853537224,
+    "spread": 66.44503100624084,
+    "rachats_hausse": 51.562651136644874,
+    "rachats_baisse": -116.10091540844816,
+    "rachat_massif": 84.67675928314301
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 12.655677604730045,
+    "actions": 29.05171546768736,
+    "spread": 40.06928641983268,
+    "marche": 65.9987751669551,
+    "rachat": 39.59714187762722,
+    "bscr": 85.03207277511821
+   },
+   "scr_brut": {
+    "taux": 23.979972055066,
+    "actions": 58.85137853537224,
+    "spread": 66.44503100624084,
+    "marche": 119.66218478704943,
+    "rachat": 84.67675928314301,
+    "bscr": 162.95856847358255
+   },
+   "ajustement_tp": -74.91937330816494,
+   "scr": 88.03919516541761,
+   "choc_spread": {
+    "elargissement": 0.007899110929186416,
+    "perte_formule_standard": 45.148812340679086,
+    "duration_modifiee": 7.749847913383796,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": -0.1660561649711203,
+   "ratio_apres_impots_differes": 0.023495468473877883,
+   "part_scenarios_avec_apport": {
+    "base": 0.402,
+    "taux_hausse": 0.562,
+    "taux_baisse": 0.355,
+    "actions": 0.66,
+    "spread": 0.729,
+    "rachats_hausse": 0.653,
+    "rachats_baisse": 0.139,
+    "rachat_massif": 0.865
+   },
+   "fonds_excedentaires_borne_haute": 18.54375
+  },
+  "B|sans_risque_demi|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 992.7707528426693,
+   "be": 917.8054021964186,
+   "ic_be": 4.09550302238253,
+   "fdb": 152.4817242997449,
+   "marge_de_risque": 23.439474087232956,
+   "fonds_propres_avant_impots_differes": 51.52587655901766,
+   "impots_differes_passif_si_positif": -3.479692378633689,
+   "fonds_propres_apres_impots_differes": 55.00556893765135,
+   "pertes_nettes": {
+    "taux_hausse": 6.5885464909472375,
+    "taux_baisse": 3.2506185186950916,
+    "actions": 36.238097790952,
+    "spread": 39.35470710377626,
+    "rachats_hausse": 20.867751830606608,
+    "rachats_baisse": -37.97411566454582,
+    "rachat_massif": 34.109922296393734
+   },
+   "pertes_brutes": {
+    "taux_hausse": 12.565823469707311,
+    "taux_baisse": 3.548712422924808,
+    "actions": 78.89356683560064,
+    "spread": 74.6114529218097,
+    "rachats_hausse": 56.294086294749704,
+    "rachats_baisse": -107.22459243701311,
+    "rachat_massif": 93.4304404263944
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 6.5885464909472375,
+    "actions": 36.238097790952,
+    "spread": 39.35470710377626,
+    "marche": 71.02542667548973,
+    "rachat": 34.109922296393734,
+    "bscr": 86.1361360056624
+   },
+   "scr_brut": {
+    "taux": 12.565823469707311,
+    "actions": 78.89356683560064,
+    "spread": 74.6114529218097,
+    "marche": 144.14752577238625,
+    "rachat": 93.4304404263944,
+    "bscr": 190.37237140461147
+   },
+   "ajustement_tp": -104.23623539894908,
+   "scr": 86.1361360056624,
+   "choc_spread": {
+    "elargissement": 0.008120122919919731,
+    "perte_formule_standard": 45.86654261653353,
+    "duration_modifiee": 7.1668859362732364,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.5981911767626826,
+   "ratio_apres_impots_differes": 0.6385887675996449,
+   "part_scenarios_avec_apport": {
+    "base": 0.121,
+    "taux_hausse": 0.127,
+    "taux_baisse": 0.145,
+    "actions": 0.224,
+    "spread": 0.277,
+    "rachats_hausse": 0.169,
+    "rachats_baisse": 0.054,
+    "rachat_massif": 0.14
+   },
+   "fonds_excedentaires_borne_haute": 29.67
+  },
+  "B|sans_risque|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 992.7707528426693,
+   "be": 937.6984460602021,
+   "ic_be": 6.68378434436618,
+   "fdb": 134.08822072639282,
+   "marge_de_risque": 14.683096990490846,
+   "fonds_propres_avant_impots_differes": 40.38920979197635,
+   "impots_differes_passif_si_positif": -6.355736571222107,
+   "fonds_propres_apres_impots_differes": 46.74494636319846,
+   "pertes_nettes": {
+    "taux_hausse": 25.52315265301172,
+    "taux_baisse": -0.9095249480318444,
+    "actions": 30.045172258522143,
+    "spread": 33.7692239322879,
+    "rachats_hausse": 17.69728624441052,
+    "rachats_baisse": -33.21817157719431,
+    "rachat_massif": 26.235050966490007
+   },
+   "pertes_brutes": {
+    "taux_hausse": 49.67771152878102,
+    "taux_baisse": -7.075216390075099,
+    "actions": 68.86983208965134,
+    "spread": 64.51224760672403,
+    "rachats_hausse": 47.0423461431602,
+    "rachats_baisse": -103.55656244025496,
+    "rachat_massif": 79.54176876939708
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 25.52315265301172,
+    "actions": 30.045172258522143,
+    "spread": 33.7692239322879,
+    "marche": 64.933869494321,
+    "rachat": 26.235050966490007,
+    "bscr": 75.87131865558487
+   },
+   "scr_brut": {
+    "taux": 49.67771152878102,
+    "actions": 68.86983208965134,
+    "spread": 64.51224760672403,
+    "marche": 134.30257025338892,
+    "rachat": 79.54176876939708,
+    "bscr": 172.35256119288186
+   },
+   "ajustement_tp": -96.48124253729699,
+   "scr": 75.87131865558487,
+   "choc_spread": {
+    "elargissement": 0.008120122919919731,
+    "perte_formule_standard": 45.86654261653353,
+    "duration_modifiee": 7.1668859362732364,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.5323383131815821,
+   "ratio_apres_impots_differes": 0.6161082631948901,
+   "part_scenarios_avec_apport": {
+    "base": 0.159,
+    "taux_hausse": 0.262,
+    "taux_baisse": 0.157,
+    "actions": 0.31,
+    "spread": 0.359,
+    "rachats_hausse": 0.236,
+    "rachats_baisse": 0.065,
+    "rachat_massif": 0.2
+   },
+   "fonds_excedentaires_borne_haute": 29.67
+  },
+  "B|sans_risque|lisse_integral": {
+   "base": "avec_va",
+   "credit": "lisse_integral",
+   "n_scenarios": 1000,
+   "actif": 992.7707528426693,
+   "be": 923.3085394959555,
+   "ic_be": 5.875210969035651,
+   "fdb": 114.42623584688248,
+   "marge_de_risque": 17.103515249550178,
+   "fonds_propres_avant_impots_differes": 52.35869809716355,
+   "impots_differes_passif_si_positif": -3.264616216407514,
+   "fonds_propres_apres_impots_differes": 55.62331431357106,
+   "pertes_nettes": {
+    "taux_hausse": 33.16038133862139,
+    "taux_baisse": -9.46303630909722,
+    "actions": 34.44765633254872,
+    "spread": 31.87023813018311,
+    "rachats_hausse": 21.625922796293594,
+    "rachats_baisse": -42.1426804811739,
+    "rachat_massif": 32.127801061641776
+   },
+   "pertes_brutes": {
+    "taux_hausse": 50.442588356934564,
+    "taux_baisse": -8.849704601565051,
+    "actions": 70.26310934013995,
+    "spread": 70.54324427907625,
+    "rachats_hausse": 45.09656799784487,
+    "rachats_baisse": -103.86048174353157,
+    "rachat_massif": 76.56121597969806
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 33.16038133862139,
+    "actions": 34.44765633254872,
+    "spread": 31.87023813018311,
+    "marche": 70.34732767717838,
+    "rachat": 32.127801061641776,
+    "bscr": 84.32671336410542
+   },
+   "scr_brut": {
+    "taux": 50.442588356934564,
+    "actions": 70.26310934013995,
+    "spread": 70.54324427907625,
+    "marche": 141.0410936454069,
+    "rachat": 76.56121597969806,
+    "bscr": 176.50311245210895
+   },
+   "ajustement_tp": -92.17639908800354,
+   "scr": 84.32671336410542,
+   "choc_spread": {
+    "elargissement": 0.008120122919919731,
+    "perte_formule_standard": 45.86654261653353,
+    "duration_modifiee": 7.1668859362732364,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.6209028670557745,
+   "ratio_apres_impots_differes": 0.659616770232714,
+   "part_scenarios_avec_apport": {
+    "base": 0.071,
+    "taux_hausse": 0.198,
+    "taux_baisse": 0.054,
+    "actions": 0.203,
+    "spread": 0.194,
+    "rachats_hausse": 0.163,
+    "rachats_baisse": 0.009,
+    "rachat_massif": 0.107
+   },
+   "fonds_excedentaires_borne_haute": 29.67
+  },
+  "B|taux_servi_marche|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 992.7707528426693,
+   "be": 912.3611486001739,
+   "ic_be": 5.2466022793788785,
+   "fdb": 159.14844246286947,
+   "marge_de_risque": 25.227245592024254,
+   "fonds_propres_avant_impots_differes": 55.18235865047108,
+   "impots_differes_passif_si_positif": -2.535405878515843,
+   "fonds_propres_apres_impots_differes": 57.717764528986926,
+   "pertes_nettes": {
+    "taux_hausse": 9.317820525732941,
+    "taux_baisse": 2.2919192586377903,
+    "actions": 35.8733480742826,
+    "spread": 39.32038258322325,
+    "rachats_hausse": 21.168367705838364,
+    "rachats_baisse": -37.226576543427086,
+    "rachat_massif": 36.03530673144519
+   },
+   "pertes_brutes": {
+    "taux_hausse": 18.51367715701838,
+    "taux_baisse": 0.7204993443108947,
+    "actions": 78.45174436021371,
+    "spread": 74.93075670575524,
+    "rachats_hausse": 58.16136688745384,
+    "rachats_baisse": -106.55142640889409,
+    "rachat_massif": 97.33805706204744
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 9.317820525732941,
+    "actions": 35.8733480742826,
+    "spread": 39.32038258322325,
+    "marche": 70.96225774404547,
+    "rachat": 36.03530673144519,
+    "bscr": 87.25112444801475
+   },
+   "scr_brut": {
+    "taux": 18.51367715701838,
+    "actions": 78.45174436021371,
+    "spread": 74.93075670575524,
+    "marche": 144.6710876098871,
+    "rachat": 97.33805706204744,
+    "bscr": 193.50819681176782
+   },
+   "ajustement_tp": -106.25707236375307,
+   "scr": 87.25112444801475,
+   "choc_spread": {
+    "elargissement": 0.008120122919919731,
+    "perte_formule_standard": 45.86654261653353,
+    "duration_modifiee": 7.1668859362732364,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.6324544124740694,
+   "ratio_apres_impots_differes": 0.6615131311387953,
+   "part_scenarios_avec_apport": {
+    "base": 0.102,
+    "taux_hausse": 0.102,
+    "taux_baisse": 0.114,
+    "actions": 0.181,
+    "spread": 0.248,
+    "rachats_hausse": 0.138,
+    "rachats_baisse": 0.034,
+    "rachat_massif": 0.118
+   },
+   "fonds_excedentaires_borne_haute": 29.67
+  },
+  "C|sans_risque_demi|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 1028.8411574255804,
+   "be": 929.4174837218653,
+   "ic_be": 4.346153492743954,
+   "fdb": 197.2549570629364,
+   "marge_de_risque": 20.38591145727265,
+   "fonds_propres_avant_impots_differes": 79.03776224644241,
+   "impots_differes_passif_si_positif": 3.6252521001437525,
+   "fonds_propres_apres_impots_differes": 75.41251014629866,
+   "pertes_nettes": {
+    "taux_hausse": 11.043417529492558,
+    "taux_baisse": 0.15212132259864575,
+    "actions": 37.890231680827924,
+    "spread": 40.544274768770606,
+    "rachats_hausse": 20.214156137979558,
+    "rachats_baisse": -38.010973461108506,
+    "rachat_massif": 27.52559057747476
+   },
+   "pertes_brutes": {
+    "taux_hausse": 27.323318814705942,
+    "taux_baisse": -8.083106127561365,
+    "actions": 88.66891486044571,
+    "spread": 83.27422544125079,
+    "rachats_hausse": 61.45144276651607,
+    "rachats_baisse": -107.90094426106594,
+    "rachat_massif": 117.36471140339549
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 11.043417529492558,
+    "actions": 37.890231680827924,
+    "spread": 40.544274768770606,
+    "marche": 74.20116502160114,
+    "rachat": 27.52559057747476,
+    "bscr": 85.35037475945708
+   },
+   "scr_brut": {
+    "taux": 27.323318814705942,
+    "actions": 88.66891486044571,
+    "spread": 83.27422544125079,
+    "marche": 163.15357686854136,
+    "rachat": 117.36471140339549,
+    "bscr": 223.5347878062951
+   },
+   "ajustement_tp": -138.18441304683802,
+   "scr": 85.35037475945708,
+   "choc_spread": {
+    "elargissement": 0.007602748398816455,
+    "perte_formule_standard": 51.680989095160875,
+    "duration_modifiee": 8.547252359218076,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.9260388424678215,
+   "ratio_apres_impots_differes": 0.8835639018438255,
+   "part_scenarios_avec_apport": {
+    "base": 0.078,
+    "taux_hausse": 0.089,
+    "taux_baisse": 0.096,
+    "actions": 0.167,
+    "spread": 0.209,
+    "rachats_hausse": 0.107,
+    "rachats_baisse": 0.035,
+    "rachat_massif": 0.043
+   },
+   "fonds_excedentaires_borne_haute": 14.835
+  },
+  "C|sans_risque|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 1028.8411574255804,
+   "be": 951.4071267536123,
+   "ic_be": 6.796795893954361,
+   "fdb": 178.18673977345117,
+   "marge_de_risque": 10.67666857970147,
+   "fonds_propres_avant_impots_differes": 66.75736209226665,
+   "impots_differes_passif_si_positif": 0.4538387603278614,
+   "fonds_propres_apres_impots_differes": 66.30352333193879,
+   "pertes_nettes": {
+    "taux_hausse": 25.33027746488733,
+    "taux_baisse": -4.534912102228532,
+    "actions": 31.503810673042267,
+    "spread": 34.62172264755702,
+    "rachats_hausse": 16.075606442782032,
+    "rachats_baisse": -32.74241197754975,
+    "rachat_massif": 17.80834944000958
+   },
+   "pertes_brutes": {
+    "taux_hausse": 53.50724869376225,
+    "taux_baisse": -21.37650245702497,
+    "actions": 78.05345204544372,
+    "spread": 73.24871753849948,
+    "rachats_hausse": 52.26244309607361,
+    "rachats_baisse": -107.518498504201,
+    "rachat_massif": 97.93290722372802
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 25.33027746488733,
+    "actions": 31.503810673042267,
+    "spread": 34.62172264755702,
+    "marche": 66.84946533556015,
+    "rachat": 17.80834944000958,
+    "bscr": 73.35685138222932
+   },
+   "scr_brut": {
+    "taux": 53.50724869376225,
+    "actions": 78.05345204544372,
+    "spread": 73.24871753849948,
+    "marche": 151.3166036913784,
+    "rachat": 97.93290722372802,
+    "bscr": 199.74234985436533
+   },
+   "ajustement_tp": -126.385498472136,
+   "scr": 73.35685138222932,
+   "choc_spread": {
+    "elargissement": 0.007602748398816455,
+    "perte_formule_standard": 51.680989095160875,
+    "duration_modifiee": 8.547252359218076,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.910035815801639,
+   "ratio_apres_impots_differes": 0.9038490895207751,
+   "part_scenarios_avec_apport": {
+    "base": 0.11,
+    "taux_hausse": 0.172,
+    "taux_baisse": 0.115,
+    "actions": 0.222,
+    "spread": 0.265,
+    "rachats_hausse": 0.158,
+    "rachats_baisse": 0.046,
+    "rachat_massif": 0.066
+   },
+   "fonds_excedentaires_borne_haute": 14.835
+  },
+  "C|sans_risque|lisse_integral": {
+   "base": "avec_va",
+   "credit": "lisse_integral",
+   "n_scenarios": 1000,
+   "actif": 1028.8411574255804,
+   "be": 935.2594760273537,
+   "ic_be": 5.91334261413567,
+   "fdb": 160.43822891584583,
+   "marge_de_risque": 14.397395724075494,
+   "fonds_propres_avant_impots_differes": 79.1842856741512,
+   "impots_differes_passif_si_positif": 3.6630917753495464,
+   "fonds_propres_apres_impots_differes": 75.52119389880166,
+   "pertes_nettes": {
+    "taux_hausse": 32.96138011244443,
+    "taux_baisse": -13.287382812012424,
+    "actions": 35.941869122445155,
+    "spread": 32.26638533786627,
+    "rachats_hausse": 20.51160679499776,
+    "rachats_baisse": -41.4656666085142,
+    "rachat_massif": 24.82664105992069
+   },
+   "pertes_brutes": {
+    "taux_hausse": 54.6756493798471,
+    "taux_baisse": -21.01711093571336,
+    "actions": 79.34696522597599,
+    "spread": 77.01775578038801,
+    "rachats_hausse": 52.31025916001812,
+    "rachats_baisse": -108.27709698500047,
+    "rachat_massif": 97.5747573743085
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 32.96138011244443,
+    "actions": 35.941869122445155,
+    "spread": 32.26638533786627,
+    "marche": 71.82591075653447,
+    "rachat": 24.82664105992069,
+    "bscr": 81.65121931055889
+   },
+   "scr_brut": {
+    "taux": 54.6756493798471,
+    "actions": 79.34696522597599,
+    "spread": 77.01775578038801,
+    "marche": 156.15309800212563,
+    "rachat": 97.5747573743085,
+    "bscr": 203.7717439139162
+   },
+   "ajustement_tp": -122.12052460335731,
+   "scr": 81.65121931055889,
+   "choc_spread": {
+    "elargissement": 0.007602748398816455,
+    "perte_formule_standard": 51.680989095160875,
+    "duration_modifiee": 8.547252359218076,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.9697869345095173,
+   "ratio_apres_impots_differes": 0.9249242636727592,
+   "part_scenarios_avec_apport": {
+    "base": 0.041,
+    "taux_hausse": 0.118,
+    "taux_baisse": 0.032,
+    "actions": 0.137,
+    "spread": 0.133,
+    "rachats_hausse": 0.108,
+    "rachats_baisse": 0.006,
+    "rachat_massif": 0.024
+   },
+   "fonds_excedentaires_borne_haute": 14.835
+  },
+  "C|taux_servi_marche|decompose": {
+   "base": "avec_va",
+   "credit": "decompose",
+   "n_scenarios": 1000,
+   "actif": 1028.8411574255804,
+   "be": 924.0725319599469,
+   "ic_be": 5.053061723637869,
+   "fdb": 203.6477612178746,
+   "marge_de_risque": 22.326309750105764,
+   "fonds_propres_avant_impots_differes": 82.44231571552771,
+   "impots_differes_passif_si_positif": 4.504478033535031,
+   "fonds_propres_apres_impots_differes": 77.93783768199268,
+   "pertes_nettes": {
+    "taux_hausse": 13.691388852461046,
+    "taux_baisse": -1.2854028269426863,
+    "actions": 36.60505452472478,
+    "spread": 40.20403822056039,
+    "rachats_hausse": 20.36650000041334,
+    "rachats_baisse": -37.15849354624629,
+    "rachat_massif": 29.724549688546972
+   },
+   "pertes_brutes": {
+    "taux_hausse": 32.96622253129996,
+    "taux_baisse": -10.829797315857917,
+    "actions": 87.09472896863278,
+    "spread": 83.03809276593563,
+    "rachats_hausse": 62.532296085279285,
+    "rachats_baisse": -106.70888829760347,
+    "rachat_massif": 122.30699034249116
+   },
+   "sens_retenus": {
+    "taux": "taux_hausse",
+    "rachat": "rachat_massif"
+   },
+   "scr_net": {
+    "taux": 13.691388852461046,
+    "actions": 36.60505452472478,
+    "spread": 40.20403822056039,
+    "marche": 73.15227509431438,
+    "rachat": 29.724549688546972,
+    "bscr": 85.56876429864316
+   },
+   "scr_brut": {
+    "taux": 32.96622253129996,
+    "actions": 87.09472896863278,
+    "spread": 83.03809276593563,
+    "marche": 162.52956274963933,
+    "rachat": 122.30699034249116,
+    "bscr": 226.5261783658169
+   },
+   "ajustement_tp": -140.95741406717372,
+   "scr": 85.56876429864317,
+   "choc_spread": {
+    "elargissement": 0.007602748398816455,
+    "perte_formule_standard": 51.680989095160875,
+    "duration_modifiee": 8.547252359218076,
+    "part_non_souveraine": 0.66
+   },
+   "ratio_avant_impots_differes": 0.9634627353948474,
+   "ratio_apres_impots_differes": 0.910821119374614,
+   "part_scenarios_avec_apport": {
+    "base": 0.059,
+    "taux_hausse": 0.076,
+    "taux_baisse": 0.074,
+    "actions": 0.134,
+    "spread": 0.173,
+    "rachats_hausse": 0.089,
+    "rachats_baisse": 0.022,
+    "rachat_massif": 0.031
+   },
+   "fonds_excedentaires_borne_haute": 14.835
+  }
+ }
+}

@@ -61,12 +61,16 @@ class ScenarioStochastique:
 class GSE:
     """Simule n trajectoires de taux (Hull-White) et d'actions."""
 
-    def __init__(self, h, r0=None, nom="stochastique", choc_actions=0.0, n=None, graine=None, courbe=None):
+    def __init__(self, h, r0=None, nom="stochastique", choc_actions=0.0, n=None, graine=None, courbe=None,
+                 courbe_avant_choc=None):
         """r0 : taux plat de la courbe initiale (par défaut celui des hypothèses) ;
-        courbe : courbe initiale quelconque, prioritaire sur r0."""
+        courbe : courbe initiale quelconque, prioritaire sur r0 ;
+        courbe_avant_choc : courbe de l'ouverture avant un éventuel choc (V5 : courbe de marché),
+        par défaut la courbe plate des hypothèses."""
         g = h["gse"]
         self.nom, self.T, self.choc_actions = nom, h["horizon_annees"], choc_actions
-        self.courbe_avant_choc = CourbeZeroCoupon.plate(h["economie"]["taux_sans_risque"])
+        self.courbe_avant_choc = (courbe_avant_choc if courbe_avant_choc is not None
+                                  else CourbeZeroCoupon.plate(h["economie"]["taux_sans_risque"]))
         if courbe is not None:
             self.courbe0 = courbe
         else:

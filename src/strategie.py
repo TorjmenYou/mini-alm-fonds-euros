@@ -87,9 +87,11 @@ def decider_taux_servi(produits_financiers, pm, ppb, pvl_actions, taux_attendu, 
         interets += pb_minimale
         manque = besoin - interets
 
-        # a. Reprise de PPB, plafonnée à une fraction du stock restant
+        # a. Reprise de PPB, plafonnée à une fraction du stock restant (V5 : au-delà d'un plancher
+        #    facultatif en % de la PM, que les reprises volontaires n'entament pas)
         stock_restant = ppb.stock - reprise_obligatoire
-        reprise_vol = min(manque, s["reprise_ppb_max_par_an"] * stock_restant)
+        stock_mobilisable = max(stock_restant - s.get("plancher_ppb_pct_pm", 0.0) * pm, 0.0)
+        reprise_vol = min(manque, s["reprise_ppb_max_par_an"] * stock_mobilisable)
         reprise += reprise_vol
         interets += reprise_vol
         manque -= reprise_vol

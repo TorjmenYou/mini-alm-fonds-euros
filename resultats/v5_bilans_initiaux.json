@@ -1,0 +1,767 @@
+{
+ "unites": "unités fictives, 1 unité = 10 M EUR ; risque neutre ; base sans VA sauf mention",
+ "profils": {
+  "A": {
+   "comptable": {
+    "actif": {
+     "obligations": 946.0,
+     "actions": 86.0,
+     "monetaire": 43.0
+    },
+    "total_actif": 1075.0,
+    "passif": {
+     "pm": 1000.0,
+     "ppb": 25.0,
+     "reserve_capitalisation": 5.0,
+     "fonds_propres": 45.0
+    },
+    "total_passif": 1075.0
+   },
+   "economique": {
+    "actif": {
+     "obligations": 766.4773940834081,
+     "actions": 90.3,
+     "monetaire": 43.0
+    },
+    "total_actif": 899.777394083408,
+    "be_equivalent_certain": 905.7998850549461,
+    "valeur_actionnaire_equivalent_certain": -6.0224909715381045,
+    "fuite": -1.1368683772161603e-13
+   },
+   "indicateurs": {
+    "coupon_moyen_obligations": 0.02204,
+    "pmvl_obligations": -179.52260591659194,
+    "pmvl_obligations_pct_vnc": -0.18977019652916693,
+    "pvl_actions": 4.299999999999997,
+    "duration_macaulay_obligations": 7.749846451768244,
+    "duration_macaulay_flux_passif": 5.727797771547507,
+    "ppb_pct_pm": 0.025,
+    "reserve_capitalisation_pct_pm": 0.005,
+    "fonds_propres_comptables_pct_pm": 0.045,
+    "liquidite_pct_actif_vm": 0.04778959805253116,
+    "taux_garanti": 0.006,
+    "taux_servi_initial": 0.023,
+    "taux_reference_assures_annee_1": 0.02880000500028081,
+    "taux_servi_annee_1": 0.02380000500028081,
+    "taux_rachat_annee_1": 0.05,
+    "taux_servi_moyen_annees_1_20": 0.007800802672039762,
+    "taux_rachat_moyen_annees_1_20": 0.22373631710046094,
+    "pm_annee_10": 110.4147552857666,
+    "pertes_credit_risque_neutre_annee_1_pct_vnc_obligations": 0.00354110544554542,
+    "produits_financiers_annee_1_pct_vnc": 0.02410146675958258,
+    "duration_effective_actif": 6.388324236160732,
+    "duration_effective_be": 1.162303748311012,
+    "sensibilite_valeur_par_pb": -0.4695255132153534,
+    "duration_effective_be_reference_figee": 6.956873131268767,
+    "sensibilite_valeur_par_pb_reference_figee": 0.03818409186500275
+   },
+   "reconciliation": {
+    "etapes": {
+     "fonds_propres_comptables": 45.0,
+     "plus_ou_moins_values_latentes_obligations": -179.52260591659194,
+     "plus_values_latentes_actions": 4.299999999999997,
+     "provisions_comptables_moins_be": 124.20011494505388,
+     "valeur_actionnaire": -6.022490971538048
+    },
+    "ecart_avec_actif_moins_be": 5.684341886080802e-14,
+    "ecart_bilan_comptable": 0.0
+   },
+   "avec_va": {
+    "be_equivalent_certain": 896.9526317324753
+   },
+   "sensibilites": {
+    "spread +50 pb": {
+     "vm_actif": 870.7949820875182,
+     "pmvl_obligations_pct_vnc": -0.22040699567915623,
+     "be_equivalent_certain": 918.2403407929667,
+     "valeur_actionnaire_equivalent_certain": -47.445358705448484,
+     "taux_rachat_annee_1": 0.06057136902684762,
+     "taux_servi_annee_1": 0.02241613898257044,
+     "taux_rachat_moyen_annees_1_20": 0.27811917249653806,
+     "taux_servi_moyen_annees_1_20": 0.0072987311564667754
+    },
+    "spread -50 pb": {
+     "vm_actif": 930.2238167686828,
+     "pmvl_obligations_pct_vnc": -0.15758581736925703,
+     "be_equivalent_certain": 889.0442196746754,
+     "valeur_actionnaire_equivalent_certain": 41.17959709400736,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.018569093152627135,
+     "taux_rachat_moyen_annees_1_20": 0.14661978252382885,
+     "taux_servi_moyen_annees_1_20": 0.011939999819031433
+    },
+    "coupons 2015-2021 +50 pb": {
+     "vm_actif": 919.2411266417012,
+     "pmvl_obligations_pct_vnc": -0.16919542638297969,
+     "be_equivalent_certain": 907.739010375912,
+     "valeur_actionnaire_equivalent_certain": 11.502116265789141,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.20451910972009585,
+     "taux_servi_moyen_annees_1_20": 0.010624901035365255
+    },
+    "coupons 2015-2021 -25 pb": {
+     "vm_actif": 890.0455278042614,
+     "pmvl_obligations_pct_vnc": -0.20005758160226061,
+     "be_equivalent_certain": 905.457882338716,
+     "valeur_actionnaire_equivalent_certain": -15.412354534454607,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.22490210510076722,
+     "taux_servi_moyen_annees_1_20": 0.007684223872009133
+    },
+    "prime d'achat -40 pb (toutes générations)": {
+     "vm_actif": 872.5638876862781,
+     "pmvl_obligations_pct_vnc": -0.21853711661069963,
+     "be_equivalent_certain": 904.1714906344803,
+     "valeur_actionnaire_equivalent_certain": -31.607602948202157,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.023402529737019676,
+     "taux_rachat_moyen_annees_1_20": 0.22771389627061742,
+     "taux_servi_moyen_annees_1_20": 0.007383170991861055
+    },
+    "prime d'achat +20 pb (toutes générations)": {
+     "vm_actif": 913.3841472819729,
+     "pmvl_obligations_pct_vnc": -0.17538673648840064,
+     "be_equivalent_certain": 907.3236193639162,
+     "valeur_actionnaire_equivalent_certain": 6.060527918056664,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.20785231734940474,
+     "taux_servi_moyen_annees_1_20": 0.010290368741188811
+    },
+    "PPB x 0,5": {
+     "vm_actif": 889.3148662452288,
+     "pmvl_obligations_pct_vnc": -0.18977019652916705,
+     "be_equivalent_certain": 903.982189018013,
+     "valeur_actionnaire_equivalent_certain": -14.667322772784132,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.022399610094077364,
+     "taux_rachat_moyen_annees_1_20": 0.2257635990569587,
+     "taux_servi_moyen_annees_1_20": 0.007528054731079817
+    },
+    "PPB x 1,5": {
+     "vm_actif": 910.2399219215871,
+     "pmvl_obligations_pct_vnc": -0.18977019652916716,
+     "be_equivalent_certain": 909.3865724503718,
+     "valeur_actionnaire_equivalent_certain": 0.8533494712153242,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.20974173168023952,
+     "taux_servi_moyen_annees_1_20": 0.010221108992964474
+    },
+    "référence assurés : OAT 10 ans (ajustement 0)": {
+     "vm_actif": 899.777394083408,
+     "pmvl_obligations_pct_vnc": -0.18977019652916693,
+     "be_equivalent_certain": 945.736350064054,
+     "valeur_actionnaire_equivalent_certain": -45.95895598064601,
+     "taux_rachat_annee_1": 0.20800005000280808,
+     "taux_servi_annee_1": 0.026997753428572142,
+     "taux_rachat_moyen_annees_1_20": 0.33093753483485094,
+     "taux_servi_moyen_annees_1_20": 0.00811011478918124
+    },
+    "référence assurés : OAT 10 ans - 1 pt": {
+     "vm_actif": 899.777394083408,
+     "pmvl_obligations_pct_vnc": -0.18977019652916693,
+     "be_equivalent_certain": 931.4885197977974,
+     "valeur_actionnaire_equivalent_certain": -31.711125714389368,
+     "taux_rachat_annee_1": 0.1080000500028081,
+     "taux_servi_annee_1": 0.026997753428572142,
+     "taux_rachat_moyen_annees_1_20": 0.3170722714010334,
+     "taux_servi_moyen_annees_1_20": 0.007644776399248571
+    },
+    "référence assurés : OAT 10 ans - 3 pts": {
+     "vm_actif": 899.777394083408,
+     "pmvl_obligations_pct_vnc": -0.18977019652916693,
+     "be_equivalent_certain": 859.7304034136188,
+     "valeur_actionnaire_equivalent_certain": 40.04699066978924,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.01380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.115518274894523,
+     "taux_servi_moyen_annees_1_20": 0.010654756289457952
+    },
+    "référence assurés : livret A 1,7 % fixe": {
+     "vm_actif": 899.777394083408,
+     "pmvl_obligations_pct_vnc": -0.18977019652916693,
+     "be_equivalent_certain": 805.5460900834361,
+     "valeur_actionnaire_equivalent_certain": 94.23130399997194,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.012,
+     "taux_rachat_moyen_annees_1_20": 0.05012122169501541,
+     "taux_servi_moyen_annees_1_20": 0.010793101278983136
+    },
+    "référence assurés : sans risque 10 ans, même niveau en t = 0": {
+     "vm_actif": 899.777394083408,
+     "pmvl_obligations_pct_vnc": -0.18977019652916693,
+     "be_equivalent_certain": 883.9072702640647,
+     "valeur_actionnaire_equivalent_certain": 15.870123819343348,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.13943402840786323,
+     "taux_servi_moyen_annees_1_20": 0.010296665632953493
+    },
+    "taux garanti +0,30 pt": {
+     "vm_actif": 899.777394083408,
+     "pmvl_obligations_pct_vnc": -0.18977019652916693,
+     "be_equivalent_certain": 908.743846181931,
+     "valeur_actionnaire_equivalent_certain": -8.96645209852295,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.19973631710046091,
+     "taux_servi_moyen_annees_1_20": 0.010350802672039763
+    },
+    "base avec VA": {
+     "vm_actif": 899.777394083408,
+     "pmvl_obligations_pct_vnc": -0.18977019652916693,
+     "be_equivalent_certain": 896.9526317324753,
+     "valeur_actionnaire_equivalent_certain": 2.8247623509327013,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.20748685692013957,
+     "taux_servi_moyen_annees_1_20": 0.010447774068406218
+    }
+   },
+   "stochastique": {
+    "sans_va": {
+     "be": 929.8810867072821,
+     "ic_be": 6.462983285924974,
+     "be_equivalent_certain": 905.7998850549461,
+     "tvog": 24.08120165233595,
+     "fdb": 36.38029458217512,
+     "valeur_actionnaire": -30.10369262387401,
+     "ic_valeur": 6.462983285924973,
+     "fuite": -0.1894851100801143,
+     "ic_fuite": 2.065949291955159,
+     "va_apports": 35.239786839854425,
+     "part_scenarios_avec_apport": 0.75,
+     "identite_valeur_ecart_max": 1.9895196601282805e-13,
+     "duree_s": 9.6
+    },
+    "avec_va": {
+     "be": 920.6108078517024,
+     "ic_be": 6.070028987536996,
+     "be_equivalent_certain": 896.9526317324753,
+     "tvog": 23.65817611922705,
+     "fdb": 41.043817392374194,
+     "valeur_actionnaire": -20.833413768294356,
+     "ic_valeur": 6.070028987536996,
+     "fuite": -0.08005394903851538,
+     "ic_fuite": 2.1073025907778224,
+     "va_apports": 29.183173315771903,
+     "part_scenarios_avec_apport": 0.657,
+     "identite_valeur_ecart_max": 4.547473508864641e-13,
+     "duree_s": 10.0
+    }
+   },
+   "libelle": "Assureur historique sous pression"
+  },
+  "B": {
+   "comptable": {
+    "actif": {
+     "obligations": 939.25,
+     "actions": 110.5,
+     "monetaire": 55.25
+    },
+    "total_actif": 1105.0,
+    "passif": {
+     "pm": 1000.0,
+     "ppb": 40.0,
+     "reserve_capitalisation": 15.0,
+     "fonds_propres": 50.0
+    },
+    "total_passif": 1105.0
+   },
+   "economique": {
+    "actif": {
+     "obligations": 815.9707528426693,
+     "actions": 121.55000000000001,
+     "monetaire": 55.25
+    },
+    "total_actif": 992.7707528426693,
+    "be_equivalent_certain": 926.2201057304109,
+    "valeur_actionnaire_equivalent_certain": 66.55064711225839,
+    "fuite": -3.410605131648481e-13
+   },
+   "indicateurs": {
+    "coupon_moyen_obligations": 0.02641,
+    "pmvl_obligations": -123.2792471573307,
+    "pmvl_obligations_pct_vnc": -0.13125285829899458,
+    "pvl_actions": 11.050000000000011,
+    "duration_macaulay_obligations": 7.166884954570477,
+    "duration_macaulay_flux_passif": 8.108426977678779,
+    "ppb_pct_pm": 0.04,
+    "reserve_capitalisation_pct_pm": 0.015,
+    "fonds_propres_comptables_pct_pm": 0.05,
+    "liquidite_pct_actif_vm": 0.05565232440802557,
+    "taux_garanti": 0.0032,
+    "taux_servi_initial": 0.0263,
+    "taux_reference_assures_annee_1": 0.02880000500028081,
+    "taux_servi_annee_1": 0.02380000500028081,
+    "taux_rachat_annee_1": 0.05,
+    "taux_servi_moyen_annees_1_20": 0.020008819174529395,
+    "taux_rachat_moyen_annees_1_20": 0.11544359517802956,
+    "pm_annee_10": 245.9190113087319,
+    "pertes_credit_risque_neutre_annee_1_pct_vnc_obligations": 0.003541105445545423,
+    "produits_financiers_annee_1_pct_vnc": 0.025008125104142742,
+    "duration_effective_actif": 5.700699346596998,
+    "duration_effective_be": 1.7837623995182261,
+    "sensibilite_valeur_par_pb": -0.40073309837711124,
+    "duration_effective_be_reference_figee": 10.131453431287367,
+    "sensibilite_valeur_par_pb_reference_figee": 0.34444505442193074
+   },
+   "reconciliation": {
+    "etapes": {
+     "fonds_propres_comptables": 50.0,
+     "plus_ou_moins_values_latentes_obligations": -123.2792471573307,
+     "plus_values_latentes_actions": 11.050000000000011,
+     "provisions_comptables_moins_be": 128.77989426958914,
+     "valeur_actionnaire": 66.55064711225845
+    },
+    "ecart_avec_actif_moins_be": 5.684341886080802e-14,
+    "ecart_bilan_comptable": 0.0
+   },
+   "avec_va": {
+    "be_equivalent_certain": 917.7841635467161
+   },
+   "sensibilites": {
+    "spread +50 pb": {
+     "vm_actif": 964.1510617169845,
+     "pmvl_obligations_pct_vnc": -0.1617236500218424,
+     "be_equivalent_certain": 928.0391076069807,
+     "valeur_actionnaire_equivalent_certain": 36.11195411000381,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.029057136902684758,
+     "taux_rachat_moyen_annees_1_20": 0.19680504085725695,
+     "taux_servi_moyen_annees_1_20": 0.016441355416608322
+    },
+    "spread -50 pb": {
+     "vm_actif": 1022.6507755803334,
+     "pmvl_obligations_pct_vnc": -0.09944021764138045,
+     "be_equivalent_certain": 916.1865002933713,
+     "valeur_actionnaire_equivalent_certain": 106.4642752869621,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.018569093152627135,
+     "taux_rachat_moyen_annees_1_20": 0.056687396189907736,
+     "taux_servi_moyen_annees_1_20": 0.022997477639827242
+    },
+    "coupons 2015-2021 +50 pb": {
+     "vm_actif": 1003.9135333658651,
+     "pmvl_obligations_pct_vnc": -0.1193893709173649,
+     "be_equivalent_certain": 929.0015953519907,
+     "valeur_actionnaire_equivalent_certain": 74.91193801387442,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.10766928376952682,
+     "taux_servi_moyen_annees_1_20": 0.02078737859012668
+    },
+    "coupons 2015-2021 -25 pb": {
+     "vm_actif": 987.1993625810715,
+     "pmvl_obligations_pct_vnc": -0.13718460198980942,
+     "be_equivalent_certain": 923.3826161140145,
+     "valeur_actionnaire_equivalent_certain": 63.81674646705699,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.1212164568780929,
+     "taux_servi_moyen_annees_1_20": 0.019364740670012683
+    },
+    "prime d'achat -40 pb (toutes générations)": {
+     "vm_actif": 967.6568049232637,
+     "pmvl_obligations_pct_vnc": -0.15799115792040053,
+     "be_equivalent_certain": 913.8347578040415,
+     "valeur_actionnaire_equivalent_certain": 53.82204711922225,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.14658291571368987,
+     "taux_servi_moyen_annees_1_20": 0.01671405383782978
+    },
+    "prime d'achat +20 pb (toutes générations)": {
+     "vm_actif": 1005.3277268023721,
+     "pmvl_obligations_pct_vnc": -0.11788370848829166,
+     "be_equivalent_certain": 929.4352498353884,
+     "valeur_actionnaire_equivalent_certain": 75.89247696698374,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.10701733096461996,
+     "taux_servi_moyen_annees_1_20": 0.020853384218018755
+    },
+    "PPB x 0,5": {
+     "vm_actif": 974.8020514337522,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 915.106152701601,
+     "valeur_actionnaire_equivalent_certain": 59.69589873215125,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.14079140491463701,
+     "taux_servi_moyen_annees_1_20": 0.01729377219432094
+    },
+    "PPB x 1,5": {
+     "vm_actif": 1010.7394542515864,
+     "pmvl_obligations_pct_vnc": -0.1312528582989947,
+     "be_equivalent_certain": 934.2416091110338,
+     "valeur_actionnaire_equivalent_certain": 76.49784514055261,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.10151196475539877,
+     "taux_servi_moyen_annees_1_20": 0.021533476611278014
+    },
+    "référence assurés : OAT 10 ans (ajustement 0)": {
+     "vm_actif": 992.7707528426693,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 965.9057395217106,
+     "valeur_actionnaire_equivalent_certain": 26.86501332095861,
+     "taux_rachat_annee_1": 0.1750000500028081,
+     "taux_servi_annee_1": 0.04320506258031976,
+     "taux_rachat_moyen_annees_1_20": 0.2826676304053931,
+     "taux_servi_moyen_annees_1_20": 0.018410326460104348
+    },
+    "référence assurés : OAT 10 ans - 1 pt": {
+     "vm_actif": 992.7707528426693,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 947.8076914922731,
+     "valeur_actionnaire_equivalent_certain": 44.963061350396174,
+     "taux_rachat_annee_1": 0.07500005000280809,
+     "taux_servi_annee_1": 0.03380000500028082,
+     "taux_rachat_moyen_annees_1_20": 0.2199873391907455,
+     "taux_servi_moyen_annees_1_20": 0.01791135695546687
+    },
+    "référence assurés : OAT 10 ans - 3 pts": {
+     "vm_actif": 992.7707528426693,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 870.5112145653767,
+     "valeur_actionnaire_equivalent_certain": 122.25953827729256,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.01380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.052920474597559816,
+     "taux_servi_moyen_annees_1_20": 0.019461650020112957
+    },
+    "référence assurés : livret A 1,7 % fixe": {
+     "vm_actif": 992.7707528426693,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 850.7402515162963,
+     "valeur_actionnaire_equivalent_certain": 142.03050132637293,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.012,
+     "taux_rachat_moyen_annees_1_20": 0.04995025460929724,
+     "taux_servi_moyen_annees_1_20": 0.017549195150808702
+    },
+    "référence assurés : sans risque 10 ans, même niveau en t = 0": {
+     "vm_actif": 992.7707528426693,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 897.6271712372493,
+     "valeur_actionnaire_equivalent_certain": 95.14358160541997,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.07223425062019659,
+     "taux_servi_moyen_annees_1_20": 0.019226840369167296
+    },
+    "taux garanti +0,30 pt": {
+     "vm_actif": 992.7707528426693,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 926.2201057304109,
+     "valeur_actionnaire_equivalent_certain": 66.55064711225839,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.11544359517802956,
+     "taux_servi_moyen_annees_1_20": 0.020008819174529395
+    },
+    "base avec VA": {
+     "vm_actif": 992.7707528426693,
+     "pmvl_obligations_pct_vnc": -0.13125285829899458,
+     "be_equivalent_certain": 917.7841635467161,
+     "valeur_actionnaire_equivalent_certain": 74.9865892959532,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.10166619723465198,
+     "taux_servi_moyen_annees_1_20": 0.021936044010823306
+    }
+   },
+   "stochastique": {
+    "sans_va": {
+     "be": 949.0277116886896,
+     "ic_be": 5.539007072891701,
+     "be_equivalent_certain": 926.2201057304109,
+     "tvog": 22.807605958278714,
+     "fdb": 92.51328108369825,
+     "valeur_actionnaire": 43.74304115397972,
+     "ic_valeur": 5.539007072891701,
+     "fuite": 0.8117453797415647,
+     "ic_fuite": 2.4593332111510837,
+     "va_apports": 4.485076240428945,
+     "part_scenarios_avec_apport": 0.124,
+     "identite_valeur_ecart_max": 2.7000623958883807e-13,
+     "duree_s": 13.2
+    },
+    "avec_va": {
+     "be": 941.3291622048265,
+     "ic_be": 5.197710515107864,
+     "be_equivalent_certain": 917.7841635467161,
+     "tvog": 23.544998658110444,
+     "fdb": 103.11178998281207,
+     "valeur_actionnaire": 51.441590637842836,
+     "ic_valeur": 5.197710515107864,
+     "fuite": 0.9298731365185579,
+     "ic_fuite": 2.5471282221925216,
+     "va_apports": 3.4328046956999305,
+     "part_scenarios_avec_apport": 0.093,
+     "identite_valeur_ecart_max": 4.547473508864641e-13,
+     "duree_s": 12.9
+    }
+   },
+   "libelle": "Assureur intermédiaire"
+  },
+  "C": {
+   "comptable": {
+    "actif": {
+     "obligations": 889.6999999999999,
+     "actions": 130.2,
+     "monetaire": 65.10000000000008
+    },
+    "total_actif": 1085.0,
+    "passif": {
+     "pm": 1000.0,
+     "ppb": 20.0,
+     "reserve_capitalisation": 5.0,
+     "fonds_propres": 60.0
+    },
+    "total_passif": 1085.0
+   },
+   "economique": {
+    "actif": {
+     "obligations": 825.7291574255802,
+     "actions": 138.012,
+     "monetaire": 65.10000000000008
+    },
+    "total_actif": 1028.8411574255801,
+    "be_equivalent_certain": 939.899319418268,
+    "valeur_actionnaire_equivalent_certain": 88.94183800731241,
+    "fuite": 0.0
+   },
+   "indicateurs": {
+    "coupon_moyen_obligations": 0.03785,
+    "pmvl_obligations": -63.97084257441975,
+    "pmvl_obligations_pct_vnc": -0.07190158769744825,
+    "pvl_actions": 7.812000000000012,
+    "duration_macaulay_obligations": 8.547250837215165,
+    "duration_macaulay_flux_passif": 10.113758592181698,
+    "ppb_pct_pm": 0.02,
+    "reserve_capitalisation_pct_pm": 0.005,
+    "fonds_propres_comptables_pct_pm": 0.06,
+    "liquidite_pct_actif_vm": 0.06327507364003272,
+    "taux_garanti": 0.0,
+    "taux_servi_initial": 0.03,
+    "taux_reference_assures_annee_1": 0.02880000500028081,
+    "taux_servi_annee_1": 0.02380000500028081,
+    "taux_rachat_annee_1": 0.05,
+    "taux_servi_moyen_annees_1_20": 0.022856170060821867,
+    "taux_rachat_moyen_annees_1_20": 0.08826792308904796,
+    "pm_annee_10": 376.92049852681805,
+    "pertes_credit_risque_neutre_annee_1_pct_vnc_obligations": 0.003541105445545424,
+    "produits_financiers_annee_1_pct_vnc": 0.03320895143659768,
+    "duration_effective_actif": 6.637705088328399,
+    "duration_effective_be": 3.8694084084740807,
+    "sensibilite_valeur_par_pb": -0.3192289856049115,
+    "duration_effective_be_reference_figee": 13.036580888169787,
+    "sensibilite_valeur_par_pb_reference_figee": 0.5044419926219007
+   },
+   "reconciliation": {
+    "etapes": {
+     "fonds_propres_comptables": 60.0,
+     "plus_ou_moins_values_latentes_obligations": -63.97084257441975,
+     "plus_values_latentes_actions": 7.812000000000012,
+     "provisions_comptables_moins_be": 85.10068058173204,
+     "valeur_actionnaire": 88.9418380073123
+    },
+    "ecart_avec_actif_moins_be": -1.1368683772161603e-13,
+    "ecart_bilan_comptable": 0.0
+   },
+   "avec_va": {
+    "be_equivalent_certain": 932.3046574442789
+   },
+   "sensibilites": {
+    "spread +50 pb": {
+     "vm_actif": 994.4155729369251,
+     "pmvl_obligations_pct_vnc": -0.11059506245147233,
+     "be_equivalent_certain": 933.2592894434956,
+     "valeur_actionnaire_equivalent_certain": 61.156283493429555,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.029057136902684758,
+     "taux_rachat_moyen_annees_1_20": 0.18079629840631242,
+     "taux_servi_moyen_annees_1_20": 0.017985563612907582
+    },
+    "spread -50 pb": {
+     "vm_actif": 1065.0241394984596,
+     "pmvl_obligations_pct_vnc": -0.031232843094909035,
+     "be_equivalent_certain": 934.0361929324972,
+     "valeur_actionnaire_equivalent_certain": 130.98794656596237,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.018569093152627135,
+     "taux_rachat_moyen_annees_1_20": 0.05000000000000001,
+     "taux_servi_moyen_annees_1_20": 0.0251483649679139
+    },
+    "coupons 2015-2021 +50 pb": {
+     "vm_actif": 1029.9067963807884,
+     "pmvl_obligations_pct_vnc": -0.0707038368205144,
+     "be_equivalent_certain": 940.1651268835833,
+     "valeur_actionnaire_equivalent_certain": 89.74166949720507,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.08774285231914516,
+     "taux_servi_moyen_annees_1_20": 0.022909141651508754
+    },
+    "coupons 2015-2021 -25 pb": {
+     "vm_actif": 1028.3083379479763,
+     "pmvl_obligations_pct_vnc": -0.0725004631359153,
+     "be_equivalent_certain": 939.5954930147301,
+     "valeur_actionnaire_equivalent_certain": 88.71284493324617,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.0885181854234179,
+     "taux_servi_moyen_annees_1_20": 0.0228191940747876
+    },
+    "prime d'achat -40 pb (toutes générations)": {
+     "vm_actif": 1000.0422673227268,
+     "pmvl_obligations_pct_vnc": -0.10427080215496587,
+     "be_equivalent_certain": 923.3268370504564,
+     "valeur_actionnaire_equivalent_certain": 76.71543027227051,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.11954557866135755,
+     "taux_servi_moyen_annees_1_20": 0.019529642881129926
+    },
+    "prime d'achat +20 pb (toutes générations)": {
+     "vm_actif": 1043.240602477007,
+     "pmvl_obligations_pct_vnc": -0.05571698046868945,
+     "be_equivalent_certain": 945.4924347945465,
+     "valeur_actionnaire_equivalent_certain": 97.74816768246058,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.07764569283136194,
+     "taux_servi_moyen_annees_1_20": 0.02397349798597324
+    },
+    "PPB x 0,5": {
+     "vm_actif": 1019.3587504446994,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 932.5409795163487,
+     "valeur_actionnaire_equivalent_certain": 86.81777092835068,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.09698994067447715,
+     "taux_servi_moyen_annees_1_20": 0.021790430459964174
+    },
+    "PPB x 1,5": {
+     "vm_actif": 1038.3235644064612,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 943.7847420891773,
+     "valeur_actionnaire_equivalent_certain": 94.53882231728392,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.08082463104091515,
+     "taux_servi_moyen_annees_1_20": 0.023606412243162556
+    },
+    "référence assurés : OAT 10 ans (ajustement 0)": {
+     "vm_actif": 1028.8411574255801,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 970.4279795269101,
+     "valeur_actionnaire_equivalent_certain": 58.413177898670256,
+     "taux_rachat_annee_1": 0.13800005000280813,
+     "taux_servi_annee_1": 0.04249467872983813,
+     "taux_rachat_moyen_annees_1_20": 0.27147560289520184,
+     "taux_servi_moyen_annees_1_20": 0.020451436770589828
+    },
+    "référence assurés : OAT 10 ans - 1 pt": {
+     "vm_actif": 1028.8411574255801,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 959.4160021615537,
+     "valeur_actionnaire_equivalent_certain": 69.42515526402667,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.033800005000280804,
+     "taux_rachat_moyen_annees_1_20": 0.19373502655321287,
+     "taux_servi_moyen_annees_1_20": 0.021109185849409785
+    },
+    "référence assurés : OAT 10 ans - 3 pts": {
+     "vm_actif": 1028.8411574255801,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 879.1071384919912,
+     "valeur_actionnaire_equivalent_certain": 149.73401893358914,
+     "taux_rachat_annee_1": 0.047000012500702036,
+     "taux_servi_annee_1": 0.01380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.04985000062503511,
+     "taux_servi_moyen_annees_1_20": 0.020669085096449793
+    },
+    "référence assurés : livret A 1,7 % fixe": {
+     "vm_actif": 1028.8411574255801,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 870.8222463569558,
+     "valeur_actionnaire_equivalent_certain": 158.01891106862456,
+     "taux_rachat_annee_1": 0.04250000000000001,
+     "taux_servi_annee_1": 0.012,
+     "taux_rachat_moyen_annees_1_20": 0.0491117121679482,
+     "taux_servi_moyen_annees_1_20": 0.019803028291572745
+    },
+    "référence assurés : sans risque 10 ans, même niveau en t = 0": {
+     "vm_actif": 1028.8411574255801,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 907.2425547846085,
+     "valeur_actionnaire_equivalent_certain": 121.59860264097188,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.05356878634668284,
+     "taux_servi_moyen_annees_1_20": 0.02188279144938578
+    },
+    "taux garanti +0,30 pt": {
+     "vm_actif": 1028.8411574255801,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 939.899319418268,
+     "valeur_actionnaire_equivalent_certain": 88.94183800731241,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.08826792308904796,
+     "taux_servi_moyen_annees_1_20": 0.022856170060821867
+    },
+    "base avec VA": {
+     "vm_actif": 1028.8411574255801,
+     "pmvl_obligations_pct_vnc": -0.07190158769744825,
+     "be_equivalent_certain": 932.3046574442789,
+     "valeur_actionnaire_equivalent_certain": 96.53649998130152,
+     "taux_rachat_annee_1": 0.05,
+     "taux_servi_annee_1": 0.02380000500028081,
+     "taux_rachat_moyen_annees_1_20": 0.07437336198516635,
+     "taux_servi_moyen_annees_1_20": 0.024982266212762616
+    }
+   },
+   "stochastique": {
+    "sans_va": {
+     "be": 961.1060591045193,
+     "ic_be": 5.18443320584305,
+     "be_equivalent_certain": 939.899319418268,
+     "tvog": 21.206739686251353,
+     "fdb": 136.4682802961679,
+     "valeur_actionnaire": 67.73509832106102,
+     "ic_valeur": 5.18443320584305,
+     "fuite": 1.3138191878126222,
+     "ic_fuite": 3.262969533284897,
+     "va_apports": 2.8558953136780323,
+     "part_scenarios_avec_apport": 0.068,
+     "identite_valeur_ecart_max": 4.547473508864641e-13,
+     "duree_s": 14.3
+    },
+    "avec_va": {
+     "be": 953.627688493114,
+     "ic_be": 5.02047724123743,
+     "be_equivalent_certain": 932.3046574442789,
+     "tvog": 21.323031048835105,
+     "fdb": 147.89255174268783,
+     "valeur_actionnaire": 75.21346893246638,
+     "ic_valeur": 5.020477241237429,
+     "fuite": 1.5696623514490065,
+     "ic_fuite": 3.349214396812304,
+     "va_apports": 2.3496229884882074,
+     "part_scenarios_avec_apport": 0.051,
+     "identite_valeur_ecart_max": 2.8421709430404007e-13,
+     "duree_s": 14.6
+    }
+   },
+   "libelle": "Assureur plus récemment investi"
+  }
+ }
+}

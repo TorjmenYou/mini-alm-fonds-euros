@@ -1,0 +1,152 @@
+{
+  "objet": "Collecte nouvelle sensible au taux servi relatif (V5, première version volontairement simple). Spécification : docs/V5_SPECIFICATION_COLLECTE.md. Collecte brute de l'année t (1 <= t <= horizon_collecte_ans) : C(t) = c0 x PM(t - 1) x g(e(t - 1)), g(e) = min(g_max ; max(g_min ; 1 + eta x (e - e0) / 1 point)) hors d'une zone neutre de demi-largeur zone_neutre autour de e0, g = 1 dans la zone. e = taux servi sur les contrats nouveaux l'an dernier - référence des assurés de début d'année.",
+  "reaction": {
+    "e0": {
+      "valeur": 0.0,
+      "statut": "fictif",
+      "note": "un assureur qui sert le taux du marché collecte c0 x PM ; la référence des assurés vaut 2,88 % en t = 0 (hypothèse : taux servis attendus pour 2026), le taux servi moyen observé de 2025 est de 2,63 % (ACPR n° 180) ; c0 est dérivé des flux d'un marché qui sert, par définition, le taux du marché, d'où e0 = 0 au centre ; sensibilité e0 = -0,5 point"
+    },
+    "zone_neutre": {
+      "valeur": 0.0,
+      "statut": "fictif"
+    },
+    "g_min": {
+      "valeur": 0.0,
+      "statut": "fictif",
+      "note": "pas de collecte négative : les sorties passent par les rachats"
+    },
+    "g_max": {
+      "valeur": 2.0,
+      "statut": "fictif"
+    }
+  },
+  "horizon_collecte_ans": {
+    "valeur": 10,
+    "statut": "fictif",
+    "note": "dix générations de contrats nouveaux, puis extinction jusqu'à l'horizon de projection"
+  },
+  "contrats_nouveaux": {
+    "tmg": {
+      "valeur": 0.0,
+      "statut": "fictif"
+    },
+    "chargement_prime": {
+      "valeur": 0.0,
+      "statut": "fictif"
+    },
+    "frais_acquisition_prime": {
+      "valeur": 0.01,
+      "statut": "fictif"
+    },
+    "_note": "mêmes chargements et frais sur encours, même loi de rachat et même mortalité que l'existant du profil"
+  },
+  "intensites": {
+    "faible": {
+      "c0": 0.03,
+      "statut": "fictif",
+      "note": "collecte nette d'environ -2,4 % de la PM par an avec g = 1 (sorties du modèle d'environ 5,4 %)"
+    },
+    "centrale": {
+      "c0": 0.06,
+      "statut": "dérivé d'agrégats observés (une seule année)",
+      "regle": "collecte nette 2025 des supports en euros (+8,1 Md€, France Assureurs) rapportée à l'encours de début d'année (1 178 Md€, ACPR), soit environ +0,7 %, ajoutée aux sorties du modèle (décès 1 % et rachat structurel 4,33 % des survivants, soit environ 5,3 % de la PM revalorisée et 5,4 % de la PM de début d'année) : environ 6 %. Avec g = 1, le modèle redonne ainsi la collecte nette de la place (environ +0,6 % de la PM la première année, contre +0,7 % observés), pas ses flux bruts (environ 9,9 % de primes et 9,2 % de sorties) ni la croissance de la PM, qui comprend aussi les intérêts crédités, les prélèvements sociaux et d'autres mouvements (réconciliation : scripts/v5_reconciliation_collecte.py, docs/V5_COLLECTE.md, section 1)"
+    },
+    "forte": {
+      "c0": 0.1,
+      "statut": "dérivé d'agrégats observés, borne haute (flux bruts)",
+      "regle": "collecte brute 2025 des supports en euros (116,9 Md€, France Assureurs) rapportée à l'encours de début d'année (1 178 Md€, ACPR) : environ 10 % ; périmètres non strictement identiques. Les sorties de la place (environ 9 % de l'encours) dépassent celles du modèle (environ 5,3 %) : avec g = 1, c0 = 10 % donne une collecte nette d'environ +4,6 % de la PM par an, bien au-delà des +0,7 % observés"
+    }
+  },
+  "elasticites": {
+    "nulle": {
+      "eta": 0.0,
+      "statut": "fictif"
+    },
+    "moderee": {
+      "eta": 0.5,
+      "statut": "fictif",
+      "note": "un point de taux servi sous la référence réduit la collecte de moitié"
+    },
+    "intermediaire": {
+      "eta": 0.75,
+      "statut": "fictif"
+    },
+    "soutenue": {
+      "eta": 1.0,
+      "statut": "fictif",
+      "note": "un point sous la référence supprime la collecte"
+    },
+    "forte": {
+      "eta": 1.5,
+      "statut": "fictif"
+    }
+  },
+  "sources": {
+    "france_assureurs_2025": "Cercle de l'Épargne, communiqué du 27/01/2026 citant France Assureurs : cotisations 2025 de 192,1 Md€, dont 116,9 Md€ sur les supports en euros ; collecte nette des supports en euros de +8,1 Md€ (https://cercledelepargne.com/wp-content/uploads/2026/01/Communique-de-presse-de-Philippe-Crevel-directeur-du-Cercle-de-lEpargne-resultats-Assurance-vie-2025.pdf, source secondaire)",
+    "acpr_as180": "ACPR, Analyses et synthèses n° 180, revalorisation 2025, 30/06/2026 : encours des contrats en euros de 1 178 Md€ fin 2024 et 1 207 Md€ fin 2025 ; taux de revalorisation moyen 2025 de 2,63 % (https://acpr.banque-france.fr/system/files/2026-06/20260630_AS180_revalorisation_2025.pdf)"
+  },
+  "lecture": {
+    "_regle": "Une politique de taux servi n'est présentée comme avantageuse que si son écart de valeur totale à la gestion passive garde le même signe pour toutes les intensités, toutes les élasticités et la loi de rachat ONC maximale. Seuil d'importance : celui de la valeur nette (2 % du SCR simplifié du profil, strategies.json)."
+  },
+  "sensibilites": {
+    "_regle": "Hypothèses du modèle de collecte qui peuvent conduire mécaniquement la conclusion : testées pour la gestion passive et les politiques de taux servi, intensités centrale et forte, élasticités modérée et soutenue.",
+    "e0_moins_50pb": {
+      "remplacements": {
+        "e0": -0.005
+      },
+      "libelle": "e0 = -0,5 point : la collecte « normale » est atteinte en servant 0,5 point sous la référence, comme la gestion passive",
+      "statut": "fictif"
+    },
+    "horizon_30": {
+      "remplacements": {
+        "horizon_collecte_ans": 30
+      },
+      "libelle": "collecte pendant 30 ans",
+      "statut": "fictif"
+    },
+    "horizon_60": {
+      "remplacements": {
+        "horizon_collecte_ans": 60
+      },
+      "libelle": "collecte jusqu'à l'horizon de projection (60 ans)",
+      "statut": "fictif"
+    }
+  },
+ "place_2025": {
+  "_objet": "Agrégats de place 2025 utilisés pour la réconciliation des flux (scripts/v5_reconciliation_collecte.py, docs/V5_COLLECTE.md, section 1). Encours : contrats individuels en euros (ACPR) ; flux : supports en euros (France Assureurs) ; périmètres non strictement identiques.",
+  "pm_debut": {
+   "valeur": 1178.0,
+   "unite": "Md€",
+   "statut": "observé",
+   "source": "ACPR, Analyses et synthèses n° 180 : encours des contrats individuels en euros fin 2024"
+  },
+  "pm_fin": {
+   "valeur": 1207.0,
+   "unite": "Md€",
+   "statut": "observé",
+   "source": "ACPR, Analyses et synthèses n° 180 : encours des contrats individuels en euros fin 2025"
+  },
+  "collecte_brute": {
+   "valeur": 116.9,
+   "unite": "Md€",
+   "statut": "observé (source secondaire)",
+   "source": "France Assureurs, cité par le Cercle de l'Épargne : cotisations 2025 sur les supports en euros"
+  },
+  "collecte_nette": {
+   "valeur": 8.1,
+   "unite": "Md€",
+   "statut": "observé (source secondaire)",
+   "source": "France Assureurs, cité par le Cercle de l'Épargne : collecte nette 2025 des supports en euros"
+  },
+  "taux_revalorisation": {
+   "valeur": 0.0263,
+   "statut": "observé",
+   "source": "ACPR, Analyses et synthèses n° 180 : taux moyen 2025, brut de prélèvements sociaux, net de chargements sur encours"
+  },
+  "taux_prelevements_sociaux": {
+   "valeur": 0.172,
+   "statut": "observé (source secondaire)",
+   "source": "9,2 % de CSG, 0,5 % de CRDS, 7,5 % de prélèvement de solidarité, prélevés chaque année sur les intérêts du fonds en euros (maif.fr, guide de l'assurance vie)"
+  }
+ }
+}

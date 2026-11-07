@@ -1,0 +1,252 @@
+{
+ "objet": "Diagnostic des apports de capital du profil A (risque neutre, base sans VA)",
+ "resultats": {
+  "taux_servi_marche|decompose": {
+   "reference": "taux_servi_marche",
+   "credit": "decompose",
+   "n": 1000,
+   "ensemble": {
+    "n": 1000,
+    "part_avec_apport": 0.505,
+    "va_moyenne": 23.56679786002182,
+    "q95": 98.51086877741933
+   },
+   "premiere_annee_apport": {
+    "q25": 12.0,
+    "mediane": 16.0,
+    "part_avant_5_ans": 0.0,
+    "part_avant_10_ans": 0.073
+   },
+   "taux_10_ans_annee_5_tiers": [
+    0.030157570982196846,
+    0.04318275484437972
+   ],
+   "par_taux": {
+    "bas": {
+     "n": 334,
+     "part_avec_apport": 0.41916167664670656,
+     "va_moyenne": 25.188034935942333,
+     "q95": 112.60064339456008
+    },
+    "moyen": {
+     "n": 333,
+     "part_avec_apport": 0.4444444444444444,
+     "va_moyenne": 17.51249328622382,
+     "q95": 91.37412684518534
+    },
+    "haut": {
+     "n": 333,
+     "part_avec_apport": 0.6516516516516516,
+     "va_moyenne": 27.994996778091725,
+     "q95": 97.0929928326945
+    }
+   },
+   "par_defaut_souverain_avant_10_ans": {
+    "avec": {
+     "n": 197,
+     "part_avec_apport": 0.934010152284264,
+     "va_moyenne": 63.38930017641634,
+     "q95": 155.56118146703187
+    },
+    "sans": {
+     "n": 803,
+     "part_avec_apport": 0.39975093399750933,
+     "va_moyenne": 13.797142870819174,
+     "q95": 54.31940538361184
+    }
+   }
+  },
+  "taux_servi_marche|lisse_integral": {
+   "reference": "taux_servi_marche",
+   "credit": "lisse_integral",
+   "n": 1000,
+   "ensemble": {
+    "n": 1000,
+    "part_avec_apport": 0.46,
+    "va_moyenne": 14.44514961032204,
+    "q95": 57.05713316863666
+   },
+   "premiere_annee_apport": {
+    "q25": 12.0,
+    "mediane": 15.0,
+    "part_avant_5_ans": 0.0,
+    "part_avant_10_ans": 0.07
+   },
+   "taux_10_ans_annee_5_tiers": [
+    0.030157570982196846,
+    0.04318275484437972
+   ],
+   "par_taux": {
+    "bas": {
+     "n": 334,
+     "part_avec_apport": 0.24251497005988024,
+     "va_moyenne": 10.884976128774172,
+     "q95": 48.57267188809105
+    },
+    "moyen": {
+     "n": 333,
+     "part_avec_apport": 0.3993993993993994,
+     "va_moyenne": 8.236683848287687,
+     "q95": 34.47186041552419
+    },
+    "haut": {
+     "n": 333,
+     "part_avec_apport": 0.7387387387387387,
+     "va_moyenne": 24.224480065560577,
+     "q95": 68.18608343604052
+    }
+   }
+  },
+  "sans_risque|decompose": {
+   "reference": "sans_risque",
+   "credit": "decompose",
+   "n": 1000,
+   "ensemble": {
+    "n": 1000,
+    "part_avec_apport": 0.66,
+    "va_moyenne": 36.35988401366441,
+    "q95": 116.8079986022542
+   },
+   "premiere_annee_apport": {
+    "q25": 9.0,
+    "mediane": 13.0,
+    "part_avant_5_ans": 0.0,
+    "part_avant_10_ans": 0.231
+   },
+   "taux_10_ans_annee_5_tiers": [
+    0.030157570982196846,
+    0.04318275484437972
+   ],
+   "par_taux": {
+    "bas": {
+     "n": 334,
+     "part_avec_apport": 0.49101796407185627,
+     "va_moyenne": 32.420217837898555,
+     "q95": 126.68492975506908
+    },
+    "moyen": {
+     "n": 333,
+     "part_avec_apport": 0.5915915915915916,
+     "va_moyenne": 24.347502001307472,
+     "q95": 95.36739362670735
+    },
+    "haut": {
+     "n": 333,
+     "part_avec_apport": 0.8978978978978979,
+     "va_moyenne": 52.32376303114385,
+     "q95": 121.1664096030232
+    }
+   },
+   "par_defaut_souverain_avant_10_ans": {
+    "avec": {
+     "n": 197,
+     "part_avec_apport": 0.9644670050761421,
+     "va_moyenne": 73.43651759784517,
+     "q95": 173.4849431075084
+    },
+    "sans": {
+     "n": 803,
+     "part_avec_apport": 0.5853051058530511,
+     "va_moyenne": 27.2638730347309,
+     "q95": 89.56320385405948
+    }
+   }
+  },
+  "figee|decompose": {
+   "reference": "figee",
+   "credit": "decompose",
+   "n": 1000,
+   "ensemble": {
+    "n": 1000,
+    "part_avec_apport": 0.361,
+    "va_moyenne": 14.43882619322894,
+    "q95": 79.85124738496332
+   },
+   "premiere_annee_apport": {
+    "q25": 15.0,
+    "mediane": 19.0,
+    "part_avant_5_ans": 0.0,
+    "part_avant_10_ans": 0.01
+   },
+   "taux_10_ans_annee_5_tiers": [
+    0.030157570982196846,
+    0.04318275484437972
+   ],
+   "par_taux": {
+    "bas": {
+     "n": 334,
+     "part_avec_apport": 0.45808383233532934,
+     "va_moyenne": 18.9554302337431,
+     "q95": 89.42516629822205
+    },
+    "moyen": {
+     "n": 333,
+     "part_avec_apport": 0.32732732732732733,
+     "va_moyenne": 14.290109812262301,
+     "q95": 83.91348533721437
+    },
+    "haut": {
+     "n": 333,
+     "part_avec_apport": 0.2972972972972973,
+     "va_moyenne": 10.057375158184378,
+     "q95": 55.63274130453587
+    }
+   },
+   "par_defaut_souverain_avant_10_ans": {
+    "avec": {
+     "n": 197,
+     "part_avec_apport": 0.8629441624365483,
+     "va_moyenne": 52.304177382368664,
+     "q95": 146.62696094117985
+    },
+    "sans": {
+     "n": 803,
+     "part_avec_apport": 0.23785803237858033,
+     "va_moyenne": 5.149319114448708,
+     "q95": 34.20778467924549
+    }
+   }
+  },
+  "oat_moins_2|lisse_integral": {
+   "reference": "oat_moins_2",
+   "credit": "lisse_integral",
+   "n": 1000,
+   "ensemble": {
+    "n": 1000,
+    "part_avec_apport": 0.75,
+    "va_moyenne": 35.239786839854425,
+    "q95": 92.04680277733924
+   },
+   "premiere_annee_apport": {
+    "q25": 9.0,
+    "mediane": 11.0,
+    "part_avant_5_ans": 0.002,
+    "part_avant_10_ans": 0.325
+   },
+   "taux_10_ans_annee_5_tiers": [
+    0.030157570982196846,
+    0.04318275484437972
+   ],
+   "par_taux": {
+    "bas": {
+     "n": 334,
+     "part_avec_apport": 0.49700598802395207,
+     "va_moyenne": 22.389959123141292,
+     "q95": 65.8025739186512
+    },
+    "moyen": {
+     "n": 333,
+     "part_avec_apport": 0.7837837837837838,
+     "va_moyenne": 25.826459077009538,
+     "q95": 67.59307039623307
+    },
+    "haut": {
+     "n": 333,
+     "part_avec_apport": 0.96996996996997,
+     "va_moyenne": 57.54153039063381,
+     "q95": 107.11946244788726
+    }
+   }
+  }
+ }
+}

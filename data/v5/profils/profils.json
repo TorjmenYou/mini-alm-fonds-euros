@@ -1,0 +1,263 @@
+{
+ "objet": "Trois profils d'assureur-vie FICTIFS, construits pour étudier comment la stratégie ALM dépend du bilan initial. Aucun ne représente un organisme réel ; leurs ordres de grandeur sont confrontés aux publications de place (data/v5/profils/confrontation_acpr.md).",
+ "date_arrete": "2026-10-31",
+ "unite_monetaire_eur": 10000000,
+ "unite_monetaire_statut": "fictif : 1 unité = 10 M EUR, soit une PM de 10 Md EUR ; sert aux seuils fiscaux exprimés en euros",
+ "ancrages_coupons": {
+  "_methode": "Coupon d'achat au pair d'une génération d'obligations, pris égal à l'ordre de grandeur du rendement de l'OAT 10 ans de la période. Statut calibré : ancrage sur des observations mensuelles ponctuelles de la série BCE IRS.M.FR.L.L40.CI.0000.EUR.N.Z (Banque de France), reprises par eco3min.fr (consulté le 06/11/2026), et non sur des moyennes annuelles officielles, non consultées. Les titres achetés à 15 ou 20 ans ont en pratique un coupon un peu supérieur : limite documentée, testée en sensibilité.",
+  "avant_2012": {
+   "coupon": 0.035,
+   "statut": "calibré",
+   "observations": "08/2010 : 2,68 % ; 04/2011 : 3,69 % ; 11/2011 : 3,41 % ; moyenne des années 2000 : 4,28 %"
+  },
+  "2012_2014": {
+   "coupon": 0.018,
+   "statut": "calibré",
+   "observations": "07/2012 : 2,28 % ; 12/2014 : 0,92 %"
+  },
+  "2015_2021": {
+   "coupon": 0.005,
+   "statut": "calibré",
+   "observations": "08/2019 : -0,34 % ; 01/2022 : 0,31 % ; moyenne des années 2010 : 1,59 % (inclut 2010-2014)"
+  },
+  "2022_2023": {
+   "coupon": 0.028,
+   "statut": "calibré",
+   "observations": "10/2022 : 2,77 % ; 10/2023 : 3,45 %"
+  },
+  "2024_2025": {
+   "coupon": 0.03,
+   "statut": "calibré",
+   "observations": "12/2024 : 3,01 %"
+  },
+  "2026": {
+   "coupon": 0.042,
+   "statut": "calibré",
+   "observations": "02/2026 : 3,40 % ; 08/2026 : 4,00 % ; 09/2026 : 4,44 % ; TEC 10 du 04/11/2026 : 4,88 %"
+  },
+  "_prime_achat": {
+   "valeur": 0.006,
+   "statut": "calibré",
+   "justification": "Les assureurs achètent des maturités plus longues que 10 ans et une majorité d'obligations d'entreprises et financières (59 % des placements en obligations mi-2025, dont 20 % de souverains, ACPR n° 177) : leur rendement d'achat dépasse l'OAT 10 ans. Prime de 0,6 point retenue pour que le profil intermédiaire B retrouve un rendement comptable de l'ordre de celui de la place (rendement de l'actif de 2,8 % en 2025, ACPR n° 180, actions et immobilier compris). Sensibilités de -40 à +20 pb sur toutes les générations."
+  }
+ },
+ "commun": {
+  "credit": {
+   "spread": "spread_oat_20261104",
+   "mesure": "risque_neutre",
+   "statut": "calibré : TEC du 04/11/2026 au-dessus de la courbe EIOPA sans VA ; les obligations du modèle représentent l'ensemble du portefeuille obligataire (souverains et entreprises), simplification documentée"
+  },
+  "comportement": {
+   "reference": "zc10_obligations",
+   "ajustement": -0.02,
+   "statut": "calibré : taux de référence des assurés = OAT 10 ans - 2 points, pour situer la référence vers 2,9 %, ordre de grandeur des taux servis attendus en 2026 (2,8 % à 2,9 %, estimations de place, Meilleurtaux 04/09/2026), cohérent avec la collecte nette positive observée sur l'euro (+10,9 Md EUR de janvier à septembre 2026, France Assureurs). Hypothèse la plus incertaine : sensibilités de 0 à -3 points et livret A fixe"
+  },
+  "passif": {
+   "chargements_encours": 0.0063,
+   "statut_chargements": "observé (marché) : 0,63 %, ACPR, Analyses et synthèses n° 180 (2026), exercice 2025"
+  },
+  "frais_gestion_statut": "fictif : 0,4 % de l'encours (valeur des V1 à V4)"
+ },
+ "profils": {
+  "A": {
+   "nom": "Assureur historique sous pression",
+   "recit": "Portefeuille obligataire ancien, investi massivement entre 2015 et 2021 à faibles coupons et à longue maturité ; réserves (PPB, réserve de capitalisation) en partie consommées ; garanties anciennes plus élevées ; liquidité faible.",
+   "bilan_initial": {
+    "pm": 1000.0,
+    "ppb": 25.0,
+    "reserve_capitalisation": 5.0,
+    "fonds_propres": 45.0
+   },
+   "passif": {
+    "tmg": 0.006,
+    "taux_servi_initial": 0.023
+   },
+   "actif": {
+    "allocation_cible": {
+     "obligations": 0.88,
+     "actions": 0.08,
+     "monetaire": 0.04
+    },
+    "pvl_initiale_actions": 0.05,
+    "maturite_reinvestissement_ans": 10
+   },
+   "poches_obligataires": [
+    {
+     "millesime": "avant_2012",
+     "part": 0.12,
+     "maturite_residuelle": [
+      2,
+      10
+     ]
+    },
+    {
+     "millesime": "2012_2014",
+     "part": 0.15,
+     "maturite_residuelle": [
+      2,
+      8
+     ]
+    },
+    {
+     "millesime": "2015_2021",
+     "part": 0.5,
+     "maturite_residuelle": [
+      4,
+      18
+     ]
+    },
+    {
+     "millesime": "2022_2023",
+     "part": 0.13,
+     "maturite_residuelle": [
+      7,
+      12
+     ]
+    },
+    {
+     "millesime": "2024_2025",
+     "part": 0.1,
+     "maturite_residuelle": [
+      9,
+      12
+     ]
+    }
+   ]
+  },
+  "B": {
+   "nom": "Assureur intermédiaire",
+   "recit": "Générations d'obligations mélangées ; réserves et liquidité modérées, proches des ordres de grandeur de place (PPB, taux technique, chargements, taux servi 2025).",
+   "bilan_initial": {
+    "pm": 1000.0,
+    "ppb": 40.0,
+    "reserve_capitalisation": 15.0,
+    "fonds_propres": 50.0
+   },
+   "passif": {
+    "tmg": 0.0032,
+    "taux_servi_initial": 0.0263
+   },
+   "actif": {
+    "allocation_cible": {
+     "obligations": 0.85,
+     "actions": 0.1,
+     "monetaire": 0.05
+    },
+    "pvl_initiale_actions": 0.1,
+    "maturite_reinvestissement_ans": 10
+   },
+   "poches_obligataires": [
+    {
+     "millesime": "avant_2012",
+     "part": 0.08,
+     "maturite_residuelle": [
+      2,
+      8
+     ]
+    },
+    {
+     "millesime": "2012_2014",
+     "part": 0.12,
+     "maturite_residuelle": [
+      2,
+      8
+     ]
+    },
+    {
+     "millesime": "2015_2021",
+     "part": 0.35,
+     "maturite_residuelle": [
+      3,
+      14
+     ]
+    },
+    {
+     "millesime": "2022_2023",
+     "part": 0.2,
+     "maturite_residuelle": [
+      7,
+      12
+     ]
+    },
+    {
+     "millesime": "2024_2025",
+     "part": 0.2,
+     "maturite_residuelle": [
+      8,
+      11
+     ]
+    },
+    {
+     "millesime": "2026",
+     "part": 0.05,
+     "maturite_residuelle": [
+      9,
+      11
+     ]
+    }
+   ]
+  },
+  "C": {
+   "nom": "Assureur plus récemment investi",
+   "recit": "Portefeuille constitué surtout depuis 2022, à coupons plus élevés et moins de moins-values ; réserves encore faibles ; contrats sans taux garanti ; politique de taux servi plus offensive (collecte nouvelle : docs/V5_COLLECTE.md).",
+   "bilan_initial": {
+    "pm": 1000.0,
+    "ppb": 20.0,
+    "reserve_capitalisation": 5.0,
+    "fonds_propres": 60.0
+   },
+   "passif": {
+    "tmg": 0.0,
+    "taux_servi_initial": 0.03
+   },
+   "actif": {
+    "allocation_cible": {
+     "obligations": 0.82,
+     "actions": 0.12,
+     "monetaire": 0.06
+    },
+    "pvl_initiale_actions": 0.06,
+    "maturite_reinvestissement_ans": 12
+   },
+   "poches_obligataires": [
+    {
+     "millesime": "2015_2021",
+     "part": 0.05,
+     "maturite_residuelle": [
+      3,
+      8
+     ]
+    },
+    {
+     "millesime": "2022_2023",
+     "part": 0.25,
+     "maturite_residuelle": [
+      7,
+      12
+     ]
+    },
+    {
+     "millesime": "2024_2025",
+     "part": 0.4,
+     "maturite_residuelle": [
+      8,
+      12
+     ]
+    },
+    {
+     "millesime": "2026",
+     "part": 0.3,
+     "maturite_residuelle": [
+      10,
+      15
+     ]
+    }
+   ]
+  }
+ },
+ "statuts_des_parametres_de_profil": {
+  "observé (marché)": "PPB de B (4,0 % des provisions, ACPR n° 180), taux technique de B (0,32 %), taux servi initial de B (2,63 %), chargements (0,63 %)",
+  "calibré": "coupons par génération, spread, taux de référence des assurés",
+  "fictif": "tout le reste : PM, répartition des générations et des maturités, réserves de A et C, fonds propres, allocations, plus-values actions, garanties de A et C, taux servis de A et C"
+ }
+}

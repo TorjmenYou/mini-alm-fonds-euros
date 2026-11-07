@@ -2,3 +2,9 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ipynb_checkpoints/
+
+# Sortie de contrôle rapide de la V5
+resultats/v5_bilans_initiaux_rapide.json
+
+# caches de calcul V5 (tirages par scénario, non versionnés)
+resultats/cache_v5/
