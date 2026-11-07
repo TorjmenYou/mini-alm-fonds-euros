@@ -1,0 +1,100 @@
+{
+ "n_scenarios": 500,
+ "apports_recapitalisation": {
+  "A": 110.3787739479051,
+  "B": 29.451541145591104,
+  "C": 17.089295975571627
+ },
+ "resultats": {
+  "A|initial": {
+   "be_avec_distribution": 884.0410777603106,
+   "be_sans_distribution": 885.7075894721593,
+   "demi_intervalle_95_be": 12.183275516904025,
+   "ecart_be": -1.6665117118487938,
+   "demi_intervalle_95": 0.33237257181073226,
+   "fdb_avec_distribution": 65.49553205159981,
+   "fdb_sans_distribution": 73.26881844915468,
+   "ecart_rendement_comptable_5": -0.001530159917048554,
+   "ecart_rendement_comptable_10": -0.011435586223160585,
+   "ecart_rendement_comptable_20": -0.03170156020317301,
+   "ecart_taux_servi_5": -0.0005208128138238077,
+   "ecart_taux_servi_10": -0.0010750148645621693,
+   "ecart_taux_servi_20": -0.005717932019176955
+  },
+  "A|recapitalise": {
+   "be_avec_distribution": 888.1216985806443,
+   "be_sans_distribution": 891.1897189682915,
+   "demi_intervalle_95_be": 12.246188636128243,
+   "ecart_be": -3.0680203876469467,
+   "demi_intervalle_95": 0.4263030037900296,
+   "fdb_avec_distribution": 84.20362291334284,
+   "fdb_sans_distribution": 98.81018080576277,
+   "ecart_rendement_comptable_5": -0.0017545924067519664,
+   "ecart_rendement_comptable_10": -0.01132684119095961,
+   "ecart_rendement_comptable_20": -0.009129669973840213,
+   "ecart_taux_servi_5": -0.0007861121290653906,
+   "ecart_taux_servi_10": -0.0027160835843325504,
+   "ecart_taux_servi_20": -0.005540369972078952
+  },
+  "B|initial": {
+   "be_avec_distribution": 898.4492780141649,
+   "be_sans_distribution": 900.0388079883356,
+   "demi_intervalle_95_be": 9.626452667247623,
+   "ecart_be": -1.5895299741707483,
+   "demi_intervalle_95": 0.35327609473088345,
+   "fdb_avec_distribution": 152.74914133307823,
+   "fdb_sans_distribution": 160.00957726333652,
+   "ecart_rendement_comptable_5": -0.0004677931241640759,
+   "ecart_rendement_comptable_10": -0.003938906238209429,
+   "ecart_rendement_comptable_20": -0.002073892462423614,
+   "ecart_taux_servi_5": -0.0002445440314045172,
+   "ecart_taux_servi_10": -0.001299916576920284,
+   "ecart_taux_servi_20": -0.002254626246215353
+  },
+  "B|recapitalise": {
+   "be_avec_distribution": 899.401896731665,
+   "be_sans_distribution": 900.993827271966,
+   "demi_intervalle_95_be": 9.578966239357158,
+   "ecart_be": -1.5919305403011073,
+   "demi_intervalle_95": 0.3630720790591981,
+   "fdb_avec_distribution": 156.2915337566767,
+   "fdb_sans_distribution": 163.89498732581305,
+   "ecart_rendement_comptable_5": -0.0005254290383724172,
+   "ecart_rendement_comptable_10": -0.0035791319450214527,
+   "ecart_rendement_comptable_20": -0.0044282331130367295,
+   "ecart_taux_servi_5": -0.00028426091834029416,
+   "ecart_taux_servi_10": -0.0014408032479970474,
+   "ecart_taux_servi_20": -0.001901767300986467
+  },
+  "C|initial": {
+   "be_avec_distribution": 906.2219526120563,
+   "be_sans_distribution": 907.151894354762,
+   "demi_intervalle_95_be": 8.327856224866695,
+   "ecart_be": -0.9299417427058784,
+   "demi_intervalle_95": 0.49349490117455275,
+   "fdb_avec_distribution": 191.7735573948301,
+   "fdb_sans_distribution": 199.5279465146419,
+   "ecart_rendement_comptable_5": -0.0007693829783898161,
+   "ecart_rendement_comptable_10": -0.0038020241035593635,
+   "ecart_rendement_comptable_20": -0.004887889237913459,
+   "ecart_taux_servi_5": -0.00042327541379188344,
+   "ecart_taux_servi_10": -0.0012112518999633018,
+   "ecart_taux_servi_20": -0.0024843507475920644
+  },
+  "C|recapitalise": {
+   "be_avec_distribution": 906.6682489700923,
+   "be_sans_distribution": 907.5231907671259,
+   "demi_intervalle_95_be": 8.38379626069091,
+   "ecart_be": -0.8549417970334909,
+   "demi_intervalle_95": 0.5084660311664096,
+   "fdb_avec_distribution": 193.2262692796248,
+   "fdb_sans_distribution": 201.24968272321476,
+   "ecart_rendement_comptable_5": -0.0008210654177615052,
+   "ecart_rendement_comptable_10": -0.003353610269330839,
+   "ecart_rendement_comptable_20": -0.012485710722391706,
+   "ecart_taux_servi_5": -0.0004494220125169021,
+   "ecart_taux_servi_10": -0.0013524636957465003,
+   "ecart_taux_servi_20": -0.0023608441628454255
+  }
+ }
+}

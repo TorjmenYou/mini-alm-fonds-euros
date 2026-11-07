@@ -7,6 +7,8 @@ produits financiers et la participation aux bénéfices) et en valeur de marché
 
 from dataclasses import dataclass
 
+from .courbes import CourbeAvecSpread, SpreadCredit
+
 
 @dataclass
 class LigneObligataire:
@@ -22,29 +24,103 @@ class LigneObligataire:
         coupons = sum(self.coupon * self.nominal * courbe.zc(k) for k in range(1, self.maturite + 1))
         return coupons + self.nominal * courbe.zc(self.maturite)
 
+    def valeur_marche_zc(self, zc):
+        """Même calcul, sur des prix zéro-coupon déjà calculés (zc[k] pour k = 1, 2, ...) : mêmes opérations,
+        dans le même ordre, donc le même résultat au bit près."""
+        coupons = sum(self.coupon * self.nominal * zc[k] for k in range(1, self.maturite + 1))
+        return coupons + self.nominal * zc[self.maturite]
+
 
 class Portefeuille:
-    def __init__(self, h):
-        repartition_vnc = {
-            classe: poids * (h["bilan_initial"]["pm"] + h["bilan_initial"]["ppb"] + h["bilan_initial"]["fonds_propres"])
-            for classe, poids in h["actif"]["allocation_cible"].items()
-        }
+    def __init__(self, h, credit=None):
+        b = h["bilan_initial"]
+        total = b["pm"] + b["ppb"] + b["fonds_propres"] + b.get("reserve_capitalisation", 0.0)
         a = h["actif"]
-        n = a["echelle_maturites_ans"]
-        # Échelle obligataire : n lignes de même nominal, maturités 1 à n ans
-        self.obligations = [
-            LigneObligataire(repartition_vnc["obligations"] / n, a["coupon_obligations_initiales"], m, repartition_vnc["obligations"] / n)
-            for m in range(1, n + 1)
-        ]
+        # V5 : le portefeuille d'ouverture suit l'allocation initiale du profil ; une stratégie peut fixer
+        # une autre allocation cible, atteinte ensuite par les rééquilibrages (bilan initial identique).
+        repartition_vnc = {classe: poids * total for classe, poids in a.get("allocation_initiale", a["allocation_cible"]).items()}
+        if "lignes_obligataires" in a:
+            # V5 : portefeuille historique lu ligne par ligne (titres achetés au pair, VNC = nominal).
+            # Les actions suivent leur poids cible ; le monétaire complète l'actif comptable.
+            self.obligations = []
+            for l in a["lignes_obligataires"]:
+                vnc = l.get("vnc", l["nominal"])
+                if abs(vnc - l["nominal"]) > 1e-9 or l["maturite"] < 1 or l["nominal"] < 0:
+                    raise ValueError(f"Ligne obligataire non prise en charge (achat au pair, maturité >= 1 an) : {l}")
+                self.obligations.append(LigneObligataire(float(l["nominal"]), float(l["coupon"]), int(l["maturite"]), float(vnc)))
+            repartition_vnc["monetaire"] = total - self.vnc_obligations() - repartition_vnc["actions"]
+            if repartition_vnc["monetaire"] < -1e-9:
+                raise ValueError("Les lignes obligataires et les actions dépassent l'actif comptable initial")
+        else:
+            n = a["echelle_maturites_ans"]
+            # Échelle obligataire : n lignes de même nominal, maturités 1 à n ans
+            self.obligations = [
+                LigneObligataire(repartition_vnc["obligations"] / n, a["coupon_obligations_initiales"], m, repartition_vnc["obligations"] / n)
+                for m in range(1, n + 1)
+            ]
         self.actions_vnc = repartition_vnc["actions"]
         self.actions_vm = repartition_vnc["actions"] * (1 + a["pvl_initiale_actions"])
         self.monetaire = repartition_vnc["monetaire"]  # VNC = VM, y compris la trésorerie
+        # V5 : apport de capital initial, versé en trésorerie (aucune plus-value créée, actifs existants inchangés)
+        self.monetaire += float(b.get("apport_initial", 0.0))
+        # V5 : échelle de réinvestissement {maturité: poids} ; par défaut, une seule maturité
+        self.echelle = {int(k): float(v) for k, v in (a.get("echelle_reinvestissement") or {}).items()}
         self.dividende = h["economie"]["rendement_dividende_actions"]
         self.maturite_reinvestissement = a["maturite_reinvestissement_ans"]
+        # V5 : obligations d'un émetteur risqué (OAT) valorisées sur la courbe de référence + spread.
+        # Deux mesures, jamais mélangées (docs/V5_METHODOLOGIE.md) :
+        # - « risque_neutre » (valorisation) : la perte constatée chaque année est l'intensité de perte
+        #   risque neutre tirée du spread, si bien qu'un titre acheté à son prix de marché a une valeur
+        #   actuelle nette nulle ; c'est la seule mesure qui autorise un calcul de valeur ;
+        # - « trajectoire » (projection comptable) : la perte constatée est la perte attendue réelle,
+        #   paramètre explicite ; le reste du spread est une prime de risque, pas de la valeur créée.
+        c = a.get("credit")
+        self.credit = credit.copie() if credit is not None else (SpreadCredit(c["spread"]) if c else None)
+        self.mesure = (c or {}).get("mesure", "risque_neutre")
+        if self.mesure not in ("risque_neutre", "trajectoire"):
+            raise ValueError(f"Mesure de crédit inconnue : {self.mesure!r}")
+        self.perte_reelle = float((c or {}).get("perte_attendue_reelle", 0.0))
+        # Projection en probabilité réelle à spreads figés : la courbe des obligations vue en t reste
+        # celle de t = 0 (pas de spread à terme), comme les taux du scénario réel (V5).
+        self.spreads_figes = bool((c or {}).get("spreads_figes", False))
+        if self.spreads_figes and self.mesure != "trajectoire":
+            raise ValueError("Les spreads figés ne sont permis qu'en mesure « trajectoire » (aucune valorisation)")
+        self.annee = 0
+
+    def courbe_obligations(self, courbe):
+        """Courbe de valorisation des obligations : la courbe de référence, ou la courbe risquée vue en t (V5)."""
+        if self.credit is None:
+            return courbe
+        return CourbeAvecSpread(courbe, self.credit, 0 if self.spreads_figes else self.annee)
+
+    def taux_perte_credit(self):
+        """Fraction du nominal perdue sur l'année en cours (V5)."""
+        if self.credit is None:
+            return 0.0
+        if self.mesure == "trajectoire":
+            if getattr(self.credit, "pd_reelle", None) is not None or getattr(self.credit, "facteur_pd_reelle", None) is not None:
+                return self.credit.perte_realisee_reelle(self.annee)  # V5 : défauts réels par bloc
+            return self.perte_reelle
+        if hasattr(self.credit, "perte_realisee"):  # V5 : part de la perte par saut (src/v5/credit.py)
+            return self.credit.perte_realisee(self.annee)
+        return self.credit.taux_perte(self.annee)
+
+    def choc_spread(self, choc):
+        """Élargissement instantané du spread à la date courante (V5) : revalorise les obligations détenues."""
+        if self.credit is None:
+            self.credit = SpreadCredit(0.0)
+        self.credit.choquer(choc, self.annee)
 
     # --- Lecture ---------------------------------------------------------
+    def _zc_obligations(self, courbe):
+        """Prix zéro-coupon de la courbe de valorisation des obligations, calculés une fois par appel."""
+        c = self.courbe_obligations(courbe)
+        m = max((l.maturite for l in self.obligations), default=0)
+        return [1.0] + [c.zc(k) for k in range(1, m + 1)]
+
     def vm_obligations(self, courbe):
-        return sum(l.valeur_marche(courbe) for l in self.obligations)
+        zc = self._zc_obligations(courbe)
+        return sum(l.valeur_marche_zc(zc) for l in self.obligations)
 
     def vnc_obligations(self):
         return sum(l.vnc for l in self.obligations)
@@ -88,6 +164,15 @@ class Portefeuille:
         dividendes = min(self.actions_vm * self.dividende, valeur_fin)
         self.actions_vm = valeur_fin - dividendes
 
+        # V5 : pertes de crédit de l'année, constatées avant le paiement des coupons
+        self.annee += 1
+        pertes_credit, taux_perte = 0.0, self.taux_perte_credit()
+        if taux_perte:
+            for ligne in self.obligations:
+                pertes_credit += ligne.vnc * taux_perte
+                ligne.nominal *= 1 - taux_perte
+                ligne.vnc *= 1 - taux_perte
+
         coupons, remboursements = 0.0, 0.0
         restantes = []
         for ligne in self.obligations:
@@ -105,6 +190,7 @@ class Portefeuille:
             "dividendes": dividendes,
             "interets_monetaires": interets_monetaires,
             "remboursements": remboursements,
+            "pertes_credit": pertes_credit,
         }
 
     def alleger_actions(self, courbe, allocation):
@@ -136,6 +222,25 @@ class Portefeuille:
 
     def payer(self, montant):
         self.monetaire -= montant
+
+    def vendre_coupons_bas(self, courbe, part):
+        """V5 : vend, au prix de marché, une part de la VNC obligataire en commençant par les plus petits
+        coupons (repositionnement). Renvoie la plus ou moins-value réalisée ; le produit va en trésorerie."""
+        a_vendre = part * self.vnc_obligations()
+        zc = self._zc_obligations(courbe)
+        pmv = 0.0
+        for ligne in sorted(self.obligations, key=lambda l: (l.coupon, -l.maturite)):
+            if a_vendre <= 1e-12:
+                break
+            q = min(1.0, a_vendre / ligne.vnc) if ligne.vnc > 0 else 0.0
+            vm = ligne.valeur_marche_zc(zc)
+            pmv += q * (vm - ligne.vnc)
+            self.monetaire += q * vm
+            a_vendre -= q * ligne.vnc
+            ligne.nominal *= 1 - q
+            ligne.vnc *= 1 - q
+        self.obligations = [l for l in self.obligations if l.nominal > 1e-12]
+        return pmv
 
     def reequilibrer(self, courbe, allocation):
         """Ramène le portefeuille vers l'allocation cible, en valeur de marché.
@@ -169,10 +274,12 @@ class Portefeuille:
         cible_obligations = total - self.actions_vm - cible_monetaire
         vm_obl = self.vm_obligations(courbe)
 
+        courbe_obl = self.courbe_obligations(courbe)
         if vm_obl > 0 and vm_obl > cible_obligations + 1e-9:
             part = min(1.0, (vm_obl - max(cible_obligations, 0.0)) / vm_obl)
+            zc = self._zc_obligations(courbe)
             for ligne in self.obligations:
-                vm_ligne = ligne.valeur_marche(courbe)
+                vm_ligne = ligne.valeur_marche_zc(zc)
                 pmv_obligations += part * (vm_ligne - ligne.vnc)
                 self.monetaire += part * vm_ligne
                 ligne.nominal *= 1 - part
@@ -180,8 +287,8 @@ class Portefeuille:
             self.obligations = [l for l in self.obligations if l.nominal > 1e-12]
         elif vm_obl < cible_obligations - 1e-9:
             achat = cible_obligations - vm_obl
-            n = self.maturite_reinvestissement
-            self.obligations.append(LigneObligataire(achat, courbe.taux_pair(n), n, achat))
+            for n, poids in (self.echelle.items() if self.echelle else [(self.maturite_reinvestissement, 1.0)]):
+                self.obligations.append(LigneObligataire(poids * achat, courbe_obl.taux_pair(n), n, poids * achat))
             self.monetaire -= achat
 
         # Cas extrême : plus assez d'obligations pour couvrir les sorties

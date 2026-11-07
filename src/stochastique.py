@@ -2,14 +2,13 @@
 
 import copy
 
-import numpy as np
 import pandas as pd
 
 from .gse import GSE, demi_intervalle
 from .projection import indicateurs, projeter, scenario
 
 
-def projeter_stochastique(h, gse=None, choc_rachats=0.0, rachat_massif=0.0):
+def projeter_stochastique(h, gse=None, choc_rachats=0.0, rachat_massif=0.0, credit=None, detail=False):
     """Projette le fonds sur chaque scénario et agrège les résultats.
 
     Renvoie :
@@ -21,8 +20,11 @@ def projeter_stochastique(h, gse=None, choc_rachats=0.0, rachat_massif=0.0):
     """
     gse = gse or GSE(h)
     resultats, trajectoires = [], []
-    for eco in gse.scenarios():
-        df = projeter(h, eco, choc_rachats=choc_rachats, rachat_massif=rachat_massif, detail=False)
+    scenarios = gse.scenarios()
+    for j, eco in enumerate(scenarios):
+        # V5 : un modèle de crédit par saut reçoit les tirages de défaut du scénario
+        credit_j = credit.pour_scenario(j, len(scenarios)) if hasattr(credit, "pour_scenario") else credit
+        df = projeter(h, eco, choc_rachats=choc_rachats, rachat_massif=rachat_massif, detail=detail, credit=credit_j)
         resultats.append(indicateurs(df))
         trajectoires.append(df)
 
@@ -37,6 +39,8 @@ def projeter_stochastique(h, gse=None, choc_rachats=0.0, rachat_massif=0.0):
         synthese[col] = par_scenario[col].mean()
         synthese["ic_" + col] = demi_intervalle(par_scenario[col])
     synthese["valeur_assureur"] = synthese["vm_actif_initial"] - synthese["be"]
+    if "va_primes" in par_scenario:  # V5 : collecte nouvelle, valeur = actif + VA des primes - BE
+        synthese["valeur_assureur"] += par_scenario["va_primes"].mean()
     # Situations à surveiller : apport de capital de l'assureur, fonds propres
     # comptables négatifs à un moment de la projection
     apports = empile["apport_assureur"].groupby(level="scenario").sum()

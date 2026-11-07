@@ -1,0 +1,111 @@
+# V5 : méthodologie
+
+Cette note fixe les conventions de la V5. Les profils d'assureur sont fictifs ; leurs ordres de grandeur sont confrontés aux publications de place dans `data/v5/profils/confrontation_acpr.md`.
+
+## 1. Six notions à ne jamais confondre
+
+| Notion | Définition dans le modèle | Où elle intervient |
+| --- | --- | --- |
+| **1. Valeur de marché initiale des actifs** | Prix observés en t = 0 : obligations sur la courbe EIOPA sans VA plus le spread OAT calibré (ce qui reproduit leur prix de marché par construction), actions à leur valeur de marché, monétaire au nominal | Bilan économique initial |
+| **2. Rendement attendu sous la probabilité réelle** | Ce qu'un investisseur espère gagner : taux sans risque plus primes de risque (crédit, liquidité, actions). Le générateur de scénarios de la V5 est risque neutre : il ne fournit pas ces rendements. Seule la mesure « trajectoire » utilise une perte de crédit réelle explicite, pour des projections comptables | Trajectoires comptables seulement, jamais une valeur |
+| **3. Valorisation risque neutre** | Espérance des flux actualisés avec les déflateurs du générateur calé sur la courbe de la base. Tout actif y rapporte en moyenne le taux sans risque (tests de martingalité) | BE, valeur actionnaire, coût des options et garanties |
+| **4. Perte de crédit attendue et prime de risque** | En risque neutre, tout le spread est une intensité de perte (spread cumulé H) : un titre acheté à son prix de marché a une valeur actuelle nette nulle. Sous la probabilité réelle, la perte attendue est plus faible ; l'écart est une **prime de risque**, qui rémunère un risque porté et n'est **pas** de la valeur créée | Tests de non-arbitrage (`tests/test_v5_non_arbitrage.py`) |
+| **5. Coûts de capital, de liquidité et de couverture** | Voir la section 3 : coût réglementaire du capital (marge de risque), coûts frictionnels de détention du capital, rendement exigé par l'actionnaire, coûts de transaction et de couverture | Métriques de l'étape 2 |
+| **6. Valeur réellement créée** | Écart de valeur risque neutre entre deux stratégies, sur les mêmes tirages, net des coûts frictionnels et de l'impôt. Elle ne peut venir que des interactions actif-passif (partage des produits financiers, garanties, rachats, PPB, réserve de capitalisation, impôt, capital) et des décisions de gestion | Comparaison des stratégies (étape 3) |
+
+**Règle de non-arbitrage.** Acheter un actif à son juste prix de marché n'a pas de valeur actuelle nette, même s'il offre un spread élevé. Le code l'impose de deux façons :
+- en risque neutre, la perte annuelle sur le nominal est exactement 1 - exp(-[H(t) - H(t-1)]), si bien qu'une obligation détenue au prix de marché rapporte exactement le taux sans risque en espérance risque neutre, après actualisation et défauts, et non sur chaque trajectoire (test analytique, écart inférieur à 10⁻¹²) ;
+- une projection en mesure « trajectoire » (perte réelle, prime de risque visible en comptabilité) ne peut pas être valorisée : `indicateurs` lève une erreur.
+
+## 2. Courbes et bases de valorisation
+
+| Base | Courbe | Générateur | Actifs | Usage |
+| --- | --- | --- | --- | --- |
+| **Sans VA** (par défaut) | EIOPA de base au 31/10/2026, ajustement pour risque de crédit (10 pb) inclus, UFR 3,30 %, LLP 20 ans | Calé sur cette courbe | Prix de marché | Valeur économique |
+| **Avec VA** (sensibilité) | Même courbe plus la correction pour volatilité de 20 pb sur la partie liquide, puis convergence vers l'UFR | Calé sur la courbe avec VA, comme dans la pratique de place | Prix de marché inchangés : le spread des obligations est réexprimé au-dessus de la courbe avec VA | Vision réglementaire |
+
+Conventions :
+- La VA (directive 2009/138/CE, art. 77 quinquies) suppose l'accord du superviseur. Elle réduit le BE : cet « effet VA » est un effet réglementaire, présenté à part. Il n'est jamais compté comme de la valeur économique.
+- Les deux courbes sont lues dans la publication officielle de l'EIOPA (`data/v5/marche/`). Le test vérifie l'écart de 20 pb sur les maturités 1 à 20 ans.
+- Le spread des OAT est calibré sur le TEC du 04/11/2026. La convention initiale prenait le TEC comme taux zéro-coupon (approximation) ; la convention centrale des résultats finaux (crédit `k70_granulaire_correle`) utilise le spread zéro-coupon obtenu par bootstrap du TEC (`data/v5/marche/spread_oat_20261104_zc.json`, `docs/V5_SYNTHESE_AVANT_OPTIMISATION.md`). Il sert aux prix de marché des obligations détenues. Ces obligations représentent l'ensemble du portefeuille obligataire, souverains et entreprises : c'est une simplification.
+- **Cohérence actif-passif.** Les engagements sont actualisés avec les déflateurs du même générateur qui fait vivre les actifs. La fuite (valeur initiale moins valeur actuelle de tous les flux sortants et de l'actif final) est nulle en déterministe (inférieure à 10⁻⁸) et statistiquement nulle en stochastique, dans les deux bases.
+
+## 3. Coût du capital : trois notions distinctes
+
+| Notion | Nature | Valeur | Usage prévu |
+| --- | --- | --- | --- |
+| **Coût réglementaire du capital** | Paramètre de la marge de risque Solvabilité II (prix de transfert des engagements) | 6 % (règles 2026) ; 4,75 % en sensibilité (règlement délégué 2026/269) | Marge de risque, bilan prudentiel |
+| **Coûts frictionnels de détention du capital** | Ce que coûte à l'actionnaire, en valeur de marché, d'immobiliser du capital dans l'assureur : impôt sur le rendement des actifs qui le représentent (double imposition), coûts d'agence et de gestion | Taux frictionnel paramétrable (impôt de 25,83 % appliqué au rendement des fonds propres, plus coûts d'agence en sensibilité) | Valeur nette du coût du capital, cohérente avec le risque neutre |
+| **Rendement exigé par l'actionnaire** | Taux d'actualisation sous la probabilité réelle (coût des fonds propres) | Paramètre de sensibilité, sans valeur observée retenue | Présenté à part, comme une lecture « investisseur ». Il n'est jamais combiné avec des flux risque neutre : le risque serait compté deux fois |
+
+## 4. Impôt sur les sociétés (`src/v5/fiscalite.py`)
+
+- **Taux normal : 25 %** (CGI, art. 219).
+- **Contribution sociale : 3,3 %** de l'impôt diminué d'un abattement de 763 000 € par période de douze mois (CGI, art. 235 ter ZC). Elle s'applique sauf exonération des entreprises de moins de 7 630 000 € de chiffre d'affaires détenues à 75 % au moins par des personnes physiques, conditions qu'aucun profil ne remplit. Pour un assureur de la taille des profils, le taux effectif tend vers 25,825 %.
+- **Contribution exceptionnelle sur les bénéfices des grandes entreprises** : exclue. Elle ne vise que les deux premiers exercices clos à compter du 31/12/2025 (loi de finances pour 2025, art. 48, prorogée par la loi de finances pour 2026, art. 12), et la reconduction envisagée par le projet de loi de finances pour 2027 n'est pas adoptée.
+- **Déficits** : report en avant, imputation plafonnée à 1 M€ majoré de 50 % du bénéfice au-delà (CGI, art. 209).
+- **Échelle** : 1 unité = 10 M€, pour appliquer les seuils exprimés en euros.
+
+## 5. Statut des données
+
+Chaque paramètre est observé, calibré ou fictif (`data/v5/README.md`). Les profils sont fictifs : ils ne décrivent aucun organisme réel.
+
+## 6. Forme des pertes de crédit, probabilité réelle et référence des assurés
+
+Comparaison chiffrée et proposition de convention centrale : `docs/V5_CONVENTIONS.md`. Paramètres et statuts : `data/v5/conventions/conventions.json`.
+
+**Crédit.** Dans la valorisation économique, sans frictions, tout le spread reste un coût risque neutre : c'est la condition d'absence d'arbitrage. Seule sa forme est paramétrée (`src/v5/credit.py`) :
+- part lissée : perte constatée chaque année, dans chaque scénario ;
+- part par saut : défaut d'un bloc d'émetteurs, recouvrement R en valeur de marché, probabilité annuelle p = (1 - exp(-dH)) / (1 - R), ce qui garde exactement le prix de chaque titre ; tirages de défaut indépendants des taux, appariés comme le générateur (paires antithétiques) ;
+- décomposition : la part de crédit du spread (kappa) passe par saut, le reste (liquidité, offre, change) reste un coût lissé ;
+- blocs : 26 % du portefeuille en un bloc souverain (part de la dette souveraine française dans les obligations des assureurs, ACPR n° 181), le reste en 20 blocs diversifiés ;
+- en base avec VA, le décalage de courbe est porté par la part lissée : la VA ne change ni l'intensité de défaut, ni le recouvrement.
+
+**Probabilité réelle.** Les trajectoires de plausibilité (`ScenarioReel`, `conventions.hypotheses_reelles`) figent les taux et les spreads à leur niveau de marché, ne constatent que la perte attendue réelle (3 pb par an au centre, calée sur les défauts historiques par notation et la composition du portefeuille des assureurs) et ne peuvent pas être valorisées. Les stress de crédit y constatent 50 % ou 100 % du spread en pertes effectives.
+
+**Référence des assurés.** `ReferenceAssures` (`src/passif.py`) calcule référence(t) = niveau initial + beta x (X(t) - X0), où X est le moteur (taux sans risque 10 ans, taux 10 ans lissé, taux du livret A, ou rien). X0 est lu sur la courbe de marché de la base avant tout choc : un choc de taux déplace la référence, une base avec VA ne la change pas. Le niveau initial de 2,88 % est une hypothèse de modélisation, pas une observation.
+
+**Vue prudentielle simplifiée.** `src/v5/solvabilite_v5.py` reprend les mécanismes de la V3 sur la courbe EIOPA avec VA et les obligations risquées, et y ajoute un module de spread (part non souveraine, notation A). Elle sert à distinguer la valeur économique simplifiée d'une lecture prudentielle, pas à produire un ratio de solvabilité réel.
+
+## 7. Conventions de sécurisation avant l'optimisation
+
+Résultats et démonstrations : `docs/V5_SYNTHESE_AVANT_OPTIMISATION.md`. Paramètres et statuts : `data/v5/conventions/conventions.json`.
+
+- **Spread zéro-coupon.** Le TEC est un rendement au pair : les conventions de sécurisation (codes « k... ») utilisent des taux zéro-coupon OAT obtenus par bootstrap (`data/v5/marche/spread_oat_20261104_zc.json`), environ 12 pb de spread de plus à 10 ans. Les premières variantes gardent l'ancienne courbe pour rester reproductibles.
+- **Part de crédit.** kappa = (1 - d) x CDS en dollars / spread zéro-coupon à 5 ans, d étant la dépréciation de l'euro attendue en cas de défaut (quanto publié) : 0,7 au centre, 0,55 et 1 en sensibilité.
+- **Structure de défaut.** Copule gaussienne à un facteur sur 50 blocs (rho = 0,2), qui garde la probabilité de chaque bloc et donc les prix ; défaut corrélé par bloc (souverain de 26 %) et bloc unique en stress.
+- **Probabilité réelle stochastique.** `src/v5/reel.py` : taux du générateur (prime de terme nulle), prime actions de 3 %, défauts aux probabilités réelles sur les mêmes blocs, spreads figés ; distributions d'apports, de fonds propres comptables négatifs et de liquidité, sans valorisation.
+- **Référence des assurés.** Le lissage sur 7 ans est un proxy comportemental fictif. Il est confronté à une référence composite à niveaux observés (taux servi moyen 2025, livret A, OAT 10 ans), avec délais de transmission et coefficients de réaction paramétrés et poids fictifs.
+- **Rachat structurel.** 4,4 % au sens de l'ACPR (rachats / provisions d'ouverture), converti dans la convention du modèle (taux appliqué aux PM revalorisées nettes des décès). La loi dynamique est la même en risque neutre et en probabilité réelle ; seules les trajectoires d'entrée changent.
+- **Vue prudentielle complétée.** `bilan_prudentiel` : fonds excédentaires (approche simplifiée de l'ACPR), marge de risque sur les risques non couvrables, chocs de taux, actions, spread par qualité de crédit, rachat, mortalité, frais, risque opérationnel, absorption par les FDB et par les impôts différés passifs, impôts différés actifs non reconnus au centre, MCR. Le résultat est un **indicateur de couverture simplifié**, pas un ratio de solvabilité.
+
+## 8. Stratégies ALM et capital
+
+Résultats : `docs/V5_STRATEGIES.md`. Définitions : `data/v5/strategies/strategies.json`.
+
+- **Même bilan initial.** Le portefeuille d'ouverture suit l'allocation initiale du profil (`allocation_initiale`) ; une stratégie ne change que les règles appliquées ensuite (allocation cible, échelle de réinvestissement, cible de taux servi, repositionnement à l'ouverture).
+- **Repositionnement.** Vente au prix de marché des plus petits coupons, rachat aux taux du marché : valeur de marché inchangée à l'ouverture ; moins-value réalisée imputée sur la réserve de capitalisation, puis sur le résultat financier de l'année 1.
+- **Apport de capital.** Versé en trésorerie (`apport_initial`), investi ensuite au prix du marché ; aucune plus-value créée. La valeur nette déduit l'apport initial et la valeur actuelle des apports ultérieurs : un apport n'est jamais un profit. Les apports ultérieurs du modèle sont déclenchés par l'épuisement de l'actif (trésorerie négative après la vente de tous les actifs) ; des fonds propres comptables négatifs sont suivis à part.
+- **Distributions.** Politique commune à toutes les stratégies (`strategie_alm.distribution`) : les fonds propres comptables sont ramenés en fin d'année à leur niveau d'ouverture rapporté à la PM, apport compris ; l'excédent est déclaré, puis versé l'année suivante avec les prestations. Les dividendes ne passent pas par le résultat. Identité risque neutre : actif - BE = VA des dividendes + VA du résidu final - VA des apports ultérieurs (à l'écart Monte-Carlo près).
+- **Effet de la distribution sur les assurés.** La participation est calculée sur la quote-part des produits financiers au rendement comptable moyen de tout le portefeuille. Sans distribution, les résultats conservés sont réinvestis aux taux du marché et relèvent ce rendement comptable, donc le taux servi ; distribuer l'abaisse. L'abandon de marge ne porte que sur la quote-part des provisions : les produits des fonds propres ne financent pas directement le taux servi.
+- **Rétention.** `strategie_alm.part_distribuee` (1 par défaut) : seule cette part de l'excédent sur la cible est distribuée chaque année, le reste demeure en fonds propres.
+- **Plancher de PPB.** `strategie.plancher_ppb_pct_pm` (absent par défaut) : les reprises volontaires de PPB ne portent que sur le stock au-delà du plancher, exprimé en % de la PM ; les reprises obligatoires à 8 ans sont inchangées. La variante « compétitive préservant la PPB » fixe ce plancher à la moitié de la PPB d'ouverture et limite les reprises volontaires à 25 % du stock mobilisable par an.
+- **Incertitude Monte-Carlo de la vue prudentielle.** Les dix projections (base et chocs) utilisent les mêmes scénarios. Les paires antithétiques sont rééchantillonnées (bootstrap, mêmes indices pour tous les chocs, les deux points d'apport et toutes les stratégies), puis fonds propres, SCR, MCR et ratios sont recalculés sur chaque tirage (`solvabilite_v5.reagreger`). Les intervalles publiés sont les quantiles 2,5 % et 97,5 % de ces tirages ; ils ne mesurent que l'erreur d'échantillonnage, pas l'erreur de modèle.
+- **Besoin de capital.** Fonds propres et SCR sont calculés sans apport et pour un apport K1 proche du besoin à 125 % ; le besoin pour une cible tau x SCR suit de l'interpolation linéaire K(tau) = max((tau x SCR0 - FP0) / (pente FP - tau x pente SCR), 0), vérifiée par un recalcul direct au besoin obtenu pour la stratégie passive et la politique de marge.
+- **Base de capital commune.** Chaque stratégie reçoit le capital qui lui est nécessaire pour atteindre la même contrainte (100 % ou 150 % du SCR simplifié) ; sa valeur est nette de son propre apport. Les écarts entre stratégies sont appariés (mêmes scénarios) et leurs intervalles calculés sur les moyennes des paires antithétiques.
+- **Significativité et importance.** Un écart est statistiquement significatif s'il sort de son intervalle apparié à 95 %, économiquement important s'il dépasse en plus un seuil fixé avant la lecture des résultats (`strategies.json`, rubrique `lecture` : 2 % du SCR pour la valeur, 25 pb pour la rentabilité, 5 pb pour le taux servi, etc.).
+- **Impôt.** Calculé après projection sur le résultat annuel (25 %, contribution sociale, déficits reportables), sans rétroaction ; c'est le coût frictionnel du capital retenu.
+- **Mesures séparées.** Valeur nette risque neutre ; rentabilité des fonds propres en probabilité réelle comparée à un rendement exigé fictif ; indicateurs de couverture simplifiés (SCR et MCR), qui ne sont pas des ratios réglementaires.
+- **MCR.** Formule linéaire réduite aux contrats avec participation (3,7 % des provisions des prestations garanties, frais compris, moins 5,2 % des FDB hors fonds excédentaires), corridor de 25 % à 45 % du SCR, minimum absolu de 0,4 unité ; la contrainte active est publiée.
+
+## 9. Collecte nouvelle (`src/v5/collecte.py`, `src/projection.py`)
+
+Spécification : [V5_SPECIFICATION_COLLECTE.md](V5_SPECIFICATION_COLLECTE.md) ; paramètres et statuts : `data/v5/collecte/collecte.json` ; résultats : `docs/V5_COLLECTE.md`.
+
+- **Collecte** : C(t) = c0 x PM(t - 1) x g(e(t - 1)) pendant 10 ans, primes encaissées en fin d'année avec les prestations et investies au prix du marché. c0 = 0 : portefeuille fermé, projection identique colonne par colonne ; eta = 0 : collecte indépendante du taux servi relatif.
+- **Deux ensembles de contrats** dans un même fonds : l'existant (TMG du profil) et les contrats nouveaux (TMG nul, frais d'acquisition, mêmes chargements et frais sur encours). Le taux servi est décidé sur la PM totale avec le TMG moyen pondéré ; l'intérêt est réparti en max(x ; TMG), x commun (`passif.repartir_taux_servi`). Chaque ensemble rachète selon son propre taux servi passé ; la collecte suit l'écart du taux servi des contrats nouveaux à la référence.
+- **Frontière des contrats** : BE de l'existant, vue prudentielle et besoin de capital à l'ouverture sont calculés en extinction ; `bilan_prudentiel` ignore toute section de collecte. C'est une convention simplifiée : elle exclut les primes et contrats futurs, mais aussi les effets que la collecte peut avoir sur les hypothèses de projection de l'existant (politique d'investissement, produits financiers, frais), analysés à part dans la vue économique ; un calcul Solvabilité II complet peut devoir en tenir compte.
+- **Réserve de capitalisation** : les plus ou moins-values obligataires réalisées y sont portées, hors assiette de la participation ; au-delà, les moins-values passent dans le résultat financier de l'année suivante ; son solde final reste à l'actionnaire. C'est le principe de l'article R.351-2-1 du Code des assurances (mouvements de la réserve pris en compte dans le BE, valeur actuelle attendue du solde final en réserve de réconciliation, fonds propres de niveau 1), sans toutes ses modalités : le modèle ne distingue pas la réserve constituée à la date de calcul des dotations futures.
+- **Valeur des affaires nouvelles** (hors Solvabilité II) = valeur totale - valeur de l'existant sur les mêmes scénarios, répartie entre les flux des contrats nouveaux, la variation du BE de l'existant et l'impôt supplémentaire (`collecte.decomposer`). L'identité est vraie par construction ; seule la somme s'interprète, les deux premiers termes déplaçant en sens inverse les transferts entre générations d'assurés.
+- **Tests d'absence d'arbitrage** : cas cantonné (`cantonne_sans_risque`, valeur nulle par construction, contrôle de comptabilisation) ; contrat sans marge explicite dans le fonds mutualisé (valeur inférieure à 1 % de la VA des primes ; variantes de liquidation qui en identifient l'origine) ; fuite nulle sur l'équivalent certain avec des contrats réalistes.
+- **Lecture** : majorant « oui », « non » ou « indéterminé » selon l'intervalle apparié de l'écart de valeur des affaires nouvelles ; « robuste » si la borne de l'intervalle de l'écart de valeur totale dépasse le seuil d'importance sur toute la grille et sous la loi ONC maximale (`collecte.etat_majorant`, `collecte.robustesse`).

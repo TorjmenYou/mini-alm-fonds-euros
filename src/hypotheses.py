@@ -22,7 +22,7 @@ def actif_initial(h):
     assert abs(sum(allocation.values()) - 1.0) < 1e-9, "L'allocation doit sommer à 100 %"
 
     bilan = h["bilan_initial"]
-    total = bilan["pm"] + bilan["ppb"] + bilan["fonds_propres"]
+    total = bilan["pm"] + bilan["ppb"] + bilan["fonds_propres"] + bilan.get("reserve_capitalisation", 0.0)
     repartition = {classe: total * poids for classe, poids in allocation.items()}
     repartition["total"] = total
     return repartition

@@ -1,0 +1,35 @@
+{
+ "statut": "observé",
+ "source": "EIOPA, Risk-free interest rate term structures, publication mensuelle",
+ "url": "https://www.eiopa.europa.eu/document/download/ca8984bf-73a6-4bfa-80a1-cb866d0b2d47_en?filename=EIOPA_RFR_20261031.zip",
+ "date_reference": "2026-10-31",
+ "date_publication": "2026-11-05",
+ "archive": "EIOPA_RFR_20261031.zip",
+ "sha256_archive": "fb2295695c42c874f1d851b81e3cc7519d47fd866b3eb3c5fd31dbb0a498a490",
+ "classeur": "EIOPA_RFR_20261031_Term_Structures.xlsx",
+ "feuilles": {
+  "taux_sans_va": "RFR_spot_no_VA",
+  "taux_avec_va": "RFR_spot_with_VA"
+ },
+ "zone": "Euro",
+ "identifiant_courbe": "EUR_31_10_2026_SWP_LLP_20_EXT_40_UFR_3.30",
+ "parametres_sans_va": {
+  "Coupon_freq": 1,
+  "LLP": 20,
+  "Convergence": 40,
+  "UFR": 3.3,
+  "alpha": 0.068369,
+  "CRA": 10,
+  "VA": null
+ },
+ "parametres_avec_va": {
+  "Coupon_freq": 1,
+  "LLP": 20,
+  "Convergence": 40,
+  "UFR": 3.3,
+  "alpha": 0.05,
+  "CRA": 10,
+  "VA": 20
+ },
+ "nature_des_taux": "taux zéro-coupon actuariels (composition annuelle), maturités 1 à 150 ans, en décimal"
+}
