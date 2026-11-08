@@ -15,14 +15,14 @@ Généré par `scripts/v5_rapport_strategies.py` depuis `resultats/v5_consolidat
 | | A | B | C |
 | --- | ---: | ---: | ---: |
 | Fonds propres comptables et réserve de capitalisation | 50,0 | 65,0 | 65,0 |
-| Moins-values latentes obligataires | −185,5 | −128,4 | −71,4 |
+| Moins-values latentes obligataires | −170,9 | −118,4 | −52,1 |
 | Plus-values latentes actions | 4,3 | 11,1 | 7,8 |
-| PM + PPB - BE (base avec VA) | 140,2 | 139,7 | 110,4 |
-| - Marge de risque (6 %) | −21,9 | −33,6 | −35,9 |
-| + Fonds excédentaires | 15,1 | 19,0 | 8,7 |
-| - Impôts différés passifs | 0,0 | 0,0 | −2,8 |
-| **Fonds propres de niveau 1** | 2,2 | 72,7 | 81,8 |
-| Intervalle à 95 % des fonds propres de niveau 1 (erreur Monte-Carlo) | [−1,3 ; 4,8] | [70,0 ; 74,8] | [80,0 ; 83,4] |
+| PM + PPB - BE (base avec VA) | 139,6 | 132,8 | 95,1 |
+| - Marge de risque (6 %) | −21,8 | −37,8 | −31,9 |
+| + Fonds excédentaires | 14,7 | 17,0 | 8,4 |
+| - Impôts différés passifs | 0,0 | 0,0 | −4,9 |
+| **Fonds propres de niveau 1** | 15,8 | 69,6 | 87,5 |
+| Intervalle à 95 % des fonds propres de niveau 1 (erreur Monte-Carlo) | [12,1 ; 18,7] | [67,1 ; 71,7] | [85,6 ; 89,1] |
 
 Identité vérifiée par le générateur : actif - BE - marge de risque + fonds excédentaires - impôts différés passifs = somme des lignes ci-dessus.
 
@@ -30,29 +30,29 @@ Identité vérifiée par le générateur : actif - BE - marge de risque + fonds 
 
 | | A | B | C |
 | --- | ---: | ---: | ---: |
-| Taux (sens retenu) | 13,2 | 9,4 | 14,4 |
-| Actions (39 %) | 30,7 | 37,0 | 38,4 |
-| Spread (part non souveraine) | 46,5 | 44,6 | 46,4 |
-| Marché après diversification | 73,6 | 77,0 | 80,7 |
-| Rachat (sens retenu) | 44,8 | 40,7 | 34,8 |
-| Mortalité + frais | 4,4 | 5,8 | 6,2 |
-| Vie après diversification | 46,7 | 43,3 | 37,5 |
-| BSCR net (après actions de gestion) | 96,5 | 97,3 | 97,1 |
-| BSCR brut (FDB figées) | 164,1 | 204,6 | 242,5 |
-| Ajustement pour absorption par les FDB | −49,5 | −107,3 | −145,3 |
-| Risque opérationnel | 4,0 | 4,1 | 4,1 |
-| Ajustement pour impôts différés | 0,0 | 0,0 | −2,8 |
-| **SCR simplifié** | 118,6 | 101,4 | 98,4 |
-| Intervalle à 95 % du SCR | [116,1 ; 120,9] | [99,9 ; 102,8] | [96,9 ; 100,0] |
-| **Indicateur de couverture simplifié du SCR** | 2 % | 72 % | 83 % |
-| Intervalle à 95 % de l'indicateur | [−1 ; 4] % | [70 ; 73] % | [82 ; 85] % |
-| Insuffisance (SCR - fonds propres de niveau 1) | 116,3 | 28,7 | 16,6 |
+| Taux (sens retenu) | 15,2 | 7,6 | 11,3 |
+| Actions (39 %) | 29,8 | 33,0 | 32,2 |
+| Spread (part non souveraine) | 47,0 | 42,6 | 42,9 |
+| Marché après diversification | 73,7 | 71,2 | 71,3 |
+| Rachat (sens retenu) | 44,5 | 39,2 | 29,9 |
+| Mortalité + frais | 4,1 | 4,0 | 3,6 |
+| Vie après diversification | 46,2 | 40,7 | 31,1 |
+| BSCR net (après actions de gestion) | 96,3 | 90,4 | 84,6 |
+| BSCR brut (FDB figées) | 176,5 | 214,1 | 247,6 |
+| Ajustement pour absorption par les FDB | −59,3 | −123,7 | −162,9 |
+| Risque opérationnel | 4,0 | 4,1 | 4,2 |
+| Ajustement pour impôts différés | 0,0 | 0,0 | −4,9 |
+| **SCR simplifié** | 121,3 | 94,5 | 83,9 |
+| Intervalle à 95 % du SCR | [118,6 ; 123,9] | [93,3 ; 97,9] | [82,2 ; 85,5] |
+| **Indicateur de couverture simplifié du SCR** | 13 % | 74 % | 104 % |
+| Intervalle à 95 % de l'indicateur | [10 ; 15] % | [69 ; 75] % | [102 ; 107] % |
+| Insuffisance (SCR - fonds propres de niveau 1) | 105,5 | 24,9 | −3,6 |
 
 **Ce qui détermine les insuffisances :**
 
-- **A** : fonds propres comptables de 4,5 % de la PM, moins-values obligataires latentes de 19,6 % de la VNC obligataire (−185,5), partiellement compensées par l'écart provisions - BE (140,2) ; marge de risque de 21,9. SCR dominé par le spread (46,5), les actions (30,7) et le rachat (44,8, rachat massif de 40 %). L'absorption par les FDB atteint son plafond (FDB - fonds excédentaires) : le SCR dépend directement du niveau des FDB.
-- **B** : fonds propres comptables de 5,0 % de la PM, moins-values obligataires latentes de 13,7 % de la VNC obligataire (−128,4), partiellement compensées par l'écart provisions - BE (139,7) ; marge de risque de 33,6. SCR dominé par le spread (44,6), les actions (37,0) et le rachat (40,7, rachat massif de 40 %). L'absorption par les FDB n'atteint pas son plafond.
-- **C** : fonds propres comptables de 6,0 % de la PM, moins-values obligataires latentes de 8,0 % de la VNC obligataire (−71,4), partiellement compensées par l'écart provisions - BE (110,4) ; marge de risque de 35,9. SCR dominé par le spread (46,4), les actions (38,4) et le rachat (34,8, rachat massif de 40 %). L'absorption par les FDB n'atteint pas son plafond.
+- **A** : fonds propres comptables de 4,5 % de la PM, moins-values obligataires latentes de 18,1 % de la VNC obligataire (−170,9), partiellement compensées par l'écart provisions - BE (139,6) ; marge de risque de 21,8. SCR dominé par le spread (47,0), les actions (29,8) et le rachat (44,5, rachat massif de 40 %). L'absorption par les FDB atteint son plafond (FDB - fonds excédentaires) : le SCR dépend directement du niveau des FDB.
+- **B** : fonds propres comptables de 5,0 % de la PM, moins-values obligataires latentes de 12,6 % de la VNC obligataire (−118,4), partiellement compensées par l'écart provisions - BE (132,8) ; marge de risque de 37,8. SCR dominé par le spread (42,6), les actions (33,0) et le rachat (39,2, rachat massif de 40 %). L'absorption par les FDB n'atteint pas son plafond.
+- **C** : fonds propres comptables de 6,0 % de la PM, moins-values obligataires latentes de 5,9 % de la VNC obligataire (−52,1), partiellement compensées par l'écart provisions - BE (95,1) ; marge de risque de 31,9. SCR dominé par le spread (42,9), les actions (32,2) et le rachat (29,9, rachat massif de 40 %). L'absorption par les FDB n'atteint pas son plafond.
 
 ### 1.3 Le MCR : formule linéaire, corridor et minimum absolu
 
@@ -60,15 +60,15 @@ MCR linéaire = max(0 ; 3,7 % x (BE - FDB) - 5,2 % x (FDB - fonds excédentaires
 
 | | A | B | C |
 | --- | ---: | ---: | ---: |
-| 3,7 % x (BE - FDB) | 30,3 | 27,7 | 26,6 |
-| - 5,2 % x FDB hors fonds excédentaires | −2,6 | −6,9 | −9,5 |
-| MCR linéaire | 27,8 | 20,8 | 17,1 |
-| 25 % du SCR | 29,6 | 25,3 | 24,6 |
-| 45 % du SCR | 53,4 | 45,6 | 44,3 |
+| 3,7 % x (BE - FDB) | 30,0 | 27,1 | 25,9 |
+| - 5,2 % x FDB hors fonds excédentaires | −3,1 | −8,2 | −11,3 |
+| MCR linéaire | 26,9 | 18,9 | 14,6 |
+| 25 % du SCR | 30,3 | 23,6 | 21,0 |
+| 45 % du SCR | 54,6 | 42,5 | 37,8 |
 | Minimum absolu | 0,4 | 0,4 | 0,4 |
-| **MCR simplifié** | 29,6 | 25,3 | 24,6 |
+| **MCR simplifié** | 30,3 | 23,6 | 21,0 |
 | Contrainte active | plancher de 25 % du SCR | plancher de 25 % du SCR | plancher de 25 % du SCR |
-| Indicateur de couverture simplifié du MCR [IC 95 %] | 7 % [−5 ; 16] | 287 % [280 ; 293] | 333 % [327 ; 338] |
+| Indicateur de couverture simplifié du MCR [IC 95 %] | 52 % [41 ; 60] | 295 % [276 ; 301] | 417 % [408 ; 427] |
 
 **Lecture.** Pour A, B, C, le MCR linéaire est inférieur à 25 % du SCR : le plancher s'applique, et l'indicateur MCR vaut alors quatre fois l'indicateur SCR. Le terme des FDB abaisse le MCR linéaire d'autant plus que la participation future est importante. Le minimum absolu ne joue pour aucun profil. Les indicateurs MCR élevés ne témoignent donc pas d'une marge de sécurité propre : ils reflètent le plancher du corridor.
 
@@ -76,12 +76,12 @@ MCR linéaire = max(0 ; 3,7 % x (BE - FDB) - 5,2 % x (FDB - fonds excédentaires
 
 | | A | B | C |
 | --- | ---: | ---: | ---: |
-| Indicateur SCR, synthèse avant optimisation (1 000 scénarios, sans distribution) | 0 % | 68 % | 79 % |
-| Indicateur SCR, première comparaison des stratégies (500 scénarios) | 2 % | 73 % | 83 % |
-| Indicateur SCR, ce document (2 000 scénarios) [IC 95 %] | 2 % [−1 ; 4] | 72 % [70 ; 73] | 83 % [82 ; 85] |
-| Effet de la politique de distribution sur le BE (mêmes scénarios) | −1,7 ± 0,3 | −1,6 ± 0,4 | −0,9 ± 0,5 |
+| Indicateur SCR, synthèse avant optimisation (1 000 scénarios, sans distribution) | 11 % | 71 % | 98 % |
+| Indicateur SCR, première comparaison des stratégies (500 scénarios) | 14 % | 74 % | 103 % |
+| Indicateur SCR, ce document (2 000 scénarios) [IC 95 %] | 13 % [10 ; 15] | 74 % [69 ; 75] | 104 % [102 ; 107] |
+| Effet de la politique de distribution sur le BE (mêmes scénarios) | −1,4 ± 0,3 | −0,6 ± 0,4 | 0,2 ± 0,5 |
 
-Les écarts entre ces trois calculs viennent de l'erreur Monte-Carlo du niveau du BE (même générateur, jeux de scénarios de tailles différentes) et de la politique de distribution introduite avec les stratégies. Mécanisme de cette dernière : la participation est calculée sur la quote-part des produits financiers, au rendement comptable moyen de tout l'actif. Sans distribution, les résultats conservés sont réinvestis aux taux du marché, qui dépassent en moyenne les coupons anciens dans les scénarios risque neutre ; le rendement comptable moyen monte, et les assurés en reçoivent leur quote-part. La distribution supprime cet effet : taux servi un peu plus bas les années de hausse des taux, FDB et BE plus faibles (profil B, année 10 : rendement comptable −39 pb, taux servi −13 pb). Aucun paramètre n'a été ajusté pour se rapprocher d'un repère de place.
+Les écarts entre ces trois calculs viennent de l'erreur Monte-Carlo du niveau du BE (même générateur, jeux de scénarios de tailles différentes) et de la politique de distribution introduite avec les stratégies. Mécanisme de cette dernière : la participation est calculée sur la quote-part des produits financiers, au rendement comptable moyen de tout l'actif. Sans distribution, les résultats conservés sont réinvestis aux taux du marché, qui dépassent en moyenne les coupons anciens dans les scénarios risque neutre ; le rendement comptable moyen monte, et les assurés en reçoivent leur quote-part. La distribution supprime cet effet : taux servi un peu plus bas les années de hausse des taux, FDB et BE plus faibles (profil B, année 10 : rendement comptable −16 pb, taux servi −8 pb). Aucun paramètre n'a été ajusté pour se rapprocher d'un repère de place.
 
 ## 2. Capital nécessaire, par stratégie
 
@@ -91,62 +91,62 @@ L'apport est versé en trésorerie à l'ouverture et investi ensuite au prix du 
 
 | Stratégie | Indicateur SCR sans apport [IC 95 %] | Apport pour 100 % [IC 95 %] | Écart à la passive [IC 95 %] | Apport pour 150 % [IC 95 %] | Écart à la passive [IC 95 %] |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Passive | 2 % [−1 ; 4] | 110,4 [108,9 ; 112,1] | - | 159,5 [157,7 ; 161,2] | - |
-| Réinvestissement progressif | 2 % [−1 ; 4] | 110,6 [109,2 ; 112,3] | 0,2 [0,0 ; 0,4] | 160,4 [158,6 ; 162,1] | 0,9 [0,5 ; 1,3] |
-| Repositionnement | −12 % [−15 ; −9] | 129,4 [128,1 ; 130,9] | 19,0 [17,7 ; 20,2] | 183,8 [182,3 ; 185,2] | 24,3 [21,6 ; 27,0] |
-| Taux servi compétitif | −4 % [−7 ; −1] | 99,9 [98,6 ; 101,5] | −10,5 [−11,3 ; −9,4] | 141,4 [140,2 ; 142,8] | −18,1 [−19,7 ; −16,2] |
-| Taux servi de marge | 7 % [5 ; 9] | 118,6 [117,3 ; 120,4] | 8,3 [7,7 ; 8,9] | 177,1 [175,2 ; 179,1] | 17,7 [16,5 ; 18,8] |
-| Liquidité défensive | 2 % [0 ; 4] | 128,4 [127,1 ; 129,9] | 18,0 [16,8 ; 19,3] | 188,7 [186,6 ; 190,8] | 29,3 [27,1 ; 31,4] |
-| Compétitif préservant la PPB | −2 % [−5 ; 0] | 108,8 [107,4 ; 110,4] | −1,6 [−2,2 ; −1,1] | 152,8 [151,3 ; 154,5] | −6,6 [−7,7 ; −5,7] |
-| Rétention de capital | 2 % [−1 ; 4] | 109,6 [108,2 ; 111,2] | −0,8 [−0,9 ; −0,6] | 157,6 [155,9 ; 159,2] | −1,9 [−2,3 ; −1,5] |
+| Passive | 13 % [10 ; 15] | 101,0 [99,4 ; 102,8] | - | 150,5 [148,2 ; 152,7] | - |
+| Réinvestissement progressif | 13 % [10 ; 15] | 101,8 [100,1 ; 103,7] | 0,7 [0,5 ; 0,9] | 152,2 [149,9 ; 154,4] | 1,7 [1,3 ; 2,2] |
+| Repositionnement | −6 % [−10 ; −3] | 118,8 [117,5 ; 120,3] | 17,8 [16,2 ; 19,4] | 175,8 [174,0 ; 177,6] | 25,3 [22,0 ; 28,3] |
+| Taux servi compétitif | 9 % [6 ; 12] | 88,4 [87,3 ; 90,1] | −12,6 [−13,3 ; −11,5] | 129,7 [128,8 ; 131,3] | −20,7 [−21,8 ; −18,7] |
+| Taux servi de marge | 16 % [13 ; 18] | 107,1 [105,4 ; 109,3] | 6,1 [5,5 ; 6,7] | 162,3 [159,7 ; 165,0] | 11,8 [10,6 ; 13,0] |
+| Liquidité défensive | 13 % [10 ; 15] | 114,5 [112,9 ; 116,2] | 13,5 [12,0 ; 14,8] | 172,4 [170,0 ; 174,8] | 21,9 [19,3 ; 24,3] |
+| Compétitif préservant la PPB | 10 % [7 ; 12] | 99,6 [98,2 ; 101,3] | −1,4 [−2,0 ; −0,9] | 144,8 [142,9 ; 146,8] | −5,7 [−6,7 ; −4,7] |
+| Rétention de capital | 13 % [10 ; 15] | 100,7 [99,1 ; 102,5] | −0,4 [−0,5 ; −0,2] | 148,9 [146,7 ; 151,0] | −1,6 [−2,0 ; −1,2] |
 
 **Profil B**
 
 | Stratégie | Indicateur SCR sans apport [IC 95 %] | Apport pour 100 % [IC 95 %] | Écart à la passive [IC 95 %] | Apport pour 150 % [IC 95 %] | Écart à la passive [IC 95 %] |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Passive | 72 % [70 ; 73] | 29,5 [27,9 ; 31,3] | - | 81,2 [79,3 ; 83,0] | - |
-| Réinvestissement progressif | 72 % [70 ; 74] | 29,3 [27,8 ; 31,0] | −0,2 [−0,3 ; −0,1] | 81,5 [79,6 ; 83,3] | 0,2 [0,0 ; 0,5] |
-| Repositionnement | 50 % [48 ; 51] | 54,4 [53,3 ; 55,7] | 24,9 [24,1 ; 25,8] | 109,9 [108,7 ; 111,2] | 28,7 [27,2 ; 30,3] |
-| Taux servi compétitif | 71 % [66 ; 72] | 27,2 [25,7 ; 30,3] | −2,3 [−2,8 ; −0,7] | 72,9 [71,2 ; 74,7] | −8,3 [−10,5 ; −6,9] |
-| Taux servi de marge | 75 % [73 ; 76] | 27,1 [25,8 ; 28,6] | −2,3 [−2,9 ; −1,8] | 79,5 [77,8 ; 81,2] | −1,7 [−2,7 ; −0,7] |
-| Liquidité défensive | 72 % [71 ; 74] | 29,3 [28,1 ; 30,6] | −0,2 [−0,9 ; 0,5] | 82,6 [81,1 ; 84,1] | 1,4 [0,0 ; 2,7] |
-| Compétitif préservant la PPB | 68 % [63 ; 70] | 28,8 [27,2 ; 34,1] | −0,7 [−1,3 ; 3,0] | 72,9 [71,0 ; 79,2] | −8,3 [−10,3 ; −3,2] |
-| Rétention de capital | 71 % [69 ; 73] | 30,0 [28,5 ; 31,9] | 0,6 [0,5 ; 0,7] | 82,1 [80,2 ; 83,9] | 0,9 [0,7 ; 1,1] |
+| Passive | 74 % [69 ; 75] | 25,4 [23,9 ; 30,4] | - | 73,3 [70,6 ; 78,7] | - |
+| Réinvestissement progressif | 74 % [69 ; 75] | 25,2 [23,8 ; 30,1] | −0,2 [−0,4 ; 0,0] | 73,4 [70,7 ; 78,7] | 0,0 [−0,3 ; 0,5] |
+| Repositionnement | 56 % [54 ; 57] | 45,5 [44,2 ; 46,9] | 20,1 [16,2 ; 20,9] | 98,7 [97,4 ; 100,1] | 25,4 [20,3 ; 27,9] |
+| Taux servi compétitif | 72 % [67 ; 74] | 24,3 [22,9 ; 29,0] | −1,1 [−1,8 ; −0,3] | 68,0 [65,6 ; 72,8] | −5,4 [−7,7 ; −4,3] |
+| Taux servi de marge | 76 % [71 ; 78] | 21,8 [20,4 ; 27,3] | −3,6 [−4,1 ; −1,4] | 67,1 [64,0 ; 73,4] | −6,3 [−8,8 ; 0,7] |
+| Liquidité défensive | 73 % [69 ; 75] | 26,2 [25,1 ; 30,5] | 0,8 [−1,3 ; 1,5] | 75,5 [73,1 ; 80,1] | 2,1 [0,0 ; 4,4] |
+| Compétitif préservant la PPB | 70 % [65 ; 72] | 25,2 [23,7 ; 29,7] | −0,2 [−2,0 ; 0,4] | 67,4 [65,1 ; 72,3] | −6,0 [−11,3 ; −4,4] |
+| Rétention de capital | 73 % [69 ; 75] | 25,8 [24,3 ; 30,8] | 0,4 [0,3 ; 0,5] | 73,9 [71,1 ; 79,2] | 0,5 [0,3 ; 0,7] |
 
 **Profil C**
 
 | Stratégie | Indicateur SCR sans apport [IC 95 %] | Apport pour 100 % [IC 95 %] | Écart à la passive [IC 95 %] | Apport pour 150 % [IC 95 %] | Écart à la passive [IC 95 %] |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Passive | 83 % [82 ; 85] | 17,1 [15,6 ; 18,6] | - | 68,3 [66,1 ; 70,5] | - |
-| Réinvestissement progressif | 83 % [82 ; 85] | 17,2 [15,7 ; 18,7] | 0,1 [−0,1 ; 0,3] | 69,2 [66,9 ; 71,2] | 0,8 [0,4 ; 1,3] |
-| Repositionnement | 78 % [76 ; 79] | 22,9 [21,4 ; 24,5] | 5,8 [4,8 ; 6,6] | 74,0 [71,7 ; 76,2] | 5,7 [4,3 ; 6,8] |
-| Taux servi compétitif | 84 % [82 ; 85] | 15,5 [14,0 ; 17,2] | −1,6 [−2,4 ; −0,7] | 64,6 [62,6 ; 66,6] | −3,7 [−5,2 ; −2,2] |
-| Taux servi de marge | 87 % [86 ; 89] | 12,3 [10,8 ; 13,9] | −4,8 [−5,6 ; −3,9] | 61,9 [59,7 ; 64,0] | −6,5 [−7,9 ; −5,1] |
-| Liquidité défensive | 82 % [81 ; 83] | 18,8 [17,5 ; 20,0] | 1,7 [0,8 ; 2,5] | 72,3 [70,3 ; 74,1] | 4,0 [2,7 ; 5,2] |
-| Compétitif préservant la PPB | 82 % [80 ; 84] | 17,3 [15,6 ; 18,9] | 0,2 [−0,5 ; 1,0] | 66,1 [63,9 ; 68,2] | −2,3 [−3,6 ; −1,0] |
-| Rétention de capital | 83 % [81 ; 84] | 17,5 [15,9 ; 19,0] | 0,4 [0,3 ; 0,5] | 69,0 [66,8 ; 71,1] | 0,7 [0,4 ; 1,0] |
+| Passive | 104 % [102 ; 107] | 0,0 [0,0 ; 0,0] | - | 41,3 [38,7 ; 43,8] | - |
+| Réinvestissement progressif | 104 % [102 ; 106] | 0,0 [0,0 ; 0,0] | 0,0 [0,0 ; 0,0] | 41,8 [39,3 ; 44,3] | 0,5 [0,1 ; 1,0] |
+| Repositionnement | 99 % [97 ; 101] | 1,1 [0,0 ; 2,9] | 1,1 [0,0 ; 2,9] | 46,4 [43,9 ; 48,9] | 5,2 [4,1 ; 6,3] |
+| Taux servi compétitif | 102 % [100 ; 104] | 0,0 [0,0 ; 0,2] | 0,0 [0,0 ; 0,2] | 42,6 [40,1 ; 45,0] | 1,3 [−0,1 ; 3,0] |
+| Taux servi de marge | 112 % [109 ; 115] | 0,0 [0,0 ; 0,0] | 0,0 [0,0 ; 0,0] | 32,3 [29,3 ; 35,0] | −9,0 [−10,3 ; −7,9] |
+| Liquidité défensive | 104 % [102 ; 105] | 0,0 [0,0 ; 0,0] | 0,0 [0,0 ; 0,0] | 41,8 [39,8 ; 43,7] | 0,5 [−1,1 ; 2,0] |
+| Compétitif préservant la PPB | 101 % [99 ; 103] | 0,0 [0,0 ; 1,1] | 0,0 [0,0 ; 1,1] | 43,5 [40,9 ; 46,1] | 2,2 [1,0 ; 3,5] |
+| Rétention de capital | 104 % [102 ; 106] | 0,0 [0,0 ; 0,0] | 0,0 [0,0 ; 0,0] | 42,0 [39,5 ; 44,5] | 0,7 [0,5 ; 1,0] |
 
 **Vérification de l'interpolation** (vue prudentielle recalculée à l'apport obtenu, mêmes scénarios). L'erreur d'apport est estimée au premier ordre : (indicateur obtenu - cible) x SCR obtenu / (pente des fonds propres - cible x pente du SCR) ; positive, l'apport interpolé est trop élevé.
 
 | Profil, stratégie, cible | Apport interpolé | Indicateur obtenu | Erreur d'apport estimée |
 | --- | ---: | ---: | ---: |
-| A, Passive, 100 % | 110,4 | 101,6 % | 1,6 |
-| A, Passive, 150 % | 159,5 | 149,5 % | −0,4 |
-| B, Passive, 100 % | 29,5 | 99,9 % | −0,1 |
-| B, Passive, 150 % | 81,2 | 149,4 % | −0,6 |
-| C, Passive, 100 % | 17,1 | 99,9 % | −0,1 |
-| C, Passive, 150 % | 68,3 | 150,0 % | 0,0 |
-| A, Taux servi de marge, 100 % | 118,6 | 100,7 % | 0,8 |
-| B, Taux servi de marge, 100 % | 27,1 | 99,8 % | −0,2 |
-| C, Taux servi de marge, 100 % | 12,3 | 99,9 % | −0,1 |
-| A, Repositionnement, 100 % | 129,4 | 99,5 % | −0,6 |
-| A, Réinvestissement progressif, 100 % | 110,6 | 101,4 % | 1,4 |
-| A, Taux servi compétitif, 100 % | 99,9 | 101,8 % | 1,5 |
-| A, Liquidité défensive, 100 % | 128,4 | 100,8 % | 1,0 |
-| A, Compétitif préservant la PPB, 100 % | 108,8 | 101,4 % | 1,3 |
-| A, Rétention de capital, 100 % | 109,6 | 102,0 % | 2,0 |
+| A, Passive, 100 % | 101,0 | 102,2 % | 2,3 |
+| A, Passive, 150 % | 150,5 | 149,2 % | −0,8 |
+| B, Passive, 100 % | 25,4 | 99,9 % | −0,1 |
+| B, Passive, 150 % | 73,3 | 150,5 % | 0,5 |
+| C, Passive, 100 % | 0,0 | 104,3 % | sans objet (cible atteinte sans apport) |
+| C, Passive, 150 % | 41,3 | 150,3 % | 0,2 |
+| A, Taux servi de marge, 100 % | 107,1 | 101,7 % | 1,9 |
+| B, Taux servi de marge, 100 % | 21,8 | 99,7 % | −0,2 |
+| C, Taux servi de marge, 100 % | 0,0 | 111,9 % | sans objet (cible atteinte sans apport) |
+| A, Réinvestissement progressif, 100 % | 101,8 | 102,5 % | 2,6 |
+| A, Repositionnement, 100 % | 118,8 | 99,1 % | −1,0 |
+| A, Taux servi compétitif, 100 % | 88,4 | 102,6 % | 2,2 |
+| A, Liquidité défensive, 100 % | 114,5 | 101,6 % | 2,0 |
+| A, Compétitif préservant la PPB, 100 % | 99,6 | 102,0 % | 1,9 |
+| A, Rétention de capital, 100 % | 100,7 | 102,7 % | 2,7 |
 
-**Aucune stratégie n'atteint 100 % sans apport, pour aucun profil.** Deux erreurs entourent les besoins d'apport. L'erreur Monte-Carlo (demi-largeur des intervalles ci-dessus) va de 1,2 à 4,1 unités. L'erreur d'interpolation atteint au plus 0,6 unité pour B et C ; elle est plus forte pour A (2,0 au plus, pour « Rétention de capital »), dont la relation entre apport et indicateur n'est pas linéaire (plafond de l'absorption par les FDB, section 8). Les apports utilisés ensuite sont les apports interpolés, non corrigés, pour garder une règle identique pour toutes les stratégies. Ces erreurs pèsent peu sur la valeur : le coût net de portage de la gestion passive est d'environ 0,10 par unité d'apport pour A (section 2.1), soit moins de 0,2 de valeur nette pour l'erreur d'interpolation la plus forte. Les **écarts** de besoin entre stratégies, calculés sur les mêmes rééchantillons, sont plus précis que les besoins eux-mêmes.
+Stratégies à 100 % sans apport : Passive (C), Réinvestissement progressif (C), Taux servi compétitif (C), Taux servi de marge (C), Liquidité défensive (C), Compétitif préservant la PPB (C), Rétention de capital (C). Deux erreurs entourent les besoins d'apport. L'erreur Monte-Carlo (demi-largeur des intervalles ci-dessus) va de 0,0 à 4,7 unités. L'erreur d'interpolation atteint au plus 0,5 unité pour B et C ; elle est plus forte pour A (2,7 au plus, pour « Rétention de capital »), dont la relation entre apport et indicateur n'est pas linéaire (plafond de l'absorption par les FDB, section 8). Les apports utilisés ensuite sont les apports interpolés, non corrigés, pour garder une règle identique pour toutes les stratégies. Ces erreurs pèsent peu sur la valeur : le coût net de portage de la gestion passive est d'environ 0,10 par unité d'apport pour A (section 2.1), soit moins de 0,3 de valeur nette pour l'erreur d'interpolation la plus forte. Les **écarts** de besoin entre stratégies, calculés sur les mêmes rééchantillons, sont plus précis que les besoins eux-mêmes.
 
 ### 2.1 Fonds propres existants, apports, distributions et coûts de financement
 
@@ -154,15 +154,15 @@ Quatre flux sont tenus séparément : (1) les fonds propres existants, déjà da
 
 | Profil, base (gestion passive) | VA des dividendes | VA du résidu final | - Apport initial | - VA des apports ultérieurs | - VA de l'impôt | Écart Monte-Carlo | **Valeur nette** | Coût net de portage de l'apport |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A, bilan initial, sans apport | 32,1 | −2,5 | 0,0 | −34,7 | −6,1 | 0,4 | **−10,8** | - |
-| A, capital porté à 100 % du SCR simplifié | 110,0 | −1,7 | −110,4 | −7,5 | −12,5 | 0,6 | **−21,5** | 10,7 |
-| A, capital porté à 150 % du SCR simplifié | 153,8 | −1,2 | −159,5 | −4,5 | −15,9 | 0,6 | **−26,6** | 15,8 |
-| B, bilan initial, sans apport | 83,2 | −1,2 | 0,0 | −8,6 | −17,6 | 0,5 | **56,2** | - |
-| B, capital porté à 100 % du SCR simplifié | 108,5 | −0,7 | −29,5 | −6,0 | −20,5 | 0,5 | **52,3** | 3,8 |
-| B, capital porté à 150 % du SCR simplifié | 155,5 | 0,2 | −81,2 | −3,9 | −25,8 | 0,6 | **45,4** | 10,8 |
-| C, bilan initial, sans apport | 108,1 | −1,0 | 0,0 | −8,2 | −22,8 | 0,9 | **77,0** | - |
-| C, capital porté à 100 % du SCR simplifié | 123,2 | −0,7 | −17,1 | −6,9 | −24,7 | 0,9 | **74,7** | 2,3 |
-| C, capital porté à 150 % du SCR simplifié | 170,0 | 0,0 | −68,3 | −4,4 | −30,2 | 1,0 | **68,0** | 8,9 |
+| A, bilan initial, sans apport | 33,5 | −2,5 | 0,0 | −21,6 | −5,8 | 0,9 | **4,5** | - |
+| A, capital porté à 100 % du SCR simplifié | 112,7 | −1,3 | −101,0 | −4,9 | −11,9 | 1,2 | **−5,4** | 9,9 |
+| A, capital porté à 150 % du SCR simplifié | 157,9 | −0,7 | −150,5 | −3,1 | −15,6 | 1,2 | **−10,7** | 15,2 |
+| B, bilan initial, sans apport | 84,4 | −0,8 | 0,0 | −5,5 | −17,4 | 0,7 | **61,4** | - |
+| B, capital porté à 100 % du SCR simplifié | 107,1 | −0,2 | −25,4 | −4,3 | −20,1 | 0,7 | **57,8** | 3,6 |
+| B, capital porté à 150 % du SCR simplifié | 151,0 | 0,9 | −73,3 | −3,1 | −25,3 | 0,7 | **50,9** | 10,5 |
+| C, bilan initial, sans apport | 110,5 | −0,6 | 0,0 | −5,3 | −23,1 | 1,3 | **82,8** | - |
+| C, capital porté à 100 % du SCR simplifié | 110,5 | −0,6 | 0,0 | −5,3 | −23,1 | 1,3 | **82,8** | 0,0 |
+| C, capital porté à 150 % du SCR simplifié | 148,7 | 0,4 | −41,3 | −4,0 | −28,1 | 1,5 | **77,2** | 5,6 |
 
 Le coût net de portage est la valeur nette perdue en recapitalisant : impôt et participation sur les revenus du capital supplémentaire, diminués de la baisse des apports ultérieurs. Positif, il signifie que l'apport réduit la valeur risque neutre de l'actionnaire, même s'il est nécessaire pour respecter la contrainte.
 
@@ -187,40 +187,40 @@ Le coût net de portage est la valeur nette perdue en recapitalisant : impôt et
 
 | Stratégie | Apport | Valeur nette (RN) | Écart à la passive ± IC 95 % | Lecture | Rendement des fonds propres 1-10 (réel) | Dividendes 1-10 (réel) | Probabilité d'apport ultérieur sur 60 ans (réel) | Taux servi 1-10 (réel) | Écart à la référence (réel) | Rachat 1-10 (RN / réel) | Rachat annuel max. q99 (réel) | Moins-values réalisées q99 (réel) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Passive | 110,4 | −21,5 | - | - | 4,9 % | 124,7 | 0,6 % | 2,30 % | −70 pb | 10,8 % / 5,2 % | 34 % | 80,5 |
-| Réinvestissement progressif | 110,6 | −20,9 | 0,5 ± 0,1 | significatif, non important | 4,8 % | 124,0 | 0,7 % | 2,29 % | −71 pb | 10,8 % / 5,2 % | 34 % | 75,5 |
-| Repositionnement | 129,4 | −33,8 | −12,3 ± 1,0 | important | 2,2 % | 87,6 | 0,0 % | 2,39 % | −60 pb | 9,4 % / 5,5 % | 31 % | 53,2 |
-| Taux servi compétitif | 99,9 | −28,5 | −7,0 ± 0,4 | important | 4,6 % | 116,0 | 1,1 % | 2,43 % | −56 pb | 11,4 % / 5,8 % | 34 % | 95,6 |
-| Taux servi de marge | 118,6 | −13,2 | 8,3 ± 0,4 | important | 5,2 % | 146,8 | 1,1 % | 1,89 % | −110 pb | 11,3 % / 6,4 % | 34 % | 127,9 |
-| Liquidité défensive | 128,4 | −19,9 | 1,6 ± 1,1 | significatif, non important | 3,7 % | 118,2 | 0,4 % | 2,26 % | −73 pb | 11,3 % / 5,2 % | 31 % | 75,6 |
-| Compétitif préservant la PPB | 108,8 | −26,1 | −4,6 ± 0,4 | important | 4,5 % | 115,2 | 0,7 % | 2,52 % | −48 pb | 11,0 % / 5,2 % | 34 % | 85,9 |
-| Rétention de capital | 109,6 | −22,6 | −1,1 ± 0,1 | significatif, non important | 4,7 % | 113,4 | 0,3 % | 2,31 % | −68 pb | 10,7 % / 5,1 % | 34 % | 77,2 |
+| Passive | 101,0 | −5,4 | - | - | 4,4 % | 109,2 | 1,0 % | 2,30 % | −66 pb | 10,5 % / 5,1 % | 34 % | 74,8 |
+| Réinvestissement progressif | 101,8 | −5,0 | 0,4 ± 0,2 | significatif, non important | 4,4 % | 109,2 | 0,7 % | 2,30 % | −66 pb | 10,4 % / 5,1 % | 34 % | 64,4 |
+| Repositionnement | 118,8 | −21,7 | −16,3 ± 1,1 | important | 1,9 % | 78,4 | 0,1 % | 2,41 % | −55 pb | 8,8 % / 5,5 % | 31 % | 56,5 |
+| Taux servi compétitif | 88,4 | −11,3 | −5,9 ± 0,4 | important | 4,3 % | 102,3 | 1,6 % | 2,43 % | −53 pb | 11,1 % / 5,7 % | 34 % | 94,9 |
+| Taux servi de marge | 107,1 | 0,4 | 5,8 ± 0,4 | important | 4,5 % | 120,2 | 0,7 % | 2,03 % | −94 pb | 10,2 % / 5,6 % | 34 % | 101,5 |
+| Liquidité défensive | 114,5 | −4,6 | 0,8 ± 1,2 | non significatif | 3,7 % | 107,7 | 0,5 % | 2,27 % | −69 pb | 10,8 % / 5,1 % | 31 % | 71,6 |
+| Compétitif préservant la PPB | 99,6 | −9,5 | −4,1 ± 0,4 | important | 4,2 % | 104,6 | 1,2 % | 2,49 % | −48 pb | 10,8 % / 5,2 % | 34 % | 82,2 |
+| Rétention de capital | 100,7 | −6,5 | −1,1 ± 0,1 | significatif, non important | 4,3 % | 99,2 | 0,3 % | 2,31 % | −65 pb | 10,3 % / 5,0 % | 34 % | 71,3 |
 
 **Profil B**
 
 | Stratégie | Apport | Valeur nette (RN) | Écart à la passive ± IC 95 % | Lecture | Rendement des fonds propres 1-10 (réel) | Dividendes 1-10 (réel) | Probabilité d'apport ultérieur sur 60 ans (réel) | Taux servi 1-10 (réel) | Écart à la référence (réel) | Rachat 1-10 (RN / réel) | Rachat annuel max. q99 (réel) | Moins-values réalisées q99 (réel) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Passive | 29,5 | 52,3 | - | - | 10,1 % | 103,4 | 0,3 % | 2,58 % | −41 pb | 7,9 % / 4,4 % | 16 % | 6,4 |
-| Réinvestissement progressif | 29,3 | 52,5 | 0,1 ± 0,2 | non significatif | 10,0 % | 102,5 | 0,2 % | 2,57 % | −43 pb | 7,9 % / 4,4 % | 16 % | 6,1 |
-| Repositionnement | 54,4 | 43,3 | −9,1 ± 0,7 | important | 7,7 % | 105,4 | 0,2 % | 2,74 % | −26 pb | 7,2 % / 4,8 % | 18 % | 25,0 |
-| Taux servi compétitif | 27,2 | 40,7 | −11,6 ± 0,5 | important | 9,6 % | 96,8 | 0,4 % | 2,87 % | −13 pb | 8,8 % / 4,6 % | 20 % | 8,8 |
-| Taux servi de marge | 27,1 | 61,9 | 9,6 ± 0,6 | important | 10,7 % | 106,1 | 0,2 % | 2,41 % | −58 pb | 8,0 % / 4,9 % | 19 % | 15,1 |
-| Liquidité défensive | 29,3 | 53,3 | 1,0 ± 1,2 | non significatif | 9,7 % | 100,0 | 0,4 % | 2,52 % | −48 pb | 8,0 % / 4,4 % | 15 % | 6,2 |
-| Compétitif préservant la PPB | 28,8 | 40,7 | −11,7 ± 0,5 | important | 9,2 % | 94,4 | 0,4 % | 2,90 % | −10 pb | 8,2 % / 4,4 % | 16 % | 8,2 |
-| Rétention de capital | 30,0 | 50,8 | −1,5 ± 0,1 | significatif, non important | 9,2 % | 94,7 | 0,2 % | 2,59 % | −41 pb | 7,8 % / 4,4 % | 15 % | 5,4 |
+| Passive | 25,4 | 57,8 | - | - | 8,7 % | 85,8 | 0,3 % | 2,66 % | −31 pb | 7,0 % / 4,3 % | 14 % | 4,9 |
+| Réinvestissement progressif | 25,2 | 58,1 | 0,3 ± 0,3 | non significatif | 8,7 % | 85,5 | 0,3 % | 2,65 % | −32 pb | 7,0 % / 4,3 % | 14 % | 4,9 |
+| Repositionnement | 45,5 | 46,1 | −11,8 ± 0,7 | important | 6,8 % | 87,4 | 0,3 % | 2,84 % | −13 pb | 6,4 % / 4,6 % | 16 % | 16,9 |
+| Taux servi compétitif | 24,3 | 47,8 | −10,1 ± 0,5 | important | 8,4 % | 83,0 | 0,4 % | 2,89 % | −7 pb | 7,9 % / 4,5 % | 20 % | 7,4 |
+| Taux servi de marge | 21,8 | 64,1 | 6,2 ± 0,6 | important | 9,0 % | 85,3 | 0,4 % | 2,57 % | −39 pb | 6,9 % / 4,7 % | 12 % | 11,1 |
+| Liquidité défensive | 26,2 | 59,0 | 1,2 ± 1,4 | non significatif | 8,4 % | 84,8 | 0,4 % | 2,57 % | −39 pb | 7,0 % / 4,3 % | 11 % | 4,4 |
+| Compétitif préservant la PPB | 25,2 | 48,3 | −9,5 ± 0,5 | important | 8,2 % | 82,0 | 0,4 % | 2,90 % | −6 pb | 7,5 % / 4,4 % | 16 % | 7,1 |
+| Rétention de capital | 25,8 | 56,4 | −1,4 ± 0,1 | significatif, non important | 8,0 % | 78,4 | 0,3 % | 2,66 % | −31 pb | 7,0 % / 4,3 % | 14 % | 4,5 |
 
 **Profil C**
 
 | Stratégie | Apport | Valeur nette (RN) | Écart à la passive ± IC 95 % | Lecture | Rendement des fonds propres 1-10 (réel) | Dividendes 1-10 (réel) | Probabilité d'apport ultérieur sur 60 ans (réel) | Taux servi 1-10 (réel) | Écart à la référence (réel) | Rachat 1-10 (RN / réel) | Rachat annuel max. q99 (réel) | Moins-values réalisées q99 (réel) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Passive | 17,1 | 74,7 | - | - | 11,9 % | 114,7 | 0,5 % | 2,83 % | −17 pb | 7,6 % / 4,3 % | 15 % | 23,0 |
-| Réinvestissement progressif | 17,2 | 74,7 | 0,0 ± 0,5 | non significatif | 11,9 % | 114,5 | 0,6 % | 2,81 % | −18 pb | 7,5 % / 4,3 % | 15 % | 22,0 |
-| Repositionnement | 22,9 | 73,1 | −1,6 ± 0,5 | significatif, non important | 11,3 % | 116,5 | 0,6 % | 2,89 % | −10 pb | 7,4 % / 4,2 % | 16 % | 25,5 |
-| Taux servi compétitif | 15,5 | 62,5 | −12,2 ± 0,6 | important | 11,5 % | 110,0 | 0,6 % | 3,03 % | 3 pb | 8,3 % / 4,4 % | 23 % | 29,4 |
-| Taux servi de marge | 12,3 | 82,0 | 7,3 ± 0,9 | important | 12,6 % | 113,1 | 0,6 % | 2,76 % | −23 pb | 7,7 % / 4,7 % | 22 % | 49,3 |
-| Liquidité défensive | 18,8 | 77,5 | 2,8 ± 1,5 | important | 11,5 % | 114,7 | 0,5 % | 2,74 % | −25 pb | 7,4 % / 4,3 % | 10 % | 15,5 |
-| Compétitif préservant la PPB | 17,3 | 61,8 | −12,9 ± 0,7 | important | 11,2 % | 109,4 | 0,6 % | 3,04 % | 5 pb | 8,2 % / 4,4 % | 20 % | 26,0 |
-| Rétention de capital | 17,5 | 73,1 | −1,6 ± 0,1 | significatif, non important | 10,7 % | 106,0 | 0,4 % | 2,83 % | −17 pb | 7,5 % / 4,3 % | 15 % | 19,4 |
+| Passive | 0,0 | 82,8 | - | - | 11,9 % | 88,3 | 0,6 % | 2,97 % | 0 pb | 6,5 % / 4,2 % | 12 % | 19,9 |
+| Réinvestissement progressif | 0,0 | 82,8 | 0,0 ± 0,5 | non significatif | 11,9 % | 88,2 | 0,6 % | 2,96 % | 0 pb | 6,5 % / 4,2 % | 12 % | 18,8 |
+| Repositionnement | 1,1 | 81,6 | −1,2 ± 0,5 | significatif, non important | 11,6 % | 87,5 | 0,8 % | 3,01 % | 4 pb | 6,5 % / 4,2 % | 15 % | 23,5 |
+| Taux servi compétitif | 0,0 | 73,0 | −9,8 ± 0,7 | important | 11,6 % | 87,0 | 1,2 % | 3,09 % | 13 pb | 7,2 % / 4,3 % | 18 % | 24,9 |
+| Taux servi de marge | 0,0 | 85,9 | 3,1 ± 0,7 | important | 11,9 % | 88,4 | 0,6 % | 2,95 % | −2 pb | 6,5 % / 4,5 % | 13 % | 39,2 |
+| Liquidité défensive | 0,0 | 85,9 | 3,1 ± 1,5 | important | 11,7 % | 87,7 | 0,4 % | 2,90 % | −7 pb | 6,3 % / 4,3 % | 7 % | 14,1 |
+| Compétitif préservant la PPB | 0,0 | 73,1 | −9,7 ± 0,7 | important | 11,5 % | 86,6 | 1,2 % | 3,09 % | 13 pb | 7,2 % / 4,3 % | 22 % | 26,0 |
+| Rétention de capital | 0,0 | 81,5 | −1,3 ± 0,1 | significatif, non important | 10,7 % | 81,3 | 0,5 % | 2,97 % | 0 pb | 6,5 % / 4,2 % | 11 % | 18,1 |
 
 ### 3.2 Capital porté à 150 % du SCR simplifié
 
@@ -228,40 +228,40 @@ Le coût net de portage est la valeur nette perdue en recapitalisant : impôt et
 
 | Stratégie | Apport | Valeur nette (RN) | Écart à la passive ± IC 95 % | Lecture | Rendement des fonds propres 1-10 (réel) | Dividendes 1-10 (réel) | Probabilité d'apport ultérieur sur 60 ans (réel) | Taux servi 1-10 (réel) | Écart à la référence (réel) | Rachat 1-10 (RN / réel) | Rachat annuel max. q99 (réel) | Moins-values réalisées q99 (réel) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Passive | 159,5 | −26,6 | - | - | 4,5 % | 152,0 | 0,1 % | 2,35 % | −64 pb | 10,4 % / 5,0 % | 34 % | 70,9 |
-| Réinvestissement progressif | 160,4 | −25,8 | 0,8 ± 0,2 | significatif, non important | 4,4 % | 151,2 | 0,4 % | 2,34 % | −65 pb | 10,3 % / 4,9 % | 34 % | 55,7 |
-| Repositionnement | 183,8 | −38,6 | −12,1 ± 1,1 | important | 2,6 % | 123,6 | 0,0 % | 2,42 % | −57 pb | 9,2 % / 5,4 % | 31 % | 52,6 |
-| Taux servi compétitif | 141,4 | −33,1 | −6,5 ± 0,4 | important | 4,3 % | 138,8 | 0,4 % | 2,50 % | −49 pb | 11,1 % / 5,4 % | 34 % | 86,4 |
-| Taux servi de marge | 177,1 | −18,2 | 8,3 ± 0,4 | important | 4,6 % | 182,3 | 0,2 % | 1,97 % | −103 pb | 10,8 % / 6,0 % | 34 % | 111,8 |
-| Liquidité défensive | 188,7 | −26,4 | 0,2 ± 1,1 | non significatif | 3,5 % | 149,5 | 0,3 % | 2,34 % | −66 pb | 10,7 % / 4,9 % | 25 % | 56,8 |
-| Compétitif préservant la PPB | 152,8 | −31,1 | −4,5 ± 0,4 | important | 4,2 % | 138,6 | 0,2 % | 2,58 % | −41 pb | 10,7 % / 5,0 % | 34 % | 75,3 |
-| Rétention de capital | 157,6 | −27,9 | −1,3 ± 0,1 | significatif, non important | 4,4 % | 137,6 | 0,0 % | 2,36 % | −63 pb | 10,3 % / 4,9 % | 34 % | 65,7 |
+| Passive | 150,5 | −10,7 | - | - | 4,0 % | 135,5 | 0,3 % | 2,35 % | −61 pb | 10,1 % / 4,9 % | 34 % | 67,5 |
+| Réinvestissement progressif | 152,2 | −10,3 | 0,4 ± 0,2 | significatif, non important | 4,0 % | 135,7 | 0,4 % | 2,35 % | −61 pb | 9,9 % / 4,8 % | 32 % | 43,4 |
+| Repositionnement | 175,8 | −27,7 | −16,9 ± 1,1 | important | 2,3 % | 114,4 | 0,1 % | 2,45 % | −52 pb | 8,6 % / 5,4 % | 31 % | 56,1 |
+| Taux servi compétitif | 129,7 | −15,8 | −5,1 ± 0,4 | important | 4,0 % | 124,4 | 0,5 % | 2,50 % | −46 pb | 10,7 % / 5,4 % | 34 % | 87,0 |
+| Taux servi de marge | 162,3 | −5,3 | 5,4 ± 0,4 | important | 4,0 % | 152,2 | 0,3 % | 2,08 % | −88 pb | 9,8 % / 5,5 % | 34 % | 72,3 |
+| Liquidité défensive | 172,4 | −11,3 | −0,6 ± 1,3 | non significatif | 3,5 % | 137,8 | 0,3 % | 2,34 % | −62 pb | 10,2 % / 4,8 % | 24 % | 49,7 |
+| Compétitif préservant la PPB | 144,8 | −14,8 | −4,0 ± 0,4 | important | 3,9 % | 128,2 | 0,3 % | 2,55 % | −41 pb | 10,4 % / 5,0 % | 34 % | 75,3 |
+| Rétention de capital | 148,9 | −12,2 | −1,4 ± 0,1 | significatif, non important | 3,9 % | 122,6 | 0,2 % | 2,36 % | −61 pb | 9,9 % / 4,8 % | 33 % | 55,1 |
 
 **Profil B**
 
 | Stratégie | Apport | Valeur nette (RN) | Écart à la passive ± IC 95 % | Lecture | Rendement des fonds propres 1-10 (réel) | Dividendes 1-10 (réel) | Probabilité d'apport ultérieur sur 60 ans (réel) | Taux servi 1-10 (réel) | Écart à la référence (réel) | Rachat 1-10 (RN / réel) | Rachat annuel max. q99 (réel) | Moins-values réalisées q99 (réel) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Passive | 81,2 | 45,4 | - | - | 7,4 % | 132,0 | 0,0 % | 2,61 % | −39 pb | 7,6 % / 4,4 % | 14 % | 5,5 |
-| Réinvestissement progressif | 81,5 | 45,6 | 0,2 ± 0,2 | non significatif | 7,3 % | 131,2 | 0,2 % | 2,59 % | −41 pb | 7,6 % / 4,4 % | 14 % | 5,3 |
-| Repositionnement | 109,9 | 36,1 | −9,3 ± 0,7 | important | 6,2 % | 139,2 | 0,0 % | 2,77 % | −23 pb | 7,1 % / 4,7 % | 18 % | 20,3 |
-| Taux servi compétitif | 72,9 | 34,3 | −11,1 ± 0,6 | important | 7,2 % | 121,8 | 0,1 % | 2,89 % | −10 pb | 8,5 % / 4,5 % | 19 % | 7,2 |
-| Taux servi de marge | 79,5 | 54,8 | 9,4 ± 0,6 | important | 7,6 % | 136,2 | 0,0 % | 2,46 % | −53 pb | 7,7 % / 4,8 % | 15 % | 14,4 |
-| Liquidité défensive | 82,6 | 46,2 | 0,8 ± 1,3 | non significatif | 7,0 % | 129,0 | 0,3 % | 2,53 % | −47 pb | 7,7 % / 4,4 % | 12 % | 2,7 |
-| Compétitif préservant la PPB | 72,9 | 34,2 | −11,2 ± 0,6 | important | 7,0 % | 118,2 | 0,2 % | 2,92 % | −7 pb | 8,0 % / 4,4 % | 15 % | 6,0 |
-| Rétention de capital | 82,1 | 43,4 | −2,0 ± 0,1 | significatif, non important | 6,9 % | 121,2 | 0,0 % | 2,61 % | −38 pb | 7,5 % / 4,4 % | 14 % | 4,2 |
+| Passive | 73,3 | 50,9 | - | - | 6,4 % | 111,2 | 0,3 % | 2,68 % | −28 pb | 6,8 % / 4,3 % | 13 % | 4,8 |
+| Réinvestissement progressif | 73,4 | 51,3 | 0,4 ± 0,3 | significatif, non important | 6,4 % | 111,0 | 0,2 % | 2,67 % | −29 pb | 6,8 % / 4,3 % | 12 % | 4,7 |
+| Repositionnement | 98,7 | 38,6 | −12,3 ± 0,7 | important | 5,5 % | 118,3 | 0,2 % | 2,86 % | −10 pb | 6,3 % / 4,6 % | 16 % | 16,6 |
+| Taux servi compétitif | 68,0 | 41,4 | −9,5 ± 0,5 | important | 6,4 % | 106,0 | 0,3 % | 2,91 % | −5 pb | 7,6 % / 4,4 % | 18 % | 6,1 |
+| Taux servi de marge | 67,1 | 57,2 | 6,3 ± 0,5 | important | 6,7 % | 110,1 | 0,2 % | 2,61 % | −36 pb | 6,7 % / 4,7 % | 11 % | 12,0 |
+| Liquidité défensive | 75,5 | 51,8 | 0,9 ± 1,4 | non significatif | 6,2 % | 111,0 | 0,3 % | 2,58 % | −38 pb | 6,7 % / 4,3 % | 8 % | 2,3 |
+| Compétitif préservant la PPB | 67,4 | 42,0 | −8,9 ± 0,5 | important | 6,3 % | 104,0 | 0,3 % | 2,92 % | −4 pb | 7,3 % / 4,4 % | 16 % | 5,5 |
+| Rétention de capital | 73,9 | 49,0 | −1,8 ± 0,1 | significatif, non important | 6,1 % | 101,8 | 0,2 % | 2,68 % | −28 pb | 6,7 % / 4,3 % | 13 % | 3,9 |
 
 **Profil C**
 
 | Stratégie | Apport | Valeur nette (RN) | Écart à la passive ± IC 95 % | Lecture | Rendement des fonds propres 1-10 (réel) | Dividendes 1-10 (réel) | Probabilité d'apport ultérieur sur 60 ans (réel) | Taux servi 1-10 (réel) | Écart à la référence (réel) | Rachat 1-10 (RN / réel) | Rachat annuel max. q99 (réel) | Moins-values réalisées q99 (réel) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Passive | 68,3 | 68,0 | - | - | 8,5 % | 144,1 | 0,3 % | 2,84 % | −15 pb | 7,4 % / 4,3 % | 15 % | 21,0 |
-| Réinvestissement progressif | 69,2 | 68,1 | 0,0 ± 0,5 | non significatif | 8,4 % | 144,1 | 0,5 % | 2,82 % | −17 pb | 7,3 % / 4,3 % | 13 % | 17,2 |
-| Repositionnement | 74,0 | 66,1 | −2,0 ± 0,6 | significatif, non important | 8,3 % | 145,9 | 0,2 % | 2,91 % | −8 pb | 7,3 % / 4,2 % | 15 % | 26,3 |
-| Taux servi compétitif | 64,6 | 56,2 | −11,8 ± 0,6 | important | 8,4 % | 138,2 | 0,4 % | 3,04 % | 4 pb | 8,1 % / 4,4 % | 19 % | 25,4 |
-| Taux servi de marge | 61,9 | 75,6 | 7,5 ± 0,9 | important | 8,9 % | 142,3 | 0,3 % | 2,79 % | −21 pb | 7,5 % / 4,7 % | 20 % | 46,7 |
-| Liquidité défensive | 72,3 | 70,6 | 2,5 ± 1,5 | important | 8,2 % | 145,2 | 0,3 % | 2,74 % | −25 pb | 7,2 % / 4,3 % | 7 % | 14,3 |
-| Compétitif préservant la PPB | 66,1 | 55,6 | −12,5 ± 0,6 | important | 8,2 % | 137,5 | 0,4 % | 3,05 % | 6 pb | 8,0 % / 4,4 % | 17 % | 21,9 |
-| Rétention de capital | 69,0 | 66,0 | −2,1 ± 0,1 | important | 7,9 % | 133,5 | 0,2 % | 2,84 % | −15 pb | 7,3 % / 4,3 % | 14 % | 18,1 |
+| Passive | 41,3 | 77,2 | - | - | 8,4 % | 111,0 | 0,5 % | 2,98 % | 1 pb | 6,4 % / 4,2 % | 11 % | 18,8 |
+| Réinvestissement progressif | 41,8 | 77,1 | −0,1 ± 0,6 | non significatif | 8,4 % | 111,3 | 0,4 % | 2,97 % | 0 pb | 6,4 % / 4,2 % | 10 % | 16,4 |
+| Repositionnement | 46,4 | 75,0 | −2,2 ± 0,5 | important | 8,1 % | 112,5 | 0,6 % | 3,02 % | 6 pb | 6,4 % / 4,2 % | 15 % | 24,2 |
+| Taux servi compétitif | 42,6 | 67,4 | −9,8 ± 0,7 | important | 8,1 % | 110,7 | 0,8 % | 3,10 % | 14 pb | 7,1 % / 4,3 % | 16 % | 21,2 |
+| Taux servi de marge | 32,3 | 81,4 | 4,2 ± 0,7 | important | 8,9 % | 106,6 | 0,5 % | 2,96 % | −1 pb | 6,4 % / 4,5 % | 12 % | 39,5 |
+| Liquidité défensive | 41,8 | 79,9 | 2,7 ± 1,6 | important | 8,2 % | 110,9 | 0,3 % | 2,90 % | −6 pb | 6,2 % / 4,3 % | 5 % | 12,6 |
+| Compétitif préservant la PPB | 43,5 | 67,4 | −9,8 ± 0,6 | important | 8,1 % | 110,8 | 0,7 % | 3,10 % | 14 pb | 7,1 % / 4,3 % | 18 % | 21,5 |
+| Rétention de capital | 42,0 | 75,4 | −1,8 ± 0,1 | important | 7,8 % | 102,9 | 0,5 % | 2,98 % | 1 pb | 6,3 % / 4,2 % | 11 % | 16,9 |
 
 Rendement des fonds propres : résultat net d'impôt rapporté aux fonds propres comptables d'ouverture de chaque année, agrégé sur les scénarios, à comparer à un rendement exigé fictif de 8 %. Les indicateurs réels n'ont pas d'intervalle apparié ; leurs écarts entre stratégies portent sur les mêmes scénarios.
 
@@ -271,14 +271,14 @@ Rendement des fonds propres : résultat net d'impôt rapporté aux fonds propres
 
 | Profil | Bilan initial | Base 100 % | Base 150 % |
 | --- | ---: | ---: | ---: |
-| A | 0,08 ± 0,09 | 0,55 ± 0,13 | 0,75 ± 0,17 |
-| B | 0,04 ± 0,20 | 0,10 ± 0,21 | 0,18 ± 0,23 |
-| C | 0,01 ± 0,47 | 0,02 ± 0,47 | 0,02 ± 0,48 |
+| A | 0,13 ± 0,11 | 0,39 ± 0,16 | 0,44 ± 0,21 |
+| B | 0,15 ± 0,25 | 0,25 ± 0,26 | 0,39 ± 0,28 |
+| C | 0,04 ± 0,55 | 0,04 ± 0,55 | −0,08 ± 0,55 |
 
-Contrôle sur des tirages indépendants (profil A, base 100 %, 2 000 scénarios, autres graines pour les scénarios et les défauts) : 0,57 ± 0,10.
+Contrôle sur des tirages indépendants (profil A, base 100 %, 2 000 scénarios, autres graines pour les scénarios et les défauts) : 0,41 ± 0,12.
 
-- **Statistiquement**, l'écart du profil A sur la base 100 % (0,55 ± 0,13) est significatif et se retrouve sur des tirages indépendants.
-- **Économiquement**, il est faible : 0,06 % du BE et 0,5 % du SCR simplifié, pour un seuil d'importance de 2,4 (2 % du SCR). Il est aussi petit devant l'incertitude du besoin d'apport du profil (intervalle de largeur 3,1) et devant les écarts des politiques de taux servi.
+- **Statistiquement**, l'écart du profil A sur la base 100 % (0,39 ± 0,16) est significatif et se retrouve sur des tirages indépendants.
+- **Économiquement**, il est faible : 0,04 % du BE et 0,3 % du SCR simplifié, pour un seuil d'importance de 2,4 (2 % du SCR). Il est aussi petit devant l'incertitude du besoin d'apport du profil (intervalle de largeur 3,4) et devant les écarts des politiques de taux servi.
 - **Mécanisme** : l'écart n'apparaît que lorsque des achats obligataires importants passent par l'échelle de maturités, comme le réinvestissement de l'apport de A ; sur le bilan initial, les flux réinvestis sont faibles devant le stock obligataire.
 - **Conclusion** : le réinvestissement progressif est statistiquement distinguable de la gestion passive pour A recapitalisé, mais pas économiquement distinguable avec les seuils retenus.
 
@@ -288,39 +288,39 @@ Politique compétitive préservant la PPB : même cible que la politique compét
 
 | Profil | Stratégie | Valeur nette ± IC | Lecture | Apport à 100 % | Écart du taux servi à la référence (réel) | Rachat 1-10 RN | Probabilité d'apport sur 60 ans (réel) | Rendement des fonds propres (réel) |
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |
-| A | Taux servi compétitif | −7,0 ± 0,4 | important | −10,5 | 13 pb | 56 pb | 0,5 pt | −0,30 pt |
-| A | Compétitif préservant la PPB | −4,6 ± 0,4 | important | −1,6 | 22 pb | 21 pb | 0,1 pt | −0,40 pt |
-| A | Rétention de capital | −1,1 ± 0,1 | significatif, non important | −0,8 | 1 pb | −13 pb | −0,3 pt | −0,15 pt |
-| B | Taux servi compétitif | −11,6 ± 0,5 | important | −2,3 | 28 pb | 86 pb | 0,1 pt | −0,54 pt |
-| B | Compétitif préservant la PPB | −11,7 ± 0,5 | important | −0,7 | 31 pb | 35 pb | 0,1 pt | −0,92 pt |
-| B | Rétention de capital | −1,5 ± 0,1 | significatif, non important | 0,6 | 0 pb | −7 pb | −0,1 pt | −0,93 pt |
-| C | Taux servi compétitif | −12,2 ± 0,6 | important | −1,6 | 20 pb | 78 pb | 0,1 pt | −0,40 pt |
-| C | Compétitif préservant la PPB | −12,9 ± 0,7 | important | 0,2 | 21 pb | 60 pb | 0,1 pt | −0,73 pt |
-| C | Rétention de capital | −1,6 ± 0,1 | significatif, non important | 0,4 | 0 pb | −8 pb | −0,1 pt | −1,23 pt |
+| A | Taux servi compétitif | −5,9 ± 0,4 | important | −12,6 | 13 pb | 59 pb | 0,6 pt | −0,10 pt |
+| A | Compétitif préservant la PPB | −4,1 ± 0,4 | important | −1,4 | 19 pb | 32 pb | 0,2 pt | −0,20 pt |
+| A | Rétention de capital | −1,1 ± 0,1 | significatif, non important | −0,4 | 1 pb | −13 pb | −0,7 pt | −0,12 pt |
+| B | Taux servi compétitif | −10,1 ± 0,5 | important | −1,1 | 24 pb | 81 pb | 0,1 pt | −0,28 pt |
+| B | Compétitif préservant la PPB | −9,5 ± 0,5 | important | −0,2 | 24 pb | 49 pb | 0,1 pt | −0,46 pt |
+| B | Rétention de capital | −1,4 ± 0,1 | significatif, non important | 0,4 | 0 pb | −5 pb | 0,0 pt | −0,66 pt |
+| C | Taux servi compétitif | −9,8 ± 0,7 | important | 0,0 | 13 pb | 69 pb | 0,6 pt | −0,32 pt |
+| C | Compétitif préservant la PPB | −9,7 ± 0,7 | important | 0,0 | 13 pb | 68 pb | 0,6 pt | −0,38 pt |
+| C | Rétention de capital | −1,3 ± 0,1 | significatif, non important | 0,0 | 0 pb | −4 pb | −0,1 pt | −1,18 pt |
 
 Trajectoires risque neutre (bilan initial), gestion passive / compétitive / compétitive préservant la PPB :
 
 | Profil | Année | PPB / PM | Part des scénarios hors zone neutre | Taux de rachat |
 | --- | ---: | ---: | ---: | ---: |
-| A | 1 | 1,81 % / 1,25 % / 2,03 % | 10 % / 8 % / 11 % | 4,3 % / 4,3 % / 4,3 % |
-| A | 5 | 0,80 % / 0,11 % / 1,40 % | 84 % / 89 % / 85 % | 12,2 % / 12,8 % / 13,1 % |
-| A | 8 | 0,06 % / 0,00 % / 0,03 % | 79 % / 85 % / 78 % | 17,1 % / 17,8 % / 16,9 % |
-| A | 10 | 0,03 % / 0,00 % / 0,01 % | 82 % / 84 % / 83 % | 18,4 % / 18,8 % / 18,5 % |
-| A | 20 | 0,50 % / 0,12 % / 0,20 % | 65 % / 67 % / 66 % | 17,8 % / 18,3 % / 17,9 % |
-| B | 1 | 3,57 % / 3,01 % / 3,37 % | 2 % / 0 % / 6 % | 4,3 % / 4,3 % / 4,3 % |
-| B | 5 | 1,65 % / 0,37 % / 2,06 % | 42 % / 52 % / 45 % | 7,3 % / 7,7 % / 8,1 % |
-| B | 8 | 0,60 % / 0,04 % / 0,30 % | 47 % / 63 % / 48 % | 11,1 % / 13,4 % / 11,1 % |
-| B | 10 | 0,43 % / 0,03 % / 0,21 % | 54 % / 63 % / 58 % | 12,4 % / 14,1 % / 13,2 % |
-| B | 20 | 2,66 % / 0,81 % / 1,56 % | 28 % / 36 % / 36 % | 9,8 % / 11,0 % / 10,7 % |
-| C | 1 | 2,20 % / 1,69 % / 1,82 % | 2 % / 1 % / 2 % | 4,3 % / 4,3 % / 4,3 % |
-| C | 5 | 1,95 % / 0,50 % / 1,32 % | 28 % / 34 % / 34 % | 6,4 % / 6,8 % / 6,9 % |
-| C | 8 | 1,67 % / 0,25 % / 0,69 % | 42 % / 52 % / 47 % | 10,8 % / 12,4 % / 11,8 % |
-| C | 10 | 1,31 % / 0,23 % / 0,56 % | 42 % / 54 % / 53 % | 11,7 % / 13,5 % / 13,0 % |
-| C | 20 | 2,85 % / 0,98 % / 1,67 % | 29 % / 39 % / 38 % | 10,3 % / 12,0 % / 11,9 % |
+| A | 1 | 1,86 % / 1,30 % / 2,08 % | 18 % / 15 % / 20 % | 4,3 % / 4,3 % / 4,3 % |
+| A | 5 | 0,94 % / 0,15 % / 1,48 % | 79 % / 86 % / 80 % | 12,0 % / 12,5 % / 12,9 % |
+| A | 8 | 0,14 % / 0,02 % / 0,11 % | 70 % / 79 % / 69 % | 15,8 % / 16,9 % / 15,8 % |
+| A | 10 | 0,12 % / 0,02 % / 0,12 % | 75 % / 79 % / 77 % | 16,8 % / 17,5 % / 17,1 % |
+| A | 20 | 0,74 % / 0,14 % / 0,27 % | 53 % / 57 % / 55 % | 15,2 % / 15,9 % / 15,5 % |
+| B | 1 | 3,57 % / 2,98 % / 3,44 % | 6 % / 2 % / 13 % | 4,3 % / 4,3 % / 4,3 % |
+| B | 5 | 1,91 % / 0,51 % / 2,20 % | 34 % / 44 % / 38 % | 6,9 % / 7,3 % / 7,7 % |
+| B | 8 | 1,02 % / 0,14 % / 0,61 % | 35 % / 51 % / 36 % | 9,2 % / 11,5 % / 9,4 % |
+| B | 10 | 1,01 % / 0,15 % / 0,64 % | 38 % / 49 % / 45 % | 9,7 % / 11,4 % / 10,7 % |
+| B | 20 | 3,11 % / 0,89 % / 1,67 % | 18 % / 25 % / 24 % | 7,5 % / 8,7 % / 8,5 % |
+| C | 1 | 2,20 % / 1,69 % / 1,88 % | 6 % / 5 % / 7 % | 4,3 % / 4,3 % / 4,3 % |
+| C | 5 | 2,48 % / 0,76 % / 1,58 % | 21 % / 26 % / 27 % | 5,9 % / 6,2 % / 6,5 % |
+| C | 8 | 2,50 % / 0,64 % / 1,25 % | 26 % / 37 % / 33 % | 8,2 % / 9,8 % / 9,4 % |
+| C | 10 | 2,46 % / 0,73 % / 1,30 % | 25 % / 35 % / 34 % | 8,3 % / 10,2 % / 9,8 % |
+| C | 20 | 3,66 % / 1,43 % / 2,11 % | 18 % / 28 % / 28 % | 7,6 % / 9,1 % / 8,8 % |
 
 **Lecture.**
 
-- **Préserver la PPB, par rapport à la politique compétitive de base** (A : 2,4 de valeur, 8 pb de taux servi, −35 pb de rachat ; B : −0,1 de valeur, 3 pb de taux servi, −52 pb de rachat ; C : −0,6 de valeur, 1 pb de taux servi, −17 pb de rachat ; mêmes scénarios, sans intervalle calculé pour cet écart) : garder une partie de la PPB pour les années où la référence monte réduit nettement les rachats (A, B) ; le gain d'écart à la référence n'est important que pour A, et la valeur ne s'améliore nettement que pour A. Le coût en valeur par rapport à la gestion passive demeure : la politique reste compétitive, donc moins de participation non servie revient à l'actionnaire.
+- **Préserver la PPB, par rapport à la politique compétitive de base** (A : 1,8 de valeur, 5 pb de taux servi, −27 pb de rachat ; B : 0,6 de valeur, 1 pb de taux servi, −32 pb de rachat ; C : 0,1 de valeur, 0 pb de taux servi, −1 pb de rachat ; mêmes scénarios, sans intervalle calculé pour cet écart) : garder une partie de la PPB pour les années où la référence monte réduit nettement les rachats (A, B) ; le gain d'écart à la référence n'est important que pour A, sans gain de valeur important. Le coût en valeur par rapport à la gestion passive demeure : la politique reste compétitive, donc moins de participation non servie revient à l'actionnaire.
 - **Rétention** : la valeur baisse un peu (impôt et participation sur les revenus du capital conservé, rendement comptable relevé et partagé avec les assurés, section 1.4) ; l'écart ne dépasse le seuil d'importance que pour C à 150 %, au niveau du seuil. Le rendement des fonds propres baisse davantage, car le capital conservé dilue le résultat. Le bénéfice attendu de la rétention, une couverture plus élevée dans les années suivantes, n'est pas mesuré : le modèle ne projette pas le SCR. La rétention ne réduit pas l'apport initial nécessaire ; elle réduit un peu la probabilité d'apport ultérieur.
 
 ## 6. Matrice de décision exploratoire
@@ -331,25 +331,25 @@ Trajectoires risque neutre (bilan initial), gestion passive / compétitive / com
 
 | Stratégie | Valeur actionnaire (RN) | Rentabilité (réel) | Compétitivité : taux servi (réel) | Rachats (RN) | Liquidité : moins-values réalisées q99 (réel) | Capital : apport nécessaire | Capital : probabilité d'apport ultérieur sur 60 ans (réel) | Écart de valeur robuste (profils) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| Réinvestissement progressif | 0,5 / 0,1 ns / 0,0 ns | −0,07 pt / −0,10 pt / −0,07 pt | −1 pb / −2 pb / −1 pb | −6 pb / −1 pb / −2 pb | −5,0 / −0,3 / −1,0 | 0,2 / −0,2 / 0,1 ns | 0,1 pt / −0,1 pt / 0,1 pt | aucun profil |
-| Repositionnement | **−12,3** / **−9,1** / −1,6 | **−2,69 pt** / **−2,46 pt** / **−0,66 pt** | **10 pb** / **15 pb** / **6 pb** | **−139 pb** / **−68 pb** / −12 pb | **−27,4** / **18,6** / 2,5 | **19,0** / **24,9** / **5,8** | **−0,6 pt** / −0,1 pt / 0,1 pt | A, B |
-| Taux servi compétitif | **−7,0** / **−11,6** / **−12,2** | **−0,30 pt** / **−0,54 pt** / **−0,40 pt** | **13 pb** / **28 pb** / **20 pb** | **56 pb** / **86 pb** / **78 pb** | **15,0** / 2,4 / **6,4** | **−10,5** / **−2,3** / −1,6 | 0,5 pt / 0,1 pt / 0,1 pt | A, B, C |
-| Taux servi de marge | **8,3** / **9,6** / **7,3** | **0,29 pt** / **0,56 pt** / **0,71 pt** | **−40 pb** / **−17 pb** / **−7 pb** | **45 pb** / 12 pb / 16 pb | **47,4** / **8,7** / **26,2** | **8,3** / **−2,3** / **−4,8** | 0,5 pt / −0,1 pt / 0,1 pt | A, B, C |
-| Liquidité défensive | 1,6 / 1,0 ns / **2,8** | **−1,21 pt** / **−0,46 pt** / **−0,40 pt** | −4 pb / **−7 pb** / **−9 pb** | **48 pb** / 12 pb / −11 pb | −4,9 / −0,2 / **−7,5** | **18,0** / −0,2 ns / 1,7 | −0,2 pt / 0,1 pt / 0,0 pt | C |
-| Compétitif préservant la PPB | **−4,6** / **−11,7** / **−12,9** | **−0,40 pt** / **−0,92 pt** / **−0,73 pt** | **22 pb** / **31 pb** / **21 pb** | 21 pb / **35 pb** / **60 pb** | 5,4 / 1,8 / 3,0 | −1,6 / −0,7 ns / 0,2 ns | 0,1 pt / 0,1 pt / 0,1 pt | A, B, C |
-| Rétention de capital | −1,1 / −1,5 / −1,6 | −0,15 pt / **−0,93 pt** / **−1,23 pt** | 1 pb / 0 pb / 0 pb | −13 pb / −7 pb / −8 pb | −3,4 / −1,0 / −3,6 | −0,8 / 0,6 / 0,4 | −0,3 pt / −0,1 pt / −0,1 pt | aucun profil |
+| Réinvestissement progressif | 0,4 / 0,3 ns / 0,0 ns | −0,02 pt / −0,03 pt / −0,02 pt | 0 pb / −1 pb / −1 pb | −10 pb / −2 pb / −1 pb | **−10,4** / −0,1 / −1,1 | 0,7 / −0,2 / 0,0 ns | −0,3 pt / 0,0 pt / 0,0 pt | aucun profil |
+| Repositionnement | **−16,3** / **−11,8** / −1,2 | **−2,52 pt** / **−1,89 pt** / **−0,28 pt** | **11 pb** / **18 pb** / 4 pb | **−166 pb** / **−67 pb** / 0 pb | **−18,3** / **11,9** / 3,6 | **17,8** / **20,1** / 1,1 ns | **−0,9 pt** / 0,0 pt / 0,2 pt | A, B |
+| Taux servi compétitif | **−5,9** / **−10,1** / **−9,8** | −0,10 pt / **−0,28 pt** / **−0,32 pt** | **13 pb** / **24 pb** / **13 pb** | **59 pb** / **81 pb** / **69 pb** | **20,1** / 2,4 / **5,0** | **−12,6** / −1,1 / 0,0 ns | **0,6 pt** / 0,1 pt / **0,6 pt** | A, B, C |
+| Taux servi de marge | **5,8** / **6,2** / **3,1** | 0,05 pt / **0,36 pt** / 0,03 pt | **−27 pb** / **−9 pb** / −2 pb | −23 pb / −19 pb / −5 pb | **26,7** / **6,2** / **19,3** | **6,1** / **−3,6** / 0,0 ns | −0,3 pt / 0,1 pt / 0,0 pt | A, B, C |
+| Liquidité défensive | 0,8 ns / 1,2 ns / **3,1** | **−0,70 pt** / **−0,32 pt** / −0,20 pt | −3 pb / **−9 pb** / **−7 pb** | **36 pb** / −3 pb / −19 pb | −3,2 / −0,5 / **−5,8** | **13,5** / 0,8 ns / 0,0 ns | **−0,5 pt** / 0,1 pt / −0,2 pt | C |
+| Compétitif préservant la PPB | **−4,1** / **−9,5** / **−9,7** | −0,20 pt / **−0,46 pt** / **−0,38 pt** | **19 pb** / **24 pb** / **13 pb** | **32 pb** / **49 pb** / **68 pb** | **7,4** / 2,2 / **6,1** | −1,4 / −0,2 ns / 0,0 ns | 0,2 pt / 0,1 pt / **0,6 pt** | A, B, C |
+| Rétention de capital | −1,1 / −1,4 / −1,3 | −0,12 pt / **−0,66 pt** / **−1,18 pt** | 1 pb / 0 pb / 0 pb | −13 pb / −5 pb / −4 pb | −3,5 / −0,5 / −1,9 | −0,4 / 0,4 / 0,0 ns | **−0,7 pt** / 0,0 pt / −0,1 pt | aucun profil |
 
 **Capital porté à 150 % du SCR simplifié**
 
 | Stratégie | Valeur actionnaire (RN) | Rentabilité (réel) | Compétitivité : taux servi (réel) | Rachats (RN) | Liquidité : moins-values réalisées q99 (réel) | Capital : apport nécessaire | Capital : probabilité d'apport ultérieur sur 60 ans (réel) | Écart de valeur robuste (profils) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| Réinvestissement progressif | 0,8 / 0,2 ns / 0,0 ns | −0,08 pt / −0,10 pt / −0,08 pt | −1 pb / −2 pb / −2 pb | −13 pb / −4 pb / −6 pb | **−15,3** / −0,1 / −3,8 | 0,9 / 0,2 / 0,8 | 0,3 pt / 0,2 pt / 0,2 pt | aucun profil |
-| Repositionnement | **−12,1** / **−9,3** / −2,0 | **−1,85 pt** / **−1,17 pt** / −0,23 pt | **7 pb** / **16 pb** / **7 pb** | **−120 pb** / **−49 pb** / −8 pb | **−18,3** / **14,8** / **5,3** | **24,3** / **28,7** / **5,7** | −0,1 pt / 0,0 pt / −0,1 pt | A, B |
-| Taux servi compétitif | **−6,5** / **−11,1** / **−11,8** | −0,20 pt / −0,17 pt / −0,18 pt | **15 pb** / **29 pb** / **19 pb** | **66 pb** / **87 pb** / **79 pb** | **15,5** / 1,8 / 4,5 | **−18,1** / **−8,3** / **−3,7** | 0,3 pt / 0,1 pt / 0,1 pt | A, B, C |
-| Taux servi de marge | **8,3** / **9,4** / **7,5** | 0,16 pt / 0,21 pt / **0,34 pt** | **−38 pb** / **−15 pb** / **−6 pb** | **38 pb** / 11 pb / 16 pb | **40,9** / **9,0** / **25,7** | **17,7** / −1,7 / **−6,5** | 0,1 pt / 0,0 pt / 0,0 pt | A, B, C |
-| Liquidité défensive | 0,2 ns / 0,8 ns / **2,5** | **−1,00 pt** / **−0,39 pt** / **−0,35 pt** | −1 pb / **−8 pb** / **−10 pb** | 23 pb / 7 pb / −18 pb | **−14,1** / −2,8 / **−6,7** | **29,3** / 1,4 / **4,0** | 0,2 pt / 0,3 pt / 0,0 pt | C |
-| Compétitif préservant la PPB | **−4,5** / **−11,2** / **−12,5** | **−0,29 pt** / **−0,34 pt** / **−0,32 pt** | **23 pb** / **31 pb** / **21 pb** | 24 pb / **42 pb** / **63 pb** | 4,3 / 0,5 / 0,9 | **−6,6** / **−8,3** / **−2,3** | 0,1 pt / 0,2 pt / 0,1 pt | A, B, C |
-| Rétention de capital | −1,3 / −2,0 / **−2,1** | −0,11 pt / **−0,46 pt** / **−0,60 pt** | 1 pb / 0 pb / 0 pb | −16 pb / −8 pb / −9 pb | −5,3 / −1,3 / −2,9 | −1,9 / 0,9 / 0,7 | −0,1 pt / 0,0 pt / −0,1 pt | aucun profil |
+| Réinvestissement progressif | 0,4 / 0,4 / −0,1 ns | −0,02 pt / −0,03 pt / −0,04 pt | 1 pb / −1 pb / −1 pb | −17 pb / −3 pb / −3 pb | **−24,0** / −0,1 / −2,3 | 1,7 / 0,0 ns / 0,5 | 0,1 pt / −0,1 pt / −0,1 pt | aucun profil |
+| Repositionnement | **−16,9** / **−12,3** / **−2,2** | **−1,67 pt** / **−0,91 pt** / **−0,30 pt** | **10 pb** / **18 pb** / 5 pb | **−148 pb** / **−51 pb** / 3 pb | **−11,4** / **11,8** / **5,4** | **25,3** / **25,4** / **5,2** | −0,2 pt / −0,1 pt / 0,1 pt | A, B |
+| Taux servi compétitif | **−5,1** / **−9,5** / **−9,8** | −0,03 pt / −0,06 pt / −0,25 pt | **15 pb** / **23 pb** / **12 pb** | **69 pb** / **82 pb** / **67 pb** | **19,5** / 1,3 / 2,4 | **−20,7** / **−5,4** / 1,3 ns | 0,2 pt / 0,0 pt / 0,3 pt | A, B, C |
+| Taux servi de marge | **5,4** / **6,3** / **4,2** | 0,00 pt / 0,21 pt / **0,51 pt** | **−27 pb** / **−7 pb** / −2 pb | **−28 pb** / −14 pb / −2 pb | 4,9 / **7,2** / **20,7** | **11,8** / −6,3 ns / **−9,0** | 0,0 pt / −0,1 pt / 0,0 pt | A, B, C |
+| Liquidité défensive | −0,6 ns / 0,9 ns / **2,7** | **−0,54 pt** / −0,25 pt / −0,17 pt | −1 pb / **−10 pb** / **−7 pb** | 10 pb / −8 pb / −23 pb | **−17,7** / −2,5 / **−6,2** | **21,9** / 2,1 ns / 0,5 ns | 0,0 pt / 0,0 pt / −0,2 pt | C |
+| Compétitif préservant la PPB | **−4,0** / **−8,9** / **−9,8** | −0,12 pt / −0,11 pt / **−0,31 pt** | **20 pb** / **24 pb** / **13 pb** | **34 pb** / **52 pb** / **67 pb** | **7,8** / 0,7 / 2,7 | **−5,7** / **−6,0** / **2,2** | 0,0 pt / 0,0 pt / 0,2 pt | A, B, C |
+| Rétention de capital | −1,4 / −1,8 / **−1,8** | −0,08 pt / **−0,34 pt** / **−0,59 pt** | 1 pb / 0 pb / 0 pb | −17 pb / −6 pb / −6 pb | **−12,4** / −1,0 / −1,9 | −1,6 / 0,5 / 0,7 | −0,1 pt / −0,1 pt / 0,0 pt | aucun profil |
 
 Sens de lecture : une valeur, une rentabilité ou un écart de taux servi positifs sont favorables ; des rachats, des moins-values réalisées, un apport ou une probabilité d'apport positifs sont défavorables.
 
@@ -361,52 +361,52 @@ Sens de lecture : une valeur, une rentabilité ou un écart de taux servi positi
 
 | Stratégie | Centre | Réaction forte (ONC max.) | Transmission immédiate des taux | Défaut corrélé par bloc souverain |
 | --- | ---: | ---: | ---: | ---: |
-| Réinvestissement progressif | 0,5 ± 0,1 | 0,1 ± 0,0 | 0,4 ± 0,1 | 0,5 ± 0,2 |
-| Repositionnement | −12,3 ± 1,0 | −3,5 ± 0,7 | −9,6 ± 1,0 | −12,9 ± 1,1 |
-| Taux servi compétitif | −7,0 ± 0,4 | −3,9 ± 0,3 | −6,1 ± 0,4 | −7,1 ± 0,4 |
-| Taux servi de marge | 8,3 ± 0,4 | 4,0 ± 0,6 | 6,4 ± 0,6 | 9,0 ± 0,5 |
-| Liquidité défensive | 1,6 ± 1,1 | 3,4 ± 0,5 | 2,4 ± 0,8 | 1,0 ± 1,1 |
-| Compétitif préservant la PPB | −4,6 ± 0,4 | −1,3 ± 0,4 | −4,2 ± 0,4 | −5,2 ± 0,4 |
-| Rétention de capital | −1,1 ± 0,1 | −0,8 ± 0,1 | −1,0 ± 0,1 | −1,3 ± 0,1 |
+| Réinvestissement progressif | 0,4 ± 0,2 | 0,0 ± 0,0 | 0,4 ± 0,1 | 0,4 ± 0,2 |
+| Repositionnement | −16,3 ± 1,1 | −6,9 ± 0,7 | −13,8 ± 1,0 | −16,4 ± 1,3 |
+| Taux servi compétitif | −5,9 ± 0,4 | −2,9 ± 0,3 | −4,8 ± 0,4 | −6,1 ± 0,5 |
+| Taux servi de marge | 5,8 ± 0,4 | 3,3 ± 0,6 | 4,1 ± 0,6 | 6,3 ± 0,4 |
+| Liquidité défensive | 0,8 ± 1,2 | 3,5 ± 0,6 | 2,5 ± 1,0 | 0,3 ± 1,3 |
+| Compétitif préservant la PPB | −4,1 ± 0,4 | −1,1 ± 0,3 | −3,1 ± 0,4 | −4,4 ± 0,6 |
+| Rétention de capital | −1,1 ± 0,1 | −0,7 ± 0,1 | −0,9 ± 0,1 | −1,3 ± 0,1 |
 
-Plus forte valeur nette : Centre : Taux servi de marge ; Réaction forte (ONC max.) : Taux servi de marge ; Transmission immédiate des taux : Taux servi de marge ; Défaut corrélé par bloc souverain : Taux servi de marge. Le premier rang ne change pas sous ces trois sensibilités.
+Plus forte valeur nette : Centre : Taux servi de marge ; Réaction forte (ONC max.) : Liquidité défensive ; Transmission immédiate des taux : Taux servi de marge ; Défaut corrélé par bloc souverain : Taux servi de marge. **Le premier rang change avec les hypothèses.**
 
 **Profil B**
 
 | Stratégie | Centre | Réaction forte (ONC max.) | Transmission immédiate des taux | Défaut corrélé par bloc souverain |
 | --- | ---: | ---: | ---: | ---: |
-| Réinvestissement progressif | 0,1 ± 0,2 | 0,0 ± 0,1 | 0,4 ± 0,2 | 0,2 ± 0,2 |
-| Repositionnement | −9,1 ± 0,7 | −4,2 ± 0,6 | −9,2 ± 0,7 | −10,3 ± 0,8 |
-| Taux servi compétitif | −11,6 ± 0,5 | −4,5 ± 0,7 | −7,0 ± 0,5 | −11,7 ± 0,6 |
-| Taux servi de marge | 9,6 ± 0,6 | 3,8 ± 0,5 | 5,7 ± 0,5 | 9,3 ± 0,6 |
-| Liquidité défensive | 1,0 ± 1,2 | 2,7 ± 0,8 | 3,7 ± 1,0 | 1,0 ± 1,2 |
-| Compétitif préservant la PPB | −11,7 ± 0,5 | −4,7 ± 0,8 | −7,5 ± 0,5 | −11,5 ± 0,7 |
-| Rétention de capital | −1,5 ± 0,1 | −1,0 ± 0,1 | −1,4 ± 0,1 | −1,7 ± 0,1 |
+| Réinvestissement progressif | 0,3 ± 0,3 | 0,1 ± 0,2 | 0,5 ± 0,2 | 0,3 ± 0,3 |
+| Repositionnement | −11,8 ± 0,7 | −7,3 ± 0,6 | −11,1 ± 0,8 | −12,8 ± 0,8 |
+| Taux servi compétitif | −10,1 ± 0,5 | −3,1 ± 0,7 | −4,8 ± 0,4 | −10,1 ± 0,6 |
+| Taux servi de marge | 6,2 ± 0,6 | 1,7 ± 0,5 | 3,3 ± 0,4 | 5,8 ± 0,6 |
+| Liquidité défensive | 1,2 ± 1,4 | 3,0 ± 1,0 | 4,0 ± 1,2 | 1,3 ± 1,4 |
+| Compétitif préservant la PPB | −9,5 ± 0,5 | −3,0 ± 0,7 | −5,1 ± 0,4 | −9,6 ± 0,6 |
+| Rétention de capital | −1,4 ± 0,1 | −0,9 ± 0,0 | −1,2 ± 0,1 | −1,6 ± 0,1 |
 
-Plus forte valeur nette : Centre : Taux servi de marge ; Réaction forte (ONC max.) : Taux servi de marge ; Transmission immédiate des taux : Taux servi de marge ; Défaut corrélé par bloc souverain : Taux servi de marge. Le premier rang ne change pas sous ces trois sensibilités.
+Plus forte valeur nette : Centre : Taux servi de marge ; Réaction forte (ONC max.) : Liquidité défensive ; Transmission immédiate des taux : Liquidité défensive ; Défaut corrélé par bloc souverain : Taux servi de marge. **Le premier rang change avec les hypothèses.**
 
 **Profil C**
 
 | Stratégie | Centre | Réaction forte (ONC max.) | Transmission immédiate des taux | Défaut corrélé par bloc souverain |
 | --- | ---: | ---: | ---: | ---: |
-| Réinvestissement progressif | 0,0 ± 0,5 | 0,1 ± 0,3 | 0,6 ± 0,4 | 0,3 ± 0,5 |
-| Repositionnement | −1,6 ± 0,5 | −0,9 ± 0,4 | −2,0 ± 0,4 | −2,2 ± 0,5 |
-| Taux servi compétitif | −12,2 ± 0,6 | −4,8 ± 0,7 | −6,0 ± 0,5 | −11,7 ± 0,7 |
-| Taux servi de marge | 7,3 ± 0,9 | 2,7 ± 0,4 | 4,9 ± 0,5 | 6,7 ± 0,6 |
-| Liquidité défensive | 2,8 ± 1,5 | 3,5 ± 1,0 | 4,4 ± 1,2 | 3,0 ± 1,5 |
-| Compétitif préservant la PPB | −12,9 ± 0,7 | −5,4 ± 0,7 | −6,7 ± 0,5 | −12,8 ± 0,7 |
-| Rétention de capital | −1,6 ± 0,1 | −1,2 ± 0,1 | −1,5 ± 0,1 | −1,9 ± 0,1 |
+| Réinvestissement progressif | 0,0 ± 0,5 | 0,1 ± 0,4 | 0,6 ± 0,5 | 0,2 ± 0,6 |
+| Repositionnement | −1,2 ± 0,5 | −0,7 ± 0,4 | −1,6 ± 0,4 | −1,6 ± 0,7 |
+| Taux servi compétitif | −9,8 ± 0,7 | −2,7 ± 0,7 | −4,6 ± 0,5 | −9,5 ± 0,7 |
+| Taux servi de marge | 3,1 ± 0,7 | 0,9 ± 0,5 | 2,3 ± 0,4 | 2,3 ± 0,6 |
+| Liquidité défensive | 3,1 ± 1,5 | 3,6 ± 1,1 | 4,7 ± 1,4 | 3,4 ± 1,5 |
+| Compétitif préservant la PPB | −9,7 ± 0,7 | −2,7 ± 0,7 | −4,7 ± 0,5 | −9,6 ± 0,6 |
+| Rétention de capital | −1,3 ± 0,1 | −1,0 ± 0,0 | −1,2 ± 0,1 | −1,5 ± 0,1 |
 
-Plus forte valeur nette : Centre : Taux servi de marge ; Réaction forte (ONC max.) : Liquidité défensive ; Transmission immédiate des taux : Taux servi de marge ; Défaut corrélé par bloc souverain : Taux servi de marge. **Le premier rang change avec les hypothèses.**
+Plus forte valeur nette : Centre : Taux servi de marge ; Réaction forte (ONC max.) : Liquidité défensive ; Transmission immédiate des taux : Liquidité défensive ; Défaut corrélé par bloc souverain : Liquidité défensive. **Le premier rang change avec les hypothèses.**
 
 ## 8. Mécanismes
 
 - **Politique de marge** : transfert de la participation non servie vers l'actionnaire, dont le seul coût en portefeuille fermé est le surcroît de rachats dynamiques, borné par la zone neutre et le plafond de la loi de rachat. L'avantage fermé n'est pas, par principe, un majorant : avec une collecte sensible au taux servi, il l'est seulement si la valeur des affaires nouvelles de la politique de marge est inférieure à celle de la gestion passive (`docs/V5_COLLECTE.md`, section 3).
-- **Politique compétitive** : la PPB est consommée tôt ; quand la référence monte, l'écart sort plus souvent de la zone neutre et les rachats remontent (profil B, année 8 : PPB de 0,04 % de la PM contre 0,60 %, 63 % des scénarios hors zone neutre contre 47 %). La variante préservant la PPB garde un stock plus élevé les premières années (année 5 : 2,06 % contre 0,37 %) ; le plancher ne limite que les reprises volontaires, et la reprise obligatoire des dotations de plus de 8 ans fait ensuite fortement baisser le stock (0,30 % à l'année 8), ce qui borne l'effet de la variante (section 5).
-- **Repositionnement** : vente au prix de marché, mais la moins-value réalisée passe par la réserve de capitalisation puis par le résultat, tandis que les coupons plus élevés rachetés ensuite reviennent pour au moins 85 % aux assurés : l'actionnaire supporte la perte et partage le gain.
+- **Politique compétitive** : la PPB est consommée tôt ; quand la référence monte, l'écart sort plus souvent de la zone neutre et les rachats remontent (profil B, année 8 : PPB de 0,14 % de la PM contre 1,02 %, 51 % des scénarios hors zone neutre contre 35 %). La variante préservant la PPB garde un stock plus élevé les premières années (année 5 : 2,20 % contre 0,51 %) ; le plancher ne limite que les reprises volontaires, et la reprise obligatoire des dotations de plus de 8 ans fait ensuite fortement baisser le stock (0,61 % à l'année 8), ce qui borne l'effet de la variante (section 5).
+- **Repositionnement** : vente au prix de marché, mais la moins-value réalisée passe par la réserve de capitalisation puis par le résultat, tandis que les coupons plus élevés rachetés ensuite reviennent pour au moins 85 % de leur quote-part aux assurés : l'actionnaire supporte la perte et partage le gain.
 - **Liquidité défensive** : en risque neutre, moins de volatilité réduit le coût des options (garantie et asymétrie de la participation) ; en probabilité réelle, la prime actions fictive est perdue.
 - **Rétention de capital** : plus de fonds propres conservés, donc moins d'apports ultérieurs, mais davantage d'impôt sur leurs revenus et un rendement comptable plus élevé partagé avec les assurés (section 1.4).
-- **Plafond de l'absorption par les FDB** (profil A) : quand l'absorption atteint son plafond (FDB - fonds excédentaires), le SCR vaut le BSCR brut moins ce plafond, plus le risque opérationnel ; toute baisse des FDB l'augmente à l'unité. La politique compétitive abaisse le BSCR brut de A (149,4 contre 164,1) et demande moins de capital ; la politique de marge abaisse les FDB (51,0 contre 64,6) et en demande davantage. Pour B et C, l'absorption n'est pas plafonnée et la politique de marge demande moins de capital. Le sens de l'effet d'une stratégie sur le capital dépend donc du profil.
+- **Plafond de l'absorption par les FDB** (profil A) : quand l'absorption atteint son plafond (FDB - fonds excédentaires), le SCR vaut le BSCR brut moins ce plafond, plus le risque opérationnel ; toute baisse des FDB l'augmente à l'unité. La politique compétitive abaisse le BSCR brut de A (160,1 contre 176,5) et demande moins de capital ; la politique de marge abaisse les FDB (68,9 contre 73,9) et en demande davantage. 
 
 ## 9. Limites
 
