@@ -6,7 +6,7 @@ Construction d'un profil :
   sa génération) et des maturités résiduelles réparties uniformément sur un intervalle d'années ;
   le nominal de la poche est sa part du portefeuille obligataire comptable ; titres achetés au pair ;
 - actions et monétaire : poids cibles ; le monétaire complète l'actif comptable ;
-- obligations valorisées sur la courbe EIOPA sans VA + spread OAT calibré, en risque neutre.
+- obligations valorisées sur la courbe EIOPA sans VA + spread hypothétique (moyenne de long terme publiée par l'EIOPA), en risque neutre.
 """
 
 import copy
@@ -15,7 +15,7 @@ from pathlib import Path
 
 from ..courbes import CourbeZeroCoupon
 from ..hypotheses import charger_hypotheses
-from .courbes_marche import spread_oat
+from .courbes_marche import spread_obligations
 
 FICHIER = Path(__file__).resolve().parents[2] / "data" / "v5" / "profils" / "profils.json"
 
@@ -61,15 +61,19 @@ def hypotheses_profil(nom, modifications=None, decalage_coupons=None):
                       maturite_reinvestissement_ans=profil["actif"]["maturite_reinvestissement_ans"])
     total = sum(h["bilan_initial"].values())
     h["actif"]["lignes_obligataires"] = lignes_obligataires(profil, donnees["ancrages_coupons"], total, decalage_coupons)
-    h["actif"]["credit"] = {"spread": dict(spread_oat().points), "mesure": commun["credit"]["mesure"]}  # base sans VA
+    h["actif"]["credit"] = {"spread": dict(spread_obligations().points), "mesure": commun["credit"]["mesure"]}  # base sans VA
     h["comportement"] = {k: v for k, v in (profil.get("comportement") or commun["comportement"]).items() if k != "statut"}
     h["fiscalite"] = {"unite_monetaire_eur": donnees["unite_monetaire_eur"]}
+    # V5.1 : composante technique du compte de participation (src/strategie.py, participation_technique)
+    pt = commun.get("participation_technique")
+    if pt:
+        h["strategie"]["participation_technique"] = {"part_assureur": pt["part_assureur"]}
     h["profil"] = {"nom": nom, "libelle": profil["nom"]}
     return h
 
 
 def credit_profil():
-    return spread_oat()
+    return spread_obligations()
 
 
 def courbe_decalee(courbe, decalage):

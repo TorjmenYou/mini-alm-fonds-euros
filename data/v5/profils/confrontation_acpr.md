@@ -25,7 +25,6 @@ Les profils A, B et C sont **fictifs**. Les chiffres ci-dessous sont des ordres 
 | PPB et taux technique par type | PPB : bancassureurs 4,2 %, traditionnels 3,6 % ; taux technique : 0,25 % et 0,39 % | 2025 | Observé | ACPR n° 180 |
 | Livret A | 1,7 % depuis le 01/08/2026 (1,5 % au 01/02/2026) | 2026 | Observé | ACPR n° 179 ; jechange.fr |
 | Solvabilité au 30/06/2026 | 250 % (ensemble), 239 % (vie et mixtes), 219 % (bancassureurs) ; rachats rapportés aux cotisations : 39,9 % | S1 2026 | Observé (source secondaire) | ACPR n° 185, repris par Tripalio |
-| Mouvement de taux en 2026 | TEC 10 d'environ 3,6 % le 02/01/2026 et de 4,88 % le 04/11/2026 ; spread OAT-Bund de 156 pb | 2026 | Observé | Trading Economics ; oblig.fr ; ideal-investisseur.fr |
 
 ## Données recherchées mais non trouvées ou inaccessibles
 
@@ -40,4 +39,4 @@ Aucune de ces données n'est remplacée par une valeur inventée. Elles sont tra
 | Réserve de capitalisation (niveau de place) | Non trouvé |
 | Répartition des contrats par taux garanti | Non trouvé (seul le taux technique moyen de 0,32 % est publié) |
 | Dispersion entre organismes (quartiles de rendement, de moins-values, de duration ou de PPB) | Non trouvé en chiffres (le graphique 12 de l'ACPR n° 177 montre des quartiles de la part d'actifs liquides, sans valeurs lisibles) |
-| Rendements annuels moyens officiels de l'OAT 10 ans par année | Non consultés ; les coupons par génération sont ancrés sur des observations mensuelles ponctuelles de la série BCE IRS.M.FR.L.L40.CI.0000.EUR.N.Z (Banque de France) |
+| Rendements annuels moyens officiels de l'État à 10 ans par année | Non repris ; les coupons par génération des profils sont des hypothèses d'ordre de grandeur, arrondies |

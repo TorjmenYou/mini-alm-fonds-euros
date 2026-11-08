@@ -1,30 +1,13 @@
 {
  "objet": "Conventions de crédit et de comportement des assurés comparées en V5 (docs/V5_CONVENTIONS.md). Chaque paramètre porte un statut : observé (chiffre publié repris tel quel), calibré (dérivé de chiffres publiés par une règle écrite), hypothèse (choix de modélisation justifié, non observé), fictif (sans ancrage, testé en sensibilité).",
- "date_arrete": "2026-11-04",
+ "date_arrete": "2026-10-31",
  "observations": {
-  "spread_oat_sur_eiopa": {
-   "5_ans": 0.00917,
-   "10_ans": 0.01471,
-   "30_ans": 0.02024,
-   "statut": "calibré",
-   "source": "data/v5/marche/spread_oat_20261104.json (TEC du 04/11/2026 au-dessus de la courbe EIOPA sans VA du 31/10/2026)"
-  },
-  "cds_france_5_ans": {
-   "valeur": 0.00912,
-   "date": "2026-10-29",
-   "plus_haut_2026": {
-    "valeur": 0.01042,
-    "date": "2026-10-23"
-   },
-   "statut": "observé (source secondaire)",
-   "source": "epargnebourse.fr, suivi hebdomadaire du CDS France 5 ans, consulté le 06/11/2026",
-   "reserve": "cotation présentée comme en dollars : elle inclut une prime de dévaluation de l'euro en cas de défaut, non mesurée ici (Augustin, Chernov et Song, NBER w24506)"
-  },
-  "spread_oat_bund_10_ans": {
-   "valeur": 0.0163,
-   "date": "2026-10-30",
-   "statut": "observé (source secondaire)",
-   "source": "epargnebourse.fr, consulté le 06/11/2026"
+  "spread_obligations_sur_eiopa": {
+   "5_ans": 0.01054,
+   "10_ans": 0.01258,
+   "30_ans": 0.01277,
+   "statut": "hypothèse",
+   "source": "data/v5/marche/spread_hypothetique_20261031.json (moyenne de long terme des spreads publiée par l'EIOPA, notation A, au-dessus de la courbe EIOPA sans VA du 31/10/2026)"
   },
   "part_souverain_francais_dans_les_obligations": {
    "valeur": 0.26,
@@ -61,19 +44,6 @@
    "statut": "observé (estimation publiée)",
    "source": "Augustin, Chernov et Song, « Sovereign Credit Risk and Exchange Rates: Evidence from CDS Quanto Spreads », NBER w24506"
   },
-  "quanto_cds_relatif": {
-   "france_1_an": 0.28,
-   "allemagne_5_ans": 0.44,
-   "statut": "observé (estimation publiée)",
-   "definition": "écart relatif entre CDS en dollars et CDS en euros, lu comme la dépréciation de l'euro attendue en cas de défaut",
-   "source": "Augustin, Chernov et Song, NBER w24506, section 4.3 et figure 9"
-  },
-  "tec_10_ans": {
-   "valeur": 0.0488,
-   "date": "2026-11-04",
-   "statut": "observé",
-   "source": "oblig.fr, relevé du 04/11/2026 (data/v5/marche/spread_oat_20261104.json)"
-  },
   "corridors_onc_2013": {
    "max": {
     "alpha": -0.04,
@@ -96,7 +66,7 @@
   }
  },
  "decomposition_spread_10_ans": {
-  "_regle": "Spread de 147 pb à 10 ans. Part de crédit risque neutre kappa : le CDS France à 5 ans (91 pb le 29/10/2026) couvre presque tout le spread à 5 ans (92 pb le 04/11/2026), mais sa cotation en dollars surestime la composante de crédit en euros ; kappa central 0,8, bornes 0,7 et 1. Le reste (1 - kappa) regroupe liquidité, offre de titres et effets de change non liés au défaut. Perte attendue réelle : probabilité de défaut annuelle moyenne pondérée par les notations du portefeuille des assureurs (S&P, ACPR) x perte en cas de défaut de 50 %.",
+  "_regle": "Spread hypothétique de 126 pb à 10 ans. Part de crédit risque neutre kappa : hypothèse (0,7 au centre, bornes 0,55 et 1) ; le reste (1 - kappa) regroupe liquidité et offre de titres, non liés au défaut. Perte attendue réelle : probabilité de défaut annuelle moyenne pondérée par les notations du portefeuille des assureurs (S&P, ACPR) x perte en cas de défaut de 50 %.",
   "part_credit_risque_neutre": {
    "central": 0.8,
    "bas": 0.7,
@@ -161,8 +131,7 @@
    "recouvrement": 0.4,
    "blocs": "granulaire_50",
    "correlation": 0.2,
-   "statut": "hypothèse ; candidat central",
-   "spread": "bootstrap"
+   "statut": "hypothèse ; candidat central"
   },
   "k70_granulaire_independant": {
    "libelle": "70 % crédit par saut, 50 blocs indépendants",
@@ -170,8 +139,7 @@
    "recouvrement": 0.4,
    "blocs": "granulaire_50",
    "correlation": null,
-   "statut": "sensibilité de granularité",
-   "spread": "bootstrap"
+   "statut": "sensibilité de granularité"
   },
   "k70_souverain_granulaire_correle": {
    "libelle": "70 % crédit par saut, bloc souverain de 26 % et 50 blocs, tous corrélés (rho 0,2)",
@@ -179,8 +147,7 @@
    "recouvrement": 0.4,
    "blocs": "souverain_et_granulaire_50",
    "correlation": 0.2,
-   "statut": "stress de concentration souveraine",
-   "spread": "bootstrap"
+   "statut": "stress de concentration souveraine"
   },
   "k70_souverain_bloc": {
    "libelle": "70 % crédit par saut, bloc souverain de 26 % et 20 blocs indépendants (défaut corrélé par bloc)",
@@ -188,8 +155,7 @@
    "recouvrement": 0.4,
    "blocs": "souverain_et_diversifie",
    "correlation": null,
-   "statut": "stress : défaut corrélé par bloc",
-   "spread": "bootstrap"
+   "statut": "stress : défaut corrélé par bloc"
   },
   "k70_bloc_unique": {
    "libelle": "70 % crédit par saut, tout le portefeuille en un bloc",
@@ -197,26 +163,23 @@
    "recouvrement": 0.4,
    "blocs": "un",
    "correlation": null,
-   "statut": "stress extrême de concentration",
-   "spread": "bootstrap"
+   "statut": "stress extrême de concentration"
   },
   "k55_granulaire_correle": {
-   "libelle": "55 % crédit par saut (quanto de 44 %), 50 blocs corrélés",
+   "libelle": "55 % crédit par saut (borne basse de kappa), 50 blocs corrélés",
    "part_saut": 0.55,
    "recouvrement": 0.4,
    "blocs": "granulaire_50",
    "correlation": 0.2,
-   "statut": "sensibilité de la part de crédit",
-   "spread": "bootstrap"
+   "statut": "sensibilité de la part de crédit"
   },
   "k100_granulaire_correle": {
-   "libelle": "100 % crédit par saut (sans quanto), 50 blocs corrélés",
+   "libelle": "100 % crédit par saut (borne haute de kappa), 50 blocs corrélés",
    "part_saut": 1.0,
    "recouvrement": 0.4,
    "blocs": "granulaire_50",
    "correlation": 0.2,
-   "statut": "sensibilité de la part de crédit",
-   "spread": "bootstrap"
+   "statut": "sensibilité de la part de crédit"
   },
   "k70_granulaire_correle_r63": {
    "libelle": "70 % crédit par saut, 50 blocs corrélés, recouvrement 63 %",
@@ -224,17 +187,15 @@
    "recouvrement": 0.63,
    "blocs": "granulaire_50",
    "correlation": 0.2,
-   "statut": "sensibilité au recouvrement",
-   "spread": "bootstrap"
+   "statut": "sensibilité au recouvrement"
   },
   "k_lisse_bootstrap": {
-   "libelle": "Spread intégralement en perte lissée (spread zéro-coupon par bootstrap)",
+   "libelle": "Spread intégralement en perte lissée",
    "part_saut": 0.0,
    "recouvrement": 0.4,
    "blocs": "un",
    "correlation": null,
-   "spread": "bootstrap",
-   "statut": "convention initiale, spread corrigé"
+   "statut": "convention initiale"
   }
  },
  "blocs": {
@@ -288,16 +249,16 @@
    "valeur": 0.03,
    "statut": "fictif"
   },
-  "_taux": "marche aléatoire : courbe EIOPA sans VA et spreads figés à leur niveau du 31/10 et du 04/11/2026"
+  "_taux": "marche aléatoire : courbe EIOPA sans VA du 31/10/2026 et spread hypothétique figé"
  },
  "references_assures": {
   "_niveau_initial": {
-   "valeur": 0.0288,
+   "valeur": 0.0285,
    "statut": "hypothèse",
-   "regle": "niveau en t = 0 de l'ancienne référence OAT 10 ans - 2 points ; ordre de grandeur des taux servis attendus pour 2026 (2,8 % à 2,9 %, estimations de place), non observé. Sensibilité : 2,63 %, dernier taux servi moyen observé (2025, ACPR n° 180)"
+   "regle": "hypothèse : milieu de la fourchette des taux servis attendus pour 2026 (2,8 % à 2,9 %, estimations de place, Meilleurtaux 04/09/2026), non observé. Sensibilité : 2,63 %, dernier taux servi moyen observé (2025, ACPR n° 180)"
   },
   "oat_moins_2": {
-   "libelle": "OAT 10 ans - 2 points (ancienne référence)",
+   "libelle": "Taux à 10 ans des obligations du modèle - 2 points (ancienne référence)",
    "comportement": {
     "reference": "zc10_obligations",
     "ajustement": -0.02
@@ -351,7 +312,7 @@
    "statut": "sensibilité du délai de transmission"
   },
   "composite_observe": {
-   "libelle": "Référence composite à niveaux observés : fonds euros concurrents, livret A, OAT 10 ans",
+   "libelle": "Référence composite : fonds euros concurrents, livret A, obligations à 10 ans du modèle",
    "moteur": "composite",
    "composantes": [
     {
@@ -374,16 +335,16 @@
      "statut": "niveau observé (1,7 % depuis le 01/08/2026) ; réaction de 0,5 au taux court et plancher de 0,5 % : formule réglementaire, inflation figée ; révision semestrielle assimilée à une transmission dans l'année ; poids : fictif"
     },
     {
-     "nom": "Placements obligataires directs (OAT 10 ans)",
+     "nom": "Placements obligataires directs (obligations à 10 ans du modèle)",
      "poids": 0.15,
-     "niveau_initial": 0.0488,
+     "niveau_initial": "obligations_10_ans",
      "moteur": "zc10_sans_risque",
      "lissage": 1.0,
      "beta": 1.0,
-     "statut": "niveau observé (TEC 10 ans du 04/11/2026) ; transmission immédiate des variations du taux sans risque (spread figé) ; poids : fictif"
+     "statut": "niveau hypothétique (taux à 10 ans des obligations du modèle : courbe EIOPA et spread hypothétique) ; transmission immédiate des variations du taux sans risque (spread figé) ; poids : fictif"
     }
    ],
-   "statut": "niveaux observés, délais et coefficients paramétrés, poids fictifs ; aucun calage sur le niveau de 2,88 %"
+   "statut": "niveaux observés (fonds euros, livret A) et hypothétique (obligations), délais et coefficients paramétrés, poids fictifs"
   }
  },
  "rachats": {
@@ -408,25 +369,11 @@
   "absence_de_double_comptage": "Le taux observé de 2025 est un taux total. Il est pris comme structurel parce que, pour l'assureur moyen, l'écart entre taux servi et référence est resté dans la zone neutre de la loi dynamique ([-1 point, +1 point] dans les paramètres centraux) : la composante dynamique de 2025 est nulle. Ce n'est plus vrai avec le corridor maximal de l'ONC (zone neutre commençant à 0) : dans cette sensibilité, une partie du taux observé serait comptée deux fois."
  },
  "calibration_kappa": {
-  "_regle": "kappa = (1 - d) x CDS(5 ans, dollars) / spread OAT zéro-coupon (5 ans, bootstrap du TEC) : part du spread expliquée par le crédit en euros. CDS 91,2 pb (29/10/2026), spread 95.0 pb (04/11/2026). d = dépréciation de l'euro attendue en cas de défaut (quanto relatif).",
-  "d_france_1_an": {
-   "d": 0.28,
-   "kappa": 0.691
-  },
-  "d_allemagne_5_ans": {
-   "d": 0.44,
-   "kappa": 0.538
-  },
-  "sans_quanto": {
-   "d": 0.0,
-   "kappa": 0.96
-  },
+  "_regle": "Part du spread traitée comme perte de défaut en risque neutre (le reste est une perte lissée, hors défaut). Hypothèse : 0,7 au centre ; bornes 0,55 et 1 testées en sensibilité. Elle n'est plus recoupée avec des cotations de marché : le spread des obligations est lui-même une hypothèse.",
   "central": 0.7,
   "bas": 0.55,
   "haut": 1.0,
-  "statut": "calibré (central) ; bornes : hypothèses",
-  "reserves": "CDS coté en dollars (quanto non observé pour la France à 5 ans), écart de dates de cinq jours (le CDS est passé de 104 à 91 pb en une semaine), structure par terme du CDS au-delà de 5 ans non disponible : kappa supposé constant sur toutes les maturités",
-  "spread_5_ans_bootstrap": 0.00949738
+  "statut": "hypothèse"
  },
  "correlation_copule": {
   "valeur": 0.2,
@@ -443,7 +390,6 @@
    "facteur_pd_reelle": 0.5,
    "recouvrement_reel": 0.4
   },
-  "_scenarios": "taux : trajectoires du générateur (tendance des forwards EIOPA, quasi plats, prime de terme nulle) ; actions : rendement risque neutre plus une prime de 3 % (fictive) ; spreads figés à leur niveau du 04/11/2026"
- },
- "spread_methode": "Les conventions dont le code commence par « k » utilisent le spread zéro-coupon obtenu par bootstrap du TEC (data/v5/marche/spread_oat_20261104_zc.json) ; les premières conventions gardent le TEC pris comme taux zéro-coupon, pour que leurs résultats restent reproductibles."
+  "_scenarios": "taux : trajectoires du générateur (tendance des forwards EIOPA, quasi plats, prime de terme nulle) ; actions : rendement risque neutre plus une prime de 3 % (fictive) ; spread hypothétique figé"
+ }
 }
