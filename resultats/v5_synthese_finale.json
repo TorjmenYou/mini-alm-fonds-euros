@@ -1,366 +1,366 @@
 {
  "_objet": "Lectures de la synthèse finale (écarts à la gestion passive, capital à 100 %), écrites par scripts/v5_synthese_finale.py ; elles alimentent les figures (scripts/v5_figures.py).",
  "seuils": {
-  "A": 2.371266670294714,
-  "B": 2.0276252122763623,
-  "C": 1.9684483974061113
+  "A": 2.4251881453941553,
+  "B": 1.889175879067453,
+  "C": 1.6778799234311885
  },
  "valeur_totale": {
   "A|reinvestissement_progressif": {
-   "min": 0.12642702661286642,
-   "max": 1.2091114126493927,
+   "min": 0.06653508403202946,
+   "max": 1.0483151480258666,
    "n": 20,
    "significatifs": 20,
    "importants": 0,
    "bornes_au_dela_du_seuil": 0,
    "verdict": "sans effet important",
    "centre": {
-    "moyenne": 0.9372055723876236,
-    "demi_intervalle_95": 0.2643906043400581
+    "moyenne": 0.6885162934290814,
+    "demi_intervalle_95": 0.2985606163701296
    },
    "existant_ferme": {
-    "moyenne": 0.5456101496880026,
-    "demi_intervalle_95": 0.1301892786954135
+    "moyenne": 0.392663045515732,
+    "demi_intervalle_95": 0.16338849509953504
    }
   },
   "B|reinvestissement_progressif": {
-   "min": 0.1086148673609224,
-   "max": 0.4659882358856198,
+   "min": 0.23281324551669003,
+   "max": 0.7672812346764556,
    "n": 20,
-   "significatifs": 13,
+   "significatifs": 20,
    "importants": 0,
    "bornes_au_dela_du_seuil": 0,
    "verdict": "sans effet important",
    "centre": {
-    "moyenne": 0.41019897214488027,
-    "demi_intervalle_95": 0.292841766162396
+    "moyenne": 0.6090367845208521,
+    "demi_intervalle_95": 0.35262285003035293
    },
    "existant_ferme": {
-    "moyenne": 0.10437951290639674,
-    "demi_intervalle_95": 0.20579781326948512
+    "moyenne": 0.25339535310898187,
+    "demi_intervalle_95": 0.2587646622369005
    }
   },
   "C|reinvestissement_progressif": {
-   "min": 0.051768236184004564,
-   "max": 0.28638030432323025,
+   "min": 0.02227161943816975,
+   "max": 0.644287693928504,
    "n": 20,
    "significatifs": 0,
    "importants": 0,
    "bornes_au_dela_du_seuil": 0,
-   "verdict": "sans effet important",
+   "verdict": "toujours positif, non robuste",
    "centre": {
-    "moyenne": 0.14133811236866428,
-    "demi_intervalle_95": 0.6857672874334938
+    "moyenne": 0.2255091885135028,
+    "demi_intervalle_95": 0.778200673703866
    },
    "existant_ferme": {
-    "moyenne": 0.01593669324011966,
-    "demi_intervalle_95": 0.4727314442495126
+    "moyenne": 0.04452702141758317,
+    "demi_intervalle_95": 0.5489667657838363
    }
   },
   "A|repositionnement": {
-   "min": -17.751235247611874,
-   "max": -3.8566919349783433,
+   "min": -20.944773726765813,
+   "max": -7.291235583828001,
    "n": 20,
    "significatifs": 20,
    "importants": 20,
    "bornes_au_dela_du_seuil": 20,
    "verdict": "défavorable, robuste",
    "centre": {
-    "moyenne": -15.179832103907929,
-    "demi_intervalle_95": 1.2705750963338243
+    "moyenne": -18.482239760366735,
+    "demi_intervalle_95": 1.2785176866324852
    },
    "existant_ferme": {
-    "moyenne": -12.28708136136207,
-    "demi_intervalle_95": 1.033128887511546
+    "moyenne": -16.338236784166785,
+    "demi_intervalle_95": 1.0607153833698297
    }
   },
   "B|repositionnement": {
-   "min": -14.798147917321353,
-   "max": -4.86776289447957,
+   "min": -15.438611831307691,
+   "max": -7.752865360846754,
    "n": 20,
    "significatifs": 20,
    "importants": 20,
    "bornes_au_dela_du_seuil": 20,
    "verdict": "défavorable, robuste",
    "centre": {
-    "moyenne": -11.088105583303047,
-    "demi_intervalle_95": 0.9298230775020838
+    "moyenne": -12.882928275592366,
+    "demi_intervalle_95": 0.8771210953839467
    },
    "existant_ferme": {
-    "moyenne": -9.090851435627945,
-    "demi_intervalle_95": 0.6946782609409355
+    "moyenne": -11.754921492825655,
+    "demi_intervalle_95": 0.698892360817116
    }
   },
   "C|repositionnement": {
-   "min": -3.1297015983492504,
-   "max": -1.2274354829231227,
+   "min": -2.630456087775587,
+   "max": -1.172132615130838,
    "n": 20,
    "significatifs": 20,
-   "importants": 15,
-   "bornes_au_dela_du_seuil": 7,
+   "importants": 16,
+   "bornes_au_dela_du_seuil": 2,
    "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -2.6947988433665624,
-    "demi_intervalle_95": 0.7493816314104255
+    "moyenne": -2.2068899762765577,
+    "demi_intervalle_95": 0.6768503762194018
    },
    "existant_ferme": {
-    "moyenne": -1.6391431790674142,
-    "demi_intervalle_95": 0.5451542546894029
+    "moyenne": -1.2318305178336313,
+    "demi_intervalle_95": 0.45375134153260444
    }
   },
   "A|taux_servi_competitif": {
-   "min": -17.52623576330492,
-   "max": -1.52364039397639,
+   "min": -14.968682072099275,
+   "max": -0.8704432589110452,
    "n": 20,
-   "significatifs": 20,
-   "importants": 16,
+   "significatifs": 19,
+   "importants": 15,
    "bornes_au_dela_du_seuil": 14,
    "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -8.523054842213144,
-    "demi_intervalle_95": 0.6510688402848507
+    "moyenne": -6.7756743199492595,
+    "demi_intervalle_95": 0.6495579141032435
    },
    "existant_ferme": {
-    "moyenne": -7.005024981541989,
-    "demi_intervalle_95": 0.391862923988036
+    "moyenne": -5.89302566892842,
+    "demi_intervalle_95": 0.4086930612721624
    }
   },
   "B|taux_servi_competitif": {
-   "min": -26.753986374387182,
-   "max": -4.302359113322676,
+   "min": -24.143646762197083,
+   "max": -2.632111762476153,
    "n": 20,
    "significatifs": 20,
    "importants": 20,
-   "bornes_au_dela_du_seuil": 19,
+   "bornes_au_dela_du_seuil": 18,
    "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -15.319750399014573,
-    "demi_intervalle_95": 1.0318163779813618
+    "moyenne": -13.325541015069794,
+    "demi_intervalle_95": 1.091429136624786
    },
    "existant_ferme": {
-    "moyenne": -11.635353028155635,
-    "demi_intervalle_95": 0.5444364666132316
+    "moyenne": -10.055132773189925,
+    "demi_intervalle_95": 0.5348549184638567
    }
   },
   "C|taux_servi_competitif": {
-   "min": -26.970780659042344,
-   "max": -4.97690966550701,
+   "min": -23.383730750918797,
+   "max": -2.05686134377384,
    "n": 20,
-   "significatifs": 20,
-   "importants": 20,
-   "bornes_au_dela_du_seuil": 20,
-   "verdict": "défavorable, robuste",
+   "significatifs": 19,
+   "importants": 19,
+   "bornes_au_dela_du_seuil": 15,
+   "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -16.49986915884375,
-    "demi_intervalle_95": 1.1463307685805115
+    "moyenne": -12.931599212845711,
+    "demi_intervalle_95": 1.093842186067687
    },
    "existant_ferme": {
-    "moyenne": -12.230657399125201,
-    "demi_intervalle_95": 0.6373906631172089
+    "moyenne": -9.790100093416347,
+    "demi_intervalle_95": 0.7187725753088281
    }
   },
   "A|taux_servi_marge": {
-   "min": 3.6010275348633622,
-   "max": 14.97687484950827,
+   "min": 2.729487218238603,
+   "max": 9.794455581170867,
+   "n": 20,
+   "significatifs": 20,
+   "importants": 20,
+   "bornes_au_dela_du_seuil": 14,
+   "verdict": "toujours positif, non robuste",
+   "centre": {
+    "moyenne": 5.523344547359868,
+    "demi_intervalle_95": 0.7076514144500676
+   },
+   "existant_ferme": {
+    "moyenne": 5.842759370290525,
+    "demi_intervalle_95": 0.3893025488586047
+   }
+  },
+  "B|taux_servi_marge": {
+   "min": 0.24930100179137732,
+   "max": 8.52511693922603,
+   "n": 20,
+   "significatifs": 15,
+   "importants": 14,
+   "bornes_au_dela_du_seuil": 12,
+   "verdict": "toujours positif, non robuste",
+   "centre": {
+    "moyenne": 5.010314428215311,
+    "demi_intervalle_95": 0.8314565493829145
+   },
+   "existant_ferme": {
+    "moyenne": 6.249966865203572,
+    "demi_intervalle_95": 0.551882602255876
+   }
+  },
+  "C|taux_servi_marge": {
+   "min": -3.0487383143289257,
+   "max": 4.591357863551262,
+   "n": 20,
+   "significatifs": 13,
+   "importants": 11,
+   "bornes_au_dela_du_seuil": 7,
+   "verdict": "change de signe selon les hypothèses",
+   "centre": {
+    "moyenne": 1.2559682979685005,
+    "demi_intervalle_95": 0.9157106495783762
+   },
+   "existant_ferme": {
+    "moyenne": 3.143012737538702,
+    "demi_intervalle_95": 0.6657476100773969
+   }
+  },
+  "A|liquidite_defensive": {
+   "min": -6.853430544661069,
+   "max": 3.4980919100825627,
+   "n": 20,
+   "significatifs": 8,
+   "importants": 8,
+   "bornes_au_dela_du_seuil": 4,
+   "verdict": "change de signe selon les hypothèses",
+   "centre": {
+    "moyenne": -1.5563420368939231,
+    "demi_intervalle_95": 1.9147232578550848
+   },
+   "existant_ferme": {
+    "moyenne": 0.8328791905755181,
+    "demi_intervalle_95": 1.22175423736926
+   }
+  },
+  "B|liquidite_defensive": {
+   "min": 0.42142755373825425,
+   "max": 3.0736391343411404,
+   "n": 20,
+   "significatifs": 5,
+   "importants": 5,
+   "bornes_au_dela_du_seuil": 0,
+   "verdict": "toujours positif, non robuste",
+   "centre": {
+    "moyenne": 0.8939688679638081,
+    "demi_intervalle_95": 1.896414379523845
+   },
+   "existant_ferme": {
+    "moyenne": 1.1776677574459646,
+    "demi_intervalle_95": 1.36796602940422
+   }
+  },
+  "C|liquidite_defensive": {
+   "min": 3.09017187370927,
+   "max": 5.098565010433568,
+   "n": 20,
+   "significatifs": 20,
+   "importants": 20,
+   "bornes_au_dela_du_seuil": 7,
+   "verdict": "toujours positif, non robuste",
+   "centre": {
+    "moyenne": 3.684351533357397,
+    "demi_intervalle_95": 2.3028220323888937
+   },
+   "existant_ferme": {
+    "moyenne": 3.1204843987947006,
+    "demi_intervalle_95": 1.5492815175607262
+   }
+  },
+  "A|taux_servi_competitif_preservant": {
+   "min": -17.01265477858019,
+   "max": -0.586996893569885,
+   "n": 20,
+   "significatifs": 19,
+   "importants": 15,
+   "bornes_au_dela_du_seuil": 15,
+   "verdict": "toujours négatif, non robuste",
+   "centre": {
+    "moyenne": -7.155131075428862,
+    "demi_intervalle_95": 0.5864593236946878
+   },
+   "existant_ferme": {
+    "moyenne": -4.1411388165259995,
+    "demi_intervalle_95": 0.44911270519021573
+   }
+  },
+  "B|taux_servi_competitif_preservant": {
+   "min": -24.720685181165194,
+   "max": -3.3054750545979426,
    "n": 20,
    "significatifs": 20,
    "importants": 20,
    "bornes_au_dela_du_seuil": 19,
-   "verdict": "toujours positif, non robuste",
-   "centre": {
-    "moyenne": 8.165557101030446,
-    "demi_intervalle_95": 0.9184962000092128
-   },
-   "existant_ferme": {
-    "moyenne": 8.301042616082832,
-    "demi_intervalle_95": 0.40778331993629474
-   }
-  },
-  "B|taux_servi_marge": {
-   "min": 2.248297869786617,
-   "max": 13.090394330047241,
-   "n": 20,
-   "significatifs": 20,
-   "importants": 20,
-   "bornes_au_dela_du_seuil": 17,
-   "verdict": "toujours positif, non robuste",
-   "centre": {
-    "moyenne": 8.6263703356984,
-    "demi_intervalle_95": 0.8096357082138504
-   },
-   "existant_ferme": {
-    "moyenne": 9.562383626312732,
-    "demi_intervalle_95": 0.5944802082059646
-   }
-  },
-  "C|taux_servi_marge": {
-   "min": 1.4677768110765037,
-   "max": 11.147220275778466,
-   "n": 20,
-   "significatifs": 20,
-   "importants": 17,
-   "bornes_au_dela_du_seuil": 14,
-   "verdict": "toujours positif, non robuste",
-   "centre": {
-    "moyenne": 6.008074684554147,
-    "demi_intervalle_95": 0.9968641787755512
-   },
-   "existant_ferme": {
-    "moyenne": 7.321622466902055,
-    "demi_intervalle_95": 0.8779093453731998
-   }
-  },
-  "A|liquidite_defensive": {
-   "min": -6.9759306199112014,
-   "max": 3.6570661227153143,
-   "n": 20,
-   "significatifs": 9,
-   "importants": 8,
-   "bornes_au_dela_du_seuil": 6,
-   "verdict": "change de signe selon les hypothèses",
-   "centre": {
-    "moyenne": -0.8815146249756128,
-    "demi_intervalle_95": 1.7301133461546159
-   },
-   "existant_ferme": {
-    "moyenne": 1.5599199203406133,
-    "demi_intervalle_95": 1.0737823319771247
-   }
-  },
-  "B|liquidite_defensive": {
-   "min": -0.13257016215422532,
-   "max": 3.120927157214486,
-   "n": 20,
-   "significatifs": 5,
-   "importants": 5,
-   "bornes_au_dela_du_seuil": 1,
-   "verdict": "positif là où il est significatif, non robuste",
-   "centre": {
-    "moyenne": 0.46566792850047944,
-    "demi_intervalle_95": 1.8176715566760522
-   },
-   "existant_ferme": {
-    "moyenne": 0.9940660796831462,
-    "demi_intervalle_95": 1.2361832272474513
-   }
-  },
-  "C|liquidite_defensive": {
-   "min": 2.8803123975466582,
-   "max": 4.147926858401637,
-   "n": 20,
-   "significatifs": 20,
-   "importants": 20,
-   "bornes_au_dela_du_seuil": 5,
-   "verdict": "toujours positif, non robuste",
-   "centre": {
-    "moyenne": 2.951524414670105,
-    "demi_intervalle_95": 2.1390713257954777
-   },
-   "existant_ferme": {
-    "moyenne": 2.770280327846899,
-    "demi_intervalle_95": 1.467097909318938
-   }
-  },
-  "A|taux_servi_competitif_preservant": {
-   "min": -19.101196170175783,
-   "max": -0.6192170714976515,
-   "n": 20,
-   "significatifs": 19,
-   "importants": 16,
-   "bornes_au_dela_du_seuil": 15,
    "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -8.02085148507924,
-    "demi_intervalle_95": 0.5313910189208079
+    "moyenne": -13.613474568512947,
+    "demi_intervalle_95": 1.0797465482684638
    },
    "existant_ferme": {
-    "moyenne": -4.592798349244278,
-    "demi_intervalle_95": 0.4487732207699573
-   }
-  },
-  "B|taux_servi_competitif_preservant": {
-   "min": -28.050043716231674,
-   "max": -5.172318662309512,
-   "n": 20,
-   "significatifs": 20,
-   "importants": 20,
-   "bornes_au_dela_du_seuil": 20,
-   "verdict": "défavorable, robuste",
-   "centre": {
-    "moyenne": -16.312231868513443,
-    "demi_intervalle_95": 1.037452963057754
-   },
-   "existant_ferme": {
-    "moyenne": -11.692444096797862,
-    "demi_intervalle_95": 0.5484457106183865
+    "moyenne": -9.495846395880807,
+    "demi_intervalle_95": 0.549262065955776
    }
   },
   "C|taux_servi_competitif_preservant": {
-   "min": -28.35220026040868,
-   "max": -5.858009174153312,
+   "min": -23.879567328223374,
+   "max": -2.3815634534454775,
    "n": 20,
-   "significatifs": 20,
-   "importants": 20,
-   "bornes_au_dela_du_seuil": 20,
-   "verdict": "défavorable, robuste",
+   "significatifs": 19,
+   "importants": 19,
+   "bornes_au_dela_du_seuil": 16,
+   "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -17.4708292029094,
-    "demi_intervalle_95": 1.1831951963105793
+    "moyenne": -13.385552841717038,
+    "demi_intervalle_95": 1.1231945210456462
    },
    "existant_ferme": {
-    "moyenne": -12.872534450779195,
-    "demi_intervalle_95": 0.6619113979496127
+    "moyenne": -9.705673613455186,
+    "demi_intervalle_95": 0.6658460138267693
    }
   },
   "A|distribution_retention": {
-   "min": -2.129607024963307,
-   "max": -0.6257648594194433,
+   "min": -2.0985512380379556,
+   "max": -0.6458044957363461,
    "n": 20,
    "significatifs": 20,
    "importants": 0,
    "bornes_au_dela_du_seuil": 0,
    "verdict": "sans effet important",
    "centre": {
-    "moyenne": -1.357706872596053,
-    "demi_intervalle_95": 0.07886090351948757
+    "moyenne": -1.3883592789504329,
+    "demi_intervalle_95": 0.07696591569226005
    },
    "existant_ferme": {
-    "moyenne": -1.0702411445879212,
-    "demi_intervalle_95": 0.08209627748292372
+    "moyenne": -1.0965233671454069,
+    "demi_intervalle_95": 0.06534840923005074
    }
   },
   "B|distribution_retention": {
-   "min": -2.6717336677429917,
-   "max": -1.0571591800925448,
+   "min": -2.3251830760322445,
+   "max": -0.9842094786923177,
    "n": 20,
    "significatifs": 20,
-   "importants": 3,
-   "bornes_au_dela_du_seuil": 3,
+   "importants": 1,
+   "bornes_au_dela_du_seuil": 1,
    "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -1.8547290631992503,
-    "demi_intervalle_95": 0.065292521815063
+    "moyenne": -1.6386015582271043,
+    "demi_intervalle_95": 0.05330043887481704
    },
    "existant_ferme": {
-    "moyenne": -1.5368477778064542,
-    "demi_intervalle_95": 0.05877868478070837
+    "moyenne": -1.397396314269681,
+    "demi_intervalle_95": 0.05100048237469897
    }
   },
   "C|distribution_retention": {
-   "min": -2.7171736316566992,
-   "max": -1.2510527889054937,
+   "min": -2.207090921604895,
+   "max": -1.019599110461797,
    "n": 20,
    "significatifs": 20,
-   "importants": 5,
+   "importants": 4,
    "bornes_au_dela_du_seuil": 4,
    "verdict": "toujours négatif, non robuste",
    "centre": {
-    "moyenne": -1.9567997117739064,
-    "demi_intervalle_95": 0.06797160652686364
+    "moyenne": -1.6289501062001728,
+    "demi_intervalle_95": 0.06537749094634246
    },
    "existant_ferme": {
-    "moyenne": -1.5860174812579912,
-    "demi_intervalle_95": 0.07084030601537246
+    "moyenne": -1.3034161578862695,
+    "demi_intervalle_95": 0.05044360994075305
    }
   }
  },
@@ -368,12 +368,12 @@
   "A|reinvestissement_progressif": {
    "existant": {
     "lecture": "neutre",
-    "ecart": 0.5456101496880026,
+    "ecart": 0.392663045515732,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": 0.3915954226996209,
+    "ecart": 0.2958532479133495,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -381,34 +381,34 @@
    },
    "rentabilite": {
     "lecture": "neutre",
-    "ecart": -0.0016843855997023746,
+    "ecart": -0.0005414351588381647,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": -0.00011374643348642608,
+    "ecart": -8.462934017929719e-07,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "favorable",
-    "ecart": -14.009463597226027,
+    "ecart": -16.590738622100243,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": 0.22790701507668132,
+    "ecart": 0.724316091056906,
     "non_significatif": false
    }
   },
   "A|repositionnement": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -12.28708136136207,
+    "ecart": -16.338236784166785,
     "non_significatif": false
    },
    "affaires_nouvelles": {
-    "lecture": "défavorable",
-    "ecart": -2.892750742545859,
+    "lecture": "neutre",
+    "ecart": -2.1440029761999497,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -416,69 +416,69 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.02340590104918071,
+    "ecart": -0.02178148450161229,
     "non_significatif": false
    },
    "competitivite": {
-    "lecture": "défavorable",
-    "ecart": -0.0006485328144195269,
+    "lecture": "neutre",
+    "ecart": -0.00046484297918894177,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "défavorable",
-    "ecart": 14.776225630878102,
+    "ecart": 17.024027816391133,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "défavorable",
-    "ecart": 18.99177550745324,
+    "ecart": 17.798098878845522,
     "non_significatif": false
    }
   },
   "A|taux_servi_competitif": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -7.005024981541989,
+    "ecart": -5.89302566892842,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -1.5180298606711562,
+    "ecart": -0.882648651020839,
     "non_significatif": false
    },
    "valeur_totale": {
     "lecture": "toujours négatif, non robuste"
    },
    "rentabilite": {
-    "lecture": "défavorable",
-    "ecart": -0.0029310869336367507,
+    "lecture": "neutre",
+    "ecart": -0.0008207417698460756,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "favorable",
-    "ecart": 0.003015929471547567,
+    "ecart": 0.0029281204373234524,
     "non_significatif": false
    },
    "liquidite": {
-    "lecture": "neutre",
-    "ecart": 0.6073165257718856,
+    "lecture": "défavorable",
+    "ecart": 10.012006579842712,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "favorable",
-    "ecart": -10.477058346224638,
+    "ecart": -12.62216531157442,
     "non_significatif": false
    }
   },
   "A|taux_servi_marge": {
    "existant": {
     "lecture": "favorable",
-    "ecart": 8.301042616082832,
+    "ecart": 5.842759370290525,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -0.13548551505238496,
+    "ecart": -0.3194148229306563,
     "non_significatif": true
    },
    "valeur_totale": {
@@ -486,34 +486,34 @@
    },
    "rentabilite": {
     "lecture": "neutre",
-    "ecart": 0.0019668895489413085,
+    "ecart": -7.677424873538813e-05,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "défavorable",
-    "ecart": -0.004584014807676185,
+    "ecart": -0.00369038988032757,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "défavorable",
-    "ecart": 47.62969480355811,
+    "ecart": 27.54898064823668,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "défavorable",
-    "ecart": 8.265531829204733,
+    "ecart": 6.07868043705173,
     "non_significatif": false
    }
   },
   "A|liquidite_defensive": {
    "existant": {
     "lecture": "neutre",
-    "ecart": 1.5599199203406133,
-    "non_significatif": false
+    "ecart": 0.8328791905755181,
+    "non_significatif": true
    },
    "affaires_nouvelles": {
-    "lecture": "défavorable",
-    "ecart": -2.4414345453162265,
+    "lecture": "neutre",
+    "ecart": -2.389221227469441,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -521,34 +521,34 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.012436132884608452,
+    "ecart": -0.006396324535544548,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": -0.0004440649194278074,
+    "ecart": -0.00025177249341247054,
     "non_significatif": false
    },
    "liquidite": {
-    "lecture": "défavorable",
-    "ecart": 9.900163079846145,
+    "lecture": "neutre",
+    "ecart": 3.517674990568551,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "défavorable",
-    "ecart": 18.023261076273144,
+    "ecart": 13.476169082878585,
     "non_significatif": false
    }
   },
   "A|taux_servi_competitif_preservant": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -4.592798349244278,
+    "ecart": -4.1411388165259995,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "défavorable",
-    "ecart": -3.4280531358349613,
+    "ecart": -3.0139922589028627,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -556,34 +556,34 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.004806923544387949,
+    "ecart": -0.0029200606173502633,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "favorable",
-    "ecart": 0.0030822018336887727,
+    "ecart": 0.0028990608245280285,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -3.9715598931296086,
+    "ecart": 1.106049345457528,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": -1.6158220972440915,
+    "ecart": -1.4427524878112479,
     "non_significatif": false
    }
   },
   "A|distribution_retention": {
    "existant": {
     "lecture": "neutre",
-    "ecart": -1.0702411445879212,
+    "ecart": -1.0965233671454069,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -0.2874657280081317,
+    "ecart": -0.291835911805026,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -591,34 +591,34 @@
    },
    "rentabilite": {
     "lecture": "neutre",
-    "ecart": -0.0009910617839880564,
+    "ecart": -0.0007974876219893068,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": 3.95365292265408e-05,
+    "ecart": 3.578983464622414e-05,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -5.324363104879772,
+    "ecart": -0.24348267124366174,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": -0.7726867216504729,
+    "ecart": -0.3649848499714352,
     "non_significatif": false
    }
   },
   "B|reinvestissement_progressif": {
    "existant": {
     "lecture": "neutre",
-    "ecart": 0.10437951290639674,
+    "ecart": 0.25339535310898187,
     "non_significatif": true
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": 0.3058194592384835,
+    "ecart": 0.3556414314118701,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -626,34 +626,34 @@
    },
    "rentabilite": {
     "lecture": "neutre",
-    "ecart": -0.0019540549769849896,
+    "ecart": -0.0005918505764450771,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": -0.000179292193779889,
+    "ecart": -0.00011190241959962988,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -0.13999293084716605,
+    "ecart": 0.004726145870865096,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": -0.19211556434208532,
+    "ecart": -0.153247123767855,
     "non_significatif": false
    }
   },
   "B|repositionnement": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -9.090851435627945,
+    "ecart": -11.754921492825655,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -1.997254147675102,
+    "ecart": -1.1280067827667133,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -661,34 +661,34 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.024449020526331466,
+    "ecart": -0.018866029773996984,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "favorable",
-    "ecart": 0.0006387464636262805,
+    "ecart": 0.0008217514176332335,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "défavorable",
-    "ecart": 19.664504696248404,
+    "ecart": 16.665961341727115,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "défavorable",
-    "ecart": 24.920974362067174,
+    "ecart": 20.096216357825686,
     "non_significatif": false
    }
   },
   "B|taux_servi_competitif": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -11.635353028155635,
+    "ecart": -10.055132773189925,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "défavorable",
-    "ecart": -3.684397370858943,
+    "ecart": -3.270408241879866,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -696,34 +696,34 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.006549511626394763,
+    "ecart": -0.003883430970350793,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "favorable",
-    "ecart": 0.003970099111130182,
+    "ecart": 0.0036539134891336463,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": 0.006654660822939251,
+    "ecart": -0.052363049902535874,
     "non_significatif": false
    },
    "capital_ouverture": {
-    "lecture": "favorable",
-    "ecart": -2.2798178449721576,
+    "lecture": "neutre",
+    "ecart": -1.130113852075393,
     "non_significatif": false
    }
   },
   "B|taux_servi_marge": {
    "existant": {
     "lecture": "favorable",
-    "ecart": 9.562383626312732,
+    "ecart": 6.249966865203572,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -0.9360132906143314,
+    "ecart": -1.2396524369882604,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -731,104 +731,104 @@
    },
    "rentabilite": {
     "lecture": "favorable",
-    "ecart": 0.0036290796196277036,
+    "ecart": 0.0027274714678086065,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "défavorable",
-    "ecart": -0.002114773945945096,
+    "ecart": -0.0013754276564724001,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": 4.49910879444544,
+    "ecart": 3.8328268625637616,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "favorable",
-    "ecart": -2.343942320469125,
+    "ecart": -3.5782207275030835,
     "non_significatif": false
    }
   },
   "B|liquidite_defensive": {
    "existant": {
     "lecture": "neutre",
-    "ecart": 0.9940660796831462,
+    "ecart": 1.1776677574459646,
     "non_significatif": true
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -0.5283981511826663,
+    "ecart": -0.2836988894821563,
     "non_significatif": true
    },
    "valeur_totale": {
-    "lecture": "positif là où il est significatif, non robuste"
+    "lecture": "toujours positif, non robuste"
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.0052407921603375845,
+    "ecart": -0.0030789441253955413,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "défavorable",
-    "ecart": -0.0005081251656035577,
+    "ecart": -0.0006076172065662896,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": 0.7127186871957645,
+    "ecart": -0.04889508611828176,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": -0.15991889751679977,
+    "ecart": 0.7972013698296436,
     "non_significatif": true
    }
   },
   "B|taux_servi_competitif_preservant": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -11.692444096797862,
+    "ecart": -9.495846395880807,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "défavorable",
-    "ecart": -4.619787771715577,
+    "ecart": -4.117628172632139,
     "non_significatif": false
    },
    "valeur_totale": {
-    "lecture": "défavorable, robuste"
+    "lecture": "toujours négatif, non robuste"
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.009135731363417915,
+    "ecart": -0.005454966442534667,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "favorable",
-    "ecart": 0.003943945966051015,
+    "ecart": 0.0035862914588494074,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": 0.10409786507863822,
+    "ecart": 0.5600407401183695,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": -0.6957693320243266,
+    "ecart": -0.20260879343789995,
     "non_significatif": true
    }
   },
   "B|distribution_retention": {
    "existant": {
     "lecture": "neutre",
-    "ecart": -1.5368477778064542,
+    "ecart": -1.397396314269681,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -0.31788128539279625,
+    "ecart": -0.24120524395742304,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -836,69 +836,69 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.00677980707507804,
+    "ecart": -0.004839870331162968,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": 1.031969901263332e-05,
+    "ecart": 1.0269675412470994e-05,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -0.12772413663478405,
+    "ecart": -0.05242303178260656,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": 0.592883232315117,
+    "ecart": 0.3916665900851477,
     "non_significatif": false
    }
   },
   "C|reinvestissement_progressif": {
    "existant": {
     "lecture": "neutre",
-    "ecart": 0.01593669324011966,
+    "ecart": 0.04452702141758317,
     "non_significatif": true
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": 0.12540141912854466,
+    "ecart": 0.18098216709591955,
     "non_significatif": true
    },
    "valeur_totale": {
-    "lecture": "sans effet important"
+    "lecture": "toujours positif, non robuste"
    },
    "rentabilite": {
     "lecture": "neutre",
-    "ecart": -0.0015953297121622106,
+    "ecart": -0.0005333284802456068,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": -0.0003240034987542096,
+    "ecart": -0.00014052942192338026,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -0.5037183068282651,
+    "ecart": -0.43474480432544027,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": 0.12426034783341322,
+    "ecart": 0.0,
     "non_significatif": true
    }
   },
   "C|repositionnement": {
    "existant": {
     "lecture": "neutre",
-    "ecart": -1.6391431790674142,
+    "ecart": -1.2318305178336313,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -1.0556556642991484,
+    "ecart": -0.9750594584429264,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -906,174 +906,174 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.006655254535137878,
+    "ecart": -0.003026699430994234,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": 0.0004419374407894855,
+    "ecart": 0.00038266940024442113,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": 1.2712629639262576,
+    "ecart": 0.9244317718223813,
     "non_significatif": false
    },
    "capital_ouverture": {
-    "lecture": "défavorable",
-    "ecart": 5.823923325695144,
-    "non_significatif": false
+    "lecture": "neutre",
+    "ecart": 1.081078025502098,
+    "non_significatif": true
    }
   },
   "C|taux_servi_competitif": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -12.230657399125201,
+    "ecart": -9.790100093416347,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "défavorable",
-    "ecart": -4.269211759718551,
+    "ecart": -3.141499119429363,
     "non_significatif": false
    },
    "valeur_totale": {
-    "lecture": "défavorable, robuste"
+    "lecture": "toujours négatif, non robuste"
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.004497652528840199,
+    "ecart": -0.0039833164114827235,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "favorable",
-    "ecart": 0.0030431082992466375,
+    "ecart": 0.002477206640406193,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -1.6412177101515417,
+    "ecart": -1.512495829678375,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": -1.5727145450668658,
-    "non_significatif": false
+    "ecart": 0.0,
+    "non_significatif": true
    }
   },
   "C|taux_servi_marge": {
    "existant": {
     "lecture": "favorable",
-    "ecart": 7.321622466902055,
+    "ecart": 3.143012737538702,
     "non_significatif": false
    },
    "affaires_nouvelles": {
-    "lecture": "neutre",
-    "ecart": -1.3135477823479091,
+    "lecture": "défavorable",
+    "ecart": -1.8870444395702008,
     "non_significatif": false
    },
    "valeur_totale": {
-    "lecture": "toujours positif, non robuste"
+    "lecture": "change de signe selon les hypothèses"
    },
    "rentabilite": {
-    "lecture": "favorable",
-    "ecart": 0.0060439322922774125,
+    "lecture": "neutre",
+    "ecart": -0.00010590432429045948,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "défavorable",
-    "ecart": -0.0009878794841044602,
+    "ecart": -0.0005201222572489119,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "défavorable",
-    "ecart": 24.810411579040665,
+    "ecart": 21.41196052861511,
     "non_significatif": false
    },
    "capital_ouverture": {
-    "lecture": "favorable",
-    "ecart": -4.756719529110265,
-    "non_significatif": false
+    "lecture": "neutre",
+    "ecart": 0.0,
+    "non_significatif": true
    }
   },
   "C|liquidite_defensive": {
    "existant": {
     "lecture": "favorable",
-    "ecart": 2.770280327846899,
+    "ecart": 3.1204843987947006,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": 0.18124408682320559,
+    "ecart": 0.5638671345626955,
     "non_significatif": true
    },
    "valeur_totale": {
     "lecture": "toujours positif, non robuste"
    },
    "rentabilite": {
-    "lecture": "défavorable",
-    "ecart": -0.0051015774491441485,
+    "lecture": "neutre",
+    "ecart": -0.0020392236932156166,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "défavorable",
-    "ecart": -0.0010485778897244215,
+    "ecart": -0.000682467866446304,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -2.2105749724327692,
+    "ecart": -2.1093103528576442,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": 1.7100020722918678,
-    "non_significatif": false
+    "ecart": 0.0,
+    "non_significatif": true
    }
   },
   "C|taux_servi_competitif_preservant": {
    "existant": {
     "lecture": "défavorable",
-    "ecart": -12.872534450779195,
+    "ecart": -9.705673613455186,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "défavorable",
-    "ecart": -4.5982947521302036,
+    "ecart": -3.6798792282618527,
     "non_significatif": false
    },
    "valeur_totale": {
-    "lecture": "défavorable, robuste"
+    "lecture": "toujours négatif, non robuste"
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.007253043144045235,
+    "ecart": -0.004557731264272058,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "favorable",
-    "ecart": 0.0030809495850234007,
+    "ecart": 0.002476546339409959,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -1.6983989666384607,
+    "ecart": -1.5429300976634313,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": 0.1923889420742988,
+    "ecart": 0.0,
     "non_significatif": true
    }
   },
   "C|distribution_retention": {
    "existant": {
     "lecture": "neutre",
-    "ecart": -1.5860174812579912,
+    "ecart": -1.3034161578862695,
     "non_significatif": false
    },
    "affaires_nouvelles": {
     "lecture": "neutre",
-    "ecart": -0.3707822305159151,
+    "ecart": -0.3255339483139034,
     "non_significatif": false
    },
    "valeur_totale": {
@@ -1081,23 +1081,23 @@
    },
    "rentabilite": {
     "lecture": "défavorable",
-    "ecart": -0.008568503781605147,
+    "ecart": -0.00857975551125753,
     "non_significatif": false
    },
    "competitivite": {
     "lecture": "neutre",
-    "ecart": 8.458997295186354e-06,
+    "ecart": 6.3114945060009815e-06,
     "non_significatif": false
    },
    "liquidite": {
     "lecture": "neutre",
-    "ecart": -0.33196374231944104,
+    "ecart": -0.19280167018031236,
     "non_significatif": false
    },
    "capital_ouverture": {
     "lecture": "neutre",
-    "ecart": 0.39308428829789577,
-    "non_significatif": false
+    "ecart": 0.0,
+    "non_significatif": true
    }
   }
  }
