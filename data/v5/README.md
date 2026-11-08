@@ -26,6 +26,6 @@ Dans `conventions/conventions.json`, le statut **hypothèse** désigne un choix 
 
 ## Conditions de réutilisation
 
-- **Données EIOPA** (courbe sans risque et LTAS, `marche/`) : réutilisation autorisée avec mention de la source. Source: EIOPA - European Insurance and Occupational Pensions Authority. This document has been drafted using material downloaded from EIOPA website. EIOPA does not endorse this publication and in no way is liable for copyright or other intellectual property rights infringements nor for any damages caused to third-parties through this publication.
+- **Données EIOPA** (courbe sans risque et LTAS, `marche/`) : réutilisation autorisée avec mention de la source. Source: EIOPA - European Insurance and Occupational Pensions Authority, https://eiopa.europa.eu/. This document has been drafted using material downloaded from EIOPA website. EIOPA does not endorse this publication and in no way is liable for copyright or other intellectual property rights infringements nor for any damages caused to third-parties through this publication.
 - **Aucune donnée d'indice de taux de l'État** n'est utilisée ni redistribuée : le spread des obligations est une hypothèse construite à partir des seules publications de l'EIOPA.
 - **Publications de place** (ACPR, France Assureurs, presse) : seuls des chiffres agrégés sont cités, avec leur source, dans `conventions/`, `profils/` et `collecte/`.

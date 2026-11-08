@@ -254,7 +254,7 @@ fr = [("Référence des assurés", "proxy fictif ; écart entre lissages 3 et 10
        + " ; avec le bloc unique : " + ", ".join(f"{f(-dv(p, 'structure_bloc_unique'))} ({p})" for p in N)),
       ("Spread", "élargissement instantané de 100 pb : " + ", ".join(f"{f(dv(p, 'spread_plus_100'))} ({p})" for p in N)),
       ("Part de crédit kappa", "écart entre 0,55 et 1 : " + ", ".join(f"{f(q(p, 'credit_kappa_55')['valeur'] - q(p, 'credit_kappa_100')['valeur'])} ({p})" for p in N)),
-      ("Probabilité réelle de défaut souverain", "historique d'entreprises, rapport de 30 avec le risque neutre contre 2 publié"),
+      ("Probabilité réelle de défaut", f"taux historique d'entreprises notées comme le portefeuille ; rapport d'environ {f(cmp_['rapport_pd_moyennes'], 0)} avec le risque neutre (section 2.4), contre {f(cmp_['rapport_publie_zone_euro'], 0)} publié pour les souverains de la zone euro"),
       ("Indicateur prudentiel", "sans mesure transitoire, ajustement symétrique nul, spread ventilé selon la place, fonds excédentaires simplifiés"),
       ("Données de place manquantes", "ACPR n° 185 (moins-values 2026, composition des fonds propres et du SCR), quartiles de rachat du n° 179")]
 A("| Hypothèse | Pourquoi elle compte |\n| --- | --- |")

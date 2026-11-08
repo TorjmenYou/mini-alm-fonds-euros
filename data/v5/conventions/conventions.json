@@ -369,7 +369,7 @@
   "absence_de_double_comptage": "Le taux observé de 2025 est un taux total. Il est pris comme structurel parce que, pour l'assureur moyen, l'écart entre taux servi et référence est resté dans la zone neutre de la loi dynamique ([-1 point, +1 point] dans les paramètres centraux) : la composante dynamique de 2025 est nulle. Ce n'est plus vrai avec le corridor maximal de l'ONC (zone neutre commençant à 0) : dans cette sensibilité, une partie du taux observé serait comptée deux fois."
  },
  "calibration_kappa": {
-  "_regle": "Part du spread traitée comme perte de défaut en risque neutre (le reste est une perte lissée, hors défaut). Hypothèse : 0,7 au centre ; bornes 0,55 et 1 testées en sensibilité. Elle n'est plus recoupée avec des cotations de marché : le spread des obligations est lui-même une hypothèse.",
+  "_regle": "Part du spread traitée comme perte de défaut en risque neutre (le reste est une perte lissée, hors défaut). Hypothèse : 0,7 au centre ; bornes 0,55 et 1 testées en sensibilité. Elle n'est plus recoupée avec des cotations de marché : le spread des obligations est lui-même une hypothèse. Ce n'est pas une estimation du risque de défaut des émetteurs, souverains ou entreprises : kappa répartit seulement le spread hypothétique entre une perte par défaut et une perte hors défaut.",
   "central": 0.7,
   "bas": 0.55,
   "haut": 1.0,

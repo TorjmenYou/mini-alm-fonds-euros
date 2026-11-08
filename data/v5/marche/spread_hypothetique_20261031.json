@@ -116,5 +116,5 @@
  },
  "interpolation": "linéaire entre les maturités entières, plate au-delà de 30 ans",
  "usage": "prix de marché des obligations détenues et rendement de réinvestissement ; en risque neutre, intensité de perte cumulée H(u) = s(u) x u (part kappa en défauts de blocs, le reste en perte lissée)",
- "conditions_de_reutilisation": "Source: EIOPA - European Insurance and Occupational Pensions Authority. This document has been drafted using material downloaded from EIOPA website. EIOPA does not endorse this publication and in no way is liable for copyright or other intellectual property rights infringements nor for any damages caused to third-parties through this publication."
+ "conditions_de_reutilisation": "Source: EIOPA - European Insurance and Occupational Pensions Authority, https://eiopa.europa.eu/. This document has been drafted using material downloaded from EIOPA website. EIOPA does not endorse this publication and in no way is liable for copyright or other intellectual property rights infringements nor for any damages caused to third-parties through this publication."
 }

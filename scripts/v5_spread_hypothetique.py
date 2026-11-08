@@ -30,7 +30,7 @@ sys.path.insert(0, str(RACINE))
 from src.v5.courbes_marche import DOSSIER_MARCHE, courbe_eiopa, provenance  # noqa: E402
 
 SERIES = ("EUR_Financials_2", "EUR_Non-Financials_2")
-ATTRIBUTION = ("Source: EIOPA - European Insurance and Occupational Pensions Authority. This document has been drafted using "
+ATTRIBUTION = ("Source: EIOPA - European Insurance and Occupational Pensions Authority, https://eiopa.europa.eu/. This document has been drafted using "
                "material downloaded from EIOPA website. EIOPA does not endorse this publication and in no way is liable for "
                "copyright or other intellectual property rights infringements nor for any damages caused to third-parties "
                "through this publication.")

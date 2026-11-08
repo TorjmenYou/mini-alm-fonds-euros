@@ -91,7 +91,7 @@ def contexte_taux(sortie):
     oblig = CourbeAvecSpread(courbe_eiopa(), spread_obligations())
     ob = [100 * oblig.taux_zc(k) for k in m]
     fig, ax = plt.subplots(figsize=(8.2, 4.6))
-    fig.subplots_adjust(left=0.08, right=0.97, top=0.88, bottom=0.2)
+    fig.subplots_adjust(left=0.08, right=0.97, top=0.88, bottom=0.235)
     ax.plot(m, sans, color=FAV, lw=2, label="EIOPA sans VA (observée)")
     ax.plot(m, avec, color=FAV, lw=2, ls=(0, (4, 2)), label="EIOPA avec VA (VA de 20 pb, observée)")
     ax.plot(m, ob, color=DEFAV, lw=2, label="Obligations du modèle : EIOPA sans VA + spread hypothétique")
@@ -105,8 +105,9 @@ def contexte_taux(sortie):
     ax.yaxis.set_major_formatter(lambda v, _: fr(v, 1))
     ax.set_title("Courbe sans risque EIOPA au 31/10/2026 et courbe des obligations du modèle")
     ax.legend(loc="lower right", fontsize=9.5)
-    note(fig, "EIOPA : taux zéro-coupon observés (composition annuelle), UFR 3,30 %, LLP 20 ans. Spread des obligations : hypothèse, moyenne de long terme\n"
-              "des spreads publiée par l'EIOPA (notation A), pas un spread de marché observé (data/v5/marche/spread_hypothetique_20261031.json). Source : EIOPA.")
+    note(fig, "EIOPA : taux zéro-coupon observés (composition annuelle), UFR 3,30 %, LLP 20 ans. Source : EIOPA, https://eiopa.europa.eu/.\n"
+              "Spread des obligations : hypothèse, moyenne de long terme des spreads publiée par l'EIOPA (notation A), pas un spread\n"
+              "de marché observé (data/v5/marche/spread_hypothetique_20261031.json).")
     return sauver(fig, sortie, "contexte_taux.png")
 
 

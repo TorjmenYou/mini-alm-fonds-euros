@@ -60,7 +60,7 @@ Le coût de l'année suit le spread à terme : il dépasse le spread comptant ta
 
 ### 2.3 Part de crédit kappa
 
-- **Hypothèse** : Part du spread traitée comme perte de défaut en risque neutre (le reste est une perte lissée, hors défaut). Hypothèse : 0,7 au centre ; bornes 0,55 et 1 testées en sensibilité. Elle n'est plus recoupée avec des cotations de marché : le spread des obligations est lui-même une hypothèse.
+- **Hypothèse** : Part du spread traitée comme perte de défaut en risque neutre (le reste est une perte lissée, hors défaut). Hypothèse : 0,7 au centre ; bornes 0,55 et 1 testées en sensibilité. Elle n'est plus recoupée avec des cotations de marché : le spread des obligations est lui-même une hypothèse. Ce n'est pas une estimation du risque de défaut des émetteurs, souverains ou entreprises : kappa répartit seulement le spread hypothétique entre une perte par défaut et une perte hors défaut.
 - **Maturité** : kappa est supposé constant sur toutes les maturités.
 
 ### 2.4 Liquidité et prime de risque
@@ -283,7 +283,7 @@ Fonds propres éligibles de niveau 1 = actif - BE - marge de risque + fonds exc�
 | Structure de défaut | écart entre 50 blocs corrélés et bloc souverain de 26 % : 0,9 (A), 2,8 (B), 4,7 (C) ; avec le bloc unique : 16,6 (A), 35,5 (B), 43,1 (C) |
 | Spread | élargissement instantané de 100 pb : −50,5 (A), −46,9 (B), −52,0 (C) |
 | Part de crédit kappa | écart entre 0,55 et 1 : 5,5 (A), 8,5 (B), 9,0 (C) |
-| Probabilité réelle de défaut souverain | historique d'entreprises, rapport de 30 avec le risque neutre contre 2 publié |
+| Probabilité réelle de défaut | taux historique d'entreprises notées comme le portefeuille ; rapport d'environ 24 avec le risque neutre (section 2.4), contre 2 publié pour les souverains de la zone euro |
 | Indicateur prudentiel | sans mesure transitoire, ajustement symétrique nul, spread ventilé selon la place, fonds excédentaires simplifiés |
 | Données de place manquantes | ACPR n° 185 (moins-values 2026, composition des fonds propres et du SCR), quartiles de rachat du n° 179 |
 

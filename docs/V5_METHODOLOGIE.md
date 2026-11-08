@@ -74,8 +74,8 @@ Comparaison chiffrée et proposition de convention centrale : `docs/V5_CONVENTIO
 
 Résultats et démonstrations : `docs/V5_SYNTHESE_AVANT_OPTIMISATION.md`. Paramètres et statuts : `data/v5/conventions/conventions.json`.
 
-- **Part de crédit.** kappa, part du spread traitée comme perte de défaut : hypothèse, 0,7 au centre, 0,55 et 1 en sensibilité.
-- **Structure de défaut.** Copule gaussienne à un facteur sur 50 blocs (rho = 0,2), qui garde la probabilité de chaque bloc et donc les prix ; défaut corrélé par bloc (souverain de 26 %) et bloc unique en stress.
+- **Part de crédit.** kappa, part du spread traitée comme perte de défaut : hypothèse, 0,7 au centre, 0,55 et 1 en sensibilité. Ce n'est pas une estimation du risque de défaut des émetteurs, souverains ou entreprises : kappa répartit seulement le spread hypothétique entre une perte par défaut et une perte hors défaut.
+- **Structure de défaut.** Copule gaussienne à un facteur sur 50 blocs (rho = 0,2), qui garde la probabilité de chaque bloc et donc les prix ; défaut corrélé par bloc (bloc souverain de 26 %) et bloc unique en stress. Ces structures testent la concentration : chaque bloc, souverain compris, garde l'intensité de défaut tirée du spread hypothétique.
 - **Probabilité réelle stochastique.** `src/v5/reel.py` : taux du générateur (prime de terme nulle), prime actions de 3 %, défauts aux probabilités réelles sur les mêmes blocs, spreads figés ; distributions d'apports, de fonds propres comptables négatifs et de liquidité, sans valorisation.
 - **Référence des assurés.** Le lissage sur 7 ans est un proxy comportemental fictif. Il est confronté à une référence composite (taux servi moyen 2025 et livret A observés, obligations à 10 ans du modèle), avec délais de transmission et coefficients de réaction paramétrés et poids fictifs.
 - **Rachat structurel.** 4,4 % au sens de l'ACPR (rachats / provisions d'ouverture), converti dans la convention du modèle (taux appliqué aux PM revalorisées nettes des décès). La loi dynamique est la même en risque neutre et en probabilité réelle ; seules les trajectoires d'entrée changent.

@@ -338,12 +338,12 @@ A(f"- **Usage dans le moteur.** Le spread sert à trois choses : (1) le prix de 
   "représentent tout le portefeuille obligataire, souverains et entreprises (simplification) ; (2) en risque neutre, une intensité de perte "
   f"qui rend tout le spread coûteux (absence d'arbitrage) : une part kappa = {f(KAPPA, 1)} passe par des défauts de blocs d'émetteurs, le reste "
   "est une perte lissée ; (3) en probabilité réelle, seule une perte de défaut historique est constatée, l'écart étant une prime de risque. "
-  "Le choc de spread de la vue prudentielle porte sur la part non souveraine. La part kappa est une hypothèse, testée de 0,55 à 1.")
+  "Le choc de spread de la vue prudentielle porte sur la part non souveraine. La part kappa est une hypothèse, testée de 0,55 à 1 ; ce n'est pas une estimation du risque de défaut des émetteurs, souverains ou entreprises : kappa répartit seulement le spread hypothétique entre une perte par défaut et une perte hors défaut.")
 A(f"- **Autres paramètres liés.** Le niveau initial de la référence des assurés ({pct(NIVEAU_REF, 2)}) est une hypothèse, au milieu de la fourchette "
   "des taux servis attendus pour 2026 (2,8 % à 2,9 %, estimations de place) ; les coupons des générations d'obligations des profils fictifs "
   "sont des hypothèses d'ordre de grandeur, sans valeur d'indice reproduite.")
 A("")
-A("Fonds propres économiques = valeur de marché des actifs - BE (- marge de risque). Leur réaction à une variation des taux dépend des "
+A("Valeur économique simplifiée = valeur de marché des actifs - BE ; fonds propres prudentiels simplifiés = actifs - BE - marge de risque + fonds excédentaires - impôts différés passifs (le SCR est une exigence de capital, pas un passif). Leur réaction à une variation des taux dépend des "
   "sensibilités respectives des obligations et des engagements, ces dernières dépendant elles-mêmes de la participation, des garanties et "
   "des rachats : ce point est mesuré par la vue prudentielle (chocs de taux), pas par le niveau des courbes.")
 A("")
