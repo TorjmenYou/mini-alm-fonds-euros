@@ -19,6 +19,7 @@ def lire(nom):
 
 
 K, R, REC, S = lire("v5_consolidation.json"), lire("v5_collecte.json"), lire("v5_reconciliation_collecte.json"), lire("v5_synthese_finale.json")
+AU = lire("v5_audit_conventions.json")
 
 
 def f(x, dec=1):
@@ -29,7 +30,8 @@ def attendus():
     a = {}
     for p in "ABC":
         a[f"indicateur sans apport {p}"] = f"{100 * K['prudentiel'][f'{p}|passive']['apport_0']['indicateur_couverture_scr']:.0f} %"
-        a[f"apport {p}"] = f(K["capital"][f"{p}|passive"]["besoin"]["1.0"])
+        besoin = K["capital"][f"{p}|passive"]["besoin"]["1.0"]
+        a[f"apport {p}"] = f(besoin) if besoin > 1e-9 else f"{p} couvre déjà son SCR simplifié sans apport"
         a[f"valeur de l'existant {p}"] = f(R["risque_neutre"][f"{p}|passive|0|0"]["valeur_existant"]["moyenne"])
     a["valeur de A avant recapitalisation"] = f(K["risque_neutre"]["A|passive|0"]["valeur_nette"])
     a["coût de la recapitalisation de A"] = f(K["risque_neutre"]["A|passive|0"]["valeur_nette"] - K["risque_neutre"]["A|passive|1.0"]["valeur_nette"])
@@ -59,6 +61,9 @@ def attendus():
     a["collecte nette place"] = f"{f(100 * REC['place_2025']['en_pct_pm_debut']['collecte_nette'], 2)} %"
     kappa = [REC["seuil_cout_capital"][p]["kappa_seuil"] for p in "ABC"]
     a["seuil de coût du capital"] = f"{f(100 * min(kappa))} % à {f(100 * max(kappa))} % par an"
+    pa = AU["participation"]
+    e = [-pa[p]["v5_1"]["ecart_valeurs_nettes"]["moyenne"] for p in "ABC"]
+    a["correction à capital égal"] = f"{f(e[0])} (A), {f(e[1])} (B) et {f(e[2])} (C)"
     return a
 
 

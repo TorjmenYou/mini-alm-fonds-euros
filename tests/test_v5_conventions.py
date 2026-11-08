@@ -17,7 +17,7 @@ from src.passif import ReferenceAssures
 from src.projection import indicateurs, projeter
 from src.stochastique import projeter_stochastique
 from src.v5 import bases, conventions as cv
-from src.v5.courbes_marche import courbe_eiopa, spread_oat
+from src.v5.courbes_marche import courbe_eiopa, spread_obligations
 from src.v5.credit import CreditSaut
 from src.v5.profils import hypotheses_profil
 from src.v5.scenarios import ScenarioCourbe
@@ -78,7 +78,7 @@ def test_saut_detention_au_prix_de_marche_rapporte_le_taux_sans_risque_en_moyenn
 
 def test_saut_rebasage_va_porte_par_la_part_lissee():
     sans_va, avec_va = courbe_eiopa(), courbe_eiopa(avec_va=True)
-    c = CreditSaut.depuis(spread_oat(), part_saut=0.8, recouvrement=0.4)
+    c = CreditSaut.depuis(spread_obligations(), part_saut=0.8, recouvrement=0.4)
     r = bases.credit_sur_base(c, "avec_va")
     for t in (1, 5, 10, 30):
         assert r.probabilite_defaut(t) == pytest.approx(c.probabilite_defaut(t), rel=1e-14)
@@ -102,9 +102,8 @@ def test_conventions_memes_prix_et_equivalent_certain_identique():
         ind = indicateurs(df)
         assert abs(ind["fuite"]) < 1e-8, code
         valeurs[code] = (ind["vm_actif_initial"], ind["be"])
-    references = {"tec": valeurs["lisse_integral"], "bootstrap": valeurs["k_lisse_bootstrap"]}  # même spread, même prix
+    ref = valeurs["lisse_integral"]  # un seul spread : mêmes prix de marché pour toutes les conventions
     for code, v in valeurs.items():
-        ref = references[conventions[code].get("spread", "tec")]
         assert v[0] == pytest.approx(ref[0], rel=1e-12) and v[1] == pytest.approx(ref[1], rel=1e-10), code
 
 
@@ -120,14 +119,14 @@ def test_saut_aucune_fuite_en_stochastique():
 
 def test_probabilite_reelle_interdit_la_valorisation_et_fige_les_spreads():
     h = cv.hypotheses_reelles(hypotheses_profil("B"), "stress_50")
-    assert h["actif"]["credit"]["perte_attendue_reelle"] == pytest.approx(0.5 * spread_oat().s(10))
+    assert h["actif"]["credit"]["perte_attendue_reelle"] == pytest.approx(0.5 * spread_obligations().s(10))
     eco = cv.scenario_reel(h)
     df = projeter(h, eco)
     with pytest.raises(ValueError):
         indicateurs(df)
     p = Portefeuille(h)
     p.annee = 7
-    assert p.courbe_obligations(courbe_eiopa()).zc(10) == pytest.approx(courbe_eiopa().zc(10) * math.exp(-spread_oat().H(10)), rel=1e-14)
+    assert p.courbe_obligations(courbe_eiopa()).zc(10) == pytest.approx(courbe_eiopa().zc(10) * math.exp(-spread_obligations().H(10)), rel=1e-14)
     assert eco.courbe(25) is eco.courbe(0)
 
 
@@ -147,7 +146,7 @@ def test_reference_sans_risque_dynamique_egale_l_ancienne_formule():
     hs = copy.deepcopy(h)
     hs["comportement"] = {"reference": "zc10_sans_risque", "ajustement": hd["comportement"]["niveau_initial"] - courbe_eiopa().taux_zc(10)}
     eco = ScenarioCourbe("ec", h["horizon_annees"], courbe_eiopa())
-    a, b = projeter(hd, eco, credit=spread_oat()), projeter(hs, eco, credit=spread_oat())
+    a, b = projeter(hd, eco, credit=spread_obligations()), projeter(hs, eco, credit=spread_obligations())
     assert np.allclose(a["taux_10ans"].to_numpy(), b["taux_10ans"].to_numpy(), rtol=0, atol=1e-15)
     assert a.loc[1, "taux_10ans"] == pytest.approx(cv.niveau_initial_central(), abs=1e-15)
 
@@ -181,5 +180,5 @@ def test_reference_independante_de_la_base_en_t0():
     for code in ("sans_risque", "taux_servi_marche", "livret_a"):
         for base in bases.BASES:
             h = cv.appliquer(hypotheses_profil("C"), code, base)
-            eco, cr = bases.equivalent_certain(h, base, spread_oat())
+            eco, cr = bases.equivalent_certain(h, base, spread_obligations())
             assert projeter(h, eco, credit=cr).loc[1, "taux_10ans"] == pytest.approx(cv.niveau_initial_central(), abs=1e-14), (code, base)

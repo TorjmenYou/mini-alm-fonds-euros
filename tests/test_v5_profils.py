@@ -67,4 +67,4 @@ def test_profils_declares_fictifs_et_statuts_presents():
     assert "FICTIFS" in d["objet"]
     for millesime, a in d["ancrages_coupons"].items():
         if not millesime.startswith("_"):
-            assert a["statut"] == "calibré" and a["observations"]
+            assert a["statut"] == "hypothèse" and "observations" not in a  # aucun rendement d'indice reproduit
