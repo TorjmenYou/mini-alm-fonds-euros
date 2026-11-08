@@ -38,6 +38,7 @@ C0, C1 = lire("v5_0", "v5_collecte.json"), lire("v5_collecte.json")
 F0, F1 = lire("v5_0", "v5_synthese_finale.json"), lire("v5_synthese_finale.json")
 R0, R1 = lire("v5_0", "v5_reconciliation_collecte.json"), lire("v5_reconciliation_collecte.json")
 AU = lire("v5_audit_conventions.json")
+B1 = lire("v5_bilans_initiaux.json")["profils"]
 SPREAD = json.loads((RACINE / "data" / "v5" / "marche" / "spread_hypothetique_20261031.json").read_text(encoding="utf-8"))
 CODES = K1["strategies"]
 PROFILS = json.loads((RACINE / "data" / "v5" / "profils" / "profils.json").read_text(encoding="utf-8"))
@@ -346,6 +347,23 @@ A("")
 A("Valeur économique simplifiée = valeur de marché des actifs - BE ; fonds propres prudentiels simplifiés = actifs - BE - marge de risque + fonds excédentaires - impôts différés passifs (le SCR est une exigence de capital, pas un passif). Leur réaction à une variation des taux dépend des "
   "sensibilités respectives des obligations et des engagements, ces dernières dépendant elles-mêmes de la participation, des garanties et "
   "des rachats : ce point est mesuré par la vue prudentielle (chocs de taux), pas par le niveau des courbes.")
+A("")
+A("### 3.3 PPB et fonds excédentaires dans la vue prudentielle\n")
+A("Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). La PPB d'ouverture entière est en outre admise "
+  "en fonds excédentaires de niveau 1, valorisée par la méthode simplifiée de la fiche technique de l'ACPR (intégration aux PM au bout de huit ans, "
+  "sortie au rythme des prestations, actualisation sur la courbe EIOPA) ; la capacité d'absorption des provisions techniques et le MCR utilisent "
+  "FDB − FE, ce qui évite de compter la même PPB deux fois (`docs/V5_METHODOLOGIE.md`, section 7). La fiche retire du montant admissible la "
+  "génération qui atteint huit ans l'exercice suivant : sous l'hypothèse de générations uniformes, le montant admis est surestimé d'environ un huitième. "
+  "Gestion passive, sans apport, V5.1 :\n")
+lignes_fe = []
+for p in N:
+    x = couverture0(K1, p)
+    fe, t1, scr = x["fonds_excedentaires"], x["fonds_propres_niveau_1"], x["scr"]
+    ppb0 = B1[p]["comptable"]["passif"]["ppb"]
+    lignes_fe.append((f"**{p}**", f(ppb0), f(fe), pct(fe / ppb0, 0), pct(fe / t1, 0), pct(t1 / scr, 1), pct((t1 - fe) / scr, 1)))
+tableau(["Profil", "PPB comptable admise", "Fonds excédentaires (FE)", "FE / PPB comptable", "FE / fonds propres de niveau 1", "Couverture du SCR simplifié", "Couverture sans FE"], lignes_fe)
+A("Lecture : C ne couvre son SCR simplifié sans apport que grâce aux fonds excédentaires ; pour A, ils constituent presque tous les fonds propres de niveau 1. "
+  "Approximation à garder en tête : admission intégrale, sans déduction de la génération arrivant à échéance ni test d'éligibilité, montant figé dans tous les chocs.")
 A("")
 
 # 4. Avant / après

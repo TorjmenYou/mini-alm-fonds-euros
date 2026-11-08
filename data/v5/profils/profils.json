@@ -48,7 +48,7 @@
   },
   "passif": {
    "chargements_encours": 0.0063,
-   "statut_chargements": "observé (marché) : 0,63 %, ACPR, Analyses et synthèses n° 180 (2026), exercice 2025"
+   "statut_chargements": "niveau de place observé (0,63 %, ACPR, Analyses et synthèses n° 180 (2026), exercice 2025), appliqué aux trois assureurs fictifs"
   },
   "frais_gestion_statut": "fictif : 0,4 % de l'encours (valeur des V1 à V4)",
   "participation_technique": {
@@ -254,8 +254,8 @@
   }
  },
  "statuts_des_parametres_de_profil": {
-  "observé (marché)": "PPB de B (4,0 % des provisions, ACPR n° 180), taux technique de B (0,32 %), taux servi initial de B (2,63 %), chargements (0,63 %)",
-  "calibré": "coupons par génération, spread, taux de référence des assurés",
+  "niveau de place repris (agrégats observés, ACPR n° 180)": "PPB de B (4,0 % des provisions), taux technique de B (0,32 %), taux servi initial de B (2,63 %), chargements des trois profils (0,63 %) ; B reste un assureur entièrement fictif : ces paramètres sont des moyennes de place, pas les observations d'un assureur réel",
+  "hypothèse": "coupons par génération (ordres de grandeur, sans valeur d'indice), spread des obligations (moyenne de long terme publiée par l'EIOPA, notation A), niveau initial de la référence des assurés (2,85 %), répartition uniforme de la PPB d'ouverture sur huit générations",
   "fictif": "tout le reste : PM, répartition des générations et des maturités, réserves de A et C, fonds propres, allocations, plus-values actions, garanties de A et C, taux servis de A et C"
  }
 }

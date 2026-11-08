@@ -156,6 +156,18 @@ La courbe sans risque de l'EIOPA au 31/10/2026 (zéro-coupon, dérivée des swap
 
 Valeur économique simplifiée = valeur de marché des actifs - BE ; fonds propres prudentiels simplifiés = actifs - BE - marge de risque + fonds excédentaires - impôts différés passifs (le SCR est une exigence de capital, pas un passif). Leur réaction à une variation des taux dépend des sensibilités respectives des obligations et des engagements, ces dernières dépendant elles-mêmes de la participation, des garanties et des rachats : ce point est mesuré par la vue prudentielle (chocs de taux), pas par le niveau des courbes.
 
+### 3.3 PPB et fonds excédentaires dans la vue prudentielle
+
+Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). La PPB d'ouverture entière est en outre admise en fonds excédentaires de niveau 1, valorisée par la méthode simplifiée de la fiche technique de l'ACPR (intégration aux PM au bout de huit ans, sortie au rythme des prestations, actualisation sur la courbe EIOPA) ; la capacité d'absorption des provisions techniques et le MCR utilisent FDB − FE, ce qui évite de compter la même PPB deux fois (`docs/V5_METHODOLOGIE.md`, section 7). La fiche retire du montant admissible la génération qui atteint huit ans l'exercice suivant : sous l'hypothèse de générations uniformes, le montant admis est surestimé d'environ un huitième. Gestion passive, sans apport, V5.1 :
+
+| Profil | PPB comptable admise | Fonds excédentaires (FE) | FE / PPB comptable | FE / fonds propres de niveau 1 | Couverture du SCR simplifié | Couverture sans FE |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| **A** | 25,0 | 14,7 | 59 % | 93 % | 13,0 % | 0,9 % |
+| **B** | 40,0 | 17,0 | 43 % | 24 % | 73,7 % | 55,7 % |
+| **C** | 20,0 | 8,4 | 42 % | 10 % | 104,3 % | 94,2 % |
+
+Lecture : C ne couvre son SCR simplifié sans apport que grâce aux fonds excédentaires ; pour A, ils constituent presque tous les fonds propres de niveau 1. Approximation à garder en tête : admission intégrale, sans déduction de la génération arrivant à échéance ni test d'éligibilité, montant figé dans tous les chocs.
+
 ## 4. Avant et après : V5.0 publiée et V5.1
 
 Chaque version avec son propre capital et ses propres données de marché. La colonne « dont participation » reprend l'effet de la correction mesuré à capital et marché identiques (section 2.3) ; le reste de l'écart vient des données de marché et du recalibrage du capital.
