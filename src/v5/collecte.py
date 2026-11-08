@@ -21,7 +21,7 @@ import numpy as np
 
 from ..stochastique import projeter_stochastique
 from . import bases
-from .strategies import impots_par_scenario
+from .strategies import impots_des_trajectoires
 
 FICHIER = Path(__file__).resolve().parents[2] / "data" / "v5" / "collecte" / "collecte.json"
 
@@ -62,9 +62,8 @@ def projection_risque_neutre(h, credit, base="sans_va", n=1000):
     tr, ps = res["trajectoires"], res["par_scenario"]
     T = h["horizon_annees"]
     ans = list(range(1, T + 1))
-    resultat = _lecture(tr, "resultat_assureur")[ans].to_numpy()
     defl = _lecture(tr, "deflateur")[ans].to_numpy()
-    va_impots = (impots_par_scenario(resultat, h["fiscalite"]["unite_monetaire_eur"]) * defl).sum(axis=1)
+    va_impots = (impots_des_trajectoires(tr, h, ans) * defl).sum(axis=1)
     apport0 = h["bilan_initial"].get("apport_initial", 0.0)
     va_primes = ps["va_primes"].to_numpy() if "va_primes" in ps else np.zeros(len(ps))
     sortie = {

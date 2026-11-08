@@ -72,6 +72,19 @@ def impots_par_scenario(resultats, unite):
     return impots
 
 
+def impots_des_trajectoires(tr, h, annees):
+    """Impôt par scénario et par année (scénarios x annees).
+
+    Convention par défaut : impôt calculé après coup sur les résultats annuels avant impôt, et déduit
+    de la valeur (il ne sort pas de l'actif pendant la projection). Variante « impôt dans la
+    projection » (h["fiscalite"]["impot_dans_projection"]) : l'impôt est déjà payé dans la projection
+    (colonne « impots ») ; on le relit, pour ne le compter qu'une fois."""
+    if "impots" in tr.columns:
+        return tr["impots"].unstack("annee")[annees].to_numpy()
+    resultat = tr["resultat_assureur"].unstack("annee")[annees].to_numpy()
+    return impots_par_scenario(resultat, h["fiscalite"]["unite_monetaire_eur"])
+
+
 def resume_risque_neutre(h, credit, base="sans_va", n=1000, valeurs=False, graines=None):
     """Valeur nette risque neutre et indicateurs des assurés et de la liquidité.
     valeurs=True ajoute « _valeurs_nettes » (valeur nette par scénario, pour les écarts appariés) ;
@@ -85,9 +98,8 @@ def resume_risque_neutre(h, credit, base="sans_va", n=1000, valeurs=False, grain
     lecture = lambda col: tr[col].unstack("annee")  # noqa: E731
     ans = list(range(1, 11))
     T = h["horizon_annees"]
-    resultat = lecture("resultat_assureur")[list(range(1, T + 1))].to_numpy()
     defl = lecture("deflateur")[list(range(1, T + 1))].to_numpy()
-    impots = impots_par_scenario(resultat, h["fiscalite"]["unite_monetaire_eur"])
+    impots = impots_des_trajectoires(tr, h, list(range(1, T + 1)))
     va_impots = (impots * defl).sum(axis=1)
     rachat, servi, ref = lecture("taux_rachat"), lecture("taux_servi"), lecture("taux_10ans")
     pm, prest, pmv = lecture("pm"), lecture("prestations"), lecture("pmv_obligataires_realisees")
@@ -119,7 +131,7 @@ def resume_reel(h, tr, rendement_exige):
     lecture = lambda col: tr[col].unstack("annee")  # noqa: E731
     ans = list(range(1, 11))
     res = lecture("resultat_assureur")[ans].to_numpy()
-    impots = impots_par_scenario(res, h["fiscalite"]["unite_monetaire_eur"])
+    impots = impots_des_trajectoires(tr, h, ans)
     net = res - impots
     fp = lecture("fonds_propres")
     fp_debut = fp[[a - 1 for a in ans]].to_numpy()
