@@ -86,8 +86,7 @@ def main():
     coll = lire("v5/collecte/collecte.json")
     place = lire("v5/conventions/marche_acpr.json")
     prov = lire("v5/marche/eiopa_rfr_20261031_provenance.json")
-    spread = lire("v5/marche/spread_oat_20261104.json")
-    spread_zc = lire("v5/marche/spread_oat_20261104_zc.json")
+    spread = lire("v5/marche/spread_hypothetique_20261031.json")
 
     A("# V5 : registre des données et des hypothèses\n")
     A("Généré par `scripts/v5_registre_hypotheses.py` à partir des seuls fichiers de `data/` : chaque valeur, chaque statut et chaque source sont recopiés tels qu'ils figurent dans ces fichiers. "
@@ -105,13 +104,16 @@ def main():
       f"Paramètres : UFR {texte(prov['parametres_sans_va']['UFR'])} %, LLP {prov['parametres_sans_va']['LLP']} ans, convergence {prov['parametres_sans_va']['Convergence']} ans, ajustement pour risque de crédit {prov['parametres_sans_va']['CRA']} pb, "
       f"correction pour volatilité {prov['parametres_avec_va']['VA']} pb (alpha {texte(prov['parametres_sans_va']['alpha'])} sans VA, {texte(prov['parametres_avec_va']['alpha'])} avec VA). Fichier : `data/v5/marche/eiopa_rfr_20261031_eur.csv`.\n")
     tableau(A, ["Maturité", "Sans VA", "Avec VA"], [(f"{m} an{'s' if m > 1 else ''}", pct(float(courbe[m]["taux_sans_va"])), pct(float(courbe[m]["taux_avec_va"]))) for m in (1, 2, 5, 10, 20, 30, 50) if m in courbe])
-    tec = spread["donnees_observees"]["TEC_04_11_2026"]
-    A(f"**Taux de l'État français** (observé) : TEC du 04/11/2026, {spread['donnees_observees']['source_TEC']}.\n")
-    tableau(A, ["Maturité"] + [f"{m} ans" for m in tec], [["TEC"] + [pct(v) for v in tec.values()],
-                                                          ["Spread par bootstrap du TEC (convention centrale des résultats finaux)"] + [pct(spread_zc["spread_continu"][m]) for m in tec],
-                                                          ["Spread avec le TEC pris comme zéro-coupon (convention initiale)"] + [pct(spread["spread_continu"][m]) for m in tec]])
-    A(f"Spreads en composition continue au-dessus de la courbe EIOPA sans VA. **Convention centrale** (crédit `k70_granulaire_correle`, résultats finaux) : spread par bootstrap ({spread_zc['statut']}) : {spread_zc['regle']}. "
-      f"**Convention initiale** (bilans initiaux et premières comparaisons de conventions, `docs/V5_CONVENTIONS.md`) : {spread['regle']} ({spread['statut']}). {spread['ecart_de_dates']}. Interpolation : {spread['interpolation']}. Usage : {spread['usage']}.\n")
+    pub = spread["donnees_publiees"]
+    mats = ("1", "2", "5", "10", "15", "20", "30")
+    A(f"**Spread des obligations détenues** ({spread['statut']}) : {spread['objet']} {spread['justification']}\n")
+    tableau(A, ["Maturité"] + [f"{m} an{'s' if m != '1' else ''}" for m in mats],
+            [["LTAS EIOPA, obligations financières notées A (observé)"] + [pct(pub["EUR_Financials_2"][m]) for m in mats],
+             ["LTAS EIOPA, obligations non financières notées A (observé)"] + [pct(pub["EUR_Non-Financials_2"][m]) for m in mats],
+             ["Spread hypothétique du modèle (composition continue)"] + [pct(spread["spread_continu"][m]) for m in mats]])
+    A(f"Règle : {spread['regle']}. Source des paramètres publiés : {pub['source']} ; empreinte SHA-256 de l'archive `{pub['sha256_archive']}`. "
+      f"Interpolation : {spread['interpolation']}. Usage : {spread['usage']}. Aucune donnée d'indice de taux souverain n'est utilisée.\n")
+    A(f"**Conditions de réutilisation des données EIOPA** : {spread['conditions_de_reutilisation']}\n")
 
     # 2. Profils --------------------------------------------------------------------------------
     A("## 2. Profils d'assureur (fictifs)\n")
@@ -130,7 +132,7 @@ def main():
     A("**Statut des paramètres de profil** : " + " ; ".join(f"*{k}* : {v}" for k, v in prof["statuts_des_parametres_de_profil"].items()) + ".\n")
     anc = prof["ancrages_coupons"]
     A(f"**Coupons d'achat par génération** : {anc['_methode']}\n")
-    tableau(A, ["Génération", "Coupon", "Statut", "Observations"], [(k.replace("_", "-"), pct(v["coupon"]), v["statut"], v["observations"]) for k, v in anc.items() if not k.startswith("_")])
+    tableau(A, ["Génération", "Coupon", "Statut"], [(k.replace("_", "-"), pct(v["coupon"]), v["statut"]) for k, v in anc.items() if not k.startswith("_")])
     if "_prime_achat" in anc:
         A(f"Prime d'achat : {pct(anc['_prime_achat']['valeur'])} ({anc['_prime_achat']['statut']}) : {anc['_prime_achat']['justification']}\n")
     com = prof["commun"]
@@ -138,7 +140,9 @@ def main():
     A(f"- crédit : {com['credit']['statut']} ;")
     A(f"- référence des assurés (ancienne convention) : {com['comportement']['statut']} ;")
     A(f"- chargements sur encours : {pct(com['passif']['chargements_encours'])}, {com['passif']['statut_chargements']} ;")
-    A(f"- frais de gestion : {com['frais_gestion_statut']}.\n")
+    A(f"- frais de gestion : {com['frais_gestion_statut']} ;")
+    pt = com["participation_technique"]
+    A(f"- participation aux résultats, composante technique : l'assureur garde {pct(pt['part_assureur'], 0)} du solde technique créditeur ; {pt['statut']}.\n")
 
     # 3. Moteur hérité --------------------------------------------------------------------------
     A("## 3. Paramètres du moteur hérités des V1 à V4\n")
@@ -151,7 +155,7 @@ def main():
         ("Rachat structurel des V1 à V4 (remplacé en V5)", pct(pa["taux_rachat_structurel"]), "hypothèse V1 à V4"),
         ("Loi de rachat dynamique (paliers, ACPR 2013)", f"alpha {pct(rd['alpha'])}, beta {pct(rd['beta'])}, gamma {pct(rd['gamma'])}, delta {pct(rd['delta'])}, RC max {pct(rd['rc_max'], 0)}, RC min {pct(rd['rc_min'], 0)}", "paramètres centraux fixés dans les V1 à V4 ; corridors ONC de 2013 en sensibilité"),
         ("Écart du taux servi visé à la référence (gestion passive)", pct(st["ecart_taux_cible"]), "fictif (V1 à V4)"),
-        ("Participation minimale aux produits financiers", pct(st["participation_minimale"], 0), "règle réglementaire, simplifiée (produits afférents aux provisions)"),
+        ("Participation minimale aux produits financiers", pct(st["participation_minimale"], 0), "règle réglementaire, simplifiée (produits afférents aux provisions) ; en V5.1, complétée par la composante technique (section 2)"),
         ("Durée maximale de la PPB, reprise annuelle maximale, plafond", f"{st['duree_max_ppb_ans']} ans, {pct(st['reprise_ppb_max_par_an'], 0)}, {pct(st['plafond_ppb_pct_pm'], 0)} de la PM", "durée réglementaire ; reprise et plafond fictifs"),
         ("Générateur de scénarios", f"Hull-White a = {texte(g['hw_a'])}, sigma = {texte(g['hw_sigma'])} ; volatilité actions {pct(g['vol_actions'], 0)} ; {f(g['nb_scenarios'], 0)} scénarios, graine {g['graine']}", "fictif (V1 à V4), calé sur la courbe de la base"),
         ("Rendement de dividende des actions", pct(base["economie"]["rendement_dividende_actions"]), "fictif (V1 à V4)"),
@@ -160,7 +164,7 @@ def main():
     # 4. Conventions ----------------------------------------------------------------------------
     A("## 4. Conventions de crédit, de comportement et de probabilité réelle\n")
     A(f"Fichier `data/v5/conventions/conventions.json` ({conv['objet'].rstrip('.')}). Comparaison chiffrée : `docs/V5_CONVENTIONS.md`. Chaque ligne porte le statut écrit dans le fichier.\n")
-    A("**Convention centrale des résultats finaux** (`scripts/v5_consolidation.py`, `scripts/v5_collecte.py`) : crédit `k70_granulaire_correle` (70 % du spread en défaut par saut, 50 blocs corrélés, recouvrement 40 %, spread par bootstrap) ; référence des assurés `taux_servi_marche` (taux sans risque 10 ans lissé sur 7 ans, niveau initial 2,88 %) ; rachat structurel converti du taux ACPR de 4,4 % ; valorisation sur la base sans VA, vue prudentielle sur la base avec VA. Les autres lignes sont des sensibilités.\n")
+    A(f"**Convention centrale des résultats finaux** (`scripts/v5_consolidation.py`, `scripts/v5_collecte.py`) : crédit `k70_granulaire_correle` (70 % du spread en défaut par saut, 50 blocs corrélés, recouvrement 40 %, spread hypothétique de la section 1) ; référence des assurés `taux_servi_marche` (taux sans risque 10 ans lissé sur 7 ans, niveau initial {pct(conv['references_assures']['_niveau_initial']['valeur'], 2)}) ; rachat structurel converti du taux ACPR de 4,4 % ; valorisation sur la base sans VA, vue prudentielle sur la base avec VA. Les autres lignes sont des sensibilités.\n")
     tableau(A, ["Entrée", "Valeurs", "Statut", "Source ou règle"], lignes_statut(conv))
 
     # 5. Stratégies -----------------------------------------------------------------------------

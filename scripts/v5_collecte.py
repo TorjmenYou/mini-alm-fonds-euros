@@ -1,7 +1,10 @@
 """V5 : stratégies ALM avec collecte nouvelle sensible au taux servi relatif.
 
-Usage : python scripts/v5_collecte.py [--n 1000] [--processus 2]
+Usage : python scripts/v5_collecte.py [--n 1000] [--processus 2] [--variante reference]
 Écrit resultats/v5_collecte.json (reprise possible depuis le cache resultats/cache_v5/collecte_n{n}/).
+Avec --variante (src/v5/variantes_audit.py, autre que « reference ») : apports lus dans
+resultats/v5_audit_consolidation_<variante>.json, résultats écrits dans
+resultats/v5_audit_collecte_<variante>.json, mêmes scénarios.
 
 Base de capital commune à 100 % du SCR simplifié : chaque stratégie garde l'apport de
 resultats/v5_consolidation.json, calculé sur l'existant en extinction (frontière des contrats) ; la
@@ -32,34 +35,37 @@ from src.gse import demi_intervalle  # noqa: E402
 from src.v5 import bases, collecte as col, conventions as cv, strategies as stg  # noqa: E402
 from src.v5.profils import hypotheses_profil  # noqa: E402
 from src.v5.reel import projeter_reel_stochastique  # noqa: E402
+from src.v5.variantes_audit import VARIANTES, appliquer_variante  # noqa: E402
 
 CREDIT = "k70_granulaire_correle"
 REFERENCE = "taux_servi_marche"
 STRATEGIES_HYPOTHESES = ("passive", "taux_servi_marge", "taux_servi_competitif")
 
 
-def hypotheses(p, code, apport, loi=None, c0=0.0, eta=0.0, remplacements=None):
+def hypotheses(p, code, apport, loi=None, c0=0.0, eta=0.0, remplacements=None, variante="reference"):
     h = cv.appliquer(hypotheses_profil(p), REFERENCE, "sans_va", rachat_structurel="acpr", loi_rachat=loi)
     h = stg.appliquer_strategie(h, code, apport)
+    if variante != "reference":
+        h = appliquer_variante(h, variante)
     return col.appliquer_collecte(h, c0, eta, **(remplacements or {})) if c0 else h
 
 
-def t_rn(p, code, apport, n, c0, eta, loi=None, remplacements=None):
-    h = hypotheses(p, code, apport, loi, c0, eta, remplacements)
+def t_rn(p, code, apport, n, c0, eta, loi=None, remplacements=None, variante="reference"):
+    h = hypotheses(p, code, apport, loi, c0, eta, remplacements, variante)
     x = col.projection_risque_neutre(h, cv.credit_valorisation(CREDIT, "sans_va", h["horizon_annees"]), n=n)
     ind = col.indicateurs_risque_neutre(x)
     x.pop("trajectoires")
     return {"par_scenario": x, "indicateurs": ind}
 
 
-def t_diag(p, code, apport, n, c0, eta):
-    h = hypotheses(p, code, apport, None, c0, eta)
+def t_diag(p, code, apport, n, c0, eta, variante="reference"):
+    h = hypotheses(p, code, apport, None, c0, eta, None, variante)
     x = col.projection_risque_neutre(h, cv.credit_valorisation(CREDIT, "sans_va", h["horizon_annees"]), n=n)
     return col.diagnostic_garanties(x)
 
 
-def t_reel(p, code, apport, n, c0, eta):
-    h = cv.hypotheses_reelles_stochastiques(hypotheses(p, code, apport, None, c0, eta))
+def t_reel(p, code, apport, n, c0, eta, variante="reference"):
+    h = cv.hypotheses_reelles_stochastiques(hypotheses(p, code, apport, None, c0, eta, None, variante))
     g, _ = bases.gse(h, "sans_va", None, n=n)
     tr = projeter_reel_stochastique(h, g, cv.credit_reel(CREDIT, "central", h["horizon_annees"]), cv.prime_actions_reelle())
     r = stg.resume_reel(h, tr, stg.charger()["rentabilite_reelle"]["rendement_exige"]["valeur"])
@@ -113,26 +119,33 @@ def main():
     ap.add_argument("--n", type=int, default=1000)
     ap.add_argument("--processus", type=int, default=2)
     ap.add_argument("--cache", default=str(RACINE / "resultats" / "cache_v5"))
-    ap.add_argument("--sortie", default=str(RACINE / "resultats" / "v5_collecte.json"))
+    ap.add_argument("--sortie", default=None)
+    ap.add_argument("--variante", default="reference", choices=VARIANTES)
     a = ap.parse_args()
+    variante = a.variante
+    if a.sortie is None:
+        a.sortie = str(RACINE / "resultats" / ("v5_collecte.json" if variante == "reference" else f"v5_audit_collecte_{variante}.json"))
     d = col.charger()
     codes = list(stg.charger()["strategies"])
     intensites = {k: v["c0"] for k, v in d["intensites"].items()}
     elasticites = {k: v["eta"] for k, v in d["elasticites"].items()}
     c0_central = intensites["centrale"]
-    conso = json.loads((RACINE / "resultats" / "v5_consolidation.json").read_text(encoding="utf-8"))
+    fichier_conso = "v5_consolidation.json" if variante == "reference" else f"v5_audit_consolidation_{variante}.json"
+    conso = json.loads((RACINE / "resultats" / fichier_conso).read_text(encoding="utf-8"))
     apports = {(p, c): conso["capital"][f"{p}|{c}"]["besoin"]["1.0"] for p in "ABC" for c in codes}
-    cache = Cache(Path(a.cache) / f"collecte_n{a.n}")
+    cache = Cache(Path(a.cache) / (f"collecte_n{a.n}" + ("" if variante == "reference" else f"_{variante}")))
     sortie = {"n_scenarios": a.n, "credit": CREDIT, "reference": REFERENCE, "strategies": codes, "intensites": intensites,
               "elasticites": elasticites, "base_capital": "apport propre à chaque stratégie pour 100 % du SCR simplifié (existant en extinction)",
               "apports": {cle(p, c): k for (p, c), k in apports.items()}, "risque_neutre": {}, "ecarts": {}, "reel": {},
               "sensibilite_onc_max": {}, "sensibilites_collecte": {}, "diagnostic_garanties": {}, "controles": {}}
+    if variante != "reference":
+        sortie["variante"] = variante
 
     with ProcessPoolExecutor(max_workers=a.processus) as ex:
         # 1. Risque neutre
         print("1. risque neutre", flush=True)
-        taches = {cle("rn", p, c, 0, 0): (t_rn, (p, c, apports[(p, c)], a.n, 0.0, 0.0)) for p in "ABC" for c in codes}
-        taches.update({cle("rn", p, c, c0, eta): (t_rn, (p, c, apports[(p, c)], a.n, c0, eta))
+        taches = {cle("rn", p, c, 0, 0): (t_rn, (p, c, apports[(p, c)], a.n, 0.0, 0.0, None, None, variante)) for p in "ABC" for c in codes}
+        taches.update({cle("rn", p, c, c0, eta): (t_rn, (p, c, apports[(p, c)], a.n, c0, eta, None, None, variante))
                        for p in "ABC" for c in codes for c0 in intensites.values() for eta in elasticites.values()})
         rn = executer(ex, cache, taches)
         ecart_decomposition, fuite = 0.0, []
@@ -171,7 +184,7 @@ def main():
         print("1 bis. hypothèses de collecte", flush=True)
         sens = {k: v["remplacements"] for k, v in d["sensibilites"].items() if not k.startswith("_")}
         grille_s = [(c0, eta) for c0 in (intensites["centrale"], intensites["forte"]) for eta in (elasticites["moderee"], elasticites["soutenue"])]
-        taches = {cle("hyp", s, p, c, c0, eta): (t_rn, (p, c, apports[(p, c)], a.n, c0, eta, None, rempl))
+        taches = {cle("hyp", s, p, c, c0, eta): (t_rn, (p, c, apports[(p, c)], a.n, c0, eta, None, rempl, variante))
                   for s, rempl in sens.items() for p in "ABC" for c in STRATEGIES_HYPOTHESES for c0, eta in grille_s}
         hyp = executer(ex, cache, taches)
         for s in sens:
@@ -188,22 +201,22 @@ def main():
         del rn, hyp
 
         # 1 ter. Répartition des garanties entre l'existant et les contrats nouveaux
-        taches = {cle("diag", p, c): (t_diag, (p, c, apports[(p, c)], a.n, c0_central, elasticites["moderee"])) for p in "ABC" for c in ("passive", "taux_servi_marge")}
+        taches = {cle("diag", p, c): (t_diag, (p, c, apports[(p, c)], a.n, c0_central, elasticites["moderee"], variante)) for p in "ABC" for c in ("passive", "taux_servi_marge")}
         for k, v in executer(ex, cache, taches).items():
             sortie["diagnostic_garanties"][k.split("|", 1)[1]] = v
 
         # 2. Probabilité réelle (intensité centrale)
         print("2. probabilité réelle", flush=True)
-        taches = {cle("reel2", p, c, 0, 0): (t_reel, (p, c, apports[(p, c)], a.n, 0.0, 0.0)) for p in "ABC" for c in codes}
-        taches.update({cle("reel2", p, c, c0_central, eta): (t_reel, (p, c, apports[(p, c)], a.n, c0_central, eta))
+        taches = {cle("reel2", p, c, 0, 0): (t_reel, (p, c, apports[(p, c)], a.n, 0.0, 0.0, variante)) for p in "ABC" for c in codes}
+        taches.update({cle("reel2", p, c, c0_central, eta): (t_reel, (p, c, apports[(p, c)], a.n, c0_central, eta, variante))
                        for p in "ABC" for c in codes for eta in elasticites.values()})
         for k, v in executer(ex, cache, taches).items():
             sortie["reel"][k.split("|", 1)[1]] = v
 
         # 3. Sensibilité à la loi de rachat ONC maximale (intensité centrale)
         print("3. sensibilité ONC maximale", flush=True)
-        taches = {cle("onc", p, c, 0, 0): (t_rn, (p, c, apports[(p, c)], a.n, 0.0, 0.0, "onc_max")) for p in "ABC" for c in codes}
-        taches.update({cle("onc", p, c, c0_central, eta): (t_rn, (p, c, apports[(p, c)], a.n, c0_central, eta, "onc_max"))
+        taches = {cle("onc", p, c, 0, 0): (t_rn, (p, c, apports[(p, c)], a.n, 0.0, 0.0, "onc_max", None, variante)) for p in "ABC" for c in codes}
+        taches.update({cle("onc", p, c, c0_central, eta): (t_rn, (p, c, apports[(p, c)], a.n, c0_central, eta, "onc_max", None, variante))
                        for p in "ABC" for c in codes for eta in elasticites.values()})
         onc = executer(ex, cache, taches)
         for p in "ABC":

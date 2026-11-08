@@ -2,6 +2,7 @@
 resultats/v5_calibration_credit.json. Les phrases sont écrites ici ; les chiffres viennent des fichiers."""
 
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -61,26 +62,25 @@ A("Le PDF de l'ACPR n° 185 n'a pas pu être consulté : ses chiffres ne sont ut
 A("## 1. Conventions centrales retenues pour la suite (provisoires)\n")
 A("| Élément | Convention | Statut | Fragilité |\n| --- | --- | --- | --- |")
 A("| Valorisation | Base sans VA ; la VA est une vue réglementaire | Choix de méthode | Faible |")
-A(f"| Spread des obligations | Spread zéro-coupon OAT par bootstrap du TEC ({pb(K['tec_vers_zero']['10']['spread_bootstrap'])} à 10 ans, contre {pb(K['tec_vers_zero']['10']['spread_modele'])} avec le TEC pris comme zéro-coupon) | Calibré | Moyenne : interpolation entre six maturités observées, pas de TEC à 1 an |")
-A(f"| Part de crédit du spread | kappa = {f(C['calibration_kappa']['central'], 2)} | Calibré sur le CDS et le quanto publié | **Forte** : quanto France à 5 ans non observé |")
+A(f"| Spread des obligations | Moyenne de long terme des spreads publiée par l'EIOPA, notation A ({pb(K['spread']['2'])} à 2 ans, {pb(K['spread']['10'])} à 10 ans, {pb(K['spread']['30'])} à 30 ans) | Hypothèse | **Forte** : pas un spread de marché observé au 31/10/2026 |")
+A(f"| Part de crédit du spread | kappa = {f(C['calibration_kappa']['central'], 2)} | Hypothèse | **Forte** : non recoupée avec des cotations de marché |")
 A("| Forme des pertes risque neutre | 70 % par saut (recouvrement 40 %), 30 % hors défaut lissé | Hypothèse | Moyenne |")
 A(f"| Structure de défaut | 50 blocs, copule gaussienne à un facteur, rho = {f(C['correlation_copule']['valeur'], 1)} ; bloc souverain de 26 % et bloc unique en stress | Hypothèse | **Forte** : la France est un émetteur unique pour 26 % des obligations |")
-A("| Probabilité réelle | Probabilité de défaut de 0,061 % par an et par bloc, recouvrement 50 % | Calibré (défauts d'entreprises par notation) | Forte pour le souverain français de 2026 |")
-A(f"| Référence des assurés | **Proxy comportemental fictif** : taux sans risque 10 ans lissé sur 7 ans, niveau initial {pct(cv.niveau_initial_central(), 2)} | Hypothèse | **Forte** ; confrontée à une référence composite à niveaux observés |")
+A("| Probabilité réelle | Probabilité de défaut de 0,061 % par an et par bloc, recouvrement 50 % | Calibré (défauts d'entreprises par notation) | Moyenne : moyennes historiques |")
+A(f"| Référence des assurés | **Proxy comportemental fictif** : taux sans risque 10 ans lissé sur 7 ans, niveau initial {pct(cv.niveau_initial_central(), 2)} | Hypothèse | **Forte** ; confrontée à une référence composite |")
 A(f"| Rachat structurel | 4,4 % au sens de l'ACPR (paramètre du modèle {pct(cv.rachat_structurel_acpr(), 3)}) ; 5 % en sensibilité | Observé, converti | Moyenne : dénominateur ACPR imprécis, année de rachats bas |")
 A("| Loi de rachat dynamique | Paramètres des V1 à V4, entre les corridors minimal et maximal de l'ONC 2013 | Hypothèse | Forte : non calée sur des données |")
 A("")
 
 # ------------------------------------------------------------------------------------------------
-A("## 2. Calibration du risque souverain\n")
-A("### 2.1 Du TEC aux taux zéro-coupon\n")
-A("Le TEC est un rendement au pair. Le prendre comme taux zéro-coupon sous-estime le spread quand la courbe monte. Le bootstrap (coupons annuels, TEC interpolés entre les maturités observées) corrige l'écart :\n")
-A("| Maturité | TEC | Zéro-coupon OAT | Spread, TEC comme zéro-coupon | Spread zéro-coupon | Écart |\n| ---: | ---: | ---: | ---: | ---: | ---: |")
-for k, v in K["tec_vers_zero"].items():
-    if k == "1":
-        continue
-    A(f"| {k} ans | {pct(v['tec'], 2)} | {pct(v['zero_bootstrap'], 2)} | {pb(v['spread_modele'])} | {pb(v['spread_bootstrap'])} | {f(v['ecart_pb'], 1)} pb |")
-A("\nSous 2 ans, faute de TEC à 1 an, le spread est prolongé à plat. Les conventions de sécurisation (codes commençant par « k ») utilisent le spread zéro-coupon ; les premières variantes gardent l'ancien, pour rester reproductibles.\n")
+A("## 2. Traitement du risque de crédit\n")
+A("### 2.1 Spread des obligations\n")
+A("Le spread des obligations détenues est une hypothèse, construite sans donnée d'indice de taux souverain : la moyenne de long terme des spreads (LTAS) que l'EIOPA publie avec la courbe sans risque, pour la notation la plus représentée du portefeuille obligataire des assureurs (A), moyenne des séries financières et non financières, convertie en spread continu au-dessus de la courbe EIOPA sans VA (`data/v5/marche/spread_hypothetique_20261031.json`). C'est un spread « normal », hors période de tension, et non un spread de marché observé au 31/10/2026.\n")
+A("| Maturité | Taux EIOPA sans VA | Spread hypothétique | Taux des obligations du modèle |\n| ---: | ---: | ---: | ---: |")
+for k in ("1", "2", "5", "10", "20", "30"):
+    r = K["eiopa_zc"][k]
+    A(f"| {k} an{'s' if k != '1' else ''} | {pct(r, 2)} | {pb(K['spread'][k])} | {pct((1 + r) * math.exp(K['spread'][k]) - 1, 2)} |")
+A("")
 
 A("### 2.2 Des spreads aux intensités de défaut\n")
 A("Règles, pour une année t (de t - 1 à t) :\n")
@@ -93,28 +93,19 @@ A(f"Convention centrale (kappa = {f(C['calibration_kappa']['central'], 1)}, R = 
 A("| Année | Spread cumulé H | Coût de l'année dH | dont crédit | dont hors défaut | Probabilité de défaut de l'année | Probabilité cumulée |\n| ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
 for t, v in lc.items():
     A(f"| {t} | {pb(v['H'])} | {pb(v['increment_total'])} | {pb(v['increment_credit'])} | {pb(v['increment_hors_defaut'])} | {pct(v['pd_annuelle'], 2)} | {pct(v['pd_cumulee'], 1)} |")
-A("\nLe coût de l'année croît avec le temps parce que les spreads zéro-coupon montent avec la maturité : le spread à terme dépasse le spread comptant. C'est ce coût à terme, et non le spread affiché, que la valorisation risque neutre fait payer chaque année.\n")
-c5 = K["cds"]
-A("### 2.3 Contrôle avec le CDS à 5 ans\n")
-A(f"Triangle du crédit : CDS ≈ intensité x (1 - R). Avec le CDS de {pb(c5['cds_5_ans'])} et R = 40 %, l'intensité vaut {pct(c5['intensite_triangle_R40'], 2)} par an, soit une probabilité cumulée de {pct(c5['pd_cumulee_5_ans_triangle'], 1)} sur 5 ans. "
-  f"Le modèle donne {pct(c5['pd_cumulee_5_ans_modele_kappa_1'], 1)} si tout le spread est du crédit (kappa = 1) et {pct(c5['pd_cumulee_5_ans_modele_kappa_central'], 1)} avec kappa = {f(C['calibration_kappa']['central'], 1)}. "
-  "Le premier chiffre recoupe le CDS : la structure du modèle (spread zéro-coupon, recouvrement en valeur de marché) est cohérente avec la cotation. L'écart restant tient à la convention de recouvrement, au type de rendement et aux dates.\n")
+A("\nLe coût de l'année suit le spread à terme : il dépasse le spread comptant tant que le spread zéro-coupon monte avec la maturité, puis le rejoint quand la courbe de spread devient plate. C'est ce coût à terme, et non le spread affiché, que la valorisation risque neutre fait payer chaque année.\n")
 kc = C["calibration_kappa"]
-A("### 2.4 Part de crédit kappa : maturité, type de rendement, devise\n")
-A(f"- **Maturité** : seul le CDS à 5 ans est disponible ; il est comparé au spread zéro-coupon à 5 ans ({pb(kc['spread_5_ans_bootstrap'], 1)}). Au-delà, kappa est supposé constant (hypothèse).")
-A("- **Type de rendement** : le CDS est une prime courante ; le spread du modèle est un spread zéro-coupon continu. À 5 ans, l'écart entre les deux reste de second ordre devant l'effet de devise.")
-A(f"- **Devise** : le CDS France est coté en dollars. En cas de défaut, l'euro devrait se déprécier, si bien qu'un CDS en dollars vaut plus qu'un CDS en euros. Le quanto relatif publié vaut environ {pct(kc['d_france_1_an']['d'], 0)} pour la France à 1 an et jusqu'à {pct(kc['d_allemagne_5_ans']['d'], 0)} pour l'Allemagne à 5 ans (Augustin, Chernov et Song). "
-  f"D'où kappa = (1 - d) x CDS / spread : {f(kc['d_france_1_an']['kappa'], 2)} avec d = 28 %, {f(kc['d_allemagne_5_ans']['kappa'], 2)} avec d = 44 %, {f(kc['sans_quanto']['kappa'], 2)} sans quanto. Valeur centrale 0,7 ; sensibilités 0,55 et 1.")
-A("- **Dates** : CDS du 29/10, TEC du 04/11 ; le CDS est passé de 104 à 91 pb en une semaine, soit une incertitude d'environ ±0,1 sur kappa.\n")
-A("### 2.5 Liquidité et prime de risque\n")
-bd = K["bund"]
-A(f"- **Composante hors défaut (30 % du spread)** : elle regroupe la liquidité relative, l'offre de titres et le risque de change non lié au défaut. Repère : le Bund à 10 ans (environ {pct(bd['bund_10_estime'], 2)}, TEC moins l'écart OAT-Bund) cote près de la courbe sans risque EIOPA ({pct(bd['eiopa_zc_10'], 2)}). Un émetteur presque sans risque de défaut ne porte donc pas de prime hors défaut notable au-dessus de cette courbe. La composante hors défaut de l'OAT est la part du spread que le CDS en euros n'explique pas, pas une mesure directe de liquidité. En valorisation, elle reste un coût risque neutre (absence d'arbitrage) ; en probabilité réelle, c'est une prime.")
+A("### 2.3 Part de crédit kappa\n")
+A(f"- **Hypothèse** : {kc['_regle']}")
+A("- **Maturité** : kappa est supposé constant sur toutes les maturités.\n")
+A("### 2.4 Liquidité et prime de risque\n")
+A("- **Composante hors défaut (30 % du spread)** : elle regroupe la liquidité relative et l'offre de titres. En valorisation, elle reste un coût risque neutre (absence d'arbitrage) ; en probabilité réelle, c'est une prime.")
 cmp_ = K["risque_neutre_et_reel"]
-A(f"- **Prime de risque de crédit** : c'est l'écart entre la perte risque neutre et la perte réelle. Les probabilités de « 3,3 % » et « 0,06 % » ne mesurent pas la même chose. La première ({pct(cmp_['pd_rn_annuelle_annee_10'], 2)} avec le spread zéro-coupon) est la probabilité d'un bloc **l'année 10**, tirée du spread **à terme**. Sa moyenne sur 10 ans vaut {pct(cmp_['pd_rn_moyenne_10_ans'], 2)} par an. "
-  f"La seconde ({pct(cmp_['pd_reelle_annuelle'], 3)}) est un taux de défaut historique moyen d'entreprises notées comme le portefeuille de place (S&P, 1981-2024), et non une mesure propre au souverain français de 2026. "
+A(f"- **Prime de risque de crédit** : c'est l'écart entre la perte risque neutre et la perte réelle. Les probabilités de « {pct(cmp_['pd_rn_annuelle_annee_10'], 1)} » et « {pct(cmp_['pd_reelle_annuelle'], 2)} » ne mesurent pas la même chose. La première ({pct(cmp_['pd_rn_annuelle_annee_10'], 2)}) est la probabilité d'un bloc **l'année 10**, tirée du spread **à terme**. Sa moyenne sur 10 ans vaut {pct(cmp_['pd_rn_moyenne_10_ans'], 2)} par an. "
+  f"La seconde ({pct(cmp_['pd_reelle_annuelle'], 3)}) est un taux de défaut historique moyen d'entreprises notées comme le portefeuille de place (S&P, 1981-2024), et non une mesure propre à un émetteur. "
   f"Sur une base comparable (moyennes annuelles sur 10 ans), le rapport vaut environ {f(cmp_['rapport_pd_moyennes'], 0)}, contre un rapport publié de {f(cmp_['rapport_publie_zone_euro'], 0)} pour les souverains de la zone euro. "
-  "Il y a deux lectures. Soit le marché paie en 2026 une forte prime pour un risque de queue politique et budgétaire. Soit la probabilité réelle historique sous-estime le risque actuel. Le stress « rapport de 2 » en probabilité réelle couvre la seconde lecture.\n")
-A("### 2.6 Intensité, recouvrement et blocs\n")
+  "Le spread retenu rémunère donc surtout autre chose qu'une perte attendue historique (prime de risque, composante hors défaut), à moins que la probabilité réelle historique sous-estime le risque. Le stress « rapport de 2 » en probabilité réelle couvre cette seconde lecture.\n")
+A("### 2.5 Intensité, recouvrement et blocs\n")
 A("L'intensité ne dépend pas de la taille des blocs : chaque bloc a la même probabilité p(t). La perte moyenne de l'année est donc identique quelle que soit la structure. Seule la concentration change :\n")
 A("| Structure | Blocs | Plus gros bloc | Perte si ce bloc fait défaut (R = 40 %) | Probabilité risque neutre de défaut de ce bloc sur 10 ans | Probabilité réelle |\n| --- | ---: | ---: | ---: | ---: | ---: |")
 noms = {"granulaire_50": "50 blocs égaux", "souverain_et_granulaire_50": "Souverain 26 % + 50 blocs", "souverain_et_diversifie": "Souverain 26 % + 20 blocs", "un": "Bloc unique"}
@@ -122,7 +113,7 @@ for k, v in K["blocs"].items():
     A(f"| {noms[k]} | {v['nombre']} | {pct(v['poids_max'], 0)} | {pct(v['perte_du_plus_gros_bloc_R40'], 1)} des obligations | {pct(v['probabilite_rn_defaut_plus_gros_bloc_10_ans'], 1)} | {pct(v['probabilite_reelle_defaut_plus_gros_bloc_10_ans'], 2)} |")
 A("\nLa copule gaussienne (rho = 0,2) garde la probabilité de chaque bloc mais regroupe les défauts dans les mêmes années. Le recouvrement joue en sens inverse de l'intensité : un recouvrement de 63 % au lieu de 40 % donne des défauts plus fréquents mais moins coûteux, pour la même perte moyenne.\n")
 
-A("### 2.7 Valeur selon la structure de défaut et la part de crédit\n")
+A("### 2.6 Valeur selon la structure de défaut et la part de crédit\n")
 rows = [("Spread entièrement lissé", "credit_lisse"), ("50 blocs indépendants", "structure_granulaire_independant"), ("**50 blocs corrélés (centre)**", "centre"),
         ("Souverain 26 % + 50 blocs corrélés", "structure_souverain_granulaire_correle"), ("Souverain 26 % + 20 blocs (corrélé par bloc)", "structure_souverain_bloc"),
         ("Bloc unique", "structure_bloc_unique"), ("kappa = 0,55", "credit_kappa_55"), ("kappa = 1", "credit_kappa_100"), ("Recouvrement 63 %", "credit_recouvrement_63")]
@@ -131,7 +122,7 @@ for lib, nom in rows:
     A(f"| {lib} | " + " | ".join(f"{f(q(p, nom)['valeur'])} ± {f(q(p, nom)['ic_be'])}" for p in N) + " | " + " | ".join(pct(q(p, nom)['part_scenarios_avec_apport'], 0) for p in N) + " |")
 A("")
 
-A("### 2.8 D'où vient la baisse de valeur avec le défaut par saut\n")
+A("### 2.7 D'où vient la baisse de valeur avec le défaut par saut\n")
 A("Test d'attribution, mêmes tirages, spread lissé contre spread par saut (bloc souverain de 26 %), référence centrale :\n")
 A("| Profil | Passif | Valeur, spread lissé | Valeur, saut | Écart | BE garanti, lissé | BE garanti, saut | FDB, lissé | FDB, saut |\n| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |")
 libc = {"C0": "Indépendant des actifs (taux servi = TMG, sans participation ni rachat dynamique)", "C1": "Participation et TMG, sans rachat dynamique", "C2": "Modèle complet"}
@@ -165,13 +156,13 @@ A("| Référence des assurés | Moteur risque neutre (taux sans risque) : un con
 A("| Prix du risque de comportement | Absent du BE ; il figure dans la marge de risque et le SCR de rachat | Sans objet |")
 A("| Lecture des rachats | Pas une prévision | Ordre de grandeur à confronter aux 4,4 % observés |")
 A("")
-A("### 3.3 Référence des assurés : proxy fictif et référence composite observée\n")
+A("### 3.3 Référence des assurés : proxy fictif et référence composite\n")
 comp = C["references_assures"]["composite_observe"]["composantes"]
-A("Référence composite (niveaux observés, délais et coefficients paramétrés, **poids fictifs**) : " + " ; ".join(
-    f"{k['nom']} ({pct(k['poids'], 0)} ; niveau {pct(k['niveau_initial'], 2)} ; transmission {'immédiate' if k['lissage'] == 1 else 'lissée sur ' + f(1 / k['lissage'], 0) + ' ans'} ; coefficient de réaction {f(k['beta'], 1)})" for k in comp)
-  + f". Niveau initial : {pct(ec('A', 'reference_composite_observe')['reference_annee_1'], 3)}, sans calage sur 2,88 %.\n")
+A("Référence composite (niveaux observés pour les fonds euros et le livret A, hypothétique pour les obligations ; délais et coefficients paramétrés, **poids fictifs**) : " + " ; ".join(
+    f"{k['nom']} ({pct(k['poids'], 0)} ; niveau {pct(cv.taux_obligations_10_ans_initial() if k['niveau_initial'] == 'obligations_10_ans' else k['niveau_initial'], 2)} ; transmission {'immédiate' if k['lissage'] == 1 else 'lissée sur ' + f(1 / k['lissage'], 0) + ' ans'} ; coefficient de réaction {f(k['beta'], 1)})" for k in comp)
+  + f". Niveau initial : {pct(ec('A', 'reference_composite_observe')['reference_annee_1'], 3)}, sans calage sur {pct(cv.niveau_initial_central(), 2)}.\n")
 refs = [("Proxy lissé sur 3 ans", "reference_lisse_3"), ("Proxy lissé sur 5 ans", "reference_lisse_5"), ("**Proxy lissé sur 7 ans (centre)**", "centre"),
-        ("Proxy lissé sur 10 ans", "reference_lisse_10"), ("Composite à niveaux observés", "reference_composite_observe"),
+        ("Proxy lissé sur 10 ans", "reference_lisse_10"), ("Composite", "reference_composite_observe"),
         ("Transmission immédiate (sans risque 10 ans)", "reference_sans_risque_immediate"), ("Référence figée", "reference_figee"),
         ("Réaction faible (corridor minimal ONC)", "reaction_onc_min"), ("Réaction forte (corridor maximal ONC)", "reaction_onc_max"),
         ("Rachat structurel 5 %", "rachat_structurel_5")]
@@ -213,7 +204,7 @@ for p in N:
     A(f"| Sensibilités de la valeur | Spread +100 pb instantané | {f(dv(p, 'spread_plus_100'))} |")
     A(f"| | Défaut : bloc souverain de 26 % / bloc unique | {f(dv(p, 'structure_souverain_bloc'))} / {f(dv(p, 'structure_bloc_unique'))} |")
     A(f"| | Part de crédit 0,55 / 1 | {f(dv(p, 'credit_kappa_55'))} / {f(dv(p, 'credit_kappa_100'))} |")
-    A(f"| | Référence : lissage 3 ans / 10 ans / composite observée / immédiate | {f(dv(p, 'reference_lisse_3'))} / {f(dv(p, 'reference_lisse_10'))} / {f(dv(p, 'reference_composite_observe'))} / {f(dv(p, 'reference_sans_risque_immediate'))} |")
+    A(f"| | Référence : lissage 3 ans / 10 ans / composite / immédiate | {f(dv(p, 'reference_lisse_3'))} / {f(dv(p, 'reference_lisse_10'))} / {f(dv(p, 'reference_composite_observe'))} / {f(dv(p, 'reference_sans_risque_immediate'))} |")
     A(f"| | Réaction faible / forte (ONC) | {f(dv(p, 'reaction_onc_min'))} / {f(dv(p, 'reaction_onc_max'))} |")
     A(f"| | Rachat structurel 5 % ; base avec VA | {f(dv(p, 'rachat_structurel_5'))} ; {f(dv(p, 'base_avec_va'))} |")
     A("")

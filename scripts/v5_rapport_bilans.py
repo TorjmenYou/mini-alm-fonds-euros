@@ -1,11 +1,21 @@
 """Génère docs/V5_BILANS_INITIAUX.md à partir de resultats/v5_bilans_initiaux.json (aucun chiffre saisi à la main)."""
 
 import json
+import sys
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parents[1]
 d = json.loads((RACINE / "resultats" / "v5_bilans_initiaux.json").read_text(encoding="utf-8"))
 P = d["profils"]
+sys.path.insert(0, str(RACINE))
+from src.v5.courbes_marche import spread_obligations  # noqa: E402
+SP = spread_obligations()
+
+
+def pb_(x):
+    return f"{1e4 * x:.0f} pb"
+
+
 N = ("A", "B", "C")
 
 
@@ -104,22 +114,22 @@ L.append("| PPB (% de la PM) | " + " | ".join(pct(I[n]["ppb_pct_pm"]) for n in N
 L.append("| Taux garanti | " + " | ".join(pct(I[n]["taux_garanti"], 2) for n in N) + " | 0,32 % de taux technique moyen (2025, ACPR n° 180) | B au niveau de place ; A plus élevé (contrats anciens), C sans garantie |")
 L.append("| Taux servi de l'année écoulée | " + " | ".join(pct(I[n]["taux_servi_initial"], 2) for n in N) + " | 2,63 % (2025, ACPR n° 180) | B au niveau de place ; A en dessous, C au-dessus (politique plus offensive) |")
 L.append("| Coupon moyen des obligations | " + " | ".join(pct(I[n]["coupon_moyen_obligations"], 2) for n in N) + " | Non publié ; rendement de l'actif de 2,8 % en 2025, actions et immobilier compris (ACPR n° 180) | Le coupon de B est calé pour un rendement comptable de cet ordre (prime d'achat de 0,6 point) |")
-L.append("| Moins-values latentes obligataires (% de la VNC) | " + " | ".join(pct(I[n]["pmvl_obligations_pct_vnc"]) for n in N) + " | -2,7 % à -3,4 % au 30/06/2025 (dérivé de l'ACPR n° 177) ; donnée 2026 (ACPR n° 185) non lue | Les profils intègrent la hausse d'environ 130 pb du TEC 10 en 2026 et le spread OAT élargi ; à revoir dès que le n° 185 est accessible |")
+L.append("| Moins-values latentes obligataires (% de la VNC) | " + " | ".join(pct(I[n]["pmvl_obligations_pct_vnc"]) for n in N) + " | -2,7 % à -3,4 % au 30/06/2025 (dérivé de l'ACPR n° 177) ; donnée 2026 (ACPR n° 185) non lue | Les moins-values des profils dépendent du spread hypothétique des obligations (moyenne de long terme publiée par l'EIOPA) et des coupons de chaque génération ; à revoir dès que le n° 185 est accessible |")
 L.append("| Sorties annuelles (rachats et décès), année 1 | " + " | ".join(pct(I[n]["taux_rachat_annee_1"] + 0.01) for n in N) + " | Environ 6,7 % de l'encours, tous supports, décès compris (dérivé de France Assureurs, 2026) | Ordre de grandeur cohérent ; la collecte nette positive de 2026 justifie l'absence de vague de rachats |\n")
 
 _SR = "référence assurés : sans risque 10 ans, même niveau en t = 0"
 L.append("## 6. Limites méthodologiques restantes\n")
 for x in [
-    "**Lissage des pertes de crédit risque neutre : limite principale.** En risque neutre, tout le spread OAT (147 pb à 10 ans, 202 pb à 30 ans) devient une perte annuelle lissée, retirée chaque année et dans chaque scénario des produits financiers, donc de l'assiette de la participation. La valeur actuelle nette d'un achat reste nulle (tests). Mais la participation et les rachats sont non linéaires : cette répartition lisse des pertes déprime le taux servi partout. Le profil A, au rendement comptable faible, entre ainsi dans une spirale de rachats en équivalent certain (taux servi moyen de 0,8 % et rachats moyens de 22 % sur les années 1 à 20), et sa valeur devient négative. Un modèle de défaut par saut, avec perte en cas de défaut, donnerait la même valeur des actifs, mais concentrerait les pertes sur peu de scénarios et changerait le partage entre assurés et actionnaire. Le marché ne tranche pas entre les deux : c'est un risque de modèle à traiter avant les métriques de rentabilité.",
+    f"**Lissage des pertes de crédit risque neutre : limite principale.** En risque neutre, tout le spread des obligations ({pb_(SP.s(10))} à 10 ans, {pb_(SP.s(30))} à 30 ans, hypothèse) devient une perte annuelle lissée, retirée chaque année et dans chaque scénario des produits financiers, donc de l'assiette de la participation. La valeur actuelle nette d'un achat reste nulle (tests). Mais la participation et les rachats sont non linéaires : cette répartition lisse des pertes déprime le taux servi partout. En équivalent certain, le profil A, au rendement comptable faible, sert en moyenne {pct(P['A']['indicateurs']['taux_servi_moyen_annees_1_20'])} sur les années 1 à 20, avec des rachats moyens de {pct(P['A']['indicateurs']['taux_rachat_moyen_annees_1_20'])}, pour une valeur actionnaire de {f(P['A']['economique']['valeur_actionnaire_equivalent_certain'])}. Un modèle de défaut par saut, avec perte en cas de défaut, donnerait la même valeur des actifs, mais concentrerait les pertes sur peu de scénarios et changerait le partage entre assurés et actionnaire. Le marché ne tranche pas entre les deux : c'est un risque de modèle à traiter avant les métriques de rentabilité.",
     "**Valeurs avant impôt.** L'impôt (25 %, contribution sociale de 3,3 % au-delà de l'abattement) est codé et testé, mais pas encore appliqué : les valeurs économiques sont donc présentées avant impôt différé.",
     "**Pas encore de capital.** Ni SCR ni marge de risque par profil, et pas encore de coût du capital : ils arrivent à l'étape suivante, avec la distinction entre coût réglementaire, coûts frictionnels et rendement exigé.",
     "**Générateur de scénarios non recalé.** Les paramètres de Hull-White (a = 0,05, sigma = 1 %) et la volatilité actions (18 %) restent ceux des V1 à V4, sans calage sur les volatilités implicites de marché : la TVOG en dépend directement.",
     "**Un seul model point par profil.** Le taux garanti est une moyenne ; la V4 multi-model points n'est pas couplée à l'actif. Le portefeuille est fermé : pas encore de collecte nouvelle, ni de politique de collecte pour C.",
-    "**Crédit simplifié.** Toutes les obligations sont valorisées sur le spread OAT (souverains et entreprises confondus), sans notation ni migration, avec une perte en convention de recouvrement en valeur de marché. Le TEC est pris comme taux zéro-coupon, et la courbe EIOPA (31/10) est décalée de quatre jours avec le TEC (04/11).",
+    "**Crédit simplifié.** Toutes les obligations sont valorisées avec un même spread (souverains et entreprises confondus), sans notation ni migration, avec une perte en convention de recouvrement en valeur de marché. Ce spread est une hypothèse : la moyenne de long terme des spreads publiée par l'EIOPA pour la notation A, et non un spread de marché observé au 31/10/2026.",
     "**Pertes risque neutre dans les produits comptables.** En valorisation, la perte risque neutre réduit les produits financiers, donc la participation : c'est cohérent avec le marché, mais la trajectoire comptable n'est pas une prévision.",
-    "**Coupons par génération.** Ils sont ancrés sur des observations mensuelles ponctuelles et sur une prime d'achat calibrée. Les moyennes annuelles officielles n'ont pas été accessibles.",
-    "**Comportement des assurés.** La référence « OAT 10 ans - 2 points », calée sur la situation de 2026, reste l'hypothèse la plus incertaine. Ses sensibilités changent la valeur actionnaire de plusieurs dizaines d'unités. "
-    "Elle suit la courbe à terme de l'OAT, qui monte avec le spread : une référence fondée sur le taux sans risque, recalée au même niveau en t = 0, ramène le rachat moyen des années 1 à 20 à "
+    "**Coupons par génération.** Ce sont des hypothèses : l'ordre de grandeur du rendement à 10 ans de l'État de chaque période, arrondi, plus une prime d'achat.",
+    "**Comportement des assurés.** La référence « taux à 10 ans des obligations du modèle - 2 points » reste l'hypothèse la plus incertaine. Ses sensibilités changent fortement la valeur actionnaire. "
+    "Elle suit la courbe à terme des obligations, qui inclut le spread : une référence fondée sur le taux sans risque, recalée au même niveau en t = 0, ramène le rachat moyen des années 1 à 20 à "
     + ", ".join(f"{pct(P[n]['sensibilites'][_SR]['taux_rachat_moyen_annees_1_20'])} ({n})" for n in N)
     + " et la valeur actionnaire en équivalent certain à "
     + ", ".join(f"{f(P[n]['sensibilites'][_SR]['valeur_actionnaire_equivalent_certain'])} ({n})" for n in N) + ". "

@@ -1,8 +1,10 @@
 """V5 : consolidation de la comparaison des stratégies ALM sur une base de capital commune.
 
 Usage : python scripts/v5_consolidation.py [--n-prudentiel 2000] [--n 1000] [--tirages 1000] [--processus 2]
+                                           [--variante reference]
 Écrit resultats/v5_consolidation.json (reprise possible : les calculs déjà faits sont relus depuis le
-cache, par défaut resultats/cache_v5/, non versionné).
+cache, par défaut resultats/cache_v5/, non versionné). Avec --variante (src/v5/variantes_audit.py,
+autre que « reference »), écrit resultats/v5_audit_consolidation_<variante>.json, mêmes scénarios.
 
 1. Vue prudentielle simplifiée à n_prudentiel scénarios (base avec VA), pour chaque profil et chaque
    stratégie, en deux points d'apport (0 et un apport proche du besoin à 125 %). Besoins d'apport à 100 %
@@ -35,6 +37,7 @@ from src.v5 import bases, conventions as cv, strategies as stg  # noqa: E402
 from src.v5.profils import hypotheses_profil  # noqa: E402
 from src.v5.reel import projeter_reel_stochastique  # noqa: E402
 from src.v5.solvabilite_v5 import bilan_prudentiel, reagreger  # noqa: E402
+from src.v5.variantes_audit import VARIANTES, appliquer_variante  # noqa: E402
 
 CREDIT = "k70_granulaire_correle"
 REFERENCE = "taux_servi_marche"
@@ -48,29 +51,30 @@ CLES_PRUDENTIELLES = ("actif", "be", "ic_be", "fdb", "marge_de_risque", "fonds_e
                       "indicateur_couverture_scr", "indicateur_couverture_mcr")
 
 
-def hypotheses(p, code, apport=0.0, reference=REFERENCE, loi=None):
+def hypotheses(p, code, apport=0.0, reference=REFERENCE, loi=None, variante="reference"):
     h = cv.appliquer(hypotheses_profil(p), reference, "sans_va", rachat_structurel="acpr", loi_rachat=loi)
-    return stg.appliquer_strategie(h, code, apport)
+    h = stg.appliquer_strategie(h, code, apport)
+    return h if variante == "reference" else appliquer_variante(h, variante)
 
 
-def t_prudentiel(p, code, apport, n):
-    h = hypotheses(p, code, apport)
+def t_prudentiel(p, code, apport, n, variante="reference"):
+    h = hypotheses(p, code, apport, variante=variante)
     h["comportement"] = cv.comportement(REFERENCE, "avec_va")  # référence calée sur la base avec VA
     r = bilan_prudentiel(h, CREDIT, "avec_va", n=n, echantillons=True)
     return {"resume": {k: r[k] for k in CLES_PRUDENTIELLES}, "tirages": r["_tirages"], "contexte": r["_contexte"]}
 
 
-def t_rn(p, code, apport, n, sens=None, graines=None):
+def t_rn(p, code, apport, n, sens=None, graines=None, variante="reference"):
     o = SENSIBILITES.get(sens, {})
-    h = hypotheses(p, code, apport, o.get("reference", REFERENCE), o.get("loi"))
+    h = hypotheses(p, code, apport, o.get("reference", REFERENCE), o.get("loi"), variante)
     credit = cv.credit_valorisation(o.get("credit", CREDIT), "sans_va", h["horizon_annees"])
     r = stg.resume_risque_neutre(h, credit, "sans_va", n, valeurs=True, graines=graines)
     v = r.pop("_valeurs_nettes")
     return {"resume": r, "valeurs": v}
 
 
-def t_reel(p, code, apport, n):
-    h = cv.hypotheses_reelles_stochastiques(hypotheses(p, code, apport))
+def t_reel(p, code, apport, n, variante="reference"):
+    h = cv.hypotheses_reelles_stochastiques(hypotheses(p, code, apport, variante=variante))
     g, _ = bases.gse(h, "sans_va", None, n=n)
     tr = projeter_reel_stochastique(h, g, cv.credit_reel(CREDIT, "central", h["horizon_annees"]), cv.prime_actions_reelle())
     return {"resume": stg.resume_reel(h, tr, stg.charger()["rentabilite_reelle"]["rendement_exige"]["valeur"])}
@@ -131,14 +135,20 @@ def main():
     ap.add_argument("--tirages", type=int, default=1000)
     ap.add_argument("--processus", type=int, default=2)
     ap.add_argument("--cache", default=str(RACINE / "resultats" / "cache_v5"))
-    ap.add_argument("--sortie", default=str(RACINE / "resultats" / "v5_consolidation.json"))
+    ap.add_argument("--sortie", default=None)
+    ap.add_argument("--variante", default="reference", choices=VARIANTES)
     a = ap.parse_args()
+    variante = a.variante
+    if a.sortie is None:
+        a.sortie = str(RACINE / "resultats" / ("v5_consolidation.json" if variante == "reference" else f"v5_audit_consolidation_{variante}.json"))
     codes = list(stg.charger()["strategies"])
-    cache = Cache(Path(a.cache) / f"np{a.n_prudentiel}_n{a.n}")
+    cache = Cache(Path(a.cache) / (f"np{a.n_prudentiel}_n{a.n}" + ("" if variante == "reference" else f"_{variante}")))
     ancien = json.loads((RACINE / "resultats" / "v5_strategies.json").read_text(encoding="utf-8"))
     sortie = {"n_scenarios_prudentiel": a.n_prudentiel, "n_scenarios": a.n, "tirages_reechantillonnage": a.tirages, "credit": CREDIT,
               "reference": REFERENCE, "cibles": list(CIBLES), "strategies": codes, "prudentiel": {}, "capital": {}, "verification": {},
               "risque_neutre": {}, "reel": {}, "ecarts": {}, "sensibilites": {}, "controle_reinvestissement": {}}
+    if variante != "reference":
+        sortie["variante"] = variante
     chemin = Path(a.sortie)
 
     def ecrire():
@@ -155,7 +165,7 @@ def main():
                 y = ancien["resultats"].get(f"{p}|initial|{c}", {}).get("prudentiel")
                 k1[(p, c)] = max((1.25 * y["scr"] - y["fonds_propres_niveau_1"]) / 0.97, 20.0) if y else k_passive
         print("1. vue prudentielle, deux points d'apport", flush=True)
-        taches = {f"prudentiel|{p}|{c}|{pt}": (t_prudentiel, (p, c, 0.0 if pt == 0 else k1[(p, c)], a.n_prudentiel))
+        taches = {f"prudentiel|{p}|{c}|{pt}": (t_prudentiel, (p, c, 0.0 if pt == 0 else k1[(p, c)], a.n_prudentiel, variante))
                   for p in "ABC" for c in codes for pt in (0, 1)}
         pru = executer(ex, cache, taches)
         moitie = a.n_prudentiel // 2
@@ -197,7 +207,7 @@ def main():
         # pour A, le plafond de l'absorption par les FDB rend la relation entre apport et indicateur non linéaire
         verif = [(p, "passive", t) for p in "ABC" for t in CIBLES] + [(p, "taux_servi_marge", 1.0) for p in "ABC"] \
             + [("A", c, 1.0) for c in codes if c not in ("passive", "taux_servi_marge")]
-        taches = {f"verification|{p}|{c}|{t}": (t_prudentiel, (p, c, sortie["capital"][f"{p}|{c}"]["besoin"][str(t)], a.n_prudentiel)) for p, c, t in verif}
+        taches = {f"verification|{p}|{c}|{t}": (t_prudentiel, (p, c, sortie["capital"][f"{p}|{c}"]["besoin"][str(t)], a.n_prudentiel, variante)) for p, c, t in verif}
         for cle, r in executer(ex, cache, taches).items():
             _, p, c, t = cle.split("|")
             sortie["verification"][f"{p}|{c}|{t}"] = {"apport": sortie["capital"][f"{p}|{c}"]["besoin"][t],
@@ -211,8 +221,8 @@ def main():
         apports.update({(p, c, str(t)): sortie["capital"][f"{p}|{c}"]["besoin"][str(t)] for p in "ABC" for c in codes for t in CIBLES})
         taches = {}
         for (p, c, base), k in apports.items():
-            taches[f"rn|{p}|{c}|{base}"] = (t_rn, (p, c, k, a.n))
-            taches[f"reel|{p}|{c}|{base}"] = (t_reel, (p, c, k, a.n))
+            taches[f"rn|{p}|{c}|{base}"] = (t_rn, (p, c, k, a.n, None, None, variante))
+            taches[f"reel|{p}|{c}|{base}"] = (t_reel, (p, c, k, a.n, variante))
         res = executer(ex, cache, taches)
         for (p, c, base) in apports:
             q, re = res[f"rn|{p}|{c}|{base}"], res[f"reel|{p}|{c}|{base}"]
@@ -224,7 +234,7 @@ def main():
 
         # 4. Sensibilités de la valeur à la base 100 %
         print("4. sensibilités", flush=True)
-        taches = {f"sens|{p}|{c}|{s}": (t_rn, (p, c, apports[(p, c, "1.0")], a.n, s)) for p in "ABC" for c in codes for s in SENSIBILITES}
+        taches = {f"sens|{p}|{c}|{s}": (t_rn, (p, c, apports[(p, c, "1.0")], a.n, s, None, variante)) for p in "ABC" for c in codes for s in SENSIBILITES}
         sens = executer(ex, cache, taches)
         for p in "ABC":
             for s in SENSIBILITES:
@@ -236,7 +246,7 @@ def main():
 
         # 5. Contrôle du réinvestissement progressif sur des tirages indépendants
         print("5. contrôle du réinvestissement progressif", flush=True)
-        taches = {f"controle|A|{c}": (t_rn, ("A", c, apports[("A", c, "1.0")], 2 * a.n, None, GRAINES_CONTROLE)) for c in ("passive", "reinvestissement_progressif")}
+        taches = {f"controle|A|{c}": (t_rn, ("A", c, apports[("A", c, "1.0")], 2 * a.n, None, GRAINES_CONTROLE, variante)) for c in ("passive", "reinvestissement_progressif")}
         ctl = executer(ex, cache, taches)
         e = ctl["controle|A|reinvestissement_progressif"]["valeurs"] - ctl["controle|A|passive"]["valeurs"]
         sortie["controle_reinvestissement"] = {"graines": list(GRAINES_CONTROLE), "n_scenarios": 2 * a.n, "ecart_moyen": float(e.mean()),

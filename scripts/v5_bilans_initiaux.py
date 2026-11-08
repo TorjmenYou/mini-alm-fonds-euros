@@ -113,7 +113,7 @@ def stochastique(h, base):
 
 
 # Référence fondée sur le taux sans risque, recalée pour donner en t = 0 le même niveau que la
-# référence centrale « OAT 10 ans - 2 points » : seule la dynamique future diffère.
+# référence centrale « obligations à 10 ans du modèle - 2 points » : seule la dynamique future diffère.
 _AJUST_SANS_RISQUE = (CourbeAvecSpread(courbe_eiopa(), credit_profil()).taux_zc(10) - 0.02) - courbe_eiopa().taux_zc(10)
 
 SENSIBILITES = {
@@ -125,9 +125,9 @@ SENSIBILITES = {
     "prime d'achat +20 pb (toutes générations)": {"coupons": {m: 0.002 for m in ("avant_2012", "2012_2014", "2015_2021", "2022_2023", "2024_2025", "2026")}},
     "PPB x 0,5": {"ppb_facteur": 0.5},
     "PPB x 1,5": {"ppb_facteur": 1.5},
-    "référence assurés : OAT 10 ans (ajustement 0)": {"comportement": {"reference": "zc10_obligations", "ajustement": 0.0}},
-    "référence assurés : OAT 10 ans - 1 pt": {"comportement": {"reference": "zc10_obligations", "ajustement": -0.01}},
-    "référence assurés : OAT 10 ans - 3 pts": {"comportement": {"reference": "zc10_obligations", "ajustement": -0.03}},
+    "référence assurés : obligations à 10 ans du modèle (ajustement 0)": {"comportement": {"reference": "zc10_obligations", "ajustement": 0.0}},
+    "référence assurés : obligations à 10 ans du modèle - 1 pt": {"comportement": {"reference": "zc10_obligations", "ajustement": -0.01}},
+    "référence assurés : obligations à 10 ans du modèle - 3 pts": {"comportement": {"reference": "zc10_obligations", "ajustement": -0.03}},
     "référence assurés : livret A 1,7 % fixe": {"comportement": {"reference": "fixe", "taux_fixe": 0.017}},
     "référence assurés : sans risque 10 ans, même niveau en t = 0": {"comportement": {"reference": "zc10_sans_risque", "ajustement": _AJUST_SANS_RISQUE}},
     "taux garanti +0,30 pt": {"tmg_decalage": 0.003},

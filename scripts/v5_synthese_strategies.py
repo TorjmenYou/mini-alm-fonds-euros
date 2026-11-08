@@ -114,7 +114,13 @@ A(f"**Cinq dimensions, écarts à la gestion passive.** Valeur actionnaire : val
 
 # ------------------------------------------------------------------------------------------------
 A("## Constats communs aux trois profils\n")
-A("- **Capital** : aucune stratégie n'atteint 100 % du SCR simplifié sans apport. Apport nécessaire en gestion passive, avec son intervalle à 95 % : "
+_couverts = [f"{p}, {c}" for p in N for c in C["strategies"]
+             if C["prudentiel"][f"{p}|{c}"]["apport_0"]["indicateur_couverture_scr"] >= 1]
+A("- **Capital** : " + ("aucune stratégie n'atteint 100 % du SCR simplifié sans apport" if not _couverts else
+   f"sans apport, l'indicateur atteint 100 % du SCR simplifié pour {len(_couverts)} couples profil-stratégie sur {len(N) * len(C['strategies'])} ("
+   + ", ".join(f"profil {q} : toutes sauf le repositionnement" if sum(x.startswith(q + ",") for x in _couverts) == len(C["strategies"]) - 1 and f"{q}, repositionnement" not in _couverts
+                         else f"profil {q} : {sum(x.startswith(q + ',') for x in _couverts)} stratégies" for q in sorted({x.split(',')[0] for x in _couverts})) + "), dont l'apport estimé est donc nul")
+  + ". Apport nécessaire en gestion passive, avec son intervalle à 95 % : "
   + " ; ".join(f"{p} {f(besoin(p, 'passive'))} [{f(C['capital'][f'{p}|passive']['incertitude']['1.0']['q025'])} ; {f(C['capital'][f'{p}|passive']['incertitude']['1.0']['q975'])}]" for p in N)
   + ". Recapitaliser coûte de la valeur à l'actionnaire (impôt et participation sur les revenus du capital) : " + ", ".join(f"{f(rn(p, 'passive', '0')['valeur_nette'] - rn(p, 'passive')['valeur_nette'])} ({p})" for p in N) + ".")
 plancher_mcr = [p for p in N if x0(p)["mcr_detail"]["contrainte_active"] == "plancher de 25 % du SCR"]
@@ -135,13 +141,19 @@ A("- **Politique de marge** : " + (f"la plus forte valeur actionnaire au centre 
 comp = [(p, ecart(p, "taux_servi_competitif")[0], re_(p, "taux_servi_competitif")["ecart_taux_servi_reference_1_10"] - re_(p, "passive")["ecart_taux_servi_reference_1_10"]) for p in N]
 A("- **Politique compétitive** : écart de valeur et gain de taux servi par rapport à la gestion passive : " + ", ".join(f"{f(m)} et {f(1e4 * t, 0)} pb ({p})" for p, m, t in comp) + ".")
 pres = []
+pres_dr, pres_dv = {}, {}
 for p in N:
     dv = rn(p, "taux_servi_competitif_preservant")["valeur_nette"] - rn(p, "taux_servi_competitif")["valeur_nette"]
     dt = re_(p, "taux_servi_competitif_preservant")["ecart_taux_servi_reference_1_10"] - re_(p, "taux_servi_competitif")["ecart_taux_servi_reference_1_10"]
     dr = rn(p, "taux_servi_competitif_preservant")["taux_rachat_moyen_1_10"] - rn(p, "taux_servi_competitif")["taux_rachat_moyen_1_10"]
     pres.append(f"{f(dv)} de valeur, {f(1e4 * dt, 0)} pb de taux servi, {f(1e4 * dr, 0)} pb de rachat ({p})")
+    pres_dr[p], pres_dv[p] = dr, dv
+baisse_rachat = [p for p in N if 1e4 * pres_dr[p] <= -0.5]
+gain_net = [p for p in N if pres_dv[p] > LECT["valeur_nette_pct_scr"] * scr(p)]
 A("- **Préserver la PPB** dans la politique compétitive (variante comparée à la version de base, mêmes scénarios) : " + " ; ".join(pres)
-  + ". Les rachats baissent ; les gains de taux servi et de valeur restent modestes, sauf pour A (détail : `docs/V5_STRATEGIES.md`, section 5). Le coût en valeur de la politique compétitive par rapport à la gestion passive demeure.")
+  + ". Les rachats baissent" + ("" if len(baisse_rachat) == len(N) else (" pour " + " et ".join(baisse_rachat) if baisse_rachat else " peu"))
+  + " ; les gains de taux servi et de valeur restent modestes" + (", sauf pour " + " et ".join(gain_net) if gain_net else "")
+  + " (détail : `docs/V5_STRATEGIES.md`, section 5). Le coût en valeur de la politique compétitive par rapport à la gestion passive demeure.")
 ret = [(p, ecart(p, "distribution_retention")[0], re_(p, "distribution_retention")["rendement_fonds_propres_1_10_agrege"] - re_(p, "passive")["rendement_fonds_propres_1_10_agrege"]) for p in N]
 A("- **Rétention de capital** : écart de valeur et de rentabilité " + ", ".join(f"{f(m)} et {f(100 * r, 2)} pt ({p})" for p, m, r in ret)
   + ". Le capital conservé supporte l'impôt et partage ses revenus avec les assurés, et dilue le rendement des fonds propres. Son bénéfice attendu, une couverture plus élevée dans les années suivantes, n'est pas mesuré : le modèle ne projette pas le SCR.")
