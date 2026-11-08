@@ -18,6 +18,7 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RACINE))
 from src.v5 import strategies as stg  # noqa: E402
+from src.v5.solvabilite_v5 import TAUX_IS, mcr_detail  # noqa: E402
 
 N = "ABC"
 COURT = {"passive": "Passive", "reinvestissement_progressif": "Réinvestissement progressif", "repositionnement": "Repositionnement",
@@ -349,21 +350,67 @@ A("Valeur économique simplifiée = valeur de marché des actifs - BE ; fonds pr
   "des rachats : ce point est mesuré par la vue prudentielle (chocs de taux), pas par le niveau des courbes.")
 A("")
 A("### 3.3 PPB et fonds excédentaires dans la vue prudentielle\n")
-A("Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). La PPB d'ouverture entière est en outre admise "
-  "en fonds excédentaires de niveau 1, valorisée par la méthode simplifiée de la fiche technique de l'ACPR (intégration aux PM au bout de huit ans, "
-  "sortie au rythme des prestations, actualisation sur la courbe EIOPA) ; la capacité d'absorption des provisions techniques et le MCR utilisent "
-  "FDB − FE, ce qui évite de compter la même PPB deux fois (`docs/V5_METHODOLOGIE.md`, section 7). La fiche retire du montant admissible la "
-  "génération qui atteint huit ans l'exercice suivant : sous l'hypothèse de générations uniformes, le montant admis est surestimé d'environ un huitième. "
-  "Gestion passive, sans apport, V5.1 :\n")
-lignes_fe = []
+A("Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). La PPB d'ouverture est en outre admise "
+  "en fonds excédentaires (FE) de niveau 1, valorisée par la méthode simplifiée de la fiche technique de l'ACPR (intégration aux PM au bout de huit ans, "
+  "sortie au rythme des prestations de la projection centrale, actualisation sur la courbe EIOPA). Fonds propres de niveau 1 = actif − BE − marge de risque + FE − impôts différés passifs, "
+  "ce qui équivaut à retirer FE du BE : le BE brut du moteur et le BE après reclassement sont donnés ci-dessous. La capacité d'absorption des provisions techniques "
+  "est bornée par FDB − FE et le MCR utilise FDB − FE : la même PPB n'est pas comptée à la fois en fonds propres et en absorption ; le SCR brut ne dépend pas de FE "
+  "(`docs/V5_METHODOLOGIE.md`, section 7).\n")
+A("**Réconciliation avec la fiche ACPR.** La fiche retire du montant admissible (1) la génération qui atteint huit ans l'exercice suivant, (2) les montants déjà affectés "
+  "et (3) l'enveloppe de l'article A.132-3. Le modèle admet la PPB d'ouverture entière. Sous l'hypothèse de générations uniformes, l'exclusion (1) vaut un huitième du stock ; "
+  "les exclusions (2) et (3) sont supposées nulles, car le modèle n'a ni participation affectée non créditée ni enveloppe A.132-3 : c'est une hypothèse, pas un fait vérifié. "
+  "Les indicateurs ci-dessous sont re-agrégés sans scénario à partir des résultats stockés (même formule que le moteur ; contrôle : avec FE inchangé, la re-agrégation "
+  "reproduit exactement les valeurs publiées). Gestion passive, sans apport, V5.1 :\n")
+
+
+def reagreger_fe(x, fe):
+    """Indicateurs prudentiels pour un autre montant de fonds excédentaires, à partir des agrégats stockés (formule de _agreger)."""
+    net, brut, fdb, op = x["scr_net"]["bscr"], x["scr_brut"]["bscr"], x["fdb"], x["risque_operationnel"]
+    actif_net = x["actif"] - x["be"] - x["marge_de_risque"]
+    idp = max(TAUX_IS * (actif_net - x["fonds_propres_comptables"]), 0.0)
+    adj_tp = -max(min(brut - net, fdb - fe), 0.0)
+    adj_dt = -min(idp, TAUX_IS * max(brut + adj_tp + op, 0.0))
+    scr = brut + adj_tp + op + adj_dt
+    return {"tier1": actif_net + fe - idp, "scr": scr, "mcr": mcr_detail(scr, x["be"] - fdb, fdb - fe)["mcr"], "absorption_bornee": fdb - fe < brut - net}
+
+
+def besoin_lineaire(of0, scr0, of1, scr1, k1, cible):
+    pa, pb = (of1 - of0) / k1, (scr1 - scr0) / k1
+    return max((cible * scr0 - of0) / (pa - cible * pb), 0.0)
+
+
+DED_FE = 1 / 8
+lignes_fe, lignes_fe2, fe_txt = [], [], {}
 for p in N:
-    x = couverture0(K1, p)
-    fe, t1, scr = x["fonds_excedentaires"], x["fonds_propres_niveau_1"], x["scr"]
+    P1 = K1["prudentiel"][f"{p}|passive"]
+    x0, x1, kk = P1["apport_0"], P1["apport_1"], P1["apport_1_montant"]
+    for x in (x0, x1):
+        r = reagreger_fe(x, x["fonds_excedentaires"])
+        assert abs(r["scr"] - x["scr"]) < 1e-9 and abs(r["tier1"] - x["fonds_propres_niveau_1"]) < 1e-9 and abs(r["mcr"] - x["mcr"]) < 1e-9
     ppb0 = B1[p]["comptable"]["passif"]["ppb"]
-    lignes_fe.append((f"**{p}**", f(ppb0), f(fe), pct(fe / ppb0, 0), pct(fe / t1, 0), pct(t1 / scr, 1), pct((t1 - fe) / scr, 1)))
-tableau(["Profil", "PPB comptable admise", "Fonds excédentaires (FE)", "FE / PPB comptable", "FE / fonds propres de niveau 1", "Couverture du SCR simplifié", "Couverture sans FE"], lignes_fe)
-A("Lecture : C ne couvre son SCR simplifié sans apport que grâce aux fonds excédentaires ; pour A, ils constituent presque tous les fonds propres de niveau 1. "
-  "Approximation à garder en tête : admission intégrale, sans déduction de la génération arrivant à échéance ni test d'éligibilité, montant figé dans tous les chocs.")
+    fe0, t1, scr = x0["fonds_excedentaires"], x0["fonds_propres_niveau_1"], x0["scr"]
+    r0, r1 = reagreger_fe(x0, (1 - DED_FE) * fe0), reagreger_fe(x1, (1 - DED_FE) * x1["fonds_excedentaires"])
+    b_pub, ic_fe = K1["capital"][f"{p}|passive"]["besoin"]["1.0"], K1["capital"][f"{p}|passive"]["incertitude"]["1.0"]
+    b_cor = besoin_lineaire(r0["tier1"], r0["scr"], r1["tier1"], r1["scr"], kk, 1.0)
+    fe_txt[p] = {"b_pub": b_pub, "b_cor": b_cor, "ic": ic_fe, "cov_cor": r0["tier1"] / r0["scr"], "bornee": r0["absorption_bornee"]}
+    lignes_fe.append((f"**{p}**", f(ppb0), f(DED_FE * ppb0), f((1 - DED_FE) * ppb0), f(fe0), f((1 - DED_FE) * fe0), pct(fe0 / ppb0, 0),
+                      f(x0["be"]), f(x0["be"] - fe0), f(x0["be"] - (1 - DED_FE) * fe0)))
+    lignes_fe2.append((f"**{p}**", f(t1), f(r0["tier1"]), f(scr), f(r0["scr"]), pct(fe0 / t1, 0), pct(t1 / scr, 1), pct(r0["tier1"] / r0["scr"], 1),
+                       f(b_pub), f(b_cor), f"{f(ic_fe['q025'])} à {f(ic_fe['q975'])}"))
+tableau(["Profil", "PPB comptable", "Exclusion (1) : génération à échéance", "PPB admissible", "FE publiés (PPB entière)", "FE corrigés", "Taux de valorisation",
+         "BE brut (moteur)", "BE après reclassement, publié", "BE après reclassement, corrigé"], lignes_fe)
+tableau(["Profil", "Fonds propres de niveau 1, publiés", "corrigés", "SCR simplifié, publié", "corrigé", "FE / fonds propres publiés", "Couverture publiée", "Couverture corrigée",
+         "Apport pour 100 %, publié", "corrigé", "Intervalle de rééchantillonnage publié (95 %)"], lignes_fe2)
+_a, _b, _c = fe_txt["A"], fe_txt["B"], fe_txt["C"]
+A("Lecture. " + ("Pour A, la capacité d'absorption est bornée par FDB − FE : la déduction réduit d'autant les fonds propres et le SCR, et l'apport visant 100 % est "
+  f"inchangé ({f(_a['b_cor'])} contre {f(_a['b_pub'])}). " if _a["bornee"] and abs(_a["b_cor"] - _a["b_pub"]) < 0.05 else
+  f"Pour A, l'apport visant 100 % passe de {f(_a['b_pub'])} à {f(_a['b_cor'])}. ")
+  + f"Pour B, le SCR ne bouge pas et l'apport visant 100 % passe de {f(_b['b_pub'])} à {f(_b['b_cor'])}"
+  + (", à l'intérieur de l'intervalle de rééchantillonnage publié. " if _b["ic"]["q025"] <= _b["b_cor"] <= _b["ic"]["q975"] else ", hors de l'intervalle de rééchantillonnage publié. ")
+  + f"Pour C, la couverture corrigée reste {'supérieure' if _c['cov_cor'] > 1 else 'inférieure'} à 100 % ({pct(_c['cov_cor'], 1)}) : C couvre son SCR simplifié sans apport "
+  + ("avec ou sans cette déduction. " if _c["cov_cor"] > 1 else "seulement sans cette déduction. ")
+  + "Les résultats publiés gardent la convention du modèle (PPB d'ouverture admise en totalité) ; l'écart ci-dessus en mesure l'effet. "
+  "Approximation à garder en tête : exclusions (2) et (3) supposées nulles, montant de FE figé dans tous les chocs.")
 A("")
 
 # 4. Avant / après

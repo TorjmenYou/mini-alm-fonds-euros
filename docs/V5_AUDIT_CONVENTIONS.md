@@ -158,15 +158,23 @@ Valeur économique simplifiée = valeur de marché des actifs - BE ; fonds propr
 
 ### 3.3 PPB et fonds excédentaires dans la vue prudentielle
 
-Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). La PPB d'ouverture entière est en outre admise en fonds excédentaires de niveau 1, valorisée par la méthode simplifiée de la fiche technique de l'ACPR (intégration aux PM au bout de huit ans, sortie au rythme des prestations, actualisation sur la courbe EIOPA) ; la capacité d'absorption des provisions techniques et le MCR utilisent FDB − FE, ce qui évite de compter la même PPB deux fois (`docs/V5_METHODOLOGIE.md`, section 7). La fiche retire du montant admissible la génération qui atteint huit ans l'exercice suivant : sous l'hypothèse de générations uniformes, le montant admis est surestimé d'environ un huitième. Gestion passive, sans apport, V5.1 :
+Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). La PPB d'ouverture est en outre admise en fonds excédentaires (FE) de niveau 1, valorisée par la méthode simplifiée de la fiche technique de l'ACPR (intégration aux PM au bout de huit ans, sortie au rythme des prestations de la projection centrale, actualisation sur la courbe EIOPA). Fonds propres de niveau 1 = actif − BE − marge de risque + FE − impôts différés passifs, ce qui équivaut à retirer FE du BE : le BE brut du moteur et le BE après reclassement sont donnés ci-dessous. La capacité d'absorption des provisions techniques est bornée par FDB − FE et le MCR utilise FDB − FE : la même PPB n'est pas comptée à la fois en fonds propres et en absorption ; le SCR brut ne dépend pas de FE (`docs/V5_METHODOLOGIE.md`, section 7).
 
-| Profil | PPB comptable admise | Fonds excédentaires (FE) | FE / PPB comptable | FE / fonds propres de niveau 1 | Couverture du SCR simplifié | Couverture sans FE |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| **A** | 25,0 | 14,7 | 59 % | 93 % | 13,0 % | 0,9 % |
-| **B** | 40,0 | 17,0 | 43 % | 24 % | 73,7 % | 55,7 % |
-| **C** | 20,0 | 8,4 | 42 % | 10 % | 104,3 % | 94,2 % |
+**Réconciliation avec la fiche ACPR.** La fiche retire du montant admissible (1) la génération qui atteint huit ans l'exercice suivant, (2) les montants déjà affectés et (3) l'enveloppe de l'article A.132-3. Le modèle admet la PPB d'ouverture entière. Sous l'hypothèse de générations uniformes, l'exclusion (1) vaut un huitième du stock ; les exclusions (2) et (3) sont supposées nulles, car le modèle n'a ni participation affectée non créditée ni enveloppe A.132-3 : c'est une hypothèse, pas un fait vérifié. Les indicateurs ci-dessous sont re-agrégés sans scénario à partir des résultats stockés (même formule que le moteur ; contrôle : avec FE inchangé, la re-agrégation reproduit exactement les valeurs publiées). Gestion passive, sans apport, V5.1 :
 
-Lecture : C ne couvre son SCR simplifié sans apport que grâce aux fonds excédentaires ; pour A, ils constituent presque tous les fonds propres de niveau 1. Approximation à garder en tête : admission intégrale, sans déduction de la génération arrivant à échéance ni test d'éligibilité, montant figé dans tous les chocs.
+| Profil | PPB comptable | Exclusion (1) : génération à échéance | PPB admissible | FE publiés (PPB entière) | FE corrigés | Taux de valorisation | BE brut (moteur) | BE après reclassement, publié | BE après reclassement, corrigé |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **A** | 25,0 | 3,1 | 21,9 | 14,7 | 12,8 | 59 % | 885,4 | 870,8 | 872,6 |
+| **B** | 40,0 | 5,0 | 35,0 | 17,0 | 14,9 | 43 % | 907,2 | 890,2 | 892,3 |
+| **C** | 20,0 | 2,5 | 17,5 | 8,4 | 7,4 | 42 % | 924,9 | 916,5 | 917,5 |
+
+| Profil | Fonds propres de niveau 1, publiés | corrigés | SCR simplifié, publié | corrigé | FE / fonds propres publiés | Couverture publiée | Couverture corrigée | Apport pour 100 %, publié | corrigé | Intervalle de rééchantillonnage publié (95 %) |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **A** | 15,8 | 13,9 | 121,3 | 119,4 | 93 % | 13,0 % | 11,7 % | 101,0 | 101,0 | 99,4 à 102,8 |
+| **B** | 69,6 | 67,5 | 94,5 | 94,5 | 24 % | 73,7 % | 71,4 % | 25,4 | 27,6 | 23,9 à 30,4 |
+| **C** | 87,5 | 86,4 | 83,9 | 83,9 | 10 % | 104,3 % | 103,0 % | 0,0 | 0,0 | 0,0 à 0,0 |
+
+Lecture. Pour A, la capacité d'absorption est bornée par FDB − FE : la déduction réduit d'autant les fonds propres et le SCR, et l'apport visant 100 % est inchangé (101,0 contre 101,0). Pour B, le SCR ne bouge pas et l'apport visant 100 % passe de 25,4 à 27,6, à l'intérieur de l'intervalle de rééchantillonnage publié. Pour C, la couverture corrigée reste supérieure à 100 % (103,0 %) : C couvre son SCR simplifié sans apport avec ou sans cette déduction. Les résultats publiés gardent la convention du modèle (PPB d'ouverture admise en totalité) ; l'écart ci-dessus en mesure l'effet. Approximation à garder en tête : exclusions (2) et (3) supposées nulles, montant de FE figé dans tous les chocs.
 
 ## 4. Avant et après : V5.0 publiée et V5.1
 
