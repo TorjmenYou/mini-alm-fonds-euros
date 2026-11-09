@@ -233,23 +233,23 @@ Calcul pédagogique inspiré de la formule standard (`src/v5/solvabilite_v5.py`)
 
 | Profil | Référence | Crédit | Actif | BE | Marge de risque | Fonds propres | SCR | dont marché net | dont rachat net | Ratio | Ratio après impôts différés | Fonds excédentaires, borne haute |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | Sans risque, 50 % | Décomposé | 908,4 | 901,1 | 19,0 | −11,7 | 89,2 | 66,8 | 37,2 | −13 % | 5 % | 18,5 |
-| A | Sans risque | Décomposé | 908,4 | 914,6 | 14,0 | −20,2 | 86,8 | 69,0 | 31,1 | −23 % | −2 % | 18,5 |
-| A | Sans risque | Lissé intégral | 908,4 | 907,0 | 15,1 | −13,7 | 97,6 | 72,1 | 35,6 | −14 % | 3 % | 18,5 |
-| A | Proxy lissé sur 7 ans | Décomposé | 908,4 | 894,4 | 21,1 | −7,1 | 88,5 | 65,0 | 39,1 | −8 % | 9 % | 18,5 |
-| B | Sans risque, 50 % | Décomposé | 997,6 | 924,1 | 24,4 | 49,1 | 82,6 | 68,2 | 32,7 | 59 % | 64 % | 29,7 |
-| B | Sans risque | Décomposé | 997,6 | 944,8 | 14,5 | 38,4 | 69,9 | 59,6 | 24,5 | 55 % | 65 % | 29,7 |
-| B | Sans risque | Lissé intégral | 997,6 | 931,6 | 17,1 | 49,0 | 74,5 | 61,1 | 30,0 | 66 % | 71 % | 29,7 |
-| B | Proxy lissé sur 7 ans | Décomposé | 997,6 | 919,1 | 26,0 | 52,5 | 80,2 | 64,2 | 34,5 | 65 % | 70 % | 29,7 |
-| C | Sans risque, 50 % | Décomposé | 1 040,7 | 942,7 | 19,0 | 79,1 | 75,1 | 65,8 | 23,3 | 105 % | 100 % | 14,8 |
-| C | Sans risque | Décomposé | 1 040,7 | 964,5 | 9,2 | 67,1 | 65,5 | 60,5 | 14,2 | 102 % | 102 % | 14,8 |
-| C | Sans risque | Lissé intégral | 1 040,7 | 950,3 | 12,7 | 77,8 | 70,0 | 62,3 | 20,0 | 111 % | 106 % | 14,8 |
-| C | Proxy lissé sur 7 ans | Décomposé | 1 040,7 | 938,2 | 20,5 | 82,0 | 74,6 | 64,2 | 25,1 | 110 % | 104 % | 14,8 |
+| A | Sans risque, 50 % | Décomposé | 908,4 | 901,1 | 19,0 | −11,7 | 89,2 | 66,8 | 37,2 | −13 % | 5 % | 16,2 |
+| A | Sans risque | Décomposé | 908,4 | 914,6 | 14,0 | −20,2 | 86,8 | 69,0 | 31,1 | −23 % | −2 % | 16,2 |
+| A | Sans risque | Lissé intégral | 908,4 | 907,0 | 15,1 | −13,7 | 97,6 | 72,1 | 35,6 | −14 % | 3 % | 16,2 |
+| A | Proxy lissé sur 7 ans | Décomposé | 908,4 | 894,4 | 21,1 | −7,1 | 88,5 | 65,0 | 39,1 | −8 % | 9 % | 16,2 |
+| B | Sans risque, 50 % | Décomposé | 997,6 | 924,1 | 24,4 | 49,1 | 82,6 | 68,2 | 32,7 | 59 % | 64 % | 26,0 |
+| B | Sans risque | Décomposé | 997,6 | 944,8 | 14,5 | 38,4 | 69,9 | 59,6 | 24,5 | 55 % | 65 % | 26,0 |
+| B | Sans risque | Lissé intégral | 997,6 | 931,6 | 17,1 | 49,0 | 74,5 | 61,1 | 30,0 | 66 % | 71 % | 26,0 |
+| B | Proxy lissé sur 7 ans | Décomposé | 997,6 | 919,1 | 26,0 | 52,5 | 80,2 | 64,2 | 34,5 | 65 % | 70 % | 26,0 |
+| C | Sans risque, 50 % | Décomposé | 1 040,7 | 942,7 | 19,0 | 79,1 | 75,1 | 65,8 | 23,3 | 105 % | 100 % | 13,0 |
+| C | Sans risque | Décomposé | 1 040,7 | 964,5 | 9,2 | 67,1 | 65,5 | 60,5 | 14,2 | 102 % | 102 % | 13,0 |
+| C | Sans risque | Lissé intégral | 1 040,7 | 950,3 | 12,7 | 77,8 | 70,0 | 62,3 | 20,0 | 111 % | 106 % | 13,0 |
+| C | Proxy lissé sur 7 ans | Décomposé | 1 040,7 | 938,2 | 20,5 | 82,0 | 74,6 | 64,2 | 25,1 | 110 % | 104 % | 13,0 |
 
 Lecture :
 
 - **Écart massif avec la place.** Ratios approchés dans la convention centrale : −8 % (A), 65 % (B), 110 % (C), contre 239 % pour les organismes vie et mixtes au 30/06/2026. B, conçu pour être proche de la place sur la PPB, le taux technique et le taux servi, en est très loin en solvabilité.
-- **Ce qui manque au calcul et jouerait en faveur des profils** : fonds excédentaires (jusqu'à 18,5 pour A, 29,7 pour B, 14,8 pour C), absorption par les impôts différés, ajustement symétrique du choc actions. Ce qui est peut-être trop sévère : un choc de spread en notation A sur 66 % des obligations (40,0 pour A, 36,8 pour B, 37,0 pour C de perte nette), et la règle de taux servi des V1 à V4, qui fait renoncer l'assureur à sa marge pour suivre la référence, ce qui réduit l'absorption par les FDB.
+- **Ce qui manque au calcul et jouerait en faveur des profils** : fonds excédentaires (jusqu'à 16,2 pour A, 26,0 pour B, 13,0 pour C), absorption par les impôts différés, ajustement symétrique du choc actions. Ce qui est peut-être trop sévère : un choc de spread en notation A sur 66 % des obligations (40,0 pour A, 36,8 pour B, 37,0 pour C de perte nette), et la règle de taux servi des V1 à V4, qui fait renoncer l'assureur à sa marge pour suivre la référence, ce qui réduit l'absorption par les FDB.
 - **Ce qui vient des profils** : à l'ouverture, l'actif en valeur de marché est inférieur à la PM et à la PPB pour A et B ; les moins-values obligataires (−18 % pour A, −13 % pour B, −6 % pour C de la VNC) et les fonds propres comptables (4,5 % à 6,0 % de la PM) sont des paramètres fictifs que la donnée de place 2026 (ACPR n° 185, non lue) permettrait de confronter.
 - **Choc de taux** : la hausse des taux est le choc le plus coûteux dans 11 conventions calculées sur 12 ; au centre, perte nette en hausse et en baisse de 13,7 et 0,3 pour A, 6,9 et 5,5 pour B, 9,9 et 2,5 pour C. La place, elle, gagne quand les taux montent ; l'écart de sensibilité apparaît aussi dans les durations de la section 4.6.
 - **Profil A** : fonds propres prudentiels négatifs dans toutes les conventions calculées ; en lecture réglementaire, ce serait un organisme à recapitaliser ou en plan de rétablissement, quelle que soit la convention de crédit ou de comportement retenue ici.
@@ -287,7 +287,7 @@ Les apports sont tardifs : 0 % des scénarios en ont un avant 5 ans, 6 % des sc�
 
 **Probabilité réelle** : sur la trajectoire centrale (taux et spreads figés, perte attendue de 3 pb), A sert 2,31 % en moyenne sur 10 ans, au niveau du premier quartile de place (2,3 %). Ses rachats restent à 5,0 % et il n'a besoin d'aucun apport (fonds propres minimaux de 50,2). Même si tout le spread devenait une perte effective, il servirait 0,94 %, ses rachats monteraient à 13,3 % par an et sa PM tomberait à 236 en 10 ans, mais il garderait des fonds propres de 48,2 au minimum, sans apport sur cette trajectoire.
 
-**Vue prudentielle simplifiée** (base avec VA, marge de risque, SCR approché) : fonds propres de −7,1, SCR de 88,5, ratio approché de −8 % (fonds excédentaires non comptés, borne haute indicative de 18,5). Le ratio de place est de 239 % pour les organismes vie et mixtes au 30/06/2026.
+**Vue prudentielle simplifiée** (base avec VA, marge de risque, SCR approché) : fonds propres de −7,1, SCR de 88,5, ratio approché de −8 % (fonds excédentaires non comptés, borne haute indicative de 16,2). Le ratio de place est de 239 % pour les organismes vie et mixtes au 30/06/2026.
 
 **Conclusion.** Le profil A n'est pas un assureur normalement viable, et il ne faut pas le présenter ainsi. Comptablement solvable et sans besoin de capital sur une trajectoire réelle centrale, il n'a plus de coussin économique : sa valeur est proche de zéro ou négative, et il demande des apports dans une large part des scénarios risque neutre, dans les scénarios de hausse des taux et de défaut souverain. Une partie de ce résultat est construite : ses moins-values obligataires (−18 % de la VNC) sont volontairement en haut de fourchette, et la donnée de place 2026 manque (ACPR n° 185 non lue). Une autre partie vient du modèle : en risque neutre, les produits comptables sont nets de tout le coût du spread, si bien que le taux servi et les rachats risque neutre ne sont pas des prévisions. Proposition : garder A comme profil de stress, qualifié d'**assureur fragile, au seuil de la recapitalisation**, et analyser ses stratégies sous contrainte de capital (apports, plan de redressement) plutôt que comme celles d'un assureur en régime normal.
 

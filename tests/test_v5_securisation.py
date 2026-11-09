@@ -18,7 +18,7 @@ from src.v5 import bases, conventions as cv
 from src.v5.courbes_marche import courbe_eiopa, spread_obligations
 from src.v5.credit import CreditSaut
 from src.v5.profils import hypotheses_profil
-from src.v5.solvabilite_v5 import facteur_spread, fonds_excedentaires, mcr
+from src.v5.solvabilite_v5 import facteur_spread, fonds_excedentaires, mcr, ppb_admissible_fonds_excedentaires
 
 RACINE = Path(__file__).resolve().parents[1]
 R = 0.032
@@ -176,6 +176,16 @@ def test_facteurs_de_spread_par_qualite_de_credit():
     assert facteur_spread("cqs2", 7) == pytest.approx(0.084)
     assert facteur_spread("cqs3", 7) == pytest.approx(0.155)
     assert facteur_spread("cqs4", 7) == pytest.approx(0.275)
+
+
+def test_ppb_admissible_deduit_la_generation_restituee_l_exercice_suivant():
+    """Fiche technique de l'ACPR : la génération de PPB qui doit être restituée l'exercice suivant n'est pas admissible
+    en fonds excédentaires ; avec le stock d'ouverture réparti uniformément sur huit générations, c'est un huitième."""
+    from src.v5.profils import hypotheses_profil
+    for p, ppb in (("A", 25.0), ("B", 40.0), ("C", 20.0)):
+        h = hypotheses_profil(p)
+        assert h["bilan_initial"]["ppb"] == ppb and h["strategie"]["duree_max_ppb_ans"] == 8
+        assert ppb_admissible_fonds_excedentaires(h) == pytest.approx(ppb * 7 / 8)
 
 
 def test_fonds_excedentaires_approche_simplifiee():

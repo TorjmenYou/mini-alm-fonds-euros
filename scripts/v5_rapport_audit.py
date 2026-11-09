@@ -350,17 +350,20 @@ A("Valeur économique simplifiée = valeur de marché des actifs - BE ; fonds pr
   "des rachats : ce point est mesuré par la vue prudentielle (chocs de taux), pas par le niveau des courbes.")
 A("")
 A("### 3.3 PPB et fonds excédentaires dans la vue prudentielle\n")
-A("Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). La PPB d'ouverture est en outre admise "
-  "en fonds excédentaires (FE) de niveau 1, valorisée par la méthode simplifiée de la fiche technique de l'ACPR (intégration aux PM au bout de huit ans, "
-  "sortie au rythme des prestations de la projection centrale, actualisation sur la courbe EIOPA). Fonds propres de niveau 1 = actif − BE − marge de risque + FE − impôts différés passifs, "
-  "ce qui équivaut à retirer FE du BE : le BE brut du moteur et le BE après reclassement sont donnés ci-dessous. La capacité d'absorption des provisions techniques "
-  "est bornée par FDB − FE et le MCR utilise FDB − FE : la même PPB n'est pas comptée à la fois en fonds propres et en absorption ; le SCR brut ne dépend pas de FE "
-  "(`docs/V5_METHODOLOGIE.md`, section 7).\n")
-A("**Réconciliation avec la fiche ACPR.** La fiche retire du montant admissible (1) la génération qui atteint huit ans l'exercice suivant, (2) les montants déjà affectés "
-  "et (3) l'enveloppe de l'article A.132-3. Le modèle admet la PPB d'ouverture entière. Sous l'hypothèse de générations uniformes, l'exclusion (1) vaut un huitième du stock ; "
-  "les exclusions (2) et (3) sont supposées nulles, car le modèle n'a ni participation affectée non créditée ni enveloppe A.132-3 : c'est une hypothèse, pas un fait vérifié. "
-  "Les indicateurs ci-dessous sont re-agrégés sans scénario à partir des résultats stockés (même formule que le moteur ; contrôle : avec FE inchangé, la re-agrégation "
-  "reproduit exactement les valeurs publiées). Gestion passive, sans apport, V5.1 :\n")
+A("Toute la PPB est dans le BE (reprises créditées puis prestations, stock final, extinction). Une partie de la PPB d'ouverture est en outre admise "
+  "en fonds excédentaires (FE) de niveau 1, selon la fiche technique de l'ACPR (calcul des fonds propres prudentiels au titre de la PPB) : "
+  "montant admissible = stock d'ouverture moins la génération qui doit être restituée l'exercice suivant, soit un huitième du stock sous l'hypothèse "
+  "de générations uniformes ; les deux autres exclusions de la fiche (participation déjà affectée mais non créditée, enveloppe de l'article A.132-3) "
+  "sont supposées nulles, car le modèle n'a pas ces mécanismes (hypothèse, pas un fait vérifié). Valorisation par la méthode simplifiée de l'annexe 2 "
+  "de la fiche : intégration aux PM au bout de huit ans, sortie au rythme des prestations de la projection centrale, actualisation sur la courbe EIOPA.\n")
+A("**Reclassement.** Fonds propres de niveau 1 = actif − BE − marge de risque + FE − impôts différés passifs, ce qui équivaut à retirer FE du BE : "
+  "le BE brut du moteur et le BE après reclassement sont donnés ci-dessous. **Absence de double comptage.** L'ajustement pour absorption par les provisions "
+  "techniques vaut −max(min(BSCR brut − BSCR net, FDB − FE), 0) (article 206 du règlement délégué, FDB nets des fonds excédentaires, qui ne sont plus des "
+  "provisions techniques : article 91 de la directive) ; le MCR utilise FDB − FE ; le SCR brut ne dépend pas de FE ; les impôts différés ne sont pas retraités. "
+  "Quand le plafond FDB − FE mord, le reclassement déplace le même montant des fonds propres vers l'absorption reconnue : le surplus (fonds propres − SCR) "
+  "est invariant et l'apport visant 100 % ne dépend pas du montant admis ; quand il ne mord pas, le SCR est invariant et les fonds propres montent de FE. "
+  "Les indicateurs « PPB entière » ci-dessous sont re-agrégés sans scénario à partir des résultats stockés (même formule que le moteur ; contrôle : avec FE inchangé, "
+  "la re-agrégation reproduit exactement les valeurs publiées). Gestion passive, sans apport, V5.1 :\n")
 
 
 def reagreger_fe(x, fe):
@@ -379,7 +382,6 @@ def besoin_lineaire(of0, scr0, of1, scr1, k1, cible):
     return max((cible * scr0 - of0) / (pa - cible * pb), 0.0)
 
 
-DED_FE = 1 / 8
 lignes_fe, lignes_fe2, fe_txt = [], [], {}
 for p in N:
     P1 = K1["prudentiel"][f"{p}|passive"]
@@ -387,37 +389,34 @@ for p in N:
     for x in (x0, x1):
         r = reagreger_fe(x, x["fonds_excedentaires"])
         assert abs(r["scr"] - x["scr"]) < 1e-9 and abs(r["tier1"] - x["fonds_propres_niveau_1"]) < 1e-9 and abs(r["mcr"] - x["mcr"]) < 1e-9
-    ppb0 = B1[p]["comptable"]["passif"]["ppb"]
+    ppb0, adm = B1[p]["comptable"]["passif"]["ppb"], x0["ppb_admissible"]
     fe0, t1, scr = x0["fonds_excedentaires"], x0["fonds_propres_niveau_1"], x0["scr"]
-    r0, r1 = reagreger_fe(x0, (1 - DED_FE) * fe0), reagreger_fe(x1, (1 - DED_FE) * x1["fonds_excedentaires"])
-    b_pub, ic_fe = K1["capital"][f"{p}|passive"]["besoin"]["1.0"], K1["capital"][f"{p}|passive"]["incertitude"]["1.0"]
-    b_cor = besoin_lineaire(r0["tier1"], r0["scr"], r1["tier1"], r1["scr"], kk, 1.0)
-    fe_txt[p] = {"b_pub": b_pub, "b_cor": b_cor, "ic": ic_fe, "cov_cor": r0["tier1"] / r0["scr"], "bornee": r0["absorption_bornee"]}
-    lignes_fe.append((f"**{p}**", f(ppb0), f(DED_FE * ppb0), f((1 - DED_FE) * ppb0), f(fe0), f((1 - DED_FE) * fe0), pct(fe0 / ppb0, 0),
-                      f(x0["be"]), f(x0["be"] - fe0), f(x0["be"] - (1 - DED_FE) * fe0)))
-    lignes_fe2.append((f"**{p}**", f(t1), f(r0["tier1"]), f(scr), f(r0["scr"]), pct(fe0 / t1, 0), pct(t1 / scr, 1), pct(r0["tier1"] / r0["scr"], 1),
-                       f(b_pub), f(b_cor), f"{f(ic_fe['q025'])} à {f(ic_fe['q975'])}"))
-tableau(["Profil", "PPB comptable", "Exclusion (1) : génération à échéance", "PPB admissible", "FE publiés (PPB entière)", "FE corrigés", "Taux de valorisation",
-         "BE brut (moteur)", "BE après reclassement, publié", "BE après reclassement, corrigé"], lignes_fe)
-tableau(["Profil", "Fonds propres de niveau 1, publiés", "corrigés", "SCR simplifié, publié", "corrigé", "FE / fonds propres publiés", "Couverture publiée", "Couverture corrigée",
-         "Apport pour 100 %, publié", "corrigé", "Intervalle de rééchantillonnage publié (95 %)"], lignes_fe2)
+    ratio = ppb0 / adm  # PPB entière admise
+    r0, r1 = reagreger_fe(x0, ratio * fe0), reagreger_fe(x1, ratio * x1["fonds_excedentaires"])
+    b_pub = K1["capital"][f"{p}|passive"]["besoin"]["1.0"]
+    b_ent = besoin_lineaire(r0["tier1"], r0["scr"], r1["tier1"], r1["scr"], kk, 1.0)
+    fe_txt[p] = {"b_pub": b_pub, "b_ent": b_ent, "cov": t1 / scr, "cov_ent": r0["tier1"] / r0["scr"], "cov_sans": (t1 - fe0) / scr, "bornee": r0["absorption_bornee"]}
+    lignes_fe.append((f"**{p}**", f(ppb0), f(ppb0 - adm), f(adm), f(fe0), pct(fe0 / adm, 0), f(x0["be"]), f(x0["be"] - fe0)))
+    lignes_fe2.append((f"**{p}**", f(t1), f(scr), pct(fe0 / t1, 0), pct(t1 / scr, 1), pct((t1 - fe0) / scr, 1), f(b_pub),
+                       pct(r0["tier1"] / r0["scr"], 1), f(b_ent), "oui" if r0["absorption_bornee"] else "non"))
+tableau(["Profil", "PPB comptable", "Exclusion : génération à échéance", "PPB admissible", "Fonds excédentaires (FE)", "FE / PPB admissible",
+         "BE brut (moteur)", "BE après reclassement"], lignes_fe)
+tableau(["Profil", "Fonds propres de niveau 1", "SCR simplifié", "FE / fonds propres", "Couverture", "Couverture sans FE", "Apport pour 100 %",
+         "Couverture si la PPB entière était admise", "Apport pour 100 % si la PPB entière était admise", "Plafond FDB − FE actif"], lignes_fe2)
 _a, _b, _c = fe_txt["A"], fe_txt["B"], fe_txt["C"]
-A("Lecture. " + ("Pour A, la capacité d'absorption est bornée par FDB − FE : la déduction réduit d'autant les fonds propres et le SCR, et l'apport visant 100 % est "
-  f"inchangé ({f(_a['b_cor'])} contre {f(_a['b_pub'])}). " if _a["bornee"] and abs(_a["b_cor"] - _a["b_pub"]) < 0.05 else
-  f"Pour A, l'apport visant 100 % passe de {f(_a['b_pub'])} à {f(_a['b_cor'])}. ")
-  + f"Pour B, le SCR ne bouge pas et l'apport visant 100 % passe de {f(_b['b_pub'])} à {f(_b['b_cor'])}"
-  + (", à l'intérieur de l'intervalle de rééchantillonnage publié. " if _b["ic"]["q025"] <= _b["b_cor"] <= _b["ic"]["q975"] else ", hors de l'intervalle de rééchantillonnage publié. ")
-  + f"Pour C, la couverture corrigée reste {'supérieure' if _c['cov_cor'] > 1 else 'inférieure'} à 100 % ({pct(_c['cov_cor'], 1)}) : C couvre son SCR simplifié sans apport "
-  + ("avec ou sans cette déduction. " if _c["cov_cor"] > 1 else "seulement sans cette déduction. ")
-  + "Les résultats publiés gardent la convention du modèle (PPB d'ouverture admise en totalité) ; l'écart ci-dessus en mesure l'effet. "
-  "Approximation à garder en tête : exclusions (2) et (3) supposées nulles, montant de FE figé dans tous les chocs.")
+A("Lecture. " + (f"Pour A, le plafond FDB − FE mord : admettre la PPB entière relèverait la couverture ({pct(_a['cov_ent'], 1)} contre {pct(_a['cov'], 1)}) sans changer l'apport visant 100 % "
+  f"({f(_a['b_ent'])} contre {f(_a['b_pub'])}). " if _a["bornee"] else f"Pour A, admettre la PPB entière porterait l'apport visant 100 % de {f(_a['b_pub'])} à {f(_a['b_ent'])}. ")
+  + f"Pour B, le SCR ne dépend pas de FE et l'apport visant 100 % serait de {f(_b['b_ent'])} au lieu de {f(_b['b_pub'])} avec la PPB entière. "
+  + f"Pour C, la couverture sans apport est de {pct(_c['cov'], 1)} ({pct(_c['cov_ent'], 1)} avec la PPB entière, {pct(_c['cov_sans'], 1)} sans fonds excédentaires) : "
+  + ("C couvre son SCR simplifié sans apport grâce aux fonds excédentaires. " if _c["cov"] >= 1 > _c["cov_sans"] else "")
+  + "Approximation à garder en tête : exclusions (2) et (3) supposées nulles, montant de FE figé dans tous les chocs.")
 A("")
 
 # 4. Avant / après
 A("## 4. Avant et après : V5.0 publiée et V5.1")
 A("")
 A("Chaque version avec son propre capital et ses propres données de marché. La colonne « dont participation » reprend l'effet de la "
-  "correction mesuré à capital et marché identiques (section 2.3) ; le reste de l'écart vient des données de marché et du recalibrage du capital.")
+  "correction mesuré à capital et marché identiques (section 2.3) ; le reste de l'écart vient des données de marché, de la convention des fonds excédentaires (V5.0 : PPB d'ouverture admise en totalité ; V5.1 : déduction de la génération restituée l'exercice suivant) et du recalibrage du capital.")
 A("")
 lignes = []
 for p in N:

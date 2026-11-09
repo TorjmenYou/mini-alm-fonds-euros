@@ -8,24 +8,24 @@ Trois profils fictifs de fonds euros, huit stratégies, une base de capital comm
 
 ## Constats communs aux trois profils
 
-- **Capital** : sans apport, l'indicateur atteint 100 % du SCR simplifié pour 7 couples profil-stratégie sur 24 (profil C : toutes sauf le repositionnement), dont l'apport estimé est donc nul. Apport nécessaire en gestion passive, avec son intervalle à 95 % : A 101,0 [99,4 ; 102,8] ; B 25,4 [23,9 ; 30,4] ; C 0,0 [0,0 ; 0,0]. Recapitaliser coûte de la valeur à l'actionnaire (impôt et participation sur les revenus du capital) : 9,9 (A), 3,6 (B), 0,0 (C).
+- **Capital** : sans apport, l'indicateur atteint 100 % du SCR simplifié pour 6 couples profil-stratégie sur 24 (profil C : 6 stratégies), dont l'apport estimé est donc nul. Apport nécessaire en gestion passive, avec son intervalle à 95 % : A 101,0 [99,4 ; 102,8] ; B 27,6 [26,1 ; 32,5] ; C 0,0 [0,0 ; 0,0]. Recapitaliser coûte de la valeur à l'actionnaire (impôt et participation sur les revenus du capital) : 9,9 (A), 3,9 (B), 0,0 (C).
 - **MCR** : le plancher de 25 % du SCR s'applique (A, B, C) ; les indicateurs MCR élevés reflètent ce plancher, pas une marge de sécurité propre.
-- **Réinvestissement progressif** : écarts de valeur 0,39 ± 0,16 (A), 0,25 ± 0,26 (B), 0,04 ± 0,55 (C) ; pour A, l'écart se retrouve sur des tirages indépendants (0,41 ± 0,12, 2 000 scénarios) ; tous sous le seuil d'importance de 2 % du SCR. Il n'est pas économiquement distinguable de la gestion passive, même quand l'écart est statistiquement significatif.
-- **Politique de marge** : la plus forte valeur actionnaire au centre (A, B, C), au prix d'un taux servi plus bas ; écart de valeur au centre puis sous une réaction forte des assurés : 5,8 puis 3,3 (A), 6,2 puis 1,7 (B), 3,1 puis 0,9 (C). Le portefeuille fermé ne compte pas la collecte : ce résultat n'est ni une conclusion ni, par principe, un majorant (avec collecte : `docs/V5_COLLECTE.md` et `docs/V5_SYNTHESE_FINALE.md`).
-- **Politique compétitive** : écart de valeur et gain de taux servi par rapport à la gestion passive : −5,9 et 13 pb (A), −10,1 et 24 pb (B), −9,8 et 13 pb (C).
-- **Préserver la PPB** dans la politique compétitive (variante comparée à la version de base, mêmes scénarios) : 1,8 de valeur, 5 pb de taux servi, −27 pb de rachat (A) ; 0,6 de valeur, 1 pb de taux servi, −32 pb de rachat (B) ; 0,1 de valeur, 0 pb de taux servi, −1 pb de rachat (C). Les rachats baissent ; les gains de taux servi et de valeur restent modestes (détail : `docs/V5_STRATEGIES.md`, section 5). Le coût en valeur de la politique compétitive par rapport à la gestion passive demeure.
-- **Rétention de capital** : écart de valeur et de rentabilité −1,1 et −0,12 pt (A), −1,4 et −0,66 pt (B), −1,3 et −1,18 pt (C). Le capital conservé supporte l'impôt et partage ses revenus avec les assurés, et dilue le rendement des fonds propres. Son bénéfice attendu, une couverture plus élevée dans les années suivantes, n'est pas mesuré : le modèle ne projette pas le SCR.
-- **Liquidité défensive** : écart de valeur risque neutre et de rentabilité réelle 0,8 et −0,70 pt (A), 1,2 et −0,32 pt (B), 3,1 et −0,20 pt (C). Les deux mesures vont en sens opposés : moins d'actions réduit le coût des options en risque neutre et fait perdre la prime actions en probabilité réelle ; le gain de valeur n'est important que pour C. Valeur risque neutre et rentabilité réelle sont donc présentées séparément, jamais combinées.
+- **Réinvestissement progressif** : écarts de valeur 0,39 ± 0,16 (A), 0,26 ± 0,26 (B), 0,04 ± 0,55 (C) ; pour A, l'écart se retrouve sur des tirages indépendants (0,41 ± 0,12, 2 000 scénarios) ; tous sous le seuil d'importance de 2 % du SCR. Il n'est pas économiquement distinguable de la gestion passive, même quand l'écart est statistiquement significatif.
+- **Politique de marge** : la plus forte valeur actionnaire au centre (A, B, C), au prix d'un taux servi plus bas ; écart de valeur au centre puis sous une réaction forte des assurés : 5,8 puis 3,3 (A), 6,3 puis 1,7 (B), 3,1 puis 0,9 (C). Le portefeuille fermé ne compte pas la collecte : ce résultat n'est ni une conclusion ni, par principe, un majorant (avec collecte : `docs/V5_COLLECTE.md` et `docs/V5_SYNTHESE_FINALE.md`).
+- **Politique compétitive** : écart de valeur et gain de taux servi par rapport à la gestion passive : −6,0 et 13 pb (A), −10,1 et 24 pb (B), −9,8 et 13 pb (C).
+- **Préserver la PPB** dans la politique compétitive (variante comparée à la version de base, mêmes scénarios) : 1,9 de valeur, 5 pb de taux servi, −26 pb de rachat (A) ; 0,6 de valeur, 1 pb de taux servi, −32 pb de rachat (B) ; 0,0 de valeur, 0 pb de taux servi, −1 pb de rachat (C). Les rachats baissent ; les gains de taux servi et de valeur restent modestes (détail : `docs/V5_STRATEGIES.md`, section 5). Le coût en valeur de la politique compétitive par rapport à la gestion passive demeure.
+- **Rétention de capital** : écart de valeur et de rentabilité −1,1 et −0,12 pt (A), −1,4 et −0,64 pt (B), −1,3 et −1,18 pt (C). Le capital conservé supporte l'impôt et partage ses revenus avec les assurés, et dilue le rendement des fonds propres. Son bénéfice attendu, une couverture plus élevée dans les années suivantes, n'est pas mesuré : le modèle ne projette pas le SCR.
+- **Liquidité défensive** : écart de valeur risque neutre et de rentabilité réelle 0,8 et −0,70 pt (A), 1,2 et −0,31 pt (B), 3,1 et −0,20 pt (C). Les deux mesures vont en sens opposés : moins d'actions réduit le coût des options en risque neutre et fait perdre la prime actions en probabilité réelle ; le gain de valeur n'est important que pour C. Valeur risque neutre et rentabilité réelle sont donc présentées séparément, jamais combinées.
 
 ## Profil A
 
-Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 15,8 pour un SCR simplifié de 121,3, indicateur de 13 % [10 % ; 15 %]. Apport pour 100 % : 101,0 ; pour 150 % : 150,5. À 100 %, valeur nette de −5,4, rendement réel des fonds propres de 4,4 % (sous le rendement exigé fictif de 8 %), taux servi moyen de 2,30 % (−66 pb sous la référence).
+Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 13,9 pour un SCR simplifié de 119,4, indicateur de 12 % [9 % ; 14 %]. Apport pour 100 % : 101,0 ; pour 150 % : 149,7. À 100 %, valeur nette de −5,4, rendement réel des fonds propres de 4,4 % (sous le rendement exigé fictif de 8 %), taux servi moyen de 2,30 % (−66 pb sous la référence).
 
 | Stratégie | Valeur actionnaire | Rentabilité | Compétitivité | Liquidité | Capital | Écart de valeur robuste |
 | --- | --- | --- | --- | --- | --- | --- |
 | Réinvestissement progressif | neutre (0,4) | neutre (−0,02 pt) | neutre (0 pb) | favorable (−10,4) | neutre (0,7) | non |
-| Repositionnement | défavorable (−16,3) | défavorable (−2,52 pt) | favorable (11 pb) | favorable (−18,3) | défavorable (17,8) | oui, défavorable |
-| Taux servi compétitif | défavorable (−5,9) | neutre (−0,10 pt) | favorable (13 pb) | défavorable (20,1) | favorable (−12,6) | oui, défavorable |
+| Repositionnement | défavorable (−16,5) | défavorable (−2,50 pt) | favorable (11 pb) | favorable (−18,3) | défavorable (19,2) | oui, défavorable |
+| Taux servi compétitif | défavorable (−6,0) | neutre (−0,11 pt) | favorable (13 pb) | défavorable (19,9) | favorable (−11,4) | oui, défavorable |
 | Taux servi de marge | favorable (5,8) | neutre (0,05 pt) | défavorable (−27 pb) | défavorable (26,7) | défavorable (6,1) | oui, favorable |
 | Liquidité défensive | neutre (0,8, ns) | défavorable (−0,70 pt) | neutre (−3 pb) | neutre (−3,2) | défavorable (13,5) | non |
 | Compétitif préservant la PPB | défavorable (−4,1) | neutre (−0,20 pt) | favorable (19 pb) | défavorable (7,4) | neutre (−1,4) | oui, défavorable |
@@ -40,17 +40,17 @@ Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 1
 
 ## Profil B
 
-Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 69,6 pour un SCR simplifié de 94,5, indicateur de 74 % [69 % ; 75 %]. Apport pour 100 % : 25,4 ; pour 150 % : 73,3. À 100 %, valeur nette de 57,8, rendement réel des fonds propres de 8,7 % (au-dessus du rendement exigé fictif de 8 %), taux servi moyen de 2,66 % (−31 pb sous la référence).
+Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 67,5 pour un SCR simplifié de 94,5, indicateur de 71 % [67 % ; 73 %]. Apport pour 100 % : 27,6 ; pour 150 % : 75,4. À 100 %, valeur nette de 57,5, rendement réel des fonds propres de 8,5 % (au-dessus du rendement exigé fictif de 8 %), taux servi moyen de 2,66 % (−31 pb sous la référence).
 
 | Stratégie | Valeur actionnaire | Rentabilité | Compétitivité | Liquidité | Capital | Écart de valeur robuste |
 | --- | --- | --- | --- | --- | --- | --- |
-| Réinvestissement progressif | neutre (0,3, ns) | neutre (−0,03 pt) | neutre (−1 pb) | neutre (−0,1) | neutre (−0,2) | non |
-| Repositionnement | défavorable (−11,8) | défavorable (−1,89 pt) | favorable (18 pb) | défavorable (11,9) | défavorable (20,1) | oui, défavorable |
-| Taux servi compétitif | défavorable (−10,1) | défavorable (−0,28 pt) | favorable (24 pb) | neutre (2,4) | neutre (−1,1) | oui, défavorable |
-| Taux servi de marge | favorable (6,2) | favorable (0,36 pt) | défavorable (−9 pb) | défavorable (6,2) | favorable (−3,6) | oui, favorable |
-| Liquidité défensive | neutre (1,2, ns) | défavorable (−0,32 pt) | défavorable (−9 pb) | neutre (−0,5) | neutre (0,8, ns) | non |
-| Compétitif préservant la PPB | défavorable (−9,5) | défavorable (−0,46 pt) | favorable (24 pb) | neutre (2,2) | neutre (−0,2, ns) | oui, défavorable |
-| Rétention de capital | neutre (−1,4) | défavorable (−0,66 pt) | neutre (0 pb) | neutre (−0,5) | neutre (0,4) | non |
+| Réinvestissement progressif | neutre (0,3) | neutre (−0,03 pt) | neutre (−1 pb) | neutre (−0,2) | neutre (−0,1, ns) | non |
+| Repositionnement | défavorable (−11,7) | défavorable (−1,81 pt) | favorable (18 pb) | défavorable (11,9) | défavorable (20,1) | oui, défavorable |
+| Taux servi compétitif | défavorable (−10,1) | défavorable (−0,27 pt) | favorable (24 pb) | neutre (2,2) | neutre (−1,1) | oui, défavorable |
+| Taux servi de marge | favorable (6,3) | favorable (0,35 pt) | défavorable (−8 pb) | défavorable (6,2) | favorable (−3,7) | oui, favorable |
+| Liquidité défensive | neutre (1,2, ns) | défavorable (−0,31 pt) | défavorable (−9 pb) | neutre (−1,0) | neutre (0,8, ns) | non |
+| Compétitif préservant la PPB | défavorable (−9,5) | défavorable (−0,44 pt) | favorable (24 pb) | neutre (2,1) | neutre (−0,3, ns) | oui, défavorable |
+| Rétention de capital | neutre (−1,4) | défavorable (−0,64 pt) | neutre (0 pb) | neutre (−0,6) | neutre (0,4) | non |
 
 **Lecture.**
 
@@ -61,16 +61,16 @@ Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 6
 
 ## Profil C
 
-Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 87,5 pour un SCR simplifié de 83,9, indicateur de 104 % [102 % ; 107 %]. Apport pour 100 % : 0,0 ; pour 150 % : 41,3. À 100 %, valeur nette de 82,8, rendement réel des fonds propres de 11,9 % (au-dessus du rendement exigé fictif de 8 %), taux servi moyen de 2,97 % (0 pb sous la référence).
+Point de départ (gestion passive, sans apport) : fonds propres de niveau 1 de 86,4 pour un SCR simplifié de 83,9, indicateur de 103 % [101 % ; 105 %]. Apport pour 100 % : 0,0 ; pour 150 % : 42,4. À 100 %, valeur nette de 82,8, rendement réel des fonds propres de 11,9 % (au-dessus du rendement exigé fictif de 8 %), taux servi moyen de 2,97 % (0 pb sous la référence).
 
 | Stratégie | Valeur actionnaire | Rentabilité | Compétitivité | Liquidité | Capital | Écart de valeur robuste |
 | --- | --- | --- | --- | --- | --- | --- |
 | Réinvestissement progressif | neutre (0,0, ns) | neutre (−0,02 pt) | neutre (−1 pb) | neutre (−1,1) | neutre (0,0, ns) | non |
-| Repositionnement | neutre (−1,2) | défavorable (−0,28 pt) | neutre (4 pb) | neutre (3,6) | neutre (1,1, ns) | non |
+| Repositionnement | neutre (−1,4) | défavorable (−0,43 pt) | neutre (4 pb) | neutre (3,6) | défavorable (2,2) | non |
 | Taux servi compétitif | défavorable (−9,8) | défavorable (−0,32 pt) | favorable (13 pb) | défavorable (5,0) | neutre (0,0, ns) | oui, défavorable |
 | Taux servi de marge | favorable (3,1) | neutre (0,03 pt) | neutre (−2 pb) | défavorable (19,3) | neutre (0,0, ns) | oui, favorable |
 | Liquidité défensive | favorable (3,1) | neutre (−0,20 pt) | défavorable (−7 pb) | favorable (−5,8) | neutre (0,0, ns) | oui, favorable |
-| Compétitif préservant la PPB | défavorable (−9,7) | défavorable (−0,38 pt) | favorable (13 pb) | défavorable (6,1) | neutre (0,0, ns) | oui, défavorable |
+| Compétitif préservant la PPB | défavorable (−9,8) | défavorable (−0,44 pt) | favorable (13 pb) | défavorable (6,0) | neutre (0,4, ns) | oui, défavorable |
 | Rétention de capital | neutre (−1,3) | défavorable (−1,18 pt) | neutre (0 pb) | neutre (−1,9) | neutre (0,0, ns) | non |
 
 **Lecture.**

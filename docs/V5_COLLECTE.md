@@ -95,7 +95,7 @@ Moyennes risque neutre ± demi-intervalle à 95 %. Marge : valeur des affaires n
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | c0 3 %, eta 0,0 | 220,1 | 17,9 | −3,5 | −5,7 | **8,7 ± 1,7** | 3,9 % | 3,3 ± 8,6 | 257,0 | 588 |
 | c0 3 %, eta 0,5 | 101,7 | 7,7 | −1,8 | −2,7 | **3,2 ± 1,1** | 3,1 % | −2,2 ± 8,2 | 113,5 | 473 |
-| c0 3 %, eta 0,75 | 73,2 | 5,3 | −1,3 | −1,9 | **2,2 ± 0,9** | 2,9 % | −3,2 ± 8,0 | 80,9 | 447 |
+| c0 3 %, eta 0,75 | 73,2 | 5,3 | −1,3 | −1,9 | **2,2 ± 0,9** | 2,9 % | −3,2 ± 8,0 | 80,8 | 447 |
 | c0 3 %, eta 1,0 | 52,5 | 3,6 | −0,9 | −1,3 | **1,4 ± 0,8** | 2,6 % | −4,0 ± 7,9 | 57,5 | 429 |
 | c0 3 %, eta 1,5 | 23,3 | 1,2 | −0,3 | −0,5 | **0,3 ± 0,6** | 1,4 % | −5,1 ± 7,7 | 25,2 | 405 |
 | c0 6 %, eta 0,0 | 505,4 | 38,7 | −7,1 | −14,9 | **16,7 ± 3,7** | 3,3 % | 11,3 ± 10,6 | 597,0 | 883 |
@@ -103,33 +103,33 @@ Moyennes risque neutre ± demi-intervalle à 95 %. Marge : valeur des affaires n
 | c0 6 %, eta 0,75 | 158,7 | 11,1 | −2,8 | −4,2 | **4,1 ± 2,0** | 2,6 % | −1,3 ± 9,0 | 176,5 | 520 |
 | c0 6 %, eta 1,0 | 111,5 | 7,3 | −1,9 | −2,9 | **2,6 ± 1,7** | 2,3 % | −2,8 ± 8,8 | 122,6 | 478 |
 | c0 6 %, eta 1,5 | 48,0 | 2,3 | −0,6 | −1,1 | **0,5 ± 1,2** | 1,1 % | −4,9 ± 8,3 | 52,1 | 425 |
-| c0 10 %, eta 0,0 | 1 015,1 | 72,4 | −11,3 | −32,2 | **28,9 ± 7,3** | 2,8 % | 23,5 ± 14,1 | 1 216,2 | 1 429 |
+| c0 10 %, eta 0,0 | 1 015,1 | 72,4 | −11,3 | −32,2 | **28,9 ± 7,3** | 2,8 % | 23,5 ± 14,1 | 1 216,1 | 1 429 |
 | c0 10 %, eta 0,5 | 429,5 | 29,0 | −6,5 | −12,2 | **10,3 ± 5,0** | 2,4 % | 4,9 ± 12,0 | 489,4 | 774 |
 | c0 10 %, eta 0,75 | 296,2 | 19,6 | −4,8 | −8,0 | **6,8 ± 3,8** | 2,3 % | 1,4 ± 10,8 | 332,1 | 642 |
-| c0 10 %, eta 1,0 | 202,8 | 12,6 | −3,3 | −5,3 | **4,1 ± 3,2** | 2,0 % | −1,3 ± 10,2 | 224,3 | 556 |
+| c0 10 %, eta 1,0 | 202,8 | 12,6 | −3,3 | −5,3 | **4,1 ± 3,2** | 2,0 % | −1,3 ± 10,2 | 224,2 | 556 |
 | c0 10 %, eta 1,5 | 83,5 | 3,8 | −1,1 | −1,9 | **0,7 ± 2,2** | 0,9 % | −4,7 ± 9,2 | 90,7 | 454 |
 | Extinction (c0 = 0) | - | - | - | - | - | - | −5,4 ± 7,1 | - | 387 |
 
-**Profil B** (apport 25,4, valeur de l'existant 57,8 ± 5,9)
+**Profil B** (apport 27,6, valeur de l'existant 57,5 ± 5,9)
 
 | Collecte | VA des primes | Flux des contrats nouveaux | Variation du BE de l'existant | Impôt supplémentaire | **Valeur des affaires nouvelles** | Marge | Valeur totale | Collecte 1-10 (RN) | PM année 10 (RN) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| c0 3 %, eta 0,0 | 237,1 | 14,9 | −0,8 | −6,4 | **7,7 ± 1,6** | 3,2 % | 65,5 ± 7,5 | 280,0 | 790 |
-| c0 3 %, eta 0,5 | 147,8 | 8,2 | −0,3 | −3,9 | **4,0 ± 1,4** | 2,7 % | 61,9 ± 7,3 | 169,7 | 694 |
-| c0 3 %, eta 0,75 | 118,5 | 6,1 | −0,1 | −3,0 | **3,0 ± 1,2** | 2,5 % | 60,8 ± 7,2 | 134,6 | 664 |
-| c0 3 %, eta 1,0 | 94,4 | 4,4 | 0,0 | −2,3 | **2,1 ± 1,2** | 2,2 % | 59,9 ± 7,1 | 105,9 | 639 |
-| c0 3 %, eta 1,5 | 55,9 | 1,9 | 0,2 | −1,3 | **0,8 ± 1,0** | 1,5 % | 58,6 ± 6,9 | 61,1 | 602 |
-| c0 6 %, eta 0,0 | 539,6 | 33,2 | −1,6 | −14,8 | **16,8 ± 3,6** | 3,1 % | 74,6 ± 9,4 | 643,3 | 1 098 |
-| c0 6 %, eta 0,5 | 324,2 | 17,9 | −0,7 | −8,5 | **8,7 ± 3,0** | 2,7 % | 66,5 ± 8,9 | 375,0 | 863 |
-| c0 6 %, eta 0,75 | 255,7 | 13,2 | −0,4 | −6,5 | **6,3 ± 2,7** | 2,5 % | 64,1 ± 8,6 | 291,9 | 792 |
-| c0 6 %, eta 1,0 | 200,6 | 9,4 | −0,1 | −4,9 | **4,4 ± 2,5** | 2,2 % | 62,2 ± 8,4 | 226,0 | 735 |
-| c0 6 %, eta 1,5 | 115,5 | 3,9 | 0,3 | −2,6 | **1,6 ± 2,2** | 1,4 % | 59,4 ± 8,0 | 126,4 | 652 |
-| c0 10 %, eta 0,0 | 1 073,0 | 64,4 | −2,4 | −29,6 | **32,3 ± 7,3** | 3,0 % | 90,2 ± 13,1 | 1 294,0 | 1 656 |
-| c0 10 %, eta 0,5 | 611,8 | 33,3 | −1,2 | −16,1 | **16,0 ± 5,8** | 2,6 % | 73,9 ± 11,7 | 714,2 | 1 145 |
-| c0 10 %, eta 0,75 | 471,9 | 24,0 | −0,6 | −12,0 | **11,3 ± 5,1** | 2,4 % | 69,2 ± 10,9 | 542,6 | 997 |
-| c0 10 %, eta 1,0 | 362,7 | 16,7 | −0,2 | −8,9 | **7,6 ± 4,6** | 2,1 % | 65,4 ± 10,5 | 410,8 | 884 |
-| c0 10 %, eta 1,5 | 201,7 | 6,7 | 0,4 | −4,5 | **2,6 ± 3,8** | 1,3 % | 60,5 ± 9,7 | 221,3 | 726 |
-| Extinction (c0 = 0) | - | - | - | - | - | - | 57,8 ± 5,9 | - | 556 |
+| c0 3 %, eta 0,0 | 237,1 | 14,9 | −0,8 | −6,5 | **7,6 ± 1,6** | 3,2 % | 65,1 ± 7,5 | 280,1 | 790 |
+| c0 3 %, eta 0,5 | 147,9 | 8,2 | −0,3 | −3,9 | **4,0 ± 1,4** | 2,7 % | 61,5 ± 7,3 | 169,9 | 695 |
+| c0 3 %, eta 0,75 | 118,7 | 6,1 | −0,1 | −3,1 | **3,0 ± 1,2** | 2,5 % | 60,5 ± 7,2 | 134,7 | 665 |
+| c0 3 %, eta 1,0 | 94,5 | 4,4 | 0,0 | −2,4 | **2,1 ± 1,2** | 2,2 % | 59,6 ± 7,1 | 106,0 | 640 |
+| c0 3 %, eta 1,5 | 55,9 | 1,9 | 0,2 | −1,3 | **0,8 ± 1,0** | 1,4 % | 58,3 ± 6,9 | 61,1 | 603 |
+| c0 6 %, eta 0,0 | 539,7 | 33,2 | −1,6 | −14,9 | **16,6 ± 3,6** | 3,1 % | 74,1 ± 9,4 | 643,4 | 1 099 |
+| c0 6 %, eta 0,5 | 324,4 | 17,9 | −0,7 | −8,6 | **8,6 ± 3,0** | 2,7 % | 66,1 ± 8,9 | 375,3 | 864 |
+| c0 6 %, eta 0,75 | 255,9 | 13,1 | −0,3 | −6,6 | **6,2 ± 2,7** | 2,4 % | 63,7 ± 8,6 | 292,2 | 793 |
+| c0 6 %, eta 1,0 | 200,8 | 9,4 | −0,1 | −5,0 | **4,3 ± 2,5** | 2,2 % | 61,8 ± 8,4 | 226,2 | 736 |
+| c0 6 %, eta 1,5 | 115,6 | 3,9 | 0,3 | −2,6 | **1,6 ± 2,2** | 1,4 % | 59,1 ± 8,0 | 126,6 | 653 |
+| c0 10 %, eta 0,0 | 1 073,2 | 64,3 | −2,4 | −29,9 | **32,1 ± 7,3** | 3,0 % | 89,6 ± 13,1 | 1 294,2 | 1 657 |
+| c0 10 %, eta 0,5 | 612,3 | 33,3 | −1,1 | −16,3 | **15,9 ± 5,8** | 2,6 % | 73,4 ± 11,7 | 714,8 | 1 146 |
+| c0 10 %, eta 0,75 | 472,3 | 24,0 | −0,6 | −12,2 | **11,2 ± 5,1** | 2,4 % | 68,7 ± 10,9 | 543,2 | 999 |
+| c0 10 %, eta 1,0 | 363,0 | 16,7 | −0,2 | −9,0 | **7,5 ± 4,6** | 2,1 % | 65,0 ± 10,5 | 411,2 | 885 |
+| c0 10 %, eta 1,5 | 201,9 | 6,7 | 0,4 | −4,6 | **2,6 ± 3,8** | 1,3 % | 60,1 ± 9,7 | 221,5 | 726 |
+| Extinction (c0 = 0) | - | - | - | - | - | - | 57,5 ± 5,9 | - | 557 |
 
 **Profil C** (apport 0,0, valeur de l'existant 82,8 ± 5,7)
 
@@ -152,7 +152,7 @@ Moyennes risque neutre ± demi-intervalle à 95 %. Marge : valeur des affaires n
 | c0 10 %, eta 1,5 | 299,3 | 6,3 | 5,9 | −6,5 | **5,7 ± 4,7** | 1,9 % | 88,5 ± 10,2 | 328,7 | 853 |
 | Extinction (c0 = 0) | - | - | - | - | - | - | 82,8 ± 5,7 | - | 602 |
 
-**Lecture.** Les affaires nouvelles de la gestion passive ont une valeur positive dans toutes les configurations testées. La variation d'impôt représente 49 % (A), 49 % (B), 46 % (C) de la valeur avant impôt (intensité centrale, élasticité modérée), bien plus que le taux nominal de l'impôt sur les sociétés. L'origine de cet écart n'est pas isolée : une explication possible est l'impôt sur les revenus du capital que la politique de distribution retient avec la croissance, au ratio d'ouverture fonds propres et apport sur PM (14,6 % pour A, 7,5 % pour B, 6,0 % pour C) ; la décomposition ne sépare pas cet effet. C'est une valeur **avant coût explicite de mobilisation du capital additionnel** : seuls l'impôt et la participation sur les revenus des fonds propres conservés sont déduits ; pas de marge pour risques non couvrables, frais d'acquisition fictifs. Une charge frictionnelle annuelle de 2,0 % (A), 2,1 % (B), 2,5 % (C) du SCR proxy des affaires nouvelles suffirait à annuler la valeur centrale (analyse de seuil, section 8).
+**Lecture.** Les affaires nouvelles de la gestion passive ont une valeur positive dans toutes les configurations testées. La variation d'impôt représente 49 % (A), 50 % (B), 46 % (C) de la valeur avant impôt (intensité centrale, élasticité modérée), bien plus que le taux nominal de l'impôt sur les sociétés. L'origine de cet écart n'est pas isolée : une explication possible est l'impôt sur les revenus du capital que la politique de distribution retient avec la croissance, au ratio d'ouverture fonds propres et apport sur PM (14,6 % pour A, 7,8 % pour B, 6,0 % pour C) ; la décomposition ne sépare pas cet effet. C'est une valeur **avant coût explicite de mobilisation du capital additionnel** : seuls l'impôt et la participation sur les revenus des fonds propres conservés sont déduits ; pas de marge pour risques non couvrables, frais d'acquisition fictifs. Une charge frictionnelle annuelle de 2,0 % (A), 2,0 % (B), 2,5 % (C) du SCR proxy des affaires nouvelles suffirait à annuler la valeur centrale (analyse de seuil, section 8).
 
 ## 3. La politique de marge reste-t-elle avantageuse ?
 
@@ -187,24 +187,24 @@ Moyennes risque neutre ± demi-intervalle à 95 %. Marge : valeur des affaires n
 
 | Collecte | Existant (portefeuille fermé) | Affaires nouvelles | **Valeur totale** | Lecture | Majorant ? | Facteur de collecte moyen 1-10 (marge / passive) | Marge qui annulerait l'avantage / marge de la gestion passive |
 | --- | ---: | ---: | ---: | --- | --- | ---: | ---: |
-| c0 3 %, eta 0,0 | 6,2 ± 0,6 | 0,9 ± 0,2 | **7,1 ± 0,7** | **+** | non | 1,00 / 1,00 | 146,9 % / 3,2 % |
-| c0 3 %, eta 0,5 | 6,2 ± 0,6 | −0,4 ± 0,3 | **5,8 ± 0,6** | **+** | oui | 0,49 / 0,61 | 19,1 % / 2,7 % |
-| c0 3 %, eta 0,75 | 6,2 ± 0,6 | −1,1 ± 0,3 | **5,2 ± 0,6** | **+** | oui | 0,29 / 0,49 | 13,0 % / 2,5 % |
-| c0 3 %, eta 1,0 | 6,2 ± 0,6 | −1,2 ± 0,5 | **5,1 ± 0,6** | **+** | oui | 0,16 / 0,38 | 11,7 % / 2,2 % |
-| c0 3 %, eta 1,5 | 6,2 ± 0,6 | −0,1 ± 0,5 | **6,2 ± 0,6** | **+** | indéterminé | 0,11 / 0,22 | 22,9 % / 1,5 % |
-| c0 6 %, eta 0,0 | 6,2 ± 0,6 | 1,6 ± 0,5 | **7,8 ± 0,9** | **+** | non | 1,00 / 1,00 | 53,4 % / 3,1 % |
-| c0 6 %, eta 0,5 | 6,2 ± 0,6 | −1,2 ± 0,6 | **5,0 ± 0,8** | **+** | oui | 0,48 / 0,62 | 7,7 % / 2,7 % |
-| c0 6 %, eta 0,75 | 6,2 ± 0,6 | −2,6 ± 0,7 | **3,7 ± 0,8** | **+** | oui | 0,29 / 0,49 | 5,6 % / 2,5 % |
-| c0 6 %, eta 1,0 | 6,2 ± 0,6 | −2,6 ± 1,0 | **3,7 ± 1,0** | **+** | oui | 0,16 / 0,39 | 5,2 % / 2,2 % |
-| c0 6 %, eta 1,5 | 6,2 ± 0,6 | −0,2 ± 1,1 | **6,1 ± 1,0** | **+** | indéterminé | 0,11 / 0,22 | 10,6 % / 1,4 % |
-| c0 10 %, eta 0,0 | 6,2 ± 0,6 | 2,3 ± 0,9 | **8,5 ± 1,3** | **+** | non | 1,00 / 1,00 | 22,6 % / 3,0 % |
-| c0 10 %, eta 0,5 | 6,2 ± 0,6 | −3,2 ± 1,3 | **3,1 ± 1,4** | **+**, borne sous le seuil | oui | 0,48 / 0,63 | 3,6 % / 2,6 % |
-| c0 10 %, eta 0,75 | 6,2 ± 0,6 | −5,1 ± 1,5 | **1,1 ± 1,5** | ns | oui | 0,28 / 0,50 | 2,8 % / 2,4 % |
-| c0 10 %, eta 1,0 | 6,2 ± 0,6 | −4,8 ± 2,0 | **1,4 ± 1,9** | ns | oui | 0,15 / 0,39 | 2,7 % / 2,1 % |
-| c0 10 %, eta 1,5 | 6,2 ± 0,6 | −0,5 ± 1,9 | **5,8 ± 1,8** | **+** | indéterminé | 0,10 / 0,22 | 5,8 % / 1,3 % |
+| c0 3 %, eta 0,0 | 6,3 ± 0,6 | 0,9 ± 0,2 | **7,1 ± 0,7** | **+** | non | 1,00 / 1,00 | 146,6 % / 3,2 % |
+| c0 3 %, eta 0,5 | 6,3 ± 0,6 | −0,4 ± 0,3 | **5,8 ± 0,6** | **+** | oui | 0,49 / 0,61 | 19,1 % / 2,7 % |
+| c0 3 %, eta 0,75 | 6,3 ± 0,6 | −1,1 ± 0,3 | **5,2 ± 0,6** | **+** | oui | 0,29 / 0,49 | 13,1 % / 2,5 % |
+| c0 3 %, eta 1,0 | 6,3 ± 0,6 | −1,2 ± 0,5 | **5,1 ± 0,6** | **+** | oui | 0,16 / 0,38 | 11,7 % / 2,2 % |
+| c0 3 %, eta 1,5 | 6,3 ± 0,6 | −0,1 ± 0,5 | **6,2 ± 0,6** | **+** | indéterminé | 0,11 / 0,22 | 23,0 % / 1,4 % |
+| c0 6 %, eta 0,0 | 6,3 ± 0,6 | 1,6 ± 0,5 | **7,9 ± 0,9** | **+** | non | 1,00 / 1,00 | 53,4 % / 3,1 % |
+| c0 6 %, eta 0,5 | 6,3 ± 0,6 | −1,2 ± 0,6 | **5,0 ± 0,8** | **+** | oui | 0,49 / 0,62 | 7,7 % / 2,7 % |
+| c0 6 %, eta 0,75 | 6,3 ± 0,6 | −2,5 ± 0,7 | **3,7 ± 0,8** | **+** | oui | 0,29 / 0,49 | 5,6 % / 2,4 % |
+| c0 6 %, eta 1,0 | 6,3 ± 0,6 | −2,6 ± 1,0 | **3,7 ± 1,0** | **+** | oui | 0,16 / 0,39 | 5,2 % / 2,2 % |
+| c0 6 %, eta 1,5 | 6,3 ± 0,6 | −0,2 ± 1,0 | **6,1 ± 1,0** | **+** | indéterminé | 0,11 / 0,22 | 10,6 % / 1,4 % |
+| c0 10 %, eta 0,0 | 6,3 ± 0,6 | 2,3 ± 0,9 | **8,5 ± 1,3** | **+** | non | 1,00 / 1,00 | 22,5 % / 3,0 % |
+| c0 10 %, eta 0,5 | 6,3 ± 0,6 | −3,2 ± 1,3 | **3,1 ± 1,4** | **+**, borne sous le seuil | oui | 0,48 / 0,63 | 3,6 % / 2,6 % |
+| c0 10 %, eta 0,75 | 6,3 ± 0,6 | −5,1 ± 1,5 | **1,2 ± 1,5** | ns | oui | 0,28 / 0,50 | 2,8 % / 2,4 % |
+| c0 10 %, eta 1,0 | 6,3 ± 0,6 | −4,8 ± 2,0 | **1,5 ± 1,9** | ns | oui | 0,15 / 0,39 | 2,7 % / 2,1 % |
+| c0 10 %, eta 1,5 | 6,3 ± 0,6 | −0,4 ± 1,9 | **5,8 ± 1,8** | **+** | indéterminé | 0,10 / 0,22 | 5,8 % / 1,3 % |
 | ONC max., c0 6 %, eta 0,0 | 1,7 ± 0,5 | 0,6 ± 0,9 | **2,3 ± 1,3** | **+**, borne sous le seuil | indéterminé | - | - |
 | ONC max., c0 6 %, eta 0,5 | 1,7 ± 0,5 | −0,9 ± 0,6 | **0,9 ± 1,1** | ns | oui | - | - |
-| ONC max., c0 6 %, eta 0,75 | 1,7 ± 0,5 | −1,5 ± 0,5 | **0,2 ± 0,9** | ns | oui | - | - |
+| ONC max., c0 6 %, eta 0,75 | 1,7 ± 0,5 | −1,5 ± 0,5 | **0,3 ± 0,9** | ns | oui | - | - |
 | ONC max., c0 6 %, eta 1,0 | 1,7 ± 0,5 | −1,3 ± 0,5 | **0,4 ± 1,0** | ns | oui | - | - |
 | ONC max., c0 6 %, eta 1,5 | 1,7 ± 0,5 | 0,1 ± 0,4 | **1,8 ± 0,9** | +, non important | indéterminé | - | - |
 
@@ -236,7 +236,7 @@ Moyennes risque neutre ± demi-intervalle à 95 %. Marge : valeur des affaires n
 **Lecture.**
 
 - **A** : toujours positif, non robuste ; écart de valeur totale à l'intensité centrale de 8,3 (eta 0,0), 5,5 (eta 0,5), 4,5 (eta 0,75), 4,3 (eta 1,0), 5,6 (eta 1,5), contre 5,8 en portefeuille fermé ; cas le moins favorable de la grille : 2,7 ± 1,2.
-- **B** : toujours positif, non robuste ; écart de valeur totale à l'intensité centrale de 7,8 (eta 0,0), 5,0 (eta 0,5), 3,7 (eta 0,75), 3,7 (eta 1,0), 6,1 (eta 1,5), contre 6,2 en portefeuille fermé ; cas le moins favorable de la grille : 0,2 ± 0,9.
+- **B** : toujours positif, non robuste ; écart de valeur totale à l'intensité centrale de 7,9 (eta 0,0), 5,0 (eta 0,5), 3,7 (eta 0,75), 3,7 (eta 1,0), 6,1 (eta 1,5), contre 6,3 en portefeuille fermé ; cas le moins favorable de la grille : 0,3 ± 0,9.
 - **C** : change de signe selon les hypothèses ; écart de valeur totale à l'intensité centrale de 4,0 (eta 0,0), 1,3 (eta 0,5), 0,0 (eta 0,75), 0,3 (eta 1,0), 3,5 (eta 1,5), contre 3,1 en portefeuille fermé ; cas le moins favorable de la grille : −3,0 ± 1,3.
 
 **Majorant**, par élasticité (neuf cas chacune : trois profils, trois intensités) : eta 0,0 : 0 oui, 9 non, 0 indéterminés ; eta 0,5 : 6 oui, 0 non, 3 indéterminés ; eta 0,75 : 9 oui, 0 non, 0 indéterminés ; eta 1,0 : 9 oui, 0 non, 0 indéterminés ; eta 1,5 : 0 oui, 0 non, 9 indéterminés. 
@@ -251,13 +251,13 @@ Trois choix peuvent produire mécaniquement la conclusion : e0 = 0 (la gestion p
 | Profil | Hypothèse | c0 6 %, eta 0,5 | c0 6 %, eta 1,0 | c0 10 %, eta 0,5 | c0 10 %, eta 1,0 |
 | --- | --- | ---: | ---: | ---: | ---: |
 | A | centrale | 5,5 ± 0,7 (−0,3) | 4,3 ± 1,0 (−1,5) | 5,2 ± 1,3 (−0,6) | 3,4 ± 1,8 (−2,5) |
-| A | e0 = −0,5 point | 6,2 ± 0,9 (0,3) | 4,2 ± 1,2 (−1,7) | 5,5 ± 1,7 (−0,3) | 2,3 ± 2,9 (−3,6) |
-| A | collecte 30 ans | 5,7 ± 2,0 (−0,2) | 6,0 ± 4,2 (0,1) | 10,1 ± 15,9 (4,2) | 16,0 ± 26,9 (10,2) |
+| A | e0 = −0,5 point | 6,1 ± 0,9 (0,3) | 4,2 ± 1,2 (−1,7) | 5,5 ± 1,7 (−0,3) | 2,3 ± 2,9 (−3,6) |
+| A | collecte 30 ans | 5,7 ± 2,0 (−0,2) | 5,9 ± 4,2 (0,1) | 10,1 ± 15,9 (4,2) | 16,0 ± 26,9 (10,2) |
 | A | collecte 60 ans | 6,6 ± 4,4 (0,8) | 9,4 ± 10,4 (3,5) | 47,8 ± 87,8 (42,0) | 99,3 ± 176,0 (93,5) |
-| B | centrale | 5,0 ± 0,8 (−1,2) | 3,7 ± 1,0 (−2,6) | 3,1 ± 1,4 (−3,2) | 1,4 ± 1,9 (−4,8) |
-| B | e0 = −0,5 point | 5,1 ± 1,0 (−1,1) | 2,4 ± 1,4 (−3,9) | 2,5 ± 1,8 (−3,8) | −2,7 ± 3,0 (−8,9) |
-| B | collecte 30 ans | 5,8 ± 2,3 (−0,5) | 5,9 ± 4,1 (−0,4) | 7,3 ± 16,0 (1,1) | 15,3 ± 28,2 (9,0) |
-| B | collecte 60 ans | 6,7 ± 4,9 (0,5) | 8,2 ± 10,2 (1,9) | 45,5 ± 89,3 (39,3) | 90,4 ± 183,5 (84,2) |
+| B | centrale | 5,0 ± 0,8 (−1,2) | 3,7 ± 1,0 (−2,6) | 3,1 ± 1,4 (−3,2) | 1,5 ± 1,9 (−4,8) |
+| B | e0 = −0,5 point | 5,1 ± 1,0 (−1,1) | 2,4 ± 1,4 (−3,9) | 2,5 ± 1,8 (−3,7) | −2,6 ± 3,0 (−8,8) |
+| B | collecte 30 ans | 5,8 ± 2,3 (−0,5) | 5,9 ± 4,1 (−0,3) | 7,4 ± 16,0 (1,2) | 15,4 ± 28,2 (9,2) |
+| B | collecte 60 ans | 6,8 ± 4,9 (0,5) | 8,2 ± 10,1 (1,9) | 45,8 ± 89,5 (39,5) | 90,8 ± 184,0 (84,5) |
 | C | centrale | 1,3 ± 0,9 (−1,9) | 0,3 ± 0,8 (−2,8) | −0,8 ± 1,3 (−4,0) | −2,1 ± 1,3 (−5,3) |
 | C | e0 = −0,5 point | 1,3 ± 1,0 (−1,9) | −1,7 ± 1,2 (−4,8) | −1,5 ± 2,0 (−4,7) | −7,1 ± 3,4 (−10,3) |
 | C | collecte 30 ans | 0,4 ± 2,2 (−2,7) | 0,2 ± 1,9 (−3,0) | −1,1 ± 8,4 (−4,2) | −2,2 ± 2,8 (−5,3) |
@@ -267,21 +267,21 @@ Trois choix peuvent produire mécaniquement la conclusion : e0 = 0 (la gestion p
 
 | Profil | Hypothèse | c0 6 %, eta 0,5 | c0 6 %, eta 1,0 | c0 10 %, eta 0,5 | c0 10 %, eta 1,0 |
 | --- | --- | ---: | ---: | ---: | ---: |
-| A | centrale | −6,8 ± 0,6 (−0,9) | −5,3 ± 0,9 (0,6) | −8,2 ± 1,0 (−2,3) | −5,2 ± 1,7 (0,7) |
-| A | e0 = −0,5 point | −7,8 ± 0,7 (−1,9) | −6,8 ± 1,1 (−0,9) | −10,5 ± 1,2 (−4,6) | −7,9 ± 2,1 (−2,0) |
-| A | collecte 30 ans | −9,1 ± 2,2 (−3,2) | −7,1 ± 4,0 (−1,2) | −16,7 ± 11,4 (−10,8) | −17,9 ± 27,6 (−12,0) |
-| A | collecte 60 ans | −11,6 ± 5,0 (−5,7) | −10,4 ± 9,8 (−4,6) | −51,6 ± 60,4 (−45,7) | −105,7 ± 171,2 (−99,9) |
-| B | centrale | −13,3 ± 1,1 (−3,3) | −10,7 ± 1,6 (−0,6) | −16,1 ± 1,9 (−6,0) | −11,0 ± 3,2 (−0,9) |
-| B | e0 = −0,5 point | −15,3 ± 1,2 (−5,2) | −13,7 ± 2,0 (−3,6) | −19,6 ± 2,4 (−9,5) | −15,1 ± 4,4 (−5,0) |
-| B | collecte 30 ans | −19,4 ± 4,4 (−9,3) | −15,3 ± 7,6 (−5,2) | −37,5 ± 28,6 (−27,4) | −35,2 ± 52,5 (−25,1) |
-| B | collecte 60 ans | −25,4 ± 10,0 (−15,4) | −22,2 ± 18,8 (−12,1) | −116,5 ± 155,3 (−106,4) | −195,5 ± 333,6 (−185,4) |
+| A | centrale | −6,9 ± 0,6 (−0,9) | −5,4 ± 0,9 (0,6) | −8,4 ± 1,0 (−2,4) | −5,4 ± 1,7 (0,6) |
+| A | e0 = −0,5 point | −8,0 ± 0,7 (−2,0) | −6,9 ± 1,1 (−0,9) | −10,7 ± 1,2 (−4,7) | −8,1 ± 2,1 (−2,1) |
+| A | collecte 30 ans | −9,3 ± 2,2 (−3,3) | −7,3 ± 4,0 (−1,3) | −17,1 ± 11,5 (−11,0) | −18,2 ± 27,8 (−12,2) |
+| A | collecte 60 ans | −11,8 ± 5,0 (−5,8) | −10,7 ± 9,8 (−4,6) | −52,2 ± 61,0 (−46,2) | −106,5 ± 172,1 (−100,4) |
+| B | centrale | −13,4 ± 1,1 (−3,3) | −10,7 ± 1,6 (−0,7) | −16,2 ± 1,9 (−6,1) | −11,0 ± 3,2 (−1,0) |
+| B | e0 = −0,5 point | −15,3 ± 1,2 (−5,2) | −13,7 ± 2,0 (−3,7) | −19,6 ± 2,4 (−9,5) | −15,2 ± 4,4 (−5,1) |
+| B | collecte 30 ans | −19,5 ± 4,4 (−9,4) | −15,4 ± 7,7 (−5,3) | −37,6 ± 28,6 (−27,6) | −35,4 ± 52,5 (−25,3) |
+| B | collecte 60 ans | −25,5 ± 10,0 (−15,4) | −22,3 ± 18,9 (−12,3) | −116,8 ± 155,3 (−106,7) | −195,9 ± 333,6 (−185,9) |
 | C | centrale | −12,9 ± 1,1 (−3,1) | −10,3 ± 1,7 (−0,5) | −15,2 ± 2,3 (−5,4) | −10,0 ± 4,1 (−0,2) |
 | C | e0 = −0,5 point | −14,7 ± 1,3 (−4,9) | −12,9 ± 2,3 (−3,1) | −18,7 ± 2,8 (−8,9) | −13,9 ± 5,5 (−4,1) |
 | C | collecte 30 ans | −21,0 ± 4,6 (−11,2) | −16,7 ± 8,5 (−6,9) | −44,6 ± 35,9 (−34,8) | −46,2 ± 70,4 (−36,4) |
 | C | collecte 60 ans | −29,1 ± 10,4 (−19,3) | −25,0 ± 20,8 (−15,2) | −148,1 ± 192,7 (−138,3) | −258,1 ± 445,0 (−248,3) |
 
-- **Taux servi de marge** sous ces hypothèses : A : toujours positif, non robuste (de 2,3 à 99,3) ; B : positif là où il est significatif, non robuste (de −2,7 à 90,4) ; C : change de signe selon les hypothèses (de −7,1 à 10,8).
-- **Taux servi compétitif** sous ces hypothèses : A : toujours négatif, non robuste (de −105,7 à −6,8) ; B : toujours négatif, non robuste (de −195,5 à −13,7) ; C : toujours négatif, non robuste (de −258,1 à −12,9).
+- **Taux servi de marge** sous ces hypothèses : A : toujours positif, non robuste (de 2,3 à 99,3) ; B : positif là où il est significatif, non robuste (de −2,6 à 90,8) ; C : change de signe selon les hypothèses (de −7,1 à 10,8).
+- **Taux servi compétitif** sous ces hypothèses : A : toujours négatif, non robuste (de −106,5 à −6,9) ; B : toujours négatif, non robuste (de −195,9 à −13,7) ; C : toujours négatif, non robuste (de −258,1 à −12,9).
 
 **Précision.** 27 cellules ont un demi-intervalle supérieur à cinq fois le seuil d'importance (jusqu'à 445,0), dont 21 à l'intensité forte, toutes avec une collecte de 30 ans ou 60 ans. Sur plusieurs décennies de collecte, la valeur est dominée par quelques scénarios et l'erreur Monte-Carlo empêche toute conclusion ; à l'intensité forte, la collecte nette atteint en outre environ 4,6 % de la PM par an quand g est proche de 1 (section 1), ce qui est peu plausible au regard des 0,7 % observés en 2025.
 
@@ -296,8 +296,8 @@ g_min = 0 n'est pas testé : une collecte négative reviendrait à des rachats s
 | Stratégie | Portefeuille fermé | eta 0,0 | eta 0,5 | eta 0,75 | eta 1,0 | eta 1,5 | ONC max., eta modérée | Robustesse de l'écart de valeur totale |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | Réinvestissement progressif | 0,4 ± 0,2 | 0,8 ± 0,3 | 0,7 ± 0,3 | 0,6 ± 0,3 | 0,5 ± 0,2 | 0,5 ± 0,2 | 0,2 ± 0,1 | sans effet important |
-| Repositionnement | −16,3 ± 1,1 | −20,5 ± 1,3 | −18,5 ± 1,3 | −17,6 ± 1,2 | −17,0 ± 1,1 | −16,5 ± 1,1 | −9,8 ± 0,9 | défavorable, robuste |
-| Taux servi compétitif | −5,9 ± 0,4 | −9,2 ± 0,6 | −6,8 ± 0,6 | −5,9 ± 0,7 | −5,3 ± 0,9 | −4,3 ± 1,2 | −1,8 ± 0,7 | toujours négatif, non robuste |
+| Repositionnement | −16,5 ± 1,1 | −20,7 ± 1,3 | −18,7 ± 1,3 | −17,8 ± 1,2 | −17,2 ± 1,1 | −16,7 ± 1,1 | −9,9 ± 0,9 | défavorable, robuste |
+| Taux servi compétitif | −6,0 ± 0,4 | −9,4 ± 0,6 | −6,9 ± 0,6 | −6,1 ± 0,8 | −5,4 ± 0,9 | −4,4 ± 1,2 | −1,8 ± 0,7 | toujours négatif, non robuste |
 | Taux servi de marge | 5,8 ± 0,4 | 8,3 ± 0,7 | 5,5 ± 0,7 | 4,5 ± 0,8 | 4,3 ± 1,0 | 5,6 ± 0,9 | 3,0 ± 1,1 | toujours positif, non robuste |
 | Liquidité défensive | 0,8 ± 1,2 | −3,9 ± 2,0 | −1,6 ± 1,9 | −0,8 ± 1,8 | −0,4 ± 1,6 | 0,3 ± 1,4 | 3,2 ± 0,9 | change de signe selon les hypothèses |
 | Compétitif préservant la PPB | −4,1 ± 0,4 | −10,2 ± 0,6 | −7,2 ± 0,6 | −6,2 ± 0,6 | −5,6 ± 0,7 | −4,5 ± 1,0 | −1,6 ± 0,6 | toujours négatif, non robuste |
@@ -310,12 +310,12 @@ Plus forte valeur totale selon la configuration : Taux servi de marge (16 config
 | Stratégie | Portefeuille fermé | eta 0,0 | eta 0,5 | eta 0,75 | eta 1,0 | eta 1,5 | ONC max., eta modérée | Robustesse de l'écart de valeur totale |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | Réinvestissement progressif | 0,3 ± 0,3 | 0,6 ± 0,4 | 0,6 ± 0,4 | 0,6 ± 0,3 | 0,6 ± 0,3 | 0,4 ± 0,3 | 0,4 ± 0,2 | sans effet important |
-| Repositionnement | −11,8 ± 0,7 | −13,7 ± 0,8 | −12,9 ± 0,9 | −12,5 ± 0,8 | −12,2 ± 0,8 | −11,7 ± 0,8 | −9,4 ± 0,8 | défavorable, robuste |
-| Taux servi compétitif | −10,1 ± 0,5 | −17,0 ± 0,8 | −13,3 ± 1,1 | −11,9 ± 1,3 | −10,7 ± 1,6 | −9,0 ± 2,1 | −4,3 ± 1,7 | toujours négatif, non robuste |
-| Taux servi de marge | 6,2 ± 0,6 | 7,8 ± 0,9 | 5,0 ± 0,8 | 3,7 ± 0,8 | 3,7 ± 1,0 | 6,1 ± 1,0 | 0,9 ± 1,1 | toujours positif, non robuste |
+| Repositionnement | −11,7 ± 0,7 | −13,7 ± 0,8 | −12,9 ± 0,9 | −12,5 ± 0,8 | −12,2 ± 0,8 | −11,7 ± 0,8 | −9,4 ± 0,8 | défavorable, robuste |
+| Taux servi compétitif | −10,1 ± 0,5 | −17,0 ± 0,8 | −13,4 ± 1,1 | −11,9 ± 1,3 | −10,7 ± 1,6 | −9,1 ± 2,1 | −4,4 ± 1,7 | toujours négatif, non robuste |
+| Taux servi de marge | 6,3 ± 0,6 | 7,9 ± 0,9 | 5,0 ± 0,8 | 3,7 ± 0,8 | 3,7 ± 1,0 | 6,1 ± 1,0 | 0,9 ± 1,1 | toujours positif, non robuste |
 | Liquidité défensive | 1,2 ± 1,4 | 1,0 ± 1,9 | 0,9 ± 1,9 | 0,9 ± 1,8 | 1,0 ± 1,8 | 1,2 ± 1,6 | 2,9 ± 1,4 | toujours positif, non robuste |
-| Compétitif préservant la PPB | −9,5 ± 0,5 | −17,2 ± 0,8 | −13,6 ± 1,1 | −12,2 ± 1,3 | −11,1 ± 1,5 | −9,3 ± 2,0 | −5,0 ± 1,6 | toujours négatif, non robuste |
-| Rétention de capital | −1,4 ± 0,1 | −1,9 ± 0,1 | −1,6 ± 0,1 | −1,6 ± 0,1 | −1,6 ± 0,1 | −1,5 ± 0,1 | −1,0 ± 0,0 | toujours négatif, non robuste |
+| Compétitif préservant la PPB | −9,5 ± 0,5 | −17,2 ± 0,8 | −13,6 ± 1,1 | −12,3 ± 1,3 | −11,1 ± 1,5 | −9,4 ± 2,0 | −5,0 ± 1,6 | toujours négatif, non robuste |
+| Rétention de capital | −1,4 ± 0,1 | −1,9 ± 0,1 | −1,7 ± 0,1 | −1,6 ± 0,1 | −1,6 ± 0,1 | −1,5 ± 0,1 | −1,1 ± 0,0 | toujours négatif, non robuste |
 
 Plus forte valeur totale selon la configuration : Taux servi de marge (15 configurations sur 20), Liquidité défensive (5 configurations sur 20) ; en portefeuille fermé : Taux servi de marge. **Le premier rang change avec les hypothèses.**
 
@@ -324,11 +324,11 @@ Plus forte valeur totale selon la configuration : Taux servi de marge (15 config
 | Stratégie | Portefeuille fermé | eta 0,0 | eta 0,5 | eta 0,75 | eta 1,0 | eta 1,5 | ONC max., eta modérée | Robustesse de l'écart de valeur totale |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | Réinvestissement progressif | 0,0 ± 0,5 | 0,4 ± 0,8 | 0,2 ± 0,8 | 0,2 ± 0,8 | 0,1 ± 0,7 | 0,1 ± 0,7 | 0,1 ± 0,5 | toujours positif, non robuste |
-| Repositionnement | −1,2 ± 0,5 | −2,3 ± 0,6 | −2,2 ± 0,7 | −2,2 ± 0,6 | −2,1 ± 0,6 | −1,6 ± 0,5 | −1,8 ± 0,6 | toujours négatif, non robuste |
+| Repositionnement | −1,4 ± 0,5 | −2,5 ± 0,6 | −2,4 ± 0,7 | −2,4 ± 0,6 | −2,3 ± 0,6 | −1,8 ± 0,5 | −1,9 ± 0,6 | toujours négatif, non robuste |
 | Taux servi compétitif | −9,8 ± 0,7 | −16,8 ± 0,9 | −12,9 ± 1,1 | −11,5 ± 1,3 | −10,3 ± 1,7 | −8,3 ± 2,4 | −3,0 ± 1,8 | toujours négatif, non robuste |
 | Taux servi de marge | 3,1 ± 0,7 | 4,0 ± 1,1 | 1,3 ± 0,9 | 0,0 ± 0,9 | 0,3 ± 0,8 | 3,5 ± 0,7 | 0,0 ± 0,8 | change de signe selon les hypothèses |
 | Liquidité défensive | 3,1 ± 1,5 | 4,1 ± 2,4 | 3,7 ± 2,3 | 3,5 ± 2,2 | 3,3 ± 2,1 | 3,3 ± 2,0 | 4,0 ± 1,6 | toujours positif, non robuste |
-| Compétitif préservant la PPB | −9,7 ± 0,7 | −17,0 ± 0,9 | −13,4 ± 1,1 | −11,9 ± 1,3 | −10,6 ± 1,6 | −8,6 ± 2,3 | −3,4 ± 1,8 | toujours négatif, non robuste |
+| Compétitif préservant la PPB | −9,8 ± 0,7 | −17,1 ± 0,9 | −13,5 ± 1,1 | −12,0 ± 1,3 | −10,7 ± 1,6 | −8,7 ± 2,3 | −3,5 ± 1,8 | toujours négatif, non robuste |
 | Rétention de capital | −1,3 ± 0,1 | −1,8 ± 0,1 | −1,6 ± 0,1 | −1,6 ± 0,1 | −1,5 ± 0,1 | −1,5 ± 0,1 | −1,1 ± 0,1 | toujours négatif, non robuste |
 
 Plus forte valeur totale selon la configuration : Taux servi de marge (3 configurations sur 20), Liquidité défensive (17 configurations sur 20) ; en portefeuille fermé : Taux servi de marge. **Le premier rang change avec les hypothèses.**
@@ -340,7 +340,7 @@ Variation du BE de l'existant, comptée pour l'actionnaire : - (BE de l'existant
 | Profil | eta 0,0 | eta 0,5 | eta 0,75 | eta 1,0 | eta 1,5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | A | −7,1 ± 0,8 | −3,8 ± 0,4 | −2,8 ± 0,3 | −1,9 ± 0,2 | −0,6 ± 0,1 |
-| B | −1,6 ± 0,8 | −0,7 ± 0,5 | −0,4 ± 0,4 | −0,1 ± 0,4 | 0,3 ± 0,3 |
+| B | −1,6 ± 0,8 | −0,7 ± 0,5 | −0,3 ± 0,4 | −0,1 ± 0,4 | 0,3 ± 0,3 |
 | C | 5,2 ± 1,0 | 5,2 ± 0,8 | 5,0 ± 0,8 | 4,7 ± 0,7 | 4,0 ± 0,6 |
 
 **Transferts entre générations d'assurés.** Les contrats nouveaux reçoivent le taux servi commun, donc une part de la PPB d'ouverture et du rendement des obligations anciennes. Quand le taux commun passe sous le TMG de l'existant, l'existant reçoit son TMG et les contrats nouveaux le reste : ils financent alors une partie de la garantie de l'existant. Part des années-scénarios 2 à 10 où les contrats nouveaux sont crédités sous l'existant (intensité centrale, élasticité modérée) : A 28 % en gestion passive, 27 % en politique de marge (écart moyen de 58 pb ces années-là) ; B 8 % en gestion passive, 5 % en politique de marge (écart moyen de 31 pb ces années-là) ; C 0 % en gestion passive, 0 % en politique de marge. Ces transferts apparaissent dans les flux des contrats nouveaux et, en sens inverse, dans la variation du BE de l'existant : ni l'un ni l'autre terme ne les isole, seule la valeur des affaires nouvelles (leur somme) est interprétable.
@@ -365,14 +365,14 @@ Indicateurs non actualisés, conditionnels aux hypothèses (taux sans prime de t
 | Taux servi de marge | 0,75 | 173,5 | 798 | 4,6 % | 108,4 | 121,3 | 0,6 % | −94 pb / −95 pb | 81,0 | 35,6 % |
 | Taux servi de marge | 1,0 | 87,0 | 709 | 4,5 % | 114,8 | 107,8 | 0,7 % | −95 pb / −96 pb | 90,4 | 35,6 % |
 | Taux servi de marge | 1,5 | 46,9 | 677 | 4,5 % | 117,2 | 102,9 | 0,6 % | −95 pb / −96 pb | 98,2 | 35,6 % |
-| Taux servi compétitif | fermé | 0,0 | 713 | 4,3 % | 102,3 | 95,2 | 1,6 % | −53 pb / - | 94,9 | 35,6 % |
-| Taux servi compétitif | 0,0 | 693,0 | 1 377 | 4,8 % | 42,5 | 183,7 | 0,2 % | −20 pb / −20 pb | 3,7 | 12,5 % |
-| Taux servi compétitif | 0,5 | 559,2 | 1 273 | 4,7 % | 54,6 | 169,8 | 0,2 % | −26 pb / −27 pb | 48,8 | 32,2 % |
-| Taux servi compétitif | 0,75 | 493,7 | 1 217 | 4,7 % | 60,6 | 162,4 | 0,3 % | −30 pb / −30 pb | 60,5 | 33,2 % |
-| Taux servi compétitif | 1,0 | 438,1 | 1 158 | 4,6 % | 65,5 | 154,4 | 0,5 % | −33 pb / −33 pb | 62,3 | 35,6 % |
-| Taux servi compétitif | 1,5 | 359,9 | 1 057 | 4,6 % | 72,0 | 140,9 | 0,7 % | −37 pb / −38 pb | 70,9 | 35,6 % |
+| Taux servi compétitif | fermé | 0,0 | 713 | 4,3 % | 102,9 | 96,0 | 1,6 % | −53 pb / - | 94,7 | 35,6 % |
+| Taux servi compétitif | 0,0 | 693,1 | 1 377 | 4,8 % | 42,6 | 185,3 | 0,2 % | −20 pb / −20 pb | 3,6 | 12,4 % |
+| Taux servi compétitif | 0,5 | 559,7 | 1 273 | 4,7 % | 54,7 | 171,4 | 0,2 % | −26 pb / −26 pb | 48,7 | 32,1 % |
+| Taux servi compétitif | 0,75 | 494,3 | 1 218 | 4,7 % | 60,7 | 163,9 | 0,3 % | −30 pb / −30 pb | 60,4 | 33,2 % |
+| Taux servi compétitif | 1,0 | 438,7 | 1 158 | 4,6 % | 65,7 | 155,8 | 0,5 % | −33 pb / −33 pb | 62,2 | 35,6 % |
+| Taux servi compétitif | 1,5 | 360,5 | 1 058 | 4,6 % | 72,3 | 142,2 | 0,7 % | −37 pb / −38 pb | 70,8 | 35,6 % |
 | Compétitif préservant la PPB | fermé | 0,0 | 725 | 4,2 % | 104,6 | 104,8 | 1,2 % | −48 pb / - | 82,2 | 35,6 % |
-| Compétitif préservant la PPB | 0,0 | 691,7 | 1 379 | 4,6 % | 41,4 | 199,5 | 0,2 % | −21 pb / −21 pb | 5,5 | 11,9 % |
+| Compétitif préservant la PPB | 0,0 | 691,7 | 1 379 | 4,6 % | 41,4 | 199,4 | 0,2 % | −21 pb / −21 pb | 5,5 | 11,9 % |
 | Compétitif préservant la PPB | 0,5 | 552,2 | 1 267 | 4,5 % | 53,7 | 183,2 | 0,2 % | −27 pb / −27 pb | 39,9 | 30,2 % |
 | Compétitif préservant la PPB | 0,75 | 481,1 | 1 207 | 4,5 % | 60,2 | 174,5 | 0,2 % | −30 pb / −31 pb | 59,8 | 33,1 % |
 | Compétitif préservant la PPB | 1,0 | 416,9 | 1 146 | 4,4 % | 66,0 | 165,7 | 0,4 % | −34 pb / −34 pb | 70,2 | 33,4 % |
@@ -382,30 +382,30 @@ Indicateurs non actualisés, conditionnels aux hypothèses (taux sans prime de t
 
 | Stratégie | eta | Collecte 1-10 | PM année 10 (médiane) | Rendement des fonds propres 1-10 | Dividendes 1-10 | Fonds propres année 10 (médiane) | Probabilité d'apport sur 60 ans | Écart du taux servi à la référence : fonds / contrats nouveaux | Moins-values réalisées q99 | Sorties nettes max. q99 |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Passive | fermé | 0,0 | 753 | 8,7 % | 85,8 | 56,7 | 0,3 % | −31 pb / - | 4,9 | 15,1 % |
-| Passive | 0,0 | 688,7 | 1 360 | 9,1 % | 67,1 | 102,5 | 0,4 % | −41 pb / −41 pb | 0,0 | 2,4 % |
-| Passive | 0,5 | 508,5 | 1 180 | 9,0 % | 72,3 | 89,0 | 0,4 % | −40 pb / −40 pb | 0,1 | 8,1 % |
-| Passive | 0,75 | 427,1 | 1 095 | 8,9 % | 74,6 | 82,6 | 0,4 % | −39 pb / −39 pb | 0,8 | 10,7 % |
-| Passive | 1,0 | 351,0 | 1 021 | 8,8 % | 76,7 | 77,0 | 0,4 % | −39 pb / −39 pb | 2,8 | 12,1 % |
-| Passive | 1,5 | 229,0 | 896 | 8,7 % | 79,8 | 67,5 | 0,4 % | −38 pb / −38 pb | 4,5 | 14,5 % |
-| Taux servi de marge | fermé | 0,0 | 721 | 9,0 % | 85,3 | 51,8 | 0,4 % | −39 pb / - | 11,1 | 13,5 % |
-| Taux servi de marge | 0,0 | 664,3 | 1 283 | 9,4 % | 69,7 | 92,1 | 0,4 % | −56 pb / −56 pb | 0,0 | 5,3 % |
-| Taux servi de marge | 0,5 | 431,5 | 1 092 | 9,2 % | 74,6 | 78,4 | 0,4 % | −53 pb / −53 pb | 3,9 | 11,1 % |
-| Taux servi de marge | 0,75 | 335,0 | 1 014 | 9,1 % | 76,4 | 72,8 | 0,4 % | −52 pb / −52 pb | 11,0 | 12,3 % |
-| Taux servi de marge | 1,0 | 270,0 | 953 | 9,1 % | 77,6 | 68,4 | 0,4 % | −50 pb / −50 pb | 12,1 | 12,5 % |
-| Taux servi de marge | 1,5 | 237,2 | 914 | 9,1 % | 78,3 | 65,7 | 0,3 % | −49 pb / −49 pb | 11,9 | 12,6 % |
-| Taux servi compétitif | fermé | 0,0 | 767 | 8,4 % | 83,0 | 57,0 | 0,4 % | −7 pb / - | 7,4 | 21,5 % |
-| Taux servi compétitif | 0,0 | 701,8 | 1 406 | 8,6 % | 59,9 | 104,4 | 0,4 % | −2 pb / −2 pb | 0,0 | 6,0 % |
-| Taux servi compétitif | 0,5 | 665,8 | 1 382 | 8,6 % | 60,9 | 102,6 | 0,4 % | −3 pb / −3 pb | 0,0 | 11,5 % |
-| Taux servi compétitif | 0,75 | 647,7 | 1 372 | 8,5 % | 61,5 | 101,9 | 0,4 % | −3 pb / −3 pb | 0,8 | 13,1 % |
-| Taux servi compétitif | 1,0 | 630,3 | 1 362 | 8,5 % | 62,0 | 101,1 | 0,4 % | −4 pb / −4 pb | 1,0 | 13,8 % |
-| Taux servi compétitif | 1,5 | 600,9 | 1 335 | 8,5 % | 62,8 | 99,1 | 0,4 % | −4 pb / −4 pb | 1,9 | 14,5 % |
-| Compétitif préservant la PPB | fermé | 0,0 | 770 | 8,2 % | 82,0 | 57,9 | 0,4 % | −6 pb / - | 7,1 | 18,2 % |
-| Compétitif préservant la PPB | 0,0 | 700,9 | 1 407 | 8,5 % | 59,0 | 105,8 | 0,4 % | −3 pb / −3 pb | 0,0 | 5,2 % |
-| Compétitif préservant la PPB | 0,5 | 661,1 | 1 377 | 8,4 % | 59,9 | 103,5 | 0,4 % | −4 pb / −4 pb | 0,6 | 11,4 % |
-| Compétitif préservant la PPB | 0,75 | 640,9 | 1 366 | 8,4 % | 60,3 | 102,7 | 0,4 % | −4 pb / −4 pb | 2,1 | 13,2 % |
-| Compétitif préservant la PPB | 1,0 | 620,8 | 1 353 | 8,4 % | 60,8 | 101,7 | 0,4 % | −4 pb / −4 pb | 2,8 | 13,8 % |
-| Compétitif préservant la PPB | 1,5 | 584,7 | 1 323 | 8,3 % | 61,7 | 99,4 | 0,4 % | −5 pb / −5 pb | 3,3 | 14,0 % |
+| Passive | fermé | 0,0 | 753 | 8,5 % | 87,0 | 58,4 | 0,3 % | −31 pb / - | 4,9 | 15,1 % |
+| Passive | 0,0 | 688,7 | 1 360 | 8,9 % | 67,2 | 105,5 | 0,4 % | −41 pb / −41 pb | 0,0 | 2,4 % |
+| Passive | 0,5 | 508,7 | 1 180 | 8,8 % | 72,7 | 91,5 | 0,4 % | −39 pb / −39 pb | 0,1 | 8,0 % |
+| Passive | 0,75 | 427,3 | 1 095 | 8,7 % | 75,1 | 85,0 | 0,4 % | −39 pb / −39 pb | 0,8 | 10,7 % |
+| Passive | 1,0 | 351,3 | 1 021 | 8,7 % | 77,3 | 79,2 | 0,4 % | −39 pb / −39 pb | 2,7 | 12,0 % |
+| Passive | 1,5 | 229,4 | 896 | 8,6 % | 80,6 | 69,5 | 0,4 % | −38 pb / −38 pb | 4,4 | 14,5 % |
+| Taux servi de marge | fermé | 0,0 | 722 | 8,9 % | 86,4 | 53,3 | 0,4 % | −39 pb / - | 11,2 | 13,5 % |
+| Taux servi de marge | 0,0 | 664,3 | 1 283 | 9,3 % | 70,0 | 94,8 | 0,4 % | −56 pb / −56 pb | 0,0 | 5,3 % |
+| Taux servi de marge | 0,5 | 431,9 | 1 093 | 9,1 % | 75,2 | 80,7 | 0,4 % | −53 pb / −53 pb | 3,8 | 11,1 % |
+| Taux servi de marge | 0,75 | 335,6 | 1 014 | 9,0 % | 77,0 | 74,9 | 0,4 % | −52 pb / −52 pb | 10,9 | 12,3 % |
+| Taux servi de marge | 1,0 | 270,6 | 953 | 8,9 % | 78,3 | 70,4 | 0,3 % | −50 pb / −50 pb | 12,1 | 12,4 % |
+| Taux servi de marge | 1,5 | 237,8 | 916 | 8,9 % | 79,1 | 67,6 | 0,3 % | −49 pb / −49 pb | 11,9 | 12,6 % |
+| Taux servi compétitif | fermé | 0,0 | 768 | 8,2 % | 84,2 | 58,7 | 0,4 % | −7 pb / - | 7,2 | 21,5 % |
+| Taux servi compétitif | 0,0 | 701,8 | 1 406 | 8,5 % | 60,0 | 107,5 | 0,4 % | −2 pb / −2 pb | 0,0 | 5,9 % |
+| Taux servi compétitif | 0,5 | 666,0 | 1 382 | 8,4 % | 61,1 | 105,6 | 0,4 % | −3 pb / −3 pb | 0,0 | 11,4 % |
+| Taux servi compétitif | 0,75 | 648,0 | 1 372 | 8,4 % | 61,6 | 104,9 | 0,4 % | −3 pb / −3 pb | 0,7 | 13,0 % |
+| Taux servi compétitif | 1,0 | 630,6 | 1 362 | 8,4 % | 62,2 | 104,1 | 0,4 % | −4 pb / −4 pb | 0,9 | 13,8 % |
+| Taux servi compétitif | 1,5 | 601,3 | 1 335 | 8,3 % | 63,0 | 102,0 | 0,4 % | −4 pb / −4 pb | 1,9 | 14,4 % |
+| Compétitif préservant la PPB | fermé | 0,0 | 770 | 8,1 % | 83,1 | 59,5 | 0,4 % | −6 pb / - | 7,1 | 18,1 % |
+| Compétitif préservant la PPB | 0,0 | 700,9 | 1 407 | 8,3 % | 59,1 | 108,7 | 0,4 % | −3 pb / −3 pb | 0,0 | 5,1 % |
+| Compétitif préservant la PPB | 0,5 | 661,3 | 1 377 | 8,3 % | 60,0 | 106,4 | 0,4 % | −4 pb / −4 pb | 0,5 | 11,3 % |
+| Compétitif préservant la PPB | 0,75 | 641,2 | 1 366 | 8,2 % | 60,5 | 105,6 | 0,4 % | −4 pb / −4 pb | 2,0 | 13,1 % |
+| Compétitif préservant la PPB | 1,0 | 621,3 | 1 353 | 8,2 % | 61,0 | 104,6 | 0,4 % | −4 pb / −4 pb | 2,6 | 13,7 % |
+| Compétitif préservant la PPB | 1,5 | 585,3 | 1 323 | 8,2 % | 61,9 | 102,2 | 0,4 % | −5 pb / −5 pb | 3,0 | 13,9 % |
 
 **Profil C**
 
@@ -429,59 +429,59 @@ Indicateurs non actualisés, conditionnels aux hypothèses (taux sans prime de t
 | Taux servi compétitif | 0,75 | 706,8 | 1 409 | 11,5 % | 72,8 | 84,5 | 1,0 % | 4 pb / 4 pb | 1,9 | 11,5 % |
 | Taux servi compétitif | 1,0 | 705,6 | 1 409 | 11,4 % | 72,9 | 84,5 | 1,0 % | 3 pb / 3 pb | 2,8 | 12,1 % |
 | Taux servi compétitif | 1,5 | 703,8 | 1 407 | 11,4 % | 73,0 | 84,4 | 1,0 % | 3 pb / 3 pb | 4,8 | 12,6 % |
-| Compétitif préservant la PPB | fermé | 0,0 | 788 | 11,5 % | 86,6 | 47,3 | 1,2 % | 13 pb / - | 26,0 | 24,1 % |
-| Compétitif préservant la PPB | 0,0 | 703,4 | 1 418 | 11,5 % | 72,2 | 85,1 | 0,9 % | 5 pb / 5 pb | 0,6 | 3,2 % |
-| Compétitif préservant la PPB | 0,5 | 707,0 | 1 411 | 11,4 % | 72,1 | 84,7 | 0,9 % | 4 pb / 4 pb | 1,1 | 7,9 % |
-| Compétitif préservant la PPB | 0,75 | 706,2 | 1 408 | 11,4 % | 72,2 | 84,5 | 0,9 % | 4 pb / 4 pb | 2,1 | 10,5 % |
-| Compétitif préservant la PPB | 1,0 | 704,8 | 1 406 | 11,4 % | 72,3 | 84,3 | 0,9 % | 3 pb / 3 pb | 3,6 | 11,3 % |
-| Compétitif préservant la PPB | 1,5 | 702,0 | 1 404 | 11,3 % | 72,4 | 84,3 | 0,9 % | 3 pb / 3 pb | 4,8 | 12,8 % |
+| Compétitif préservant la PPB | fermé | 0,0 | 788 | 11,5 % | 86,8 | 47,6 | 1,1 % | 13 pb / - | 25,9 | 24,1 % |
+| Compétitif préservant la PPB | 0,0 | 703,4 | 1 418 | 11,4 % | 72,2 | 85,7 | 0,9 % | 5 pb / 5 pb | 0,6 | 3,2 % |
+| Compétitif préservant la PPB | 0,5 | 707,0 | 1 411 | 11,4 % | 72,2 | 85,3 | 0,9 % | 4 pb / 4 pb | 1,1 | 7,8 % |
+| Compétitif préservant la PPB | 0,75 | 706,3 | 1 408 | 11,3 % | 72,2 | 85,1 | 0,9 % | 4 pb / 4 pb | 2,1 | 10,5 % |
+| Compétitif préservant la PPB | 1,0 | 704,8 | 1 406 | 11,3 % | 72,3 | 85,0 | 0,9 % | 3 pb / 3 pb | 3,6 | 11,3 % |
+| Compétitif préservant la PPB | 1,5 | 702,0 | 1 404 | 11,3 % | 72,5 | 84,9 | 0,8 % | 3 pb / 3 pb | 4,8 | 12,7 % |
 
 Autres stratégies : `resultats/v5_collecte.json`, rubrique `reel`. Les sorties nettes maximales identiques d'une ligne à l'autre pour A correspondent au plafond de la loi de rachat dynamique, atteint dans les scénarios les plus défavorables.
 
-**Liquidité** (gestion passive, élasticité modérée) : A : moins-values réalisées q99 74,8 en extinction, 38,8 avec collecte ; sorties nettes max. q99 35,6 % et 29,0 % ; B : moins-values réalisées q99 4,9 en extinction, 0,1 avec collecte ; sorties nettes max. q99 15,1 % et 8,1 % ; C : moins-values réalisées q99 19,9 en extinction, 2,6 avec collecte ; sorties nettes max. q99 13,2 % et 6,0 %. Les primes financent une partie des sorties et réduisent les ventes d'obligations en moins-value.
+**Liquidité** (gestion passive, élasticité modérée) : A : moins-values réalisées q99 74,8 en extinction, 38,8 avec collecte ; sorties nettes max. q99 35,6 % et 29,0 % ; B : moins-values réalisées q99 4,9 en extinction, 0,1 avec collecte ; sorties nettes max. q99 15,1 % et 8,0 % ; C : moins-values réalisées q99 19,9 en extinction, 2,6 avec collecte ; sorties nettes max. q99 13,2 % et 6,0 %. Les primes financent une partie des sorties et réduisent les ventes d'obligations en moins-value.
 
 **Écart de taux servi effectivement réalisé** entre la politique de marge et la gestion passive (moyenne du fonds, années 1 à 10, élasticité modérée) : −37 pb (A), −14 pb (B), −5 pb (C), bien moins que le point d'écart des cibles : la participation minimale (compte de participation simplifié) et les reprises de PPB limitent la baisse effective du taux servi, donc la perte de collecte.
 
 ## 8. Capital
 
-- **Besoin à l'ouverture** : inchangé par la collecte, par construction (vue prudentielle simplifiée en extinction, section 1). Apports à 100 % : A : passive 101,0, taux servi de marge 107,1, taux servi compétitif 88,4, compétitif préservant la PPB 99,6 ; B : passive 25,4, taux servi de marge 21,8, taux servi compétitif 24,3, compétitif préservant la PPB 25,2 ; C : passive 0,0, taux servi de marge 0,0, taux servi compétitif 0,0, compétitif préservant la PPB 0,0.
-- **Capital retenu par la croissance** (gestion passive, élasticité modérée, probabilité réelle) : la politique de distribution maintient les fonds propres à leur cible en % de la PM ; la croissance de la PM retient donc du capital et réduit les dividendes. A : fonds propres médians à 10 ans 104,4 en extinction, 166,2 avec collecte ; dividendes 1-10 109,2 et 71,8 ; B : fonds propres médians à 10 ans 56,7 en extinction, 89,0 avec collecte ; dividendes 1-10 85,8 et 72,3 ; C : fonds propres médians à 10 ans 46,9 en extinction, 75,2 avec collecte ; dividendes 1-10 88,3 et 78,0.
+- **Besoin à l'ouverture** : inchangé par la collecte, par construction (vue prudentielle simplifiée en extinction, section 1). Apports à 100 % : A : passive 101,0, taux servi de marge 107,1, taux servi compétitif 89,6, compétitif préservant la PPB 99,6 ; B : passive 27,6, taux servi de marge 23,9, taux servi compétitif 26,4, compétitif préservant la PPB 27,3 ; C : passive 0,0, taux servi de marge 0,0, taux servi compétitif 0,0, compétitif préservant la PPB 0,4.
+- **Capital retenu par la croissance** (gestion passive, élasticité modérée, probabilité réelle) : la politique de distribution maintient les fonds propres à leur cible en % de la PM ; la croissance de la PM retient donc du capital et réduit les dividendes. A : fonds propres médians à 10 ans 104,4 en extinction, 166,2 avec collecte ; dividendes 1-10 109,2 et 71,8 ; B : fonds propres médians à 10 ans 58,4 en extinction, 91,5 avec collecte ; dividendes 1-10 87,0 et 72,7 ; C : fonds propres médians à 10 ans 46,9 en extinction, 75,2 avec collecte ; dividendes 1-10 88,3 et 78,0.
 - **Capital de la croissance, ordre de grandeur** : en supposant le SCR simplifié proportionnel à la PM, au ratio d'ouverture de chaque stratégie (SCR à 100 % de couverture / PM d'ouverture), l'écart de PM médiane à 10 ans entre la collecte centrale et l'extinction (probabilité réelle) demanderait le SCR supplémentaire ci-dessous. Ce n'est pas une projection du SCR : le profil de risque change avec la duration, la PPB, les plus-values latentes et l'allocation. SCR à 100 % : contrôle direct quand il existe, sinon interpolation linéaire en fonction de l'apport, comme pour le besoin d'apport de la consolidation.
 
 | Profil | Stratégie | Apport à l'ouverture (écart à la gestion passive) | SCR / PM d'ouverture | SCR supplémentaire à 10 ans : eta 0,0 / 0,5 / 0,75 / 1,0 / 1,5 | Écart à la gestion passive, eta modérée |
 | --- | --- | ---: | ---: | ---: | ---: |
-| A | Passive | 101,0 (-) | 10,7 % | 67,0 / 45,4 / 36,1 / 26,9 / 11,5 | - |
-| A | Réinvestissement progressif | 101,8 (0,7) | 10,8 % | 67,7 / 45,8 / 36,4 / 27,1 / 11,6 | 0,4 |
-| A | Repositionnement | 118,8 (17,8) | 9,9 % | 54,7 / 31,3 / 25,5 / 19,7 / 10,2 | −14,1 |
-| A | Taux servi compétitif | 88,4 (−12,6) | 9,0 % | 59,7 / 50,4 / 45,4 / 40,0 / 31,0 | 5,0 |
-| A | Taux servi de marge | 107,1 (6,1) | 11,8 % | 65,0 / 30,2 / 15,6 / 5,1 / 1,3 | −15,2 |
-| A | Liquidité défensive | 114,5 (13,5) | 11,9 % | 73,5 / 50,3 / 39,3 / 28,0 / 10,3 | 4,9 |
-| A | Compétitif préservant la PPB | 99,6 (−1,4) | 10,0 % | 65,4 / 54,1 / 48,1 / 42,1 / 31,2 | 8,8 |
-| A | Rétention de capital | 100,7 (−0,4) | 10,5 % | 65,7 / 44,5 / 35,4 / 26,4 / 11,3 | −0,9 |
-| B | Passive | 25,4 (-) | 9,4 % | 57,4 / 40,4 / 32,4 / 25,3 / 13,5 | - |
-| B | Réinvestissement progressif | 25,2 (−0,2) | 9,5 % | 57,3 / 40,3 / 32,3 / 25,4 / 13,4 | −0,1 |
-| B | Repositionnement | 45,5 (20,1) | 9,8 % | 56,4 / 42,6 / 35,3 / 30,7 / 25,0 | 2,1 |
-| B | Taux servi compétitif | 24,3 (−1,1) | 8,6 % | 54,7 / 52,6 / 51,7 / 50,9 / 48,6 | 12,2 |
-| B | Taux servi de marge | 21,8 (−3,6) | 9,3 % | 52,3 / 34,6 / 27,3 / 21,6 / 18,0 | −5,9 |
-| B | Liquidité défensive | 26,2 (0,8) | 9,6 % | 58,3 / 41,1 / 33,1 / 25,8 / 13,5 | 0,7 |
-| B | Compétitif préservant la PPB | 25,2 (−0,2) | 8,4 % | 53,5 / 51,0 / 50,0 / 48,9 / 46,4 | 10,5 |
-| B | Rétention de capital | 25,8 (0,4) | 9,4 % | 57,3 / 40,4 / 32,3 / 25,3 / 13,5 | −0,1 |
+| A | Passive | 101,0 (-) | 10,5 % | 65,9 / 44,6 / 35,5 / 26,5 / 11,3 | - |
+| A | Réinvestissement progressif | 101,7 (0,7) | 10,7 % | 66,6 / 45,0 / 35,8 / 26,7 / 11,4 | 0,4 |
+| A | Repositionnement | 120,3 (19,2) | 9,9 % | 54,7 / 31,3 / 25,5 / 19,7 / 10,2 | −13,3 |
+| A | Taux servi compétitif | 89,6 (−11,4) | 9,0 % | 59,5 / 50,2 / 45,2 / 39,9 / 30,9 | 5,6 |
+| A | Taux servi de marge | 107,1 (6,1) | 11,6 % | 64,1 / 29,7 / 15,3 / 5,0 / 1,3 | −14,9 |
+| A | Liquidité défensive | 114,5 (13,5) | 11,8 % | 72,5 / 49,5 / 38,8 / 27,6 / 10,1 | 4,9 |
+| A | Compétitif préservant la PPB | 99,6 (−1,4) | 9,8 % | 64,3 / 53,2 / 47,3 / 41,4 / 30,7 | 8,6 |
+| A | Rétention de capital | 100,7 (−0,4) | 10,4 % | 64,7 / 43,8 / 34,9 / 26,0 / 11,2 | −0,8 |
+| B | Passive | 27,6 (-) | 9,4 % | 57,3 / 40,4 / 32,4 / 25,3 / 13,5 | - |
+| B | Réinvestissement progressif | 27,4 (−0,1) | 9,5 % | 57,3 / 40,3 / 32,3 / 25,4 / 13,4 | −0,1 |
+| B | Repositionnement | 47,7 (20,1) | 9,8 % | 56,4 / 42,6 / 35,3 / 30,8 / 25,1 | 2,2 |
+| B | Taux servi compétitif | 26,4 (−1,1) | 8,6 % | 54,6 / 52,5 / 51,7 / 50,9 / 48,5 | 12,2 |
+| B | Taux servi de marge | 23,9 (−3,7) | 9,3 % | 52,3 / 34,6 / 27,2 / 21,6 / 18,1 | −5,8 |
+| B | Liquidité défensive | 28,4 (0,8) | 9,6 % | 58,3 / 41,1 / 33,0 / 25,8 / 13,5 | 0,7 |
+| B | Compétitif préservant la PPB | 27,3 (−0,3) | 8,4 % | 53,4 / 50,9 / 50,0 / 48,9 / 46,4 | 10,5 |
+| B | Rétention de capital | 27,9 (0,4) | 9,4 % | 57,3 / 40,3 / 32,3 / 25,3 / 13,5 | −0,1 |
 | C | Passive | 0,0 (-) | 8,4 % | 50,7 / 39,6 / 36,1 / 33,1 / 27,6 | - |
 | C | Réinvestissement progressif | 0,0 (0,0) | 8,4 % | 50,7 / 39,4 / 35,9 / 32,9 / 27,1 | −0,2 |
-| C | Repositionnement | 1,1 (1,1) | 8,6 % | 52,6 / 42,4 / 39,8 / 37,1 / 30,9 | 2,7 |
+| C | Repositionnement | 2,2 (2,2) | 8,6 % | 52,6 / 42,4 / 39,8 / 37,1 / 30,9 | 2,8 |
 | C | Taux servi compétitif | 0,0 (0,0) | 8,0 % | 50,6 / 50,1 / 49,9 / 49,8 / 49,7 | 10,4 |
 | C | Taux servi de marge | 0,0 (0,0) | 7,9 % | 45,3 / 37,6 / 34,5 / 32,0 / 31,6 | −2,1 |
 | C | Liquidité défensive | 0,0 (0,0) | 8,6 % | 51,3 / 39,5 / 35,4 / 32,1 / 26,8 | −0,1 |
-| C | Compétitif préservant la PPB | 0,0 (0,0) | 8,1 % | 50,8 / 50,2 / 50,0 / 49,8 / 49,7 | 10,6 |
+| C | Compétitif préservant la PPB | 0,4 (0,4) | 8,1 % | 50,8 / 50,3 / 50,0 / 49,8 / 49,7 | 10,6 |
 | C | Rétention de capital | 0,0 (0,0) | 8,4 % | 50,9 / 39,9 / 36,3 / 33,3 / 27,8 | 0,2 |
 
-  La croissance demande un capital du même ordre que l'apport d'ouverture de B et C (eta modérée), et il dépend d'abord de l'élasticité. Pour Repositionnement (A : 17,8 à l'ouverture, −14,1 pour la croissance), Taux servi compétitif (A : −12,6 à l'ouverture, 5,0 pour la croissance), Taux servi de marge (A : 6,1 à l'ouverture, −15,2 pour la croissance), l'écart de capital à l'ouverture et l'écart de capital de la croissance vont en sens contraire : la comparaison des besoins à l'ouverture ne suffit pas à classer les stratégies en capital. La politique de distribution retient des fonds propres comptables au ratio d'ouverture (point précédent) : ce SCR supplémentaire n'appelle donc pas un apport du même montant, mais fonds propres comptables et fonds propres prudentiels ne coïncident pas (plus ou moins-values latentes, marge de risque, absorption par les provisions techniques, impôts différés).
+  La croissance demande un capital du même ordre que l'apport d'ouverture de B et C (eta modérée), et il dépend d'abord de l'élasticité. Pour Repositionnement (A : 19,2 à l'ouverture, −13,3 pour la croissance), Taux servi compétitif (A : −11,4 à l'ouverture, 5,6 pour la croissance), Taux servi de marge (A : 6,1 à l'ouverture, −14,9 pour la croissance), l'écart de capital à l'ouverture et l'écart de capital de la croissance vont en sens contraire : la comparaison des besoins à l'ouverture ne suffit pas à classer les stratégies en capital. La politique de distribution retient des fonds propres comptables au ratio d'ouverture (point précédent) : ce SCR supplémentaire n'appelle donc pas un apport du même montant, mais fonds propres comptables et fonds propres prudentiels ne coïncident pas (plus ou moins-values latentes, marge de risque, absorption par les provisions techniques, impôts différés).
 - **Seuil de coût du capital des affaires nouvelles** (analyse de seuil, aucun coût retenu ; gestion passive, collecte centrale, eta modérée, mêmes scénarios risque neutre que la valeur publiée). Capital proxy, scénario par scénario : K(t) = SCR à 100 % / PM d'ouverture x (PM avec collecte - PM en extinction). Une charge frictionnelle kappa x K(t - 1), payée en fin d'année t et actualisée au déflateur, réduit la valeur des affaires nouvelles de kappa x S, avec S = somme sur t de E[D(t) K(t - 1)] ; le seuil kappa* = valeur / S est la charge annuelle qui l'annulerait. kappa est une charge supplémentaire hypothétique, nette des coûts déjà valorisés (impôt et participation sur les revenus du capital comptable retenu) : ce n'est ni le rendement exigé en probabilité réelle, ni le taux de la marge de risque Solvabilité II, qui ont d'autres usages (`docs/V5_METHODOLOGIE.md`, section 3).
 
 | Profil | Valeur des affaires nouvelles ± IC 95 % | SCR / PM d'ouverture | S, VA du capital proxy | kappa* | kappa* aux bornes de l'intervalle |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| A | 6,2 ± 2,5 | 10,7 % | 317 | 2,0 % | 1,2 % à 2,8 % |
-| B | 8,7 ± 3,0 | 9,4 % | 423 | 2,1 % | 1,3 % à 2,8 % |
+| A | 6,2 ± 2,5 | 10,5 % | 312 | 2,0 % | 1,2 % à 2,8 % |
+| B | 8,6 ± 3,0 | 9,4 % | 423 | 2,0 % | 1,3 % à 2,7 % |
 | C | 10,7 ± 3,2 | 8,4 % | 427 | 2,5 % | 1,8 % à 3,3 % |
 
   Lecture : une charge frictionnelle supérieure à environ 2,0 % à 2,5 % par an du capital proxy suffirait à annuler la valeur centrale des affaires nouvelles. Le seuil hérite des limites du proxy (SCR proportionnel à la PM, au ratio d'ouverture) et ne dit pas quelle charge est la bonne.

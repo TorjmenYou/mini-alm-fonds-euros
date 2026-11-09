@@ -45,7 +45,7 @@ CIBLES = (1.0, 1.5)
 SENSIBILITES = {"reaction_onc_max": {"loi": "onc_max"}, "reference_immediate": {"reference": "sans_risque"},
                 "defaut_bloc_souverain": {"credit": "k70_souverain_bloc"}}
 GRAINES_CONTROLE = (4049, 9173)
-CLES_PRUDENTIELLES = ("actif", "be", "ic_be", "fdb", "marge_de_risque", "fonds_excedentaires", "impots_differes_passif",
+CLES_PRUDENTIELLES = ("actif", "be", "ic_be", "fdb", "marge_de_risque", "fonds_excedentaires", "ppb_admissible", "ppb_comptable", "impots_differes_passif",
                       "fonds_propres_niveau_1", "fonds_propres_comptables", "scr", "mcr", "mcr_detail", "scr_net", "scr_brut",
                       "ajustement_tp", "ajustement_impots_differes", "risque_operationnel", "pertes_nettes",
                       "indicateur_couverture_scr", "indicateur_couverture_mcr")

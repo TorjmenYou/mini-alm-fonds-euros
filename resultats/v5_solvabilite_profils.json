@@ -72,7 +72,7 @@
     "rachats_baisse": 0.12,
     "rachat_massif": 0.845
    },
-   "fonds_excedentaires_borne_haute": 18.54375
+   "fonds_excedentaires_borne_haute": 16.22578125
   },
   "A|sans_risque|decompose": {
    "base": "avec_va",
@@ -144,7 +144,7 @@
     "rachats_baisse": 0.171,
     "rachat_massif": 0.884
    },
-   "fonds_excedentaires_borne_haute": 18.54375
+   "fonds_excedentaires_borne_haute": 16.22578125
   },
   "A|sans_risque|lisse_integral": {
    "base": "avec_va",
@@ -216,7 +216,7 @@
     "rachats_baisse": 0.06,
     "rachat_massif": 0.874
    },
-   "fonds_excedentaires_borne_haute": 18.54375
+   "fonds_excedentaires_borne_haute": 16.22578125
   },
   "A|taux_servi_marche|decompose": {
    "base": "avec_va",
@@ -288,7 +288,7 @@
     "rachats_baisse": 0.102,
     "rachat_massif": 0.777
    },
-   "fonds_excedentaires_borne_haute": 18.54375
+   "fonds_excedentaires_borne_haute": 16.22578125
   },
   "B|sans_risque_demi|decompose": {
    "base": "avec_va",
@@ -360,7 +360,7 @@
     "rachats_baisse": 0.052,
     "rachat_massif": 0.128
    },
-   "fonds_excedentaires_borne_haute": 29.67
+   "fonds_excedentaires_borne_haute": 25.96125
   },
   "B|sans_risque|decompose": {
    "base": "avec_va",
@@ -432,7 +432,7 @@
     "rachats_baisse": 0.064,
     "rachat_massif": 0.175
    },
-   "fonds_excedentaires_borne_haute": 29.67
+   "fonds_excedentaires_borne_haute": 25.96125
   },
   "B|sans_risque|lisse_integral": {
    "base": "avec_va",
@@ -504,7 +504,7 @@
     "rachats_baisse": 0.011,
     "rachat_massif": 0.088
    },
-   "fonds_excedentaires_borne_haute": 29.67
+   "fonds_excedentaires_borne_haute": 25.96125
   },
   "B|taux_servi_marche|decompose": {
    "base": "avec_va",
@@ -576,7 +576,7 @@
     "rachats_baisse": 0.029,
     "rachat_massif": 0.106
    },
-   "fonds_excedentaires_borne_haute": 29.67
+   "fonds_excedentaires_borne_haute": 25.96125
   },
   "C|sans_risque_demi|decompose": {
    "base": "avec_va",
@@ -648,7 +648,7 @@
     "rachats_baisse": 0.04,
     "rachat_massif": 0.037
    },
-   "fonds_excedentaires_borne_haute": 14.835
+   "fonds_excedentaires_borne_haute": 12.980625
   },
   "C|sans_risque|decompose": {
    "base": "avec_va",
@@ -720,7 +720,7 @@
     "rachats_baisse": 0.046,
     "rachat_massif": 0.055
    },
-   "fonds_excedentaires_borne_haute": 14.835
+   "fonds_excedentaires_borne_haute": 12.980625
   },
   "C|sans_risque|lisse_integral": {
    "base": "avec_va",
@@ -792,7 +792,7 @@
     "rachats_baisse": 0.009,
     "rachat_massif": 0.015
    },
-   "fonds_excedentaires_borne_haute": 14.835
+   "fonds_excedentaires_borne_haute": 12.980625
   },
   "C|taux_servi_marche|decompose": {
    "base": "avec_va",
@@ -864,7 +864,7 @@
     "rachats_baisse": 0.016,
     "rachat_massif": 0.03
    },
-   "fonds_excedentaires_borne_haute": 14.835
+   "fonds_excedentaires_borne_haute": 12.980625
   }
  }
 }

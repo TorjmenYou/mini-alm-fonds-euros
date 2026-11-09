@@ -167,11 +167,11 @@ Référence composite (niveaux observés pour les fonds euros et le livret A, hy
 | Besoins de financement | Apports, risque neutre : part des scénarios, valeur actuelle moyenne, q99 | 37 % ; 13,4 ; 102,5 |
 | | Apports, réel : probabilité sur 10 ans, sur l'horizon | 0,2 % ; 1,3 % |
 | | Fonds propres comptables négatifs avant 10 ans, réel central / stress | 0,9 % / 5,0 % |
-| Capital | SCR approché, base sans VA (capital économique approché) | 116,7 |
-| | Fonds propres de niveau 1, base avec VA (dont fonds excédentaires) | 12,6 (14,0) |
-| | SCR approché / MCR approché, base avec VA | 119,7 / 29,9 |
-| | **Indicateur de couverture simplifié du SCR** (sans impôts différés actifs ; avec ; sans fonds excédentaires) | **11 %** ; 22 % ; −1 % |
-| | Indicateur de couverture simplifié du MCR | 42 % |
+| Capital | SCR approché, base sans VA (capital économique approché) | 114,9 |
+| | Fonds propres de niveau 1, base avec VA (dont fonds excédentaires) | 10,8 (12,3) |
+| | SCR approché / MCR approché, base avec VA | 118,0 / 29,5 |
+| | **Indicateur de couverture simplifié du SCR** (sans impôts différés actifs ; avec ; sans fonds excédentaires) | **9 %** ; 20 % ; −1 % |
+| | Indicateur de couverture simplifié du MCR | 37 % |
 | Sensibilités de la valeur | Spread +100 pb instantané | −50,5 |
 | | Défaut : bloc souverain de 26 % / bloc unique | −0,9 / −16,6 |
 | | Part de crédit 0,55 / 1 | 1,9 / −3,7 |
@@ -198,10 +198,10 @@ Référence composite (niveaux observés pour les fonds euros et le livret A, hy
 | | Apports, réel : probabilité sur 10 ans, sur l'horizon | 0,0 % ; 0,1 % |
 | | Fonds propres comptables négatifs avant 10 ans, réel central / stress | 0,0 % / 0,4 % |
 | Capital | SCR approché, base sans VA (capital économique approché) | 92,9 |
-| | Fonds propres de niveau 1, base avec VA (dont fonds excédentaires) | 68,6 (17,0) |
+| | Fonds propres de niveau 1, base avec VA (dont fonds excédentaires) | 66,4 (14,9) |
 | | SCR approché / MCR approché, base avec VA | 96,6 / 24,1 |
-| | **Indicateur de couverture simplifié du SCR** (sans impôts différés actifs ; avec ; sans fonds excédentaires) | **71 %** ; 75 % ; 53 % |
-| | Indicateur de couverture simplifié du MCR | 284 % |
+| | **Indicateur de couverture simplifié du SCR** (sans impôts différés actifs ; avec ; sans fonds excédentaires) | **69 %** ; 72 % ; 53 % |
+| | Indicateur de couverture simplifié du MCR | 275 % |
 | Sensibilités de la valeur | Spread +100 pb instantané | −46,9 |
 | | Défaut : bloc souverain de 26 % / bloc unique | −2,8 / −35,5 |
 | | Part de crédit 0,55 / 1 | 2,8 / −5,7 |
@@ -228,10 +228,10 @@ Référence composite (niveaux observés pour les fonds euros et le livret A, hy
 | | Apports, réel : probabilité sur 10 ans, sur l'horizon | 0,0 % ; 0,1 % |
 | | Fonds propres comptables négatifs avant 10 ans, réel central / stress | 0,0 % / 0,2 % |
 | Capital | SCR approché, base sans VA (capital économique approché) | 88,8 |
-| | Fonds propres de niveau 1, base avec VA (dont fonds excédentaires) | 87,4 (8,5) |
+| | Fonds propres de niveau 1, base avec VA (dont fonds excédentaires) | 86,3 (7,4) |
 | | SCR approché / MCR approché, base avec VA | 89,3 / 22,3 |
-| | **Indicateur de couverture simplifié du SCR** (sans impôts différés actifs ; avec ; sans fonds excédentaires) | **98 %** ; 98 % ; 88 % |
-| | Indicateur de couverture simplifié du MCR | 392 % |
+| | **Indicateur de couverture simplifié du SCR** (sans impôts différés actifs ; avec ; sans fonds excédentaires) | **97 %** ; 97 % ; 88 % |
+| | Indicateur de couverture simplifié du MCR | 387 % |
 | Sensibilités de la valeur | Spread +100 pb instantané | −52,0 |
 | | Défaut : bloc souverain de 26 % / bloc unique | −4,7 / −43,1 |
 | | Part de crédit 0,55 / 1 | 2,7 / −6,3 |
@@ -245,12 +245,12 @@ Fonds propres éligibles de niveau 1 = actif - BE - marge de risque + fonds exc�
 
 | Profil | Base | Actif | BE | Marge de risque | Fonds excédentaires | Impôts différés passifs | Fonds propres niveau 1 | SCR | dont marché net | dont vie nette | Ajustement FDB | Ajustement impôts | Opérationnel | MCR | Indicateur SCR | Indicateur MCR |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | sans VA | 908,4 | 899,4 | 18,7 | 14,9 | 0,0 | 5,2 | 116,7 | 70,3 | 39,8 | −53,0 | 0,0 | 4,0 | 29,2 | 4 % | 18 % |
-| A | avec VA | 908,4 | 887,6 | 22,2 | 14,0 | 0,0 | 12,6 | 119,7 | 72,4 | 44,7 | −66,5 | 0,0 | 4,0 | 29,9 | 11 % | 42 % |
-| B | sans VA | 997,6 | 919,7 | 31,8 | 18,2 | 0,0 | 64,4 | 92,9 | 72,7 | 35,9 | −116,1 | 0,0 | 4,1 | 23,2 | 69 % | 277 % |
-| B | avec VA | 997,6 | 908,1 | 38,0 | 17,0 | 0,0 | 68,6 | 96,6 | 73,8 | 40,3 | −120,4 | 0,0 | 4,1 | 24,1 | 71 % | 284 % |
-| C | sans VA | 1 040,7 | 934,6 | 29,4 | 8,9 | 3,0 | 82,6 | 88,8 | 76,4 | 27,9 | −151,2 | −3,0 | 4,2 | 22,2 | 93 % | 372 % |
-| C | avec VA | 1 040,7 | 924,1 | 32,8 | 8,5 | 4,8 | 87,4 | 89,3 | 76,3 | 32,3 | −154,5 | −4,8 | 4,2 | 22,3 | 98 % | 392 % |
+| A | sans VA | 908,4 | 899,4 | 18,7 | 13,0 | 0,0 | 3,4 | 114,9 | 70,3 | 39,8 | −54,9 | 0,0 | 4,0 | 28,7 | 3 % | 12 % |
+| A | avec VA | 908,4 | 887,6 | 22,2 | 12,3 | 0,0 | 10,8 | 118,0 | 72,4 | 44,7 | −68,2 | 0,0 | 4,0 | 29,5 | 9 % | 37 % |
+| B | sans VA | 997,6 | 919,7 | 31,8 | 15,9 | 0,0 | 62,1 | 92,9 | 72,7 | 35,9 | −116,1 | 0,0 | 4,1 | 23,2 | 67 % | 267 % |
+| B | avec VA | 997,6 | 908,1 | 38,0 | 14,9 | 0,0 | 66,4 | 96,6 | 73,8 | 40,3 | −120,4 | 0,0 | 4,1 | 24,1 | 69 % | 275 % |
+| C | sans VA | 1 040,7 | 934,6 | 29,4 | 7,8 | 3,0 | 81,5 | 88,8 | 76,4 | 27,9 | −151,2 | −3,0 | 4,2 | 22,2 | 92 % | 367 % |
+| C | avec VA | 1 040,7 | 924,1 | 32,8 | 7,4 | 4,8 | 86,3 | 89,3 | 76,3 | 32,3 | −154,5 | −4,8 | 4,2 | 22,3 | 97 % | 387 % |
 
 **Pertes nettes par choc (base avec VA)**
 
@@ -270,7 +270,7 @@ Fonds propres éligibles de niveau 1 = actif - BE - marge de risque + fonds exc�
 - Effet des conventions en probabilité réelle, rachat structurel de 5 % : apports sur l'horizon 1,8 %, fonds propres négatifs avant 10 ans 1,3 %, rachat moyen 6,6 %.
 - Effet des conventions en probabilité réelle, transmission immédiate des taux : apports sur l'horizon 12,7 %, fonds propres négatifs avant 10 ans 12,3 %, rachat moyen 10,3 %.
 - Effet des conventions en probabilité réelle, bloc souverain de 26 % : apports sur l'horizon 1,4 %, fonds propres négatifs avant 10 ans 1,4 %, rachat moyen 5,6 %.
-- **Vue prudentielle simplifiée** : indicateur de couverture du SCR de 11 % (avec impôts différés actifs reconnus : 22 % ; sans fonds excédentaires : −1 %) et du MCR de 42 %.
+- **Vue prudentielle simplifiée** : indicateur de couverture du SCR de 9 % (avec impôts différés actifs reconnus : 20 % ; sans fonds excédentaires : −1 %) et du MCR de 37 %.
 
 **Lecture.** Le profil A reste un cas de fragilité financière : sa valeur économique est faible et très sensible aux conventions, et il couvre mal son SCR approché. Mais l'indicateur prudentiel est simplifié (pas de mesure transitoire, pas de modèle interne, pas de reconnaissance d'impôts différés actifs, fonds excédentaires par l'approche simplifiée). Une couverture insuffisante ne vaut donc pas constat d'insolvabilité réglementaire. Elle signale qu'un tel assureur relèverait d'un plan de rétablissement si un calcul complet la confirmait. En probabilité réelle, il honore ses engagements dans la très grande majorité des scénarios : sa fragilité vient de l'absence de coussin, pas d'une défaillance attendue.
 

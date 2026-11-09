@@ -111,7 +111,7 @@
    "va_apports_q99": 90.32388413967732,
    "part_apport_avant_10_ans": 0.042,
    "part_fonds_propres_negatifs_10_ans": 0.241,
-   "duree_s": 15.4
+   "duree_s": 14.5
   },
   "A|centre": {
    "be": 899.3692987191241,
@@ -140,7 +140,7 @@
    "va_apports_q99": 102.53668921783336,
    "part_apport_avant_10_ans": 0.051,
    "part_fonds_propres_negatifs_10_ans": 0.306,
-   "duree_s": 15.1
+   "duree_s": 13.7
   },
   "A|credit_kappa_100": {
    "be": 903.0261286588114,
@@ -169,7 +169,7 @@
    "va_apports_q99": 121.30571885154981,
    "part_apport_avant_10_ans": 0.054,
    "part_fonds_propres_negatifs_10_ans": 0.341,
-   "duree_s": 14.2
+   "duree_s": 14.0
   },
   "A|credit_kappa_55": {
    "be": 897.5067687527597,
@@ -198,7 +198,7 @@
    "va_apports_q99": 95.06465770369621,
    "part_apport_avant_10_ans": 0.049,
    "part_fonds_propres_negatifs_10_ans": 0.285,
-   "duree_s": 15.0
+   "duree_s": 14.0
   },
   "A|credit_lisse": {
    "be": 892.5084232990195,
@@ -227,7 +227,7 @@
    "va_apports_q99": 72.59048977849801,
    "part_apport_avant_10_ans": 0.041,
    "part_fonds_propres_negatifs_10_ans": 0.217,
-   "duree_s": 12.8
+   "duree_s": 13.8
   },
   "A|credit_recouvrement_63": {
    "be": 897.9860355737588,
@@ -256,7 +256,7 @@
    "va_apports_q99": 96.54859898150013,
    "part_apport_avant_10_ans": 0.05,
    "part_fonds_propres_negatifs_10_ans": 0.282,
-   "duree_s": 14.2
+   "duree_s": 14.4
   },
   "A|rachat_structurel_5": {
    "be": 903.0676375811682,
@@ -285,7 +285,7 @@
    "va_apports_q99": 104.09783481997923,
    "part_apport_avant_10_ans": 0.059,
    "part_fonds_propres_negatifs_10_ans": 0.329,
-   "duree_s": 13.7
+   "duree_s": 14.1
   },
   "A|reaction_onc_max": {
    "be": 930.1551208352174,
@@ -314,7 +314,7 @@
    "va_apports_q99": 122.42986838544725,
    "part_apport_avant_10_ans": 0.336,
    "part_fonds_propres_negatifs_10_ans": 0.62,
-   "duree_s": 11.0
+   "duree_s": 10.7
   },
   "A|reaction_onc_min": {
    "be": 865.5804906114139,
@@ -343,7 +343,7 @@
    "va_apports_q99": 73.67923921623006,
    "part_apport_avant_10_ans": 0.001,
    "part_fonds_propres_negatifs_10_ans": 0.105,
-   "duree_s": 16.3
+   "duree_s": 16.8
   },
   "A|reference_composite_observe": {
    "be": 898.9936242159716,
@@ -372,7 +372,7 @@
    "va_apports_q99": 108.21562227546865,
    "part_apport_avant_10_ans": 0.064,
    "part_fonds_propres_negatifs_10_ans": 0.312,
-   "duree_s": 14.5
+   "duree_s": 14.8
   },
   "A|reference_figee": {
    "be": 879.6125258037023,
@@ -401,7 +401,7 @@
    "va_apports_q99": 68.68047448538982,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.188,
-   "duree_s": 14.9
+   "duree_s": 15.7
   },
   "A|reference_lisse_10": {
    "be": 895.7777250468973,
@@ -430,7 +430,7 @@
    "va_apports_q99": 91.15688923399247,
    "part_apport_avant_10_ans": 0.031,
    "part_fonds_propres_negatifs_10_ans": 0.274,
-   "duree_s": 15.0
+   "duree_s": 14.4
   },
   "A|reference_lisse_3": {
    "be": 908.8894639837092,
@@ -459,7 +459,7 @@
    "va_apports_q99": 121.66768154750902,
    "part_apport_avant_10_ans": 0.112,
    "part_fonds_propres_negatifs_10_ans": 0.375,
-   "duree_s": 14.4
+   "duree_s": 13.2
   },
   "A|reference_lisse_5": {
    "be": 903.012054355974,
@@ -488,7 +488,7 @@
    "va_apports_q99": 111.64358415138751,
    "part_apport_avant_10_ans": 0.071,
    "part_fonds_propres_negatifs_10_ans": 0.331,
-   "duree_s": 14.6
+   "duree_s": 14.0
   },
   "A|reference_sans_risque_immediate": {
    "be": 920.9652680280374,
@@ -517,7 +517,7 @@
    "va_apports_q99": 133.22390462116104,
    "part_apport_avant_10_ans": 0.186,
    "part_fonds_propres_negatifs_10_ans": 0.462,
-   "duree_s": 12.6
+   "duree_s": 13.1
   },
   "A|spread_plus_100": {
    "be": 892.0079979221092,
@@ -546,7 +546,7 @@
    "va_apports_q99": 182.53257771246146,
    "part_apport_avant_10_ans": 0.187,
    "part_fonds_propres_negatifs_10_ans": 0.75,
-   "duree_s": 11.1
+   "duree_s": 11.5
   },
   "A|structure_bloc_unique": {
    "be": 916.0105068827755,
@@ -575,7 +575,7 @@
    "va_apports_q99": 445.56352675571316,
    "part_apport_avant_10_ans": 0.089,
    "part_fonds_propres_negatifs_10_ans": 0.176,
-   "duree_s": 13.8
+   "duree_s": 14.1
   },
   "A|structure_granulaire_independant": {
    "be": 895.9244259326542,
@@ -604,7 +604,7 @@
    "va_apports_q99": 74.238638707104,
    "part_apport_avant_10_ans": 0.042,
    "part_fonds_propres_negatifs_10_ans": 0.24,
-   "duree_s": 13.5
+   "duree_s": 14.6
   },
   "A|structure_souverain_bloc": {
    "be": 900.2276509436742,
@@ -633,7 +633,7 @@
    "va_apports_q99": 168.8950728400434,
    "part_apport_avant_10_ans": 0.045,
    "part_fonds_propres_negatifs_10_ans": 0.312,
-   "duree_s": 14.3
+   "duree_s": 13.5
   },
   "A|structure_souverain_granulaire_correle": {
    "be": 900.6933114700262,
@@ -662,7 +662,7 @@
    "va_apports_q99": 160.05767117875124,
    "part_apport_avant_10_ans": 0.056,
    "part_fonds_propres_negatifs_10_ans": 0.295,
-   "duree_s": 14.1
+   "duree_s": 14.3
   },
   "B|base_avec_va": {
    "be": 908.1257234289201,
@@ -691,7 +691,7 @@
    "va_apports_q99": 32.15630982561962,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.035,
-   "duree_s": 16.1
+   "duree_s": 15.9
   },
   "B|centre": {
    "be": 919.7121621088568,
@@ -720,7 +720,7 @@
    "va_apports_q99": 49.361853466449354,
    "part_apport_avant_10_ans": 0.003,
    "part_fonds_propres_negatifs_10_ans": 0.041,
-   "duree_s": 15.2
+   "duree_s": 15.9
   },
   "B|credit_kappa_100": {
    "be": 925.4148016081128,
@@ -749,7 +749,7 @@
    "va_apports_q99": 63.952373175840634,
    "part_apport_avant_10_ans": 0.003,
    "part_fonds_propres_negatifs_10_ans": 0.068,
-   "duree_s": 15.6
+   "duree_s": 14.3
   },
   "B|credit_kappa_55": {
    "be": 916.9085045227094,
@@ -778,7 +778,7 @@
    "va_apports_q99": 38.911497352524634,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.026,
-   "duree_s": 15.6
+   "duree_s": 15.3
   },
   "B|credit_lisse": {
    "be": 908.9094713845857,
@@ -807,7 +807,7 @@
    "va_apports_q99": 23.095270649527958,
    "part_apport_avant_10_ans": 0.0,
    "part_fonds_propres_negatifs_10_ans": 0.001,
-   "duree_s": 14.7
+   "duree_s": 14.8
   },
   "B|credit_recouvrement_63": {
    "be": 917.0569970876132,
@@ -836,7 +836,7 @@
    "va_apports_q99": 39.46188653330863,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.018,
-   "duree_s": 15.8
+   "duree_s": 15.6
   },
   "B|rachat_structurel_5": {
    "be": 924.563015303544,
@@ -865,7 +865,7 @@
    "va_apports_q99": 51.94222954973426,
    "part_apport_avant_10_ans": 0.003,
    "part_fonds_propres_negatifs_10_ans": 0.041,
-   "duree_s": 15.6
+   "duree_s": 15.2
   },
   "B|reaction_onc_max": {
    "be": 950.2561240170647,
@@ -894,7 +894,7 @@
    "va_apports_q99": 51.44958182083648,
    "part_apport_avant_10_ans": 0.03,
    "part_fonds_propres_negatifs_10_ans": 0.088,
-   "duree_s": 15.5
+   "duree_s": 14.5
   },
   "B|reaction_onc_min": {
    "be": 903.9876132638199,
@@ -923,7 +923,7 @@
    "va_apports_q99": 27.115786219905445,
    "part_apport_avant_10_ans": 0.0,
    "part_fonds_propres_negatifs_10_ans": 0.032,
-   "duree_s": 16.3
+   "duree_s": 15.7
   },
   "B|reference_composite_observe": {
    "be": 918.7146708731822,
@@ -952,7 +952,7 @@
    "va_apports_q99": 53.78906183032122,
    "part_apport_avant_10_ans": 0.004,
    "part_fonds_propres_negatifs_10_ans": 0.046,
-   "duree_s": 15.5
+   "duree_s": 16.2
   },
   "B|reference_figee": {
    "be": 904.6906675602518,
@@ -981,7 +981,7 @@
    "va_apports_q99": 21.985846575605017,
    "part_apport_avant_10_ans": 0.0,
    "part_fonds_propres_negatifs_10_ans": 0.032,
-   "duree_s": 15.7
+   "duree_s": 15.3
   },
   "B|reference_lisse_10": {
    "be": 916.4382463765088,
@@ -1010,7 +1010,7 @@
    "va_apports_q99": 47.24601455077204,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.039,
-   "duree_s": 14.5
+   "duree_s": 15.6
   },
   "B|reference_lisse_3": {
    "be": 930.8275247821052,
@@ -1039,7 +1039,7 @@
    "va_apports_q99": 69.338854676563,
    "part_apport_avant_10_ans": 0.007,
    "part_fonds_propres_negatifs_10_ans": 0.057,
-   "duree_s": 14.1
+   "duree_s": 15.6
   },
   "B|reference_lisse_5": {
    "be": 923.7059822883264,
@@ -1068,7 +1068,7 @@
    "va_apports_q99": 52.92895680021086,
    "part_apport_avant_10_ans": 0.004,
    "part_fonds_propres_negatifs_10_ans": 0.043,
-   "duree_s": 15.7
+   "duree_s": 14.9
   },
   "B|reference_sans_risque_immediate": {
    "be": 946.7549519435207,
@@ -1097,7 +1097,7 @@
    "va_apports_q99": 75.38234782564552,
    "part_apport_avant_10_ans": 0.021,
    "part_fonds_propres_negatifs_10_ans": 0.086,
-   "duree_s": 15.1
+   "duree_s": 14.0
   },
   "B|spread_plus_100": {
    "be": 909.8564952152486,
@@ -1126,7 +1126,7 @@
    "va_apports_q99": 106.46725816963017,
    "part_apport_avant_10_ans": 0.024,
    "part_fonds_propres_negatifs_10_ans": 0.237,
-   "duree_s": 14.8
+   "duree_s": 14.4
   },
   "B|structure_bloc_unique": {
    "be": 955.2595560710986,
@@ -1155,7 +1155,7 @@
    "va_apports_q99": 402.2164033153813,
    "part_apport_avant_10_ans": 0.058,
    "part_fonds_propres_negatifs_10_ans": 0.138,
-   "duree_s": 13.9
+   "duree_s": 13.4
   },
   "B|structure_granulaire_independant": {
    "be": 912.4637741519361,
@@ -1184,7 +1184,7 @@
    "va_apports_q99": 21.28377893579297,
    "part_apport_avant_10_ans": 0.001,
    "part_fonds_propres_negatifs_10_ans": 0.006,
-   "duree_s": 15.4
+   "duree_s": 14.9
   },
   "B|structure_souverain_bloc": {
    "be": 922.530648648895,
@@ -1242,7 +1242,7 @@
    "va_apports_q99": 108.28586632400042,
    "part_apport_avant_10_ans": 0.005,
    "part_fonds_propres_negatifs_10_ans": 0.137,
-   "duree_s": 15.8
+   "duree_s": 15.0
   },
   "C|base_avec_va": {
    "be": 924.1242666995939,
@@ -1271,7 +1271,7 @@
    "va_apports_q99": 12.196552972053153,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.012,
-   "duree_s": 16.2
+   "duree_s": 15.5
   },
   "C|centre": {
    "be": 934.6337284442703,
@@ -1300,7 +1300,7 @@
    "va_apports_q99": 27.517322067569125,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.017,
-   "duree_s": 17.6
+   "duree_s": 16.8
   },
   "C|credit_kappa_100": {
    "be": 940.9464369475744,
@@ -1329,7 +1329,7 @@
    "va_apports_q99": 31.701051309522526,
    "part_apport_avant_10_ans": 0.003,
    "part_fonds_propres_negatifs_10_ans": 0.025,
-   "duree_s": 16.7
+   "duree_s": 16.6
   },
   "C|credit_kappa_55": {
    "be": 931.9451944988165,
@@ -1358,7 +1358,7 @@
    "va_apports_q99": 15.638991206801242,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.01,
-   "duree_s": 16.6
+   "duree_s": 16.5
   },
   "C|credit_lisse": {
    "be": 924.6450244784709,
@@ -1387,7 +1387,7 @@
    "va_apports_q99": 0.13065196666350568,
    "part_apport_avant_10_ans": 0.0,
    "part_fonds_propres_negatifs_10_ans": 0.0,
-   "duree_s": 16.3
+   "duree_s": 16.4
   },
   "C|credit_recouvrement_63": {
    "be": 932.0718072261571,
@@ -1416,7 +1416,7 @@
    "va_apports_q99": 13.423747835200842,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.01,
-   "duree_s": 18.3
+   "duree_s": 17.3
   },
   "C|rachat_structurel_5": {
    "be": 939.8901813040816,
@@ -1445,7 +1445,7 @@
    "va_apports_q99": 26.174665003525828,
    "part_apport_avant_10_ans": 0.003,
    "part_fonds_propres_negatifs_10_ans": 0.016,
-   "duree_s": 16.4
+   "duree_s": 17.9
   },
   "C|reaction_onc_max": {
    "be": 962.7936824807617,
@@ -1474,7 +1474,7 @@
    "va_apports_q99": 31.885346291941925,
    "part_apport_avant_10_ans": 0.023,
    "part_fonds_propres_negatifs_10_ans": 0.042,
-   "duree_s": 17.6
+   "duree_s": 16.5
   },
   "C|reaction_onc_min": {
    "be": 923.4243846818168,
@@ -1503,7 +1503,7 @@
    "va_apports_q99": 0.0,
    "part_apport_avant_10_ans": 0.0,
    "part_fonds_propres_negatifs_10_ans": 0.01,
-   "duree_s": 16.8
+   "duree_s": 16.9
   },
   "C|reference_composite_observe": {
    "be": 934.8844872725145,
@@ -1532,7 +1532,7 @@
    "va_apports_q99": 34.944123830659116,
    "part_apport_avant_10_ans": 0.003,
    "part_fonds_propres_negatifs_10_ans": 0.019,
-   "duree_s": 17.5
+   "duree_s": 16.6
   },
   "C|reference_figee": {
    "be": 920.5752645469827,
@@ -1561,7 +1561,7 @@
    "va_apports_q99": 0.5252609031904139,
    "part_apport_avant_10_ans": 0.0,
    "part_fonds_propres_negatifs_10_ans": 0.011,
-   "duree_s": 17.3
+   "duree_s": 16.9
   },
   "C|reference_lisse_10": {
    "be": 931.0772484496373,
@@ -1590,7 +1590,7 @@
    "va_apports_q99": 19.83478979622486,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.013,
-   "duree_s": 18.5
+   "duree_s": 17.1
   },
   "C|reference_lisse_3": {
    "be": 946.954560219539,
@@ -1619,7 +1619,7 @@
    "va_apports_q99": 43.20922857522552,
    "part_apport_avant_10_ans": 0.005,
    "part_fonds_propres_negatifs_10_ans": 0.028,
-   "duree_s": 18.1
+   "duree_s": 16.4
   },
   "C|reference_lisse_5": {
    "be": 939.0251896541065,
@@ -1648,7 +1648,7 @@
    "va_apports_q99": 34.645896037929596,
    "part_apport_avant_10_ans": 0.003,
    "part_fonds_propres_negatifs_10_ans": 0.017,
-   "duree_s": 17.5
+   "duree_s": 17.8
   },
   "C|reference_sans_risque_immediate": {
    "be": 964.0625873636384,
@@ -1677,7 +1677,7 @@
    "va_apports_q99": 56.948972291610445,
    "part_apport_avant_10_ans": 0.013,
    "part_fonds_propres_negatifs_10_ans": 0.044,
-   "duree_s": 17.3
+   "duree_s": 16.6
   },
   "C|spread_plus_100": {
    "be": 917.9804446178625,
@@ -1706,7 +1706,7 @@
    "va_apports_q99": 79.17685916896873,
    "part_apport_avant_10_ans": 0.026,
    "part_fonds_propres_negatifs_10_ans": 0.126,
-   "duree_s": 16.0
+   "duree_s": 17.1
   },
   "C|structure_bloc_unique": {
    "be": 977.7642763359694,
@@ -1735,7 +1735,7 @@
    "va_apports_q99": 369.94977876059767,
    "part_apport_avant_10_ans": 0.048,
    "part_fonds_propres_negatifs_10_ans": 0.138,
-   "duree_s": 14.2
+   "duree_s": 15.1
   },
   "C|structure_granulaire_independant": {
    "be": 927.134152649029,
@@ -1764,7 +1764,7 @@
    "va_apports_q99": 11.401286160045922,
    "part_apport_avant_10_ans": 0.001,
    "part_fonds_propres_negatifs_10_ans": 0.004,
-   "duree_s": 16.5
+   "duree_s": 16.7
   },
   "C|structure_souverain_bloc": {
    "be": 939.3410803891511,
@@ -1793,7 +1793,7 @@
    "va_apports_q99": 70.46091634102585,
    "part_apport_avant_10_ans": 0.005,
    "part_fonds_propres_negatifs_10_ans": 0.095,
-   "duree_s": 16.4
+   "duree_s": 16.3
   },
   "C|structure_souverain_granulaire_correle": {
    "be": 942.5793850370685,
@@ -1822,7 +1822,7 @@
    "va_apports_q99": 81.45658043597868,
    "part_apport_avant_10_ans": 0.002,
    "part_fonds_propres_negatifs_10_ans": 0.101,
-   "duree_s": 17.5
+   "duree_s": 16.8
   }
  },
  "ec": {
@@ -3163,11 +3163,12 @@
    "be_garanti": 767.8317082708406,
    "marge_de_risque": 22.19619699344941,
    "marge_de_risque_2027": 14.231525481533856,
-   "fonds_excedentaires": 14.048006560028908,
-   "ppb_admissible": 25.0,
+   "fonds_excedentaires": 12.292005740025294,
+   "ppb_admissible": 21.875,
+   "ppb_comptable": 25.0,
    "impots_differes_passif": 0.0,
    "impots_differes_actif_non_reconnus": 13.290593340290497,
-   "fonds_propres_niveau_1": 12.583947159097642,
+   "fonds_propres_niveau_1": 10.827946339094028,
    "fonds_propres_niveau_3_si_reconnus": 13.290593340290497,
    "pertes_nettes": {
     "taux_hausse": 14.578450166436141,
@@ -3217,22 +3218,22 @@
     "vie": 90.09000178266534,
     "bscr": 182.17149688299372
    },
-   "ajustement_tp": -66.45747627556746,
+   "ajustement_tp": -68.21347709557108,
    "ajustement_impots_differes": -0.0,
    "risque_operationnel": 3.9943286936971,
-   "scr": 119.70834930112336,
-   "mcr": 29.92708732528084,
+   "scr": 117.95234848111974,
+   "mcr": 29.488087120279936,
    "mcr_detail": {
     "termes_lineaires": {
      "garanties": 29.863555283259092,
-     "fdb": -3.4557887663295075
+     "fdb": -3.547100808969696
     },
-    "lineaire": 26.407766516929584,
-    "plancher_25": 29.92708732528084,
-    "plafond_45": 53.868757185505515,
-    "combine": 29.92708732528084,
+    "lineaire": 26.316454474289397,
+    "plancher_25": 29.488087120279936,
+    "plafond_45": 53.078556816503884,
+    "combine": 29.488087120279936,
     "minimum_absolu": 0.4,
-    "mcr": 29.92708732528084,
+    "mcr": 29.488087120279936,
     "contrainte_active": "plancher de 25 % du SCR"
    },
    "fonds_propres_comptables": 50.0,
@@ -3244,10 +3245,10 @@
     "duration_modifiee": 7.845246220795808,
     "part_non_souveraine": 0.66
    },
-   "indicateur_couverture_scr": 0.10512171650987381,
-   "indicateur_couverture_scr_avec_ida": 0.2161464981385833,
-   "indicateur_couverture_scr_sans_fe": -0.012230219608562649,
-   "indicateur_couverture_mcr": 0.42048686603949526,
+   "indicateur_couverture_scr": 0.09179932810602091,
+   "indicateur_couverture_scr_avec_ida": 0.20447697727057215,
+   "indicateur_couverture_scr_sans_fe": -0.012412295471722744,
+   "indicateur_couverture_mcr": 0.36719731242408366,
    "part_scenarios_avec_apport_base": 0.278
   },
   "A|sans_va": {
@@ -3261,11 +3262,12 @@
    "be_garanti": 794.0136572447972,
    "marge_de_risque": 18.667758392964252,
    "marge_de_risque_2027": 12.161975826799171,
-   "fonds_excedentaires": 14.909773455233902,
-   "ppb_admissible": 25.0,
+   "fonds_excedentaires": 13.046051773329664,
+   "ppb_admissible": 21.875,
+   "ppb_comptable": 25.0,
    "impots_differes_passif": 0.0,
    "impots_differes_actif_non_reconnus": 15.411409877645411,
-   "fonds_propres_niveau_1": 5.23345253501933,
+   "fonds_propres_niveau_1": 3.369730853115092,
    "fonds_propres_niveau_3_si_reconnus": 15.411409877645411,
    "pertes_nettes": {
     "taux_hausse": 11.936437570965154,
@@ -3315,22 +3317,22 @@
     "vie": 78.0738285168886,
     "bscr": 165.662467755931
    },
-   "ajustement_tp": -52.98792552135177,
+   "ajustement_tp": -54.85164720325601,
    "ajustement_impots_differes": -0.0,
    "risque_operationnel": 4.047161844236058,
-   "scr": 116.72170407881529,
-   "mcr": 29.180426019703823,
+   "scr": 114.85798239691105,
+   "mcr": 28.714495599227764,
    "mcr_detail": {
     "termes_lineaires": {
      "garanties": 30.764449190473922,
-     "fdb": -2.755372127110292
+     "fdb": -2.8522856545693123
     },
-    "lineaire": 28.00907706336363,
-    "plancher_25": 29.180426019703823,
-    "plafond_45": 52.524766835466885,
-    "combine": 29.180426019703823,
+    "lineaire": 27.91216353590461,
+    "plancher_25": 28.714495599227764,
+    "plafond_45": 51.686092078609974,
+    "combine": 28.714495599227764,
     "minimum_absolu": 0.4,
-    "mcr": 29.180426019703823,
+    "mcr": 28.714495599227764,
     "contrainte_active": "plancher de 25 % du SCR"
    },
    "fonds_propres_comptables": 50.0,
@@ -3342,10 +3344,10 @@
     "duration_modifiee": 7.845246220795808,
     "part_non_souveraine": 0.66
    },
-   "indicateur_couverture_scr": 0.04483701275887377,
-   "indicateur_couverture_scr_avec_ida": 0.17687252405708953,
-   "indicateur_couverture_scr_sans_fe": -0.08290078521883747,
-   "indicateur_couverture_mcr": 0.1793480510354951,
+   "indicateur_couverture_scr": 0.029338238255573922,
+   "indicateur_couverture_scr_avec_ida": 0.163516199212512,
+   "indicateur_couverture_scr_sans_fe": -0.08424595938640485,
+   "indicateur_couverture_mcr": 0.11735295302229569,
    "part_scenarios_avec_apport_base": 0.368
   },
   "B|avec_va": {
@@ -3359,11 +3361,12 @@
    "be_garanti": 677.5402677186084,
    "marge_de_risque": 37.97096039417778,
    "marge_de_risque_2027": 21.005776287352724,
-   "fonds_excedentaires": 17.00422927436765,
-   "ppb_admissible": 40.0,
+   "fonds_excedentaires": 14.878700615071692,
+   "ppb_admissible": 35.0,
+   "ppb_comptable": 40.0,
    "impots_differes_passif": 0.0,
    "impots_differes_actif_non_reconnus": 3.4727251945096875,
-   "fonds_propres_niveau_1": 68.55708428110651,
+   "fonds_propres_niveau_1": 66.43155562181056,
    "fonds_propres_niveau_3_si_reconnus": 3.4727251945096875,
    "pertes_nettes": {
     "taux_hausse": 7.762396674967135,
@@ -3421,9 +3424,9 @@
    "mcr_detail": {
     "termes_lineaires": {
      "garanties": 26.993191182094858,
-     "fdb": -8.401940899579083
+     "fdb": -8.512468389862473
     },
-    "lineaire": 18.591250282515773,
+    "lineaire": 18.480722792232385,
     "plancher_25": 24.137715881254667,
     "plafond_45": 43.4478885862584,
     "combine": 24.137715881254667,
@@ -3440,10 +3443,10 @@
     "duration_modifiee": 7.213541135227825,
     "part_non_souveraine": 0.66
    },
-   "indicateur_couverture_scr": 0.7100618448983805,
-   "indicateur_couverture_scr_avec_ida": 0.7460296764404549,
+   "indicateur_couverture_scr": 0.688047244700163,
+   "indicateur_couverture_scr_avec_ida": 0.7240150762422374,
    "indicateur_couverture_scr_sans_fe": 0.5339450433126398,
-   "indicateur_couverture_mcr": 2.840247379593522,
+   "indicateur_couverture_mcr": 2.752188978800652,
    "part_scenarios_avec_apport_base": 0.029
   },
   "B|sans_va": {
@@ -3457,11 +3460,12 @@
    "be_garanti": 705.2002329696008,
    "marge_de_risque": 31.784608548339577,
    "marge_de_risque_2027": 17.850018559306097,
-   "fonds_excedentaires": 18.197934037565844,
-   "ppb_admissible": 40.0,
+   "fonds_excedentaires": 15.923192282870113,
+   "ppb_admissible": 35.0,
+   "ppb_comptable": 40.0,
    "impots_differes_passif": 0.0,
    "impots_differes_actif_non_reconnus": 4.867297619415622,
-   "fonds_propres_niveau_1": 64.35070221020622,
+   "fonds_propres_niveau_1": 62.07596045551049,
    "fonds_propres_niveau_3_si_reconnus": 4.867297619415622,
    "pertes_nettes": {
     "taux_hausse": 6.5501148612848965,
@@ -3519,9 +3523,9 @@
    "mcr_detail": {
     "termes_lineaires": {
      "garanties": 27.943947821919455,
-     "fdb": -7.606164542414922
+     "fdb": -7.724451113659101
     },
-    "lineaire": 20.337783279504535,
+    "lineaire": 20.219496708260355,
     "plancher_25": 23.221914908611886,
     "plafond_45": 41.7994468355014,
     "combine": 23.221914908611886,
@@ -3538,10 +3542,10 @@
     "duration_modifiee": 7.213541135227132,
     "part_non_souveraine": 0.66
    },
-   "indicateur_couverture_scr": 0.6927798855461922,
-   "indicateur_couverture_scr_avec_ida": 0.7451797160357374,
+   "indicateur_couverture_scr": 0.6682907148248304,
+   "indicateur_couverture_scr_avec_ida": 0.7206905453143755,
    "indicateur_couverture_scr_sans_fe": 0.496866519775298,
-   "indicateur_couverture_mcr": 2.7711195421847687,
+   "indicateur_couverture_mcr": 2.6731628592993215,
    "part_scenarios_avec_apport_base": 0.053
   },
   "C|avec_va": {
@@ -3555,11 +3559,12 @@
    "be_garanti": 639.4040426402821,
    "marge_de_risque": 32.803856553958596,
    "marge_de_risque_2027": 17.984411281893685,
-   "fonds_excedentaires": 8.468811632709873,
-   "ppb_admissible": 20.0,
+   "fonds_excedentaires": 7.410210178621138,
+   "ppb_admissible": 17.5,
+   "ppb_comptable": 20.0,
    "impots_differes_passif": 4.849338217722137,
    "impots_differes_actif_non_reconnus": 0.0,
-   "fonds_propres_niveau_1": 87.39716254459911,
+   "fonds_propres_niveau_1": 86.33856109051038,
    "fonds_propres_niveau_3_si_reconnus": 0.0,
    "pertes_nettes": {
     "taux_hausse": 12.110513717108233,
@@ -3617,9 +3622,9 @@
    "mcr_detail": {
     "termes_lineaires": {
      "garanties": 25.720131370441724,
-     "fdb": -11.466872007722035
+     "fdb": -11.521919283334649
     },
-    "lineaire": 14.253259362719689,
+    "lineaire": 14.198212087107075,
     "plancher_25": 22.32289191893056,
     "plafond_45": 40.181205454075005,
     "combine": 22.32289191893056,
@@ -3636,10 +3641,10 @@
     "duration_modifiee": 8.608000844987815,
     "part_non_souveraine": 0.66
    },
-   "indicateur_couverture_scr": 0.9787840534057708,
-   "indicateur_couverture_scr_avec_ida": 0.9787840534057708,
+   "indicateur_couverture_scr": 0.9669284943463395,
+   "indicateur_couverture_scr_avec_ida": 0.9669284943463395,
    "indicateur_couverture_scr_sans_fe": 0.8839395809303202,
-   "indicateur_couverture_mcr": 3.915136213623083,
+   "indicateur_couverture_mcr": 3.867713977385358,
    "part_scenarios_avec_apport_base": 0.014
   },
   "C|sans_va": {
@@ -3653,11 +3658,12 @@
    "be_garanti": 665.0138876589409,
    "marge_de_risque": 29.394902606472,
    "marge_de_risque_2027": 16.084139929096203,
-   "fonds_excedentaires": 8.908452177361404,
-   "ppb_admissible": 20.0,
+   "fonds_excedentaires": 7.794895655191229,
+   "ppb_admissible": 17.5,
+   "ppb_comptable": 20.0,
    "impots_differes_passif": 3.0156320790978697,
    "impots_differes_actif_non_reconnus": 0.0,
-   "fonds_propres_niveau_1": 82.57000143068511,
+   "fonds_propres_niveau_1": 81.45644490851492,
    "fonds_propres_niveau_3_si_reconnus": 0.0,
    "pertes_nettes": {
     "taux_hausse": 11.241318139700184,
@@ -3715,9 +3721,9 @@
    "mcr_detail": {
     "termes_lineaires": {
      "garanties": 26.60096473977046,
-     "fdb": -10.752574731607263
+     "fdb": -10.810479670760111
     },
-    "lineaire": 15.848390008163198,
+    "lineaire": 15.79048506901035,
     "plancher_25": 22.211297679481763,
     "plafond_45": 39.98033582306717,
     "combine": 22.211297679481763,
@@ -3734,10 +3740,10 @@
     "duration_modifiee": 8.608000844987815,
     "part_non_souveraine": 0.66
    },
-   "indicateur_couverture_scr": 0.9293693982022626,
-   "indicateur_couverture_scr_avec_ida": 0.9293693982022626,
+   "indicateur_couverture_scr": 0.9168357257190147,
+   "indicateur_couverture_scr_avec_ida": 0.9168357257190147,
    "indicateur_couverture_scr_sans_fe": 0.829100018336281,
-   "indicateur_couverture_mcr": 3.7174775928090504,
+   "indicateur_couverture_mcr": 3.667342902876059,
    "part_scenarios_avec_apport_base": 0.023
   }
  }

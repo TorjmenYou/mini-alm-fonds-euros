@@ -2,29 +2,29 @@
  "n_scenarios": 1000,
  "n_scenarios_prudentiel": 2000,
  "apports_v5_1": {
-  "A|passive": 101.03764378361826,
-  "A|reinvestissement_progressif": 101.76195987467517,
-  "A|repositionnement": 118.83574266246379,
-  "A|taux_servi_competitif": 88.41547847204384,
-  "A|taux_servi_marge": 107.11632422067,
-  "A|liquidite_defensive": 114.51381286649685,
-  "A|taux_servi_competitif_preservant": 99.59489129580702,
-  "A|distribution_retention": 100.67265893364683,
-  "B|passive": 25.396477295036146,
-  "B|reinvestissement_progressif": 25.24323017126829,
-  "B|repositionnement": 45.49269365286183,
-  "B|taux_servi_competitif": 24.266363442960753,
-  "B|taux_servi_marge": 21.818256567533062,
-  "B|liquidite_defensive": 26.19367866486579,
-  "B|taux_servi_competitif_preservant": 25.193868501598246,
-  "B|distribution_retention": 25.788143885121293,
+  "A|passive": 101.01697021846729,
+  "A|reinvestissement_progressif": 101.74181724380567,
+  "A|repositionnement": 120.26061517581417,
+  "A|taux_servi_competitif": 89.58234117852908,
+  "A|taux_servi_marge": 107.1030197096653,
+  "A|liquidite_defensive": 114.50094068553206,
+  "A|taux_servi_competitif_preservant": 99.58092797165364,
+  "A|distribution_retention": 100.65156815130642,
+  "B|passive": 27.55157386422689,
+  "B|reinvestissement_progressif": 27.407579406644825,
+  "B|repositionnement": 47.67616189886507,
+  "B|taux_servi_competitif": 26.44581509525465,
+  "B|taux_servi_marge": 23.867577118509217,
+  "B|liquidite_defensive": 28.356378877617388,
+  "B|taux_servi_competitif_preservant": 27.296364210599783,
+  "B|distribution_retention": 27.948207004942923,
   "C|passive": 0.0,
   "C|reinvestissement_progressif": 0.0,
-  "C|repositionnement": 1.081078025502098,
+  "C|repositionnement": 2.168992976227531,
   "C|taux_servi_competitif": 0.0,
   "C|taux_servi_marge": 0.0,
   "C|liquidite_defensive": 0.0,
-  "C|taux_servi_competitif_preservant": 0.0,
+  "C|taux_servi_competitif_preservant": 0.43500048541760117,
   "C|distribution_retention": 0.0
  },
  "frais_sensibilite": [
@@ -35,310 +35,310 @@
   "A": {
    "v5_0": {
     "valeurs_nettes": {
-     "moyenne": -3.2245962121349705,
-     "demi_intervalle_95": 7.034024971023354
+     "moyenne": -3.222639812555566,
+     "demi_intervalle_95": 7.0340219765609895
     },
     "be": {
-     "moyenne": 898.9791452644192,
-     "demi_intervalle_95": 7.069617217505007
+     "moyenne": 898.9785840685572,
+     "demi_intervalle_95": 7.069607782882622
     },
     "fdb": {
-     "moyenne": 71.98876498640806,
-     "demi_intervalle_95": 1.5433739243182323
+     "moyenne": 71.98632101883757,
+     "demi_intervalle_95": 1.5433502647391826
     },
     "fuite": {
-     "moyenne": 1.1006196604693104,
-     "demi_intervalle_95": 3.0287609788591094
+     "moyenne": 1.1005897087868075,
+     "demi_intervalle_95": 3.028674608628214
     },
     "va_impots": {
-     "moyenne": 12.606187139589334,
-     "demi_intervalle_95": 0.40027047533311977
+     "moyenne": 12.604791935872123,
+     "demi_intervalle_95": 0.4002395282298173
     },
     "va_dividendes": {
-     "moyenne": 115.86518086653972,
-     "demi_intervalle_95": 1.9685874468949291
+     "moyenne": 115.84651850729821,
+     "demi_intervalle_95": 1.9684765370715327
     },
     "taux_servi_1_10": {
-     "moyenne": 0.014012971493877799,
-     "demi_intervalle_95": 0.00017978556083381248
+     "moyenne": 0.014012708949131397,
+     "demi_intervalle_95": 0.000179781340354782
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 8.881472717538007e-05,
-     "demi_intervalle_95": 1.9331514939543325e-05
+     "moyenne": 8.88079233163199e-05,
+     "demi_intervalle_95": 1.9330738620435854e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.003074536240092995,
-     "demi_intervalle_95": 2.2726137958056463e-05
+     "moyenne": 0.003074549314397486,
+     "demi_intervalle_95": 2.2726410131720647e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.0006284007818064641,
-     "demi_intervalle_95": 0.00015910133415808733
+     "moyenne": 0.0006283365197462103,
+     "demi_intervalle_95": 0.00015909299435606103
     },
     "part_annees_avec_dotation_1_10": {
      "moyenne": 0.026200000000000005,
      "demi_intervalle_95": 0.003985789410700584
     },
     "abandon_marge_1_10": {
-     "moyenne": 11.1630280559282,
-     "demi_intervalle_95": 0.29889146968335384
+     "moyenne": 11.16284137293483,
+     "demi_intervalle_95": 0.2988874193465964
     },
     "complement_tmg_1_10": {
-     "moyenne": 14.135376082317586,
-     "demi_intervalle_95": 0.41451580258112225
+     "moyenne": 14.13588684179548,
+     "demi_intervalle_95": 0.41451328058538955
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": -2.1778096114561167,
-     "demi_intervalle_95": 2.746253876205347
+     "moyenne": -2.183382849446586,
+     "demi_intervalle_95": 2.7462321856465652
     }
    },
    "v5_1": {
     "valeurs_nettes": {
-     "moyenne": -5.404532072738806,
-     "demi_intervalle_95": 7.088876978584791
+     "moyenne": -5.402380442072171,
+     "demi_intervalle_95": 7.08887326759264
     },
     "be": {
-     "moyenne": 901.8163222179611,
-     "demi_intervalle_95": 7.127839934957445
+     "moyenne": 901.8155961324682,
+     "demi_intervalle_95": 7.12783049556261
     },
     "fdb": {
-     "moyenne": 78.10087583768714,
-     "demi_intervalle_95": 1.7335539643121147
+     "moyenne": 78.09812819731643,
+     "demi_intervalle_95": 1.7335338653142636
     },
     "fuite": {
-     "moyenne": 1.1798941838014765,
-     "demi_intervalle_95": 3.101640944039265
+     "moyenne": 1.1798533963795614,
+     "demi_intervalle_95": 3.101551157854167
     },
     "va_impots": {
-     "moyenne": 11.948946046651553,
-     "demi_intervalle_95": 0.3883860008265839
+     "moyenne": 11.947520501477687,
+     "demi_intervalle_95": 0.3883534672678214
     },
     "va_dividendes": {
-     "moyenne": 112.68390832056396,
-     "demi_intervalle_95": 1.9143944315329868
+     "moyenne": 112.66542608408636,
+     "demi_intervalle_95": 1.914279106467473
     },
     "taux_servi_1_10": {
-     "moyenne": 0.014385485839461483,
-     "demi_intervalle_95": 0.00018955709043231157
+     "moyenne": 0.01438521503868671,
+     "demi_intervalle_95": 0.0001895528163388605
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.00022165114928527184,
-     "demi_intervalle_95": 2.9880909325903646e-05
+     "moyenne": 0.0002216354116061567,
+     "demi_intervalle_95": 2.9879662767049226e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.0031385840027991457,
-     "demi_intervalle_95": 2.5504739457245813e-05
+     "moyenne": 0.003138596555882835,
+     "demi_intervalle_95": 2.5504970013894273e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.0018178831907351915,
-     "demi_intervalle_95": 0.0002744325255065711
+     "moyenne": 0.0018177160644010054,
+     "demi_intervalle_95": 0.00027441688927983785
     },
     "part_annees_avec_dotation_1_10": {
      "moyenne": 0.0782,
      "demi_intervalle_95": 0.0064445390991443915
     },
     "abandon_marge_1_10": {
-     "moyenne": 10.993001184232414,
-     "demi_intervalle_95": 0.3103653466944021
+     "moyenne": 10.992839935259676,
+     "demi_intervalle_95": 0.31035984599629357
     },
     "complement_tmg_1_10": {
-     "moyenne": 13.31535552069826,
-     "demi_intervalle_95": 0.4086603469720959
+     "moyenne": 13.315870527082105,
+     "demi_intervalle_95": 0.40865794102536235
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": -3.806896868562054,
-     "demi_intervalle_95": 2.7690263503802752
+     "moyenne": -3.8123589824661184,
+     "demi_intervalle_95": 2.7690070351763967
     },
     "part_annees_avec_complement_1_10": {
      "moyenne": 0.30779999999999996,
      "demi_intervalle_95": 0.009797705863741
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.0004559132054383056,
-     "demi_intervalle_95": 1.9257067099686087e-05
+     "moyenne": 0.000455897780184503,
+     "demi_intervalle_95": 1.92567446494587e-05
     },
     "part_scenarios_avec_solde_debiteur": 0.0,
     "ecart_valeurs_nettes": {
-     "moyenne": -2.179935860603835,
-     "demi_intervalle_95": 0.25751263386239526
+     "moyenne": -2.1797406295166044,
+     "demi_intervalle_95": 0.25751049061803993
     },
     "ecart_be": {
-     "moyenne": 2.8371769535416163,
-     "demi_intervalle_95": 0.2917542659694829
+     "moyenne": 2.8370120639110374,
+     "demi_intervalle_95": 0.2917500577889138
     },
     "ecart_fdb": {
-     "moyenne": 6.112110851279054,
-     "demi_intervalle_95": 0.30190240112814865
+     "moyenne": 6.111807178478864,
+     "demi_intervalle_95": 0.3018976716516267
     },
     "ecart_taux_servi_1_10": {
-     "moyenne": 0.00037251434558368304,
-     "demi_intervalle_95": 2.4490004436103914e-05
+     "moyenne": 0.0003725060895553103,
+     "demi_intervalle_95": 2.448855184616969e-05
     },
     "ecart_va_impots": {
-     "moyenne": -0.6572410929377811,
-     "demi_intervalle_95": 0.05926714219438129
+     "moyenne": -0.6572714343944335,
+     "demi_intervalle_95": 0.059262373601582014
     },
     "ecart_va_dividendes": {
-     "moyenne": -3.181272545975751,
-     "demi_intervalle_95": 0.22849468967883957
+     "moyenne": -3.1810924232118634,
+     "demi_intervalle_95": 0.22848081865246914
     },
     "ecart_ppb_pct_pm_10": {
-     "moyenne": 0.0011894824089287276,
-     "demi_intervalle_95": 0.00014222595489561237
+     "moyenne": 0.0011893795446547952,
+     "demi_intervalle_95": 0.00014221844772615902
     }
    }
   },
   "B": {
    "v5_0": {
     "valeurs_nettes": {
-     "moyenne": 64.79341190659076,
-     "demi_intervalle_95": 5.855513219983887
+     "moyenne": 64.50587259334965,
+     "demi_intervalle_95": 5.854719633491409
     },
     "be": {
-     "moyenne": 910.8185924173652,
-     "demi_intervalle_95": 5.925906762591644
+     "moyenne": 910.8819806534995,
+     "demi_intervalle_95": 5.92564361620458
     },
     "fdb": {
-     "moyenne": 146.3101215657398,
-     "demi_intervalle_95": 2.1164292066584762
+     "moyenne": 146.530967433988,
+     "demi_intervalle_95": 2.1159424337770893
     },
     "fuite": {
-     "moyenne": 0.7173449666133153,
-     "demi_intervalle_95": 3.0223341786138374
+     "moyenne": 0.7148517251844726,
+     "demi_intervalle_95": 3.0295047129910166
     },
     "va_impots": {
-     "moyenne": 22.037534505880853,
-     "demi_intervalle_95": 0.477269249629484
+     "moyenne": 22.261685582987475,
+     "demi_intervalle_95": 0.48058399018369097
     },
     "va_dividendes": {
-     "moyenne": 116.27784806809206,
-     "demi_intervalle_95": 1.9352964677472833
+     "moyenne": 118.25233074555206,
+     "demi_intervalle_95": 1.945148820882891
     },
     "taux_servi_1_10": {
-     "moyenne": 0.019311917645182204,
-     "demi_intervalle_95": 0.00021780751161747423
+     "moyenne": 0.01933146269517308,
+     "demi_intervalle_95": 0.00021744845843792306
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0007560522885123531,
-     "demi_intervalle_95": 6.909403467354024e-05
+     "moyenne": 0.0007578519325741102,
+     "demi_intervalle_95": 6.914846007526654e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.0049444990621204535,
-     "demi_intervalle_95": 4.224367079999341e-05
+     "moyenne": 0.0049428411428058695,
+     "demi_intervalle_95": 4.215270116074595e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.005566228632588992,
-     "demi_intervalle_95": 0.0006328085425377068
+     "moyenne": 0.005592603874628891,
+     "demi_intervalle_95": 0.0006340138119909897
     },
     "part_annees_avec_dotation_1_10": {
      "moyenne": 0.13390000000000005,
-     "demi_intervalle_95": 0.008482303500426442
+     "demi_intervalle_95": 0.008509488145888096
     },
     "abandon_marge_1_10": {
-     "moyenne": 9.101814809278466,
-     "demi_intervalle_95": 0.32296514833679735
+     "moyenne": 9.09495801756903,
+     "demi_intervalle_95": 0.3225514227102313
     },
     "complement_tmg_1_10": {
-     "moyenne": 3.015784558212609,
-     "demi_intervalle_95": 0.18847235571434565
+     "moyenne": 3.00310062846831,
+     "demi_intervalle_95": 0.1881630542974206
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 37.657748883466816,
-     "demi_intervalle_95": 2.0793391626861717
+     "moyenne": 38.210600253003435,
+     "demi_intervalle_95": 2.083139634561128
     }
    },
    "v5_1": {
     "valeurs_nettes": {
-     "moyenne": 57.8178824611521,
-     "demi_intervalle_95": 5.937957179029801
+     "moyenne": 57.501703901025465,
+     "demi_intervalle_95": 5.93654110249147
     },
     "be": {
-     "moyenne": 919.7601369928494,
-     "demi_intervalle_95": 6.011005739075493
+     "moyenne": 919.843839729736,
+     "demi_intervalle_95": 6.010144912991826
     },
     "fdb": {
-     "moyenne": 162.26361980537862,
-     "demi_intervalle_95": 2.257080909637685
+     "moyenne": 162.515906802269,
+     "demi_intervalle_95": 2.2562321833939873
     },
     "fuite": {
-     "moyenne": 0.6542907342243738,
-     "demi_intervalle_95": 3.1375244962960225
+     "moyenne": 0.6535611253489931,
+     "demi_intervalle_95": 3.144843333196434
     },
     "va_impots": {
-     "moyenne": 20.071519375835187,
-     "demi_intervalle_95": 0.45449550477206024
+     "moyenne": 20.303995199075242,
+     "demi_intervalle_95": 0.4580350576400345
     },
     "va_dividendes": {
-     "moyenne": 107.07606272938229,
-     "demi_intervalle_95": 1.8510858406740591
+     "moyenne": 109.02071725796944,
+     "demi_intervalle_95": 1.8619015559581646
     },
     "taux_servi_1_10": {
-     "moyenne": 0.019983498403868347,
-     "demi_intervalle_95": 0.0002104076120744227
+     "moyenne": 0.020003320522242008,
+     "demi_intervalle_95": 0.0002099248054207315
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0013001818584071586,
-     "demi_intervalle_95": 8.319954463346222e-05
+     "moyenne": 0.001303722952719897,
+     "demi_intervalle_95": 8.319510442001057e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.005104135294423479,
-     "demi_intervalle_95": 4.3027133541514015e-05
+     "moyenne": 0.005102894783253781,
+     "demi_intervalle_95": 4.2931722622297056e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.010460184053395402,
-     "demi_intervalle_95": 0.000786736516464947
+     "moyenne": 0.010503047607401603,
+     "demi_intervalle_95": 0.0007872816435371353
     },
     "part_annees_avec_dotation_1_10": {
-     "moyenne": 0.2478,
-     "demi_intervalle_95": 0.009279549633187462
+     "moyenne": 0.2488,
+     "demi_intervalle_95": 0.009239391587426718
     },
     "abandon_marge_1_10": {
-     "moyenne": 8.055847088951143,
-     "demi_intervalle_95": 0.30016491729855876
+     "moyenne": 8.044509958982905,
+     "demi_intervalle_95": 0.299612134426964
     },
     "complement_tmg_1_10": {
-     "moyenne": 2.411971452483512,
-     "demi_intervalle_95": 0.1722980293794398
+     "moyenne": 2.3998954348073838,
+     "demi_intervalle_95": 0.1720292256420708
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 30.34034899438222,
-     "demi_intervalle_95": 2.0228223995045918
+     "moyenne": 30.87653908347347,
+     "demi_intervalle_95": 2.025524056805215
     },
     "part_annees_avec_complement_1_10": {
-     "moyenne": 0.6456000000000001,
-     "demi_intervalle_95": 0.011216060148667044
+     "moyenne": 0.6461,
+     "demi_intervalle_95": 0.011208902243619312
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.0011532421266913437,
-     "demi_intervalle_95": 2.3512703208096236e-05
+     "moyenne": 0.001155558371374485,
+     "demi_intervalle_95": 2.3492522204986286e-05
     },
     "part_scenarios_avec_solde_debiteur": 0.0,
     "ecart_valeurs_nettes": {
-     "moyenne": -6.975529445438648,
-     "demi_intervalle_95": 0.3664464747694403
+     "moyenne": -7.0041686923241775,
+     "demi_intervalle_95": 0.366790346183439
     },
     "ecart_be": {
-     "moyenne": 8.941544575484313,
-     "demi_intervalle_95": 0.43157840404725123
+     "moyenne": 8.961859076236417,
+     "demi_intervalle_95": 0.43188184521431805
     },
     "ecart_fdb": {
-     "moyenne": 15.953498239638847,
-     "demi_intervalle_95": 0.43717210923325117
+     "moyenne": 15.984939368280964,
+     "demi_intervalle_95": 0.4369751296175323
     },
     "ecart_taux_servi_1_10": {
-     "moyenne": 0.000671580758686143,
-     "demi_intervalle_95": 3.294408667942525e-05
+     "moyenne": 0.000671857827068928,
+     "demi_intervalle_95": 3.3031423685764616e-05
     },
     "ecart_va_impots": {
-     "moyenne": -1.966015130045665,
-     "demi_intervalle_95": 0.09352553369409888
+     "moyenne": -1.9576903839122386,
+     "demi_intervalle_95": 0.09377820451892181
     },
     "ecart_va_dividendes": {
-     "moyenne": -9.201785338709778,
-     "demi_intervalle_95": 0.33499258611024196
+     "moyenne": -9.231613487582631,
+     "demi_intervalle_95": 0.33529358564496475
     },
     "ecart_ppb_pct_pm_10": {
-     "moyenne": 0.00489395542080641,
-     "demi_intervalle_95": 0.0002936261948169386
+     "moyenne": 0.004910443732772712,
+     "demi_intervalle_95": 0.0002936631417222695
     }
    }
   },
@@ -500,12 +500,12 @@
  },
  "participation_strategies": {
   "A|passive": {
-   "apport_v5_1": 101.03764378361826,
-   "valeur_convention_v5_0": -3.2245962121349705,
-   "valeur_v5_1": -5.404532072738871,
+   "apport_v5_1": 101.01697021846729,
+   "valeur_convention_v5_0": -3.222639812555566,
+   "valeur_v5_1": -5.402380442072104,
    "effet_capital_constant": {
-    "moyenne": -2.179935860603835,
-    "demi_intervalle_95": 0.25751263386239526
+    "moyenne": -2.1797406295166044,
+    "demi_intervalle_95": 0.25751049061803993
    },
    "ecart_passive_convention_v5_0": {
     "moyenne": 0.0,
@@ -517,131 +517,131 @@
    }
   },
   "A|reinvestissement_progressif": {
-   "apport_v5_1": 101.76195987467517,
-   "valeur_convention_v5_0": -2.8711294689892597,
-   "valeur_v5_1": -5.011869027223016,
+   "apport_v5_1": 101.74181724380567,
+   "valeur_convention_v5_0": -2.8692730338667936,
+   "valeur_v5_1": -5.009866460409221,
    "effet_capital_constant": {
-    "moyenne": -2.1407395582338142,
-    "demi_intervalle_95": 0.24782638988058606
+    "moyenne": -2.14059342654232,
+    "demi_intervalle_95": 0.24782413617631188
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": 0.35346674314571136,
-    "demi_intervalle_95": 0.13671876050311182
+    "moyenne": 0.3533667786887725,
+    "demi_intervalle_95": 0.13670353612530997
    },
    "ecart_passive_v5_1": {
-    "moyenne": 0.392663045515732,
-    "demi_intervalle_95": 0.16338849509953504
+    "moyenne": 0.3925139816630565,
+    "demi_intervalle_95": 0.1633701691673377
    }
   },
   "A|repositionnement": {
-   "apport_v5_1": 118.83574266246379,
-   "valeur_convention_v5_0": -16.092753214295037,
-   "valeur_v5_1": -21.742768856905677,
+   "apport_v5_1": 120.26061517581417,
+   "valeur_convention_v5_0": -16.226826474764618,
+   "valeur_v5_1": -21.888008115369935,
    "effet_capital_constant": {
-    "moyenne": -5.650015642610551,
-    "demi_intervalle_95": 0.27885340893606325
+    "moyenne": -5.661181640605368,
+    "demi_intervalle_95": 0.27895667318434697
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -12.868157002160068,
-    "demi_intervalle_95": 1.0048569809893375
+    "moyenne": -13.004186662209051,
+    "demi_intervalle_95": 1.0066891402869456
    },
    "ecart_passive_v5_1": {
-    "moyenne": -16.338236784166785,
-    "demi_intervalle_95": 1.0607153833698297
+    "moyenne": -16.485627673297817,
+    "demi_intervalle_95": 1.0624770284838638
    }
   },
   "A|taux_servi_competitif": {
-   "apport_v5_1": 88.41547847204384,
-   "valeur_convention_v5_0": -9.987356169622311,
-   "valeur_v5_1": -11.297557741667319,
+   "apport_v5_1": 89.58234117852908,
+   "valeur_convention_v5_0": -10.107711065995746,
+   "valeur_v5_1": -11.42381738012274,
    "effet_capital_constant": {
-    "moyenne": -1.3102015720449132,
-    "demi_intervalle_95": 0.24226935122291793
+    "moyenne": -1.316106314126967,
+    "demi_intervalle_95": 0.2423187201232529
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -6.762759957487341,
-    "demi_intervalle_95": 0.40387342599512943
+    "moyenne": -6.885071253440179,
+    "demi_intervalle_95": 0.4022143391235004
    },
    "ecart_passive_v5_1": {
-    "moyenne": -5.89302566892842,
-    "demi_intervalle_95": 0.4086930612721624
+    "moyenne": -6.021436938050542,
+    "demi_intervalle_95": 0.40712545680461015
    }
   },
   "A|taux_servi_marge": {
-   "apport_v5_1": 107.11632422067,
-   "valeur_convention_v5_0": 4.522271401248307,
-   "valeur_v5_1": 0.438227297551645,
+   "apport_v5_1": 107.1030197096653,
+   "valeur_convention_v5_0": 4.52330993943109,
+   "valeur_v5_1": 0.439516213246252,
    "effet_capital_constant": {
-    "moyenne": -4.084044103696587,
-    "demi_intervalle_95": 0.4811998103531351
+    "moyenne": -4.083793726184936,
+    "demi_intervalle_95": 0.4812040509140848
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": 7.7468676133832775,
-    "demi_intervalle_95": 0.3880642138151158
+    "moyenne": 7.7459497519866565,
+    "demi_intervalle_95": 0.38805238679913867
    },
    "ecart_passive_v5_1": {
-    "moyenne": 5.842759370290525,
-    "demi_intervalle_95": 0.3893025488586047
+    "moyenne": 5.841896655318323,
+    "demi_intervalle_95": 0.3893027164468558
    }
   },
   "A|liquidite_defensive": {
-   "apport_v5_1": 114.51381286649685,
-   "valeur_convention_v5_0": -2.0758106987689953,
-   "valeur_v5_1": -4.571652882163296,
+   "apport_v5_1": 114.50094068553206,
+   "valeur_convention_v5_0": -2.0744722920632714,
+   "valeur_v5_1": -4.57021651786104,
    "effet_capital_constant": {
-    "moyenne": -2.495842183394291,
-    "demi_intervalle_95": 0.17413074360269648
+    "moyenne": -2.495744225797774,
+    "demi_intervalle_95": 0.17412995653137142
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": 1.1487855133659748,
-    "demi_intervalle_95": 1.0870929721163127
+    "moyenne": 1.1481675204922943,
+    "demi_intervalle_95": 1.0870631777716284
    },
    "ecart_passive_v5_1": {
-    "moyenne": 0.8328791905755181,
-    "demi_intervalle_95": 1.22175423736926
+    "moyenne": 0.8321639242111246,
+    "demi_intervalle_95": 1.22172622389982
    }
   },
   "A|taux_servi_competitif_preservant": {
-   "apport_v5_1": 99.59489129580702,
-   "valeur_convention_v5_0": -8.31148210211353,
-   "valeur_v5_1": -9.545670889264757,
+   "apport_v5_1": 99.58092797165364,
+   "valeur_convention_v5_0": -8.309990849935387,
+   "valeur_v5_1": -9.544078156349372,
    "effet_capital_constant": {
-    "moyenne": -1.2341887871512724,
-    "demi_intervalle_95": 0.15142983539460864
+    "moyenne": -1.234087306414024,
+    "demi_intervalle_95": 0.15142138177305575
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -5.086885889978561,
-    "demi_intervalle_95": 0.4465551301082189
+    "moyenne": -5.087351037379822,
+    "demi_intervalle_95": 0.4465543747707126
    },
    "ecart_passive_v5_1": {
-    "moyenne": -4.1411388165259995,
-    "demi_intervalle_95": 0.44911270519021573
+    "moyenne": -4.1416977142772415,
+    "demi_intervalle_95": 0.4491251891970677
    }
   },
   "A|distribution_retention": {
-   "apport_v5_1": 100.67265893364683,
-   "valeur_convention_v5_0": -4.26608744511089,
-   "valeur_v5_1": -6.501055439884247,
+   "apport_v5_1": 100.65156815130642,
+   "valeur_convention_v5_0": -4.263928271630903,
+   "valeur_v5_1": -6.498679831143683,
    "effet_capital_constant": {
-    "moyenne": -2.234967994773323,
-    "demi_intervalle_95": 0.2502405378454426
+    "moyenne": -2.2347515595127887,
+    "demi_intervalle_95": 0.25023600572685556
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -1.041491232975919,
-    "demi_intervalle_95": 0.06698952468539827
+    "moyenne": -1.0412884590753364,
+    "demi_intervalle_95": 0.06698630997420887
    },
    "ecart_passive_v5_1": {
-    "moyenne": -1.0965233671454069,
-    "demi_intervalle_95": 0.06534840923005074
+    "moyenne": -1.0962993890715207,
+    "demi_intervalle_95": 0.0653401851085183
    }
   },
   "B|passive": {
-   "apport_v5_1": 25.396477295036146,
-   "valeur_convention_v5_0": 64.79341190659076,
-   "valeur_v5_1": 57.817882461152074,
+   "apport_v5_1": 27.55157386422689,
+   "valeur_convention_v5_0": 64.50587259334965,
+   "valeur_v5_1": 57.501703901025394,
    "effet_capital_constant": {
-    "moyenne": -6.975529445438648,
-    "demi_intervalle_95": 0.3664464747694403
+    "moyenne": -7.0041686923241775,
+    "demi_intervalle_95": 0.366790346183439
    },
    "ecart_passive_convention_v5_0": {
     "moyenne": 0.0,
@@ -653,122 +653,122 @@
    }
   },
   "B|reinvestissement_progressif": {
-   "apport_v5_1": 25.24323017126829,
-   "valeur_convention_v5_0": 64.94357647913533,
-   "valeur_v5_1": 58.071277814261144,
+   "apport_v5_1": 27.407579406644825,
+   "valeur_convention_v5_0": 64.66362550412447,
+   "valeur_v5_1": 57.764554930008565,
    "effet_capital_constant": {
-    "moyenne": -6.872298664874249,
-    "demi_intervalle_95": 0.3571975630427962
+    "moyenne": -6.8990705741159175,
+    "demi_intervalle_95": 0.35744551016359993
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": 0.1501645725445826,
-    "demi_intervalle_95": 0.2266148413263353
+    "moyenne": 0.15775291077481227,
+    "demi_intervalle_95": 0.2271956524050998
    },
    "ecart_passive_v5_1": {
-    "moyenne": 0.25339535310898187,
-    "demi_intervalle_95": 0.2587646622369005
+    "moyenne": 0.26285102898307355,
+    "demi_intervalle_95": 0.2592836376777807
    }
   },
   "B|repositionnement": {
-   "apport_v5_1": 45.49269365286183,
-   "valeur_convention_v5_0": 55.89408535483432,
-   "valeur_v5_1": 46.0629609683264,
+   "apport_v5_1": 47.67616189886507,
+   "valeur_convention_v5_0": 55.61020384959008,
+   "valeur_v5_1": 45.753122723082996,
    "effet_capital_constant": {
-    "moyenne": -9.831124386507861,
-    "demi_intervalle_95": 0.34087763093826895
+    "moyenne": -9.857081126507046,
+    "demi_intervalle_95": 0.34111194697007224
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -8.89932655175644,
-    "demi_intervalle_95": 0.6773298351141256
+    "moyenne": -8.895668743759572,
+    "demi_intervalle_95": 0.6770488457105551
    },
    "ecart_passive_v5_1": {
-    "moyenne": -11.754921492825655,
-    "demi_intervalle_95": 0.698892360817116
+    "moyenne": -11.748581177942443,
+    "demi_intervalle_95": 0.6989853556239004
    }
   },
   "B|taux_servi_competitif": {
-   "apport_v5_1": 24.266363442960753,
-   "valeur_convention_v5_0": 51.838617596999306,
-   "valeur_v5_1": 47.76274968796221,
+   "apport_v5_1": 26.44581509525465,
+   "valeur_convention_v5_0": 51.54163073366407,
+   "valeur_v5_1": 47.43903035070353,
    "effet_capital_constant": {
-    "moyenne": -4.075867909037129,
-    "demi_intervalle_95": 0.2855342988988693
+    "moyenne": -4.102600382960591,
+    "demi_intervalle_95": 0.28626245629589364
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -12.954794309591446,
-    "demi_intervalle_95": 0.5243408000663812
+    "moyenne": -12.964241859685579,
+    "demi_intervalle_95": 0.5246170723166553
    },
    "ecart_passive_v5_1": {
-    "moyenne": -10.055132773189925,
-    "demi_intervalle_95": 0.5348549184638567
+    "moyenne": -10.062673550321989,
+    "demi_intervalle_95": 0.5344430606239688
    }
   },
   "B|taux_servi_marge": {
-   "apport_v5_1": 21.818256567533062,
-   "valeur_convention_v5_0": 74.77201899588364,
-   "valeur_v5_1": 64.06784932635559,
+   "apport_v5_1": 23.867577118509217,
+   "valeur_convention_v5_0": 74.51430639063416,
+   "valeur_v5_1": 63.76217819353792,
    "effet_capital_constant": {
-    "moyenne": -10.704169669527964,
-    "demi_intervalle_95": 0.40646754271628643
+    "moyenne": -10.752128197096278,
+    "demi_intervalle_95": 0.40653943681187277
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": 9.97860708929289,
-    "demi_intervalle_95": 0.6058253084816502
+    "moyenne": 10.008433797284518,
+    "demi_intervalle_95": 0.6054232706016076
    },
    "ecart_passive_v5_1": {
-    "moyenne": 6.249966865203572,
-    "demi_intervalle_95": 0.551882602255876
+    "moyenne": 6.260474292512417,
+    "demi_intervalle_95": 0.5503398179928093
    }
   },
   "B|liquidite_defensive": {
-   "apport_v5_1": 26.19367866486579,
-   "valeur_convention_v5_0": 65.59897933544099,
-   "valeur_v5_1": 58.995550218598204,
+   "apport_v5_1": 28.356378877617388,
+   "valeur_convention_v5_0": 65.31066072130396,
+   "valeur_v5_1": 58.67995068293172,
    "effet_capital_constant": {
-    "moyenne": -6.60342911684292,
-    "demi_intervalle_95": 0.28228498821298914
+    "moyenne": -6.630710038372215,
+    "demi_intervalle_95": 0.2829011454979695
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": 0.8055674288502374,
-    "demi_intervalle_95": 1.187080637812787
+    "moyenne": 0.8047881279543123,
+    "demi_intervalle_95": 1.1874963035559143
    },
    "ecart_passive_v5_1": {
-    "moyenne": 1.1776677574459646,
-    "demi_intervalle_95": 1.36796602940422
+    "moyenne": 1.1782467819062759,
+    "demi_intervalle_95": 1.368950221533042
    }
   },
   "B|taux_servi_competitif_preservant": {
-   "apport_v5_1": 25.193868501598246,
-   "valeur_convention_v5_0": 52.109166684383794,
-   "valeur_v5_1": 48.32203606527118,
+   "apport_v5_1": 27.296364210599783,
+   "valeur_convention_v5_0": 51.80927959482683,
+   "valeur_v5_1": 48.00351535402373,
    "effet_capital_constant": {
-    "moyenne": -3.7871306191124994,
-    "demi_intervalle_95": 0.2539651982269275
+    "moyenne": -3.805764240803026,
+    "demi_intervalle_95": 0.2548057629064179
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -12.684245222206957,
-    "demi_intervalle_95": 0.545156442071485
+    "moyenne": -12.69659299852282,
+    "demi_intervalle_95": 0.5450473730353775
    },
    "ecart_passive_v5_1": {
-    "moyenne": -9.495846395880807,
-    "demi_intervalle_95": 0.549262065955776
+    "moyenne": -9.498188547001671,
+    "demi_intervalle_95": 0.5486352201922677
    }
   },
   "B|distribution_retention": {
-   "apport_v5_1": 25.788143885121293,
-   "valeur_convention_v5_0": 63.38391593711966,
-   "valeur_v5_1": 56.420486146882425,
+   "apport_v5_1": 27.948207004942923,
+   "valeur_convention_v5_0": 63.08238772199808,
+   "valeur_v5_1": 56.08842531693686,
    "effet_capital_constant": {
-    "moyenne": -6.963429790237236,
-    "demi_intervalle_95": 0.36262768921192057
+    "moyenne": -6.993962405061246,
+    "demi_intervalle_95": 0.362939461523452
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -1.4094959694710933,
-    "demi_intervalle_95": 0.0510529318073801
+    "moyenne": -1.4234848713515746,
+    "demi_intervalle_95": 0.05122343771614656
    },
    "ecart_passive_v5_1": {
-    "moyenne": -1.397396314269681,
-    "demi_intervalle_95": 0.05100048237469897
+    "moyenne": -1.4132785840886422,
+    "demi_intervalle_95": 0.05092281477900172
    }
   },
   "C|passive": {
@@ -806,20 +806,20 @@
    }
   },
   "C|repositionnement": {
-   "apport_v5_1": 1.081078025502098,
-   "valeur_convention_v5_0": 92.10050790021778,
-   "valeur_v5_1": 81.55851438060783,
+   "apport_v5_1": 2.168992976227531,
+   "valeur_convention_v5_0": 91.95425945519432,
+   "valeur_v5_1": 81.39875293222896,
    "effet_capital_constant": {
-    "moyenne": -10.541993519610086,
-    "demi_intervalle_95": 0.5165762317343371
+    "moyenne": -10.555506522965418,
+    "demi_intervalle_95": 0.5164820998190426
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -1.3199321725633677,
-    "demi_intervalle_95": 0.4852900851812581
+    "moyenne": -1.4661806175868195,
+    "demi_intervalle_95": 0.48567464025523754
    },
    "ecart_passive_v5_1": {
-    "moyenne": -1.2318305178336313,
-    "demi_intervalle_95": 0.45375134153260444
+    "moyenne": -1.3915919662124137,
+    "demi_intervalle_95": 0.45390004903534
    }
   },
   "C|taux_servi_competitif": {
@@ -874,20 +874,20 @@
    }
   },
   "C|taux_servi_competitif_preservant": {
-   "apport_v5_1": 0.0,
-   "valeur_convention_v5_0": 78.87996390976818,
-   "valeur_v5_1": 73.08467128498613,
+   "apport_v5_1": 0.43500048541760117,
+   "valeur_convention_v5_0": 78.82445987399689,
+   "valeur_v5_1": 73.0270648752178,
    "effet_capital_constant": {
-    "moyenne": -5.795292624782053,
-    "demi_intervalle_95": 0.4173378397450471
+    "moyenne": -5.79739499877914,
+    "demi_intervalle_95": 0.4173832171469187
    },
    "ecart_passive_convention_v5_0": {
-    "moyenne": -14.540476163012956,
-    "demi_intervalle_95": 0.6240273082524409
+    "moyenne": -14.59598019878426,
+    "demi_intervalle_95": 0.6242198852639761
    },
    "ecart_passive_v5_1": {
-    "moyenne": -9.705673613455186,
-    "demi_intervalle_95": 0.6658460138267693
+    "moyenne": -9.763280023223574,
+    "demi_intervalle_95": 0.6660319021185241
    }
   },
   "C|distribution_retention": {
@@ -911,16 +911,16 @@
  "compte_debiteur": {
   "A|passive|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0015584401446363985,
+   "solde_technique_min_pct_pm": 0.0015584216762539482,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.3071,
-   "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
-   "ecart_bilan_max": 1.8189894035458565e-12
+   "part_annees_avec_complement_1_10": 0.307,
+   "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
+   "ecart_bilan_max": 1.3642420526593924e-12
   },
   "A|passive|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0006961357153616241,
+   "solde_technique_min_pct_pm": 0.0006960490875334284,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.3183,
@@ -929,273 +929,273 @@
   },
   "A|reinvestissement_progressif|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0015574456362973618,
+   "solde_technique_min_pct_pm": 0.001557427756119254,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.3004,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 2.7284841053187847e-12
+   "ecart_bilan_max": 4.092726157978177e-12
   },
   "A|reinvestissement_progressif|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0006921742670715008,
+   "solde_technique_min_pct_pm": 0.0006920903938865067,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.3127,
-   "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
+   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
    "ecart_bilan_max": 1.8189894035458565e-12
   },
   "A|repositionnement|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0016338674097466151,
+   "solde_technique_min_pct_pm": 0.0016338674097466145,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.4449,
-   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 3.183231456205249e-12
+   "part_annees_avec_complement_1_10": 0.4464,
+   "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
+   "ecart_bilan_max": 2.2737367544323206e-12
   },
   "A|repositionnement|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0009693370487330736,
+   "solde_technique_min_pct_pm": 0.0009693370487330738,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.426,
+   "part_annees_avec_complement_1_10": 0.4269,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 1.3642420526593924e-12
+   "ecart_bilan_max": 1.8189894035458565e-12
   },
   "A|taux_servi_competitif|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0015281994325658406,
+   "solde_technique_min_pct_pm": 0.0015281994325658408,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.188,
-   "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
-   "ecart_bilan_max": 1.3642420526593924e-12
+   "part_annees_avec_complement_1_10": 0.1876,
+   "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
+   "ecart_bilan_max": 1.1937117960769683e-12
   },
   "A|taux_servi_competitif|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.00044099716282920237,
+   "solde_technique_min_pct_pm": 0.0004409971628292024,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.2024,
+   "part_annees_avec_complement_1_10": 0.2025,
    "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
-   "ecart_bilan_max": 1.5916157281026244e-12
+   "ecart_bilan_max": 1.5347723092418164e-12
   },
   "A|taux_servi_marge|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0013299409876776531,
+   "solde_technique_min_pct_pm": 0.0013299238419241725,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.7619,
-   "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
+   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
    "ecart_bilan_max": 1.3642420526593924e-12
   },
   "A|taux_servi_marge|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0002999999999999998,
+   "solde_technique_min_pct_pm": 0.00030000000000000003,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.717,
-   "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
-   "ecart_bilan_max": 1.1368683772161603e-12
+   "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
+   "ecart_bilan_max": 1.2505552149377763e-12
   },
   "A|liquidite_defensive|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.001456107484205571,
+   "solde_technique_min_pct_pm": 0.0014560920980817836,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.1966,
-   "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
-   "ecart_bilan_max": 1.8189894035458565e-12
+   "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
+   "ecart_bilan_max": 1.3642420526593924e-12
   },
   "A|liquidite_defensive|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.00029999999999999965,
+   "solde_technique_min_pct_pm": 0.00030000000000000003,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.2262,
    "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
-   "ecart_bilan_max": 1.1368683772161603e-12
+   "ecart_bilan_max": 1.3642420526593924e-12
   },
   "A|taux_servi_competitif_preservant|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0015281994325658406,
+   "solde_technique_min_pct_pm": 0.0015281994325658404,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.1841,
    "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
-   "ecart_bilan_max": 2.0463630789890885e-12
+   "ecart_bilan_max": 1.8189894035458565e-12
   },
   "A|taux_servi_competitif_preservant|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0004409971628292026,
+   "solde_technique_min_pct_pm": 0.00044099716282920226,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.206,
+   "part_annees_avec_complement_1_10": 0.2061,
    "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
-   "ecart_bilan_max": 2.0463630789890885e-12
+   "ecart_bilan_max": 1.3642420526593924e-12
   },
   "A|distribution_retention|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0015580916901035886,
+   "solde_technique_min_pct_pm": 0.0015580728435206266,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.3072,
    "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
-   "ecart_bilan_max": 2.2737367544323206e-12
+   "ecart_bilan_max": 1.8189894035458565e-12
   },
   "A|distribution_retention|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0006946123371301156,
+   "solde_technique_min_pct_pm": 0.0006945239320854852,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.321,
-   "ecart_min_taux_servi_tmg_moyen": -3.469446951953614e-18,
-   "ecart_bilan_max": 2.2737367544323206e-12
+   "ecart_min_taux_servi_tmg_moyen": -4.336808689942018e-18,
+   "ecart_bilan_max": 1.5916157281026244e-12
   },
   "B|passive|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.001420754546654859,
-   "part_annees_compte_debiteur_1_10": 0.0,
-   "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.6296,
-   "ecart_min_taux_servi_tmg_moyen": -2.168404344971009e-18,
-   "ecart_bilan_max": 2.7284841053187847e-12
-  },
-  "B|passive|0.1|1.5": {
-   "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0002999999999999996,
+   "solde_technique_min_pct_pm": 0.0014204822744509015,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.6303,
-   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 2.2737367544323206e-12
+   "ecart_min_taux_servi_tmg_moyen": -2.168404344971009e-18,
+   "ecart_bilan_max": 3.637978807091713e-12
+  },
+  "B|passive|0.1|1.5": {
+   "part_annees_solde_technique_negatif_1_10": 0.0,
+   "solde_technique_min_pct_pm": 0.0002999999999999995,
+   "part_annees_compte_debiteur_1_10": 0.0,
+   "compte_debiteur_max": 0.0,
+   "part_annees_avec_complement_1_10": 0.6306,
+   "ecart_min_taux_servi_tmg_moyen": -3.0357660829594124e-18,
+   "ecart_bilan_max": 2.7284841053187847e-12
   },
   "B|reinvestissement_progressif|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0014164064699551029,
+   "solde_technique_min_pct_pm": 0.0014158388397542813,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.6251,
-   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 7.275957614183426e-12
+   "part_annees_avec_complement_1_10": 0.6262,
+   "ecart_min_taux_servi_tmg_moyen": -3.0357660829594124e-18,
+   "ecart_bilan_max": 6.366462912410498e-12
   },
   "B|reinvestissement_progressif|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.00029999999999999943,
+   "solde_technique_min_pct_pm": 0.00029999999999999954,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.6255,
+   "part_annees_avec_complement_1_10": 0.6269,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 3.637978807091713e-12
+   "ecart_bilan_max": 4.547473508864641e-12
   },
   "B|repositionnement|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0012780487302849377,
+   "solde_technique_min_pct_pm": 0.0012753506992861507,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.7255,
-   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
+   "part_annees_avec_complement_1_10": 0.7257,
+   "ecart_min_taux_servi_tmg_moyen": -1.3010426069826053e-18,
    "ecart_bilan_max": 4.547473508864641e-12
   },
   "B|repositionnement|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0002999999999999996,
+   "solde_technique_min_pct_pm": 0.0002999999999999995,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.7251,
+   "part_annees_avec_complement_1_10": 0.7259,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
    "ecart_bilan_max": 2.2737367544323206e-12
   },
   "B|taux_servi_competitif|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0014425364076291263,
+   "solde_technique_min_pct_pm": 0.001441250418880218,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.4233,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 1.8189894035458565e-12
+   "ecart_bilan_max": 2.7284841053187847e-12
   },
   "B|taux_servi_competitif|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.00029999999999999976,
+   "solde_technique_min_pct_pm": 0.0002999999999999997,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.4212,
-   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 3.637978807091713e-12
+   "part_annees_avec_complement_1_10": 0.4215,
+   "ecart_min_taux_servi_tmg_moyen": -2.8189256484623115e-18,
+   "ecart_bilan_max": 2.7284841053187847e-12
   },
   "B|taux_servi_marge|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0011000000000000003,
+   "solde_technique_min_pct_pm": 0.0010999999999999998,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.9444,
+   "part_annees_avec_complement_1_10": 0.9443,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 1.8189894035458565e-12
+   "ecart_bilan_max": 1.5916157281026244e-12
   },
   "B|taux_servi_marge|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
    "solde_technique_min_pct_pm": 0.0002999999999999995,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.9429,
+   "part_annees_avec_complement_1_10": 0.9431,
    "ecart_min_taux_servi_tmg_moyen": -2.168404344971009e-18,
-   "ecart_bilan_max": 2.2737367544323206e-12
+   "ecart_bilan_max": 1.5916157281026244e-12
   },
   "B|liquidite_defensive|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
    "solde_technique_min_pct_pm": 0.0010999999999999998,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.6073,
-   "ecart_min_taux_servi_tmg_moyen": -2.168404344971009e-18,
-   "ecart_bilan_max": 4.547473508864641e-12
-  },
-  "B|liquidite_defensive|0.1|1.5": {
-   "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0002999999999999995,
-   "part_annees_compte_debiteur_1_10": 0.0,
-   "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.5973,
-   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 2.0463630789890885e-12
-  },
-  "B|taux_servi_competitif_preservant|0.06|0.5": {
-   "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0014300740911994366,
-   "part_annees_compte_debiteur_1_10": 0.0,
-   "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.3647,
+   "part_annees_avec_complement_1_10": 0.6087,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
    "ecart_bilan_max": 2.7284841053187847e-12
   },
-  "B|taux_servi_competitif_preservant|0.1|1.5": {
+  "B|liquidite_defensive|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0002999999999999996,
+   "solde_technique_min_pct_pm": 0.00029999999999999943,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.357,
-   "ecart_min_taux_servi_tmg_moyen": -2.168404344971009e-18,
-   "ecart_bilan_max": 3.183231456205249e-12
+   "part_annees_avec_complement_1_10": 0.5981,
+   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
+   "ecart_bilan_max": 1.8189894035458565e-12
+  },
+  "B|taux_servi_competitif_preservant|0.06|0.5": {
+   "part_annees_solde_technique_negatif_1_10": 0.0,
+   "solde_technique_min_pct_pm": 0.0014297695409051664,
+   "part_annees_compte_debiteur_1_10": 0.0,
+   "compte_debiteur_max": 0.0,
+   "part_annees_avec_complement_1_10": 0.3651,
+   "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
+   "ecart_bilan_max": 3.637978807091713e-12
+  },
+  "B|taux_servi_competitif_preservant|0.1|1.5": {
+   "part_annees_solde_technique_negatif_1_10": 0.0,
+   "solde_technique_min_pct_pm": 0.00029999999999999954,
+   "part_annees_compte_debiteur_1_10": 0.0,
+   "compte_debiteur_max": 0.0,
+   "part_annees_avec_complement_1_10": 0.3573,
+   "ecart_min_taux_servi_tmg_moyen": -1.734723475976807e-18,
+   "ecart_bilan_max": 2.5011104298755527e-12
   },
   "B|distribution_retention|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0014206487102973481,
+   "solde_technique_min_pct_pm": 0.0014203757156260506,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.6309,
-   "ecart_min_taux_servi_tmg_moyen": -2.168404344971009e-18,
+   "part_annees_avec_complement_1_10": 0.6318,
+   "ecart_min_taux_servi_tmg_moyen": -3.0357660829594124e-18,
    "ecart_bilan_max": 3.637978807091713e-12
   },
   "B|distribution_retention|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.00029999999999999976,
+   "solde_technique_min_pct_pm": 0.0002999999999999995,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.6315,
+   "part_annees_avec_complement_1_10": 0.6326,
    "ecart_min_taux_servi_tmg_moyen": -2.6020852139652106e-18,
-   "ecart_bilan_max": 3.183231456205249e-12
+   "ecart_bilan_max": 2.2737367544323206e-12
   },
   "C|passive|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
@@ -1238,18 +1238,18 @@
    "solde_technique_min_pct_pm": 0.0010999999999999998,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.7476,
+   "part_annees_avec_complement_1_10": 0.7477,
    "ecart_min_taux_servi_tmg_moyen": -8.673617379884035e-19,
-   "ecart_bilan_max": 2.7284841053187847e-12
+   "ecart_bilan_max": 3.637978807091713e-12
   },
   "C|repositionnement|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0002999999999999994,
+   "solde_technique_min_pct_pm": 0.00029999999999999954,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.736,
    "ecart_min_taux_servi_tmg_moyen": -8.673617379884035e-19,
-   "ecart_bilan_max": 3.637978807091713e-12
+   "ecart_bilan_max": 2.9558577807620168e-12
   },
   "C|taux_servi_competitif|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
@@ -1307,21 +1307,21 @@
   },
   "C|taux_servi_competitif_preservant|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0012121662686373665,
+   "solde_technique_min_pct_pm": 0.0012131961402275686,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
    "part_annees_avec_complement_1_10": 0.4795,
-   "ecart_min_taux_servi_tmg_moyen": -8.673617379884035e-19,
+   "ecart_min_taux_servi_tmg_moyen": -1.734723475976807e-18,
    "ecart_bilan_max": 2.2737367544323206e-12
   },
   "C|taux_servi_competitif_preservant|0.1|1.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
-   "solde_technique_min_pct_pm": 0.0002999999999999997,
+   "solde_technique_min_pct_pm": 0.00029999999999999965,
    "part_annees_compte_debiteur_1_10": 0.0,
    "compte_debiteur_max": 0.0,
-   "part_annees_avec_complement_1_10": 0.4336,
+   "part_annees_avec_complement_1_10": 0.4335,
    "ecart_min_taux_servi_tmg_moyen": -8.673617379884035e-19,
-   "ecart_bilan_max": 2.9558577807620168e-12
+   "ecart_bilan_max": 3.183231456205249e-12
   },
   "C|distribution_retention|0.06|0.5": {
    "part_annees_solde_technique_negatif_1_10": 0.0,
@@ -1346,310 +1346,310 @@
   "0.005": {
    "v5_0": {
     "valeurs_nettes": {
-     "moyenne": 55.77426961600606,
-     "demi_intervalle_95": 6.0033077910019745
+     "moyenne": 55.48139554632906,
+     "demi_intervalle_95": 6.002543198188089
     },
     "be": {
-     "moyenne": 922.5709810065047,
-     "demi_intervalle_95": 6.065508174428101
+     "moyenne": 922.6434233171943,
+     "demi_intervalle_95": 6.065310476473777
     },
     "fdb": {
-     "moyenne": 146.09215542164756,
-     "demi_intervalle_95": 2.119517523586605
+     "moyenne": 146.31657005439564,
+     "demi_intervalle_95": 2.1186768589075737
     },
     "fuite": {
-     "moyenne": 0.7300024908685039,
-     "demi_intervalle_95": 3.009222499137863
+     "moyenne": 0.7298630148260972,
+     "demi_intervalle_95": 3.016139453404174
     },
     "va_impots": {
-     "moyenne": 19.304288207326053,
-     "demi_intervalle_95": 0.450765199348625
+     "moyenne": 19.5247199663133,
+     "demi_intervalle_95": 0.45403452251344373
     },
     "va_dividendes": {
-     "moyenne": 105.19377052051249,
-     "demi_intervalle_95": 1.8558807667549269
+     "moyenne": 107.1404251255416,
+     "demi_intervalle_95": 1.8667677165392325
     },
     "taux_servi_1_10": {
-     "moyenne": 0.019299726436247267,
-     "demi_intervalle_95": 0.0002182044541363348
+     "moyenne": 0.01931938287868369,
+     "demi_intervalle_95": 0.00021782164261666907
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0007549300124979863,
-     "demi_intervalle_95": 6.904822924942415e-05
+     "moyenne": 0.0007566928390078329,
+     "demi_intervalle_95": 6.910481820183672e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.00494502932968876,
-     "demi_intervalle_95": 4.227634299994588e-05
+     "moyenne": 0.004943366633482099,
+     "demi_intervalle_95": 4.218951395776767e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.0055536903561090424,
-     "demi_intervalle_95": 0.0006321768719933596
+     "moyenne": 0.005579696891738476,
+     "demi_intervalle_95": 0.0006333856658913604
     },
     "part_annees_avec_dotation_1_10": {
-     "moyenne": 0.1338,
-     "demi_intervalle_95": 0.008492177055047104
+     "moyenne": 0.13390000000000005,
+     "demi_intervalle_95": 0.00849137471892711
     },
     "abandon_marge_1_10": {
-     "moyenne": 9.102856001757491,
-     "demi_intervalle_95": 0.32333920913162967
+     "moyenne": 9.096257081206495,
+     "demi_intervalle_95": 0.3229357355691288
     },
     "complement_tmg_1_10": {
-     "moyenne": 3.0249452204282155,
-     "demi_intervalle_95": 0.18888453316739265
+     "moyenne": 3.0117320059037564,
+     "demi_intervalle_95": 0.18847619677890332
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 29.320932977894,
-     "demi_intervalle_95": 2.0631910476362525
+     "moyenne": 29.872610562731513,
+     "demi_intervalle_95": 2.0668443424954006
     }
    },
    "v5_1": {
     "valeurs_nettes": {
-     "moyenne": 52.10886198317569,
-     "demi_intervalle_95": 6.047913009867514
+     "moyenne": 51.79894847698519,
+     "demi_intervalle_95": 6.046829961048731
     },
     "be": {
-     "moyenne": 927.3016496352822,
-     "demi_intervalle_95": 6.112107029435209
+     "moyenne": 927.3869209245264,
+     "demi_intervalle_95": 6.111569178453722
     },
     "fdb": {
-     "moyenne": 154.0999472653956,
-     "demi_intervalle_95": 2.1991192537592954
+     "moyenne": 154.34132334623294,
+     "demi_intervalle_95": 2.1974830356147095
     },
     "fuite": {
-     "moyenne": 0.6921344284088747,
-     "demi_intervalle_95": 3.074193493589215
+     "moyenne": 0.6889357598982341,
+     "demi_intervalle_95": 3.0812971380227725
     },
     "va_impots": {
-     "moyenne": 18.23902721137891,
-     "demi_intervalle_95": 0.4377445225293615
+     "moyenne": 18.463669428325105,
+     "demi_intervalle_95": 0.44118398116987984
     },
     "va_dividendes": {
-     "moyenne": 100.30272028868067,
-     "demi_intervalle_95": 1.8036325677054863
+     "moyenne": 102.23836925814888,
+     "demi_intervalle_95": 1.8150167170953284
     },
     "taux_servi_1_10": {
-     "moyenne": 0.01962980579152117,
-     "demi_intervalle_95": 0.00021545568314552962
+     "moyenne": 0.019649546078849254,
+     "demi_intervalle_95": 0.0002150692866141323
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0010394139166304277,
-     "demi_intervalle_95": 7.82680554155422e-05
+     "moyenne": 0.0010420375510504325,
+     "demi_intervalle_95": 7.830752642868438e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.005031088932500608,
-     "demi_intervalle_95": 4.292302662355648e-05
+     "moyenne": 0.005029486391114012,
+     "demi_intervalle_95": 4.284005965074672e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.008143902133884818,
-     "demi_intervalle_95": 0.0007353307019635393
+     "moyenne": 0.008178770982912899,
+     "demi_intervalle_95": 0.0007362649976733709
     },
     "part_annees_avec_dotation_1_10": {
-     "moyenne": 0.1959,
-     "demi_intervalle_95": 0.008860686029977796
+     "moyenne": 0.1965,
+     "demi_intervalle_95": 0.008858322445762866
     },
     "abandon_marge_1_10": {
-     "moyenne": 8.545886367131127,
-     "demi_intervalle_95": 0.3130805153948928
+     "moyenne": 8.538612203599223,
+     "demi_intervalle_95": 0.3125877015223007
     },
     "complement_tmg_1_10": {
-     "moyenne": 2.681402801590622,
-     "demi_intervalle_95": 0.17837731665555404
+     "moyenne": 2.668814808345186,
+     "demi_intervalle_95": 0.17792118422684508
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 25.52308961495339,
-     "demi_intervalle_95": 2.0387658655917797
+     "moyenne": 26.06536947775737,
+     "demi_intervalle_95": 2.042154854588861
     },
     "part_annees_avec_complement_1_10": {
-     "moyenne": 0.5324,
-     "demi_intervalle_95": 0.011517320752789915
+     "moyenne": 0.5337999999999999,
+     "demi_intervalle_95": 0.011489654359753961
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.0005907097043185627,
-     "demi_intervalle_95": 1.2990043534116483e-05
+     "moyenne": 0.0005916835025511384,
+     "demi_intervalle_95": 1.299778291819138e-05
     },
     "part_scenarios_avec_solde_debiteur": 0.0,
     "ecart_valeurs_nettes": {
-     "moyenne": -3.665407632830369,
-     "demi_intervalle_95": 0.2122652999877724
+     "moyenne": -3.682447069343868,
+     "demi_intervalle_95": 0.21232364976140694
     },
     "ecart_be": {
-     "moyenne": 4.730668628777508,
-     "demi_intervalle_95": 0.24920337365078368
+     "moyenne": 4.7434976073320625,
+     "demi_intervalle_95": 0.24923875505128015
     },
     "ecart_fdb": {
-     "moyenne": 8.007791843748038,
-     "demi_intervalle_95": 0.26032824820988776
+     "moyenne": 8.024753291837277,
+     "demi_intervalle_95": 0.2605097070542651
     },
     "ecart_taux_servi_1_10": {
-     "moyenne": 0.0003300793552739062,
-     "demi_intervalle_95": 1.864029137000209e-05
+     "moyenne": 0.00033016320016556453,
+     "demi_intervalle_95": 1.8699893274092148e-05
     },
     "ecart_va_impots": {
-     "moyenne": -1.0652609959471402,
-     "demi_intervalle_95": 0.052566126165521324
+     "moyenne": -1.061050537988193,
+     "demi_intervalle_95": 0.05273385469047519
     },
     "ecart_va_dividendes": {
-     "moyenne": -4.8910502318318,
-     "demi_intervalle_95": 0.19197847488049666
+     "moyenne": -4.902055867392713,
+     "demi_intervalle_95": 0.1918815399340191
     },
     "ecart_ppb_pct_pm_10": {
-     "moyenne": 0.0025902117777757776,
-     "demi_intervalle_95": 0.00017476554886460016
+     "moyenne": 0.0025990740911744233,
+     "demi_intervalle_95": 0.00017482757208347422
     }
    }
   },
   "0.006": {
    "v5_0": {
     "valeurs_nettes": {
-     "moyenne": 46.74825679988513,
-     "demi_intervalle_95": 6.151572324720085
+     "moyenne": 46.44468697233688,
+     "demi_intervalle_95": 6.150816561949108
     },
     "be": {
-     "moyenne": 934.2799806016243,
-     "demi_intervalle_95": 6.205586651979209
+     "moyenne": 934.3676613391891,
+     "demi_intervalle_95": 6.2054315282795365
     },
     "fdb": {
-     "moyenne": 145.8316988395894,
-     "demi_intervalle_95": 2.1251909627504793
+     "moyenne": 146.0697529793855,
+     "demi_intervalle_95": 2.123343115816417
     },
     "fuite": {
-     "moyenne": 0.744207674668026,
-     "demi_intervalle_95": 2.9979767898163314
+     "moyenne": 0.7406709108387032,
+     "demi_intervalle_95": 3.0048233019030897
     },
     "va_impots": {
-     "moyenne": 16.621301428327314,
-     "demi_intervalle_95": 0.42363296196660344
+     "moyenne": 16.837190518310614,
+     "demi_intervalle_95": 0.42696327170317433
     },
     "va_dividendes": {
-     "moyenne": 94.25132529306777,
-     "demi_intervalle_95": 1.7655900138467713
+     "moyenne": 96.16435650831548,
+     "demi_intervalle_95": 1.7786617386386134
     },
     "taux_servi_1_10": {
-     "moyenne": 0.01928674816476064,
-     "demi_intervalle_95": 0.00021862460826135136
+     "moyenne": 0.019306636283879637,
+     "demi_intervalle_95": 0.0002182275454839609
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0007538327416478852,
-     "demi_intervalle_95": 6.900829165128059e-05
+     "moyenne": 0.0007555428702800848,
+     "demi_intervalle_95": 6.90596151342885e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.0049455850690631265,
-     "demi_intervalle_95": 4.2309663880707824e-05
+     "moyenne": 0.004943914364010987,
+     "demi_intervalle_95": 4.222173160566562e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.005541465897550804,
-     "demi_intervalle_95": 0.0006316348640920061
+     "moyenne": 0.005566922764896835,
+     "demi_intervalle_95": 0.0006327820893782544
     },
     "part_annees_avec_dotation_1_10": {
-     "moyenne": 0.1337,
-     "demi_intervalle_95": 0.008483900738190595
+     "moyenne": 0.13410000000000002,
+     "demi_intervalle_95": 0.00848974261490504
     },
     "abandon_marge_1_10": {
-     "moyenne": 9.10324615900318,
-     "demi_intervalle_95": 0.32368917405593517
+     "moyenne": 9.09705902720982,
+     "demi_intervalle_95": 0.3233026858250138
     },
     "complement_tmg_1_10": {
-     "moyenne": 3.033251292961646,
-     "demi_intervalle_95": 0.18926165801061387
+     "moyenne": 3.0206389804236333,
+     "demi_intervalle_95": 0.18890513603264109
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 20.98202602777566,
-     "demi_intervalle_95": 2.047622020447257
+     "moyenne": 21.531425235578663,
+     "demi_intervalle_95": 2.0512268197376216
     }
    },
    "v5_1": {
     "valeurs_nettes": {
-     "moyenne": 45.949925531594985,
-     "demi_intervalle_95": 6.159950077566162
+     "moyenne": 45.64358803590006,
+     "demi_intervalle_95": 6.158720611493305
     },
     "be": {
-     "moyenne": 935.3163151425733,
-     "demi_intervalle_95": 6.214240468007659
+     "moyenne": 935.406141840017,
+     "demi_intervalle_95": 6.213599715420471
     },
     "fdb": {
-     "moyenne": 147.51221984092126,
-     "demi_intervalle_95": 2.1457097302990897
+     "moyenne": 147.75241675360212,
+     "demi_intervalle_95": 2.143960077854385
     },
     "fuite": {
-     "moyenne": 0.732608608792071,
-     "demi_intervalle_95": 3.012748948018881
+     "moyenne": 0.7297448863922678,
+     "demi_intervalle_95": 3.0198050390603077
     },
     "va_impots": {
-     "moyenne": 16.383298155668317,
-     "demi_intervalle_95": 0.4204060092822914
+     "moyenne": 16.59980895391971,
+     "demi_intervalle_95": 0.4237981242615327
     },
     "va_dividendes": {
-     "moyenne": 93.17666816391115,
-     "demi_intervalle_95": 1.7511883162017048
+     "moyenne": 95.08719519438863,
+     "demi_intervalle_95": 1.7644100753965373
     },
     "taux_servi_1_10": {
-     "moyenne": 0.01935631474082611,
-     "demi_intervalle_95": 0.00021819415818717184
+     "moyenne": 0.01937615828869617,
+     "demi_intervalle_95": 0.0002177915910167509
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0008138687889595429,
-     "demi_intervalle_95": 7.128273792188157e-05
+     "moyenne": 0.0008157212422915123,
+     "demi_intervalle_95": 7.132960039871998e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.004964526741557362,
-     "demi_intervalle_95": 4.2458111477907884e-05
+     "moyenne": 0.004962871984735026,
+     "demi_intervalle_95": 4.2367957832805085e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.0060950152282611015,
-     "demi_intervalle_95": 0.0006566325198966255
+     "moyenne": 0.006122291534543249,
+     "demi_intervalle_95": 0.0006577537243098677
     },
     "part_annees_avec_dotation_1_10": {
-     "moyenne": 0.15910000000000002,
-     "demi_intervalle_95": 0.008128396142887686
+     "moyenne": 0.15990000000000004,
+     "demi_intervalle_95": 0.008159025245328501
     },
     "abandon_marge_1_10": {
-     "moyenne": 8.980127902878685,
-     "demi_intervalle_95": 0.3214507981357582
+     "moyenne": 8.973727596642266,
+     "demi_intervalle_95": 0.32096884256815367
     },
     "complement_tmg_1_10": {
-     "moyenne": 2.954307941250756,
-     "demi_intervalle_95": 0.18662809857709817
+     "moyenne": 2.941175367377814,
+     "demi_intervalle_95": 0.18626387702631358
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 20.160424345567716,
-     "demi_intervalle_95": 2.042351080050297
+     "moyenne": 20.708755305106468,
+     "demi_intervalle_95": 2.045988967890006
     },
     "part_annees_avec_complement_1_10": {
-     "moyenne": 0.4701,
-     "demi_intervalle_95": 0.010792932741489897
+     "moyenne": 0.4713,
+     "demi_intervalle_95": 0.01078947981792834
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.00012601883195367963,
-     "demi_intervalle_95": 2.9167247075361095e-06
+     "moyenne": 0.0001262730387684843,
+     "demi_intervalle_95": 2.9220545790300883e-06
     },
     "part_scenarios_avec_solde_debiteur": 0.0,
     "ecart_valeurs_nettes": {
-     "moyenne": -0.798331268290142,
-     "demi_intervalle_95": 0.05190047274578125
+     "moyenne": -0.8010989364368242,
+     "demi_intervalle_95": 0.051767343730761015
     },
     "ecart_be": {
-     "moyenne": 1.0363345409491413,
-     "demi_intervalle_95": 0.05999186768851205
+     "moyenne": 1.0384805008277298,
+     "demi_intervalle_95": 0.059853116465622434
     },
     "ecart_fdb": {
-     "moyenne": 1.6805210013318608,
-     "demi_intervalle_95": 0.06506963479052968
+     "moyenne": 1.6826637742166115,
+     "demi_intervalle_95": 0.06518560604653935
     },
     "ecart_taux_servi_1_10": {
-     "moyenne": 6.956657606547445e-05,
-     "demi_intervalle_95": 4.498983705258423e-06
+     "moyenne": 6.952200481652868e-05,
+     "demi_intervalle_95": 4.511274102149168e-06
     },
     "ecart_va_impots": {
-     "moyenne": -0.238003272658999,
-     "demi_intervalle_95": 0.011998612277556853
+     "moyenne": -0.23738156439090596,
+     "demi_intervalle_95": 0.012011115654770397
     },
     "ecart_va_dividendes": {
-     "moyenne": -1.0746571291566196,
-     "demi_intervalle_95": 0.04553889050062901
+     "moyenne": -1.0771613139268656,
+     "demi_intervalle_95": 0.045489402823652145
     },
     "ecart_ppb_pct_pm_10": {
-     "moyenne": 0.000553549330710297,
-     "demi_intervalle_95": 4.1757426150460365e-05
+     "moyenne": 0.0005553687696464131,
+     "demi_intervalle_95": 4.1795942208979825e-05
     }
    }
   }
@@ -1658,328 +1658,328 @@
   "A": {
    "reference": {
     "valeurs_nettes": {
-     "moyenne": -5.404532072738806,
-     "demi_intervalle_95": 7.088876978584791
+     "moyenne": -5.402380442072171,
+     "demi_intervalle_95": 7.08887326759264
     },
     "be": {
-     "moyenne": 901.8163222179611,
-     "demi_intervalle_95": 7.127839934957445
+     "moyenne": 901.8155961324682,
+     "demi_intervalle_95": 7.12783049556261
     },
     "fdb": {
-     "moyenne": 78.10087583768714,
-     "demi_intervalle_95": 1.7335539643121147
+     "moyenne": 78.09812819731643,
+     "demi_intervalle_95": 1.7335338653142636
     },
     "fuite": {
-     "moyenne": 1.1798941838014765,
-     "demi_intervalle_95": 3.101640944039265
+     "moyenne": 1.1798533963795614,
+     "demi_intervalle_95": 3.101551157854167
     },
     "va_impots": {
-     "moyenne": 11.948946046651553,
-     "demi_intervalle_95": 0.3883860008265839
+     "moyenne": 11.947520501477687,
+     "demi_intervalle_95": 0.3883534672678214
     },
     "va_dividendes": {
-     "moyenne": 112.68390832056396,
-     "demi_intervalle_95": 1.9143944315329868
+     "moyenne": 112.66542608408636,
+     "demi_intervalle_95": 1.914279106467473
     },
     "taux_servi_1_10": {
-     "moyenne": 0.014385485839461483,
-     "demi_intervalle_95": 0.00018955709043231157
+     "moyenne": 0.01438521503868671,
+     "demi_intervalle_95": 0.0001895528163388605
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.00022165114928527184,
-     "demi_intervalle_95": 2.9880909325903646e-05
+     "moyenne": 0.0002216354116061567,
+     "demi_intervalle_95": 2.9879662767049226e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.0031385840027991457,
-     "demi_intervalle_95": 2.5504739457245813e-05
+     "moyenne": 0.003138596555882835,
+     "demi_intervalle_95": 2.5504970013894273e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.0018178831907351915,
-     "demi_intervalle_95": 0.0002744325255065711
+     "moyenne": 0.0018177160644010054,
+     "demi_intervalle_95": 0.00027441688927983785
     },
     "part_annees_avec_dotation_1_10": {
      "moyenne": 0.0782,
      "demi_intervalle_95": 0.0064445390991443915
     },
     "abandon_marge_1_10": {
-     "moyenne": 10.993001184232414,
-     "demi_intervalle_95": 0.3103653466944021
+     "moyenne": 10.992839935259676,
+     "demi_intervalle_95": 0.31035984599629357
     },
     "complement_tmg_1_10": {
-     "moyenne": 13.31535552069826,
-     "demi_intervalle_95": 0.4086603469720959
+     "moyenne": 13.315870527082105,
+     "demi_intervalle_95": 0.40865794102536235
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": -3.806896868562054,
-     "demi_intervalle_95": 2.7690263503802752
+     "moyenne": -3.8123589824661184,
+     "demi_intervalle_95": 2.7690070351763967
     },
     "part_annees_avec_complement_1_10": {
      "moyenne": 0.30779999999999996,
      "demi_intervalle_95": 0.009797705863741
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.0004559132054383056,
-     "demi_intervalle_95": 1.9257067099686087e-05
+     "moyenne": 0.000455897780184503,
+     "demi_intervalle_95": 1.92567446494587e-05
     },
     "part_scenarios_avec_solde_debiteur": 0.0
    },
    "impot_projete": {
     "valeurs_nettes": {
-     "moyenne": -5.25010617569884,
-     "demi_intervalle_95": 7.087821535669244
+     "moyenne": -5.247963812294592,
+     "demi_intervalle_95": 7.087816233530144
     },
     "be": {
-     "moyenne": 901.7742521582812,
-     "demi_intervalle_95": 7.126361843214139
+     "moyenne": 901.7735176870079,
+     "demi_intervalle_95": 7.126350478171476
     },
     "fdb": {
-     "moyenne": 77.95155058666526,
-     "demi_intervalle_95": 1.7299288474841314
+     "moyenne": 77.94881836378394,
+     "demi_intervalle_95": 1.7299100875226592
     },
     "fuite": {
-     "moyenne": 1.186745335982619,
-     "demi_intervalle_95": 3.094248141615529
+     "moyenne": 1.1867127221229585,
+     "demi_intervalle_95": 3.0941607122851145
     },
     "va_impots": {
-     "moyenne": 11.836590209291282,
-     "demi_intervalle_95": 0.38291875576728923
+     "moyenne": 11.835182317160516,
+     "demi_intervalle_95": 0.3828869395128597
     },
     "va_dividendes": {
-     "moyenne": 100.94028555052626,
-     "demi_intervalle_95": 1.6488943991283966
+     "moyenne": 100.92320808370528,
+     "demi_intervalle_95": 1.6487929231504825
     },
     "taux_servi_1_10": {
-     "moyenne": 0.01437367991706571,
-     "demi_intervalle_95": 0.00018896204888752653
+     "moyenne": 0.014373410753986576,
+     "demi_intervalle_95": 0.00018895786331734363
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0002205898129493823,
-     "demi_intervalle_95": 2.9768439721711307e-05
+     "moyenne": 0.00022057466123190137,
+     "demi_intervalle_95": 2.9767189198803517e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.0031390924206777917,
-     "demi_intervalle_95": 2.5498830383198955e-05
+     "moyenne": 0.0031391050436490606,
+     "demi_intervalle_95": 2.5499079658637015e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.001806815165786979,
-     "demi_intervalle_95": 0.0002729655677735863
+     "moyenne": 0.0018066549339655778,
+     "demi_intervalle_95": 0.0002729503734311911
     },
     "part_annees_avec_dotation_1_10": {
      "moyenne": 0.07790000000000001,
      "demi_intervalle_95": 0.006433677073756403
     },
     "abandon_marge_1_10": {
-     "moyenne": 10.988079625071533,
-     "demi_intervalle_95": 0.3096145106752986
+     "moyenne": 10.987913123471577,
+     "demi_intervalle_95": 0.30960960919004776
     },
     "complement_tmg_1_10": {
-     "moyenne": 13.330757848983149,
-     "demi_intervalle_95": 0.40807371642618073
+     "moyenne": 13.33127175779432,
+     "demi_intervalle_95": 0.4080727637277122
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": -4.055005309020475,
-     "demi_intervalle_95": 2.762216850570872
+     "moyenne": -4.060429881312985,
+     "demi_intervalle_95": 2.762198081001138
     },
     "part_annees_avec_complement_1_10": {
      "moyenne": 0.30639999999999995,
      "demi_intervalle_95": 0.009860319057303554
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.00045506230583444897,
-     "demi_intervalle_95": 1.9232498683620522e-05
+     "moyenne": 0.0004550483062373195,
+     "demi_intervalle_95": 1.923191107605691e-05
     },
     "part_scenarios_avec_solde_debiteur": 0.0,
     "ecart_valeurs_nettes": {
-     "moyenne": 0.15442589703996595,
-     "demi_intervalle_95": 0.011582539474818443
+     "moyenne": 0.1544166297775788,
+     "demi_intervalle_95": 0.011581599110920951
     },
     "ecart_be": {
-     "moyenne": -0.04207005967969406,
-     "demi_intervalle_95": 0.00952642311719064
+     "moyenne": -0.04207844546040428,
+     "demi_intervalle_95": 0.009525032669947399
     },
     "ecart_fdb": {
-     "moyenne": -0.14932525102185418,
-     "demi_intervalle_95": 0.016119147987969002
+     "moyenne": -0.1493098335325007,
+     "demi_intervalle_95": 0.016119926558959163
     },
     "ecart_taux_servi_1_10": {
-     "moyenne": -1.1805922395772186e-05,
-     "demi_intervalle_95": 2.3189833561585132e-06
+     "moyenne": -1.1804284700131853e-05,
+     "demi_intervalle_95": 2.3193277531586113e-06
     },
     "ecart_va_impots": {
-     "moyenne": -0.11235583736027166,
-     "demi_intervalle_95": 0.006376460384069282
+     "moyenne": -0.11233818431717452,
+     "demi_intervalle_95": 0.006375161223197869
     },
     "ecart_va_dividendes": {
-     "moyenne": -11.743622770037717,
-     "demi_intervalle_95": 0.38533588783576955
+     "moyenne": -11.742218000381076,
+     "demi_intervalle_95": 0.3853050752525704
     },
     "ecart_ppb_pct_pm_10": {
-     "moyenne": -1.1068024948212571e-05,
-     "demi_intervalle_95": 2.377206009669866e-06
+     "moyenne": -1.1061130435427827e-05,
+     "demi_intervalle_95": 2.3757537692944215e-06
     }
    }
   },
   "B": {
    "reference": {
     "valeurs_nettes": {
-     "moyenne": 57.8178824611521,
-     "demi_intervalle_95": 5.937957179029801
+     "moyenne": 57.501703901025465,
+     "demi_intervalle_95": 5.93654110249147
     },
     "be": {
-     "moyenne": 919.7601369928494,
-     "demi_intervalle_95": 6.011005739075493
+     "moyenne": 919.843839729736,
+     "demi_intervalle_95": 6.010144912991826
     },
     "fdb": {
-     "moyenne": 162.26361980537862,
-     "demi_intervalle_95": 2.257080909637685
+     "moyenne": 162.515906802269,
+     "demi_intervalle_95": 2.2562321833939873
     },
     "fuite": {
-     "moyenne": 0.6542907342243738,
-     "demi_intervalle_95": 3.1375244962960225
+     "moyenne": 0.6535611253489931,
+     "demi_intervalle_95": 3.144843333196434
     },
     "va_impots": {
-     "moyenne": 20.071519375835187,
-     "demi_intervalle_95": 0.45449550477206024
+     "moyenne": 20.303995199075242,
+     "demi_intervalle_95": 0.4580350576400345
     },
     "va_dividendes": {
-     "moyenne": 107.07606272938229,
-     "demi_intervalle_95": 1.8510858406740591
+     "moyenne": 109.02071725796944,
+     "demi_intervalle_95": 1.8619015559581646
     },
     "taux_servi_1_10": {
-     "moyenne": 0.019983498403868347,
-     "demi_intervalle_95": 0.0002104076120744227
+     "moyenne": 0.020003320522242008,
+     "demi_intervalle_95": 0.0002099248054207315
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0013001818584071586,
-     "demi_intervalle_95": 8.319954463346222e-05
+     "moyenne": 0.001303722952719897,
+     "demi_intervalle_95": 8.319510442001057e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.005104135294423479,
-     "demi_intervalle_95": 4.3027133541514015e-05
+     "moyenne": 0.005102894783253781,
+     "demi_intervalle_95": 4.2931722622297056e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.010460184053395402,
-     "demi_intervalle_95": 0.000786736516464947
+     "moyenne": 0.010503047607401603,
+     "demi_intervalle_95": 0.0007872816435371353
     },
     "part_annees_avec_dotation_1_10": {
-     "moyenne": 0.2478,
-     "demi_intervalle_95": 0.009279549633187462
+     "moyenne": 0.2488,
+     "demi_intervalle_95": 0.009239391587426718
     },
     "abandon_marge_1_10": {
-     "moyenne": 8.055847088951143,
-     "demi_intervalle_95": 0.30016491729855876
+     "moyenne": 8.044509958982905,
+     "demi_intervalle_95": 0.299612134426964
     },
     "complement_tmg_1_10": {
-     "moyenne": 2.411971452483512,
-     "demi_intervalle_95": 0.1722980293794398
+     "moyenne": 2.3998954348073838,
+     "demi_intervalle_95": 0.1720292256420708
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 30.34034899438222,
-     "demi_intervalle_95": 2.0228223995045918
+     "moyenne": 30.87653908347347,
+     "demi_intervalle_95": 2.025524056805215
     },
     "part_annees_avec_complement_1_10": {
-     "moyenne": 0.6456000000000001,
-     "demi_intervalle_95": 0.011216060148667044
+     "moyenne": 0.6461,
+     "demi_intervalle_95": 0.011208902243619312
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.0011532421266913437,
-     "demi_intervalle_95": 2.3512703208096236e-05
+     "moyenne": 0.001155558371374485,
+     "demi_intervalle_95": 2.3492522204986286e-05
     },
     "part_scenarios_avec_solde_debiteur": 0.0
    },
    "impot_projete": {
     "valeurs_nettes": {
-     "moyenne": 58.096113469192304,
-     "demi_intervalle_95": 5.937752474115379
+     "moyenne": 57.78266268653471,
+     "demi_intervalle_95": 5.93631587138471
     },
     "be": {
-     "moyenne": 919.7055706129008,
-     "demi_intervalle_95": 6.010293666035545
+     "moyenne": 919.7888843559763,
+     "demi_intervalle_95": 6.0094277951854975
     },
     "fdb": {
-     "moyenne": 162.1174737456635,
-     "demi_intervalle_95": 2.25671040878393
+     "moyenne": 162.36770637967518,
+     "demi_intervalle_95": 2.2556303002977227
     },
     "fuite": {
-     "moyenne": 0.6559745783362104,
-     "demi_intervalle_95": 3.1310234210793375
+     "moyenne": 0.6535040134918008,
+     "demi_intervalle_95": 3.138073287564903
     },
     "va_impots": {
-     "moyenne": 19.8478547477436,
-     "demi_intervalle_95": 0.44848323117969746
+     "moyenne": 20.077991787325825,
+     "demi_intervalle_95": 0.45195490925897225
     },
     "va_dividendes": {
-     "moyenne": 87.39504789973101,
-     "demi_intervalle_95": 1.4389309417880058
+     "moyenne": 89.10890308019067,
+     "demi_intervalle_95": 1.4477854813230748
     },
     "taux_servi_1_10": {
-     "moyenne": 0.019975303446820948,
-     "demi_intervalle_95": 0.00021048897874236558
+     "moyenne": 0.01999498538961039,
+     "demi_intervalle_95": 0.0002099821798408194
     },
     "dotation_ppb_pct_pm_1_10": {
-     "moyenne": 0.0012980602728203685,
-     "demi_intervalle_95": 8.319451826733105e-05
+     "moyenne": 0.0013014584601591982,
+     "demi_intervalle_95": 8.319093303699307e-05
     },
     "reprise_ppb_pct_pm_1_10": {
-     "moyenne": 0.0051048779963658855,
-     "demi_intervalle_95": 4.3084967428065455e-05
+     "moyenne": 0.005103599458432001,
+     "demi_intervalle_95": 4.29930886892124e-05
     },
     "ppb_pct_pm_10": {
-     "moyenne": 0.010433976568250824,
-     "demi_intervalle_95": 0.0007863652015624753
+     "moyenne": 0.0104756053307554,
+     "demi_intervalle_95": 0.0007868530598557456
     },
     "part_annees_avec_dotation_1_10": {
-     "moyenne": 0.24720000000000003,
-     "demi_intervalle_95": 0.00931143562393885
+     "moyenne": 0.24860000000000002,
+     "demi_intervalle_95": 0.009235007724053435
     },
     "abandon_marge_1_10": {
-     "moyenne": 8.067236008338885,
-     "demi_intervalle_95": 0.3003835795968015
+     "moyenne": 8.055944105292367,
+     "demi_intervalle_95": 0.2998182220855009
     },
     "complement_tmg_1_10": {
-     "moyenne": 2.4173863655198566,
-     "demi_intervalle_95": 0.1722377048005482
+     "moyenne": 2.4048417839615683,
+     "demi_intervalle_95": 0.17196079254339858
     },
     "resultat_avant_impot_1_10": {
-     "moyenne": 30.03478423216231,
-     "demi_intervalle_95": 2.0171251945186524
+     "moyenne": 30.56682565452054,
+     "demi_intervalle_95": 2.019842633559399
     },
     "part_annees_avec_complement_1_10": {
-     "moyenne": 0.6454000000000001,
-     "demi_intervalle_95": 0.011222304564012459
+     "moyenne": 0.6456000000000002,
+     "demi_intervalle_95": 0.011222921954749788
     },
     "complement_pct_pm_1_10": {
-     "moyenne": 0.0011515804765202674,
-     "demi_intervalle_95": 2.349897110681205e-05
+     "moyenne": 0.0011540714155696664,
+     "demi_intervalle_95": 2.34801260605103e-05
     },
     "part_scenarios_avec_solde_debiteur": 0.0,
     "ecart_valeurs_nettes": {
-     "moyenne": 0.27823100804020257,
-     "demi_intervalle_95": 0.014328462958295058
+     "moyenne": 0.2809587855092315,
+     "demi_intervalle_95": 0.014161600686851468
     },
     "ecart_be": {
-     "moyenne": -0.054566379948612055,
-     "demi_intervalle_95": 0.01215198795464127
+     "moyenne": -0.05495537375981644,
+     "demi_intervalle_95": 0.011825426599366268
     },
     "ecart_fdb": {
-     "moyenne": -0.1461460597151608,
-     "demi_intervalle_95": 0.015201395538914385
+     "moyenne": -0.14820042259375993,
+     "demi_intervalle_95": 0.01493256730021993
     },
     "ecart_taux_servi_1_10": {
-     "moyenne": -8.194957047396245e-06,
-     "demi_intervalle_95": 1.2299575032572915e-06
+     "moyenne": -8.335132631617583e-06,
+     "demi_intervalle_95": 1.2480512992757624e-06
     },
     "ecart_va_impots": {
-     "moyenne": -0.2236646280915909,
-     "demi_intervalle_95": 0.007391853923581835
+     "moyenne": -0.22600341174941507,
+     "demi_intervalle_95": 0.007442601817373717
     },
     "ecart_va_dividendes": {
-     "moyenne": -19.681014829651268,
-     "demi_intervalle_95": 0.4536716978464717
+     "moyenne": -19.911814177778737,
+     "demi_intervalle_95": 0.45718285254299146
     },
     "ecart_ppb_pct_pm_10": {
-     "moyenne": -2.6207485144577426e-05,
-     "demi_intervalle_95": 3.9735403804723256e-06
+     "moyenne": -2.7442276646204106e-05,
+     "demi_intervalle_95": 3.979488601901534e-06
     }
    }
   },
@@ -2151,98 +2151,98 @@
  "reel_impot": {
   "A": {
    "reference": {
-    "resultat_net_moyen_annuel_1_10": 5.534504541278816,
-    "rendement_fonds_propres_1_10_agrege": 0.044155012932102354,
-    "rendement_fonds_propres_1_10_median": 0.04413962306148776,
-    "rendement_fonds_propres_1_10_q05": 0.030915098196099736,
+    "resultat_net_moyen_annuel_1_10": 5.533985901157661,
+    "rendement_fonds_propres_1_10_agrege": 0.044157258089834034,
+    "rendement_fonds_propres_1_10_median": 0.044142538982325744,
+    "rendement_fonds_propres_1_10_q05": 0.030916542992604167,
     "part_scenarios_fonds_propres_non_positifs": 0.0,
-    "ecart_au_rendement_exige": -0.03584498706789765,
-    "dividendes_1_10_moyen": 109.20922948555105,
+    "ecart_au_rendement_exige": -0.03584274191016597,
+    "dividendes_1_10_moyen": 109.1982521636781,
     "part_annees_en_perte_1_10": 0.0093,
-    "fonds_propres_annee_10_mediane": 104.44062940285211,
+    "fonds_propres_annee_10_mediane": 104.425764851976,
     "probabilite_apport_10": 0.0,
     "probabilite_apport_horizon": 0.01,
-    "apports_horizon_q99": 0.010133690526169699,
+    "apports_horizon_q99": 0.010145710528256711,
     "probabilite_fonds_propres_negatifs_10": 0.002,
-    "taux_servi_moyen_1_10": 0.023003407561915493,
-    "ecart_taux_servi_reference_1_10": -0.006638802985336017,
-    "taux_rachat_moyen_1_10": 0.0510116069479817,
+    "taux_servi_moyen_1_10": 0.023003172366913828,
+    "ecart_taux_servi_reference_1_10": -0.006639038180337684,
+    "taux_rachat_moyen_1_10": 0.05101263420506352,
     "taux_rachat_max_1_10_q99": 0.343306,
-    "sorties_max_1_10_q99": 0.35197217764000005,
-    "moins_values_realisees_1_10_q99": 74.78332278404403,
+    "sorties_max_1_10_q99": 0.35197217764,
+    "moins_values_realisees_1_10_q99": 74.78952414020665,
     "part_mv_realisees_au_dela_rc": 0.111,
-    "pm_annee_10_mediane": 715.1623834577898
+    "pm_annee_10_mediane": 715.1618383516418
    },
    "impot_projete": {
-    "resultat_net_moyen_annuel_1_10": 5.48389306510793,
-    "rendement_fonds_propres_1_10_agrege": 0.04376173850453089,
-    "rendement_fonds_propres_1_10_median": 0.04379895168600578,
-    "rendement_fonds_propres_1_10_q05": 0.03071442616578657,
+    "resultat_net_moyen_annuel_1_10": 5.483377741548348,
+    "rendement_fonds_propres_1_10_agrege": 0.04376395314367752,
+    "rendement_fonds_propres_1_10_median": 0.04380172793420784,
+    "rendement_fonds_propres_1_10_q05": 0.030715467804246888,
     "part_scenarios_fonds_propres_non_positifs": 0.0,
-    "ecart_au_rendement_exige": -0.03623826149546911,
-    "dividendes_1_10_moyen": 91.27341224678987,
+    "ecart_au_rendement_exige": -0.03623604685632248,
+    "dividendes_1_10_moyen": 91.26399456076845,
     "part_annees_en_perte_1_10": 0.0092,
-    "fonds_propres_annee_10_mediane": 104.40246920155434,
+    "fonds_propres_annee_10_mediane": 104.38627309794884,
     "probabilite_apport_10": 0.0,
     "probabilite_apport_horizon": 0.01,
-    "apports_horizon_q99": 0.010784199869478345,
+    "apports_horizon_q99": 0.01079698433963377,
     "probabilite_fonds_propres_negatifs_10": 0.003,
-    "taux_servi_moyen_1_10": 0.022982658066790826,
-    "ecart_taux_servi_reference_1_10": -0.006659552480460684,
-    "taux_rachat_moyen_1_10": 0.051094760962251386,
+    "taux_servi_moyen_1_10": 0.02298242428446904,
+    "ecart_taux_servi_reference_1_10": -0.006659786262782469,
+    "taux_rachat_moyen_1_10": 0.051095794776985906,
     "taux_rachat_max_1_10_q99": 0.343306,
     "sorties_max_1_10_q99": 0.35197217764000005,
-    "moins_values_realisees_1_10_q99": 74.56748287870278,
+    "moins_values_realisees_1_10_q99": 74.57204790362644,
     "part_mv_realisees_au_dela_rc": 0.111,
-    "pm_annee_10_mediane": 714.9010795890811
+    "pm_annee_10_mediane": 714.8913783224543
    }
   },
   "B": {
    "reference": {
-    "resultat_net_moyen_annuel_1_10": 5.742698914864521,
-    "rendement_fonds_propres_1_10_agrege": 0.0867958772294879,
-    "rendement_fonds_propres_1_10_median": 0.0852935324711899,
-    "rendement_fonds_propres_1_10_q05": 0.06441803554768949,
+    "resultat_net_moyen_annuel_1_10": 5.7979485474576835,
+    "rendement_fonds_propres_1_10_agrege": 0.08519175891900796,
+    "rendement_fonds_propres_1_10_median": 0.08369162278905944,
+    "rendement_fonds_propres_1_10_q05": 0.063260230423843,
     "part_scenarios_fonds_propres_non_positifs": 0.0,
-    "ecart_au_rendement_exige": 0.006795877229487893,
-    "dividendes_1_10_moyen": 85.80984718991368,
+    "ecart_au_rendement_exige": 0.005191758919007958,
+    "dividendes_1_10_moyen": 86.9509919110396,
     "part_annees_en_perte_1_10": 0.0002,
-    "fonds_propres_annee_10_mediane": 56.74662470244392,
+    "fonds_propres_annee_10_mediane": 58.37514152864615,
     "probabilite_apport_10": 0.0,
     "probabilite_apport_horizon": 0.003,
     "apports_horizon_q99": 0.0,
     "probabilite_fonds_propres_negatifs_10": 0.0,
-    "taux_servi_moyen_1_10": 0.026560396086219674,
-    "ecart_taux_servi_reference_1_10": -0.00308181446103184,
-    "taux_rachat_moyen_1_10": 0.04339091031059324,
-    "taux_rachat_max_1_10_q99": 0.13608299831638226,
-    "sorties_max_1_10_q99": 0.14747330246872772,
-    "moins_values_realisees_1_10_q99": 4.940946186623737,
-    "part_mv_realisees_au_dela_rc": 0.003,
-    "pm_annee_10_mediane": 752.6429183207996
+    "taux_servi_moyen_1_10": 0.026572047261256053,
+    "ecart_taux_servi_reference_1_10": -0.0030701632859954607,
+    "taux_rachat_moyen_1_10": 0.04337732916788089,
+    "taux_rachat_max_1_10_q99": 0.13574434619013778,
+    "sorties_max_1_10_q99": 0.14713977127243552,
+    "moins_values_realisees_1_10_q99": 4.940578242649745,
+    "part_mv_realisees_au_dela_rc": 0.002,
+    "pm_annee_10_mediane": 752.7267161701475
    },
    "impot_projete": {
-    "resultat_net_moyen_annuel_1_10": 5.690362844663425,
-    "rendement_fonds_propres_1_10_agrege": 0.08600776163790438,
-    "rendement_fonds_propres_1_10_median": 0.08458042922752629,
-    "rendement_fonds_propres_1_10_q05": 0.06396644696778866,
+    "resultat_net_moyen_annuel_1_10": 5.745030328054071,
+    "rendement_fonds_propres_1_10_agrege": 0.08441712951002697,
+    "rendement_fonds_propres_1_10_median": 0.08297104336499037,
+    "rendement_fonds_propres_1_10_q05": 0.06281201269190509,
     "part_scenarios_fonds_propres_non_positifs": 0.0,
-    "ecart_au_rendement_exige": 0.0060077616379043824,
-    "dividendes_1_10_moyen": 67.68262340087286,
+    "ecart_au_rendement_exige": 0.004417129510026971,
+    "dividendes_1_10_moyen": 68.64846833323293,
     "part_annees_en_perte_1_10": 0.0002,
-    "fonds_propres_annee_10_mediane": 56.74012423331172,
+    "fonds_propres_annee_10_mediane": 58.36844096148675,
     "probabilite_apport_10": 0.0,
     "probabilite_apport_horizon": 0.003,
     "apports_horizon_q99": 0.0,
     "probabilite_fonds_propres_negatifs_10": 0.0,
-    "taux_servi_moyen_1_10": 0.02655033452917645,
-    "ecart_taux_servi_reference_1_10": -0.003091876018075061,
-    "taux_rachat_moyen_1_10": 0.04339973862777786,
-    "taux_rachat_max_1_10_q99": 0.13626748323358845,
-    "sorties_max_1_10_q99": 0.14765984148345254,
-    "moins_values_realisees_1_10_q99": 5.045951431701914,
+    "taux_servi_moyen_1_10": 0.02656164827587662,
+    "ecart_taux_servi_reference_1_10": -0.0030805622713748876,
+    "taux_rachat_moyen_1_10": 0.04338636891724017,
+    "taux_rachat_max_1_10_q99": 0.13593199111805943,
+    "sorties_max_1_10_q99": 0.14732928721461264,
+    "moins_values_realisees_1_10_q99": 4.915707969040929,
     "part_mv_realisees_au_dela_rc": 0.003,
-    "pm_annee_10_mediane": 752.556701174251
+    "pm_annee_10_mediane": 752.6403147365527
    }
   },
   "C": {
@@ -2297,41 +2297,41 @@
  "prudentiel_impot": {
   "A": {
    "reference": {
-    "indicateur_couverture_scr": 1.022444500835004,
-    "fonds_propres_niveau_1": 109.58533297483308,
-    "scr": 107.17973727213318
+    "indicateur_couverture_scr": 1.0226133739366612,
+    "fonds_propres_niveau_1": 107.85591085400276,
+    "scr": 105.47085888266817
    },
    "impot_projete": {
-    "indicateur_couverture_scr": 1.0223356294048023,
-    "fonds_propres_niveau_1": 109.69177125173533,
-    "scr": 107.29526399818153,
-    "be": 889.2459212948786,
-    "fdb": 91.20223025688746
+    "indicateur_couverture_scr": 1.0225020464857904,
+    "fonds_propres_niveau_1": 107.95986862393667,
+    "scr": 105.58401227164387,
+    "be": 889.2451747616276,
+    "fdb": 91.19925994042278
    }
   },
   "B": {
    "reference": {
-    "indicateur_couverture_scr": 0.9992680859752296,
-    "fonds_propres_niveau_1": 94.42233024888633,
-    "scr": 94.49148989556234
+    "indicateur_couverture_scr": 0.9991329314956283,
+    "fonds_propres_niveau_1": 94.37604360091984,
+    "scr": 94.45794511011249
    },
    "impot_projete": {
-    "indicateur_couverture_scr": 0.999884055536262,
-    "fonds_propres_niveau_1": 94.49867999106576,
-    "scr": 94.50963786034555,
-    "be": 908.0015336153148,
-    "fdb": 176.62467327482904
+    "indicateur_couverture_scr": 0.9996496129223386,
+    "fonds_propres_niveau_1": 94.45151862063571,
+    "scr": 94.4846248122076,
+    "be": 908.0829820003988,
+    "fdb": 176.85915477784948
    }
   },
   "C": {
    "reference": {
-    "indicateur_couverture_scr": 1.0426408814711918,
-    "fonds_propres_niveau_1": 87.4713101184555,
+    "indicateur_couverture_scr": 1.0300892029236863,
+    "fonds_propres_niveau_1": 86.41829964644444,
     "scr": 83.89399617155942
    },
    "impot_projete": {
-    "indicateur_couverture_scr": 1.043397030919589,
-    "fonds_propres_niveau_1": 87.48219139516546,
+    "indicateur_couverture_scr": 1.0308379760620983,
+    "fonds_propres_niveau_1": 86.4291946851623,
     "scr": 83.84362692508697,
     "be": 924.8505477969356,
     "fdb": 225.6146677991314
@@ -2340,171 +2340,171 @@
  },
  "strategies_impot": {
   "A|reinvestissement_progressif": {
-   "valeur_nette_reference": -5.011869027223074,
-   "valeur_nette_impot_projete": -4.861202342360719,
+   "valeur_nette_reference": -5.009866460409113,
+   "valeur_nette_impot_projete": -4.8592102374231745,
    "ecart_passive_reference": {
-    "moyenne": 0.392663045515732,
-    "demi_intervalle_95": 0.16338849509953504
+    "moyenne": 0.3925139816630565,
+    "demi_intervalle_95": 0.1633701691673377
    },
    "ecart_passive_impot_projete": {
-    "moyenne": 0.3889038333381199,
-    "demi_intervalle_95": 0.16126027531500553
+    "moyenne": 0.38875357487141854,
+    "demi_intervalle_95": 0.16124327028880267
    }
   },
   "A|repositionnement": {
-   "valeur_nette_reference": -21.74276885690559,
-   "valeur_nette_impot_projete": -21.565002157551636,
+   "valeur_nette_reference": -21.88800811536999,
+   "valeur_nette_impot_projete": -21.70973462464217,
    "ecart_passive_reference": {
-    "moyenne": -16.338236784166785,
-    "demi_intervalle_95": 1.0607153833698297
+    "moyenne": -16.485627673297817,
+    "demi_intervalle_95": 1.0624770284838638
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -16.314895981852796,
-    "demi_intervalle_95": 1.058770578032338
+    "moyenne": -16.461770812347577,
+    "demi_intervalle_95": 1.0604707153341726
    }
   },
   "A|taux_servi_competitif": {
-   "valeur_nette_reference": -11.297557741667227,
-   "valeur_nette_impot_projete": -11.163390267306664,
+   "valeur_nette_reference": -11.423817380122713,
+   "valeur_nette_impot_projete": -11.289108667846435,
    "ecart_passive_reference": {
-    "moyenne": -5.89302566892842,
-    "demi_intervalle_95": 0.4086930612721624
+    "moyenne": -6.021436938050542,
+    "demi_intervalle_95": 0.40712545680461015
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -5.9132840916078235,
-    "demi_intervalle_95": 0.40813745007931895
+    "moyenne": -6.041144855551843,
+    "demi_intervalle_95": 0.4065028696918816
    }
   },
   "A|taux_servi_marge": {
-   "valeur_nette_reference": 0.4382272975517194,
-   "valeur_nette_impot_projete": 0.5993065177859753,
+   "valeur_nette_reference": 0.4395162132461528,
+   "valeur_nette_impot_projete": 0.6005989004383864,
    "ecart_passive_reference": {
-    "moyenne": 5.842759370290525,
-    "demi_intervalle_95": 0.3893025488586047
+    "moyenne": 5.841896655318323,
+    "demi_intervalle_95": 0.3893027164468558
    },
    "ecart_passive_impot_projete": {
-    "moyenne": 5.849412693484815,
-    "demi_intervalle_95": 0.38863412473463965
+    "moyenne": 5.848562712732977,
+    "demi_intervalle_95": 0.38863506667357356
    }
   },
   "A|liquidite_defensive": {
-   "valeur_nette_reference": -4.571652882163288,
-   "valeur_nette_impot_projete": -4.387232450601368,
+   "valeur_nette_reference": -4.570216517861047,
+   "valeur_nette_impot_projete": -4.385819311032364,
    "ecart_passive_reference": {
-    "moyenne": 0.8328791905755181,
-    "demi_intervalle_95": 1.22175423736926
+    "moyenne": 0.8321639242111246,
+    "demi_intervalle_95": 1.22172622389982
    },
    "ecart_passive_impot_projete": {
-    "moyenne": 0.8628737250974707,
-    "demi_intervalle_95": 1.2180502653723493
+    "moyenne": 0.8621445012622293,
+    "demi_intervalle_95": 1.2180202786435965
    }
   },
   "A|taux_servi_competitif_preservant": {
-   "valeur_nette_reference": -9.545670889264803,
-   "valeur_nette_impot_projete": -9.392757885572797,
+   "valeur_nette_reference": -9.54407815634941,
+   "valeur_nette_impot_projete": -9.391187829514797,
    "ecart_passive_reference": {
-    "moyenne": -4.1411388165259995,
-    "demi_intervalle_95": 0.44911270519021573
+    "moyenne": -4.1416977142772415,
+    "demi_intervalle_95": 0.4491251891970677
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -4.142651709873957,
-    "demi_intervalle_95": 0.45175939398213366
+    "moyenne": -4.143224017220206,
+    "demi_intervalle_95": 0.451757455484488
    }
   },
   "A|distribution_retention": {
-   "valeur_nette_reference": -6.5010554398842135,
-   "valeur_nette_impot_projete": -6.203036257035867,
+   "valeur_nette_reference": -6.498679831143693,
+   "valeur_nette_impot_projete": -6.2007040505647035,
    "ecart_passive_reference": {
-    "moyenne": -1.0965233671454069,
-    "demi_intervalle_95": 0.06534840923005074
+    "moyenne": -1.0962993890715207,
+    "demi_intervalle_95": 0.0653401851085183
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -0.9529300813370283,
-    "demi_intervalle_95": 0.05779430201997899
+    "moyenne": -0.9527402382701122,
+    "demi_intervalle_95": 0.05778601681287387
    }
   },
   "B|reinvestissement_progressif": {
-   "valeur_nette_reference": 58.071277814261094,
-   "valeur_nette_impot_projete": 58.34813589906432,
+   "valeur_nette_reference": 57.76455493000856,
+   "valeur_nette_impot_projete": 58.044735650777035,
    "ecart_passive_reference": {
-    "moyenne": 0.25339535310898187,
-    "demi_intervalle_95": 0.2587646622369005
+    "moyenne": 0.26285102898307355,
+    "demi_intervalle_95": 0.2592836376777807
    },
    "ecart_passive_impot_projete": {
-    "moyenne": 0.25202242987200507,
-    "demi_intervalle_95": 0.2571881514727518
+    "moyenne": 0.2620729642423325,
+    "demi_intervalle_95": 0.25785709702469656
    }
   },
   "B|repositionnement": {
-   "valeur_nette_reference": 46.06296096832645,
-   "valeur_nette_impot_projete": 46.34215544759534,
+   "valeur_nette_reference": 45.75312272308303,
+   "valeur_nette_impot_projete": 46.0345994349081,
    "ecart_passive_reference": {
-    "moyenne": -11.754921492825655,
-    "demi_intervalle_95": 0.698892360817116
+    "moyenne": -11.748581177942443,
+    "demi_intervalle_95": 0.6989853556239004
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -11.753958021596969,
-    "demi_intervalle_95": 0.6974279929508728
+    "moyenne": -11.7480632516266,
+    "demi_intervalle_95": 0.6973170125492764
    }
   },
   "B|taux_servi_competitif": {
-   "valeur_nette_reference": 47.76274968796218,
-   "valeur_nette_impot_projete": 47.997370258109484,
+   "valeur_nette_reference": 47.43903035070348,
+   "valeur_nette_impot_projete": 47.676831635448764,
    "ecart_passive_reference": {
-    "moyenne": -10.055132773189925,
-    "demi_intervalle_95": 0.5348549184638567
+    "moyenne": -10.062673550321989,
+    "demi_intervalle_95": 0.5344430606239688
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -10.098743211082821,
-    "demi_intervalle_95": 0.5353432578337404
+    "moyenne": -10.105831051085948,
+    "demi_intervalle_95": 0.5349809137949676
    }
   },
   "B|taux_servi_marge": {
-   "valeur_nette_reference": 64.06784932635567,
-   "valeur_nette_impot_projete": 64.37528373670857,
+   "valeur_nette_reference": 63.76217819353789,
+   "valeur_nette_impot_projete": 64.07356878502657,
    "ecart_passive_reference": {
-    "moyenne": 6.249966865203572,
-    "demi_intervalle_95": 0.551882602255876
+    "moyenne": 6.260474292512417,
+    "demi_intervalle_95": 0.5503398179928093
    },
    "ecart_passive_impot_projete": {
-    "moyenne": 6.279170267516261,
-    "demi_intervalle_95": 0.5534351110822002
+    "moyenne": 6.290906098491856,
+    "demi_intervalle_95": 0.552095637342514
    }
   },
   "B|liquidite_defensive": {
-   "valeur_nette_reference": 58.995550218598076,
-   "valeur_nette_impot_projete": 59.317419607209786,
+   "valeur_nette_reference": 58.679950682931754,
+   "valeur_nette_impot_projete": 59.00350630045131,
    "ecart_passive_reference": {
-    "moyenne": 1.1776677574459646,
-    "demi_intervalle_95": 1.36796602940422
+    "moyenne": 1.1782467819062759,
+    "demi_intervalle_95": 1.368950221533042
    },
    "ecart_passive_impot_projete": {
-    "moyenne": 1.221306138017475,
-    "demi_intervalle_95": 1.3663584478985908
+    "moyenne": 1.2208436139166023,
+    "demi_intervalle_95": 1.3674432705991297
    }
   },
   "B|taux_servi_competitif_preservant": {
-   "valeur_nette_reference": 48.3220360652713,
-   "valeur_nette_impot_projete": 48.560843506360484,
+   "valeur_nette_reference": 48.003515354023804,
+   "valeur_nette_impot_projete": 48.24712038479822,
    "ecart_passive_reference": {
-    "moyenne": -9.495846395880807,
-    "demi_intervalle_95": 0.549262065955776
+    "moyenne": -9.498188547001671,
+    "demi_intervalle_95": 0.5486352201922677
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -9.53526996283183,
-    "demi_intervalle_95": 0.5498723458944496
+    "moyenne": -9.535542301736475,
+    "demi_intervalle_95": 0.5491712452221323
    }
   },
   "B|distribution_retention": {
-   "valeur_nette_reference": 56.420486146882425,
-   "valeur_nette_impot_projete": 56.95796505755008,
+   "valeur_nette_reference": 56.08842531693683,
+   "valeur_nette_impot_projete": 56.630765605340635,
    "ecart_passive_reference": {
-    "moyenne": -1.397396314269681,
-    "demi_intervalle_95": 0.05100048237469897
+    "moyenne": -1.4132785840886422,
+    "demi_intervalle_95": 0.05092281477900172
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -1.1381484116422202,
-    "demi_intervalle_95": 0.04416734230028368
+    "moyenne": -1.151897081194077,
+    "demi_intervalle_95": 0.043691991382722666
    }
   },
   "C|reinvestissement_progressif": {
@@ -2520,15 +2520,15 @@
    }
   },
   "C|repositionnement": {
-   "valeur_nette_reference": 81.55851438060769,
-   "valeur_nette_impot_projete": 81.82489465474688,
+   "valeur_nette_reference": 81.3987529322289,
+   "valeur_nette_impot_projete": 81.66712580004597,
    "ecart_passive_reference": {
-    "moyenne": -1.2318305178336313,
-    "demi_intervalle_95": 0.45375134153260444
+    "moyenne": -1.3915919662124137,
+    "demi_intervalle_95": 0.45390004903534
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -1.2404357221997224,
-    "demi_intervalle_95": 0.4539283364491021
+    "moyenne": -1.3982045769006404,
+    "demi_intervalle_95": 0.45419204292337495
    }
   },
   "C|taux_servi_competitif": {
@@ -2568,15 +2568,15 @@
    }
   },
   "C|taux_servi_competitif_preservant": {
-   "valeur_nette_reference": 73.08467128498613,
-   "valeur_nette_impot_projete": 73.30625863883571,
+   "valeur_nette_reference": 73.02706487521773,
+   "valeur_nette_impot_projete": 73.24888077441021,
    "ecart_passive_reference": {
-    "moyenne": -9.705673613455186,
-    "demi_intervalle_95": 0.6658460138267693
+    "moyenne": -9.763280023223574,
+    "demi_intervalle_95": 0.6660319021185241
    },
    "ecart_passive_impot_projete": {
-    "moyenne": -9.759071738110885,
-    "demi_intervalle_95": 0.6676089214722718
+    "moyenne": -9.816449602536402,
+    "demi_intervalle_95": 0.6678041309921326
    }
   },
   "C|distribution_retention": {
@@ -2593,6 +2593,6 @@
   }
  },
  "controles": {
-  "ecart_max_reproduction_v5_1": 1.4210854715202004e-13
+  "ecart_max_reproduction_v5_1": 1.0746958878371515e-13
  }
 }
