@@ -8,7 +8,7 @@ Trois profils fictifs de fonds euros, huit stratégies ALM, deux vues : le porte
 
 ## 1. Ce que l'étude établit
 
-Effet mesuré, significativité statistique et robustesse économique sont lus séparément : l'**effet mesuré** est l'écart moyen de valeur totale à la gestion passive ; il est **significatif** si son intervalle apparié à 95 % exclut zéro ; il est **important** s'il est significatif et si sa moyenne dépasse le seuil d'importance ; il est **robuste** si la borne de l'intervalle dépasse ce seuil, avec le même signe, dans toutes les configurations. Un changement de signe n'est retenu que si des écarts significatifs de signes opposés existent.
+Quatre lectures distinctes, jamais interchangeables : l'**effet mesuré** est l'écart moyen de valeur totale à la gestion passive, dont le signe (baisse ou gain de valeur moyen) est lu configuration par configuration ; il est **significatif** si son intervalle apparié à 95 % exclut zéro ; il est **important** (économiquement matériel) s'il est significatif et si sa moyenne dépasse le seuil d'importance, ou seuil de matérialité, 2 % du SCR simplifié du profil ; la conclusion est **robuste aux hypothèses testées** si la borne de l'intervalle dépasse ce seuil, avec le même signe, dans toutes les configurations. Un changement de signe n'est retenu que si des écarts significatifs de signes opposés existent. Les verdicts des tableaux sont les lectures du moteur (`src/v5/collecte.py`) ; en langage courant : « défavorable, robuste » est une baisse de valeur robuste aux hypothèses testées, « favorable, robuste » un gain de valeur robuste, « toujours négatif (positif), non robuste » une baisse (un gain) de valeur moyen dans toutes les configurations, non robuste, « change de signe selon les hypothèses » un résultat dont le signe dépend des hypothèses. « Non robuste » ne signifie pas « non significatif » : les colonnes du tableau comptent séparément les configurations significatives, importantes et à borne au-delà du seuil.
 
 - **Capital à l'ouverture** : sans apport, l'indicateur simplifié dépasse déjà 100 % pour C (6 stratégies sur 8), dont l'apport estimé est nul. Apport de la gestion passive [intervalle à 95 %] : A 101,0 [99,4 ; 102,8] ; B 27,6 [26,1 ; 32,5] ; C 0,0 [0,0 ; 0,0]. La collecte ne change pas ce besoin : il est calculé sur l'existant en extinction, dans la frontière des contrats (vue simplifiée, qui ne reprend pas les effets de la collecte sur les hypothèses de projection de l'existant).
 - **Coût de la recapitalisation** : un apport n'est jamais un profit ; recapitaliser à 100 % coûte à l'actionnaire 9,9 (A), 3,9 (B), 0,0 (C) de valeur (impôt et participation sur les revenus du capital).
@@ -86,7 +86,7 @@ Indicateur de couverture simplifié du SCR sans apport : 12 %. Gestion passive a
 
 **Lecture.**
 
-- **Désavantage de valeur totale robuste** : Repositionnement.
+- **Baisse de valeur totale robuste aux hypothèses testées** : Repositionnement.
 - **Résultat qui dépend des hypothèses** (signe, importance ou précision) : Taux servi compétitif (toujours négatif, non robuste), Taux servi de marge (toujours positif, non robuste), Liquidité défensive (change de signe selon les hypothèses), Compétitif préservant la PPB (toujours négatif, non robuste).
 - **Premier rang de la valeur totale** : Taux servi de marge (16 configurations sur 20), Liquidité défensive (4 configurations sur 20). **Il change avec les hypothèses.**
 
@@ -106,7 +106,7 @@ Indicateur de couverture simplifié du SCR sans apport : 71 %. Gestion passive a
 
 **Lecture.**
 
-- **Désavantage de valeur totale robuste** : Repositionnement.
+- **Baisse de valeur totale robuste aux hypothèses testées** : Repositionnement.
 - **Résultat qui dépend des hypothèses** (signe, importance ou précision) : Taux servi compétitif (toujours négatif, non robuste), Taux servi de marge (toujours positif, non robuste), Liquidité défensive (toujours positif, non robuste), Compétitif préservant la PPB (toujours négatif, non robuste), Rétention de capital (toujours négatif, non robuste).
 - **Premier rang de la valeur totale** : Taux servi de marge (15 configurations sur 20), Liquidité défensive (5 configurations sur 20). **Il change avec les hypothèses.**
 
