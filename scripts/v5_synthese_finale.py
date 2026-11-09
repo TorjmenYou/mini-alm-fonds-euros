@@ -192,8 +192,9 @@ A(f"**Base commune et lecture.** Chaque stratégie reçoit l'apport qui porte so
 
 # ------------------------------------------------------------------------------------------------
 A("## 1. Ce que l'étude établit\n")
-A("Effet mesuré, significativité statistique et robustesse économique sont lus séparément : l'**effet mesuré** est l'écart moyen de valeur totale à la gestion passive ; il est **significatif** si son intervalle apparié à 95 % exclut zéro ; il est **important** s'il est significatif et si sa moyenne dépasse le seuil d'importance ; il est **robuste** si la borne de l'intervalle dépasse ce seuil, avec le même signe, dans toutes les configurations. "
-  "Un changement de signe n'est retenu que si des écarts significatifs de signes opposés existent.\n")
+A("Quatre lectures distinctes, jamais interchangeables : l'**effet mesuré** est l'écart moyen de valeur totale à la gestion passive, dont le signe (baisse ou gain de valeur moyen) est lu configuration par configuration ; il est **significatif** si son intervalle apparié à 95 % exclut zéro ; il est **important** (économiquement matériel) s'il est significatif et si sa moyenne dépasse le seuil d'importance, ou seuil de matérialité, 2 % du SCR simplifié du profil ; la conclusion est **robuste aux hypothèses testées** si la borne de l'intervalle dépasse ce seuil, avec le même signe, dans toutes les configurations. "
+  "Un changement de signe n'est retenu que si des écarts significatifs de signes opposés existent. Les verdicts des tableaux sont les lectures du moteur (`src/v5/collecte.py`) ; en langage courant : « défavorable, robuste » est une baisse de valeur robuste aux hypothèses testées, « favorable, robuste » un gain de valeur robuste, « toujours négatif (positif), non robuste » une baisse (un gain) de valeur moyen dans toutes les configurations, non robuste, « change de signe selon les hypothèses » un résultat dont le signe dépend des hypothèses. "
+  "« Non robuste » ne signifie pas « non significatif » : les colonnes du tableau comptent séparément les configurations significatives, importantes et à borne au-delà du seuil.\n")
 _couverts = sorted({q for q in N for c in K["strategies"] if K["prudentiel"][f"{q}|{c}"]["apport_0"]["indicateur_couverture_scr"] >= 1})
 A("- **Capital à l'ouverture** : " + ("aucune stratégie n'atteint 100 % du SCR simplifié sans apport" if not _couverts else
    "sans apport, l'indicateur simplifié dépasse déjà 100 % pour " + ", ".join(
@@ -343,9 +344,9 @@ for p in N:
     dep = [c for c in AUTRES if robustesse(p, c) not in ("favorable, robuste", "défavorable, robuste", "sans effet important")]
     A("**Lecture.**\n")
     if fav:
-        A("- **Avantage de valeur totale robuste** sur la grille et sous ONC : " + ", ".join(COURT[c] for c in fav) + ". Il reste conditionnel aux hypothèses de comportement, non calibrées, et se paie sur d'autres dimensions (tableau).")
+        A("- **Gain de valeur totale robuste aux hypothèses testées** (grille et ONC) : " + ", ".join(COURT[c] for c in fav) + ". Il reste conditionnel aux hypothèses de comportement, non calibrées, et se paie sur d'autres dimensions (tableau).")
     if defav:
-        A("- **Désavantage de valeur totale robuste** : " + ", ".join(COURT[c] for c in defav) + ".")
+        A("- **Baisse de valeur totale robuste aux hypothèses testées** : " + ", ".join(COURT[c] for c in defav) + ".")
     if dep:
         A("- **Résultat qui dépend des hypothèses** (signe, importance ou précision) : " + ", ".join(f"{COURT[c]} ({robustesse(p, c)})" for c in dep) + ".")
     tetes = [max(CODES, key=lambda c: rn(p, c, c0, eta)["valeur_totale"]["moyenne"]) for c0, eta in GRILLE] + \

@@ -318,8 +318,8 @@ A : identité mathématique ou comptable vérifiée ; B : résultat de simulatio
 | Bilan équilibré chaque année, fuite nulle sur l'équivalent certain, absence d'arbitrage, impôt compté une fois | A | vérifié par les tests |
 | Participation de l'exercice au moins égale au compte simplifié (V5.1) | A | vérifié par les tests |
 | Le bilan hérité conditionne le capital nécessaire et la valeur (valeur de A recapitalisé négative) | B | A −5,4, B 57,5, C 82,8 |
-| Désavantages robustes (lecture de valeur totale) | C | A, repositionnement ; B, repositionnement |
-| Aucune stratégie n'a d'avantage robuste | C | confirmé |
+| Baisses de valeur totale robustes aux hypothèses testées | C | A, repositionnement ; B, repositionnement |
+| Aucune stratégie n'apporte de gain de valeur robuste aux hypothèses testées | C | confirmé |
 | Politique de marge : lecture sur la grille | C et D | lecture : A « toujours positif, non robuste », B « toujours positif, non robuste », C « change de signe selon les hypothèses » |
 | Niveaux de valeur, de capital et de valeur des affaires nouvelles | B et D | dépendent des profils fictifs, du spread hypothétique, des frais fictifs et de l'élasticité |
 | Indicateurs de couverture du SCR | D | simplifiés, pas des ratios réglementaires |

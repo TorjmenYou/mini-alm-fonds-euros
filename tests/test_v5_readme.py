@@ -64,6 +64,23 @@ def attendus():
     pa = AU["participation"]
     e = [-pa[p]["v5_1"]["ecart_valeurs_nettes"]["moyenne"] for p in "ABC"]
     a["correction à capital égal"] = f"{f(e[0])} (A), {f(e[1])} (B) et {f(e[2])} (C)"
+    # Comptes de configurations (signe, significativité, importance, borne au-delà du seuil) cités dans les points 2 et 3.
+    vt = S["valeur_totale"]
+    c = vt["C|repositionnement"]
+    a["repositionnement C : lectures"] = (f"significative dans les {c['significatifs']} configurations, importante dans {c['importants']}, "
+                                          f"mais la borne de l'intervalle ne dépasse le seuil que dans {c['bornes_au_dela_du_seuil']}")
+    a["politiques compétitives : A important"] = f"pour A, l'écart n'est important que dans {vt['A|taux_servi_competitif']['importants']} configurations sur 20"
+    sig = [vt[f"{p}|{s}"]["significatifs"] for p in "ABC" for s in ("taux_servi_competitif", "taux_servi_competitif_preservant")]
+    a["politiques compétitives : significatives"] = (f"significative dans {min(sig)} ou {max(sig)} configurations sur 20" if max(sig) == min(sig) + 1
+                                                     else f"significative dans {min(sig)} configurations sur 20" if max(sig) == min(sig)
+                                                     else f"significative dans {min(sig)} à {max(sig)} configurations sur 20")
+    a["rétention : configurations importantes"] = f"important dans {vt['B|distribution_retention']['importants']} et {vt['C|distribution_retention']['importants']} configurations sur 20"
+    a["politique de marge : significatifs A et B"] = f"écart significatif dans {vt['A|taux_servi_marge']['significatifs']} configurations pour A, {vt['B|taux_servi_marge']['significatifs']} pour B"
+    ev = ([R["ecarts"][f"C|taux_servi_marge|{c0}|{eta}"]["totale"] for c0 in R["intensites"].values() for eta in R["elasticites"].values()]
+          + [R["sensibilite_onc_max"][f"C|taux_servi_marge|{R['intensites']['centrale']}|{eta}"]["ecart_totale"] for eta in R["elasticites"].values()])
+    assert len(ev) == vt["C|taux_servi_marge"]["n"]
+    a["politique de marge C : signes"] = (f"positif dans {sum(x['moyenne'] > 0 for x in ev)} configurations sur 20 et significativement négatif dans "
+                                          f"{sum(x['moyenne'] + x['demi_intervalle_95'] < 0 for x in ev)}")
     return a
 
 
