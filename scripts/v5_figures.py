@@ -1,11 +1,12 @@
 """Figures de la V5, produites uniquement à partir des fichiers de données et de résultats versionnés.
 
 Usage : python scripts/v5_figures.py [--sortie figures/v5]
-Lit : data/v5/marche/ (courbe EIOPA, TEC), resultats/v5_consolidation.json, resultats/v5_collecte.json,
+Lit : data/v5/marche/ (courbe EIOPA, spread hypothétique), resultats/v5_consolidation.json, resultats/v5_collecte.json,
 resultats/v5_reconciliation_collecte.json, resultats/v5_synthese_finale.json. Aucune simulation n'est
 relancée : chaque point d'une figure est une valeur de ces fichiers (traçabilité : docs/V5_REPRODUCTION.md).
 
-1. contexte_taux.png : courbe EIOPA au 31/10/2026 sans et avec VA, TEC de l'État français (observés) ;
+1. contexte_taux.png : courbe EIOPA au 31/10/2026 sans et avec VA (observées) et courbe des obligations du modèle
+   (EIOPA sans VA et spread hypothétique) ;
 2. reconciliation_collecte.png : flux de la place en 2025 et flux du modèle (c0 = 6 %, g = 1) ;
 3. capital_valeur_profils.png : apport à 100 % du SCR simplifié et valeurs de la gestion passive ;
 4. ecarts_valeur_totale.png : écart de valeur totale à la gestion passive, plage sur 20 configurations ;
@@ -85,26 +86,28 @@ def contexte_taux(sortie):
     m = [int(r["maturite"]) for r in lignes]
     sans = [100 * float(r["taux_sans_va"]) for r in lignes]
     avec = [100 * float(r["taux_avec_va"]) for r in lignes]
-    tec = lire("data/v5/marche/spread_oat_20261104.json")["donnees_observees"]["TEC_04_11_2026"]
+    from src.courbes import CourbeAvecSpread
+    from src.v5.courbes_marche import courbe_eiopa, spread_obligations
+    oblig = CourbeAvecSpread(courbe_eiopa(), spread_obligations())
+    ob = [100 * oblig.taux_zc(k) for k in m]
     fig, ax = plt.subplots(figsize=(8.2, 4.6))
-    fig.subplots_adjust(left=0.08, right=0.97, top=0.88, bottom=0.2)
-    ax.plot(m, sans, color=FAV, lw=2, label="EIOPA sans VA")
-    ax.plot(m, avec, color=FAV, lw=2, ls=(0, (4, 2)), label="EIOPA avec VA (VA de 20 pb)")
-    ax.plot([int(k) for k in tec], [100 * v for v in tec.values()], color=DEFAV, lw=0, marker="o", ms=7,
-            markeredgecolor=FOND, markeredgewidth=1.5, label="TEC de l'État français")
-    for k, v in tec.items():
-        if k in ("2", "10", "30"):
-            ax.annotate(fr(100 * v, 2) + " %", (int(k), 100 * v), textcoords="offset points", xytext=(0, 8), ha="center", fontsize=9, color=ENCRE2)
+    fig.subplots_adjust(left=0.08, right=0.97, top=0.88, bottom=0.235)
+    ax.plot(m, sans, color=FAV, lw=2, label="EIOPA sans VA (observée)")
+    ax.plot(m, avec, color=FAV, lw=2, ls=(0, (4, 2)), label="EIOPA avec VA (VA de 20 pb, observée)")
+    ax.plot(m, ob, color=DEFAV, lw=2, label="Obligations du modèle : EIOPA sans VA + spread hypothétique")
+    for k in (10, 30):
+        ax.annotate(fr(ob[k - 1], 2) + " %", (k, ob[k - 1]), textcoords="offset points", xytext=(0, 8), ha="center", fontsize=9, color=ENCRE2)
     ax.annotate(fr(sans[9], 2) + " %", (10, sans[9]), textcoords="offset points", xytext=(0, -15), ha="center", fontsize=9, color=ENCRE2)
     ax.set_xlim(0, 51)
-    ax.set_ylim(2.5, 6)
+    ax.set_ylim(2.5, 5.5)
     ax.set_xlabel("Maturité (ans)")
-    ax.set_ylabel("Taux (%)")
+    ax.set_ylabel("Taux zéro-coupon (%)")
     ax.yaxis.set_major_formatter(lambda v, _: fr(v, 1))
-    ax.set_title("Taux sans risque EIOPA au 31/10/2026 et taux de l'État français au 04/11/2026")
-    ax.legend(loc="center right", bbox_to_anchor=(1.0, 0.62), fontsize=9.5)
-    note(fig, "Données observées. EIOPA : taux zéro-coupon (composition annuelle), UFR 3,30 %, LLP 20 ans. TEC : taux de rendement au pair (oblig.fr),\n"
-              "non directement comparables à des taux zéro-coupon ; l'écart sert à calibrer le spread des obligations détenues (data/v5/marche).")
+    ax.set_title("Courbe sans risque EIOPA au 31/10/2026 et courbe des obligations du modèle")
+    ax.legend(loc="lower right", fontsize=9.5)
+    note(fig, "EIOPA : taux zéro-coupon observés (composition annuelle), UFR 3,30 %, LLP 20 ans. Source : EIOPA, https://eiopa.europa.eu/.\n"
+              "Spread des obligations : hypothèse, moyenne de long terme des spreads publiée par l'EIOPA (notation A), pas un spread\n"
+              "de marché observé (data/v5/marche/spread_hypothetique_20261031.json).")
     return sauver(fig, sortie, "contexte_taux.png")
 
 

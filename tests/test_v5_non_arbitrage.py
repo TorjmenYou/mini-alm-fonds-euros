@@ -20,7 +20,7 @@ from src.courbes import CourbePlate, SpreadCredit
 from src.gse import GSE
 from src.projection import indicateurs, projeter
 from src.v5 import bases
-from src.v5.courbes_marche import courbe_eiopa, spread_oat
+from src.v5.courbes_marche import courbe_eiopa, spread_obligations
 from src.v5.fiscalite import impot_annuel
 
 R = 0.032  # taux sans risque plat (actuariel) des tests analytiques
@@ -126,7 +126,7 @@ def test_bases_meme_prix_de_marche_des_actifs_et_aucune_fuite(h):
     h2["comportement"] = {"reference": "zc10_obligations"}
     res = {}
     for base in bases.BASES:
-        eco, credit = bases.equivalent_certain(h2, base, credit=spread_oat())
+        eco, credit = bases.equivalent_certain(h2, base, credit=spread_obligations())
         df = projeter(h2, eco, credit=credit)
         res[base] = (df, indicateurs(df))
         assert abs(res[base][1]["fuite"]) < 1e-8, base
@@ -140,7 +140,7 @@ def test_bases_meme_prix_de_marche_des_actifs_et_aucune_fuite(h):
 
 def test_rebasage_conserve_les_prix_risques():
     sans_va, avec_va = courbe_eiopa("20261031"), courbe_eiopa("20261031", avec_va=True)
-    credit = spread_oat()
+    credit = spread_obligations()
     rebase = bases.credit_sur_base(credit, "avec_va")
     for u in (1, 5, 10, 30, 60):
         assert avec_va.zc(u) * math.exp(-rebase.H(u)) == pytest.approx(sans_va.zc(u) * math.exp(-credit.H(u)), rel=1e-12)

@@ -17,13 +17,14 @@ S2 = json.loads(_s2.read_text(encoding="utf-8")) if _s2.exists() else {"resultat
 _da = RACINE / "resultats" / "v5_diagnostic_profil_a.json"
 DA = json.loads(_da.read_text(encoding="utf-8")) if _da.exists() else {"resultats": {}}
 C = cv.charger()
+BI = json.loads((RACINE / "resultats" / "v5_bilans_initiaux.json").read_text(encoding="utf-8"))["profils"]
 M = json.loads((RACINE / "data" / "v5" / "conventions" / "marche_acpr.json").read_text(encoding="utf-8"))
 ST, EC, RE = D["stochastique"], D["equivalent_certain"], D["reel"]
 N = "ABC"
 REFS = ("oat_moins_2", "sans_risque", "sans_risque_demi", "taux_servi_marche", "livret_a", "figee")
 CREDITS = ("lisse_integral", "saut_integral", "decompose")
 LIB_REF = {k: C["references_assures"][k]["libelle"] for k in REFS}
-COURT_REF = {"oat_moins_2": "OAT - 2 pts", "sans_risque": "Sans risque", "sans_risque_demi": "Sans risque, 50 %",
+COURT_REF = {"oat_moins_2": "Obligations - 2 pts", "sans_risque": "Sans risque", "sans_risque_demi": "Sans risque, 50 %",
              "taux_servi_marche": "Proxy lissé sur 7 ans", "livret_a": "Livret A", "figee": "Figée"}
 COURT_K = {"lisse_integral": "Lissé intégral", "saut_integral": "Saut intégral", "decompose": "Décomposé",
            "decompose_recouvrement_63": "Décomposé, R = 63 %", "saut_bloc_unique": "Saut, bloc unique"}
@@ -71,8 +72,6 @@ A("| Thème | Valeur | Source | Statut |\n| --- | --- | --- | --- |")
 for o in M["observations"]:
     A(f"| {o['theme']} | {o['valeur']} | {o['source']} | {o['statut']} |")
 ob = C["observations"]
-A(f"| CDS France 5 ans | {pb(ob['cds_france_5_ans']['valeur'])} le 29/10/2026 (plus haut {pb(ob['cds_france_5_ans']['plus_haut_2026']['valeur'])} le 23/10) | {ob['cds_france_5_ans']['source']} | {ob['cds_france_5_ans']['statut']} |")
-A(f"| Spread OAT-Bund 10 ans | {pb(ob['spread_oat_bund_10_ans']['valeur'])} le 30/10/2026 | {ob['spread_oat_bund_10_ans']['source']} | {ob['spread_oat_bund_10_ans']['statut']} |")
 A(f"| Notation des obligations des assureurs | AAA à AA- {pct(ob['notations_des_obligations_des_assureurs']['AAA_a_AA-'], 0)}, A {pct(ob['notations_des_obligations_des_assureurs']['A+_a_A-'], 0)}, BBB {pct(ob['notations_des_obligations_des_assureurs']['BBB+_a_BBB-'], 0)} | {ob['notations_des_obligations_des_assureurs']['source']} | observé |")
 A(f"| Défauts annuels moyens (entreprises, 1981-2024) | AA {pct(ob['taux_defaut_annuel_moyen_entreprises']['AA'], 2)}, A {pct(ob['taux_defaut_annuel_moyen_entreprises']['A'], 2)}, BBB {pct(ob['taux_defaut_annuel_moyen_entreprises']['BBB'], 2)} | {ob['taux_defaut_annuel_moyen_entreprises']['source']} | observé |")
 A(f"| Décote moyenne des restructurations souveraines | {pct(ob['decote_moyenne_restructurations_souveraines']['valeur'], 0)} ({ob['decote_moyenne_restructurations_souveraines']['echantillon']}) | {ob['decote_moyenne_restructurations_souveraines']['source']} | observé |")
@@ -82,26 +81,26 @@ A("**Non consulté** : le PDF de l'ACPR n° 185 et le classeur de données des g
 
 # ------------------------------------------------------------------------------------------------
 dec = C["decomposition_spread_10_ans"]
-s10 = ob["spread_oat_sur_eiopa"]["10_ans"]
+s10 = ob["spread_obligations_sur_eiopa"]["10_ans"]
 kappa = dec["part_credit_risque_neutre"]["central"]
 elp = dec["perte_attendue_reelle_annuelle"]["central"]
 k3 = st("B", CENTRE_REF, "decompose")
 k2 = st("B", CENTRE_REF, "saut_integral")
 pd_reel = dec["probabilite_defaut_reelle_annuelle"]["valeur"]
-A("## 2. Décomposition du spread OAT : risque neutre et probabilité réelle\n")
+A("## 2. Décomposition du spread des obligations : risque neutre et probabilité réelle\n")
 A(dec["_regle"] + "\n")
 A("| Composante (10 ans) | Niveau | Mesure | Statut | Traitement |\n| --- | ---: | --- | --- | --- |")
-A(f"| Spread OAT au-dessus de la courbe EIOPA sans VA | {pb(s10)} | marché | calibré | prix de marché des obligations, inchangés dans toutes les conventions |")
+A(f"| Spread des obligations au-dessus de la courbe EIOPA sans VA | {pb(s10)} | hypothèse (moyenne de long terme publiée par l'EIOPA, notation A) | hypothèse | prix de marché des obligations, inchangés dans toutes les conventions |")
 A(f"| Perte attendue réelle | {pb(elp)} par an | réelle | calibré | seule perte constatée dans les projections en probabilité réelle |")
 A(f"| Prime de risque de crédit | {pb(kappa * s10 - elp)} | écart risque neutre - réel | hypothèse (kappa) | rémunère le risque de défaut, n'est pas de la valeur créée |")
-A(f"| Composante hors défaut (liquidité, offre, change) | {pb((1 - kappa) * s10)} | marché | hypothèse | coût risque neutre lissé dans la valorisation, prime en probabilité réelle |")
+A(f"| Composante hors défaut (liquidité, offre de titres) | {pb((1 - kappa) * s10)} | hypothèse | hypothèse | coût risque neutre lissé dans la valorisation, prime en probabilité réelle |")
 A("")
 A(f"Probabilités de défaut d'un bloc d'émetteurs : risque neutre, {pct(k3['probabilite_defaut_bloc_annee_10_rn'], 2)} par an vers 10 ans "
   f"({pct(k3['probabilite_defaut_bloc_10_ans_rn'], 1)} sur 10 ans) en convention décomposée, {pct(k2['probabilite_defaut_bloc_annee_10_rn'], 2)} par an "
   f"({pct(k2['probabilite_defaut_bloc_10_ans_rn'], 1)} sur 10 ans) si tout le spread est du crédit ; réelle, {pct(pd_reel, 3)} par an "
   f"(environ {pct(1 - (1 - pd_reel) ** 10, 1)} sur 10 ans). L'écart, d'un facteur proche de "
   f"{f(k3['probabilite_defaut_bloc_annee_10_rn'] / pd_reel, 0)}, est la prime de risque : il dépasse nettement le rapport de 2 estimé sur les souverains de la zone euro, "
-  "ce qui indique que le spread français de 2026 rémunère surtout autre chose qu'une perte attendue historique : une prime pour un risque de queue (politique et budgétaire) et une composante hors défaut. "
+  "ce qui indique que le spread retenu rémunère surtout autre chose qu'une perte attendue historique : une prime pour le risque de défaut et une composante hors défaut. "
   "Les deux probabilités ne portent pas exactement sur le même objet (la probabilité réelle est tirée des défauts d'entreprises par notation, appliqués à la composition du portefeuille de place) : seul l'ordre de grandeur compte.\n")
 A("**Pourquoi la valorisation garde tout le spread comme coût risque neutre** : sans frictions, si une partie du spread n'était pas un coût en risque neutre, un investisseur qui garde le titre jusqu'à l'échéance l'encaisserait sans risque. Ce serait une valeur actuelle nette positive à l'achat, ce que le test de non-arbitrage interdit. La décomposition ne change donc pas le prix. Elle change trois choses : la forme des pertes risque neutre (lissées ou par saut), les trajectoires en probabilité réelle (seule la perte attendue réelle y est constatée) et la vue réglementaire (une VA ou un ajustement égalisateur reconnaît une partie de la composante hors défaut, ce qui reste une convention prudentielle).\n")
 
@@ -118,7 +117,7 @@ A("")
 A("**Référence des assurés (toutes au même niveau en t = 0, "
   f"{pct(cv.niveau_initial_central(), 2)} : hypothèse de modélisation, non observée)**\n")
 A("| Code | Référence | Dynamique |\n| --- | --- | --- |")
-dyn = {"oat_moins_2": "suit la courbe à terme de l'OAT, spread à terme compris",
+dyn = {"oat_moins_2": "suit la courbe à terme des obligations du modèle, spread compris",
        "sans_risque": "suit le taux sans risque 10 ans, transmission totale et immédiate",
        "sans_risque_demi": "moitié des variations du taux sans risque 10 ans",
        "taux_servi_marche": "taux sans risque 10 ans lissé, renouvellement de 1/7 par an (proxy comportemental fictif, non observé)",
@@ -222,14 +221,32 @@ if S2["resultats"]:
     cle_c = lambda p: f"{p}|{CENTRE_REF}|{CENTRE_K}"  # noqa: E731
     A("Lecture :\n")
     A("- **Écart massif avec la place.** Ratios approchés dans la convention centrale : " + ", ".join(f"{pct(R2[cle_c(p)]['ratio_avant_impots_differes'], 0)} ({p})" for p in N)
-      + ", contre 239 % pour les organismes vie et mixtes au 30/06/2026. Même le profil C reste sous 100 %, et B, conçu pour être proche de la place sur la PPB, le taux technique et le taux servi, en est très loin en solvabilité.")
+      + ", contre 239 % pour les organismes vie et mixtes au 30/06/2026. "
+      + ("Même le profil C reste sous 100 %, et B" if R2[cle_c("C")]["ratio_avant_impots_differes"] < 1 else "B")
+      + ", conçu pour être proche de la place sur la PPB, le taux technique et le taux servi, en est très loin en solvabilité.")
     A("- **Ce qui manque au calcul et jouerait en faveur des profils** : fonds excédentaires (jusqu'à " + ", ".join(f"{f(R2[cle_c(p)]['fonds_excedentaires_borne_haute'])} pour {p}" for p in N)
       + "), absorption par les impôts différés, ajustement symétrique du choc actions. Ce qui est peut-être trop sévère : un choc de spread en notation A sur 66 % des obligations ("
       + ", ".join(f"{f(R2[cle_c(p)]['pertes_nettes']['spread'])} pour {p}" for p in N) + " de perte nette), et la règle de taux servi des V1 à V4, qui fait renoncer l'assureur à sa marge pour suivre la référence, ce qui réduit l'absorption par les FDB.")
-    A("- **Ce qui vient des profils** : à l'ouverture, l'actif en valeur de marché est inférieur à la PM et à la PPB pour A et B ; leurs moins-values obligataires (-19 % et -13 % de la VNC) et leurs fonds propres comptables (4,5 % à 6 % de la PM) sont des paramètres fictifs que la donnée de place 2026 (ACPR n° 185, non lue) permettrait de confronter.")
-    A("- **Choc de taux** : dans toutes les conventions calculées, c'est la hausse des taux qui coûte (perte nette de " + ", ".join(f"{f(R2[cle_c(p)]['pertes_nettes']['taux_hausse'])} pour {p}" for p in N)
-      + " au centre), alors que la place gagne quand les taux montent. Le même écart apparaît dans les durations de la section 4.6.")
-    A("- **Profil A** : fonds propres prudentiels négatifs dans toutes les conventions calculées ; en lecture réglementaire, ce serait un organisme à recapitaliser ou en plan de rétablissement, quelle que soit la convention de crédit ou de comportement retenue ici.\n")
+    _sous = [p for p in N if BI[p]["economique"]["total_actif"] < BI[p]["comptable"]["passif"]["pm"] + BI[p]["comptable"]["passif"]["ppb"]]
+    _fp = [BI[p]["indicateurs"]["fonds_propres_comptables_pct_pm"] for p in N]
+    A("- **Ce qui vient des profils** : à l'ouverture, " + (f"l'actif en valeur de marché est inférieur à la PM et à la PPB pour {' et '.join(_sous)} ; " if _sous else "")
+      + "les moins-values obligataires (" + ", ".join(f"{pct(BI[p]['indicateurs']['pmvl_obligations_pct_vnc'], 0)} pour {p}" for p in N)
+      + f" de la VNC) et les fonds propres comptables ({pct(min(_fp), 1)} à {pct(max(_fp), 1)} de la PM) sont des paramètres fictifs que la donnée de place 2026 (ACPR n° 185, non lue) permettrait de confronter.")
+    hausse = [k for k, x in R2.items() if x["pertes_nettes"]["taux_hausse"] >= x["pertes_nettes"]["taux_baisse"]]
+    if len(hausse) == len(R2):
+        A("- **Choc de taux** : dans toutes les conventions calculées, c'est la hausse des taux qui coûte (perte nette de " + ", ".join(f"{f(R2[cle_c(p)]['pertes_nettes']['taux_hausse'])} pour {p}" for p in N)
+          + " au centre), alors que la place gagne quand les taux montent. Le même écart apparaît dans les durations de la section 4.6.")
+    else:
+        baisse_centre = [p for p in N if R2[cle_c(p)]["pertes_nettes"]["taux_baisse"] > R2[cle_c(p)]["pertes_nettes"]["taux_hausse"]]
+        A(f"- **Choc de taux** : la hausse des taux est le choc le plus coûteux dans {len(hausse)} conventions calculées sur {len(R2)} ; au centre, perte nette en hausse et en baisse de "
+          + ", ".join(f"{f(R2[cle_c(p)]['pertes_nettes']['taux_hausse'])} et {f(R2[cle_c(p)]['pertes_nettes']['taux_baisse'])} pour {p}" for p in N)
+          + (f" : pour {' et '.join(baisse_centre)}, c'est la baisse qui coûte le plus au centre" if baisse_centre else "")
+          + ". La place, elle, gagne quand les taux montent ; l'écart de sensibilité apparaît aussi dans les durations de la section 4.6.")
+    if all(x["fonds_propres_avant_impots_differes"] < 0 for k, x in R2.items() if k.startswith("A|")):
+        A("- **Profil A** : fonds propres prudentiels négatifs dans toutes les conventions calculées ; en lecture réglementaire, ce serait un organisme à recapitaliser ou en plan de rétablissement, quelle que soit la convention de crédit ou de comportement retenue ici.\n")
+    else:
+        A("- **Profil A** : fonds propres prudentiels négatifs dans " + str(sum(x["fonds_propres_avant_impots_differes"] < 0 for k, x in R2.items() if k.startswith("A|")))
+          + " conventions calculées sur " + str(sum(k.startswith("A|") for k in R2)) + ".\n")
 
 # ------------------------------------------------------------------------------------------------
 cles = [(p, r, k, o) for p in N for (r, k, o) in [(r, k, {}) for r in REFS for k in CREDITS]]
@@ -302,7 +319,7 @@ if s2a:
     A(f"**Vue prudentielle simplifiée** (base avec VA, marge de risque, SCR approché) : fonds propres de {f(x['fonds_propres_avant_impots_differes'])}, SCR de {f(x['scr'])}, ratio approché de {pct(x['ratio_avant_impots_differes'], 0)} "
       f"(fonds excédentaires non comptés, borne haute indicative de {f(x['fonds_excedentaires_borne_haute'])}). Le ratio de place est de 239 % pour les organismes vie et mixtes au 30/06/2026.\n")
 A("**Conclusion.** Le profil A n'est pas un assureur normalement viable, et il ne faut pas le présenter ainsi. Comptablement solvable et sans besoin de capital sur une trajectoire réelle centrale, il n'a plus de coussin économique : sa valeur est proche de zéro ou négative, et il demande des apports dans une large part des scénarios risque neutre, dans les scénarios de hausse des taux et de défaut souverain. "
-  "Une partie de ce résultat est construite : ses moins-values obligataires (-19 % de la VNC) sont volontairement en haut de fourchette, et la donnée de place 2026 manque (ACPR n° 185 non lue). Une autre partie vient du modèle : en risque neutre, les produits comptables sont nets de tout le coût du spread, si bien que le taux servi et les rachats risque neutre ne sont pas des prévisions. "
+  f"Une partie de ce résultat est construite : ses moins-values obligataires ({pct(BI['A']['indicateurs']['pmvl_obligations_pct_vnc'], 0)} de la VNC) sont volontairement en haut de fourchette, et la donnée de place 2026 manque (ACPR n° 185 non lue). Une autre partie vient du modèle : en risque neutre, les produits comptables sont nets de tout le coût du spread, si bien que le taux servi et les rachats risque neutre ne sont pas des prévisions. "
   "Proposition : garder A comme profil de stress, qualifié d'**assureur fragile, au seuil de la recapitalisation**, et analyser ses stratégies sous contrainte de capital (apports, plan de redressement) plutôt que comme celles d'un assureur en régime normal.\n")
 
 # ------------------------------------------------------------------------------------------------
@@ -310,9 +327,9 @@ A("## 7. Convention centrale proposée et stress à conserver\n")
 A("**Convention centrale proposée (à valider)**\n")
 A("| Élément | Choix | Justification |\n| --- | --- | --- |")
 A("| Valorisation | Base sans VA ; VA en vue réglementaire seulement | Valeur économique sans effet réglementaire ; effet VA présenté à part (" + ", ".join(f"+{f(st(p, 'sans_risque', 'decompose', base='avec_va')['valeur'] - st(p, 'sans_risque', 'decompose')['valeur'])} pour {p}" for p in N) + ") |")
-A("| Forme des pertes de crédit | Décomposée : 80 % du spread en défaut par saut (recouvrement 40 %, bloc souverain de 26 %), 20 % en coût hors défaut lissé | Prix inchangés et absence d'arbitrage vérifiée ; forme cohérente avec un risque souverain concentré et peu probable, et avec un crédit d'entreprise diversifié ; part de crédit appuyée sur le CDS France |")
+A("| Forme des pertes de crédit | Décomposée : 80 % du spread en défaut par saut (recouvrement 40 %, bloc souverain de 26 %), 20 % en coût hors défaut lissé | Prix inchangés et absence d'arbitrage vérifiée ; forme cohérente avec un risque souverain concentré et peu probable, et avec un crédit d'entreprise diversifié ; part de crédit : hypothèse |")
 A("| Probabilité réelle | Perte attendue de 3 pb par an ; le reste du spread est une prime | Défauts historiques par notation et composition du portefeuille de place ; la prime n'est jamais comptée comme de la valeur |")
-A(f"| Référence des assurés | Proxy comportemental fictif (et non taux servi observé) : taux sans risque 10 ans lissé (1/7 par an), niveau initial {pct(cv.niveau_initial_central(), 2)} (hypothèse) | Cohérente en risque neutre (un concurrent investi dans les mêmes titres gagne le taux sans risque et renouvelle progressivement son portefeuille). Les taux servis observés bougent lentement (2,63 % en 2024 et en 2025 alors que l'OAT 10 ans moyenne passe de 3,0 % à 3,4 %). Sensibilité aux taux intermédiaire : duration du BE de {f(ec('A', CENTRE_REF)['duration_effective_be'])} à {f(ec('C', CENTRE_REF)['duration_effective_be'])} ans, contre {f(ec('A', 'sans_risque')['duration_effective_be'])} à {f(ec('C', 'sans_risque')['duration_effective_be'])} avec une transmission immédiate |")
+A(f"| Référence des assurés | Proxy comportemental fictif (et non taux servi observé) : taux sans risque 10 ans lissé (1/7 par an), niveau initial {pct(cv.niveau_initial_central(), 2)} (hypothèse) | Cohérente en risque neutre (un concurrent investi dans les mêmes titres gagne le taux sans risque et renouvelle progressivement son portefeuille). Les taux servis observés bougent lentement (2,63 % en 2024 et en 2025). Sensibilité aux taux intermédiaire : duration du BE de {f(ec('A', CENTRE_REF)['duration_effective_be'])} à {f(ec('C', CENTRE_REF)['duration_effective_be'])} ans, contre {f(ec('A', 'sans_risque')['duration_effective_be'])} à {f(ec('C', 'sans_risque')['duration_effective_be'])} avec une transmission immédiate |")
 A("| Rachat structurel | À trancher : 5 % (V1 à V4) ou 4,4 % (taux observé de 2025, identique pour les trois profils) | Effet sur la valeur stochastique dans l'erreur de Monte-Carlo (" + ", ".join(f"+{f(st(p, 'sans_risque', 'decompose', rachat_structurel=0.044)['valeur'] - st(p, 'sans_risque', 'decompose')['valeur'])} pour {p}" for p in N) + ") ; aucun calage propre au profil A |")
 A("")
 A("Valeurs dans cette convention : " + ", ".join(f"{p} {f(cen[p]['valeur'])} ± {f(cen[p]['ic_be'])} (TVOG {f(tvog(p, CENTRE_REF, CENTRE_K))}, apports dans {pct(cen[p]['part_scenarios_avec_apport'], 0)} des scénarios)" for p in N) + ".\n")
@@ -328,9 +345,10 @@ A(f"| Livret A | Référence pilotée par le taux court | Concurrence de l'épar
 A("| Spread intégralement lissé | Convention initiale | Transfert maximal des pertes de crédit aux assurés par le taux servi |")
 A(f"| Spread intégralement par saut, bloc unique | Tout le portefeuille fait défaut d'un coup | Concentration extrême (valeur de B : {f(st('B', 'sans_risque', 'saut_bloc_unique')['valeur'])} ± {f(st('B', 'sans_risque', 'saut_bloc_unique')['ic_be'])}) ; erreur de Monte-Carlo élevée, à recalculer avec plus de scénarios |")
 A("| Recouvrement 63 % | Décote souveraine moyenne de 37 % | Sensibilité au recouvrement (effet modéré) |")
-A("| Pertes effectives de 50 % du spread | Probabilité réelle, 10 ans | Assureur qui subit vraiment une partie du risque souverain : taux servi, rachats, fonds propres |")
+A("| Pertes effectives de 50 % du spread | Probabilité réelle, 10 ans | Assureur qui subit vraiment une partie du risque de crédit : taux servi, rachats, fonds propres |")
 A("| Défaut souverain déterministe | Défaut du bloc de 26 % en année 2, recouvrement 40 % (perte de 15,6 % des obligations) | Événement unique, lisible, pour comparer les stratégies (à construire) |")
-A("| Niveau initial de la référence à 2,63 % | Dernier taux servi moyen observé | Le niveau de 2,88 % est une hypothèse |")
+_niv = json.loads((RACINE / "data" / "v5" / "conventions" / "conventions.json").read_text(encoding="utf-8"))["references_assures"]["_niveau_initial"]["valeur"]
+A(f"| Niveau initial de la référence à 2,63 % | Dernier taux servi moyen observé | Le niveau de {100 * _niv:.2f} % est une hypothèse |".replace(".", ","))
 A("| Chocs de la formule standard | Taux, actions, spread, rachat massif (vue prudentielle) | Capital et absorption par les FDB |")
 A("")
 
@@ -346,9 +364,9 @@ for x in [
     f"Les fuites sont positives dans {fuites_pos} variantes sur {len(ST)} (mêmes tirages de taux et de défaut partout), toujours à l'intérieur de leur intervalle de confiance à 95 % (au plus {f(rapport_max, 2)} fois sa demi-largeur). "
     f"Les écarts de valeur entre spread lissé et spread par saut (de {f(min(ecarts))} à {f(max(ecarts))}) dépassent cette erreur ; le bloc unique demande plus de scénarios.",
     f"**Rachats risque neutre et rachats observés.** Les rachats moyens risque neutre (de {pct(min(v['taux_rachat_moyen_1_10'] for v in ST.values()), 0)} à {pct(max(v['taux_rachat_moyen_1_10'] for v in ST.values()), 0)} par an sur 10 ans selon le profil et les conventions) dépassent le taux observé de 4,4 %. Ce n'est pas une contradiction : en risque neutre, les produits comptables sont nets du coût du spread. Mais la loi de rachat dynamique (paramètres des V1 à V4) n'est calée sur aucune donnée de place, et les quartiles de rachat par organisme (ACPR n° 179) n'ont pas pu être lus.",
-    "**Part de crédit du spread (kappa = 0,8).** C'est une hypothèse : le CDS France est coté en dollars (prime de dévaluation non mesurée), sa structure par terme au-delà de 5 ans n'est pas disponible, et les dates diffèrent (CDS du 29/10, TEC du 04/11).",
-    "**Défaut par saut simplifié.** Recouvrement de 40 % (convention de cotation non vérifiée en ligne), blocs indépendants, réinvestissement immédiat dans le même portefeuille (défauts répétés possibles), ni migration de notation ni spread stochastique : la courbe de spread reste celle du 04/11/2026, sans dynamique propre.",
-    "**Un seul spread pour toutes les obligations.** Souverains, financières et entreprises partagent le spread OAT.",
+    "**Part de crédit du spread (kappa = 0,8 dans ces premières conventions, 0,7 dans la convention centrale).** C'est une hypothèse, sans recoupement avec des cotations de marché : le spread des obligations est lui-même une hypothèse. Ce n'est pas une estimation du risque de défaut des émetteurs, souverains ou entreprises : kappa répartit seulement le spread hypothétique entre une perte par défaut et une perte hors défaut.",
+    "**Défaut par saut simplifié.** Recouvrement de 40 % (convention de cotation non vérifiée en ligne), blocs indépendants, réinvestissement immédiat dans le même portefeuille (défauts répétés possibles), ni migration de notation ni spread stochastique : la courbe de spread reste figée, sans dynamique propre.",
+    "**Un seul spread pour toutes les obligations.** Souverains, financières et entreprises partagent le même spread hypothétique (notation A).",
     "**Probabilité réelle.** Taux et spreads figés, prime actions fictive de 3 % : ces trajectoires servent à la plausibilité, pas à la prévision.",
     "**Vue prudentielle.** Choc de taux appliqué à la courbe avec VA, ajustement symétrique nul, spread en notation A sur 66 % des obligations, pas de risque opérationnel, pas d'absorption par les impôts différés ni de fonds excédentaires : c'est un ordre de grandeur, pas un ratio de solvabilité.",
     "**Données de place manquantes.** ACPR n° 185 (moins-values latentes au 30/06/2026) et quartiles de rachat de l'ACPR n° 179 : les paramètres correspondants des profils restent fictifs.",

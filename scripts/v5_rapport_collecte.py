@@ -252,16 +252,27 @@ if retention_seule:
 for p in persist:
     x = VL[p]["rc_initiale_nulle_sans_retention"]
     ans = x["annees_avec_apport_ferme"]
-    txt += (f"Pour {p}, le résidu persiste ({pct(x['residu_pct_va_primes'], 2)}), presque entièrement sous forme d'apports évités ({f(x['attribution']['va_apports'], 2)}) : "
-            f"en extinction, {p} vend des obligations en moins-value (VA {f(x['pmv_obligataires_realisees_va']['ferme'], 1)}), le taux servi atteint son plancher de {pct(x['taux_servi_min_ferme'], 0)} et, la participation ne pouvant être négative, "
-            f"l'actionnaire porte les pertes au-delà de la réserve par des apports" + (f" (chaque année à partir de l'année {ans[0]})" if ans and ans == list(range(ans[0], ans[-1] + 1)) else "") + ". Les primes nouvelles financent les sorties et évitent ces ventes. "
-            f"C'est l'asymétrie du partage (plancher du taux servi) appliquée aux fortes moins-values latentes d'ouverture de {p} ({f(x['pmvl_obligations_ouverture'], 1)}) : un mécanisme contractuel du modèle, pas une fuite de valorisation. ")
+    pmv = (f"en extinction, {p} vend des obligations en moins-value (VA {f(x['pmv_obligataires_realisees_va']['ferme'], 1)}, contre "
+           f"{f(x['pmv_obligataires_realisees_va']['avec_collecte'], 1)} avec collecte)")
+    if abs(x["attribution"]["va_apports"]) >= 0.5 * abs(x["residu"]):
+        txt += (f"Pour {p}, le résidu persiste ({pct(x['residu_pct_va_primes'], 2)}), presque entièrement sous forme d'apports évités ({f(x['attribution']['va_apports'], 2)}) : "
+                f"{pmv}, le taux servi atteint son plancher de {pct(x['taux_servi_min_ferme'], 0)} et, la participation ne pouvant être négative, "
+                f"l'actionnaire porte les pertes au-delà de la réserve par des apports" + (f" (chaque année à partir de l'année {ans[0]})" if ans and ans == list(range(ans[0], ans[-1] + 1)) else "") + ". ")
+    else:
+        txt += (f"Pour {p}, le résidu persiste ({pct(x['residu_pct_va_primes'], 2)}), surtout sous forme de fonds propres finaux ({f(x['attribution']['fonds_propres_final'], 2)}) : "
+                f"{pmv} ; reportées sur l'exercice suivant, ces moins-values rendent certains résultats financiers négatifs et, la participation ne pouvant être négative, "
+                "l'actionnaire porte ces pertes : ses fonds propres comptables finissent négatifs dans le portefeuille fermé, sans apport. ")
+    txt += ("Les primes nouvelles financent les sorties et évitent ces ventes. "
+            f"C'est l'asymétrie du partage (participation jamais négative) appliquée aux moins-values latentes d'ouverture de {p}"
+            + (", les plus fortes des trois profils" if x["pmvl_obligations_ouverture"] == min(VL[q]["rc_initiale_nulle_sans_retention"]["pmvl_obligations_ouverture"] for q in N) else "")
+            + f" ({f(x['pmvl_obligations_ouverture'], 1)}) : un mécanisme contractuel du modèle, pas une fuite de valorisation. ")
 txt += "Ce test n'est pas une preuve complète de neutralité : un seul scénario, une seule intensité, sans élasticité ; le seuil de 1 % est un choix.\n"
 A(txt)
 A("**Contrôles** (`tests/test_v5_collecte.py` et ce calcul) :\n")
 A("- **cas limites** : c0 = 0 redonne exactement le portefeuille fermé, colonne par colonne, pour trois élasticités ; eta = 0 et c0 > 0 donnent C(t) = c0 x PM(t - 1) exactement, pour deux politiques de taux servi différentes (deux tests distincts) ;")
 A("- **comptabilisation** (cas cantonné) : contrats crédités au taux sans risque du scénario, sans chargement, frais, garantie ni option, sur un compte séparé ; leur valeur est nulle par construction, ce qui contrôle la comptabilisation des primes, des prestations et de l'actualisation, sans exercer le fonds mutualisé ;")
-A("- **contrat sans marge explicite dans le fonds mutualisé** (équivalent certain, sans chargement, frais, TMG ni PPB, participation de 100 %) : valeur des affaires nouvelles inférieure à 1 % de la VA des primes avant impôt (" + ", ".join(f"{pct(CE[p]['residu_pct_va_primes'], 2)} pour {p}" for p in N) + "), contre plus de 5 % pour les contrats réalistes dans le même cas déterministe (eta = 0) ; le résidu est attribué ci-dessus, et la variante sans réserve initiale ni rétention le ramène sous 0,1 % pour " + " et ".join(neutres) + " ;")
+_mr = [R["risque_neutre"][f"{p}|passive|0.06|0.0"]["marge_affaires_nouvelles"] for p in N]
+A("- **contrat sans marge explicite dans le fonds mutualisé** (équivalent certain, sans chargement, frais, TMG ni PPB, participation de 100 %) : valeur des affaires nouvelles inférieure à 1 % de la VA des primes avant impôt (" + ", ".join(f"{pct(CE[p]['residu_pct_va_primes'], 2)} pour {p}" for p in N) + "), contre " + " à ".join(pct(x, 1) for x in (min(_mr), max(_mr))) + " après impôt pour les contrats réalistes (risque neutre, c0 = 6 %, eta = 0, gestion passive) ; le résidu est attribué ci-dessus, et la variante sans réserve initiale ni rétention le ramène sous 0,1 % pour " + " et ".join(neutres) + " ;")
 A("- **absence d'arbitrage à l'actif** : sur l'équivalent certain, les primes investies au prix du marché ne créent ni ne détruisent de valeur (fuite inférieure à 1e-8), bilan équilibré chaque année ;")
 A("- **garanties** : quand le plancher de TMG du fonds est atteint exactement, la répartition de l'intérêt conserve l'intérêt décidé (test de non-régression ; une première version, corrigée depuis, créditait alors les contrats nouveaux au taux moyen, au-delà de l'intérêt décidé, dans 189 des 112 809 décisions d'un échantillon de contrôle des profils A et B, toutes pour le profil A ; les résultats ont été recalculés) ;")
 A(f"- **identité de la décomposition** : vraie par construction ; écart arithmétique maximal de {R['controles']['ecart_max_decomposition']:.0e}. Fuite moyenne au plus égale à {f(R['controles']['fuite_moyenne_max_en_demi_intervalles'], 1)} fois son demi-intervalle Monte-Carlo.\n")
@@ -407,7 +418,7 @@ for p in N:
 A("**Liquidité** (gestion passive, élasticité modérée) : " + " ; ".join(liq) + ". Les primes financent une partie des sorties et réduisent les ventes d'obligations en moins-value.\n")
 gap = {p: re_(p, "taux_servi_marge", C0C, ETAM)["ecart_taux_servi_reference_1_10"] - re_(p, "passive", C0C, ETAM)["ecart_taux_servi_reference_1_10"] for p in N}
 A("**Écart de taux servi effectivement réalisé** entre la politique de marge et la gestion passive (moyenne du fonds, années 1 à 10, élasticité modérée) : " + ", ".join(f"{f(1e4 * v, 0)} pb ({p})" for p, v in gap.items())
-  + ", bien moins que le point d'écart des cibles : la participation minimale de 85 % et les reprises de PPB limitent la baisse effective du taux servi, donc la perte de collecte.\n")
+  + ", bien moins que le point d'écart des cibles : la participation minimale (compte de participation simplifié) et les reprises de PPB limitent la baisse effective du taux servi, donc la perte de collecte.\n")
 
 # ------------------------------------------------------------------------------------------------
 A("## 8. Capital\n")

@@ -194,7 +194,11 @@ A(f"**Base commune et lecture.** Chaque stratégie reçoit l'apport qui porte so
 A("## 1. Ce que l'étude établit\n")
 A("Effet mesuré, significativité statistique et robustesse économique sont lus séparément : l'**effet mesuré** est l'écart moyen de valeur totale à la gestion passive ; il est **significatif** si son intervalle apparié à 95 % exclut zéro ; il est **important** s'il est significatif et si sa moyenne dépasse le seuil d'importance ; il est **robuste** si la borne de l'intervalle dépasse ce seuil, avec le même signe, dans toutes les configurations. "
   "Un changement de signe n'est retenu que si des écarts significatifs de signes opposés existent.\n")
-A("- **Capital à l'ouverture** : aucune stratégie n'atteint 100 % du SCR simplifié sans apport. Apport de la gestion passive [intervalle à 95 %] : "
+_couverts = sorted({q for q in N for c in K["strategies"] if K["prudentiel"][f"{q}|{c}"]["apport_0"]["indicateur_couverture_scr"] >= 1})
+A("- **Capital à l'ouverture** : " + ("aucune stratégie n'atteint 100 % du SCR simplifié sans apport" if not _couverts else
+   "sans apport, l'indicateur simplifié dépasse déjà 100 % pour " + ", ".join(
+       f"{q} ({sum(K['prudentiel'][f'{q}|{c}']['apport_0']['indicateur_couverture_scr'] >= 1 for c in K['strategies'])} stratégies sur {len(K['strategies'])})" for q in _couverts)
+   + ", dont l'apport estimé est nul") + ". Apport de la gestion passive [intervalle à 95 %] : "
   + " ; ".join(f"{p} {f(besoin(p, 'passive'))} [{f(K['capital'][f'{p}|passive']['incertitude']['1.0']['q025'])} ; {f(K['capital'][f'{p}|passive']['incertitude']['1.0']['q975'])}]" for p in N)
   + ". La collecte ne change pas ce besoin : il est calculé sur l'existant en extinction, dans la frontière des contrats (vue simplifiée, qui ne reprend pas les effets de la collecte sur les hypothèses de projection de l'existant).")
 A("- **Coût de la recapitalisation** : un apport n'est jamais un profit ; recapitaliser à 100 % coûte à l'actionnaire " + ", ".join(
@@ -203,9 +207,13 @@ v_ex = {p: rn(p, "passive")["valeur_existant"]["moyenne"] for p in N}
 A("- **Valeur de l'existant** (gestion passive, capital à 100 %) : " + ", ".join(f"{f(v)} ({p})" for p, v in v_ex.items())
   + (". " + ", ".join(p for p, v in v_ex.items() if v < 0) + " : l'existant détruit de la valeur pour l'actionnaire une fois recapitalisé." if any(v < 0 for v in v_ex.values()) else "."))
 van = {p: [rn(p, "passive", c0, eta)["valeur_affaires_nouvelles"]["moyenne"] for c0, eta in GRILLE] for p in N}
+# part de la variation d'impôt dans la valeur avant impôt des affaires nouvelles (gestion passive, collecte centrale modérée)
+part_impot = [-rn(p, "passive", C0C, ETAM)["impot_supplementaire"]["moyenne"]
+              / (rn(p, "passive", C0C, ETAM)["valeur_affaires_nouvelles"]["moyenne"] - rn(p, "passive", C0C, ETAM)["impot_supplementaire"]["moyenne"]) for p in N]
 marges = {p: [rn(p, "passive", c0, eta)["marge_affaires_nouvelles"] for c0, eta in GRILLE] for p in N}
 A("- **Valeur des affaires nouvelles** (gestion passive) : " + " ; ".join(f"{p} de {f(min(v))} à {f(max(v))}, marge de {pct(min(marges[p]))} à {pct(max(marges[p]))} de la VA des primes" for p, v in van.items())
-  + ". Elle dépend d'abord de l'intensité et de l'élasticité, qui fixent le volume collecté ; la variation d'impôt représente environ la moitié de la valeur avant impôt, bien plus que le taux nominal de l'impôt sur les sociétés, et l'origine de cet écart n'est pas isolée (une explication possible : l'impôt sur les revenus du capital retenu avec la croissance). "
+  + ". Elle dépend d'abord de l'intensité et de l'élasticité, qui fixent le volume collecté ; la variation d'impôt représente " + " à ".join(pct(v, 0) for v in (min(part_impot), max(part_impot)))
+  + " de la valeur avant impôt (collecte centrale modérée), bien plus que le taux nominal de l'impôt sur les sociétés, et l'origine de cet écart n'est pas isolée (une explication possible : l'impôt sur les revenus du capital retenu avec la croissance). "
   "C'est une valeur avant coût explicite de mobilisation du capital additionnel : une charge frictionnelle annuelle de " + " à ".join(pct(v, 1) for v in (min(SC[p]["kappa_seuil"] for p in N), max(SC[p]["kappa_seuil"] for p in N)))
   + " du SCR proxy des affaires nouvelles suffirait à l'annuler en collecte centrale (analyse de seuil, `docs/V5_COLLECTE.md`, section 8). "
   "Seule cette valeur s'interprète : sa répartition entre les flux des contrats nouveaux et la variation du BE de l'existant déplace les transferts entre générations d'assurés sans les isoler.")
@@ -216,7 +224,7 @@ A("- **Réinvestissement progressif** : " + ("écart de valeur totale à la gest
 cc = REC["capital_croissance"]
 sup = {p: [v["scr_supplementaire_proportionnel"] for v in cc[k(p, "passive")]["collecte_centrale"].values()] for p in N}
 A("- **Capital de la croissance** (ordre de grandeur, `docs/V5_COLLECTE.md`, section 8) : à SCR proportionnel à la PM, la collecte centrale demanderait à 10 ans un SCR supplémentaire de "
-  + ", ".join(f"{f(min(v))} à {f(max(v))} ({p})" for p, v in sup.items()) + " pour la gestion passive selon l'élasticité, du même ordre que l'apport d'ouverture de B et C. "
+  + ", ".join(f"{f(min(v))} à {f(max(v))} ({p})" for p, v in sup.items()) + " pour la gestion passive selon l'élasticité, à comparer à l'apport d'ouverture (" + ", ".join(f"{f(besoin(p, 'passive'))} ({p})" for p in N) + "). "
   "La politique de distribution retient en même temps des fonds propres comptables : " + ", ".join(
       f"{f(cc[k(p, 'passive')]['collecte_centrale']['moderee']['fonds_propres_10_mediane'] - cc[k(p, 'passive')]['fonds_propres_10_mediane_extinction'])} ({p})" for p in N)
   + " de plus à 10 ans (médianes, élasticité modérée, contre un SCR supplémentaire de " + ", ".join(f"{f(cc[k(p, 'passive')]['collecte_centrale']['moderee']['scr_supplementaire_proportionnel'])} ({p})" for p in N)
@@ -261,7 +269,7 @@ for p in N:
 verdicts = {p: robustesse(p, "taux_servi_marge") for p in N}
 A("\n**" + ("Pourquoi l'avantage résiste sur la grille" if all(v == "favorable, robuste" for v in verdicts.values()) else "Ce qui explique l'avantage mesuré sur la grille") + ".** Trois éléments, mesurés. "
   "(1) L'écart de taux servi effectivement réalisé entre la politique de marge et la gestion passive est faible : " + ", ".join(f"{f(1e4 * v, 0)} pb ({p})" for p, v in gap.items())
-  + " en moyenne sur 10 ans (probabilité réelle, élasticité modérée), bien moins que le point d'écart des cibles, car la participation minimale de 85 % et les reprises de PPB limitent la baisse ; la perte de collecte en est d'autant réduite. "
+  + " en moyenne sur 10 ans (probabilité réelle, élasticité modérée), bien moins que le point d'écart des cibles, car la participation minimale (compte de participation simplifié) et les reprises de PPB limitent la baisse ; la perte de collecte en est d'autant réduite. "
   "(2) La marge des affaires nouvelles est mince : " + ", ".join(f"{pct(m)} ({p})" for p, m in marges_p.items())
   + " de la VA des primes pour la gestion passive, alors que l'avantage ne serait annulé, au premier ordre, qu'avec une marge de " + ", ".join(f"{pct(s)} ({p})" for p, s in seuils_m.items()) + " sur les primes perdues. "
   "(3) La gestion passive sert elle-même 0,5 point sous la référence : avec e0 = 0, une élasticité forte lui retire aussi une grande partie de sa collecte. Ce troisième point est une conséquence du choix de e0 et de la conception de la gestion passive, pas un mécanisme indépendant.\n")
@@ -362,7 +370,7 @@ for x in [
     "**Lecture statistique** : les intervalles à 95 % sont calculés cellule par cellule, ils ne sont pas simultanés : sur l'ensemble des stratégies, profils et hypothèses, quelques écarts peuvent paraître significatifs par hasard ; « robuste » est un critère descriptif, interne à la grille testée.",
     "**Liquidité** : quantiles à 99 % estimés sur 1 000 scénarios en probabilité réelle, soit une dizaine de scénarios dans la queue, sans intervalle de confiance ; les écarts proches du seuil sont fragiles.",
     "**Mécanismes absents** : inflation et attractivité du taux servi réel, arbitrages entre fonds euros et unités de compte, migration de notation des obligations, comportement de rachat propre aux contrats nouveaux (même loi que l'existant), politique de distribution fondée sur la couverture du SCR plutôt que sur un ratio comptable ; chacun peut modifier le classement des politiques de taux servi.",
-    "**Date des données de marché** : courbe EIOPA du 31/10/2026 (marchés du 30/10) et TEC du 04/11/2026 ; l'écart de dates est assumé, non corrigé.",
+    "**Données de marché** : courbe sans risque EIOPA du 31/10/2026 (observée) ; spread des obligations hypothétique, égal à la moyenne de long terme des spreads publiée par l'EIOPA pour la notation A, et non un spread de marché observé à cette date : les niveaux de valeur et de capital en dépendent, les comparaisons de stratégies partagent le même marché.",
     ("**Vue prudentielle** : indicateurs simplifiés (base avec VA, risque opérationnel par la seule formule sur provisions, ni contrepartie, ni concentration, ni immobilier, ni change, impôts différés actifs non reconnus), pas de mesure transitoire ; ce ne sont pas des ratios réglementaires. "
      "Elle est calculée en extinction, sans les effets de la collecte sur les hypothèses de projection de l'existant ; la réserve de capitalisation suit le principe de l'article R.351-2-1 du Code des assurances sans en reproduire toutes les modalités."),
     "**Valeur des affaires nouvelles** : hors Solvabilité II, avant coût explicite de mobilisation du capital additionnel ; seuls les coûts frictionnels du capital comptable retenu (impôt et participation sur ses revenus) sont déduits ; le coût du capital immobilisé pour le SCR supplémentaire n'est mesuré que par un seuil, et aucune marge pour risques non couvrables n'est déduite.",

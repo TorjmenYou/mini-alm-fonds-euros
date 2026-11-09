@@ -138,12 +138,16 @@ def test_contrat_sans_marge_explicite_dans_le_fonds_mutualise_presque_neutre(p):
     impôt) est presque nulle, alors que celle des contrats réalistes atteint plusieurs % de la VA des primes.
     Le résidu, borné ici à 1 % de la VA des primes, vient des conventions de partage et de liquidation
     (réserve de capitalisation, revenus de la quote-part des fonds propres retenus, plus-values latentes
-    finales). Les deux termes de la décomposition, eux, ne sont pas presque nuls : un transfert entre
-    générations d'assurés les déplace en sens inverse, seule leur somme s'interprète.
+    finales). Les deux termes de la décomposition, eux, ne sont pas neutres : un transfert entre
+    générations d'assurés, qui croît avec les moins-values latentes d'ouverture, les déplace en sens
+    inverse (chacun dépasse le résidu de leur somme) ; seule leur somme s'interprète.
 
     Variante de liquidation (réserve d'ouverture reclassée en fonds propres, fonds propres comptables
-    positifs distribués chaque année) : le résidu disparaît pour B et C ; pour A, il est fait des apports
-    évités, car l'actionnaire porte au plancher du taux servi les moins-values réalisées en extinction."""
+    positifs distribués chaque année) : le résidu disparaît pour B et C ; pour A, il est fait de pertes
+    évitées à l'actionnaire. En extinction, A réalise des moins-values ; reportées sur l'exercice suivant,
+    elles rendent certains résultats financiers négatifs et, la participation ne pouvant être négative,
+    l'actionnaire les porte (par des apports, ou par des fonds propres comptables négatifs en fin de
+    projection, selon le calibrage). La collecte finance les sorties et évite ces ventes."""
     h = h_profil(p)
     h["strategie"].update(participation_minimale=1.0, plafond_ppb_pct_pm=0.0)
     h["passif"].update(chargements_encours=0.0, frais_gestion_encours=0.0, tmg=0.0)
@@ -151,7 +155,7 @@ def test_contrat_sans_marge_explicite_dans_le_fonds_mutualise_presque_neutre(p):
     i1 = indicateurs(ec(col.appliquer_collecte(h, 0.06, 0.0, frais_acquisition_prime=0.0, chargement_prime=0.0)))
     van = i1["valeur_assureur"] - i0["valeur_assureur"]
     assert abs(van) < 0.01 * i1["va_primes"]
-    assert abs(i1["va_primes_moins_be_nouveaux"]) > 0.01 * i1["va_primes"]  # les termes pris seuls ne sont pas neutres
+    assert i1["va_primes_moins_be_nouveaux"] > abs(van)  # les termes pris seuls ne sont pas neutres
     realiste = col.appliquer_collecte(h_profil(p), 0.06, 0.0)
     i2, i20 = indicateurs(ec(realiste)), indicateurs(ec(h_profil(p)))
     assert i2["valeur_assureur"] - i20["valeur_assureur"] > 0.05 * i2["va_primes"]
@@ -163,9 +167,11 @@ def test_contrat_sans_marge_explicite_dans_le_fonds_mutualise_presque_neutre(p):
     i0, i1 = indicateurs(d0), indicateurs(d1)
     van = i1["valeur_assureur"] - i0["valeur_assureur"]
     apports = lambda d: float((d["apport_assureur"] * d["deflateur"]).sum())  # noqa: E731
+    fp_final = lambda d: float(d["fonds_propres"].iloc[-1] * d["deflateur"].iloc[-1])  # noqa: E731
     if p == "A":
-        assert van > 0.005 * i1["va_primes"]
-        assert apports(d0) - apports(d1) > 0.9 * van
+        assert van > 0.001 * i1["va_primes"]
+        assert d0["pmv_obligataires_realisees"].sum() < -10 * van and d1["pmv_obligataires_realisees"].sum() > -1e-9
+        assert (apports(d0) - apports(d1)) + (fp_final(d1) - fp_final(d0)) > 0.9 * van
     else:
         assert abs(van) < 0.001 * i1["va_primes"]
 

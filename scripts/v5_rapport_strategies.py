@@ -214,6 +214,9 @@ err_interp = {}
 for cle, v in C["verification"].items():
     p, c, t = cle.split("|")
     k = cap(p, c)
+    if v["apport"] <= 1e-9 and v["indicateur_couverture_scr"] >= float(t):  # cible atteinte sans apport : pas d'interpolation
+        A(f"| {p}, {COURT[c]}, {pct(float(t), 0)} | {f(v['apport'])} | {pct(v['indicateur_couverture_scr'], 1)} | sans objet (cible atteinte sans apport) |")
+        continue
     err_interp[cle] = (v["indicateur_couverture_scr"] - float(t)) * v["scr"] / (k["pente_fonds_propres"] - float(t) * k["pente_scr"])
     A(f"| {p}, {COURT[c]}, {pct(float(t), 0)} | {f(v['apport'])} | {pct(v['indicateur_couverture_scr'], 1)} | {f(err_interp[cle])} |")
 A("")
@@ -225,7 +228,7 @@ demi_ic_min = min((cap(p, c)["incertitude"][t]["q975"] - cap(p, c)["incertitude"
 sans_apport = [(p, c) for p in N for c in CODES if x0(p, c)["indicateur_couverture_scr"] >= 1.0]
 A(("**Aucune stratégie n'atteint 100 % sans apport, pour aucun profil.** " if not sans_apport else "Stratégies à 100 % sans apport : " + ", ".join(f"{COURT[c]} ({p})" for p, c in sans_apport) + ". ")
   + f"Deux erreurs entourent les besoins d'apport. L'erreur Monte-Carlo (demi-largeur des intervalles ci-dessus) va de {f(demi_ic_min)} à {f(demi_ic)} unités. "
-  + (f"L'erreur d'interpolation atteint au plus {f(max(abs(err_interp[k]) for k in hors_a))} unité pour B et C ; elle est plus forte pour A ({f(abs(err_interp[pire]))} au plus, "
+  + (f"L'erreur d'interpolation atteint au plus {f(max(abs(err_interp[k]) for k in hors_a))} unité pour {' et '.join(sorted({k[0] for k in hors_a}))} ; elle est plus forte pour A ({f(abs(err_interp[pire]))} au plus, "
      f"pour « {COURT[pire.split('|')[1]]} »), dont la relation entre apport et indicateur n'est pas linéaire (plafond de l'absorption par les FDB, section 8). " if pire.startswith("A|")
      else f"L'erreur d'interpolation atteint au plus {f(abs(err_interp[pire]))} unité sur les points vérifiés. ")
   + f"Les apports utilisés ensuite sont les apports interpolés, non corrigés, pour garder une règle identique pour toutes les stratégies. Ces erreurs pèsent peu sur la valeur : le coût net de portage de la gestion passive est d'environ {f(cout_unitaire, 2)} par unité d'apport pour A (section 2.1), soit moins de {f(cout_unitaire * max(abs(e) for e in err_interp.values()), 1)} de valeur nette pour l'erreur d'interpolation la plus forte. "
@@ -401,7 +404,7 @@ A("- **Politique compétitive** : la PPB est consommée tôt ; quand la référe
   + " ; le plancher ne limite que les reprises volontaires, et la reprise obligatoire des dotations de plus de 8 ans fait ensuite fortement baisser le stock"
   + (f" ({pct(_m('taux_servi_competitif_preservant', 8)['ppb_pm'], 2)} à l'année 8)" if "B|taux_servi_competitif_preservant" in M["resultats"] else "")
   + ", ce qui borne l'effet de la variante (section 5).")
-A("- **Repositionnement** : vente au prix de marché, mais la moins-value réalisée passe par la réserve de capitalisation puis par le résultat, tandis que les coupons plus élevés rachetés ensuite reviennent pour au moins 85 % aux assurés : l'actionnaire supporte la perte et partage le gain.")
+A("- **Repositionnement** : vente au prix de marché, mais la moins-value réalisée passe par la réserve de capitalisation puis par le résultat, tandis que les coupons plus élevés rachetés ensuite reviennent pour au moins 85 % de leur quote-part aux assurés : l'actionnaire supporte la perte et partage le gain.")
 A("- **Liquidité défensive** : en risque neutre, moins de volatilité réduit le coût des options (garantie et asymétrie de la participation) ; en probabilité réelle, la prime actions fictive est perdue.")
 A("- **Rétention de capital** : plus de fonds propres conservés, donc moins d'apports ultérieurs, mais davantage d'impôt sur leurs revenus et un rendement comptable plus élevé partagé avec les assurés (section 1.4).")
 xa, xc, xm = x0("A"), x0("A", "taux_servi_competitif"), x0("A", "taux_servi_marge")

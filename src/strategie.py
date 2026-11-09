@@ -36,7 +36,23 @@ class PPB:
         self.generations = self.generations[1:] + [dotation]
 
 
-def decider_taux_servi(produits_financiers, pm, ppb, pvl_actions, taux_attendu, h, part_provisions=1.0):
+def participation_technique(resultat_technique, solde_debiteur_anterieur, part_assureur):
+    """Composante technique du compte de participation aux résultats (V5.1).
+
+    Lecture simplifiée de l'article A.132-11, I, du code des assurances, pour des contrats d'épargne
+    des catégories 4 et 5 (aucune prime des catégories 3 et 6, donc pas de seuil de 4,5 % des primes) :
+    - solde technique = chargements prélevés (sur encours et sur primes) - frais de gestion et
+      d'acquisition ; le modèle n'a ni résultat de mortalité (le décès verse la PM) ni réassurance ;
+    - solde créditeur : l'assureur en garde part_assureur (10 %), le reste entre au compte ;
+    - solde débiteur : il entre en totalité au débit du compte ;
+    - le solde débiteur du compte de l'exercice précédent est porté au débit.
+    Renvoie la contribution au compte (positive ou négative), avant le solde financier.
+    """
+    return (1 - part_assureur) * max(resultat_technique, 0.0) + min(resultat_technique, 0.0) - solde_debiteur_anterieur
+
+
+def decider_taux_servi(produits_financiers, pm, ppb, pvl_actions, taux_attendu, h, part_provisions=1.0,
+                       contribution_technique=None):
     """Fixe le taux servi de l'année et les mouvements de PPB.
 
     Raisonnement en intérêts « bruts de chargements » : l'assureur crédite
@@ -56,6 +72,14 @@ def decider_taux_servi(produits_financiers, pm, ppb, pvl_actions, taux_attendu, 
        réalisation de plus-values actions, abandon d'une partie de la marge de
        l'assureur.
     4. Le taux servi ne descend jamais sous le TMG : l'assureur paie la différence.
+    5. contribution_technique (V5.1 ; None, comportement des V1 à V5.0, par défaut) : composante technique
+       du compte de participation (voir participation_technique). Le compte de l'exercice vaut 85 % de la
+       quote-part des produits financiers, plus-values actions réalisées comprises, plus cette composante.
+       La participation de l'exercice (intérêts crédités, TMG compris, plus dotation à la PPB, moins reprises
+       de PPB, qui redistribuent des participations antérieures) ne peut pas lui être inférieure (art.
+       A.132-12). Le manque éventuel (« complement_reglementaire ») sert d'abord le taux cible s'il n'est
+       pas atteint, puis remplace des reprises volontaires de PPB, puis est doté à la PPB (dans la limite du
+       plafond, au-delà servi). Un compte débiteur est renvoyé (« solde_debiteur ») pour être reporté.
     """
     p, s = h["passif"], h["strategie"]
     chg = p["chargements_encours"]
@@ -64,7 +88,8 @@ def decider_taux_servi(produits_financiers, pm, ppb, pvl_actions, taux_attendu, 
         # Plus aucun contrat : rien à créditer. La PPB restante est versée à
         # l'extinction du portefeuille (voir projection.projeter).
         return {"taux_cible": taux_cible, "taux_servi": 0.0, "interets_bruts": 0.0, "reprise_ppb": 0.0,
-                "dotation_ppb": 0.0, "pv_actions_realisees": 0.0, "abandon_marge": 0.0, "complement_tmg": 0.0}
+                "dotation_ppb": 0.0, "pv_actions_realisees": 0.0, "abandon_marge": 0.0, "complement_tmg": 0.0,
+                "pb_minimale": 0.0, "solde_debiteur": 0.0, "complement_reglementaire": 0.0}
     besoin = (taux_cible + chg) * pm
 
     reprise_obligatoire = ppb.reprise_obligatoire()
@@ -116,6 +141,27 @@ def decider_taux_servi(produits_financiers, pm, ppb, pvl_actions, taux_attendu, 
         complement_tmg = max(plancher - interets, 0.0)
         interets += complement_tmg
 
+    # 5. Compte de participation de l'exercice (V5.1) : plancher de la participation de l'exercice
+    solde_debiteur, complement_reglementaire = 0.0, 0.0
+    if contribution_technique is not None:
+        compte = taux_pb * max(produits_financiers + pv_realisees, 0.0) + contribution_technique
+        solde_debiteur = max(-compte, 0.0)
+        pb_minimale = max(compte, 0.0)
+        manque = pb_minimale - (interets - reprise + dotation)
+        if manque > 1e-12:
+            complement_reglementaire = manque
+            vers_cible = min(manque, max(besoin - interets, 0.0))
+            interets += vers_cible
+            manque -= vers_cible
+            moins_de_reprise = min(manque, reprise - reprise_obligatoire)
+            reprise -= moins_de_reprise
+            manque -= moins_de_reprise
+            if manque > 0:
+                stock_apres = ppb.stock - reprise + dotation + manque
+                servi = min(manque, max(stock_apres - s["plafond_ppb_pct_pm"] * pm, 0.0))
+                dotation += manque - servi
+                interets += servi
+
     taux_servi = interets / pm - chg if pm > 0 else 0.0
     return {
         "taux_cible": taux_cible,
@@ -126,4 +172,7 @@ def decider_taux_servi(produits_financiers, pm, ppb, pvl_actions, taux_attendu, 
         "pv_actions_realisees": pv_realisees,
         "abandon_marge": abandon_marge,
         "complement_tmg": complement_tmg,
+        "pb_minimale": pb_minimale,
+        "solde_debiteur": solde_debiteur,
+        "complement_reglementaire": complement_reglementaire,
     }

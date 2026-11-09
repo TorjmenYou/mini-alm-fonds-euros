@@ -4,7 +4,7 @@
     "e0": {
       "valeur": 0.0,
       "statut": "fictif",
-      "note": "un assureur qui sert le taux du marché collecte c0 x PM ; la référence des assurés vaut 2,88 % en t = 0 (hypothèse : taux servis attendus pour 2026), le taux servi moyen observé de 2025 est de 2,63 % (ACPR n° 180) ; c0 est dérivé des flux d'un marché qui sert, par définition, le taux du marché, d'où e0 = 0 au centre ; sensibilité e0 = -0,5 point"
+      "note": "un assureur qui sert le taux du marché collecte c0 x PM ; la référence des assurés vaut 2,85 % en t = 0 (hypothèse : milieu des taux servis attendus pour 2026), le taux servi moyen observé de 2025 est de 2,63 % (ACPR n° 180) ; c0 est dérivé des flux d'un marché qui sert, par définition, le taux du marché, d'où e0 = 0 au centre ; sensibilité e0 = -0,5 point"
     },
     "zone_neutre": {
       "valeur": 0.0,

@@ -1,384 +1,333 @@
 {
- "tec_vers_zero": {
-  "1": {
-   "tec": 0.0364,
-   "zero_bootstrap": 0.03639999999999999,
-   "spread_modele": 0.00354739,
-   "spread_bootstrap": 0.004855458377974093,
-   "ecart_pb": 13.080683779740928
-  },
-  "2": {
-   "tec": 0.0364,
-   "zero_bootstrap": 0.03639999999999999,
-   "spread_modele": 0.00354739,
-   "spread_bootstrap": 0.003547388369599773,
-   "ecart_pb": -1.6304002271524953e-05
-  },
-  "3": {
-   "tec": 0.038400000000000004,
-   "zero_bootstrap": 0.03847799435432808,
-   "spread_modele": 0.00542317,
-   "spread_bootstrap": 0.00535675022591358,
-   "ecart_pb": -0.6641977408641981
-  },
-  "5": {
-   "tec": 0.0424,
-   "zero_bootstrap": 0.042736383132541356,
-   "spread_modele": 0.00917473,
-   "spread_bootstrap": 0.009497378513522989,
-   "ecart_pb": 3.2264851352298805
-  },
-  "7": {
-   "tec": 0.04496,
-   "zero_bootstrap": 0.04553892471495624,
-   "spread_modele": 0.011390802,
-   "spread_bootstrap": 0.012065279773322106,
-   "ecart_pb": 6.744777733221057
-  },
-  "10": {
-   "tec": 0.0488,
-   "zero_bootstrap": 0.050037012312157625,
-   "spread_modele": 0.01471491,
-   "spread_bootstrap": 0.015893665134300128,
-   "ecart_pb": 11.787551343001283
-  },
-  "15": {
-   "tec": 0.0517,
-   "zero_bootstrap": 0.05360544078460516,
-   "spread_modele": 0.01695378,
-   "spread_bootstrap": 0.01876391716915663,
-   "ecart_pb": 18.101371691566296
-  },
-  "20": {
-   "tec": 0.053,
-   "zero_bootstrap": 0.05525024676428658,
-   "spread_modele": 0.01864375,
-   "spread_bootstrap": 0.020778461261720185,
-   "ecart_pb": 21.347112617201848
-  },
-  "30": {
-   "tec": 0.0541,
-   "zero_bootstrap": 0.05676202431907518,
-   "spread_modele": 0.02023949,
-   "spread_bootstrap": 0.022761710118583973,
-   "ecart_pb": 25.222201185839747
-  }
+ "spread": {
+  "1": 0.00806089,
+  "2": 0.00805039,
+  "3": 0.00865978,
+  "5": 0.0105437,
+  "7": 0.01187434,
+  "10": 0.01258355,
+  "15": 0.01275942,
+  "20": 0.01276518,
+  "30": 0.01277218
+ },
+ "eiopa_zc": {
+  "1": 0.031379999999999963,
+  "2": 0.032729999999999926,
+  "3": 0.032929999999999904,
+  "5": 0.03288000000000002,
+  "7": 0.03299999999999992,
+  "10": 0.033479999999999954,
+  "15": 0.03401999999999994,
+  "20": 0.03354999999999997,
+  "30": 0.03298000000000001
  },
  "intensites": {
   "kappa=0.7|R=0.4": {
    "1": {
-    "H": 0.00354739,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.002483173,
-    "increment_hors_defaut": 0.0010642170000000001,
-    "pd_annuelle": 0.0041334874604633445,
-    "pd_cumulee": 0.004133487460463381
+    "H": 0.00806089,
+    "increment_total": 0.00806089,
+    "increment_credit": 0.005642622999999999,
+    "increment_hors_defaut": 0.002418267,
+    "pd_annuelle": 0.009377888839017245,
+    "pd_cumulee": 0.009377888839017245
    },
    "2": {
-    "H": 0.00709478,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.002483173,
-    "increment_hors_defaut": 0.0010642170000000001,
-    "pd_annuelle": 0.0041334874604633445,
-    "pd_cumulee": 0.008249889202340932
+    "H": 0.01610078,
+    "increment_total": 0.00803989,
+    "increment_credit": 0.005627922999999999,
+    "increment_hors_defaut": 0.002411967,
+    "pd_annuelle": 0.00935352651492046,
+    "pd_cumulee": 0.018643699022028004
    },
    "3": {
-    "H": 0.01607025,
-    "increment_total": 0.008975470000000001,
-    "increment_credit": 0.006282829,
-    "increment_hors_defaut": 0.002692641000000001,
-    "pd_annuelle": 0.010438555499507712,
-    "pd_cumulee": 0.018602327775545158
+    "H": 0.025979340000000004,
+    "increment_total": 0.009878560000000005,
+    "increment_credit": 0.006914992000000003,
+    "increment_hors_defaut": 0.0029635680000000024,
+    "pd_annuelle": 0.011485230761403842,
+    "pd_cumulee": 0.029914802597917678
    },
    "5": {
-    "H": 0.0474869,
-    "increment_total": 0.017944739999999997,
-    "increment_credit": 0.012561317999999997,
-    "increment_hors_defaut": 0.0053834220000000006,
-    "pd_annuelle": 0.02080458990855294,
-    "pd_cumulee": 0.05405285318075781
+    "H": 0.0527185,
+    "increment_total": 0.01485566,
+    "increment_credit": 0.010398962,
+    "increment_hors_defaut": 0.004456698,
+    "pd_annuelle": 0.0172417995493838,
+    "pd_cumulee": 0.05980344603946586
    },
    "7": {
-    "H": 0.08445696,
-    "increment_total": 0.019691399999999998,
-    "increment_credit": 0.013783979999999998,
-    "increment_hors_defaut": 0.00590742,
-    "pd_annuelle": 0.02281569322671003,
-    "pd_cumulee": 0.0941568052803311
+    "H": 0.08312038000000001,
+    "increment_total": 0.015162640000000019,
+    "increment_credit": 0.010613848000000013,
+    "increment_hors_defaut": 0.004548792000000006,
+    "pd_annuelle": 0.017596199782191256,
+    "pd_cumulee": 0.09268177940183442
    },
    "10": {
-    "H": 0.1589367,
-    "increment_total": 0.02756486999999999,
-    "increment_credit": 0.019295408999999993,
-    "increment_hors_defaut": 0.008269460999999999,
-    "pd_annuelle": 0.03185074027266144,
-    "pd_cumulee": 0.16997249915708867
+    "H": 0.12583550000000002,
+    "increment_total": 0.014859650000000016,
+    "increment_credit": 0.01040175500000001,
+    "increment_hors_defaut": 0.004457895000000005,
+    "pd_annuelle": 0.017246406386604206,
+    "pd_cumulee": 0.13693338275663713
    },
    "15": {
-    "H": 0.2814588,
-    "increment_total": 0.028602280000000035,
-    "increment_credit": 0.020021596000000023,
-    "increment_hors_defaut": 0.008580684000000012,
-    "pd_annuelle": 0.033037491392031715,
-    "pd_cumulee": 0.28113225394853947
+    "H": 0.19139130000000001,
+    "increment_total": 0.01275424,
+    "increment_credit": 0.008927968,
+    "increment_hors_defaut": 0.0038262720000000004,
+    "pd_annuelle": 0.014813720059050536,
+    "pd_cumulee": 0.20066984750293615
    },
    "20": {
-    "H": 0.41556919999999997,
-    "increment_total": 0.029563490000000026,
-    "increment_credit": 0.020694443000000017,
-    "increment_hors_defaut": 0.008869047000000008,
-    "pd_annuelle": 0.03413630417383092,
-    "pd_cumulee": 0.38586459181261645
+    "H": 0.25530359999999996,
+    "increment_total": 0.012793109999999969,
+    "increment_credit": 0.008955176999999977,
+    "increment_hors_defaut": 0.0038379329999999913,
+    "pd_annuelle": 0.014858664714422395,
+    "pd_cumulee": 0.2582696521291271
    },
    "30": {
-    "H": 0.6828513,
-    "increment_total": 0.029123150000000098,
-    "increment_credit": 0.020386205000000067,
-    "increment_hors_defaut": 0.00873694500000003,
-    "pd_annuelle": 0.03363301871809073,
-    "pd_cumulee": 0.5512762659226937
+    "H": 0.3831654,
+    "increment_total": 0.01278290999999998,
+    "increment_credit": 0.008948036999999985,
+    "increment_hors_defaut": 0.0038348729999999956,
+    "pd_annuelle": 0.014846870763184177,
+    "pd_cumulee": 0.36134430089337044
    }
   },
   "kappa=0.55|R=0.4": {
    "1": {
-    "H": 0.00354739,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.0019510645000000001,
-    "increment_hors_defaut": 0.0015963255,
-    "pd_annuelle": 0.0032486040181539666,
-    "pd_cumulee": 0.0032486040181539666
+    "H": 0.00806089,
+    "increment_total": 0.00806089,
+    "increment_credit": 0.0044334895,
+    "increment_hors_defaut": 0.003627400499999999,
+    "pd_annuelle": 0.007372793488880462,
+    "pd_cumulee": 0.007372793488880425
    },
    "2": {
-    "H": 0.00709478,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.0019510645000000001,
-    "increment_hors_defaut": 0.0015963255,
-    "pd_annuelle": 0.0032486040181539666,
-    "pd_cumulee": 0.00648665460824116
+    "H": 0.01610078,
+    "increment_total": 0.00803989,
+    "increment_credit": 0.0044219395,
+    "increment_hors_defaut": 0.003617950499999999,
+    "pd_annuelle": 0.007353628533967964,
+    "pd_cumulee": 0.014672205238273506
    },
    "3": {
-    "H": 0.01607025,
-    "increment_total": 0.008975470000000001,
-    "increment_credit": 0.004936508500000001,
-    "increment_hors_defaut": 0.0040389615,
-    "pd_annuelle": 0.008207239944866829,
-    "pd_cumulee": 0.014640657022298664
+    "H": 0.025979340000000004,
+    "increment_total": 0.009878560000000005,
+    "increment_credit": 0.005433208000000004,
+    "increment_hors_defaut": 0.004445352000000001,
+    "pd_annuelle": 0.009030791367168334,
+    "pd_cumulee": 0.023570494981038692
    },
    "5": {
-    "H": 0.0474869,
-    "increment_total": 0.017944739999999997,
-    "increment_credit": 0.009869606999999999,
-    "increment_hors_defaut": 0.008075132999999998,
-    "pd_annuelle": 0.016368437109858063,
-    "pd_cumulee": 0.04269448650188956
+    "H": 0.0527185,
+    "increment_total": 0.01485566,
+    "increment_credit": 0.008170613,
+    "increment_hors_defaut": 0.0066850469999999995,
+    "pd_annuelle": 0.013562207110698887,
+    "pd_cumulee": 0.047271016915576336
    },
    "7": {
-    "H": 0.08445696,
-    "increment_total": 0.019691399999999998,
-    "increment_credit": 0.01083027,
-    "increment_hors_defaut": 0.008861129999999998,
-    "pd_annuelle": 0.01795305629358257,
-    "pd_cumulee": 0.07470084596275017
+    "H": 0.08312038000000001,
+    "increment_total": 0.015162640000000019,
+    "increment_credit": 0.008339452000000011,
+    "increment_hors_defaut": 0.006823188000000008,
+    "pd_annuelle": 0.01384129205367161,
+    "pd_cumulee": 0.07352791425115679
    },
    "10": {
-    "H": 0.1589367,
-    "increment_total": 0.02756486999999999,
-    "increment_credit": 0.015160678499999997,
-    "increment_hors_defaut": 0.012404191499999995,
-    "pd_annuelle": 0.02507722331633766,
-    "pd_cumulee": 0.13603918786847147
+    "H": 0.12583550000000002,
+    "increment_total": 0.014859650000000016,
+    "increment_credit": 0.008172807500000009,
+    "increment_hors_defaut": 0.006686842500000007,
+    "pd_annuelle": 0.013565834844454876,
+    "pd_cumulee": 0.10919510137643584
    },
    "15": {
-    "H": 0.2814588,
-    "increment_total": 0.028602280000000035,
-    "increment_credit": 0.01573125400000002,
-    "increment_hors_defaut": 0.012871026000000015,
-    "pd_annuelle": 0.02601360686961115,
-    "pd_cumulee": 0.22822035241093763
+    "H": 0.19139130000000001,
+    "increment_total": 0.01275424,
+    "increment_credit": 0.007014832,
+    "increment_hors_defaut": 0.005739408,
+    "pd_annuelle": 0.01165047582679361,
+    "pd_cumulee": 0.16127144487059042
    },
    "20": {
-    "H": 0.41556919999999997,
-    "increment_total": 0.029563490000000026,
-    "increment_credit": 0.016259919500000015,
-    "increment_hors_defaut": 0.01330357050000001,
-    "pd_annuelle": 0.026880734309418508,
-    "pd_cumulee": 0.31791840920505254
+    "H": 0.25530359999999996,
+    "increment_total": 0.012793109999999969,
+    "increment_credit": 0.0070362104999999835,
+    "increment_hors_defaut": 0.005756899499999985,
+    "pd_annuelle": 0.011685857212227665,
+    "pd_cumulee": 0.20910691359280065
    },
    "30": {
-    "H": 0.6828513,
-    "increment_total": 0.029123150000000098,
-    "increment_credit": 0.016017732500000055,
-    "increment_hors_defaut": 0.013105417500000043,
-    "pd_annuelle": 0.026483551379489028,
-    "pd_cumulee": 0.46678597191178295
+    "H": 0.3831654,
+    "increment_total": 0.01278290999999998,
+    "increment_credit": 0.00703060049999999,
+    "increment_hors_defaut": 0.005752309499999991,
+    "pd_annuelle": 0.011676572743843743,
+    "pd_cumulee": 0.2967728980137436
    }
   },
   "kappa=1.0|R=0.4": {
    "1": {
-    "H": 0.00354739,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.00354739,
+    "H": 0.00806089,
+    "increment_total": 0.00806089,
+    "increment_credit": 0.00806089,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.005901842409242372,
-    "pd_cumulee": 0.005901842409242408
+    "pd_annuelle": 0.013380813578743878,
+    "pd_cumulee": 0.013380813578743878
    },
    "2": {
-    "H": 0.00709478,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.00354739,
+    "H": 0.01610078,
+    "increment_total": 0.00803989,
+    "increment_credit": 0.00803989,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.005901842409242372,
-    "pd_cumulee": 0.011768853074661245
+    "pd_annuelle": 0.013346094211276935,
+    "pd_cumulee": 0.02654832619137537
    },
    "3": {
-    "H": 0.01607025,
-    "increment_total": 0.008975470000000001,
-    "increment_credit": 0.008975470000000001,
+    "H": 0.025979340000000004,
+    "increment_total": 0.009878560000000005,
+    "increment_credit": 0.009878560000000005,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.014892184514096279,
-    "pd_cumulee": 0.026485773657250355
+    "pd_annuelle": 0.01638321216376674,
+    "pd_cumulee": 0.04249659149455587
    },
    "5": {
-    "H": 0.0474869,
-    "increment_total": 0.017944739999999997,
-    "increment_credit": 0.017944739999999997,
+    "H": 0.0527185,
+    "increment_total": 0.01485566,
+    "increment_credit": 0.01485566,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.029641153205711517,
-    "pd_cumulee": 0.07641020634727125
+    "pd_annuelle": 0.02457643179525441,
+    "pd_cumulee": 0.08441721352975118
    },
    "7": {
-    "H": 0.08445696,
-    "increment_total": 0.019691399999999998,
-    "increment_credit": 0.019691399999999998,
+    "H": 0.08312038000000001,
+    "increment_total": 0.015162640000000019,
+    "increment_credit": 0.015162640000000019,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.03249798450626673,
-    "pd_cumulee": 0.13193693648071925
+    "pd_annuelle": 0.025080443290872816,
+    "pd_cumulee": 0.1298799686459069
    },
    "10": {
-    "H": 0.1589367,
-    "increment_total": 0.02756486999999999,
-    "increment_credit": 0.02756486999999999,
+    "H": 0.12583550000000002,
+    "increment_total": 0.014859650000000016,
+    "increment_credit": 0.014859650000000016,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.04531404296710377,
-    "pd_cumulee": 0.23408174063758758
+    "pd_annuelle": 0.024582983722220564,
+    "pd_cumulee": 0.1899489800072518
    },
    "15": {
-    "H": 0.2814588,
-    "increment_total": 0.028602280000000035,
-    "increment_credit": 0.028602280000000035,
+    "H": 0.19139130000000001,
+    "increment_total": 0.01275424,
+    "increment_credit": 0.01275424,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.04699517822841781,
-    "pd_cumulee": 0.3766242409522761
+    "pd_annuelle": 0.02112208228550831,
+    "pd_cumulee": 0.27414204337728465
    },
    "20": {
-    "H": 0.41556919999999997,
-    "increment_total": 0.029563490000000026,
-    "increment_credit": 0.029563490000000026,
+    "H": 0.25530359999999996,
+    "increment_total": 0.012793109999999969,
+    "increment_credit": 0.012793109999999969,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.048551274672278454,
-    "pd_cumulee": 0.5025085083295511
+    "pd_annuelle": 0.021186043360411633,
+    "pd_cumulee": 0.34778424582791245
    },
    "30": {
-    "H": 0.6828513,
-    "increment_total": 0.029123150000000098,
-    "increment_credit": 0.029123150000000098,
+    "H": 0.3831654,
+    "increment_total": 0.01278290999999998,
+    "increment_credit": 0.01278290999999998,
     "increment_hors_defaut": 0.0,
-    "pd_annuelle": 0.04783859684180547,
-    "pd_cumulee": 0.6826377815376162
+    "pd_annuelle": 0.021169259372455694,
+    "pd_cumulee": 0.47344539874214375
    }
   },
   "kappa=0.7|R=0.63": {
    "1": {
-    "H": 0.00354739,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.002483173,
-    "increment_hors_defaut": 0.0010642170000000001,
-    "pd_annuelle": 0.0067029526385892066,
-    "pd_cumulee": 0.006702952638589221
+    "H": 0.00806089,
+    "increment_total": 0.00806089,
+    "increment_credit": 0.005642622999999999,
+    "increment_hors_defaut": 0.002418267,
+    "pd_annuelle": 0.015207387306514452,
+    "pd_cumulee": 0.015207387306514497
    },
    "2": {
-    "H": 0.00709478,
-    "increment_total": 0.00354739,
-    "increment_credit": 0.002483173,
-    "increment_hors_defaut": 0.0010642170000000001,
-    "pd_annuelle": 0.0067029526385892066,
-    "pd_cumulee": 0.01336097570310324
+    "H": 0.01610078,
+    "increment_total": 0.00803989,
+    "increment_credit": 0.005627922999999999,
+    "increment_hors_defaut": 0.002411967,
+    "pd_annuelle": 0.01516788083500615,
+    "pd_cumulee": 0.030144604303043665
    },
    "3": {
-    "H": 0.01607025,
-    "increment_total": 0.008975470000000001,
-    "increment_credit": 0.006282829,
-    "increment_hors_defaut": 0.002692641000000001,
-    "pd_annuelle": 0.01692738729649899,
-    "pd_cumulee": 0.030062196589216716
+    "H": 0.025979340000000004,
+    "increment_total": 0.009878560000000005,
+    "increment_credit": 0.006914992000000003,
+    "increment_hors_defaut": 0.0029635680000000024,
+    "pd_annuelle": 0.01862469853200623,
+    "pd_cumulee": 0.04820786866753912
    },
    "5": {
-    "H": 0.0474869,
-    "increment_total": 0.017944739999999997,
-    "increment_credit": 0.012561317999999997,
-    "increment_hors_defaut": 0.0053834220000000006,
-    "pd_annuelle": 0.033737172824680445,
-    "pd_cumulee": 0.08656004417847951
+    "H": 0.0527185,
+    "increment_total": 0.01485566,
+    "increment_credit": 0.010398962,
+    "increment_hors_defaut": 0.004456698,
+    "pd_annuelle": 0.0279596749449467,
+    "pd_cumulee": 0.09553357332858459
    },
    "7": {
-    "H": 0.08445696,
-    "increment_total": 0.019691399999999998,
-    "increment_credit": 0.013783979999999998,
-    "increment_hors_defaut": 0.00590742,
-    "pd_annuelle": 0.03699842144871897,
-    "pd_cumulee": 0.148937683295032
+    "H": 0.08312038000000001,
+    "increment_total": 0.015162640000000019,
+    "increment_credit": 0.010613848000000013,
+    "increment_hors_defaut": 0.004548792000000006,
+    "pd_annuelle": 0.028534378025175007,
+    "pd_cumulee": 0.14653990735611622
    },
    "10": {
-    "H": 0.1589367,
-    "increment_total": 0.02756486999999999,
-    "increment_credit": 0.019295408999999993,
-    "increment_hors_defaut": 0.008269460999999999,
-    "pd_annuelle": 0.05164984909080233,
-    "pd_cumulee": 0.26238601562990094
+    "H": 0.12583550000000002,
+    "increment_total": 0.014859650000000016,
+    "increment_credit": 0.01040175500000001,
+    "increment_hors_defaut": 0.004457895000000005,
+    "pd_annuelle": 0.0279671454917906,
+    "pd_cumulee": 0.2133450934066946
    },
    "15": {
-    "H": 0.2814588,
-    "increment_total": 0.028602280000000035,
-    "increment_credit": 0.020021596000000023,
-    "increment_hors_defaut": 0.008580684000000012,
-    "pd_annuelle": 0.05357431036545684,
-    "pd_cumulee": 0.41704868509408355
+    "H": 0.19139130000000001,
+    "increment_total": 0.01275424,
+    "increment_credit": 0.008927968,
+    "increment_hors_defaut": 0.0038262720000000004,
+    "pd_annuelle": 0.024022248744406272,
+    "pd_cumulee": 0.30578534236463006
    },
    "20": {
-    "H": 0.41556919999999997,
-    "increment_total": 0.029563490000000026,
-    "increment_credit": 0.020694443000000017,
-    "increment_hors_defaut": 0.008869047000000008,
-    "pd_annuelle": 0.055356168930536624,
-    "pd_cumulee": 0.5495783765107727
+    "H": 0.25530359999999996,
+    "increment_total": 0.012793109999999969,
+    "increment_credit": 0.008955176999999977,
+    "increment_hors_defaut": 0.0038379329999999913,
+    "pd_annuelle": 0.024095131969333612,
+    "pd_cumulee": 0.38542394805270286
    },
    "30": {
-    "H": 0.6828513,
-    "increment_total": 0.029123150000000098,
-    "increment_credit": 0.020386205000000067,
-    "increment_hors_defaut": 0.00873694500000003,
-    "pd_annuelle": 0.054540030353660646,
-    "pd_cumulee": 0.7305968295188774
+    "H": 0.3831654,
+    "increment_total": 0.01278290999999998,
+    "increment_credit": 0.008948036999999985,
+    "increment_hors_defaut": 0.0038348729999999956,
+    "pd_annuelle": 0.024076006643001368,
+    "pd_cumulee": 0.5183757987614241
    }
   }
  },
- "cds": {
-  "cds_5_ans": 0.00912,
-  "intensite_triangle_R40": 0.0152,
-  "pd_cumulee_5_ans_triangle": 0.07318379344061776,
-  "pd_cumulee_5_ans_modele_kappa_1": 0.07641020634727125,
-  "pd_cumulee_5_ans_modele_kappa_central": 0.05405285318075781,
-  "spread_5_ans": 0.00949738
- },
  "risque_neutre_et_reel": {
-  "pd_rn_annuelle_annee_10": 0.03185074027266144,
-  "pd_rn_moyenne_10_ans": 0.01845718530385687,
-  "pd_rn_moyenne_spot_10_ans": 0.018542615,
+  "pd_rn_annuelle_annee_10": 0.017246406386604206,
+  "pd_rn_moyenne_10_ans": 0.014618437599697165,
+  "pd_rn_moyenne_spot_10_ans": 0.014680808333333333,
   "pd_reelle_annuelle": 0.00061,
   "pd_reelle_cumulee_10_ans": 0.006083282708664983,
-  "perte_rn_annuelle_spot_10_ans": 0.011125568999999998,
+  "perte_rn_annuelle_spot_10_ans": 0.008808485,
   "perte_reelle_annuelle": 0.000305,
-  "rapport_pd_moyennes": 30.25768082599487,
+  "rapport_pd_moyennes": 23.96465180278224,
   "rapport_publie_zone_euro": 2.0
  },
  "blocs": {
@@ -386,7 +335,7 @@
    "nombre": 21,
    "poids_max": 0.26,
    "perte_du_plus_gros_bloc_R40": 0.156,
-   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.16997249915708867,
+   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.13693338275663713,
    "probabilite_reelle_defaut_plus_gros_bloc_10_ans": 0.006083282708664983,
    "perte_attendue_annuelle_identique": true
   },
@@ -394,7 +343,7 @@
    "nombre": 50,
    "poids_max": 0.02,
    "perte_du_plus_gros_bloc_R40": 0.012,
-   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.16997249915708867,
+   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.13693338275663713,
    "probabilite_reelle_defaut_plus_gros_bloc_10_ans": 0.006083282708664983,
    "perte_attendue_annuelle_identique": true
   },
@@ -402,7 +351,7 @@
    "nombre": 51,
    "poids_max": 0.26,
    "perte_du_plus_gros_bloc_R40": 0.156,
-   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.16997249915708867,
+   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.13693338275663713,
    "probabilite_reelle_defaut_plus_gros_bloc_10_ans": 0.006083282708664983,
    "perte_attendue_annuelle_identique": true
   },
@@ -410,37 +359,16 @@
    "nombre": 1,
    "poids_max": 1.0,
    "perte_du_plus_gros_bloc_R40": 0.6,
-   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.16997249915708867,
+   "probabilite_rn_defaut_plus_gros_bloc_10_ans": 0.13693338275663713,
    "probabilite_reelle_defaut_plus_gros_bloc_10_ans": 0.006083282708664983,
    "perte_attendue_annuelle_identique": true
   }
  },
  "kappa": {
-  "_regle": "kappa = (1 - d) x CDS(5 ans, dollars) / spread OAT zéro-coupon (5 ans, bootstrap du TEC) : part du spread expliquée par le crédit en euros. CDS 91,2 pb (29/10/2026), spread 95.0 pb (04/11/2026). d = dépréciation de l'euro attendue en cas de défaut (quanto relatif).",
-  "d_france_1_an": {
-   "d": 0.28,
-   "kappa": 0.691
-  },
-  "d_allemagne_5_ans": {
-   "d": 0.44,
-   "kappa": 0.538
-  },
-  "sans_quanto": {
-   "d": 0.0,
-   "kappa": 0.96
-  },
+  "_regle": "Part du spread traitée comme perte de défaut en risque neutre (le reste est une perte lissée, hors défaut). Hypothèse : 0,7 au centre ; bornes 0,55 et 1 testées en sensibilité. Elle n'est plus recoupée avec des cotations de marché : le spread des obligations est lui-même une hypothèse.",
   "central": 0.7,
   "bas": 0.55,
   "haut": 1.0,
-  "statut": "calibré (central) ; bornes : hypothèses",
-  "reserves": "CDS coté en dollars (quanto non observé pour la France à 5 ans), écart de dates de cinq jours (le CDS est passé de 104 à 91 pb en une semaine), structure par terme du CDS au-delà de 5 ans non disponible : kappa supposé constant sur toutes les maturités",
-  "spread_5_ans_bootstrap": 0.00949738
- },
- "bund": {
-  "tec_10": 0.0488,
-  "oat_bund": 0.0163,
-  "bund_10_estime": 0.0325,
-  "eiopa_zc_10": 0.033479999999999954,
-  "reserve": "TEC du 04/11 et écart OAT-Bund du 30/10 ; rendement au pair et taux zéro-coupon mélangés"
+  "statut": "hypothèse"
  }
 }

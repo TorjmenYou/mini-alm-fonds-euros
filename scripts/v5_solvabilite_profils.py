@@ -24,8 +24,8 @@ CONVENTIONS = (("sans_risque", "lisse_integral"), ("sans_risque", "decompose"),
 def calcul(p, reference, credit, n):
     h = cv.appliquer(hypotheses_profil(p), reference, "avec_va")
     r = scr_simplifie(h, credit, "avec_va", n=n)
-    ppb = h["bilan_initial"]["ppb"]
-    r["fonds_excedentaires_borne_haute"] = ppb * (1 - 0.25 * 1.033)  # PPB nette d'impôt : borne haute indicative
+    from src.v5.solvabilite_v5 import ppb_admissible_fonds_excedentaires
+    r["fonds_excedentaires_borne_haute"] = ppb_admissible_fonds_excedentaires(h) * (1 - 0.25 * 1.033)  # PPB admissible nette d'impôt : borne haute indicative
     return r
 
 

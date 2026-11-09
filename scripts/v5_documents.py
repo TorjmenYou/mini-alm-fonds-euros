@@ -22,6 +22,7 @@ GENERATEURS = [
     ("v5_synthese_strategies", "docs/V5_SYNTHESE_STRATEGIES.md"),
     ("v5_rapport_collecte", "docs/V5_COLLECTE.md"),
     ("v5_synthese_finale", "docs/V5_SYNTHESE_FINALE.md"),
+    ("v5_rapport_audit", "docs/V5_AUDIT_CONVENTIONS.md"),
     ("v5_figures", "figures/v5/"),
 ]
 

@@ -1,8 +1,9 @@
 """Courbes de marché de la V5 : courbe sans risque EIOPA et courbe des obligations détenues.
 
-Trois statuts de données, jamais mélangés (voir data/v5/README.md) :
+Statuts des données, jamais mélangés (voir data/v5/README.md) :
 - observé : courbe EIOPA publiée (fichier officiel, empreinte SHA-256 conservée) ;
-- calibré : spread des obligations souveraines françaises au-dessus de la courbe sans risque ;
+- hypothèse : spread des obligations détenues au-dessus de la courbe sans risque (moyenne de long terme
+  publiée par l'EIOPA, pas un spread de marché observé) ;
 - fictif : portefeuilles et bilans des profils d'assureur.
 """
 
@@ -64,14 +65,10 @@ def provenance(date="20261031"):
     return json.loads((DOSSIER_MARCHE / f"eiopa_rfr_{date}_provenance.json").read_text(encoding="utf-8"))
 
 
-def spread_oat(date="20261104", methode="tec"):
-    """Spread calibré des obligations souveraines françaises détenues (SpreadCredit), au-dessus de la
-    courbe EIOPA sans VA. Statut « calibré » :
-    - methode « tec » (premières variantes V5) : TEC pris comme taux zéro-coupon, fiche spread_oat_<date>.json ;
-    - methode « bootstrap » (conventions de sécurisation) : taux zéro-coupon OAT obtenus par bootstrap du
-      TEC (coupons annuels), fiche spread_oat_<date>_zc.json, écrite par scripts/v5_calibration_credit.py."""
-    suffixe = "" if methode == "tec" else "_zc"
-    if methode not in ("tec", "bootstrap"):
-        raise ValueError(f"Méthode de spread inconnue : {methode!r}")
-    fiche = json.loads((DOSSIER_MARCHE / f"spread_oat_{date}{suffixe}.json").read_text(encoding="utf-8"))
+def spread_obligations(date="20261031"):
+    """Spread hypothétique des obligations détenues (SpreadCredit), au-dessus de la courbe EIOPA sans VA.
+    Statut « hypothèse » : moyenne de long terme des spreads publiée par l'EIOPA (LTAS, notation A),
+    fiche spread_hypothetique_<date>.json écrite par scripts/v5_spread_hypothetique.py. Ce n'est pas un
+    spread de marché observé ; aucune donnée d'indice de taux souverain n'est utilisée."""
+    fiche = json.loads((DOSSIER_MARCHE / f"spread_hypothetique_{date}.json").read_text(encoding="utf-8"))
     return SpreadCredit({int(k): v for k, v in fiche["spread_continu"].items()})

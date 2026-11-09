@@ -9,7 +9,8 @@ import pandas as pd
 from .actif import Portefeuille
 from .gse import ScenarioDeterministe
 from .passif import ReferenceAssures, projeter_passif_un_an, reaction_collecte, repartir_taux_servi, taux_rachat_total
-from .strategie import PPB, decider_taux_servi
+from .strategie import PPB, decider_taux_servi, participation_technique
+from .v5.fiscalite import impot_annuel
 
 
 def scenario(h, nom="central"):
@@ -140,6 +141,21 @@ def projeter(h, eco=None, choc_rachats=0.0, rachat_massif=0.0, detail=True, cred
     if collecte:
         pm_e = pm  # après un éventuel rachat massif à l'ouverture
 
+    # Conventions facultatives (désactivées par défaut, donc dans les V1 à V4 ; docs/V5_AUDIT_CONVENTIONS.md) :
+    # - participation technique (V5.1) : le compte de participation reçoit aussi le solde technique
+    #   (chargements - frais), dont l'assureur garde 10 % s'il est créditeur (A.132-11, I) ; la participation
+    #   de l'exercice ne peut pas être inférieure au solde créditeur du compte (A.132-12) ;
+    # - impôt dans la projection : l'impôt de l'exercice est calculé chaque année, déduit des fonds
+    #   propres avant la distribution et payé par l'actif en fin d'année, avec les prestations.
+    pt = h["strategie"].get("participation_technique")
+    solde_debiteur_compte = 0.0
+    impot_projete = bool(h.get("fiscalite", {}).get("impot_dans_projection"))
+    deficit_fiscal = 0.0
+    if impot_projete:
+        lignes[0]["impots"] = 0.0
+    if pt:
+        lignes[0].update({"pb_minimale": 0.0, "solde_debiteur_compte_pb": 0.0, "complement_reglementaire_pb": 0.0})
+
     for t in range(1, eco.T + 1):
         courbe_debut, courbe_fin = eco.courbe(t - 1), eco.courbe(t)
         taux_attendu = reference.taux(courbe_debut, port.courbe_obligations(courbe_debut))  # défaut : zéro-coupon 10 ans
@@ -168,7 +184,16 @@ def projeter(h, eco=None, choc_rachats=0.0, rachat_massif=0.0, detail=True, cred
         if collecte and not cantonne and pm_n_debut > 0:
             # TMG moyen du fonds, pondéré par les PM : le plancher porte sur la somme des garanties
             hd = dict(h, passif=dict(p, tmg=(pm_e_debut * p["tmg"] + pm_n_debut * cn["tmg"]) / pm_debut))
-        st = decider_taux_servi(produits_courants, pm_debut, ppb, port.pvl_actions(), taux_attendu, hd, part_provisions)
+        contribution = None
+        if pt:
+            resultat_technique = (p["chargements_encours"] - p["frais_gestion_encours"]) * pm_debut
+            if collecte and not cantonne:
+                resultat_technique += (cn["chargement_prime"] - cn["frais_acquisition_prime"]) * prime
+            contribution = participation_technique(resultat_technique, solde_debiteur_compte, pt["part_assureur"])
+        st = decider_taux_servi(produits_courants, pm_debut, ppb, port.pvl_actions(), taux_attendu, hd, part_provisions,
+                                contribution)
+        if pt:
+            solde_debiteur_compte = st["solde_debiteur"]
         pv_real = port.realiser_pv_actions(st["pv_actions_realisees"])
         produits_financiers = produits_courants + pv_real
         ppb.reprendre(st["reprise_ppb"])
@@ -216,9 +241,20 @@ def projeter(h, eco=None, choc_rachats=0.0, rachat_massif=0.0, detail=True, cred
                 pm_e = pm_n = 0.0
         frais = p["frais_gestion_encours"] * pm_debut + frais_acquisition
 
+        # Résultat de l'assureur (étape 6, calculé ici : il ne dépend pas du rééquilibrage)
+        interets_nets = st["interets_bruts"] - p["chargements_encours"] * pm_debut
+        resultat = (produits_financiers - interets_nets - st["dotation_ppb"] + st["reprise_ppb"] - frais)
+        if collecte and not cantonne:
+            resultat += cn["chargement_prime"] * prime  # part de la prime non portée en PM
+
         # 5. Prestations, frais et rééquilibrage
         dividende_verse, dividende_a_payer = dividende_a_payer, 0.0
-        port.payer(prestations + frais + dividende_verse - (prime if collecte and not cantonne else 0.0))
+        sorties = prestations + frais + dividende_verse - (prime if collecte and not cantonne else 0.0)
+        impot = 0.0
+        if impot_projete:
+            impot, _, _, deficit_fiscal = impot_annuel(resultat, 1e12, deficit_fiscal, h["fiscalite"]["unite_monetaire_eur"])
+            sorties += impot  # payé en fin d'année, à la date des prestations
+        port.payer(sorties)
         reeq = port.reequilibrer(courbe_fin, alloc)
 
         # Les plus ou moins-values obligataires réalisées vont à la réserve de
@@ -229,15 +265,14 @@ def projeter(h, eco=None, choc_rachats=0.0, rachat_massif=0.0, detail=True, cred
         report = perte_hors_reserve + reeq["pv_actions_reequilibrage"]
 
         # 6. Résultat de l'assureur : produits financiers - intérêts crédités nets
-        #    - mouvement de PPB - frais (les chargements restent à l'assureur)
-        interets_nets = st["interets_bruts"] - p["chargements_encours"] * pm_debut
-        resultat = (produits_financiers - interets_nets - st["dotation_ppb"] + st["reprise_ppb"] - frais)
-        if collecte and not cantonne:
-            resultat += cn["chargement_prime"] * prime  # part de la prime non portée en PM
+        #    - mouvement de PPB - frais (les chargements restent à l'assureur, sauf la part reversée
+        #    au compte de participation dans la variante « participation technique »)
         # (la PPB versée à l'extinction sort de la PPB et du bilan, sans toucher
         # au résultat ; la dotation de l'année reste une charge de l'assureur,
         # qu'elle soit mise en provision ou versée tout de suite)
         fonds_propres += resultat + reeq["apport"]
+        if impot_projete:
+            fonds_propres -= impot  # fonds propres après impôt, avant la distribution
         if distribution:
             excedent = fonds_propres - distribution["fonds_propres_pct_pm"] * pm
             if excedent > 0:
@@ -259,6 +294,11 @@ def projeter(h, eco=None, choc_rachats=0.0, rachat_massif=0.0, detail=True, cred
             "dividendes": dividende_verse, "dividende_a_payer": dividende_a_payer,
             "pm_garantie": pm_garantie, "prestations_garanties": pg["deces"] + pg["rachats"],
         }
+        if impot_projete:
+            ligne["impots"] = impot
+        if pt:
+            ligne.update({"pb_minimale": st["pb_minimale"], "solde_debiteur_compte_pb": solde_debiteur_compte,
+                          "complement_reglementaire_pb": st["complement_reglementaire"]})
         if collecte:
             # Contrats nouveaux : primes, prestations, frais d'encours et d'acquisition, PM ; en mode
             # mutualisé, ces montants sont compris dans les colonnes du fonds (« dont »). La PPB versée à une
@@ -344,6 +384,9 @@ def indicateurs(df):
     vm0 = df.attrs["vm_apres_choc"]
     va_apports = (df["apport_assureur"] * d).sum()
     va_dividendes = (df["dividendes"] * d).sum() if "dividendes" in df else 0.0  # V5 : versés pendant la projection
+    # Variante « impôt dans la projection » : l'impôt payé sort de l'actif ; il entre dans l'identité de
+    # conservation (fuite) et sa valeur actuelle est renvoyée, pour être déduite une seule fois de la valeur.
+    va_impots_payes = (df["impots"] * d).sum() if "impots" in df else 0.0
     be = be_prestations + be_frais
     collecte = {}
     if "primes" in df:
@@ -369,11 +412,12 @@ def indicateurs(df):
                     "va_primes_moins_be_nouveaux": va_primes - be_n}
         vm_final = fin["vm_actif"] + vm_final_hors_fonds
         valeur = vm0 + va_primes - be
-        fuite = vm0 + va_primes - (va_prestations + (df["frais"] * d).sum() + va_dividendes - va_apports + vm_final * d.loc[T])
+        fuite = vm0 + va_primes - (va_prestations + (df["frais"] * d).sum() + va_dividendes + va_impots_payes - va_apports
+                                   + vm_final * d.loc[T])
         fdb = be_prestations_e - be_garanti
     else:
         valeur = vm0 - be
-        fuite = vm0 - (va_prestations + be_frais + va_dividendes - va_apports + fin["vm_actif"] * d.loc[T])
+        fuite = vm0 - (va_prestations + be_frais + va_dividendes + va_impots_payes - va_apports + fin["vm_actif"] * d.loc[T])
         fdb = be_prestations - be_garanti
     return {
         "vm_actif_initial": vm0,
@@ -386,6 +430,7 @@ def indicateurs(df):
         "fuite": fuite,
         "va_apports": va_apports,
         "va_dividendes": va_dividendes,
+        **({"va_impots_payes": va_impots_payes} if "impots" in df else {}),
         "pm_residuelle_pct": fin["pm"] / df.loc[0, "pm"],
         **collecte,
     }

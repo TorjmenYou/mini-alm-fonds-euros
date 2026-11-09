@@ -15,10 +15,10 @@ from src.passif import ReferenceAssures
 from src.projection import indicateurs, projeter
 from src.stochastique import projeter_stochastique
 from src.v5 import bases, conventions as cv
-from src.v5.courbes_marche import courbe_eiopa, spread_oat
+from src.v5.courbes_marche import courbe_eiopa, spread_obligations
 from src.v5.credit import CreditSaut
 from src.v5.profils import hypotheses_profil
-from src.v5.solvabilite_v5 import facteur_spread, fonds_excedentaires, mcr
+from src.v5.solvabilite_v5 import facteur_spread, fonds_excedentaires, mcr, ppb_admissible_fonds_excedentaires
 
 RACINE = Path(__file__).resolve().parents[1]
 R = 0.032
@@ -126,11 +126,11 @@ def test_reference_composite_formule():
     assert ref.taux(_Courbe(0.05, -0.02)) == pytest.approx(0.6 * (0.0263 + 0.5 * 0.02) + 0.4 * 0.005)  # lissage, plancher
 
 
-def test_reference_composite_niveau_observe_et_independant_de_la_base():
+def test_reference_composite_niveau_initial_et_independant_de_la_base():
     for base in bases.BASES:
         h = cv.appliquer(hypotheses_profil("B"), "composite_observe", base)
-        assert h["comportement"]["niveau_initial"] == pytest.approx(0.6 * 0.0263 + 0.25 * 0.017 + 0.15 * 0.0488)
-        eco, cr = bases.equivalent_certain(h, base, spread_oat())
+        assert h["comportement"]["niveau_initial"] == pytest.approx(0.6 * 0.0263 + 0.25 * 0.017 + 0.15 * cv.taux_obligations_10_ans_initial())
+        eco, cr = bases.equivalent_certain(h, base, spread_obligations())
         assert projeter(h, eco, credit=cr).loc[1, "taux_10ans"] == pytest.approx(h["comportement"]["niveau_initial"], abs=1e-14)
 
 
@@ -146,16 +146,26 @@ def test_rachat_structurel_au_sens_de_l_acpr():
     assert df.loc[1, "rachats"] / df.loc[0, "pm"] == pytest.approx(p * (1 + servi) * (1 - 0.01), rel=1e-12)
 
 
-# --- Spread zéro-coupon -----------------------------------------------------------------------------
+# --- Spread hypothétique des obligations ------------------------------------------------------------
 
-def test_spread_bootstrap_reprice_les_obligations_au_pair():
-    fiche = json.loads((RACINE / "data" / "v5" / "marche" / "spread_oat_20261104.json").read_text(encoding="utf-8"))
-    tec = {int(k): v for k, v in fiche["donnees_observees"]["TEC_04_11_2026"].items()}
-    s, e = spread_oat(methode="bootstrap"), courbe_eiopa()
-    zc = lambda k: (1 + e.taux_zc(k)) ** (-k) * math.exp(-s.s(k) * k)  # noqa: E731
-    for m in (5, 10, 20, 30):
-        prix = sum(tec[m] * zc(k) for k in range(1, m + 1)) + zc(m)
-        assert prix == pytest.approx(1.0, abs=2e-4), m  # la maturité 1 an est extrapolée (pas de TEC à 1 an)
+def test_spread_hypothetique_reproduit_les_ltas_publies_par_l_eiopa():
+    """s(k) = ln(1 + r(k) + LTAS(k)) - ln(1 + r(k)), LTAS = moyenne des séries A financières et non financières."""
+    fiche = json.loads((RACINE / "data" / "v5" / "marche" / "spread_hypothetique_20261031.json").read_text(encoding="utf-8"))
+    assert fiche["statut"] == "hypothèse"
+    pub, s, e = fiche["donnees_publiees"], spread_obligations(), courbe_eiopa()
+    for k in range(1, 31):
+        ltas = (pub["EUR_Financials_2"][str(k)] + pub["EUR_Non-Financials_2"][str(k)]) / 2
+        r = e.taux_zc(k)
+        assert (1 + r) * math.exp(s.s(k)) - (1 + r) == pytest.approx(ltas, abs=2e-8), k
+    assert s.s(50) == pytest.approx(s.s(30))  # plat au-delà de 30 ans
+
+
+def test_aucune_donnee_d_indice_de_taux_souverain_dans_les_donnees_de_marche():
+    noms = sorted(f.name for f in (RACINE / "data" / "v5" / "marche").iterdir())
+    assert noms == ["eiopa_rfr_20261031_eur.csv", "eiopa_rfr_20261031_provenance.json", "spread_hypothetique_20261031.json"]
+    for f in (RACINE / "data" / "v5").rglob("*.json"):
+        texte = f.read_text(encoding="utf-8")
+        assert "TEC" not in texte and "oblig.fr" not in texte, f.name
 
 
 # --- Vue prudentielle -------------------------------------------------------------------------------
@@ -166,6 +176,16 @@ def test_facteurs_de_spread_par_qualite_de_credit():
     assert facteur_spread("cqs2", 7) == pytest.approx(0.084)
     assert facteur_spread("cqs3", 7) == pytest.approx(0.155)
     assert facteur_spread("cqs4", 7) == pytest.approx(0.275)
+
+
+def test_ppb_admissible_deduit_la_generation_restituee_l_exercice_suivant():
+    """Fiche technique de l'ACPR : la génération de PPB qui doit être restituée l'exercice suivant n'est pas admissible
+    en fonds excédentaires ; avec le stock d'ouverture réparti uniformément sur huit générations, c'est un huitième."""
+    from src.v5.profils import hypotheses_profil
+    for p, ppb in (("A", 25.0), ("B", 40.0), ("C", 20.0)):
+        h = hypotheses_profil(p)
+        assert h["bilan_initial"]["ppb"] == ppb and h["strategie"]["duree_max_ppb_ans"] == 8
+        assert ppb_admissible_fonds_excedentaires(h) == pytest.approx(ppb * 7 / 8)
 
 
 def test_fonds_excedentaires_approche_simplifiee():

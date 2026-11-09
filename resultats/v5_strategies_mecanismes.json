@@ -14,601 +14,601 @@
   "A|passive": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.006283855068289615,
-    "part_hors_zone_neutre": 0.1,
-    "ppb_pm": 0.01806991176901501
+    "ecart_reference": -0.007685135299368539,
+    "part_hors_zone_neutre": 0.184,
+    "ppb_pm": 0.018609833229730383
    },
    "2": {
-    "taux_rachat": 0.050614498699196944,
-    "ecart_reference": -0.008534781573737472,
-    "part_hors_zone_neutre": 0.237,
-    "ppb_pm": 0.014109709970805465
+    "taux_rachat": 0.058250347740395884,
+    "ecart_reference": -0.010078531734059338,
+    "part_hors_zone_neutre": 0.412,
+    "ppb_pm": 0.015243212800749938
    },
    "3": {
-    "taux_rachat": 0.05691435803626804,
-    "ecart_reference": -0.013050211098291992,
-    "part_hors_zone_neutre": 0.623,
-    "ppb_pm": 0.011248129713905384
+    "taux_rachat": 0.06753104386167404,
+    "ecart_reference": -0.013589947398614622,
+    "part_hors_zone_neutre": 0.636,
+    "ppb_pm": 0.012656939873739826
    },
    "5": {
-    "taux_rachat": 0.12213500219310938,
-    "ecart_reference": -0.01912564097732171,
-    "part_hors_zone_neutre": 0.838,
-    "ppb_pm": 0.008028610050210652
+    "taux_rachat": 0.1200281407900218,
+    "ecart_reference": -0.01800107959576365,
+    "part_hors_zone_neutre": 0.789,
+    "ppb_pm": 0.009360363108959083
    },
    "8": {
-    "taux_rachat": 0.17117823480188016,
-    "ecart_reference": -0.02151828375586756,
-    "part_hors_zone_neutre": 0.793,
-    "ppb_pm": 0.0006435538118837343
+    "taux_rachat": 0.15802976377739886,
+    "ecart_reference": -0.019508822510954843,
+    "part_hors_zone_neutre": 0.7,
+    "ppb_pm": 0.0013698140762390335
    },
    "10": {
-    "taux_rachat": 0.18396472918959858,
-    "ecart_reference": -0.02355794024619863,
-    "part_hors_zone_neutre": 0.823,
-    "ppb_pm": 0.0002842140907856285
+    "taux_rachat": 0.16792102847779433,
+    "ecart_reference": -0.02151190821518219,
+    "part_hors_zone_neutre": 0.753,
+    "ppb_pm": 0.0011769882838485398
    },
    "15": {
-    "taux_rachat": 0.18857440730180622,
-    "ecart_reference": -0.024038927827146127,
-    "part_hors_zone_neutre": 0.748,
-    "ppb_pm": 0.0008351717595988308
+    "taux_rachat": 0.16904583055671532,
+    "ecart_reference": -0.02133478519002312,
+    "part_hors_zone_neutre": 0.649,
+    "ppb_pm": 0.002099032733470741
    },
    "20": {
-    "taux_rachat": 0.17756189681142567,
-    "ecart_reference": -0.023457654055877037,
-    "part_hors_zone_neutre": 0.647,
-    "ppb_pm": 0.0050036158087530475
+    "taux_rachat": 0.1523076116668837,
+    "ecart_reference": -0.019972727676666396,
+    "part_hors_zone_neutre": 0.528,
+    "ppb_pm": 0.007354563849736813
    }
   },
   "A|taux_servi_competitif": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.001272336782045283,
-    "part_hors_zone_neutre": 0.079,
-    "ppb_pm": 0.012491809563128358
+    "ecart_reference": -0.0025256096947890785,
+    "part_hors_zone_neutre": 0.152,
+    "ppb_pm": 0.012997696843521155
    },
    "2": {
-    "taux_rachat": 0.046447034233462046,
-    "ecart_reference": -0.005795883724345902,
-    "part_hors_zone_neutre": 0.154,
-    "ppb_pm": 0.0065463061315742975
+    "taux_rachat": 0.04997363542356722,
+    "ecart_reference": -0.007539739871225067,
+    "part_hors_zone_neutre": 0.276,
+    "ppb_pm": 0.007304452463607062
    },
    "3": {
-    "taux_rachat": 0.054119295950763445,
-    "ecart_reference": -0.012210492840090136,
-    "part_hors_zone_neutre": 0.654,
-    "ppb_pm": 0.003474861033935159
+    "taux_rachat": 0.06336396117256692,
+    "ecart_reference": -0.012523399743965987,
+    "part_hors_zone_neutre": 0.653,
+    "ppb_pm": 0.004163066213833115
    },
    "5": {
-    "taux_rachat": 0.12788698811360155,
-    "ecart_reference": -0.019746440026967994,
-    "part_hors_zone_neutre": 0.887,
-    "ppb_pm": 0.0011043200093047217
+    "taux_rachat": 0.12478235134628339,
+    "ecart_reference": -0.018651098922898606,
+    "part_hors_zone_neutre": 0.858,
+    "ppb_pm": 0.0014915849308734489
    },
    "8": {
-    "taux_rachat": 0.17783892775824772,
-    "ecart_reference": -0.022653681635880867,
-    "part_hors_zone_neutre": 0.852,
-    "ppb_pm": 2.194330198002776e-05
+    "taux_rachat": 0.1687498198469861,
+    "ecart_reference": -0.021072869811755962,
+    "part_hors_zone_neutre": 0.792,
+    "ppb_pm": 0.0001665015784257172
    },
    "10": {
-    "taux_rachat": 0.1881855283580983,
-    "ecart_reference": -0.023869937829275198,
-    "part_hors_zone_neutre": 0.839,
-    "ppb_pm": 1.883683897845181e-05
+    "taux_rachat": 0.17461326425263354,
+    "ecart_reference": -0.02211408414447095,
+    "part_hors_zone_neutre": 0.79,
+    "ppb_pm": 0.00016897288160538294
    },
    "15": {
-    "taux_rachat": 0.19228765598716274,
-    "ecart_reference": -0.024236430898808937,
-    "part_hors_zone_neutre": 0.769,
-    "ppb_pm": 8.180044071524125e-05
+    "taux_rachat": 0.17707618276423687,
+    "ecart_reference": -0.021846824802338995,
+    "part_hors_zone_neutre": 0.693,
+    "ppb_pm": 0.0002910665350304992
    },
    "20": {
-    "taux_rachat": 0.18276182833749705,
-    "ecart_reference": -0.02338005050570736,
-    "part_hors_zone_neutre": 0.673,
-    "ppb_pm": 0.001246770062147905
+    "taux_rachat": 0.15906471972938468,
+    "ecart_reference": -0.019931057103831203,
+    "part_hors_zone_neutre": 0.568,
+    "ppb_pm": 0.0014486295481742622
    }
   },
   "A|taux_servi_competitif_preservant": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.005555114670163551,
-    "part_hors_zone_neutre": 0.11,
-    "ppb_pm": 0.02032231326418195
+    "ecart_reference": -0.007353699837548677,
+    "part_hors_zone_neutre": 0.2,
+    "ppb_pm": 0.020815300948587273
    },
    "2": {
-    "taux_rachat": 0.05344293929495624,
-    "ecart_reference": -0.008749210063469988,
-    "part_hors_zone_neutre": 0.533,
-    "ppb_pm": 0.018574854875068887
+    "taux_rachat": 0.06298731496687225,
+    "ecart_reference": -0.010471240464155278,
+    "part_hors_zone_neutre": 0.613,
+    "ppb_pm": 0.019122471275866026
    },
    "3": {
-    "taux_rachat": 0.06460807086327529,
-    "ecart_reference": -0.013651592406096336,
-    "part_hors_zone_neutre": 0.734,
-    "ppb_pm": 0.016923407505446107
+    "taux_rachat": 0.07677254951854044,
+    "ecart_reference": -0.0141791028456354,
+    "part_hors_zone_neutre": 0.735,
+    "ppb_pm": 0.017620940580325893
    },
    "5": {
-    "taux_rachat": 0.13111699762199241,
-    "ecart_reference": -0.019161559856235695,
-    "part_hors_zone_neutre": 0.851,
-    "ppb_pm": 0.014027600454676289
+    "taux_rachat": 0.12930015211670925,
+    "ecart_reference": -0.018075512491825714,
+    "part_hors_zone_neutre": 0.803,
+    "ppb_pm": 0.014770140472416877
    },
    "8": {
-    "taux_rachat": 0.169021235133279,
-    "ecart_reference": -0.02078910150575179,
-    "part_hors_zone_neutre": 0.78,
-    "ppb_pm": 0.0002983680290936745
+    "taux_rachat": 0.15780199896057093,
+    "ecart_reference": -0.01834457592085158,
+    "part_hors_zone_neutre": 0.688,
+    "ppb_pm": 0.0011303083611003903
    },
    "10": {
-    "taux_rachat": 0.18456086867225985,
-    "ecart_reference": -0.02349421795452512,
-    "part_hors_zone_neutre": 0.831,
-    "ppb_pm": 0.00012223330255037702
+    "taux_rachat": 0.17052588874726438,
+    "ecart_reference": -0.021494800027421556,
+    "part_hors_zone_neutre": 0.769,
+    "ppb_pm": 0.0011744209059119588
    },
    "15": {
-    "taux_rachat": 0.18948821944752325,
-    "ecart_reference": -0.023778765412454283,
-    "part_hors_zone_neutre": 0.756,
-    "ppb_pm": 0.00020006909183754173
+    "taux_rachat": 0.17150272732391605,
+    "ecart_reference": -0.021214510613484755,
+    "part_hors_zone_neutre": 0.669,
+    "ppb_pm": 0.0011256389018264484
    },
    "20": {
-    "taux_rachat": 0.17917391005490504,
-    "ecart_reference": -0.022836445042264127,
-    "part_hors_zone_neutre": 0.658,
-    "ppb_pm": 0.001979563974703872
+    "taux_rachat": 0.15506183725894995,
+    "ecart_reference": -0.019266063402731782,
+    "part_hors_zone_neutre": 0.551,
+    "ppb_pm": 0.0026869412744453744
    }
   },
   "A|taux_servi_marge": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.010851462215908634,
-    "part_hors_zone_neutre": 0.995,
-    "ppb_pm": 0.020990064831008473
+    "ecart_reference": -0.011473967421327518,
+    "part_hors_zone_neutre": 0.187,
+    "ppb_pm": 0.02146801917758346
    },
    "2": {
-    "taux_rachat": 0.05671821299434333,
-    "ecart_reference": -0.011904652068528095,
-    "part_hors_zone_neutre": 0.977,
-    "ppb_pm": 0.017277670681868827
+    "taux_rachat": 0.0626510696678315,
+    "ecart_reference": -0.011943117089708287,
+    "part_hors_zone_neutre": 0.402,
+    "ppb_pm": 0.018198435574386433
    },
    "3": {
-    "taux_rachat": 0.06722636259147308,
-    "ecart_reference": -0.015481962584760667,
-    "part_hors_zone_neutre": 0.94,
-    "ppb_pm": 0.014209255435018213
+    "taux_rachat": 0.06820885617721453,
+    "ecart_reference": -0.014780048825472285,
+    "part_hors_zone_neutre": 0.689,
+    "ppb_pm": 0.01560454017775999
    },
    "5": {
-    "taux_rachat": 0.13198781530507164,
-    "ecart_reference": -0.020050140752887052,
-    "part_hors_zone_neutre": 0.942,
-    "ppb_pm": 0.010581500959930393
+    "taux_rachat": 0.1177442359980155,
+    "ecart_reference": -0.01814966862570869,
+    "part_hors_zone_neutre": 0.839,
+    "ppb_pm": 0.012204741114724648
    },
    "8": {
-    "taux_rachat": 0.17213175585997056,
-    "ecart_reference": -0.02248078458153365,
-    "part_hors_zone_neutre": 0.891,
-    "ppb_pm": 0.0027439892898975756
+    "taux_rachat": 0.15349391581520347,
+    "ecart_reference": -0.02027768286834803,
+    "part_hors_zone_neutre": 0.78,
+    "ppb_pm": 0.005495223240802805
    },
    "10": {
-    "taux_rachat": 0.18257512994927189,
-    "ecart_reference": -0.02403173940242886,
-    "part_hors_zone_neutre": 0.884,
-    "ppb_pm": 0.0014854385977477382
+    "taux_rachat": 0.16293080867781268,
+    "ecart_reference": -0.02185204800578332,
+    "part_hors_zone_neutre": 0.79,
+    "ppb_pm": 0.005081582901882331
    },
    "15": {
-    "taux_rachat": 0.19092548397349265,
-    "ecart_reference": -0.024957857655323205,
-    "part_hors_zone_neutre": 0.828,
-    "ppb_pm": 0.0029902287608437193
+    "taux_rachat": 0.16738695445305457,
+    "ecart_reference": -0.021887251813732623,
+    "part_hors_zone_neutre": 0.734,
+    "ppb_pm": 0.008480959713826173
    },
    "20": {
-    "taux_rachat": 0.180827197003062,
-    "ecart_reference": -0.02401140906530393,
-    "part_hors_zone_neutre": 0.768,
-    "ppb_pm": 0.009781548890320757
+    "taux_rachat": 0.15147925743135834,
+    "ecart_reference": -0.01952122447177414,
+    "part_hors_zone_neutre": 0.638,
+    "ppb_pm": 0.01784797821424321
    }
   },
   "B|passive": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.005265299136722692,
-    "part_hors_zone_neutre": 0.021,
-    "ppb_pm": 0.03569246480313383
+    "ecart_reference": -0.00575233190054824,
+    "part_hors_zone_neutre": 0.055,
+    "ppb_pm": 0.035669300203782985
    },
    "2": {
-    "taux_rachat": 0.04483914814281536,
-    "ecart_reference": -0.005544188203897198,
-    "part_hors_zone_neutre": 0.045,
-    "ppb_pm": 0.03013043845928365
+    "taux_rachat": 0.047084078678646654,
+    "ecart_reference": -0.006187054539566658,
+    "part_hors_zone_neutre": 0.086,
+    "ppb_pm": 0.03064534834956011
    },
    "3": {
-    "taux_rachat": 0.046233073333215545,
-    "ecart_reference": -0.007485526611839902,
-    "part_hors_zone_neutre": 0.166,
-    "ppb_pm": 0.024370588215297417
+    "taux_rachat": 0.05002464963379206,
+    "ecart_reference": -0.0074868361964652,
+    "part_hors_zone_neutre": 0.175,
+    "ppb_pm": 0.025869918343299835
    },
    "5": {
-    "taux_rachat": 0.07263344507358281,
-    "ecart_reference": -0.01193280366229385,
-    "part_hors_zone_neutre": 0.421,
-    "ppb_pm": 0.016530530569413233
+    "taux_rachat": 0.06878446111079721,
+    "ecart_reference": -0.0105030328220153,
+    "part_hors_zone_neutre": 0.34,
+    "ppb_pm": 0.019056453579173543
    },
    "8": {
-    "taux_rachat": 0.11092082203699391,
-    "ecart_reference": -0.014518295280597943,
-    "part_hors_zone_neutre": 0.469,
-    "ppb_pm": 0.005959182426704033
+    "taux_rachat": 0.09224589984742175,
+    "ecart_reference": -0.011372962691700652,
+    "part_hors_zone_neutre": 0.352,
+    "ppb_pm": 0.010195223509617627
    },
    "10": {
-    "taux_rachat": 0.12365291791269169,
-    "ecart_reference": -0.016382722641980058,
-    "part_hors_zone_neutre": 0.543,
-    "ppb_pm": 0.004299000038359743
+    "taux_rachat": 0.09737421301434537,
+    "ecart_reference": -0.012395730510730328,
+    "part_hors_zone_neutre": 0.381,
+    "ppb_pm": 0.010080049566222597
    },
    "15": {
-    "taux_rachat": 0.09195691566675711,
-    "ecart_reference": -0.011244137644937797,
-    "part_hors_zone_neutre": 0.29,
-    "ppb_pm": 0.01487761214214617
+    "taux_rachat": 0.07471547246397969,
+    "ecart_reference": -0.007934746196731164,
+    "part_hors_zone_neutre": 0.196,
+    "ppb_pm": 0.02084919946088011
    },
    "20": {
-    "taux_rachat": 0.09814299617746186,
-    "ecart_reference": -0.010292986678183916,
-    "part_hors_zone_neutre": 0.278,
-    "ppb_pm": 0.026570057790928036
+    "taux_rachat": 0.07543227243908592,
+    "ecart_reference": -0.0062890394308130005,
+    "part_hors_zone_neutre": 0.179,
+    "ppb_pm": 0.03106833050549636
    }
   },
   "B|taux_servi_competitif": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.0001576580617062862,
-    "part_hors_zone_neutre": 0.005,
-    "ppb_pm": 0.0300589628887818
+    "ecart_reference": -0.00040696641158093137,
+    "part_hors_zone_neutre": 0.023,
+    "ppb_pm": 0.02976403104103653
    },
    "2": {
-    "taux_rachat": 0.043469362839232646,
-    "ecart_reference": -0.0006963413259851066,
-    "part_hors_zone_neutre": 0.022,
-    "ppb_pm": 0.019308330963799594
+    "taux_rachat": 0.04350234380361028,
+    "ecart_reference": -0.0015338491338278042,
+    "part_hors_zone_neutre": 0.066,
+    "ppb_pm": 0.01969458258579021
    },
    "3": {
-    "taux_rachat": 0.0449724016119971,
-    "ecart_reference": -0.004292713923320448,
-    "part_hors_zone_neutre": 0.16,
-    "ppb_pm": 0.011228912281395413
+    "taux_rachat": 0.04748279664628922,
+    "ecart_reference": -0.0043603632258661686,
+    "part_hors_zone_neutre": 0.172,
+    "ppb_pm": 0.012360679907045868
    },
    "5": {
-    "taux_rachat": 0.0767295634672966,
-    "ecart_reference": -0.011852828206578667,
-    "part_hors_zone_neutre": 0.523,
-    "ppb_pm": 0.003660848239451753
+    "taux_rachat": 0.0725586856740691,
+    "ecart_reference": -0.010158130829440401,
+    "part_hors_zone_neutre": 0.44,
+    "ppb_pm": 0.005070351302878479
    },
    "8": {
-    "taux_rachat": 0.1337104361541124,
-    "ecart_reference": -0.016902500473834237,
-    "part_hors_zone_neutre": 0.631,
-    "ppb_pm": 0.0004375829085143233
+    "taux_rachat": 0.11486255727416932,
+    "ecart_reference": -0.013301011954746653,
+    "part_hors_zone_neutre": 0.508,
+    "ppb_pm": 0.001436698303251107
    },
    "10": {
-    "taux_rachat": 0.1412222412427401,
-    "ecart_reference": -0.0175195778361293,
-    "part_hors_zone_neutre": 0.628,
-    "ppb_pm": 0.00029216916541419563
+    "taux_rachat": 0.11424018647233856,
+    "ecart_reference": -0.013410297927262426,
+    "part_hors_zone_neutre": 0.49,
+    "ppb_pm": 0.001504902113980815
    },
    "15": {
-    "taux_rachat": 0.10353328710557835,
-    "ecart_reference": -0.010607894090703639,
-    "part_hors_zone_neutre": 0.36,
-    "ppb_pm": 0.003446587730435449
+    "taux_rachat": 0.08403735372000598,
+    "ecart_reference": -0.007287569823455634,
+    "part_hors_zone_neutre": 0.254,
+    "ppb_pm": 0.004396861564394746
    },
    "20": {
-    "taux_rachat": 0.11024987523305471,
-    "ecart_reference": -0.011537178850142712,
-    "part_hors_zone_neutre": 0.361,
-    "ppb_pm": 0.008075872440330003
+    "taux_rachat": 0.08712551550763112,
+    "ecart_reference": -0.007530763816977542,
+    "part_hors_zone_neutre": 0.25,
+    "ppb_pm": 0.008872995814454953
    }
   },
   "B|taux_servi_competitif_preservant": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.0011371509804616261,
-    "part_hors_zone_neutre": 0.065,
-    "ppb_pm": 0.03374740609222182
+    "ecart_reference": -0.0025893209677211697,
+    "part_hors_zone_neutre": 0.131,
+    "ppb_pm": 0.03437765473649957
    },
    "2": {
-    "taux_rachat": 0.04652936886282353,
-    "ecart_reference": -0.003341418495715657,
-    "part_hors_zone_neutre": 0.076,
-    "ppb_pm": 0.030126854952993148
+    "taux_rachat": 0.051574532044533924,
+    "ecart_reference": -0.004771881883167424,
+    "part_hors_zone_neutre": 0.145,
+    "ppb_pm": 0.03113882974093277
    },
    "3": {
-    "taux_rachat": 0.04948159922239896,
-    "ecart_reference": -0.006946759761743451,
-    "part_hors_zone_neutre": 0.23,
-    "ppb_pm": 0.027046585485356104
+    "taux_rachat": 0.05663887643025294,
+    "ecart_reference": -0.0071683613031963125,
+    "part_hors_zone_neutre": 0.25,
+    "ppb_pm": 0.028190180476641517
    },
    "5": {
-    "taux_rachat": 0.08141396425162224,
-    "ecart_reference": -0.011182678955120874,
-    "part_hors_zone_neutre": 0.452,
-    "ppb_pm": 0.020596503277068745
+    "taux_rachat": 0.07680128958940771,
+    "ecart_reference": -0.009782847403764505,
+    "part_hors_zone_neutre": 0.376,
+    "ppb_pm": 0.021959652949746642
    },
    "8": {
-    "taux_rachat": 0.11142700303406888,
-    "ecart_reference": -0.012689682424191905,
-    "part_hors_zone_neutre": 0.482,
-    "ppb_pm": 0.003042126720032405
+    "taux_rachat": 0.0937348646348072,
+    "ecart_reference": -0.009137231318074942,
+    "part_hors_zone_neutre": 0.361,
+    "ppb_pm": 0.006065923138876266
    },
    "10": {
-    "taux_rachat": 0.1315649024786212,
-    "ecart_reference": -0.01620898335840454,
-    "part_hors_zone_neutre": 0.581,
-    "ppb_pm": 0.002103472367684028
+    "taux_rachat": 0.1073775905427115,
+    "ecart_reference": -0.012318348473803798,
+    "part_hors_zone_neutre": 0.452,
+    "ppb_pm": 0.006434329068576833
    },
    "15": {
-    "taux_rachat": 0.09827953978261106,
-    "ecart_reference": -0.009957048816147797,
-    "part_hors_zone_neutre": 0.344,
-    "ppb_pm": 0.006688908661400431
+    "taux_rachat": 0.08012530852569227,
+    "ecart_reference": -0.006720492813483633,
+    "part_hors_zone_neutre": 0.239,
+    "ppb_pm": 0.010196208301843054
    },
    "20": {
-    "taux_rachat": 0.10731154880166849,
-    "ecart_reference": -0.010861737934837424,
-    "part_hors_zone_neutre": 0.358,
-    "ppb_pm": 0.015622278091017915
+    "taux_rachat": 0.0846465474322179,
+    "ecart_reference": -0.007017069493127519,
+    "part_hors_zone_neutre": 0.243,
+    "ppb_pm": 0.01667107960697315
    }
   },
   "B|taux_servi_marge": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.01008177209993318,
-    "part_hors_zone_neutre": 0.989,
-    "ppb_pm": 0.04060800927778314
+    "ecart_reference": -0.010290590113262431,
+    "part_hors_zone_neutre": 0.056,
+    "ppb_pm": 0.04025108251020603
    },
    "2": {
-    "taux_rachat": 0.050084572168790614,
-    "ecart_reference": -0.010062593809498465,
-    "part_hors_zone_neutre": 0.93,
-    "ppb_pm": 0.03987596786898507
+    "taux_rachat": 0.05200658317326774,
+    "ecart_reference": -0.01034455109152636,
+    "part_hors_zone_neutre": 0.12,
+    "ppb_pm": 0.03959754869654316
    },
    "3": {
-    "taux_rachat": 0.051806708691606966,
-    "ecart_reference": -0.01077441584276431,
-    "part_hors_zone_neutre": 0.85,
-    "ppb_pm": 0.03637641841905968
+    "taux_rachat": 0.054604128130727035,
+    "ecart_reference": -0.010615551770682196,
+    "part_hors_zone_neutre": 0.329,
+    "ppb_pm": 0.03785158767060686
    },
    "5": {
-    "taux_rachat": 0.07268654748896189,
-    "ecart_reference": -0.013690952137541245,
-    "part_hors_zone_neutre": 0.838,
-    "ppb_pm": 0.028361489715702126
+    "taux_rachat": 0.0665129325573649,
+    "ecart_reference": -0.012030815865636984,
+    "part_hors_zone_neutre": 0.527,
+    "ppb_pm": 0.0333169002204334
    },
    "8": {
-    "taux_rachat": 0.11189513614185823,
-    "ecart_reference": -0.01642759414875171,
-    "part_hors_zone_neutre": 0.799,
-    "ppb_pm": 0.020881530834779314
+    "taux_rachat": 0.08625118466485428,
+    "ecart_reference": -0.012680373196589663,
+    "part_hors_zone_neutre": 0.58,
+    "ppb_pm": 0.029123218498995598
    },
    "10": {
-    "taux_rachat": 0.12040187586368395,
-    "ecart_reference": -0.01721733168066735,
-    "part_hors_zone_neutre": 0.78,
-    "ppb_pm": 0.01642466929689781
+    "taux_rachat": 0.08678492804579375,
+    "ecart_reference": -0.012449319730156573,
+    "part_hors_zone_neutre": 0.593,
+    "ppb_pm": 0.028473382118542966
    },
    "15": {
-    "taux_rachat": 0.0947398022875545,
-    "ecart_reference": -0.011597351883630364,
-    "part_hors_zone_neutre": 0.633,
-    "ppb_pm": 0.03222439812629659
+    "taux_rachat": 0.07235467014647365,
+    "ecart_reference": -0.0061704872724581,
+    "part_hors_zone_neutre": 0.396,
+    "ppb_pm": 0.04264787341409067
    },
    "20": {
-    "taux_rachat": 0.09579822736956152,
-    "ecart_reference": -0.008860066599870485,
-    "part_hors_zone_neutre": 0.471,
-    "ppb_pm": 0.04098337119022711
+    "taux_rachat": 0.06913755063871581,
+    "ecart_reference": -0.0041217560318141866,
+    "part_hors_zone_neutre": 0.283,
+    "ppb_pm": 0.04884145552825415
    }
   },
   "C|passive": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.005285620303086702,
-    "part_hors_zone_neutre": 0.022,
-    "ppb_pm": 0.022040158391424786
+    "ecart_reference": -0.005867062075037601,
+    "part_hors_zone_neutre": 0.062,
+    "ppb_pm": 0.02196917340659891
    },
    "2": {
-    "taux_rachat": 0.04506334984920333,
-    "ecart_reference": -0.0052306522417829215,
-    "part_hors_zone_neutre": 0.018,
-    "ppb_pm": 0.023667537106291478
+    "taux_rachat": 0.04889960757493172,
+    "ecart_reference": -0.005782311429592046,
+    "part_hors_zone_neutre": 0.055,
+    "ppb_pm": 0.023896152955705963
    },
    "3": {
-    "taux_rachat": 0.04500206701062255,
-    "ecart_reference": -0.0063005603101723776,
-    "part_hors_zone_neutre": 0.092,
-    "ppb_pm": 0.02300393797966204
+    "taux_rachat": 0.04859754035509938,
+    "ecart_reference": -0.006463804597300244,
+    "part_hors_zone_neutre": 0.107,
+    "ppb_pm": 0.024907943352196853
    },
    "5": {
-    "taux_rachat": 0.0637080840399865,
-    "ecart_reference": -0.010059525892192497,
-    "part_hors_zone_neutre": 0.285,
-    "ppb_pm": 0.01953626377331603
+    "taux_rachat": 0.0591572440288213,
+    "ecart_reference": -0.008395824367520975,
+    "part_hors_zone_neutre": 0.207,
+    "ppb_pm": 0.02478195270618376
    },
    "8": {
-    "taux_rachat": 0.10771462404843446,
-    "ecart_reference": -0.01417588352196617,
-    "part_hors_zone_neutre": 0.416,
-    "ppb_pm": 0.016724446573516998
+    "taux_rachat": 0.08245143650872466,
+    "ecart_reference": -0.009631533332752575,
+    "part_hors_zone_neutre": 0.258,
+    "ppb_pm": 0.02501147746496025
    },
    "10": {
-    "taux_rachat": 0.11670565742557701,
-    "ecart_reference": -0.014808244955707607,
-    "part_hors_zone_neutre": 0.423,
-    "ppb_pm": 0.013079495104307086
+    "taux_rachat": 0.08334350229033737,
+    "ecart_reference": -0.009101818205602399,
+    "part_hors_zone_neutre": 0.253,
+    "ppb_pm": 0.024639144516641037
    },
    "15": {
-    "taux_rachat": 0.09188442990259776,
-    "ecart_reference": -0.010842873629718539,
-    "part_hors_zone_neutre": 0.283,
-    "ppb_pm": 0.021734501175038504
+    "taux_rachat": 0.0715133629880013,
+    "ecart_reference": -0.00589106064538797,
+    "part_hors_zone_neutre": 0.169,
+    "ppb_pm": 0.032680236601693294
    },
    "20": {
-    "taux_rachat": 0.10337908597293409,
-    "ecart_reference": -0.010659755546355051,
-    "part_hors_zone_neutre": 0.29,
-    "ppb_pm": 0.02853742617744222
+    "taux_rachat": 0.07550311793388907,
+    "ecart_reference": -0.005732047496339105,
+    "part_hors_zone_neutre": 0.184,
+    "ppb_pm": 0.036564255902923025
    }
   },
   "C|taux_servi_competitif": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.00030117022270882135,
-    "part_hors_zone_neutre": 0.008,
-    "ppb_pm": 0.01687761440904867
+    "ecart_reference": -0.0009114116531528218,
+    "part_hors_zone_neutre": 0.053,
+    "ppb_pm": 0.01686502686683525
    },
    "2": {
-    "taux_rachat": 0.04423230428766281,
-    "ecart_reference": -0.0005069909149486791,
-    "part_hors_zone_neutre": 0.017,
-    "ppb_pm": 0.01352551672173246
+    "taux_rachat": 0.04646463576420583,
+    "ecart_reference": -0.0012271548298582982,
+    "part_hors_zone_neutre": 0.053,
+    "ppb_pm": 0.013948098227326051
    },
    "3": {
-    "taux_rachat": 0.04488303770463034,
-    "ecart_reference": -0.0026092282220449734,
-    "part_hors_zone_neutre": 0.101,
-    "ppb_pm": 0.009826963083444468
+    "taux_rachat": 0.047763505848980675,
+    "ecart_reference": -0.002647705301503071,
+    "part_hors_zone_neutre": 0.107,
+    "ppb_pm": 0.011264361914560971
    },
    "5": {
-    "taux_rachat": 0.06753200785332443,
-    "ecart_reference": -0.008774926608237386,
-    "part_hors_zone_neutre": 0.336,
-    "ppb_pm": 0.004998360464898684
+    "taux_rachat": 0.06248463808139731,
+    "ecart_reference": -0.0066489930467740375,
+    "part_hors_zone_neutre": 0.262,
+    "ppb_pm": 0.00763295999595335
    },
    "8": {
-    "taux_rachat": 0.12447550997358325,
-    "ecart_reference": -0.01505327969861713,
-    "part_hors_zone_neutre": 0.518,
-    "ppb_pm": 0.0025266103012483087
+    "taux_rachat": 0.09783321020824502,
+    "ecart_reference": -0.010350381055309247,
+    "part_hors_zone_neutre": 0.367,
+    "ppb_pm": 0.006405548788418268
    },
    "10": {
-    "taux_rachat": 0.13549271020339684,
-    "ecart_reference": -0.016589748477132873,
-    "part_hors_zone_neutre": 0.542,
-    "ppb_pm": 0.002331461064728403
+    "taux_rachat": 0.10153074957367471,
+    "ecart_reference": -0.0102582603019505,
+    "part_hors_zone_neutre": 0.354,
+    "ppb_pm": 0.007265819440647658
    },
    "15": {
-    "taux_rachat": 0.10729486518679755,
-    "ecart_reference": -0.011430085643022784,
-    "part_hors_zone_neutre": 0.372,
-    "ppb_pm": 0.006196942386359006
+    "taux_rachat": 0.08100230357467603,
+    "ecart_reference": -0.006772973856718024,
+    "part_hors_zone_neutre": 0.232,
+    "ppb_pm": 0.01116770941993309
    },
    "20": {
-    "taux_rachat": 0.12047717312999634,
-    "ecart_reference": -0.01311299697561985,
-    "part_hors_zone_neutre": 0.393,
-    "ppb_pm": 0.009788580061736017
+    "taux_rachat": 0.09074882974252203,
+    "ecart_reference": -0.008313285211577705,
+    "part_hors_zone_neutre": 0.276,
+    "ppb_pm": 0.014320135289308011
    }
   },
   "C|taux_servi_competitif_preservant": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.0007909807103845561,
-    "part_hors_zone_neutre": 0.023,
-    "ppb_pm": 0.018196057176738514
+    "ecart_reference": -0.001954279473175746,
+    "part_hors_zone_neutre": 0.067,
+    "ppb_pm": 0.01878635241705319
    },
    "2": {
-    "taux_rachat": 0.04555040694225498,
-    "ecart_reference": -0.0009005996971882311,
-    "part_hors_zone_neutre": 0.025,
-    "ppb_pm": 0.017211303531163378
+    "taux_rachat": 0.05052484803263211,
+    "ecart_reference": -0.0019944209956000813,
+    "part_hors_zone_neutre": 0.063,
+    "ppb_pm": 0.018092994664248813
    },
    "3": {
-    "taux_rachat": 0.04599347474009895,
-    "ecart_reference": -0.0034270090052017092,
-    "part_hors_zone_neutre": 0.135,
-    "ppb_pm": 0.01603842458437373
+    "taux_rachat": 0.05065309062330421,
+    "ecart_reference": -0.0037213144096334477,
+    "part_hors_zone_neutre": 0.149,
+    "ppb_pm": 0.017453360444184766
    },
    "5": {
-    "taux_rachat": 0.06911900709059185,
-    "ecart_reference": -0.008838541504116084,
-    "part_hors_zone_neutre": 0.335,
-    "ppb_pm": 0.0131965357862954
+    "taux_rachat": 0.06498620298867892,
+    "ecart_reference": -0.0069718029500960696,
+    "part_hors_zone_neutre": 0.27,
+    "ppb_pm": 0.015841106348655903
    },
    "8": {
-    "taux_rachat": 0.11822318596682722,
-    "ecart_reference": -0.013670654224519393,
-    "part_hors_zone_neutre": 0.473,
-    "ppb_pm": 0.006912696629191487
+    "taux_rachat": 0.09384043313164232,
+    "ecart_reference": -0.009022317093731965,
+    "part_hors_zone_neutre": 0.332,
+    "ppb_pm": 0.01245883845851994
    },
    "10": {
-    "taux_rachat": 0.12983056618589894,
-    "ecart_reference": -0.01571482311340831,
-    "part_hors_zone_neutre": 0.529,
-    "ppb_pm": 0.0055756443764704835
+    "taux_rachat": 0.09788271047848147,
+    "ecart_reference": -0.009526544309916044,
+    "part_hors_zone_neutre": 0.341,
+    "ppb_pm": 0.013040296171001749
    },
    "15": {
-    "taux_rachat": 0.10545323917032391,
-    "ecart_reference": -0.010940339350084503,
-    "part_hors_zone_neutre": 0.364,
-    "ppb_pm": 0.010548030982873104
+    "taux_rachat": 0.0792525547956424,
+    "ecart_reference": -0.006463802721929375,
+    "part_hors_zone_neutre": 0.226,
+    "ppb_pm": 0.0175783669052599
    },
    "20": {
-    "taux_rachat": 0.11926143486350102,
-    "ecart_reference": -0.012343687073501386,
-    "part_hors_zone_neutre": 0.381,
-    "ppb_pm": 0.016666075023305638
+    "taux_rachat": 0.08833983621946774,
+    "ecart_reference": -0.007665930351988909,
+    "part_hors_zone_neutre": 0.28,
+    "ppb_pm": 0.021068651261067224
    }
   },
   "C|taux_servi_marge": {
    "1": {
     "taux_rachat": 0.04330599999999999,
-    "ecart_reference": -0.010196113547598149,
-    "part_hors_zone_neutre": 0.997,
-    "ppb_pm": 0.026986786695887353
+    "ecart_reference": -0.01053747259136806,
+    "part_hors_zone_neutre": 0.063,
+    "ppb_pm": 0.026609039728939878
    },
    "2": {
-    "taux_rachat": 0.05059442883405792,
-    "ecart_reference": -0.010017394808259453,
-    "part_hors_zone_neutre": 0.943,
-    "ppb_pm": 0.033945038091482735
+    "taux_rachat": 0.05389080001053091,
+    "ecart_reference": -0.010274903944318462,
+    "part_hors_zone_neutre": 0.102,
+    "ppb_pm": 0.0334665962686696
    },
    "3": {
-    "taux_rachat": 0.05142037670086731,
-    "ecart_reference": -0.010270609684468386,
-    "part_hors_zone_neutre": 0.838,
-    "ppb_pm": 0.037246023726544834
+    "taux_rachat": 0.053921110562139545,
+    "ecart_reference": -0.010135663445376085,
+    "part_hors_zone_neutre": 0.284,
+    "ppb_pm": 0.0386071133901363
    },
    "5": {
-    "taux_rachat": 0.06888768633427467,
-    "ecart_reference": -0.012238707331072352,
-    "part_hors_zone_neutre": 0.768,
-    "ppb_pm": 0.0368268106776543
+    "taux_rachat": 0.062154287272058954,
+    "ecart_reference": -0.009803501177479218,
+    "part_hors_zone_neutre": 0.438,
+    "ppb_pm": 0.04271535566457486
    },
    "8": {
-    "taux_rachat": 0.10571377997789122,
-    "ecart_reference": -0.014908770603568428,
-    "part_hors_zone_neutre": 0.716,
-    "ppb_pm": 0.03543029493632858
+    "taux_rachat": 0.07832746976569896,
+    "ecart_reference": -0.009050974310950676,
+    "part_hors_zone_neutre": 0.46,
+    "ppb_pm": 0.04449701578037299
    },
    "10": {
-    "taux_rachat": 0.11005018207446632,
-    "ecart_reference": -0.013311769942912282,
-    "part_hors_zone_neutre": 0.67,
-    "ppb_pm": 0.030710662318433463
+    "taux_rachat": 0.0756650240207347,
+    "ecart_reference": -0.007385643864899667,
+    "part_hors_zone_neutre": 0.452,
+    "ppb_pm": 0.043698415522403486
    },
    "15": {
-    "taux_rachat": 0.09104544637893627,
-    "ecart_reference": -0.01023637191149945,
-    "part_hors_zone_neutre": 0.541,
-    "ppb_pm": 0.03964808586109528
+    "taux_rachat": 0.06490032184194279,
+    "ecart_reference": -0.0040876219939441644,
+    "part_hors_zone_neutre": 0.303,
+    "ppb_pm": 0.05007547804013563
    },
    "20": {
-    "taux_rachat": 0.09502617424375626,
-    "ecart_reference": -0.009258697024415998,
-    "part_hors_zone_neutre": 0.484,
-    "ppb_pm": 0.04201116793607306
+    "taux_rachat": 0.06639712881982157,
+    "ecart_reference": -0.0038459054737744387,
+    "part_hors_zone_neutre": 0.287,
+    "ppb_pm": 0.049995611378142756
    }
   }
  }

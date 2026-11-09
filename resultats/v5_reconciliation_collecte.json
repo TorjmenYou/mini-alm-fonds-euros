@@ -58,32 +58,32 @@
     "moyenne_1_10": 0.06
    },
    "prestations": {
-    "annee_1": 0.05412635289954575,
-    "moyenne_1_10": 0.054859454669155545
+    "annee_1": 0.05411065312177628,
+    "moyenne_1_10": 0.0548993383459259
    },
    "dont_deces": {
-    "annee_1": 0.0102370613208847,
-    "moyenne_1_10": 0.01024709682042328
+    "annee_1": 0.01023409198008968,
+    "moyenne_1_10": 0.010244164954605674
    },
    "dont_rachats": {
-    "annee_1": 0.04388929157866103,
-    "moyenne_1_10": 0.04461235784873227
+    "annee_1": 0.043876561141686594,
+    "moyenne_1_10": 0.044655173391320226
    },
    "collecte_nette": {
-    "annee_1": 0.00587364710045426,
-    "moyenne_1_10": 0.005140545330844445
+    "annee_1": 0.005889346878223712,
+    "moyenne_1_10": 0.005100661654074096
    },
    "interets_credites": {
-    "annee_1": 0.02370613208846982,
-    "moyenne_1_10": 0.024709682042327884
+    "annee_1": 0.023409198008968252,
+    "moyenne_1_10": 0.02441649546056749
    },
    "variation_pm": {
-    "annee_1": 0.029579779188924085,
-    "moyenne_1_10": 0.029850227373172333
+    "annee_1": 0.029298544887191972,
+    "moyenne_1_10": 0.02951715711464159
    },
    "taux_servi_moyen": {
-    "annee_1": 0.023706132088469896,
-    "moyenne_1_10": 0.02470968204232789
+    "annee_1": 0.023409198008968225,
+    "moyenne_1_10": 0.02441649546056749
    }
   },
   "B": {
@@ -92,32 +92,32 @@
     "moyenne_1_10": 0.06
    },
    "prestations": {
-    "annee_1": 0.054134935362146815,
-    "moyenne_1_10": 0.054261356892431355
+    "annee_1": 0.054119918571855295,
+    "moyenne_1_10": 0.05417042931027729
    },
    "dont_deces": {
-    "annee_1": 0.010238684544900813,
-    "moyenne_1_10": 0.010255268944708818
+    "annee_1": 0.010235844379347034,
+    "moyenne_1_10": 0.010255894925297628
    },
    "dont_rachats": {
-    "annee_1": 0.04389625081724597,
-    "moyenne_1_10": 0.04400608794772253
+    "annee_1": 0.043884074192508254,
+    "moyenne_1_10": 0.043914534384979664
    },
    "collecte_nette": {
-    "annee_1": 0.0058650646378532,
-    "moyenne_1_10": 0.005738643107568643
+    "annee_1": 0.0058800814281447025,
+    "moyenne_1_10": 0.005829570689722706
    },
    "interets_credites": {
-    "annee_1": 0.023868454490081313,
-    "moyenne_1_10": 0.025526894470881793
+    "annee_1": 0.023584437934703602,
+    "moyenne_1_10": 0.025589492529762833
    },
    "variation_pm": {
-    "annee_1": 0.029733519127934517,
-    "moyenne_1_10": 0.031265537578450436
+    "annee_1": 0.029464519362848322,
+    "moyenne_1_10": 0.03141906321948554
    },
    "taux_servi_moyen": {
-    "annee_1": 0.02386845449008139,
-    "moyenne_1_10": 0.025526894470881804
+    "annee_1": 0.023584437934703578,
+    "moyenne_1_10": 0.02558949252976283
    }
   },
   "C": {
@@ -126,1523 +126,1495 @@
     "moyenne_1_10": 0.06
    },
    "prestations": {
-    "annee_1": 0.05413127512160307,
-    "moyenne_1_10": 0.053879874345794214
+    "annee_1": 0.054115799265132526,
+    "moyenne_1_10": 0.05369658541480097
    },
    "dont_deces": {
-    "annee_1": 0.010237992273855597,
-    "moyenne_1_10": 0.010269912511373611
+    "annee_1": 0.010235065283892387,
+    "moyenne_1_10": 0.010274532483243866
    },
    "dont_rachats": {
-    "annee_1": 0.043893282847747454,
-    "moyenne_1_10": 0.0436099618344206
+    "annee_1": 0.04388073398124012,
+    "moyenne_1_10": 0.043422052931557105
    },
    "collecte_nette": {
-    "annee_1": 0.005868724878396936,
-    "moyenne_1_10": 0.006120125654205785
+    "annee_1": 0.005884200734867476,
+    "moyenne_1_10": 0.006303414585199023
    },
    "interets_credites": {
-    "annee_1": 0.023799227385559854,
-    "moyenne_1_10": 0.02699125113736115
+    "annee_1": 0.023506528389239088,
+    "moyenne_1_10": 0.027453248324386538
    },
    "variation_pm": {
-    "annee_1": 0.02966795226395679,
-    "moyenne_1_10": 0.03311137679156693
+    "annee_1": 0.029390729124106573,
+    "moyenne_1_10": 0.033756662909585566
    },
    "taux_servi_moyen": {
-    "annee_1": 0.02379922738555993,
-    "moyenne_1_10": 0.026991251137361155
+    "annee_1": 0.02350652838923906,
+    "moyenne_1_10": 0.027453248324386538
    }
   }
  },
  "contrat_equitable": {
   "A": {
-   "va_primes": 560.0577234643464,
-   "residu": 4.652653466518359,
-   "residu_pct_va_primes": 0.00830745344915246,
+   "va_primes": 559.036168590296,
+   "residu": 2.6845113145371897,
+   "residu_pct_va_primes": 0.004802035119313724,
    "attribution": {
-    "va_dividendes": 1.3206367211291337,
+    "va_dividendes": 0.3578870796442146,
     "va_apports": 0.0,
-    "fonds_propres_final": 2.318902034318358,
-    "dividende_a_payer_final": 0.15984143557005404,
-    "reserve_capitalisation_finale": 0.7202639050472652,
-    "report_final": 3.1986142847596054e-15,
-    "pvl_finales_non_partagees": 0.13300937045339484
+    "fonds_propres_final": 1.769765953353097,
+    "dividende_a_payer_final": 0.11480464159703704,
+    "reserve_capitalisation_finale": 0.3450794256612632,
+    "report_final": -1.0235565711230737e-14,
+    "pvl_finales_non_partagees": 0.096974214282215
    },
-   "somme_attribution_plus_fuite": 4.652653466518323,
+   "somme_attribution_plus_fuite": 2.6845113145371347,
    "fuite": {
-    "ferme": -1.1368683772161603e-13,
-    "avec_collecte": 0.0
+    "ferme": -2.2737367544323206e-13,
+    "avec_collecte": -9.094947017729282e-13
    },
    "pmv_obligataires_realisees_va": {
-    "ferme": -6.504349546566888,
+    "ferme": -2.1586396512436594,
     "avec_collecte": 0.0
    },
-   "pmvl_obligations_ouverture": -185.52336817976868,
-   "flux_contrats_nouveaux": 43.037329983661266,
+   "pmvl_obligations_ouverture": -170.93926380812616,
+   "flux_contrats_nouveaux": 35.53151399195201,
    "va_apports": {
     "ferme": 0.0,
     "avec_collecte": 0.0
    },
    "annees_avec_apport_ferme": [],
-   "taux_servi_min_ferme": 0.003154310385082099
+   "taux_servi_min_ferme": 0.01249856223277696
   },
   "B": {
-   "va_primes": 579.7151277277502,
-   "residu": 0.9223420137673202,
-   "residu_pct_va_primes": 0.001591026298351967,
+   "va_primes": 576.3639616566193,
+   "residu": 0.6982660715447082,
+   "residu_pct_va_primes": 0.00121150196403278,
    "attribution": {
-    "va_dividendes": -0.9397901514458056,
+    "va_dividendes": -1.0872731914123577,
     "va_apports": 0.0,
-    "fonds_propres_final": 1.6271153218858263,
-    "dividende_a_payer_final": 0.095558286104658,
+    "fonds_propres_final": 1.588589235567404,
+    "dividende_a_payer_final": 0.09206445748069406,
     "reserve_capitalisation_finale": 0.0,
-    "report_final": 5.75750571256729e-14,
-    "pvl_finales_non_partagees": 0.13945855722269315
+    "report_final": -1.1412655768022271e-13,
+    "pvl_finales_non_partagees": 0.10488556990938114
    },
-   "somme_attribution_plus_fuite": 0.9223420137673157,
+   "somme_attribution_plus_fuite": 0.6982660715450074,
    "fuite": {
-    "ferme": -1.1368683772161603e-13,
-    "avec_collecte": -2.2737367544323206e-13
+    "ferme": -4.547473508864641e-13,
+    "avec_collecte": -4.547473508864641e-13
    },
    "pmv_obligataires_realisees_va": {
     "ferme": 0.0,
     "avec_collecte": 0.0
    },
-   "pmvl_obligations_ouverture": -128.39125369753287,
-   "flux_contrats_nouveaux": 18.532131867868202,
+   "pmvl_obligations_ouverture": -118.40046117016334,
+   "flux_contrats_nouveaux": 11.55390644668853,
    "va_apports": {
     "ferme": 0.0,
     "avec_collecte": 0.0
    },
    "annees_avec_apport_ferme": [],
-   "taux_servi_min_ferme": 0.019378769083440776
+   "taux_servi_min_ferme": 0.023713882145944488
   },
   "C": {
-   "va_primes": 590.1934337606904,
-   "residu": 2.928806031686463,
-   "residu_pct_va_primes": 0.004962451061212628,
+   "va_primes": 587.6788983233066,
+   "residu": 1.884162996084342,
+   "residu_pct_va_primes": 0.0032061096654312496,
    "attribution": {
-    "va_dividendes": 0.19149762952689287,
+    "va_dividendes": -0.610772216864035,
     "va_apports": 0.0,
-    "fonds_propres_final": 1.9683588596165031,
-    "dividende_a_payer_final": 0.13052507484610995,
-    "reserve_capitalisation_finale": 0.44130524056556736,
-    "report_final": 1.3818013710161495e-13,
-    "pvl_finales_non_partagees": 0.19711922713122507
+    "fonds_propres_final": 1.9416836544360905,
+    "dividende_a_payer_final": 0.12224249297856876,
+    "reserve_capitalisation_finale": 0.2638038343578654,
+    "report_final": -2.405357942139223e-13,
+    "pvl_finales_non_partagees": 0.1672052311762811
    },
-   "somme_attribution_plus_fuite": 2.9288060316864364,
+   "somme_attribution_plus_fuite": 1.88416299608453,
    "fuite": {
-    "ferme": 0.0,
-    "avec_collecte": 0.0
+    "ferme": -4.547473508864641e-13,
+    "avec_collecte": -4.547473508864641e-13
    },
    "pmv_obligataires_realisees_va": {
-    "ferme": -2.7539457646193677,
+    "ferme": -1.6815931880829194,
     "avec_collecte": 0.0
    },
-   "pmvl_obligations_ouverture": -71.4134939988395,
-   "flux_contrats_nouveaux": 13.767660186851344,
+   "pmvl_obligations_ouverture": -52.10618761683622,
+   "flux_contrats_nouveaux": 3.6941787634702905,
    "va_apports": {
     "ferme": 0.0,
     "avec_collecte": 0.0
    },
    "annees_avec_apport_ferme": [],
-   "taux_servi_min_ferme": 0.024326089101008176
+   "taux_servi_min_ferme": 0.026985516630860452
   }
  },
  "variantes_liquidation": {
   "A": {
    "rc_initiale_nulle": {
-    "va_primes": 559.5198130540239,
-    "residu": 3.6851904896100223,
-    "residu_pct_va_primes": 0.006586344940128514,
+    "va_primes": 558.4411675295872,
+    "residu": 0.6412054220243135,
+    "residu_pct_va_primes": 0.0011482058617935636,
     "attribution": {
-     "va_dividendes": 1.00194093429144,
+     "va_dividendes": -1.3863369465139002,
      "va_apports": 0.0,
-     "fonds_propres_final": 2.435458519257063,
-     "dividende_a_payer_final": 0.14091311700586606,
+     "fonds_propres_final": 1.8375996456568056,
+     "dividende_a_payer_final": 0.10633238231782832,
      "reserve_capitalisation_finale": 0.0,
-     "report_final": 1.554526542393168e-14,
-     "pvl_finales_non_partagees": 0.10687791905549257
+     "report_final": -4.4652655415244086e-14,
+     "pvl_finales_non_partagees": 0.08361034056412843
     },
-    "somme_attribution_plus_fuite": 3.6851904896101044,
+    "somme_attribution_plus_fuite": 0.6412054220244764,
     "fuite": {
-     "ferme": -2.2737367544323206e-13,
-     "avec_collecte": 0.0
+     "ferme": -3.410605131648481e-13,
+     "avec_collecte": -6.821210263296962e-13
     },
     "pmv_obligataires_realisees_va": {
-     "ferme": -11.443627458189653,
+     "ferme": -2.381247453131762,
      "avec_collecte": 0.0
     },
-    "pmvl_obligations_ouverture": -185.52336817976868,
-    "flux_contrats_nouveaux": 43.20417087135513,
+    "pmvl_obligations_ouverture": -170.93926380812616,
+    "flux_contrats_nouveaux": 35.66696363415167,
     "va_apports": {
      "ferme": 0.0,
      "avec_collecte": 0.0
     },
     "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.0010502111989029153
+    "taux_servi_min_ferme": 0.011725561387839738
    },
    "sans_retention": {
-    "va_primes": 554.3108702042256,
-    "residu": 5.02080838875338,
-    "residu_pct_va_primes": 0.009057748383869068,
+    "va_primes": 552.6000106492661,
+    "residu": 4.170068231302707,
+    "residu_pct_va_primes": 0.007546268821824978,
     "attribution": {
-     "va_dividendes": 3.339628026014225,
+     "va_dividendes": 3.393501319722226,
      "va_apports": 0.0,
-     "fonds_propres_final": 0.9054996480351231,
-     "dividende_a_payer_final": 0.025671126979403942,
-     "reserve_capitalisation_finale": 0.7193720260734586,
-     "report_final": -2.1750577136365335e-15,
-     "pvl_finales_non_partagees": 0.03063756165121067
+     "fonds_propres_final": 0.0,
+     "dividende_a_payer_final": 0.02567113471028706,
+     "reserve_capitalisation_finale": 0.7202639050472652,
+     "report_final": 3.147436456203452e-14,
+     "pvl_finales_non_partagees": 0.030631871822644045
     },
-    "somme_attribution_plus_fuite": 5.020808388753305,
+    "somme_attribution_plus_fuite": 4.170068231302909,
     "fuite": {
-     "ferme": -1.1368683772161603e-13,
-     "avec_collecte": -2.2737367544323206e-13
-    },
-    "pmv_obligataires_realisees_va": {
-     "ferme": -21.195082754174546,
+     "ferme": -4.547473508864641e-13,
      "avec_collecte": 0.0
     },
-    "pmvl_obligations_ouverture": -185.52336817976868,
-    "flux_contrats_nouveaux": 45.00381297214108,
+    "pmv_obligataires_realisees_va": {
+     "ferme": -9.467528640534375,
+     "avec_collecte": 0.0
+    },
+    "pmvl_obligations_ouverture": -170.93926380812616,
+    "flux_contrats_nouveaux": 37.207570106774824,
     "va_apports": {
      "ferme": 0.0,
      "avec_collecte": 0.0
     },
     "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.0010279336286451964
+    "taux_servi_min_ferme": 0.010506059103227583
    },
    "rc_initiale_nulle_sans_retention": {
-    "va_primes": 553.6568398812642,
-    "residu": 3.683768227361952,
-    "residu_pct_va_primes": 0.00665352247459268,
+    "va_primes": 551.8915718942469,
+    "residu": 0.9049176835824255,
+    "residu_pct_va_primes": 0.0016396657054872099,
     "attribution": {
-     "va_dividendes": 0.13259348590223397,
-     "va_apports": 3.549581842977769,
-     "fonds_propres_final": 0.008596764667322756,
-     "dividende_a_payer_final": 7.676674283423052e-16,
-     "reserve_capitalisation_finale": -0.007003866185499991,
-     "report_final": -2.7440112295381462e-14,
-     "pvl_finales_non_partagees": 1.0235565711230737e-15
+     "va_dividendes": 0.04983603464089725,
+     "va_apports": 0.0,
+     "fonds_propres_final": 0.855190734297351,
+     "dividende_a_payer_final": 0.0,
+     "reserve_capitalisation_finale": -0.00010908535500546463,
+     "report_final": -2.6868359991980685e-14,
+     "pvl_finales_non_partagees": 0.0
     },
-    "somme_attribution_plus_fuite": 3.683768227362027,
+    "somme_attribution_plus_fuite": 0.9049176835823065,
     "fuite": {
-     "ferme": -4.547473508864641e-13,
-     "avec_collecte": -2.2737367544323206e-13
+     "ferme": 0.0,
+     "avec_collecte": -9.094947017729282e-13
     },
     "pmv_obligataires_realisees_va": {
-     "ferme": -21.192116364144248,
+     "ferme": -27.31120072571386,
      "avec_collecte": 0.0
     },
-    "pmvl_obligations_ouverture": -185.52336817976868,
-    "flux_contrats_nouveaux": 45.19709960530059,
+    "pmvl_obligations_ouverture": -170.93926380812616,
+    "flux_contrats_nouveaux": 37.367486190985915,
     "va_apports": {
-     "ferme": 3.549581842977769,
+     "ferme": 0.0,
      "avec_collecte": 0.0
     },
-    "annees_avec_apport_ferme": [
-     34,
-     35,
-     36,
-     37,
-     38,
-     39,
-     40,
-     41,
-     42,
-     43,
-     44,
-     45,
-     46,
-     47,
-     48,
-     49,
-     50,
-     51,
-     52,
-     53,
-     54,
-     55,
-     56,
-     57,
-     58,
-     59,
-     60
-    ],
-    "taux_servi_min_ferme": 0.0
+    "annees_avec_apport_ferme": [],
+    "taux_servi_min_ferme": 0.003317628847379005
    }
   },
   "B": {
    "rc_initiale_nulle": {
-    "va_primes": 579.5332348269917,
-    "residu": 0.5145065260278443,
-    "residu_pct_va_primes": 0.0008877946856342763,
+    "va_primes": 576.1248167993786,
+    "residu": 0.4768864072176484,
+    "residu_pct_va_primes": 0.0008277484206755018,
     "attribution": {
-     "va_dividendes": -1.329931629520864,
+     "va_dividendes": -1.3160173838469547,
      "va_apports": 0.0,
-     "fonds_propres_final": 1.6304657952149664,
-     "dividende_a_payer_final": 0.09447382533360732,
+     "fonds_propres_final": 1.5932894281320886,
+     "dividende_a_payer_final": 0.09228728466091697,
      "reserve_capitalisation_finale": 0.0,
-     "report_final": -2.2518244564707624e-14,
-     "pvl_finales_non_partagees": 0.11949853500009422
+     "report_final": 3.8895149702676803e-14,
+     "pvl_finales_non_partagees": 0.10732707827204972
     },
-    "somme_attribution_plus_fuite": 0.514506526027554,
+    "somme_attribution_plus_fuite": 0.4768864072179122,
+    "fuite": {
+     "ferme": -4.547473508864641e-13,
+     "avec_collecte": -6.821210263296962e-13
+    },
+    "pmv_obligataires_realisees_va": {
+     "ferme": -1.210261195370284,
+     "avec_collecte": 0.0
+    },
+    "pmvl_obligations_ouverture": -118.40046117016334,
+    "flux_contrats_nouveaux": 11.706306983115951,
+    "va_apports": {
+     "ferme": 0.0,
+     "avec_collecte": 0.0
+    },
+    "annees_avec_apport_ferme": [],
+    "taux_servi_min_ferme": 0.02362666510781969
+   },
+   "sans_retention": {
+    "va_primes": 575.5276746211748,
+    "residu": 4.809545994338237,
+    "residu_pct_va_primes": 0.008356758860473542,
+    "attribution": {
+     "va_dividendes": 3.9792746805931145,
+     "va_apports": 0.0,
+     "fonds_propres_final": 0.0,
+     "dividende_a_payer_final": 0.027703595359149458,
+     "reserve_capitalisation_finale": 0.7532766644131361,
+     "report_final": -5.2969052555619065e-14,
+     "pvl_finales_non_partagees": 0.04929105397319028
+    },
+    "somme_attribution_plus_fuite": 4.80954599433831,
     "fuite": {
      "ferme": -2.2737367544323206e-13,
      "avec_collecte": -4.547473508864641e-13
     },
     "pmv_obligataires_realisees_va": {
-     "ferme": -1.4527996286729619,
+     "ferme": -4.902970503593909,
      "avec_collecte": 0.0
     },
-    "pmvl_obligations_ouverture": -128.39125369753287,
-    "flux_contrats_nouveaux": 18.83139317306916,
+    "pmvl_obligations_ouverture": -118.40046117016334,
+    "flux_contrats_nouveaux": 12.41067444655539,
     "va_apports": {
      "ferme": 0.0,
      "avec_collecte": 0.0
     },
     "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.019240378416261528
-   },
-   "sans_retention": {
-    "va_primes": 579.2775258094853,
-    "residu": 5.797144651741064,
-    "residu_pct_va_primes": 0.01000754283301446,
-    "attribution": {
-     "va_dividendes": 4.784403553972709,
-     "va_apports": 0.0,
-     "fonds_propres_final": 0.0,
-     "dividende_a_payer_final": 0.033905303386312716,
-     "reserve_capitalisation_finale": 0.9144656794453141,
-     "report_final": -7.958152340481898e-14,
-     "pvl_finales_non_partagees": 0.06437011493678148
-    },
-    "somme_attribution_plus_fuite": 5.797144651741151,
-    "fuite": {
-     "ferme": -1.1368683772161603e-13,
-     "avec_collecte": 0.0
-    },
-    "pmv_obligataires_realisees_va": {
-     "ferme": -5.952126840889763,
-     "avec_collecte": 0.0
-    },
-    "pmvl_obligations_ouverture": -128.39125369753287,
-    "flux_contrats_nouveaux": 20.14310237770087,
-    "va_apports": {
-     "ferme": 0.0,
-     "avec_collecte": 0.0
-    },
-    "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.019351160812263766
+    "taux_servi_min_ferme": 0.023713882145944484
    },
    "rc_initiale_nulle_sans_retention": {
-    "va_primes": 579.1615890777766,
-    "residu": 0.07619634927152674,
-    "residu_pct_va_primes": 0.0001315631953300933,
+    "va_primes": 575.3034592909471,
+    "residu": 0.05743493550653511,
+    "residu_pct_va_primes": 9.983415635519177e-05,
     "attribution": {
-     "va_dividendes": 0.07619634927145569,
+     "va_dividendes": 0.057434935507309604,
      "va_apports": 0.0,
      "fonds_propres_final": 0.0,
-     "dividende_a_payer_final": 0.0,
+     "dividende_a_payer_final": -2.0471131422461474e-15,
      "reserve_capitalisation_finale": 0.0,
-     "report_final": -6.141339426738442e-14,
-     "pvl_finales_non_partagees": 0.0
+     "report_final": -8.802586511658434e-14,
+     "pvl_finales_non_partagees": -3.3265588561499896e-15
     },
-    "somme_attribution_plus_fuite": 0.07619634927150797,
+    "somme_attribution_plus_fuite": 0.057434935506534085,
     "fuite": {
-     "ferme": -3.410605131648481e-13,
-     "avec_collecte": -2.2737367544323206e-13
+     "ferme": -2.2737367544323206e-13,
+     "avec_collecte": -9.094947017729282e-13
     },
     "pmv_obligataires_realisees_va": {
-     "ferme": -7.9472655000693715,
-     "avec_collecte": -0.19990833563270166
+     "ferme": -6.55004480338958,
+     "avec_collecte": -0.1969240768552805
     },
-    "pmvl_obligations_ouverture": -128.39125369753287,
-    "flux_contrats_nouveaux": 20.53115512345073,
+    "pmvl_obligations_ouverture": -118.40046117016334,
+    "flux_contrats_nouveaux": 12.590795844117906,
     "va_apports": {
      "ferme": 0.0,
      "avec_collecte": 0.0
     },
     "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.018187106344477677
+    "taux_servi_min_ferme": 0.02362666510781969
    }
   },
   "C": {
    "rc_initiale_nulle": {
-    "va_primes": 590.1301663284854,
-    "residu": 0.45597482360642516,
-    "residu_pct_va_primes": 0.0007726682173244723,
+    "va_primes": 587.6408559964448,
+    "residu": 0.30509134887552136,
+    "residu_pct_va_primes": 0.0005191799476879245,
     "attribution": {
-     "va_dividendes": -1.799541839966814,
+     "va_dividendes": -1.8894852329313778,
      "va_apports": 0.0,
-     "fonds_propres_final": 1.9772380332555994,
-     "dividende_a_payer_final": 0.11459341606903273,
-     "reserve_capitalisation_finale": 0.0,
-     "report_final": 4.4524710843853705e-14,
-     "pvl_finales_non_partagees": 0.16368521424836047
+     "fonds_propres_final": 1.9466167302181687,
+     "dividende_a_payer_final": 0.11233824794526506,
+     "reserve_capitalisation_finale": -0.011732422118445529,
+     "report_final": 9.467898282888431e-14,
+     "pvl_finales_non_partagees": 0.1473540257620589
     },
-    "somme_attribution_plus_fuite": 0.45597482360667796,
+    "somme_attribution_plus_fuite": 0.3050913488755366,
     "fuite": {
-     "ferme": -4.547473508864641e-13,
-     "avec_collecte": 0.0
+     "ferme": -2.2737367544323206e-13,
+     "avec_collecte": -4.547473508864641e-13
     },
     "pmv_obligataires_realisees_va": {
-     "ferme": -3.143785355297923,
+     "ferme": -1.927091068092147,
      "avec_collecte": 0.0
     },
-    "pmvl_obligations_ouverture": -71.4134939988395,
-    "flux_contrats_nouveaux": 13.790704082232196,
+    "pmvl_obligations_ouverture": -52.10618761683622,
+    "flux_contrats_nouveaux": 3.692993867729797,
     "va_apports": {
      "ferme": 0.0,
      "avec_collecte": 0.0
     },
     "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.024116799524428096
+    "taux_servi_min_ferme": 0.026710251808394803
    },
    "sans_retention": {
-    "va_primes": 589.57366081363,
-    "residu": 3.3798518792902996,
-    "residu_pct_va_primes": 0.005732705010305241,
+    "va_primes": 587.3260327918731,
+    "residu": 3.6582174108050367,
+    "residu_pct_va_primes": 0.006228597417035276,
     "attribution": {
-     "va_dividendes": 2.7911498043954737,
+     "va_dividendes": 3.0200254627395253,
      "va_apports": 0.0,
      "fonds_propres_final": 0.0,
-     "dividende_a_payer_final": 0.019629650460993235,
-     "reserve_capitalisation_finale": 0.5289102044953575,
-     "report_final": 4.9898382842249845e-14,
-     "pvl_finales_non_partagees": 0.040162219938789503
+     "dividende_a_payer_final": 0.021298457004625942,
+     "reserve_capitalisation_finale": 0.5726979791419591,
+     "report_final": -4.907074139606829e-14,
+     "pvl_finales_non_partagees": 0.04419551191939446
     },
-    "somme_attribution_plus_fuite": 3.37985187929055,
+    "somme_attribution_plus_fuite": 3.658217410805001,
     "fuite": {
-     "ferme": -1.1368683772161603e-13,
-     "avec_collecte": -2.2737367544323206e-13
+     "ferme": -2.2737367544323206e-13,
+     "avec_collecte": -6.821210263296962e-13
     },
     "pmv_obligataires_realisees_va": {
-     "ferme": -7.283528016704149,
-     "avec_collecte": -1.245493978351872
+     "ferme": -4.484710485841146,
+     "avec_collecte": -0.7819814960753515
     },
-    "pmvl_obligations_ouverture": -71.4134939988395,
-    "flux_contrats_nouveaux": 14.241176813199331,
+    "pmvl_obligations_ouverture": -52.10618761683622,
+    "flux_contrats_nouveaux": 3.8822268496285233,
     "va_apports": {
      "ferme": 0.0,
      "avec_collecte": 0.0
     },
     "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.024116799524428096
+    "taux_servi_min_ferme": 0.02698811318731483
    },
    "rc_initiale_nulle_sans_retention": {
-    "va_primes": 588.9952336421456,
-    "residu": 0.03995712121138695,
-    "residu_pct_va_primes": 6.783946444575746e-05,
+    "va_primes": 586.9691528547582,
+    "residu": -0.008349209617222186,
+    "residu_pct_va_primes": -1.4224273246073196e-05,
     "attribution": {
-     "va_dividendes": 0.03995712121125905,
+     "va_dividendes": 0.003930748994463329,
      "va_apports": 0.0,
      "fonds_propres_final": 0.0,
-     "dividende_a_payer_final": 3.0706697133692213e-15,
-     "reserve_capitalisation_finale": 0.0,
-     "report_final": 7.062540340749208e-14,
-     "pvl_finales_non_partagees": 6.1413394267384426e-15
+     "dividende_a_payer_final": -0.00041045496004069455,
+     "reserve_capitalisation_finale": -0.011000188538326877,
+     "report_final": 4.1494023809043984e-14,
+     "pvl_finales_non_partagees": -0.0008693151130195176
     },
-    "somme_attribution_plus_fuite": 0.03995712121133889,
+    "somme_attribution_plus_fuite": -0.00834920961710964,
     "fuite": {
-     "ferme": 0.0,
-     "avec_collecte": 0.0
+     "ferme": -4.547473508864641e-13,
+     "avec_collecte": -6.821210263296962e-13
     },
     "pmv_obligataires_realisees_va": {
-     "ferme": -7.705578330992466,
-     "avec_collecte": -1.6530652945739337
+     "ferme": -4.745902181777799,
+     "avec_collecte": -1.0332481261264936
     },
-    "pmvl_obligations_ouverture": -71.4134939988395,
-    "flux_contrats_nouveaux": 14.34595685947113,
+    "pmvl_obligations_ouverture": -52.10618761683622,
+    "flux_contrats_nouveaux": 3.943885018086462,
     "va_apports": {
      "ferme": 0.0,
      "avec_collecte": 0.0
     },
     "annees_avec_apport_ferme": [],
-    "taux_servi_min_ferme": 0.0241167995244281
+    "taux_servi_min_ferme": 0.026726628113233918
    }
   }
  },
  "capital_croissance": {
   "A|passive": {
    "pm0": 1000.0,
-   "scr_100": 106.2818240302533,
+   "scr_100": 105.47085888266817,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10628182403025331,
-   "pm_10_mediane_extinction": 712.4771528971027,
-   "fonds_propres_10_mediane_extinction": 110.70382648304594,
+   "scr_sur_pm0": 0.10547085888266816,
+   "pm_10_mediane_extinction": 715.1618383516418,
+   "fonds_propres_10_mediane_extinction": 104.425764851976,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1344.0943092671118,
-     "ecart_pm_10": 631.6171563700092,
-     "scr_supplementaire_proportionnel": 67.1294234678063,
-     "fonds_propres_10_mediane": 208.84372584428024
+     "pm_10_mediane": 1340.2881371202905,
+     "ecart_pm_10": 625.1262987686487,
+     "scr_supplementaire_proportionnel": 65.9326076412728,
+     "fonds_propres_10_mediane": 195.70481300205847
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1139.4309436127428,
-     "ecart_pm_10": 426.95379071564014,
-     "scr_supplementaire_proportionnel": 45.377427653889264,
-     "fonds_propres_10_mediane": 177.0433830168526
+     "pm_10_mediane": 1138.3218722988613,
+     "ecart_pm_10": 423.1600339472195,
+     "scr_supplementaire_proportionnel": 44.63105222523226,
+     "fonds_propres_10_mediane": 166.21431092649277
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1049.9445050781767,
-     "ecart_pm_10": 337.46735218107403,
-     "scr_supplementaire_proportionnel": 35.866645740464435,
-     "fonds_propres_10_mediane": 163.13908991238713
+     "pm_10_mediane": 1051.9649465172392,
+     "ecart_pm_10": 336.80310816559745,
+     "scr_supplementaire_proportionnel": 35.52291309257775,
+     "fonds_propres_10_mediane": 153.60473426647923
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 961.445459822161,
-     "ecart_pm_10": 248.9683069250583,
-     "scr_supplementaire_proportionnel": 26.460805785719142,
-     "fonds_propres_10_mediane": 149.38821676494723
+     "pm_10_mediane": 966.2346030631095,
+     "ecart_pm_10": 251.0727647114677,
+     "scr_supplementaire_proportionnel": 26.480860136164555,
+     "fonds_propres_10_mediane": 141.08664925951865
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 815.964773164668,
-     "ecart_pm_10": 103.48762026756538,
-     "scr_supplementaire_proportionnel": 10.99885304658706,
-     "fonds_propres_10_mediane": 126.78360603900663
+     "pm_10_mediane": 822.6141456843089,
+     "ecart_pm_10": 107.45230733266715,
+     "scr_supplementaire_proportionnel": 11.333087143300826,
+     "fonds_propres_10_mediane": 120.11562521167565
     }
    }
   },
   "A|reinvestissement_progressif": {
    "pm0": 1000.0,
-   "scr_100": 107.38334438130941,
+   "scr_100": 106.61555100886694,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10738334438130942,
-   "pm_10_mediane_extinction": 710.4492129725718,
-   "fonds_propres_10_mediane_extinction": 110.55064402342448,
+   "scr_sur_pm0": 0.10661555100886694,
+   "pm_10_mediane_extinction": 714.7133370536258,
+   "fonds_propres_10_mediane_extinction": 104.87833388763363,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1341.3240964550928,
-     "ecart_pm_10": 630.874883482521,
-     "scr_supplementaire_proportionnel": 67.74545487452201,
-     "fonds_propres_10_mediane": 208.71899074504742
+     "pm_10_mediane": 1339.6689064740872,
+     "ecart_pm_10": 624.9555694204614,
+     "scr_supplementaire_proportionnel": 66.62998238982269,
+     "fonds_propres_10_mediane": 196.5854498410295
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1134.1705110960274,
-     "ecart_pm_10": 423.72129812345565,
-     "scr_supplementaire_proportionnel": 45.50061007808652,
-     "fonds_propres_10_mediane": 176.48450887774152
+     "pm_10_mediane": 1137.1774794859118,
+     "ecart_pm_10": 422.46414243228605,
+     "scr_supplementaire_proportionnel": 45.04124732690662,
+     "fonds_propres_10_mediane": 166.87148986849326
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1044.7875466409234,
-     "ecart_pm_10": 334.33833366835165,
-     "scr_supplementaire_proportionnel": 35.902368424181745,
-     "fonds_propres_10_mediane": 162.5759224442506
+     "pm_10_mediane": 1050.2331497111077,
+     "ecart_pm_10": 335.5198126574819,
+     "scr_supplementaire_proportionnel": 35.77162970086924,
+     "fonds_propres_10_mediane": 154.11312091829376
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 953.1906810305768,
-     "ecart_pm_10": 242.741468058005,
-     "scr_supplementaire_proportionnel": 26.066390660097372,
-     "fonds_propres_10_mediane": 148.3159644657297
+     "pm_10_mediane": 964.7430526245831,
+     "ecart_pm_10": 250.02971557095736,
+     "scr_supplementaire_proportionnel": 26.6570558941879,
+     "fonds_propres_10_mediane": 141.56176335404496
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 811.1444315048648,
-     "ecart_pm_10": 100.69521853229298,
-     "scr_supplementaire_proportionnel": 10.812989329204427,
-     "fonds_propres_10_mediane": 126.21949276807672
+     "pm_10_mediane": 821.6555821901165,
+     "ecart_pm_10": 106.94224513649078,
+     "scr_supplementaire_proportionnel": 11.401706391352285,
+     "fonds_propres_10_mediane": 120.57123327909483
     }
    }
   },
   "A|repositionnement": {
    "pm0": 1000.0,
-   "scr_100": 100.97192653803012,
+   "scr_100": 98.78745298990964,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10097192653803012,
-   "pm_10_mediane_extinction": 651.6738180369512,
-   "fonds_propres_10_mediane_extinction": 113.6327217167744,
+   "scr_sur_pm0": 0.09878745298990964,
+   "pm_10_mediane_extinction": 655.0780826469563,
+   "fonds_propres_10_mediane_extinction": 108.25860692642883,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1205.679793458743,
-     "ecart_pm_10": 554.0059754217918,
-     "scr_supplementaire_proportionnel": 55.93905065191889,
-     "fonds_propres_10_mediane": 210.235048052624
+     "pm_10_mediane": 1208.332083176782,
+     "ecart_pm_10": 553.2540005298256,
+     "scr_supplementaire_proportionnel": 54.65455356881959,
+     "fonds_propres_10_mediane": 199.689703402468
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 962.3947696179248,
-     "ecart_pm_10": 310.72095158097363,
-     "scr_supplementaire_proportionnel": 31.374093096860886,
-     "fonds_propres_10_mediane": 167.81330477124055
+     "pm_10_mediane": 971.8352227645903,
+     "ecart_pm_10": 316.757140117634,
+     "scr_supplementaire_proportionnel": 31.291631088588986,
+     "fonds_propres_10_mediane": 160.60608676360062
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 899.4659042263371,
-     "ecart_pm_10": 247.79208618938594,
-     "scr_supplementaire_proportionnel": 25.020044323419906,
-     "fonds_propres_10_mediane": 156.84036393630714
+     "pm_10_mediane": 912.8437599080414,
+     "ecart_pm_10": 257.7656772610851,
+     "scr_supplementaire_proportionnel": 25.464014724841665,
+     "fonds_propres_10_mediane": 150.7719910540444
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 844.8939651820024,
-     "ecart_pm_10": 193.22014714505121,
-     "scr_supplementaire_proportionnel": 19.509810503197482,
-     "fonds_propres_10_mediane": 147.32462494030216
+     "pm_10_mediane": 854.8772552857345,
+     "ecart_pm_10": 199.79917263877815,
+     "scr_supplementaire_proportionnel": 19.737651374476137,
+     "fonds_propres_10_mediane": 141.24593340745486
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 746.745821621213,
-     "ecart_pm_10": 95.07200358426189,
-     "scr_supplementaire_proportionnel": 9.599603361733429,
-     "fonds_propres_10_mediane": 130.21047921958393
+     "pm_10_mediane": 758.5011837097718,
+     "ecart_pm_10": 103.42310106281548,
+     "scr_supplementaire_proportionnel": 10.216904734313557,
+     "fonds_propres_10_mediane": 125.35037223146011
     }
    }
   },
   "A|taux_servi_competitif": {
    "pm0": 1000.0,
-   "scr_100": 88.58483851480553,
+   "scr_100": 89.66657969938746,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.08858483851480553,
-   "pm_10_mediane_extinction": 711.8118285031178,
-   "fonds_propres_10_mediane_extinction": 103.14275513567091,
+   "scr_sur_pm0": 0.08966657969938746,
+   "pm_10_mediane_extinction": 713.4076592171386,
+   "fonds_propres_10_mediane_extinction": 96.01207299213675,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1383.1677179948624,
-     "ecart_pm_10": 671.3558894917446,
-     "scr_supplementaire_proportionnel": 59.471953056589825,
-     "fonds_propres_10_mediane": 200.4233753023169
+     "pm_10_mediane": 1376.855954121489,
+     "ecart_pm_10": 663.4482949043504,
+     "scr_supplementaire_proportionnel": 59.489139411463654,
+     "fonds_propres_10_mediane": 185.30049777126743
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1272.5379586803035,
-     "ecart_pm_10": 560.7261301771857,
-     "scr_supplementaire_proportionnel": 49.671833692777824,
-     "fonds_propres_10_mediane": 184.3929333810363
+     "pm_10_mediane": 1273.2698693878099,
+     "ecart_pm_10": 559.8622101706712,
+     "scr_supplementaire_proportionnel": 50.20092948894371,
+     "fonds_propres_10_mediane": 171.35963997429138
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1213.6346254628697,
-     "ecart_pm_10": 501.82279695975194,
-     "scr_supplementaire_proportionnel": 44.45389143172767,
-     "fonds_propres_10_mediane": 175.8577393431727
+     "pm_10_mediane": 1217.5985579748572,
+     "ecart_pm_10": 504.1908987577185,
+     "scr_supplementaire_proportionnel": 45.20907340716476,
+     "fonds_propres_10_mediane": 163.86726454785725
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1153.1924993565622,
-     "ecart_pm_10": 441.38067085344437,
-     "scr_supplementaire_proportionnel": 39.0996354511089,
-     "fonds_propres_10_mediane": 167.06633257357885
+     "pm_10_mediane": 1158.4415552853493,
+     "ecart_pm_10": 445.03389606821065,
+     "scr_supplementaire_proportionnel": 39.904667310729124,
+     "fonds_propres_10_mediane": 155.82752836544256
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1044.6907870003342,
-     "ecart_pm_10": 332.87895849721644,
-     "scr_supplementaire_proportionnel": 29.48802878345257,
-     "fonds_propres_10_mediane": 151.33362513172756
+     "pm_10_mediane": 1057.7213930551386,
+     "ecart_pm_10": 344.31373383799996,
+     "scr_supplementaire_proportionnel": 30.873434856778704,
+     "fonds_propres_10_mediane": 142.2467283845645
     }
    }
   },
   "A|taux_servi_marge": {
    "pm0": 1000.0,
-   "scr_100": 123.73426159628326,
+   "scr_100": 116.0498799470373,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.12373426159628326,
-   "pm_10_mediane_extinction": 654.3805158242958,
-   "fonds_propres_10_mediane_extinction": 107.08564522613389,
+   "scr_sur_pm0": 0.11604987994703729,
+   "pm_10_mediane_extinction": 665.6048961456113,
+   "fonds_propres_10_mediane_extinction": 101.24051463728566,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1211.9454733838975,
-     "ecart_pm_10": 557.5649575596017,
-     "scr_supplementaire_proportionnel": 68.98988831560033,
-     "fonds_propres_10_mediane": 198.32797563161859
+     "pm_10_mediane": 1218.135053382078,
+     "ecart_pm_10": 552.5301572364667,
+     "scr_supplementaire_proportionnel": 64.1210584144096,
+     "fonds_propres_10_mediane": 185.2820200336084
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 907.031548984688,
-     "ecart_pm_10": 252.65103316039222,
-     "scr_supplementaire_proportionnel": 31.261589029639207,
-     "fonds_propres_10_mediane": 148.43054815153585
+     "pm_10_mediane": 921.7184296531411,
+     "ecart_pm_10": 256.11353350752984,
+     "scr_supplementaire_proportionnel": 29.72194481636035,
+     "fonds_propres_10_mediane": 140.11364504685133
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 780.4504004486378,
-     "ecart_pm_10": 126.06988462434197,
-     "scr_supplementaire_proportionnel": 15.599164083521577,
-     "fonds_propres_10_mediane": 127.71626397488467
+     "pm_10_mediane": 797.8356693869978,
+     "ecart_pm_10": 132.2307732413865,
+     "scr_supplementaire_proportionnel": 15.345365359966813,
+     "fonds_propres_10_mediane": 121.33239591852114
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 692.6284273764527,
-     "ecart_pm_10": 38.24791155215689,
-     "scr_supplementaire_proportionnel": 4.732577093506086,
-     "fonds_propres_10_mediane": 113.34469815951091
+     "pm_10_mediane": 708.5657808118929,
+     "ecart_pm_10": 42.96088466628157,
+     "scr_supplementaire_proportionnel": 4.985605507940492,
+     "fonds_propres_10_mediane": 107.77499492442571
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 660.9206304848891,
-     "ecart_pm_10": 6.540114660593304,
-     "scr_supplementaire_proportionnel": 0.8092362582835391,
-     "fonds_propres_10_mediane": 108.1558977494694
+     "pm_10_mediane": 676.5658513518073,
+     "ecart_pm_10": 10.96095520619599,
+     "scr_supplementaire_proportionnel": 1.272017535783898,
+     "fonds_propres_10_mediane": 102.90770902305043
     }
    }
   },
   "A|liquidite_defensive": {
    "pm0": 1000.0,
-   "scr_100": 124.47741681458855,
+   "scr_100": 117.76128874255721,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.12447741681458856,
-   "pm_10_mediane_extinction": 708.8659564387551,
-   "fonds_propres_10_mediane_extinction": 122.91879940584062,
+   "scr_sur_pm0": 0.11776128874255722,
+   "pm_10_mediane_extinction": 712.8480928233697,
+   "fonds_propres_10_mediane_extinction": 113.69994137121495,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1329.4809615337472,
-     "ecart_pm_10": 620.6150050949921,
-     "scr_supplementaire_proportionnel": 77.25255267059732,
-     "fonds_propres_10_mediane": 230.534704255853
+     "pm_10_mediane": 1328.414339533112,
+     "ecart_pm_10": 615.5662467097424,
+     "scr_supplementaire_proportionnel": 72.48987451895817,
+     "fonds_propres_10_mediane": 211.88333677568113
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1127.4931779710905,
-     "ecart_pm_10": 418.6272215323354,
-     "scr_supplementaire_proportionnel": 52.10963514461361,
-     "fonds_propres_10_mediane": 195.47185116250182
+     "pm_10_mediane": 1133.5658835556287,
+     "ecart_pm_10": 420.717790732259,
+     "scr_supplementaire_proportionnel": 49.54426923355231,
+     "fonds_propres_10_mediane": 180.77625265402048
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1029.51527132404,
-     "ecart_pm_10": 320.64931488528487,
-     "scr_supplementaire_proportionnel": 39.91359842028786,
-     "fonds_propres_10_mediane": 178.47002221068968
+     "pm_10_mediane": 1042.0339725326153,
+     "ecart_pm_10": 329.18587970924557,
+     "scr_supplementaire_proportionnel": 38.76535343041317,
+     "fonds_propres_10_mediane": 166.13456331590675
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 929.2131798849259,
-     "ecart_pm_10": 220.3472234461708,
-     "scr_supplementaire_proportionnel": 27.428253176846283,
-     "fonds_propres_10_mediane": 161.07237061501485
+     "pm_10_mediane": 947.528778170737,
+     "ecart_pm_10": 234.68068534736733,
+     "scr_supplementaire_proportionnel": 27.63629994949254,
+     "fonds_propres_10_mediane": 151.04497622930418
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 781.4382018709234,
-     "ecart_pm_10": 72.5722454321683,
-     "scr_supplementaire_proportionnel": 9.033605643830635,
-     "fonds_propres_10_mediane": 135.48495062170954
+     "pm_10_mediane": 798.782055822968,
+     "ecart_pm_10": 85.9339629995983,
+     "scr_supplementaire_proportionnel": 10.119694229587923,
+     "fonds_propres_10_mediane": 127.40648930648658
     }
    }
   },
   "A|taux_servi_competitif_preservant": {
    "pm0": 1000.0,
-   "scr_100": 98.34358297481138,
+   "scr_100": 98.20785975616545,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.09834358297481138,
-   "pm_10_mediane_extinction": 727.2919222908333,
-   "fonds_propres_10_mediane_extinction": 111.8305528285801,
+   "scr_sur_pm0": 0.09820785975616544,
+   "pm_10_mediane_extinction": 724.955536714091,
+   "fonds_propres_10_mediane_extinction": 104.8147442363115,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1385.5774054088395,
-     "ecart_pm_10": 658.2854831180061,
-     "scr_supplementaire_proportionnel": 64.73815303012944,
-     "fonds_propres_10_mediane": 213.05047187324323
+     "pm_10_mediane": 1379.392313356982,
+     "ecart_pm_10": 654.436776642891,
+     "scr_supplementaire_proportionnel": 64.27083517982201,
+     "fonds_propres_10_mediane": 199.4338207021185
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1273.920575182542,
-     "ecart_pm_10": 546.6286528917087,
-     "scr_supplementaire_proportionnel": 53.75742028206513,
-     "fonds_propres_10_mediane": 195.88178806335958
+     "pm_10_mediane": 1266.7861714191167,
+     "ecart_pm_10": 541.8306347050258,
+     "scr_supplementaire_proportionnel": 53.21202698470528,
+     "fonds_propres_10_mediane": 183.15312020543422
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1212.990562910811,
-     "ecart_pm_10": 485.6986406199776,
-     "scr_supplementaire_proportionnel": 47.76534456456386,
-     "fonds_propres_10_mediane": 186.51300952016123
+     "pm_10_mediane": 1206.7346465705625,
+     "ecart_pm_10": 481.77910985647156,
+     "scr_supplementaire_proportionnel": 47.314495254234586,
+     "fonds_propres_10_mediane": 174.47081501671744
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1151.116840070762,
-     "ecart_pm_10": 423.8249177799287,
-     "scr_supplementaire_proportionnel": 41.680460968483025,
-     "fonds_propres_10_mediane": 176.99912325428568
+     "pm_10_mediane": 1146.243886317473,
+     "ecart_pm_10": 421.288349603382,
+     "scr_supplementaire_proportionnel": 41.37382715475534,
+     "fonds_propres_10_mediane": 165.65216374925672
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1038.615461094374,
-     "ecart_pm_10": 311.3235388035407,
-     "scr_supplementaire_proportionnel": 30.61667227033792,
-     "fonds_propres_10_mediane": 159.6772835994999
+     "pm_10_mediane": 1037.5641369501216,
+     "ecart_pm_10": 312.6086002360306,
+     "scr_supplementaire_proportionnel": 30.70062157055128,
+     "fonds_propres_10_mediane": 149.85812634237305
     }
    }
   },
   "A|distribution_retention": {
    "pm0": 1000.0,
-   "scr_100": 104.72658943857054,
+   "scr_100": 103.67541215839155,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10472658943857054,
-   "pm_10_mediane_extinction": 714.0926065409358,
-   "fonds_propres_10_mediane_extinction": 123.05085730144123,
+   "scr_sur_pm0": 0.10367541215839156,
+   "pm_10_mediane_extinction": 716.3888790403882,
+   "fonds_propres_10_mediane_extinction": 115.5240573905245,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1344.17424044633,
-     "ecart_pm_10": 630.0816339053943,
-     "scr_supplementaire_proportionnel": 65.98630058679393,
-     "fonds_propres_10_mediane": 219.71713951215207
+     "pm_10_mediane": 1340.3334997056754,
+     "ecart_pm_10": 623.9446206652872,
+     "scr_supplementaire_proportionnel": 64.68771571148493,
+     "fonds_propres_10_mediane": 204.60014811012337
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1140.0202689466282,
-     "ecart_pm_10": 425.92766240569244,
-     "scr_supplementaire_proportionnel": 44.605951431291025,
-     "fonds_propres_10_mediane": 188.66536494309145
+     "pm_10_mediane": 1138.7043894491067,
+     "ecart_pm_10": 422.3155104087184,
+     "scr_supplementaire_proportionnel": 43.78373460250538,
+     "fonds_propres_10_mediane": 176.13788476003845
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1050.5310764598632,
-     "ecart_pm_10": 336.43846991892747,
-     "scr_supplementaire_proportionnel": 35.23405351054038,
-     "fonds_propres_10_mediane": 175.61657827661588
+     "pm_10_mediane": 1052.5976349630591,
+     "ecart_pm_10": 336.2087559226709,
+     "scr_supplementaire_proportionnel": 34.85658134154297,
+     "fonds_propres_10_mediane": 164.17108597925565
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 962.7001948953086,
-     "ecart_pm_10": 248.60758835437287,
-     "scr_supplementaire_proportionnel": 26.035824836901558,
-     "fonds_propres_10_mediane": 162.96520100846777
+     "pm_10_mediane": 967.3945401993146,
+     "ecart_pm_10": 251.0056611589264,
+     "scr_supplementaire_proportionnel": 26.02311537474127,
+     "fonds_propres_10_mediane": 152.96565949057725
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 816.8355627137721,
-     "ecart_pm_10": 102.74295617283633,
-     "scr_supplementaire_proportionnel": 10.759919388817677,
-     "fonds_propres_10_mediane": 140.65295918948954
+     "pm_10_mediane": 824.0155537372184,
+     "ecart_pm_10": 107.62667469683015,
+     "scr_supplementaire_proportionnel": 11.158239858430997,
+     "fonds_propres_10_mediane": 133.0410363530101
     }
    }
   },
   "B|passive": {
    "pm0": 1000.0,
-   "scr_100": 101.25237556981412,
+   "scr_100": 94.45794511011249,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10125237556981412,
-   "pm_10_mediane_extinction": 744.7843876681914,
-   "fonds_propres_10_mediane_extinction": 59.17426742141318,
+   "scr_sur_pm0": 0.09445794511011249,
+   "pm_10_mediane_extinction": 752.7267161701475,
+   "fonds_propres_10_mediane_extinction": 58.37514152864615,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1357.7057214575061,
-     "ecart_pm_10": 612.9213337893148,
-     "scr_supplementaire_proportionnel": 62.0597410835871,
-     "fonds_propres_10_mediane": 107.87181199198551
+     "pm_10_mediane": 1359.8352722964446,
+     "ecart_pm_10": 607.1085561262971,
+     "scr_supplementaire_proportionnel": 57.34622667045742,
+     "fonds_propres_10_mediane": 105.45736556267882
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1174.7177274927462,
-     "ecart_pm_10": 429.9333398245549,
-     "scr_supplementaire_proportionnel": 43.53177199390035,
-     "fonds_propres_10_mediane": 93.33313386034521
+     "pm_10_mediane": 1180.3379475300767,
+     "ecart_pm_10": 427.6112313599292,
+     "scr_supplementaire_proportionnel": 40.39127822026381,
+     "fonds_propres_10_mediane": 91.53706552262871
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1089.6603616951522,
-     "ecart_pm_10": 344.8759740269609,
-     "scr_supplementaire_proportionnel": 34.9195116471833,
-     "fonds_propres_10_mediane": 86.57519506194208
+     "pm_10_mediane": 1095.4405366510287,
+     "ecart_pm_10": 342.71382048088117,
+     "scr_supplementaire_proportionnel": 32.37204324346002,
+     "fonds_propres_10_mediane": 84.95313769196059
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1013.1277973651333,
-     "ecart_pm_10": 268.343409696942,
-     "scr_supplementaire_proportionnel": 27.17040770031927,
-     "fonds_propres_10_mediane": 80.49456487809799
+     "pm_10_mediane": 1020.9374369668583,
+     "ecart_pm_10": 268.2107207967108,
+     "scr_supplementaire_proportionnel": 25.334633542959416,
+     "fonds_propres_10_mediane": 79.17390211715252
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 880.2238641484983,
-     "ecart_pm_10": 135.4394764803069,
-     "scr_supplementaire_proportionnel": 13.713568739563039,
-     "fonds_propres_10_mediane": 69.93514255972562
+     "pm_10_mediane": 895.6668492634004,
+     "ecart_pm_10": 142.94013309325294,
+     "scr_supplementaire_proportionnel": 13.50183124575466,
+     "fonds_propres_10_mediane": 69.46037381838997
     }
    }
   },
   "B|reinvestissement_progressif": {
    "pm0": 1000.0,
-   "scr_100": 101.49471821814231,
+   "scr_100": 94.5144624581716,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.10149471821814231,
-   "pm_10_mediane_extinction": 743.9022612406441,
-   "fonds_propres_10_mediane_extinction": 58.9612659145257,
+   "scr_sur_pm0": 0.09451446245817159,
+   "pm_10_mediane_extinction": 751.7965898718583,
+   "fonds_propres_10_mediane_extinction": 58.19475422815067,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1355.9552108166376,
-     "ecart_pm_10": 612.0529495759936,
-     "scr_supplementaire_proportionnel": 62.12014165179833,
-     "fonds_propres_10_mediane": 107.47223112322811
+     "pm_10_mediane": 1357.562994647557,
+     "ecart_pm_10": 605.7664047756987,
+     "scr_supplementaire_proportionnel": 57.253686122594345,
+     "fonds_propres_10_mediane": 105.08566530770332
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1171.995438999069,
-     "ecart_pm_10": 428.0931777584249,
-     "scr_supplementaire_proportionnel": 43.44919644770044,
-     "fonds_propres_10_mediane": 92.89168527890999
+     "pm_10_mediane": 1178.6204789634485,
+     "ecart_pm_10": 426.8238890915902,
+     "scr_supplementaire_proportionnel": 40.3410304417979,
+     "fonds_propres_10_mediane": 91.22288266651381
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1087.7299928192251,
-     "ecart_pm_10": 343.82773157858105,
-     "scr_supplementaire_proportionnel": 34.89669873215115,
-     "fonds_propres_10_mediane": 86.2128544183479
+     "pm_10_mediane": 1093.8689251867313,
+     "ecart_pm_10": 342.07233531487304,
+     "scr_supplementaire_proportionnel": 32.33078289409665,
+     "fonds_propres_10_mediane": 84.67374568685314
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1011.0735006875657,
-     "ecart_pm_10": 267.1712394469216,
-     "scr_supplementaire_proportionnel": 27.116469663657135,
-     "fonds_propres_10_mediane": 80.12126004701695
+     "pm_10_mediane": 1020.2307106369121,
+     "ecart_pm_10": 268.4341207650539,
+     "scr_supplementaire_proportionnel": 25.370906629540983,
+     "fonds_propres_10_mediane": 78.95300831444587
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 878.3520583284494,
-     "ecart_pm_10": 134.44979708780534,
-     "scr_supplementaire_proportionnel": 13.645944269913214,
-     "fonds_propres_10_mediane": 69.61767960122063
+     "pm_10_mediane": 894.0528941917477,
+     "ecart_pm_10": 142.2563043198894,
+     "scr_supplementaire_proportionnel": 13.445278134080421,
+     "fonds_propres_10_mediane": 69.19963221590876
     }
    }
   },
   "B|repositionnement": {
    "pm0": 1000.0,
-   "scr_100": 105.22942308784593,
+   "scr_100": 98.29663178114065,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.10522942308784593,
-   "pm_10_mediane_extinction": 735.8042388676199,
-   "fonds_propres_10_mediane_extinction": 76.79773933181136,
+   "scr_sur_pm0": 0.09829663178114065,
+   "pm_10_mediane_extinction": 747.8504939327715,
+   "fonds_propres_10_mediane_extinction": 73.0471659215236,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1315.5467373995102,
-     "ecart_pm_10": 579.7424985318903,
-     "scr_supplementaire_proportionnel": 61.00596866001718,
-     "fonds_propres_10_mediane": 137.30692225027963
+     "pm_10_mediane": 1321.7637549200604,
+     "ecart_pm_10": 573.9132609872888,
+     "scr_supplementaire_proportionnel": 56.4137404895812,
+     "fonds_propres_10_mediane": 129.10481051762366
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1164.5491173091045,
-     "ecart_pm_10": 428.7448784414846,
-     "scr_supplementaire_proportionnel": 45.116576210266054,
-     "fonds_propres_10_mediane": 121.54692080577425
+     "pm_10_mediane": 1181.239385111346,
+     "ecart_pm_10": 433.38889117857457,
+     "scr_supplementaire_proportionnel": 42.600668254217176,
+     "fonds_propres_10_mediane": 115.37147457730111
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1085.5012310005718,
-     "ecart_pm_10": 349.6969921329519,
-     "scr_supplementaire_proportionnel": 36.798412737705526,
-     "fonds_propres_10_mediane": 113.27910997503945
+     "pm_10_mediane": 1106.7860845608634,
+     "ecart_pm_10": 358.93559062809186,
+     "scr_supplementaire_proportionnel": 35.282159585115785,
+     "fonds_propres_10_mediane": 108.0965807966756
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1014.2231598632009,
-     "ecart_pm_10": 278.41892099558095,
-     "scr_supplementaire_proportionnel": 29.297862433105536,
-     "fonds_propres_10_mediane": 105.8570224810481
+     "pm_10_mediane": 1061.4259724877356,
+     "ecart_pm_10": 313.5754785549641,
+     "scr_supplementaire_proportionnel": 30.823413351112272,
+     "fonds_propres_10_mediane": 103.67601513237238
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 915.2416669793597,
-     "ecart_pm_10": 179.4374281117398,
-     "scr_supplementaire_proportionnel": 18.882097040565206,
-     "fonds_propres_10_mediane": 95.52607508005823
+     "pm_10_mediane": 1003.1183834233046,
+     "ecart_pm_10": 255.2678894905331,
+     "scr_supplementaire_proportionnel": 25.091973738799833,
+     "fonds_propres_10_mediane": 97.91628077568582
     }
    }
   },
   "B|taux_servi_competitif": {
    "pm0": 1000.0,
-   "scr_100": 89.49709257632747,
+   "scr_100": 85.5765370067781,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.08949709257632747,
-   "pm_10_mediane_extinction": 762.5233693017276,
-   "fonds_propres_10_mediane_extinction": 58.845242466008585,
+   "scr_sur_pm0": 0.0855765370067781,
+   "pm_10_mediane_extinction": 767.6316904011505,
+   "fonds_propres_10_mediane_extinction": 58.68223026566411,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1409.1378932618295,
-     "ecart_pm_10": 646.6145239601019,
-     "scr_supplementaire_proportionnel": 57.87011991205516,
-     "fonds_propres_10_mediane": 108.74559959121902
+     "pm_10_mediane": 1406.0745584800309,
+     "ecart_pm_10": 638.4428680788803,
+     "scr_supplementaire_proportionnel": 54.635729726865854,
+     "fonds_propres_10_mediane": 107.48851570770624
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1380.1139288315326,
-     "ecart_pm_10": 617.590559529805,
-     "scr_supplementaire_proportionnel": 55.27255948050484,
-     "fonds_propres_10_mediane": 106.50577023911714
+     "pm_10_mediane": 1381.6069061293354,
+     "ecart_pm_10": 613.9752157281848,
+     "scr_supplementaire_proportionnel": 52.54187277000758,
+     "fonds_propres_10_mediane": 105.61806608028999
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1369.760102823848,
-     "ecart_pm_10": 607.2367335221204,
-     "scr_supplementaire_proportionnel": 54.3459221557759,
-     "fonds_propres_10_mediane": 105.70674764334936
+     "pm_10_mediane": 1371.8491782493456,
+     "ecart_pm_10": 604.2174878481951,
+     "scr_supplementaire_proportionnel": 51.706840208983564,
+     "fonds_propres_10_mediane": 104.8721286190265
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1357.8677199151666,
-     "ecart_pm_10": 595.344350613439,
-     "scr_supplementaire_proportionnel": 53.28158846164451,
-     "fonds_propres_10_mediane": 104.77908551349014
+     "pm_10_mediane": 1362.11809109212,
+     "ecart_pm_10": 594.4864006909695,
+     "scr_supplementaire_proportionnel": 50.87408746875707,
+     "fonds_propres_10_mediane": 104.11521215115408
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1324.1103990285924,
-     "ecart_pm_10": 561.5870297268648,
-     "scr_supplementaire_proportionnel": 50.26040638912998,
-     "fonds_propres_10_mediane": 102.18388133330669
+     "pm_10_mediane": 1334.7600228740866,
+     "ecart_pm_10": 567.1283324729361,
+     "scr_supplementaire_proportionnel": 48.532878731462574,
+     "fonds_propres_10_mediane": 102.03681790517027
     }
    }
   },
   "B|taux_servi_marge": {
    "pm0": 1000.0,
-   "scr_100": 103.34089218517852,
+   "scr_100": 93.19062887880602,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10334089218517852,
-   "pm_10_mediane_extinction": 698.3915902063188,
-   "fonds_propres_10_mediane_extinction": 53.851298560467825,
+   "scr_sur_pm0": 0.09319062887880603,
+   "pm_10_mediane_extinction": 721.8976806463677,
+   "fonds_propres_10_mediane_extinction": 53.32483259681851,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1263.7976295699696,
-     "ecart_pm_10": 565.4060393636507,
-     "scr_supplementaire_proportionnel": 58.42956455472783,
-     "fonds_propres_10_mediane": 97.44840061702132
+     "pm_10_mediane": 1282.940329122416,
+     "ecart_pm_10": 561.0426484760483,
+     "scr_supplementaire_proportionnel": 52.283917239313844,
+     "fonds_propres_10_mediane": 94.76769369989566
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1028.904824781001,
-     "ecart_pm_10": 330.5132345746822,
-     "scr_supplementaire_proportionnel": 34.15553253995685,
-     "fonds_propres_10_mediane": 79.33638045844586
+     "pm_10_mediane": 1092.7671579678886,
+     "ecart_pm_10": 370.8694773215209,
+     "scr_supplementaire_proportionnel": 34.561559823546624,
+     "fonds_propres_10_mediane": 80.6724082824148
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 935.5973041074847,
-     "ecart_pm_10": 237.20571390116584,
-     "scr_supplementaire_proportionnel": 24.51305010596868,
-     "fonds_propres_10_mediane": 72.14166158698558
+     "pm_10_mediane": 1014.1608148325507,
+     "ecart_pm_10": 292.26313418618304,
+     "scr_supplementaire_proportionnel": 27.23618527290127,
+     "fonds_propres_10_mediane": 74.91360220021359
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 864.4359900041761,
-     "ecart_pm_10": 166.0443997978573,
-     "scr_supplementaire_proportionnel": 17.159176417463048,
-     "fonds_propres_10_mediane": 66.65458352723917
+     "pm_10_mediane": 953.3685812678522,
+     "ecart_pm_10": 231.47090062148447,
+     "scr_supplementaire_proportionnel": 21.57091879605975,
+     "fonds_propres_10_mediane": 70.4230271991668
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 825.6625494733768,
-     "ecart_pm_10": 127.27095926705795,
-     "scr_supplementaire_proportionnel": 13.15229447992128,
-     "fonds_propres_10_mediane": 63.66485662972057
+     "pm_10_mediane": 915.7207884673165,
+     "ecart_pm_10": 193.82310782094885,
+     "scr_supplementaire_proportionnel": 18.06249730907885,
+     "fonds_propres_10_mediane": 67.64207596113157
     }
    }
   },
   "B|liquidite_defensive": {
    "pm0": 1000.0,
-   "scr_100": 100.72302200778205,
+   "scr_100": 96.14562072122428,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.10072302200778205,
-   "pm_10_mediane_extinction": 742.1168981835727,
-   "fonds_propres_10_mediane_extinction": 58.84365275468447,
+   "scr_sur_pm0": 0.09614562072122428,
+   "pm_10_mediane_extinction": 745.9985120192721,
+   "fonds_propres_10_mediane_extinction": 58.45374204992089,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1352.631509267408,
-     "ecart_pm_10": 610.5146110838353,
-     "scr_supplementaire_proportionnel": 61.49287660826965,
-     "fonds_propres_10_mediane": 107.25234667367394
+     "pm_10_mediane": 1352.0776450006394,
+     "ecart_pm_10": 606.0791329813674,
+     "scr_supplementaire_proportionnel": 58.271854446675,
+     "fonds_propres_10_mediane": 105.94390822362676
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1169.5779542038358,
-     "ecart_pm_10": 427.4610560202631,
-     "scr_supplementaire_proportionnel": 43.05516935299871,
-     "fonds_propres_10_mediane": 92.73477647156855
+     "pm_10_mediane": 1173.1997801354714,
+     "ecart_pm_10": 427.20126811619934,
+     "scr_supplementaire_proportionnel": 41.07353109592614,
+     "fonds_propres_10_mediane": 91.91829537146768
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1086.2516064803167,
-     "ecart_pm_10": 344.13470829674395,
-     "scr_supplementaire_proportionnel": 34.6622877974146,
-     "fonds_propres_10_mediane": 86.12255762530606
+     "pm_10_mediane": 1089.6609276070587,
+     "ecart_pm_10": 343.66241558778665,
+     "scr_supplementaire_proportionnel": 33.04163626524309,
+     "fonds_propres_10_mediane": 85.3812702487867
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1007.6717048520168,
-     "ecart_pm_10": 265.55480666844403,
-     "scr_supplementaire_proportionnel": 26.747482636337995,
-     "fonds_propres_10_mediane": 79.89610746258239
+     "pm_10_mediane": 1014.4937730220674,
+     "ecart_pm_10": 268.49526100279536,
+     "scr_supplementaire_proportionnel": 25.81464352982088,
+     "fonds_propres_10_mediane": 79.48360922367605
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 875.1303027176464,
-     "ecart_pm_10": 133.01340453407363,
-     "scr_supplementaire_proportionnel": 13.397512072215514,
-     "fonds_propres_10_mediane": 69.39050138093053
+     "pm_10_mediane": 886.209963002807,
+     "ecart_pm_10": 140.21145098353486,
+     "scr_supplementaire_proportionnel": 13.480716987035471,
+     "fonds_propres_10_mediane": 69.42831653860662
     }
    }
   },
   "B|taux_servi_competitif_preservant": {
    "pm0": 1000.0,
-   "scr_100": 86.7927348886469,
+   "scr_100": 83.91851805049387,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.0867927348886469,
-   "pm_10_mediane_extinction": 769.0613649820573,
-   "fonds_propres_10_mediane_extinction": 60.5680213711571,
+   "scr_sur_pm0": 0.08391851805049387,
+   "pm_10_mediane_extinction": 770.1065537917896,
+   "fonds_propres_10_mediane_extinction": 59.52643666286002,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1410.1627268359905,
-     "ecart_pm_10": 641.1013618539332,
-     "scr_supplementaire_proportionnel": 55.64294053613891,
-     "fonds_propres_10_mediane": 111.05845393469238
+     "pm_10_mediane": 1406.723283132338,
+     "ecart_pm_10": 636.6167293405485,
+     "scr_supplementaire_proportionnel": 53.4239324924112,
+     "fonds_propres_10_mediane": 108.7345952365279
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1376.4087566590154,
-     "ecart_pm_10": 607.3473916769581,
-     "scr_supplementaire_proportionnel": 52.71334115112941,
-     "fonds_propres_10_mediane": 108.40013396163258
+     "pm_10_mediane": 1376.9738351889198,
+     "ecart_pm_10": 606.8672813971302,
+     "scr_supplementaire_proportionnel": 50.92740290817922,
+     "fonds_propres_10_mediane": 106.43507107322915
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1362.651171019837,
-     "ecart_pm_10": 593.5898060377797,
-     "scr_supplementaire_proportionnel": 51.51928266804035,
-     "fonds_propres_10_mediane": 107.31664468632785
+     "pm_10_mediane": 1365.8159141166695,
+     "ecart_pm_10": 595.70936032488,
+     "scr_supplementaire_proportionnel": 49.9910467072716,
+     "fonds_propres_10_mediane": 105.57260434219538
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1348.8513486204406,
-     "ecart_pm_10": 579.7899836383833,
-     "scr_supplementaire_proportionnel": 50.32155834101913,
-     "fonds_propres_10_mediane": 106.22982902237325
+     "pm_10_mediane": 1352.6146931659403,
+     "ecart_pm_10": 582.5081393741507,
+     "scr_supplementaire_proportionnel": 48.88321980862926,
+     "fonds_propres_10_mediane": 104.5521979595632
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1314.2426600876497,
-     "ecart_pm_10": 545.1812951055924,
-     "scr_supplementaire_proportionnel": 47.31777561234885,
-     "fonds_propres_10_mediane": 103.48333610706415
+     "pm_10_mediane": 1323.0251295041335,
+     "ecart_pm_10": 552.9185757123439,
+     "scr_supplementaire_proportionnel": 46.40010747636969,
+     "fonds_propres_10_mediane": 102.23430644738103
     }
    }
   },
   "B|distribution_retention": {
    "pm0": 1000.0,
-   "scr_100": 101.28459362217347,
+   "scr_100": 94.33707162584943,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.10128459362217347,
-   "pm_10_mediane_extinction": 745.2730899532839,
-   "fonds_propres_10_mediane_extinction": 71.52939097891283,
+   "scr_sur_pm0": 0.09433707162584944,
+   "pm_10_mediane_extinction": 752.8667037416194,
+   "fonds_propres_10_mediane_extinction": 68.69745428001653,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1357.7784378076863,
-     "ecart_pm_10": 612.5053478544023,
-     "scr_supplementaire_proportionnel": 62.03735524884114,
-     "fonds_propres_10_mediane": 122.05422083755111
+     "pm_10_mediane": 1359.8950191406152,
+     "ecart_pm_10": 607.0283153989958,
+     "scr_supplementaire_proportionnel": 57.26527366871379,
+     "fonds_propres_10_mediane": 116.8202092492779
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1174.8534539841046,
-     "ecart_pm_10": 429.58036403082065,
-     "scr_supplementaire_proportionnel": 43.50987259892702,
-     "fonds_propres_10_mediane": 107.32156728186487
+     "pm_10_mediane": 1180.429634340906,
+     "ecart_pm_10": 427.5629305992866,
+     "scr_supplementaire_proportionnel": 40.33503480850299,
+     "fonds_propres_10_mediane": 103.27229383197161
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1089.75134439857,
-     "ecart_pm_10": 344.478254445286,
-     "scr_supplementaire_proportionnel": 34.890340013166465,
-     "fonds_propres_10_mediane": 100.50017137549523
+     "pm_10_mediane": 1095.591814777904,
+     "ecart_pm_10": 342.7251110362845,
+     "scr_supplementaire_proportionnel": 32.33168334780717,
+     "fonds_propres_10_mediane": 96.591601556695
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1013.3227270563375,
-     "ecart_pm_10": 268.04963710305356,
-     "scr_supplementaire_proportionnel": 27.149298564553852,
-     "fonds_propres_10_mediane": 94.07091433169086
+     "pm_10_mediane": 1021.1861962297181,
+     "ecart_pm_10": 268.3194924880987,
+     "scr_supplementaire_proportionnel": 25.312475181461338,
+     "fonds_propres_10_mediane": 90.10947388191093
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 881.0737959771272,
-     "ecart_pm_10": 135.8007060238433,
-     "scr_supplementaire_proportionnel": 13.754519323229214,
-     "fonds_propres_10_mediane": 83.55620906632505
+     "pm_10_mediane": 895.9290359563349,
+     "ecart_pm_10": 143.06233221471552,
+     "scr_supplementaire_proportionnel": 13.496081481100685,
+     "fonds_propres_10_mediane": 80.294703303648
     }
    }
   },
   "C|passive": {
    "pm0": 1000.0,
-   "scr_100": 98.77543551270466,
+   "scr_100": 83.89399617155942,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.09877543551270467,
-   "pm_10_mediane_extinction": 769.017448523751,
-   "fonds_propres_10_mediane_extinction": 59.28301369962636,
+   "scr_sur_pm0": 0.08389399617155942,
+   "pm_10_mediane_extinction": 781.2695189887036,
+   "fonds_propres_10_mediane_extinction": 46.87617113932221,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1378.8367298430185,
-     "ecart_pm_10": 609.8192813192675,
-     "scr_supplementaire_proportionnel": 60.23516509635521,
-     "fonds_propres_10_mediane": 106.29355276885775
+     "pm_10_mediane": 1385.1812663914977,
+     "ecart_pm_10": 603.9117474027942,
+     "scr_supplementaire_proportionnel": 50.664569824569774,
+     "fonds_propres_10_mediane": 83.11087598348986
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1215.3093912657562,
-     "ecart_pm_10": 446.2919427420052,
-     "scr_supplementaire_proportionnel": 44.08268101015261,
-     "fonds_propres_10_mediane": 93.68734536517766
+     "pm_10_mediane": 1253.5741142797694,
+     "ecart_pm_10": 472.3045952910659,
+     "scr_supplementaire_proportionnel": 39.6235199091586,
+     "fonds_propres_10_mediane": 75.21444685678617
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1136.8676001985857,
-     "ecart_pm_10": 367.8501516748347,
-     "scr_supplementaire_proportionnel": 36.33455893509627,
-     "fonds_propres_10_mediane": 87.64032291674661
+     "pm_10_mediane": 1211.556941317011,
+     "ecart_pm_10": 430.28742232830746,
+     "scr_supplementaire_proportionnel": 36.09853136148119,
+     "fonds_propres_10_mediane": 72.69341647902066
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1077.2573858030605,
-     "ecart_pm_10": 308.2399372793095,
-     "scr_supplementaire_proportionnel": 30.446534047172566,
-     "fonds_propres_10_mediane": 83.04501345604268
+     "pm_10_mediane": 1176.2263587942211,
+     "ecart_pm_10": 394.9568398055176,
+     "scr_supplementaire_proportionnel": 33.1345076065753,
+     "fonds_propres_10_mediane": 70.57358152765326
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 992.2399185735471,
-     "ecart_pm_10": 223.22247004979613,
-     "scr_supplementaire_proportionnel": 22.048896695390287,
-     "fonds_propres_10_mediane": 76.49107676169328
+     "pm_10_mediane": 1110.380904848233,
+     "ecart_pm_10": 329.1113858595295,
+     "scr_supplementaire_proportionnel": 27.61046934531598,
+     "fonds_propres_10_mediane": 66.622854290894
     }
    }
   },
   "C|reinvestissement_progressif": {
    "pm0": 1000.0,
-   "scr_100": 99.14339113600626,
+   "scr_100": 84.3654102507352,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.09914339113600626,
-   "pm_10_mediane_extinction": 766.4143254261246,
-   "fonds_propres_10_mediane_extinction": 59.17757568335455,
+   "scr_sur_pm0": 0.0843654102507352,
+   "pm_10_mediane_extinction": 780.5733851119708,
+   "fonds_propres_10_mediane_extinction": 46.83440310671824,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1373.9295444974277,
-     "ecart_pm_10": 607.5152190713031,
-     "scr_supplementaire_proportionnel": 60.231118985462736,
-     "fonds_propres_10_mediane": 106.08598626844237
+     "pm_10_mediane": 1381.0273696022416,
+     "ecart_pm_10": 600.4539844902708,
+     "scr_supplementaire_proportionnel": 50.65754673821029,
+     "fonds_propres_10_mediane": 82.8616421761345
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1207.6575379778951,
-     "ecart_pm_10": 441.2432125517705,
-     "scr_supplementaire_proportionnel": 43.74634840812813,
-     "fonds_propres_10_mediane": 93.24753332804086
+     "pm_10_mediane": 1247.6956697292608,
+     "ecart_pm_10": 467.12228461729,
+     "scr_supplementaire_proportionnel": 39.40896317899836,
+     "fonds_propres_10_mediane": 74.86174018375564
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1128.0088204509298,
-     "ecart_pm_10": 361.59449502480516,
-     "scr_supplementaire_proportionnel": 35.849704452870924,
-     "fonds_propres_10_mediane": 87.09757259118554
+     "pm_10_mediane": 1206.1564279169709,
+     "ecart_pm_10": 425.5830428050001,
+     "scr_supplementaire_proportionnel": 35.90448800200003,
+     "fonds_propres_10_mediane": 72.36938567501825
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1064.5684586359653,
-     "ecart_pm_10": 298.15413320984067,
-     "scr_supplementaire_proportionnel": 29.560011847640148,
-     "fonds_propres_10_mediane": 82.19911664100859
+     "pm_10_mediane": 1171.083286512041,
+     "ecart_pm_10": 390.50990140007025,
+     "scr_supplementaire_proportionnel": 32.94552803859108,
+     "fonds_propres_10_mediane": 70.26499719072245
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 973.5065672228656,
-     "ecart_pm_10": 207.09224179674095,
-     "scr_supplementaire_proportionnel": 20.531827129686672,
-     "fonds_propres_10_mediane": 75.16790415946743
+     "pm_10_mediane": 1101.6248326917007,
+     "ecart_pm_10": 321.05144757972994,
+     "scr_supplementaire_proportionnel": 27.085637086656323,
+     "fonds_propres_10_mediane": 66.09748996150205
     }
    }
   },
   "C|repositionnement": {
    "pm0": 1000.0,
-   "scr_100": 101.41785101752073,
+   "scr_100": 86.48418690759001,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.10141785101752074,
-   "pm_10_mediane_extinction": 774.4779152292982,
-   "fonds_propres_10_mediane_extinction": 64.2144572293947,
+   "scr_sur_pm0": 0.08648418690759002,
+   "pm_10_mediane_extinction": 785.4112835621006,
+   "fonds_propres_10_mediane_extinction": 48.82822857122208,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1384.1213683337432,
-     "ecart_pm_10": 609.643453104445,
-     "scr_supplementaire_proportionnel": 61.8287289007535,
-     "fonds_propres_10_mediane": 114.76195855222508
+     "pm_10_mediane": 1393.7458010907117,
+     "ecart_pm_10": 608.3345175286111,
+     "scr_supplementaire_proportionnel": 52.611316116283,
+     "fonds_propres_10_mediane": 86.64777291865505
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1232.1018632491482,
-     "ecart_pm_10": 457.62394801985,
-     "scr_supplementaire_proportionnel": 46.4112373823268,
-     "fonds_propres_10_mediane": 102.157531989076
+     "pm_10_mediane": 1275.5064068127524,
+     "ecart_pm_10": 490.0951232506518,
+     "scr_supplementaire_proportionnel": 42.38547824170774,
+     "fonds_propres_10_mediane": 79.29694884627521
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1182.5509301908928,
-     "ecart_pm_10": 408.0730149615946,
-     "scr_supplementaire_proportionnel": 41.38588823564551,
-     "fonds_propres_10_mediane": 98.0491046098345
+     "pm_10_mediane": 1245.6198279616035,
+     "ecart_pm_10": 460.2085443995029,
+     "scr_supplementaire_proportionnel": 39.80076177031655,
+     "fonds_propres_10_mediane": 77.43893033559468
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1138.0403155010617,
-     "ecart_pm_10": 363.5624002717635,
-     "scr_supplementaire_proportionnel": 36.87171734633395,
-     "fonds_propres_10_mediane": 94.35858625282233
+     "pm_10_mediane": 1214.5803148918417,
+     "ecart_pm_10": 429.1690313297411,
+     "scr_supplementaire_proportionnel": 37.11633472047068,
+     "fonds_propres_10_mediane": 75.50923506557513
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1054.2081900503294,
-     "ecart_pm_10": 279.73027482103123,
-     "scr_supplementaire_proportionnel": 28.369643336889478,
-     "fonds_propres_10_mediane": 87.40779485083446
+     "pm_10_mediane": 1143.111136282967,
+     "ecart_pm_10": 357.6998527208664,
+     "scr_supplementaire_proportionnel": 30.935380919528832,
+     "fonds_propres_10_mediane": 71.06606820262323
     }
    }
   },
   "C|taux_servi_competitif": {
    "pm0": 1000.0,
-   "scr_100": 91.47900591277659,
+   "scr_100": 80.28340566580476,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.09147900591277659,
-   "pm_10_mediane_extinction": 779.7040179444102,
-   "fonds_propres_10_mediane_extinction": 58.8805819627908,
+   "scr_sur_pm0": 0.08028340566580476,
+   "pm_10_mediane_extinction": 788.1140186063706,
+   "fonds_propres_10_mediane_extinction": 47.286841116382234,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1419.3622261252294,
-     "ecart_pm_10": 639.6582081808192,
-     "scr_supplementaire_proportionnel": 58.51529700832924,
-     "fonds_propres_10_mediane": 107.18538312856839
+     "pm_10_mediane": 1418.8308459177406,
+     "ecart_pm_10": 630.71682731137,
+     "scr_supplementaire_proportionnel": 50.63609490728805,
+     "fonds_propres_10_mediane": 85.12985075506442
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1409.4830011281026,
-     "ecart_pm_10": 629.7789831836924,
-     "scr_supplementaire_proportionnel": 57.611555326403426,
-     "fonds_propres_10_mediane": 106.4393378296026
+     "pm_10_mediane": 1411.7210879680829,
+     "ecart_pm_10": 623.6070693617123,
+     "scr_supplementaire_proportionnel": 50.06529932563,
+     "fonds_propres_10_mediane": 84.70326527808497
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1407.272408221506,
-     "ecart_pm_10": 627.5683902770959,
-     "scr_supplementaire_proportionnel": 57.409332484830145,
-     "fonds_propres_10_mediane": 106.27240141036191
+     "pm_10_mediane": 1409.0508965805664,
+     "ecart_pm_10": 620.9368779741958,
+     "scr_supplementaire_proportionnel": 49.85092726726067,
+     "fonds_propres_10_mediane": 84.54305379483398
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1405.5139805317626,
-     "ecart_pm_10": 625.8099625873524,
-     "scr_supplementaire_proportionnel": 57.24847326780291,
-     "fonds_propres_10_mediane": 106.13961096253973
+     "pm_10_mediane": 1408.6514755955116,
+     "ecart_pm_10": 620.537456989141,
+     "scr_supplementaire_proportionnel": 49.81886039028608,
+     "fonds_propres_10_mediane": 84.51908853573069
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1401.531680279409,
-     "ecart_pm_10": 621.8276623349989,
-     "scr_supplementaire_proportionnel": 56.88417639947141,
-     "fonds_propres_10_mediane": 105.83888126125215
+     "pm_10_mediane": 1407.413041763247,
+     "ecart_pm_10": 619.2990231568765,
+     "scr_supplementaire_proportionnel": 49.719434704540134,
+     "fonds_propres_10_mediane": 84.44478250579482
     }
    }
   },
   "C|taux_servi_marge": {
    "pm0": 1000.0,
-   "scr_100": 96.55928063446954,
+   "scr_100": 79.26273653366886,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.09655928063446954,
-   "pm_10_mediane_extinction": 742.0766510719728,
-   "fonds_propres_10_mediane_extinction": 53.67631609279751,
+   "scr_sur_pm0": 0.07926273653366886,
+   "pm_10_mediane_extinction": 764.1709908981054,
+   "fonds_propres_10_mediane_extinction": 45.85025945388632,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1315.4822041812502,
-     "ecart_pm_10": 573.4055531092773,
-     "scr_supplementaire_proportionnel": 55.36762772004194,
-     "fonds_propres_10_mediane": 95.15221709789978
+     "pm_10_mediane": 1336.3170463894085,
+     "ecart_pm_10": 572.1460554913031,
+     "scr_supplementaire_proportionnel": 45.349862055185035,
+     "fonds_propres_10_mediane": 80.1790227833645
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1176.4031794916964,
-     "ecart_pm_10": 434.32652841972356,
-     "scr_supplementaire_proportionnel": 41.938257144675,
-     "fonds_propres_10_mediane": 85.09227291244335
+     "pm_10_mediane": 1238.0297878357687,
+     "ecart_pm_10": 473.8587969376633,
+     "scr_supplementaire_proportionnel": 37.5593449758313,
+     "fonds_propres_10_mediane": 74.28178727014611
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1116.2887280565276,
-     "ecart_pm_10": 374.21207698455476,
-     "scr_supplementaire_proportionnel": 36.133648958359345,
-     "fonds_propres_10_mediane": 80.7440397584719
+     "pm_10_mediane": 1198.884118289629,
+     "ecart_pm_10": 434.7131273915236,
+     "scr_supplementaire_proportionnel": 34.45655208416156,
+     "fonds_propres_10_mediane": 71.93304709737774
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1075.0072552982792,
-     "ecart_pm_10": 332.9306042263064,
-     "scr_supplementaire_proportionnel": 32.14753964529143,
-     "fonds_propres_10_mediane": 77.7580444743634
+     "pm_10_mediane": 1168.1572501596597,
+     "ecart_pm_10": 403.9862592615543,
+     "scr_supplementaire_proportionnel": 32.021056431071024,
+     "fonds_propres_10_mediane": 70.08943500957957
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1058.1333592751025,
-     "ecart_pm_10": 316.0567082031297,
-     "scr_supplementaire_proportionnel": 30.51820838379265,
-     "fonds_propres_10_mediane": 76.53751210031733
+     "pm_10_mediane": 1162.995855331841,
+     "ecart_pm_10": 398.8248644337357,
+     "scr_supplementaire_proportionnel": 31.611950152687392,
+     "fonds_propres_10_mediane": 69.77975131991045
     }
    }
   },
   "C|liquidite_defensive": {
    "pm0": 1000.0,
-   "scr_100": 101.42600944264278,
+   "scr_100": 85.80976201786063,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.10142600944264278,
-   "pm_10_mediane_extinction": 761.0102220006987,
-   "fonds_propres_10_mediane_extinction": 59.96707130090381,
+   "scr_sur_pm0": 0.08580976201786064,
+   "pm_10_mediane_extinction": 775.3583762900696,
+   "fonds_propres_10_mediane_extinction": 46.52150257740418,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1363.9057222691413,
-     "ecart_pm_10": 602.8955002684426,
-     "scr_supplementaire_proportionnel": 61.149284703153896,
-     "fonds_propres_10_mediane": 107.47481351827257
+     "pm_10_mediane": 1373.1687886159416,
+     "ecart_pm_10": 597.810412325872,
+     "scr_supplementaire_proportionnel": 51.29796921348222,
+     "fonds_propres_10_mediane": 82.3901273169565
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1200.0373209044158,
-     "ecart_pm_10": 439.02709890371705,
-     "scr_supplementaire_proportionnel": 44.52876667898447,
-     "fonds_propres_10_mediane": 94.56209851850664
+     "pm_10_mediane": 1235.9912383639896,
+     "ecart_pm_10": 460.63286207392,
+     "scr_supplementaire_proportionnel": 39.5267962721691,
+     "fonds_propres_10_mediane": 74.14862527594704
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1119.7867447058413,
-     "ecart_pm_10": 358.7765227051426,
-     "scr_supplementaire_proportionnel": 36.38927097969034,
-     "fonds_propres_10_mediane": 88.2384094461224
+     "pm_10_mediane": 1188.1294434648328,
+     "ecart_pm_10": 412.7710671747632,
+     "scr_supplementaire_proportionnel": 35.419787042124796,
+     "fonds_propres_10_mediane": 71.28776660788996
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1050.5616605534406,
-     "ecart_pm_10": 289.55143855274184,
-     "scr_supplementaire_proportionnel": 29.368046940781195,
-     "fonds_propres_10_mediane": 82.78352140760893
+     "pm_10_mediane": 1149.4932669521822,
+     "ecart_pm_10": 374.13489066211264,
+     "scr_supplementaire_proportionnel": 32.1044259302942,
+     "fonds_propres_10_mediane": 68.96959601713094
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 941.1161905326873,
-     "ecart_pm_10": 180.10596853198854,
-     "scr_supplementaire_proportionnel": 18.267429665001792,
-     "fonds_propres_10_mediane": 74.15929519545509
+     "pm_10_mediane": 1088.1255222052846,
+     "ecart_pm_10": 312.767145915215,
+     "scr_supplementaire_proportionnel": 26.838474357990094,
+     "fonds_propres_10_mediane": 65.28753133231706
     }
    }
   },
   "C|taux_servi_competitif_preservant": {
    "pm0": 1000.0,
-   "scr_100": 91.49494709168604,
+   "scr_100": 80.60511025624972,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.09149494709168604,
-   "pm_10_mediane_extinction": 781.3082143966318,
-   "fonds_propres_10_mediane_extinction": 60.38081524856904,
+   "scr_sur_pm0": 0.08060511025624971,
+   "pm_10_mediane_extinction": 787.8306787463612,
+   "fonds_propres_10_mediane_extinction": 47.61254745246322,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1419.533160300011,
-     "ecart_pm_10": 638.2249459033793,
-     "scr_supplementaire_proportionnel": 58.39435765802388,
-     "fonds_propres_10_mediane": 109.70391442445562
+     "pm_10_mediane": 1418.1682482238325,
+     "ecart_pm_10": 630.3375694774713,
+     "scr_supplementaire_proportionnel": 50.80842928638804,
+     "fonds_propres_10_mediane": 85.70699876981115
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1411.2860839679913,
-     "ecart_pm_10": 629.9778695713595,
-     "scr_supplementaire_proportionnel": 57.63979184536463,
-     "fonds_propres_10_mediane": 109.0665664698727
+     "pm_10_mediane": 1411.4117051638545,
+     "ecart_pm_10": 623.5810264174934,
+     "scr_supplementaire_proportionnel": 50.26381738808742,
+     "fonds_propres_10_mediane": 85.29866708670164
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1407.7895183419812,
-     "ecart_pm_10": 626.4813039453494,
-     "scr_supplementaire_proportionnel": 57.319873758410225,
-     "fonds_propres_10_mediane": 108.79634598686951
+     "pm_10_mediane": 1408.428014541094,
+     "ecart_pm_10": 620.5973357947328,
+     "scr_supplementaire_proportionnel": 50.02331667646926,
+     "fonds_propres_10_mediane": 85.11834774246677
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1405.2891178154646,
-     "ecart_pm_10": 623.9809034188328,
-     "scr_supplementaire_proportionnel": 57.09109974452856,
-     "fonds_propres_10_mediane": 108.60311082121133
+     "pm_10_mediane": 1405.684396389236,
+     "ecart_pm_10": 617.8537176428749,
+     "scr_supplementaire_proportionnel": 49.80216703283771,
+     "fonds_propres_10_mediane": 84.95253717812743
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 1400.2570162656643,
-     "ecart_pm_10": 618.9488018690325,
-     "scr_supplementaire_proportionnel": 56.6306878794696,
-     "fonds_propres_10_mediane": 108.21422153476607
+     "pm_10_mediane": 1404.4558209622792,
+     "ecart_pm_10": 616.625142215918,
+     "scr_supplementaire_proportionnel": 49.70313757508973,
+     "fonds_propres_10_mediane": 84.87828822160293
     }
    }
   },
   "C|distribution_retention": {
    "pm0": 1000.0,
-   "scr_100": 98.94672253536258,
+   "scr_100": 84.18152200265554,
    "methode_scr_100": "interpolation linéaire en l'apport",
-   "scr_sur_pm0": 0.09894672253536259,
-   "pm_10_mediane_extinction": 768.8709815496289,
-   "fonds_propres_10_mediane_extinction": 72.00368592516051,
+   "scr_sur_pm0": 0.08418152200265554,
+   "pm_10_mediane_extinction": 781.3182389133334,
+   "fonds_propres_10_mediane_extinction": 56.65127180851655,
    "collecte_centrale": {
     "nulle": {
      "eta": 0.0,
-     "pm_10_mediane": 1379.0127523863548,
-     "ecart_pm_10": 610.1417708367259,
-     "scr_supplementaire_proportionnel": 60.3715285062163,
-     "fonds_propres_10_mediane": 120.35519181398604
+     "pm_10_mediane": 1385.4170172956005,
+     "ecart_pm_10": 604.0987783822671,
+     "scr_supplementaire_proportionnel": 50.85395460416415,
+     "fonds_propres_10_mediane": 94.031520839555
     },
     "moderee": {
      "eta": 0.5,
-     "pm_10_mediane": 1216.1241432370794,
-     "ecart_pm_10": 447.2531616874504,
-     "scr_supplementaire_proportionnel": 44.25423449255182,
-     "fonds_propres_10_mediane": 108.2656445019831
+     "pm_10_mediane": 1254.7876847201962,
+     "ecart_pm_10": 473.46944580686284,
+     "scr_supplementaire_proportionnel": 39.85737856977555,
+     "fonds_propres_10_mediane": 85.55352756216035
     },
     "intermediaire": {
      "eta": 0.75,
-     "pm_10_mediane": 1137.639716455816,
-     "ecart_pm_10": 368.768734906187,
-     "scr_supplementaire_proportionnel": 36.488457692479166,
-     "fonds_propres_10_mediane": 102.12500838471338
+     "pm_10_mediane": 1212.1472958769427,
+     "ecart_pm_10": 430.82905696360933,
+     "scr_supplementaire_proportionnel": 36.26784573816541,
+     "fonds_propres_10_mediane": 81.99477111319396
     },
     "soutenue": {
      "eta": 1.0,
-     "pm_10_mediane": 1078.5144175825594,
-     "ecart_pm_10": 309.6434360329305,
-     "scr_supplementaire_proportionnel": 30.638203150046667,
-     "fonds_propres_10_mediane": 96.22130551114373
+     "pm_10_mediane": 1176.9733725272818,
+     "ecart_pm_10": 395.65513361394835,
+     "scr_supplementaire_proportionnel": 33.30685133578621,
+     "fonds_propres_10_mediane": 79.2081761288635
     },
     "forte": {
      "eta": 1.5,
-     "pm_10_mediane": 992.8543535593515,
-     "ecart_pm_10": 223.98337200972253,
-     "scr_supplementaire_proportionnel": 22.162420562780913,
-     "fonds_propres_10_mediane": 88.1556973064624
+     "pm_10_mediane": 1111.019244738643,
+     "ecart_pm_10": 329.7010058253096,
+     "scr_supplementaire_proportionnel": 27.754732476180962,
+     "fonds_propres_10_mediane": 74.91557356305754
     }
    }
   }
@@ -1652,48 +1624,48 @@
    "c0": 0.06,
    "eta": 0.5,
    "n_scenarios": 1000,
-   "van_affaires_nouvelles": 7.037624808513175,
-   "van_demi_intervalle_95": 2.505176801036508,
-   "scr_100": 106.2818240302533,
+   "van_affaires_nouvelles": 6.238387732748764,
+   "van_demi_intervalle_95": 2.529136747458102,
+   "scr_100": 105.47085888266817,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10628182403025331,
-   "va_capital_proxy": 307.5267873666248,
-   "kappa_seuil": 0.022884591188874603,
+   "scr_sur_pm0": 0.10547085888266816,
+   "va_capital_proxy": 311.74834259005127,
+   "kappa_seuil": 0.020010973212942585,
    "kappa_seuil_bornes": [
-    0.01473838440640688,
-    0.031030797971342325
+    0.011898221990447991,
+    0.02812372443543718
    ]
   },
   "B": {
    "c0": 0.06,
    "eta": 0.5,
    "n_scenarios": 1000,
-   "van_affaires_nouvelles": 8.43516722548959,
-   "van_demi_intervalle_95": 2.636778837192105,
-   "scr_100": 101.25237556981412,
+   "van_affaires_nouvelles": 8.602045554153198,
+   "van_demi_intervalle_95": 2.9966815350018536,
+   "scr_100": 94.45794511011249,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.10125237556981412,
-   "va_capital_proxy": 425.28247047140707,
-   "kappa_seuil": 0.019834269717582235,
+   "scr_sur_pm0": 0.09445794511011249,
+   "va_capital_proxy": 423.38320105438015,
+   "kappa_seuil": 0.02031739930335199,
    "kappa_seuil_bornes": [
-    0.013634205007016216,
-    0.026034334428148252
+    0.013239457789520046,
+    0.027395340817183932
    ]
   },
   "C": {
    "c0": 0.06,
    "eta": 0.5,
    "n_scenarios": 1000,
-   "van_affaires_nouvelles": 9.886199186936047,
-   "van_demi_intervalle_95": 2.7419715348686937,
-   "scr_100": 98.77543551270466,
+   "van_affaires_nouvelles": 10.70488406199349,
+   "van_demi_intervalle_95": 3.1759173713071687,
+   "scr_100": 83.89399617155942,
    "methode_scr_100": "contrôle à 100 %",
-   "scr_sur_pm0": 0.09877543551270467,
-   "va_capital_proxy": 467.555596246553,
-   "kappa_seuil": 0.021144435584346685,
+   "scr_sur_pm0": 0.08389399617155942,
+   "va_capital_proxy": 426.55811971046217,
+   "kappa_seuil": 0.025095956605537643,
    "kappa_seuil_bornes": [
-    0.015279953249238908,
-    0.027008917919454457
+    0.017650506092339327,
+    0.03254140711873595
    ]
   }
  }

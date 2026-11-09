@@ -22,8 +22,12 @@ frais, ni l'absorption par les impôts différés, ni les fonds excédentaires.
 
 La vue prudentielle des résultats finaux (`bilan_prudentiel`, scripts/v5_consolidation.py) les ajoute :
 chocs de mortalité et de frais agrégés au module vie, risque opérationnel par la formule sur provisions,
-fonds excédentaires (PPB admise en fonds propres par l'arrêté du 24/12/2019), impôts différés passifs et
-leur capacité d'absorption, marge de risque sur le SCR vie net et opérationnel, MCR. Restent hors calcul
+fonds excédentaires (PPB admise en fonds propres par l'arrêté du 24/12/2019, après déduction de la génération
+restituée l'exercice suivant, selon la fiche technique de l'ACPR ; valorisée par l'approche simplifiée de cette
+fiche), impôts différés passifs et leur capacité d'absorption, marge de risque sur le SCR vie net et opérationnel,
+MCR. L'ajustement pour absorption par les provisions techniques est borné par FDB − fonds excédentaires : les
+fonds excédentaires ne sont plus des provisions techniques (article 91 de la directive) et ne peuvent pas absorber
+une seconde fois les pertes qu'ils couvrent déjà en fonds propres. Restent hors calcul
 (liste dans la docstring de `bilan_prudentiel`) : mesure transitoire, contrepartie, concentration,
 immobilier, change, inflation des frais, ajustement symétrique actions, impôts différés actifs.
 """
@@ -173,9 +177,20 @@ def facteur_spread(cqs, d):
     return min(a + b * (d - bornes[i]), 1.0)
 
 
+def ppb_admissible_fonds_excedentaires(h):
+    """PPB comptable admissible en fonds excédentaires (fiche technique de l'ACPR, calcul des fonds propres
+    prudentiels au titre de la PPB) : le stock d'ouverture moins la génération qui doit être restituée
+    l'exercice suivant. Les deux autres exclusions de la fiche (participation déjà affectée mais non créditée,
+    enveloppe de l'article A.132-3) n'ont pas d'équivalent dans le modèle : elles sont supposées nulles.
+    Avec le stock d'ouverture réparti uniformément sur les générations (PPB), la déduction vaut un huitième."""
+    from ..strategie import PPB
+    ppb = PPB(h["bilan_initial"]["ppb"], h["strategie"]["duree_max_ppb_ans"])
+    return ppb.stock - ppb.reprise_obligatoire()
+
+
 def fonds_excedentaires(ppb_admissible, prestations, courbe, annee_entree=8):
-    """Approche simplifiée de l'ACPR (annexe 2) : la PPB admissible entre en PM au bout de huit ans, puis
-    sort au rythme des prestations projetées, actualisées avec la courbe sans risque."""
+    """Approche simplifiée de l'ACPR (annexe 2 de la fiche) : la PPB admissible entre en PM au bout de huit ans,
+    puis sort au rythme des prestations projetées, actualisées avec la courbe sans risque."""
     flux = {t: v for t, v in prestations.items() if t > annee_entree and v > 0}
     total = sum(flux.values())
     if total <= 0:
@@ -275,8 +290,9 @@ def bilan_prudentiel(h, credit_code, base="avec_va", n=1000, cout_capital=0.06, 
 
     # Projection centrale (équivalent certain sur la courbe de la base) : rythme des prestations
     df = projeter(h, ScenarioCourbe("ec", h["horizon_annees"], c0), credit=bases.credit_sur_base(credit, base))
+    ppb_adm = ppb_admissible_fonds_excedentaires(h)
     contexte = {"base": base, "credit": credit_code, "n_scenarios": n, "cout_capital": cout_capital, "courbe": c0,
-                "fonds_excedentaires": fonds_excedentaires(h["bilan_initial"]["ppb"], df["prestations"].to_dict(), c0),
+                "ppb_admissible": ppb_adm, "fonds_excedentaires": fonds_excedentaires(ppb_adm, df["prestations"].to_dict(), c0),
                 "pm": [float(df["pm"].loc[t]) for t in range(h["horizon_annees"] + 1)], "bilan_initial": copy.deepcopy(h["bilan_initial"]),
                 "choc_spread": {"perte_formule_standard": perte_spread, "duration_modifiee": dmod, "part_non_souveraine": PART_NON_SOUVERAINE}}
     sortie = _agreger(synth, contexte)
@@ -343,7 +359,7 @@ def _agreger(synth, ctx):
         "base": ctx["base"], "credit": ctx["credit"], "n_scenarios": ctx["n_scenarios"],
         "actif": base_s["vm_actif_initial"], "be": base_s["be"], "ic_be": base_s["ic_be"], "fdb": base_s["fdb"],
         "be_garanti": base_s["be_garanti"], "marge_de_risque": mr, "marge_de_risque_2027": mr_2027,
-        "fonds_excedentaires": fe, "ppb_admissible": b["ppb"],
+        "fonds_excedentaires": fe, "ppb_admissible": ctx.get("ppb_admissible", b["ppb"]), "ppb_comptable": b["ppb"],
         "impots_differes_passif": idp, "impots_differes_actif_non_reconnus": ida,
         "fonds_propres_niveau_1": tier1, "fonds_propres_niveau_3_si_reconnus": tier3,
         "pertes_nettes": nette, "pertes_brutes": brute, "sens_retenus": {"taux": sens_taux, "rachat": sens_rachat},

@@ -16,7 +16,7 @@ from pathlib import Path
 
 from ..courbes import CourbeAvecSpread
 from . import bases
-from .courbes_marche import courbe_eiopa, spread_oat
+from .courbes_marche import courbe_eiopa, spread_obligations
 from .credit import CreditSaut
 from .scenarios import ScenarioReel
 
@@ -39,10 +39,10 @@ def poids_blocs(nom, donnees=None):
 # --- Crédit : valorisation -----------------------------------------------------------------------
 
 def credit_valorisation(code, base="sans_va", horizon=60):
-    """Spread OAT de marché avec la forme de perte de la convention, réexprimé sur la base."""
+    """Spread des obligations détenues avec la forme de perte de la convention, réexprimé sur la base."""
     d = charger()
     k = d["conventions_credit"][code]
-    marche = spread_oat(methode=k.get("spread", "tec"))
+    marche = spread_obligations()
     if k["part_saut"] == 0.0:
         return bases.credit_sur_base(marche, base)  # convention initiale : SpreadCredit, perte lissée
     c = CreditSaut.depuis(marche, part_saut=k["part_saut"], recouvrement=k["recouvrement"],
@@ -56,7 +56,7 @@ def credit_reel(code_valorisation, code_reel, horizon=60):
     d = charger()
     k = d["conventions_credit"][code_valorisation]
     r = d["conventions_reelles_stochastiques"][code_reel]
-    return CreditSaut.depuis(spread_oat(methode=k.get("spread", "tec")), part_saut=max(k["part_saut"], 1e-12), recouvrement=k["recouvrement"],
+    return CreditSaut.depuis(spread_obligations(), part_saut=max(k["part_saut"], 1e-12), recouvrement=k["recouvrement"],
                              blocs=poids_blocs(k["blocs"], d), horizon=horizon, correlation=k.get("correlation"),
                              pd_reelle=r.get("pd_reelle"), facteur_pd_reelle=r.get("facteur_pd_reelle"),
                              recouvrement_reel=r["recouvrement_reel"])
@@ -79,7 +79,7 @@ def perte_reelle(code):
     r = charger()["conventions_reelles"][code]
     if "perte_attendue_reelle" in r:
         return r["perte_attendue_reelle"]
-    return r["part_spread_10_ans"] * spread_oat().s(10)
+    return r["part_spread_10_ans"] * spread_obligations().s(10)
 
 
 def hypotheses_reelles(h, code):
@@ -121,6 +121,8 @@ def comportement(code, base="sans_va", niveau=None):
         for k in r["composantes"]:
             k = {a: b for a, b in k.items() if a != "statut"}
             k["valeur_initiale_moteur"] = c0.taux_zc(10) if k["moteur"] == "zc10_sans_risque" else c0.taux_1an()
+            if k["niveau_initial"] == "obligations_10_ans":  # niveau hypothétique : obligations du modèle à 10 ans
+                k["niveau_initial"] = taux_obligations_10_ans_initial()
             comps.append(k)
         n0 = sum(k["poids"] * max(k.get("plancher", -1.0), k["niveau_initial"]) for k in comps)
         return {"reference": "dynamique", "moteur": "composite", "niveau_initial": n0, "composantes": comps}
@@ -152,6 +154,6 @@ def rachat_structurel_acpr():
     return charger()["rachats"]["taux_rachat_structurel_central"]["parametre_modele"]
 
 
-def taux_oat_10_ans_initial():
-    """Contrôle : niveau en t = 0 de l'ancienne référence (OAT 10 ans - 2 points)."""
-    return CourbeAvecSpread(courbe_eiopa(), spread_oat()).taux_zc(10) - 0.02
+def taux_obligations_10_ans_initial():
+    """Taux zéro-coupon à 10 ans des obligations du modèle en t = 0 (courbe EIOPA sans VA et spread hypothétique)."""
+    return CourbeAvecSpread(courbe_eiopa(), spread_obligations()).taux_zc(10)

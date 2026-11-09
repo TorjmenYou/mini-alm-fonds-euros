@@ -67,7 +67,7 @@ class Portefeuille:
         self.echelle = {int(k): float(v) for k, v in (a.get("echelle_reinvestissement") or {}).items()}
         self.dividende = h["economie"]["rendement_dividende_actions"]
         self.maturite_reinvestissement = a["maturite_reinvestissement_ans"]
-        # V5 : obligations d'un émetteur risqué (OAT) valorisées sur la courbe de référence + spread.
+        # V5 : obligations d'émetteurs risqués valorisées sur la courbe de référence + spread.
         # Deux mesures, jamais mélangées (docs/V5_METHODOLOGIE.md) :
         # - « risque_neutre » (valorisation) : la perte constatée chaque année est l'intensité de perte
         #   risque neutre tirée du spread, si bien qu'un titre acheté à son prix de marché a une valeur

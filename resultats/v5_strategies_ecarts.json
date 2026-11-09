@@ -4,184 +4,244 @@
  "reference": "taux_servi_marche",
  "ecarts": {
   "A|initial|passive": {
-   "valeur_nette": -10.79167804102787,
+   "valeur_nette": 4.4797794086897795,
    "ecart_moyen": 0.0,
    "demi_intervalle_95": 0.0
   },
   "A|initial|reinvestissement_progressif": {
-   "valeur_nette": -10.710296094326047,
-   "ecart_moyen": 0.08138194670182095,
-   "demi_intervalle_95": 0.08551106080973056
+   "valeur_nette": 4.605307182418276,
+   "ecart_moyen": 0.12552777372849597,
+   "demi_intervalle_95": 0.10921367576111408
   },
   "A|initial|repositionnement": {
-   "valeur_nette": -18.168371667632172,
-   "ecart_moyen": -7.376693626604303,
-   "demi_intervalle_95": 0.9846517186774033
+   "valeur_nette": -6.418627362143079,
+   "ecart_moyen": -10.898406770832858,
+   "demi_intervalle_95": 1.0069105816066262
   },
   "A|initial|taux_servi_competitif": {
-   "valeur_nette": -17.795750314612153,
-   "ecart_moyen": -7.004072273584283,
-   "demi_intervalle_95": 0.4620629451817848
+   "valeur_nette": -1.9663401854644453,
+   "ecart_moyen": -6.446119594154225,
+   "demi_intervalle_95": 0.44270255888014054
   },
   "A|initial|taux_servi_marge": {
-   "valeur_nette": -3.925942913023063,
-   "ecart_moyen": 6.865735128004806,
-   "demi_intervalle_95": 0.36753293713254614
+   "valeur_nette": 10.33580881686663,
+   "ecart_moyen": 5.856029408176852,
+   "demi_intervalle_95": 0.3487872056973024
   },
   "A|initial|liquidite_defensive": {
-   "valeur_nette": -7.24212069606807,
-   "ecart_moyen": 3.5495573449597977,
-   "demi_intervalle_95": 0.9390616790995137
+   "valeur_nette": 7.106605614026447,
+   "ecart_moyen": 2.626826205336668,
+   "demi_intervalle_95": 1.0724293596948022
+  },
+  "A|initial|taux_servi_competitif_preservant": {
+   "valeur_nette": 1.1264623960701725,
+   "ecart_moyen": -3.3533170126196072,
+   "demi_intervalle_95": 0.4763934175905259
+  },
+  "A|initial|distribution_retention": {
+   "valeur_nette": 4.013390337111394,
+   "ecart_moyen": -0.4663890715783854,
+   "demi_intervalle_95": 0.0440628323161942
   },
   "A|recapitalise|passive": {
-   "valeur_nette": -21.32860641602243,
+   "valeur_nette": -5.016306432619607,
    "ecart_moyen": 0.0,
    "demi_intervalle_95": 0.0
   },
   "A|recapitalise|reinvestissement_progressif": {
-   "valeur_nette": -20.774366200069935,
-   "ecart_moyen": 0.554240215952495,
-   "demi_intervalle_95": 0.1290656491510962
+   "valeur_nette": -4.565681051542326,
+   "ecart_moyen": 0.4506253810772814,
+   "demi_intervalle_95": 0.1598813846509581
   },
   "A|recapitalise|repositionnement": {
-   "valeur_nette": -31.928992585916053,
-   "ecart_moyen": -10.600386169893623,
-   "demi_intervalle_95": 1.0127713983855005
+   "valeur_nette": -19.52738033004281,
+   "ecart_moyen": -14.511073897423202,
+   "demi_intervalle_95": 1.038205882039563
   },
   "A|recapitalise|taux_servi_competitif": {
-   "valeur_nette": -29.48618401145772,
-   "ecart_moyen": -8.157577595435292,
-   "demi_intervalle_95": 0.37507970406578034
+   "valeur_nette": -12.26266736483762,
+   "ecart_moyen": -7.246360932218015,
+   "demi_intervalle_95": 0.3943059327953263
   },
   "A|recapitalise|taux_servi_marge": {
-   "valeur_nette": -12.380873268993852,
-   "ecart_moyen": 8.947733147028579,
-   "demi_intervalle_95": 0.4139069441487422
+   "valeur_nette": 1.3906303760755936,
+   "ecart_moyen": 6.4069368086952005,
+   "demi_intervalle_95": 0.37954995853393897
   },
   "A|recapitalise|liquidite_defensive": {
-   "valeur_nette": -17.948548742689074,
-   "ecart_moyen": 3.380057673333358,
-   "demi_intervalle_95": 1.0703698781934592
+   "valeur_nette": -2.683149240855276,
+   "ecart_moyen": 2.3331571917643315,
+   "demi_intervalle_95": 1.2133973208759754
+  },
+  "A|recapitalise|taux_servi_competitif_preservant": {
+   "valeur_nette": -9.285674677823994,
+   "ecart_moyen": -4.269368245204386,
+   "demi_intervalle_95": 0.44989905038254474
+  },
+  "A|recapitalise|distribution_retention": {
+   "valeur_nette": -6.120583745299995,
+   "ecart_moyen": -1.104277312680388,
+   "demi_intervalle_95": 0.06534039946633817
   },
   "B|initial|passive": {
-   "valeur_nette": 56.17996808228071,
+   "valeur_nette": 61.401060537912876,
    "ecart_moyen": 0.0,
    "demi_intervalle_95": 0.0
   },
   "B|initial|reinvestissement_progressif": {
-   "valeur_nette": 56.21728107369623,
-   "ecart_moyen": 0.03731299141552077,
-   "demi_intervalle_95": 0.20459160231930537
+   "valeur_nette": 61.55101057557053,
+   "ecart_moyen": 0.14995003765766007,
+   "demi_intervalle_95": 0.25436244762320953
   },
   "B|initial|repositionnement": {
-   "valeur_nette": 50.532281933267555,
-   "ecart_moyen": -5.647686149013149,
-   "demi_intervalle_95": 0.670425404991825
+   "valeur_nette": 52.666784857357676,
+   "ecart_moyen": -8.734275680555188,
+   "demi_intervalle_95": 0.6759796565735989
   },
   "B|initial|taux_servi_competitif": {
-   "valeur_nette": 44.401064081602875,
-   "ecart_moyen": -11.778904000677837,
-   "demi_intervalle_95": 0.536234940264482
+   "valeur_nette": 51.11663041966649,
+   "ecart_moyen": -10.284430118246377,
+   "demi_intervalle_95": 0.5390358044699384
   },
   "B|initial|taux_servi_marge": {
-   "valeur_nette": 65.45178858125287,
-   "ecart_moyen": 9.271820498972167,
-   "demi_intervalle_95": 0.5799339296033102
+   "valeur_nette": 67.18222218640346,
+   "ecart_moyen": 5.78116164849059,
+   "demi_intervalle_95": 0.5702625117329475
   },
   "B|initial|liquidite_defensive": {
-   "valeur_nette": 57.2443070408279,
-   "ecart_moyen": 1.064338958547191,
-   "demi_intervalle_95": 1.2368912637205605
+   "valeur_nette": 62.82238070594599,
+   "ecart_moyen": 1.4213201680331218,
+   "demi_intervalle_95": 1.363500399014081
+  },
+  "B|initial|taux_servi_competitif_preservant": {
+   "valeur_nette": 51.88208019150092,
+   "ecart_moyen": -9.518980346411949,
+   "demi_intervalle_95": 0.5553080722121703
+  },
+  "B|initial|distribution_retention": {
+   "valeur_nette": 60.275341239298434,
+   "ecart_moyen": -1.1257192986144415,
+   "demi_intervalle_95": 0.04502722563114119
   },
   "B|recapitalise|passive": {
-   "valeur_nette": 52.43059276097586,
+   "valeur_nette": 57.50835333809682,
    "ecart_moyen": 0.0,
    "demi_intervalle_95": 0.0
   },
   "B|recapitalise|reinvestissement_progressif": {
-   "valeur_nette": 52.50743564692442,
-   "ecart_moyen": 0.07684288594855254,
-   "demi_intervalle_95": 0.2056454558713828
+   "valeur_nette": 57.75057904174528,
+   "ecart_moyen": 0.24222570364847198,
+   "demi_intervalle_95": 0.25928244717021215
   },
   "B|recapitalise|repositionnement": {
-   "valeur_nette": 46.618244779895946,
-   "ecart_moyen": -5.812347981079925,
-   "demi_intervalle_95": 0.6662528202150972
+   "valeur_nette": 48.629415784303866,
+   "ecart_moyen": -8.878937553792944,
+   "demi_intervalle_95": 0.6740901420450351
   },
   "B|recapitalise|taux_servi_competitif": {
-   "valeur_nette": 40.47478553171866,
-   "ecart_moyen": -11.955807229257207,
-   "demi_intervalle_95": 0.5413210228192531
+   "valeur_nette": 47.28101374728475,
+   "ecart_moyen": -10.227339590812052,
+   "demi_intervalle_95": 0.5332899083424701
   },
   "B|recapitalise|taux_servi_marge": {
-   "valeur_nette": 61.672380228567974,
-   "ecart_moyen": 9.241787467592097,
-   "demi_intervalle_95": 0.5943607727203656
+   "valeur_nette": 63.219193577660235,
+   "ecart_moyen": 5.71084023956342,
+   "demi_intervalle_95": 0.5483476010868892
   },
   "B|recapitalise|liquidite_defensive": {
-   "valeur_nette": 53.40080458883457,
-   "ecart_moyen": 0.9702118278586963,
-   "demi_intervalle_95": 1.2360768684801213
+   "valeur_nette": 58.803894283484496,
+   "ecart_moyen": 1.29554094538768,
+   "demi_intervalle_95": 1.3688002504968326
+  },
+  "B|recapitalise|taux_servi_competitif_preservant": {
+   "valeur_nette": 47.97188531885299,
+   "ecart_moyen": -9.536468019243818,
+   "demi_intervalle_95": 0.5484307006470694
+  },
+  "B|recapitalise|distribution_retention": {
+   "valeur_nette": 56.15647176232387,
+   "ecart_moyen": -1.3518815757729377,
+   "demi_intervalle_95": 0.049536796561661565
   },
   "C|initial|passive": {
-   "valeur_nette": 76.95603440513501,
+   "valeur_nette": 82.7903448984413,
    "ecart_moyen": 0.0,
    "demi_intervalle_95": 0.0
   },
   "C|initial|reinvestissement_progressif": {
-   "valeur_nette": 76.96335220364708,
-   "ecart_moyen": 0.007317798512072933,
-   "demi_intervalle_95": 0.4684960590055065
+   "valeur_nette": 82.83487191985891,
+   "ecart_moyen": 0.04452702141758317,
+   "demi_intervalle_95": 0.5489667657838363
   },
   "C|initial|repositionnement": {
-   "valeur_nette": 76.26268975370809,
-   "ecart_moyen": -0.6933446514269094,
-   "demi_intervalle_95": 0.528139864759548
+   "valeur_nette": 81.71640603394492,
+   "ecart_moyen": -1.073938864496401,
+   "demi_intervalle_95": 0.4534926578453955
   },
   "C|initial|taux_servi_competitif": {
-   "valeur_nette": 64.50280789777528,
-   "ecart_moyen": -12.453226507359723,
-   "demi_intervalle_95": 0.6387244132730071
+   "valeur_nette": 73.00024480502496,
+   "ecart_moyen": -9.790100093416347,
+   "demi_intervalle_95": 0.7187725753088281
   },
   "C|initial|taux_servi_marge": {
-   "valeur_nette": 83.62889337499571,
-   "ecart_moyen": 6.67285896986071,
-   "demi_intervalle_95": 0.8722385475651279
+   "valeur_nette": 85.93335763598002,
+   "ecart_moyen": 3.143012737538702,
+   "demi_intervalle_95": 0.6657476100773969
   },
   "C|initial|liquidite_defensive": {
-   "valeur_nette": 79.93339468631868,
-   "ecart_moyen": 2.9773602811836652,
-   "demi_intervalle_95": 1.4645579245548375
+   "valeur_nette": 85.91082929723602,
+   "ecart_moyen": 3.1204843987947006,
+   "demi_intervalle_95": 1.5492815175607262
+  },
+  "C|initial|taux_servi_competitif_preservant": {
+   "valeur_nette": 73.08467128498613,
+   "ecart_moyen": -9.705673613455186,
+   "demi_intervalle_95": 0.6658460138267693
+  },
+  "C|initial|distribution_retention": {
+   "valeur_nette": 81.48692874055506,
+   "ecart_moyen": -1.3034161578862695,
+   "demi_intervalle_95": 0.05044360994075305
   },
   "C|recapitalise|passive": {
-   "valeur_nette": 74.59548672028346,
+   "valeur_nette": 82.7903448984413,
    "ecart_moyen": 0.0,
    "demi_intervalle_95": 0.0
   },
   "C|recapitalise|reinvestissement_progressif": {
-   "valeur_nette": 74.62772830823478,
-   "ecart_moyen": 0.032241587951319636,
-   "demi_intervalle_95": 0.472886077624205
+   "valeur_nette": 82.83487191985891,
+   "ecart_moyen": 0.04452702141758317,
+   "demi_intervalle_95": 0.5489667657838363
   },
   "C|recapitalise|repositionnement": {
-   "valeur_nette": 73.75194434257227,
-   "ecart_moyen": -0.8435423777111857,
-   "demi_intervalle_95": 0.542141655160077
+   "valeur_nette": 81.71640603394492,
+   "ecart_moyen": -1.073938864496401,
+   "demi_intervalle_95": 0.4534926578453955
   },
   "C|recapitalise|taux_servi_competitif": {
-   "valeur_nette": 62.15933270798624,
-   "ecart_moyen": -12.436154012297225,
-   "demi_intervalle_95": 0.6364002628348994
+   "valeur_nette": 73.00024480502496,
+   "ecart_moyen": -9.790100093416347,
+   "demi_intervalle_95": 0.7187725753088281
   },
   "C|recapitalise|taux_servi_marge": {
-   "valeur_nette": 81.30102974374377,
-   "ecart_moyen": 6.705543023460303,
-   "demi_intervalle_95": 0.8782849697830764
+   "valeur_nette": 85.93335763598002,
+   "ecart_moyen": 3.143012737538702,
+   "demi_intervalle_95": 0.6657476100773969
   },
   "C|recapitalise|liquidite_defensive": {
-   "valeur_nette": 77.58976100810037,
-   "ecart_moyen": 2.9942742878169057,
-   "demi_intervalle_95": 1.467640525628691
+   "valeur_nette": 85.91082929723602,
+   "ecart_moyen": 3.1204843987947006,
+   "demi_intervalle_95": 1.5492815175607262
+  },
+  "C|recapitalise|taux_servi_competitif_preservant": {
+   "valeur_nette": 73.08467128498613,
+   "ecart_moyen": -9.705673613455186,
+   "demi_intervalle_95": 0.6658460138267693
+  },
+  "C|recapitalise|distribution_retention": {
+   "valeur_nette": 81.48692874055506,
+   "ecart_moyen": -1.3034161578862695,
+   "demi_intervalle_95": 0.05044360994075305
   }
  }
 }
